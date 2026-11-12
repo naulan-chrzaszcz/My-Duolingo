@@ -1,0 +1,122 @@
+SPEAKEASY — installation sur ton serveur
+=========================================
+
+>>> SERVEUR FEDORA (ton VPS) : mise en production en une commande <<<
+  1. Copie le contenu de ce zip dans /var/www/html/speakeasy/ (remplace l'ancienne version).
+  2. Sur le serveur, en root :
+        EMAIL=ton@email.fr bash /var/www/html/speakeasy/installer-fedora.sh
+     Le script corrige les droits et SELinux (cause du « 403 Forbidden » sur api/ et icons/),
+     installe PHP + SQLite, protège la base, active le HTTPS (Let's Encrypt) et les rappels.
+  3. Il affiche à la fin une liste de vérifications (✔ ou ⚠). Relance-le après chaque mise à jour.
+
+Contenu du dossier
+  index.html            l'application complète
+  manifest.webmanifest, sw.js, icons/   app installable sur l'écran d'accueil (iPhone, Android), hors ligne, rappels
+  api/account.php       comptes en ligne (progression synchronisée, classement des membres)
+  api/generate.php      exercices générés par l'IA Claude (coach, thèmes, mots à retenir)
+  api/push.php          inscription aux rappels quotidiens (notifications)
+  api/remind.php        envoi des rappels (à lancer toutes les heures)
+  api/data/.htaccess    protège la base de données des comptes (Apache)
+  fonts/                polices (l'installateur les télécharge une fois et les sert depuis ton serveur)
+
+1) Dépose tout à la racine de ton site, en gardant le dossier « api ».
+   Il faut PHP 7.4 ou plus, avec les extensions PDO SQLite et cURL (présentes chez presque tous les hébergeurs).
+   Le site doit être en HTTPS (sinon le navigateur bloque le micro).
+
+2) Comptes en ligne : rien à configurer.
+   Vérifie https://ton-site/api/account.php?a=ping → {"ok":true}
+   La base « api/data/speakeasy.sqlite » se crée toute seule. Le dossier api/data doit être accessible en écriture par PHP.
+   Sur Nginx (qui ignore les .htaccess), bloque l'accès à /api/data/ ou déplace la base hors du dossier public
+   en modifiant $DB_PATH en haut de account.php.
+
+3) IA : chaque personne utilise SON propre Claude.
+   - Dans l'app : Profil › « 🤖 Mon Claude » › colle ta clé API (créée sur https://console.anthropic.com,
+     menu API Keys ; l'API est facturée à l'usage, séparément de l'abonnement claude.ai) › « Enregistrer et tester ».
+   - La clé est propre à chaque profil, reste sur l'appareil (jamais dans la base des comptes, jamais synchronisée)
+     et l'app appelle Claude directement. Sur iPhone, l'app installée sur l'écran d'accueil a son propre stockage :
+     colle la clé une fois dedans.
+   - Si un navigateur bloque l'appel direct, l'app passe par api/generate.php avec la clé du profil
+     (en-tête X-User-Key), utilisée pour la requête puis oubliée.
+   - Facultatif : une clé commune pour les profils sans clé (variable d'environnement ANTHROPIC_API_KEY,
+     ou $API_KEY en haut de api/generate.php ; jamais dans index.html). Limite : $MAX_PER_HOUR générations
+     par heure et par adresse IP.
+   Sans clé, tout fonctionne quand même : le coach et les révisions utilisent un mélange local du parcours.
+
+4) Rappels quotidiens (facultatif) :
+   - Ouvre api/remind.php et mets ton adresse e-mail dans $VAPID_SUBJECT (exigé par Apple).
+   - Lance api/remind.php toutes les heures : tâche cron « php /chemin/api/remind.php »,
+     ou un service gratuit comme cron-job.org qui appelle https://ton-site/api/remind.php?key=TA_CLE
+     (choisis TA_CLE dans $CRON_KEY en haut du fichier).
+   - Sur iPhone (iOS 16.4+), les rappels ne marchent que dans l'app ajoutée à l'écran d'accueil,
+     avec un compte en ligne : Profil › Rappel quotidien.
+
+5) Sur iPhone :
+   - Safari : tout fonctionne, y compris le micro direct (active Siri et la Dictée dans les Réglages).
+   - App sur l'écran d'accueil (Partager › Sur l'écran d'accueil) : plein écran, badge des révisions
+     sur l'icône, rappels, hors ligne. Apple n'y autorise pas le micro direct : les exercices d'oral
+     passent alors par la dictée du clavier (touche 🎤 du clavier anglais ou coréen).
+   - Hors ligne (métro, avion) : l'app continue de fonctionner et garde ta progression.
+     Au retour du réseau, elle se resynchronise toute seule ; si tu as avancé sur deux appareils,
+     les deux progressions sont fusionnées (XP additionnés, unités, mots et histoires réunis).
+
+Sauvegarde : pense à sauvegarder régulièrement le fichier api/data/speakeasy.sqlite.
+
+LANGUE DE L'INTERFACE (français / anglais)
+   - À la première ouverture, l'app demande la langue (Français / English), pré-sélectionnée d'après le
+     navigateur. Les appareils qui avaient déjà Speakeasy restent en français.
+   - Profil › Réglages › « 🌐 Langue · Language » pour changer ; sur l'écran de création du premier compte,
+     un bouton « 🌐 English / Français » permet aussi de basculer.
+   - En anglais : sections « French » (parcours Learn French A1→B2 + orthographe Voltaire) et « Korean »,
+     avec explications, consignes et histoires traduites. L'IA répond alors en anglais (même consigne
+     côté serveur dans api/generate.php).
+
+=== Nom de domaine et HTTPS (important sur téléphone) ===
+N'utilise pas la « redirection invisible / masquée » d'OVH : elle affiche le site dans un cadre
+(frameset) sans réglage mobile, donc les téléphones montrent la version ordinateur en tout petit.
+À la place, dans l'espace client OVH (Nom de domaine > Zone DNS), fais pointer @ et www vers
+l'adresse IP du serveur (enregistrements A), et supprime la redirection.
+Active ensuite le HTTPS (Let's Encrypt, par ex. certbot) : sans HTTPS, le téléphone bloque le
+micro, les notifications, l'installation comme application et le mode hors ligne.
+
+=== Thème sombre ===
+Le site suit le réglage clair/sombre du téléphone. Profil > Réglages > Thème permet de forcer
+Clair ou Sombre sur l'appareil. Le thème sombre est généré à partir de src/styles/style.css par
+scripts/darkgen.mjs au moment du build (npm run build).
+
+=== Version coréenne (한국어) ===
+Troisième langue d'interface, proposée au premier lancement et dans Profil > Réglages > Langue.
+Pour les coréanophones : parcours anglais (quotidien, pro, TOEIC) et français (Apprendre le
+français + Voltaire) expliqués en coréen. Les textes sont dans src/i18n/ko.json (section content
+pour les cours, section ui pour l'interface). Les générations IA répondent en coréen (api/generate.php).
+
+=== Ligues en ligne (classement de tous les comptes du site) ===
+Tout est stocké sur le serveur, dans la base SQLite de api/account.php (aucune configuration).
+- Onglet Ligue : classement de tous les membres « Cette semaine » et « Depuis toujours », podium,
+  série de jours, médailles gagnées, et podium de la semaine dernière.
+- Chaque lundi, le podium de la semaine écoulée est figé (12 h après la fin de la semaine) : les trois
+  premiers gagnent une médaille définitive, et chaque joueur voit son résultat à sa prochaine visite
+  (+50 / +30 / +20 gemmes pour le podium).
+- La base existante est mise à jour toute seule au premier appel (nouvelles colonnes et tables).
+- Pour vérifier que le serveur de comptes répond : ouvre  .../speakeasy/api/account.php?a=ping
+  dans un navigateur. La réponse doit être {"ok":true}. Sinon : PHP ou l'extension pdo_sqlite manque,
+  ou le dossier api/data/ n'est pas accessible en écriture par le serveur web.
+
+=== Exercices d'écoute et de micro ===
+« Pas de son » (écoute) et « Plus tard » (micro) mettent ces exercices en pause 15 minutes sans
+pénalité : ils sont remplacés par des exercices silencieux. Réglage permanent dans Profil > Réglages.
+
+=== Version 24 : revue mobile (iPhone / Android) ===
+  - Polices hébergées sur ton serveur : l'installateur télécharge Nunito et Noto Sans KR dans fonts/.
+    Les visiteurs ne contactent plus Google Fonts (RGPD) et les polices restent disponibles hors ligne.
+    Si le téléchargement échoue, Google Fonts sert de secours automatiquement.
+  - En-têtes de sécurité ajoutés : Content-Security-Policy (le site ne peut parler qu'à ton serveur
+    et à api.anthropic.com) et X-Frame-Options (le site ne peut plus être affiché dans le cadre d'un autre).
+  - Clavier : Entrée = Vérifier puis Continuer ; touches 1 à 4 = choisir une réponse.
+  - Messages (toasts) lisibles sur petit écran, affichés une seule fois ; boutons plus faciles à toucher ;
+    pas de zoom automatique de l'iPhone dans les champs ; bandeaux d'unité plus contrastés.
+
+=== Version 26 : projet modulaire ===
+  - Le code source est un projet Node (zip speakeasy-projet) : npm run build, npm test, npm run zip.
+  - Ce zip de production est produit par « npm run zip » : rien à changer pour le serveur, même installation.
+  - Le nom du cache du service worker est calculé automatiquement à chaque build : les téléphones
+    récupèrent toujours la nouvelle version après une mise à jour.

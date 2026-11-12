@@ -1,0 +1,24 @@
+{
+ "note": "Uniquement pour migrer les progressions enregistrées par d'anciennes versions (hydrate).",
+ "HANGUL_UNITS": [
+  {
+   "t": "Hangul 1 : les voyelles"
+  },
+  {
+   "t": "Hangul 2 : les consonnes de base"
+  },
+  {
+   "t": "Hangul 3 : consonnes aspirées & doubles"
+  },
+  {
+   "t": "Hangul 4 : diphtongues & batchim"
+  }
+ ],
+ "V9": {
+  "en-toeic": [
+   {
+    "t": "Part 1 : vraies photos"
+   }
+  ]
+ }
+}

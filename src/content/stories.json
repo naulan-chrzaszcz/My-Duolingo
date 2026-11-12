@@ -1,0 +1,4405 @@
+{
+ "en": [
+  {
+   "id": "en1",
+   "t": "Un café à emporter",
+   "ic": "☕",
+   "lv": 0,
+   "cast": {
+    "Barista": [
+     "M",
+     "🧑‍🍳"
+    ],
+    "Emma": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Barista",
+     "t": "Good morning! What can I get you?",
+     "fr": "Bonjour ! Qu'est-ce que je vous sers ?"
+    },
+    {
+     "s": "Emma",
+     "t": "Hi! Can I have a large cappuccino, please?",
+     "fr": "Bonjour ! Je peux avoir un grand cappuccino, s'il vous plaît ?"
+    },
+    {
+     "s": "Barista",
+     "t": "Sure. Would you like anything to eat?",
+     "fr": "Bien sûr. Vous voulez quelque chose à manger ?"
+    },
+    {
+     "s": "Emma",
+     "t": "Hmm… a blueberry muffin, please.",
+     "fr": "Hmm… un muffin aux myrtilles, s'il vous plaît."
+    },
+    {
+     "q": "What does Emma order to drink?",
+     "o": [
+      "A large cappuccino",
+      "A small tea",
+      "An iced latte"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Barista",
+     "t": "That's eight fifty. For here or to go?",
+     "fr": "Ça fait 8,50. Sur place ou à emporter ?"
+    },
+    {
+     "s": "Emma",
+     "t": "To go, please. I'm late for work!",
+     "fr": "À emporter, s'il vous plaît. Je suis en retard au travail !"
+    },
+    {
+     "q": "Why is Emma in a hurry?",
+     "o": [
+      "She is late for work",
+      "She missed her bus",
+      "She forgot her wallet"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Barista",
+     "t": "Oh no… Emma, wait! Your muffin!",
+     "fr": "Oh non… Emma, attendez ! Votre muffin !"
+    },
+    {
+     "s": "Emma",
+     "t": "Oops! Thank you so much!",
+     "fr": "Oups ! Merci beaucoup !"
+    },
+    {
+     "q": "What did Emma forget?",
+     "o": [
+      "Her muffin",
+      "Her coffee",
+      "Her phone"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e5",
+   "t": "À la boulangerie",
+   "ic": "🥐",
+   "lv": 0,
+   "cast": {
+    "Clerk": [
+     "W",
+     "👩‍🍳"
+    ],
+    "Tom": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "Clerk",
+     "t": "Hi there! What would you like?",
+     "fr": "Bonjour ! Qu'est-ce qui vous ferait plaisir ?"
+    },
+    {
+     "s": "Tom",
+     "t": "Two croissants and a loaf of bread, please.",
+     "fr": "Deux croissants et un pain, s'il vous plaît."
+    },
+    {
+     "s": "Clerk",
+     "t": "Anything else?",
+     "fr": "Autre chose ?"
+    },
+    {
+     "s": "Tom",
+     "t": "Yes, a chocolate cake for my daughter. It's her birthday.",
+     "fr": "Oui, un gâteau au chocolat pour ma fille. C'est son anniversaire."
+    },
+    {
+     "q": "Why does Tom buy a cake?",
+     "o": [
+      "It's his daughter's birthday",
+      "He is very hungry",
+      "It is on sale"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Clerk",
+     "t": "How nice! That's twelve dollars.",
+     "fr": "Comme c'est gentil ! Ça fait douze dollars."
+    },
+    {
+     "s": "Tom",
+     "t": "Here you go. Have a nice day!",
+     "fr": "Voilà. Bonne journée !"
+    },
+    {
+     "q": "How much does Tom pay?",
+     "o": [
+      "Twelve dollars",
+      "Two dollars",
+      "Twenty dollars"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e6",
+   "t": "Le nouveau voisin",
+   "ic": "🏠",
+   "lv": 0,
+   "cast": {
+    "Anna": [
+     "W",
+     "👩"
+    ],
+    "Ben": [
+     "M",
+     "👨"
+    ]
+   },
+   "items": [
+    {
+     "s": "Anna",
+     "t": "Hi! Are you the new neighbor?",
+     "fr": "Salut ! Tu es le nouveau voisin ?"
+    },
+    {
+     "s": "Ben",
+     "t": "Yes, I'm Ben. I moved in yesterday.",
+     "fr": "Oui, je suis Ben. J'ai emménagé hier."
+    },
+    {
+     "s": "Anna",
+     "t": "Welcome! I'm Anna. I live next door.",
+     "fr": "Bienvenue ! Moi c'est Anna. J'habite à côté."
+    },
+    {
+     "q": "When did Ben move in?",
+     "o": [
+      "Yesterday",
+      "Last month",
+      "This morning"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Ben",
+     "t": "Nice to meet you. Is there a supermarket near here?",
+     "fr": "Enchanté. Il y a un supermarché près d'ici ?"
+    },
+    {
+     "s": "Anna",
+     "t": "Yes, at the end of the street, next to the bank.",
+     "fr": "Oui, au bout de la rue, à côté de la banque."
+    },
+    {
+     "q": "Where is the supermarket?",
+     "o": [
+      "Next to the bank",
+      "Behind the school",
+      "Across the river"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e7",
+   "t": "Quel temps fait-il ?",
+   "ic": "☔",
+   "lv": 0,
+   "cast": {
+    "Mia": [
+     "W",
+     "👧"
+    ],
+    "Dad": [
+     "M",
+     "👨"
+    ]
+   },
+   "items": [
+    {
+     "s": "Mia",
+     "t": "Dad, can we go to the park today?",
+     "fr": "Papa, on peut aller au parc aujourd'hui ?"
+    },
+    {
+     "s": "Dad",
+     "t": "Look outside. It's raining a lot.",
+     "fr": "Regarde dehors. Il pleut beaucoup."
+    },
+    {
+     "s": "Mia",
+     "t": "Oh no! What can we do instead?",
+     "fr": "Oh non ! Qu'est-ce qu'on peut faire à la place ?"
+    },
+    {
+     "s": "Dad",
+     "t": "We can bake cookies or watch a movie.",
+     "fr": "On peut faire des cookies ou regarder un film."
+    },
+    {
+     "q": "Why can't they go to the park?",
+     "o": [
+      "It's raining",
+      "The park is closed",
+      "Mia is sick"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Mia",
+     "t": "Cookies! And then a movie!",
+     "fr": "Des cookies ! Et après un film !"
+    },
+    {
+     "s": "Dad",
+     "t": "Deal! Go and wash your hands.",
+     "fr": "Marché conclu ! Va te laver les mains."
+    },
+    {
+     "q": "What will they do first?",
+     "o": [
+      "Bake cookies",
+      "Watch a movie",
+      "Go shopping"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e8",
+   "t": "Au téléphone",
+   "ic": "📞",
+   "lv": 0,
+   "cast": {
+    "Sam": [
+     "M",
+     "🧑"
+    ],
+    "Lily": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Sam",
+     "t": "Hello? Lily? It's Sam.",
+     "fr": "Allô ? Lily ? C'est Sam."
+    },
+    {
+     "s": "Lily",
+     "t": "Hi Sam! Sorry, I can't hear you very well.",
+     "fr": "Salut Sam ! Désolée, je ne t'entends pas très bien."
+    },
+    {
+     "s": "Sam",
+     "t": "I'm on the train. Are you free tonight?",
+     "fr": "Je suis dans le train. Tu es libre ce soir ?"
+    },
+    {
+     "s": "Lily",
+     "t": "Yes, why?",
+     "fr": "Oui, pourquoi ?"
+    },
+    {
+     "s": "Sam",
+     "t": "There's a concert in the park at eight. Do you want to come?",
+     "fr": "Il y a un concert dans le parc à vingt heures. Tu veux venir ?"
+    },
+    {
+     "q": "Where is Sam?",
+     "o": [
+      "On the train",
+      "At the park",
+      "At home"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Lily",
+     "t": "I'd love to! See you at the entrance.",
+     "fr": "Avec plaisir ! On se retrouve à l'entrée."
+    },
+    {
+     "q": "What time is the concert?",
+     "o": [
+      "At eight",
+      "At six",
+      "At nine"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e9",
+   "t": "Le chat perdu",
+   "ic": "🐈",
+   "lv": 0,
+   "cast": {
+    "Kid": [
+     "M",
+     "👦"
+    ],
+    "Woman": [
+     "W",
+     "👵"
+    ]
+   },
+   "items": [
+    {
+     "s": "Kid",
+     "t": "Excuse me, have you seen a small gray cat?",
+     "fr": "Excusez-moi, vous avez vu un petit chat gris ?"
+    },
+    {
+     "s": "Woman",
+     "t": "Hmm, does it have a red collar?",
+     "fr": "Hmm, il a un collier rouge ?"
+    },
+    {
+     "s": "Kid",
+     "t": "Yes! His name is Pixel.",
+     "fr": "Oui ! Il s'appelle Pixel."
+    },
+    {
+     "s": "Woman",
+     "t": "I saw him under my car this morning.",
+     "fr": "Je l'ai vu sous ma voiture ce matin."
+    },
+    {
+     "q": "What color is the cat's collar?",
+     "o": [
+      "Red",
+      "Blue",
+      "Gray"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Kid",
+     "t": "Pixel! Come here! There he is!",
+     "fr": "Pixel ! Viens ! Le voilà !"
+    },
+    {
+     "s": "Woman",
+     "t": "He looks hungry. Take him home.",
+     "fr": "Il a l'air d'avoir faim. Ramène-le à la maison."
+    },
+    {
+     "q": "Where was the cat?",
+     "o": [
+      "Under the woman's car",
+      "In a tree",
+      "At school"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e10",
+   "t": "Mon week-end",
+   "ic": "🎒",
+   "lv": 0,
+   "cast": {
+    "Kim": [
+     "W",
+     "👩"
+    ],
+    "Jay": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "Kim",
+     "t": "How was your weekend, Jay?",
+     "fr": "Comment s'est passé ton week-end, Jay ?"
+    },
+    {
+     "s": "Jay",
+     "t": "Great! I went hiking with my brother.",
+     "fr": "Super ! J'ai fait de la randonnée avec mon frère."
+    },
+    {
+     "s": "Kim",
+     "t": "Where did you go?",
+     "fr": "Où êtes-vous allés ?"
+    },
+    {
+     "s": "Jay",
+     "t": "To the mountains. The view was amazing.",
+     "fr": "À la montagne. La vue était incroyable."
+    },
+    {
+     "q": "Who did Jay go hiking with?",
+     "o": [
+      "His brother",
+      "His friend",
+      "His father"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Kim",
+     "t": "Lucky you! I stayed home and cleaned my apartment.",
+     "fr": "Quelle chance ! Moi, je suis restée à la maison et j'ai fait le ménage."
+    },
+    {
+     "q": "What did Kim do?",
+     "o": [
+      "She cleaned her apartment",
+      "She went hiking",
+      "She visited her family"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e11",
+   "t": "Au cinéma",
+   "ic": "🎬",
+   "lv": 0,
+   "cast": {
+    "Cashier": [
+     "M",
+     "🧑‍💼"
+    ],
+    "Eva": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Eva",
+     "t": "Two tickets for the seven o'clock movie, please.",
+     "fr": "Deux places pour le film de dix-neuf heures, s'il vous plaît."
+    },
+    {
+     "s": "Cashier",
+     "t": "Sorry, it's sold out. There's another show at nine fifteen.",
+     "fr": "Désolé, c'est complet. Il y a une autre séance à vingt et une heures quinze."
+    },
+    {
+     "s": "Eva",
+     "t": "OK, we'll take the nine fifteen.",
+     "fr": "D'accord, on prend celle de vingt et une heures quinze."
+    },
+    {
+     "q": "Why can't Eva see the seven o'clock movie?",
+     "o": [
+      "It's sold out",
+      "It's too expensive",
+      "It's cancelled"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Cashier",
+     "t": "Would you like popcorn with that?",
+     "fr": "Vous voulez du pop-corn avec ?"
+    },
+    {
+     "s": "Eva",
+     "t": "A large one to share, please.",
+     "fr": "Un grand à partager, s'il vous plaît."
+    },
+    {
+     "q": "What does Eva order?",
+     "o": [
+      "A large popcorn to share",
+      "Two drinks",
+      "Nothing"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e12",
+   "t": "Le premier cours",
+   "ic": "📚",
+   "lv": 0,
+   "cast": {
+    "Teacher": [
+     "W",
+     "👩‍🏫"
+    ],
+    "Leo": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "Teacher",
+     "t": "Good morning, everyone. Please open your books to page ten.",
+     "fr": "Bonjour à tous. Ouvrez vos livres à la page dix, s'il vous plaît."
+    },
+    {
+     "s": "Leo",
+     "t": "Excuse me, I forgot my book at home.",
+     "fr": "Excusez-moi, j'ai oublié mon livre à la maison."
+    },
+    {
+     "s": "Teacher",
+     "t": "No problem. You can share with Nina today.",
+     "fr": "Pas de problème. Tu peux le partager avec Nina aujourd'hui."
+    },
+    {
+     "q": "What did Leo forget?",
+     "o": [
+      "His book",
+      "His pen",
+      "His bag"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Leo",
+     "t": "Thank you. Sorry about that.",
+     "fr": "Merci. Désolé."
+    },
+    {
+     "s": "Teacher",
+     "t": "Don't worry. Just remember it tomorrow!",
+     "fr": "Ne t'inquiète pas. Pense juste à l'apporter demain !"
+    },
+    {
+     "q": "Who will Leo share with?",
+     "o": [
+      "Nina",
+      "The teacher",
+      "Nobody"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "en2",
+   "t": "Le premier jour",
+   "ic": "🏢",
+   "lv": 1,
+   "cast": {
+    "Sarah": [
+     "W",
+     "👩‍💼"
+    ],
+    "Daniel": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "Sarah",
+     "t": "Welcome to the team, Daniel! How was your commute?",
+     "fr": "Bienvenue dans l'équipe, Daniel ! Comment s'est passé ton trajet ?"
+    },
+    {
+     "s": "Daniel",
+     "t": "A bit stressful, to be honest. The train was delayed.",
+     "fr": "Un peu stressant, pour être honnête. Le train avait du retard."
+    },
+    {
+     "q": "What happened on Daniel's way to work?",
+     "o": [
+      "His train was delayed",
+      "He got lost",
+      "He lost his badge"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Sarah",
+     "t": "That happens a lot on this line. Let me show you around.",
+     "fr": "Ça arrive souvent sur cette ligne. Je te fais visiter."
+    },
+    {
+     "s": "Sarah",
+     "t": "This is your desk, and the meeting room is over there.",
+     "fr": "Voici ton bureau, et la salle de réunion est là-bas."
+    },
+    {
+     "s": "Daniel",
+     "t": "Great. When is the team meeting?",
+     "fr": "Super. C'est quand, la réunion d'équipe ?"
+    },
+    {
+     "s": "Sarah",
+     "t": "Every Monday at ten. Today, you'll just shadow Tom.",
+     "fr": "Tous les lundis à 10 h. Aujourd'hui, tu vas juste suivre Tom."
+    },
+    {
+     "q": "When are the team meetings held?",
+     "o": [
+      "Every Monday at ten",
+      "Every day at ten",
+      "On Friday afternoons"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Daniel",
+     "t": "Shadow? Sorry, what does that mean?",
+     "fr": "« Shadow » ? Pardon, ça veut dire quoi ?"
+    },
+    {
+     "s": "Sarah",
+     "t": "It means you follow him and watch how he works.",
+     "fr": "Ça veut dire que tu le suis et que tu observes comment il travaille."
+    },
+    {
+     "q": "What will Daniel do today?",
+     "o": [
+      "Observe a colleague",
+      "Lead a meeting",
+      "Work from home"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Daniel",
+     "t": "Perfect. I'll take lots of notes!",
+     "fr": "Parfait. Je vais prendre plein de notes !"
+    }
+   ]
+  },
+  {
+   "id": "e13",
+   "t": "L'appartement idéal",
+   "ic": "🏢",
+   "lv": 1,
+   "cast": {
+    "Agent": [
+     "M",
+     "👨‍💼"
+    ],
+    "Clara": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Agent",
+     "t": "This apartment has two bedrooms and a balcony.",
+     "fr": "Cet appartement a deux chambres et un balcon."
+    },
+    {
+     "s": "Clara",
+     "t": "It's bright, but the kitchen is quite small.",
+     "fr": "Il est lumineux, mais la cuisine est assez petite."
+    },
+    {
+     "s": "Agent",
+     "t": "True, but the rent is lower than in the rest of the area.",
+     "fr": "C'est vrai, mais le loyer est plus bas que dans le reste du quartier."
+    },
+    {
+     "q": "What does Clara not like?",
+     "o": [
+      "The small kitchen",
+      "The balcony",
+      "The light"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Clara",
+     "t": "Are pets allowed? I have a dog.",
+     "fr": "Les animaux sont-ils acceptés ? J'ai un chien."
+    },
+    {
+     "s": "Agent",
+     "t": "Small dogs are fine, as long as they're quiet.",
+     "fr": "Les petits chiens sont acceptés, tant qu'ils sont calmes."
+    },
+    {
+     "s": "Clara",
+     "t": "Perfect. Can I sign the lease next week?",
+     "fr": "Parfait. Je peux signer le bail la semaine prochaine ?"
+    },
+    {
+     "q": "What is Clara planning to do?",
+     "o": [
+      "Sign the lease next week",
+      "Visit another flat",
+      "Buy a dog"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e14",
+   "t": "Chez le médecin",
+   "ic": "🩺",
+   "lv": 1,
+   "cast": {
+    "Doctor": [
+     "M",
+     "👨‍⚕️"
+    ],
+    "Nora": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Doctor",
+     "t": "What seems to be the problem?",
+     "fr": "Qu'est-ce qui ne va pas ?"
+    },
+    {
+     "s": "Nora",
+     "t": "I've had a sore throat for three days, and I'm always tired.",
+     "fr": "J'ai mal à la gorge depuis trois jours, et je suis toujours fatiguée."
+    },
+    {
+     "s": "Doctor",
+     "t": "Do you have a fever?",
+     "fr": "Avez-vous de la fièvre ?"
+    },
+    {
+     "s": "Nora",
+     "t": "A little, mostly at night.",
+     "fr": "Un peu, surtout la nuit."
+    },
+    {
+     "q": "How long has Nora had a sore throat?",
+     "o": [
+      "Three days",
+      "One week",
+      "Since yesterday"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Doctor",
+     "t": "It's probably a virus. Rest, drink a lot of water, and come back if it gets worse.",
+     "fr": "C'est probablement un virus. Reposez-vous, buvez beaucoup d'eau et revenez si ça empire."
+    },
+    {
+     "q": "What does the doctor recommend?",
+     "o": [
+      "Rest and drink water",
+      "Take antibiotics",
+      "Go back to work"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e15",
+   "t": "Le vol annulé",
+   "ic": "✈️",
+   "lv": 1,
+   "cast": {
+    "Agent": [
+     "W",
+     "👩‍✈️"
+    ],
+    "Marc": [
+     "M",
+     "👨"
+    ]
+   },
+   "items": [
+    {
+     "s": "Marc",
+     "t": "My flight to Boston was cancelled. What are my options?",
+     "fr": "Mon vol pour Boston a été annulé. Quelles sont mes options ?"
+    },
+    {
+     "s": "Agent",
+     "t": "I can put you on the next flight tomorrow morning at six.",
+     "fr": "Je peux vous mettre sur le prochain vol, demain matin à six heures."
+    },
+    {
+     "s": "Marc",
+     "t": "Tomorrow? I have an important meeting at nine.",
+     "fr": "Demain ? J'ai une réunion importante à neuf heures."
+    },
+    {
+     "q": "Why is Marc worried?",
+     "o": [
+      "He has a meeting at nine",
+      "He lost his passport",
+      "He missed his train"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Agent",
+     "t": "The flight lands at eight fifteen, so you should be on time.",
+     "fr": "Le vol atterrit à huit heures quinze, vous devriez donc être à l'heure."
+    },
+    {
+     "s": "Agent",
+     "t": "We'll also pay for your hotel tonight.",
+     "fr": "Nous prenons aussi en charge votre hôtel ce soir."
+    },
+    {
+     "q": "What will the airline pay for?",
+     "o": [
+      "A hotel tonight",
+      "A taxi",
+      "A first-class seat"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e16",
+   "t": "La colocataire",
+   "ic": "🧽",
+   "lv": 1,
+   "cast": {
+    "Jade": [
+     "W",
+     "👩"
+    ],
+    "Omar": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "Jade",
+     "t": "Omar, can we talk about the dishes?",
+     "fr": "Omar, on peut parler de la vaisselle ?"
+    },
+    {
+     "s": "Omar",
+     "t": "Oh no, did I leave them in the sink again?",
+     "fr": "Oh non, je l'ai encore laissée dans l'évier ?"
+    },
+    {
+     "s": "Jade",
+     "t": "Yes, for the third time this week.",
+     "fr": "Oui, pour la troisième fois cette semaine."
+    },
+    {
+     "s": "Omar",
+     "t": "I'm really sorry. I've been working late.",
+     "fr": "Je suis vraiment désolé. Je travaille tard en ce moment."
+    },
+    {
+     "q": "What is the problem?",
+     "o": [
+      "Omar leaves dirty dishes",
+      "Omar is too noisy",
+      "Omar never pays the rent"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Jade",
+     "t": "What if we made a cleaning schedule?",
+     "fr": "Et si on faisait un planning de ménage ?"
+    },
+    {
+     "s": "Omar",
+     "t": "Good idea. I'll take care of the kitchen on weekdays.",
+     "fr": "Bonne idée. Je m'occupe de la cuisine en semaine."
+    },
+    {
+     "q": "What do they decide?",
+     "o": [
+      "To make a cleaning schedule",
+      "To buy a dishwasher",
+      "To move out"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e17",
+   "t": "Le cadeau",
+   "ic": "🎁",
+   "lv": 1,
+   "cast": {
+    "Paul": [
+     "M",
+     "👨"
+    ],
+    "Sara": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Paul",
+     "t": "I need a birthday present for my mom. Any ideas?",
+     "fr": "J'ai besoin d'un cadeau d'anniversaire pour ma mère. Des idées ?"
+    },
+    {
+     "s": "Sara",
+     "t": "What does she like doing in her free time?",
+     "fr": "Qu'est-ce qu'elle aime faire pendant son temps libre ?"
+    },
+    {
+     "s": "Paul",
+     "t": "She loves gardening and reading.",
+     "fr": "Elle adore jardiner et lire."
+    },
+    {
+     "s": "Sara",
+     "t": "How about a gardening book? Or a nice set of tools?",
+     "fr": "Pourquoi pas un livre de jardinage ? Ou un beau kit d'outils ?"
+    },
+    {
+     "q": "What are Paul's mother's hobbies?",
+     "o": [
+      "Gardening and reading",
+      "Cooking and running",
+      "Painting and music"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Paul",
+     "t": "The book is a great idea. She already has a lot of tools.",
+     "fr": "Le livre est une excellente idée. Elle a déjà beaucoup d'outils."
+    },
+    {
+     "q": "Why doesn't Paul choose the tools?",
+     "o": [
+      "She already has many",
+      "They are too expensive",
+      "She doesn't garden"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e18",
+   "t": "L'erreur au restaurant",
+   "ic": "🍝",
+   "lv": 1,
+   "cast": {
+    "Waiter": [
+     "M",
+     "🧑‍🍳"
+    ],
+    "Ines": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Ines",
+     "t": "Excuse me, I think there's a mistake. I ordered the vegetarian pasta.",
+     "fr": "Excusez-moi, je crois qu'il y a une erreur. J'avais commandé les pâtes végétariennes."
+    },
+    {
+     "s": "Waiter",
+     "t": "Oh, I'm so sorry. This one has chicken in it.",
+     "fr": "Oh, je suis vraiment désolé. Celles-ci contiennent du poulet."
+    },
+    {
+     "s": "Ines",
+     "t": "Yes, and I don't eat meat.",
+     "fr": "Oui, et je ne mange pas de viande."
+    },
+    {
+     "s": "Waiter",
+     "t": "I'll bring you the right dish right away. Dessert is on us tonight.",
+     "fr": "Je vous apporte le bon plat tout de suite. Le dessert est offert ce soir."
+    },
+    {
+     "q": "What was wrong with the dish?",
+     "o": [
+      "It had chicken in it",
+      "It was cold",
+      "It was too salty"
+     ],
+     "a": 0
+    },
+    {
+     "q": "What does the waiter offer?",
+     "o": [
+      "A free dessert",
+      "A discount on the bill",
+      "A free drink"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e19",
+   "t": "L'appel des RH",
+   "ic": "📱",
+   "lv": 1,
+   "cast": {
+    "HR": [
+     "W",
+     "👩‍💼"
+    ],
+    "Dan": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "HR",
+     "t": "Hi Dan, thanks for applying. Do you have a few minutes to talk?",
+     "fr": "Bonjour Dan, merci pour votre candidature. Vous avez quelques minutes pour discuter ?"
+    },
+    {
+     "s": "Dan",
+     "t": "Of course. I've been looking forward to your call.",
+     "fr": "Bien sûr. J'attendais votre appel avec impatience."
+    },
+    {
+     "s": "HR",
+     "t": "Why are you interested in this position?",
+     "fr": "Pourquoi ce poste vous intéresse-t-il ?"
+    },
+    {
+     "s": "Dan",
+     "t": "I'd like to work in a more international environment and use my English every day.",
+     "fr": "J'aimerais travailler dans un environnement plus international et utiliser mon anglais tous les jours."
+    },
+    {
+     "q": "Why is Dan interested in the job?",
+     "o": [
+      "He wants an international environment",
+      "He wants a higher salary",
+      "He wants to work from home"
+     ],
+     "a": 0
+    },
+    {
+     "s": "HR",
+     "t": "Great. Are you available for an interview on Thursday?",
+     "fr": "Très bien. Êtes-vous disponible pour un entretien jeudi ?"
+    },
+    {
+     "s": "Dan",
+     "t": "Thursday works for me.",
+     "fr": "Jeudi me convient."
+    },
+    {
+     "q": "When is the interview?",
+     "o": [
+      "On Thursday",
+      "On Monday",
+      "Next month"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e20",
+   "t": "Le marathon",
+   "ic": "🏃",
+   "lv": 1,
+   "cast": {
+    "Coach": [
+     "M",
+     "🧔"
+    ],
+    "Amy": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Amy",
+     "t": "I want to run a marathon next year. Is that realistic?",
+     "fr": "Je veux courir un marathon l'année prochaine. C'est réaliste ?"
+    },
+    {
+     "s": "Coach",
+     "t": "Absolutely, if you train three or four times a week.",
+     "fr": "Absolument, si tu t'entraînes trois ou quatre fois par semaine."
+    },
+    {
+     "s": "Amy",
+     "t": "Right now I can only run five kilometers.",
+     "fr": "Pour l'instant, je ne peux courir que cinq kilomètres."
+    },
+    {
+     "s": "Coach",
+     "t": "That's a good start. We'll increase the distance little by little.",
+     "fr": "C'est un bon début. On augmentera la distance petit à petit."
+    },
+    {
+     "q": "How far can Amy run now?",
+     "o": [
+      "Five kilometers",
+      "Ten kilometers",
+      "Half a marathon"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Coach",
+     "t": "And don't forget to rest. Recovery is part of training.",
+     "fr": "Et n'oublie pas de te reposer. La récupération fait partie de l'entraînement."
+    },
+    {
+     "q": "What does the coach say about rest?",
+     "o": [
+      "It's part of training",
+      "It's a waste of time",
+      "It's only for beginners"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "en3",
+   "t": "Le client mécontent",
+   "ic": "📦",
+   "lv": 2,
+   "cast": {
+    "Mr. Brown": [
+     "M",
+     "👨"
+    ],
+    "Julia": [
+     "W",
+     "👩‍💻"
+    ]
+   },
+   "items": [
+    {
+     "s": "Mr. Brown",
+     "t": "Hello, I'm calling because my order still hasn't arrived. It's been two weeks!",
+     "fr": "Bonjour, j'appelle parce que ma commande n'est toujours pas arrivée. Ça fait deux semaines !"
+    },
+    {
+     "s": "Julia",
+     "t": "I'm very sorry to hear that. Could you give me your order number?",
+     "fr": "Je suis vraiment désolée. Pourriez-vous me donner votre numéro de commande ?"
+    },
+    {
+     "s": "Mr. Brown",
+     "t": "Yes, it's four, seven, two, nine.",
+     "fr": "Oui, c'est le 4-7-2-9."
+    },
+    {
+     "s": "Julia",
+     "t": "Thank you. I can see that the package was sent to your old address.",
+     "fr": "Merci. Je vois que le colis a été envoyé à votre ancienne adresse."
+    },
+    {
+     "q": "Why hasn't the order arrived?",
+     "o": [
+      "It went to an old address",
+      "It was never shipped",
+      "It was damaged"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Mr. Brown",
+     "t": "That's impossible! I updated my address last month.",
+     "fr": "C'est impossible ! J'ai mis à jour mon adresse le mois dernier."
+    },
+    {
+     "s": "Julia",
+     "t": "You're right, the update wasn't applied. That's our mistake.",
+     "fr": "Vous avez raison, la mise à jour n'a pas été prise en compte. C'est notre erreur."
+    },
+    {
+     "s": "Julia",
+     "t": "I'll send a new package today by express delivery, free of charge.",
+     "fr": "Je vous envoie un nouveau colis aujourd'hui en express, sans frais."
+    },
+    {
+     "q": "What does Julia offer?",
+     "o": [
+      "Free express delivery",
+      "A full refund",
+      "A discount code"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Mr. Brown",
+     "t": "Well… thank you. I appreciate it.",
+     "fr": "Eh bien… merci. C'est apprécié."
+    },
+    {
+     "s": "Julia",
+     "t": "You'll receive a tracking number by e-mail within the hour.",
+     "fr": "Vous recevrez un numéro de suivi par e-mail dans l'heure."
+    },
+    {
+     "q": "What will Mr. Brown receive soon?",
+     "o": [
+      "A tracking number",
+      "A new invoice",
+      "A phone call"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e21",
+   "t": "La panne du site",
+   "ic": "💻",
+   "lv": 2,
+   "cast": {
+    "Lead": [
+     "W",
+     "👩‍💻"
+    ],
+    "Ravi": [
+     "M",
+     "👨‍💻"
+    ]
+   },
+   "items": [
+    {
+     "s": "Lead",
+     "t": "Ravi, the website has been down for twenty minutes. What happened?",
+     "fr": "Ravi, le site est en panne depuis vingt minutes. Que s'est-il passé ?"
+    },
+    {
+     "s": "Ravi",
+     "t": "An update went wrong. The database stopped responding right after we deployed it.",
+     "fr": "Une mise à jour s'est mal passée. La base de données a cessé de répondre juste après le déploiement."
+    },
+    {
+     "s": "Lead",
+     "t": "Can we roll it back?",
+     "fr": "Peut-on revenir en arrière ?"
+    },
+    {
+     "s": "Ravi",
+     "t": "I'm already on it. It should be back up within ten minutes.",
+     "fr": "Je m'en occupe déjà. Ça devrait revenir d'ici dix minutes."
+    },
+    {
+     "q": "What caused the problem?",
+     "o": [
+      "A failed update",
+      "A power cut",
+      "A cyberattack"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Lead",
+     "t": "OK. Once it's fixed, let's write a short report so it doesn't happen again.",
+     "fr": "D'accord. Une fois réparé, écrivons un court rapport pour que ça ne se reproduise pas."
+    },
+    {
+     "q": "What does the lead want afterwards?",
+     "o": [
+      "A short report",
+      "A new server",
+      "A meeting with the client"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e22",
+   "t": "Le malentendu",
+   "ic": "💬",
+   "lv": 2,
+   "cast": {
+    "Claire": [
+     "W",
+     "👩"
+    ],
+    "Tom": [
+     "M",
+     "👨"
+    ]
+   },
+   "items": [
+    {
+     "s": "Claire",
+     "t": "You told me the meeting was at ten, but everyone was there at nine.",
+     "fr": "Tu m'as dit que la réunion était à dix heures, mais tout le monde était là à neuf heures."
+    },
+    {
+     "s": "Tom",
+     "t": "Really? I'm sure the invitation said ten.",
+     "fr": "Vraiment ? Je suis sûr que l'invitation disait dix heures."
+    },
+    {
+     "s": "Claire",
+     "t": "It was moved last night. You must have missed the update.",
+     "fr": "Elle a été avancée hier soir. Tu as dû rater la mise à jour."
+    },
+    {
+     "q": "Why was Claire late?",
+     "o": [
+      "The meeting time was changed",
+      "Her train was late",
+      "She forgot the meeting"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Tom",
+     "t": "I'm so sorry. I should have double-checked before telling you.",
+     "fr": "Je suis vraiment désolé. J'aurais dû vérifier avant de te le dire."
+    },
+    {
+     "s": "Claire",
+     "t": "It's fine. I just had to apologize to the client.",
+     "fr": "Ce n'est pas grave. J'ai juste dû m'excuser auprès du client."
+    },
+    {
+     "q": "What does Tom regret?",
+     "o": [
+      "Not checking the time",
+      "Missing the meeting",
+      "Calling the client"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e23",
+   "t": "Partir à l'étranger",
+   "ic": "🌍",
+   "lv": 2,
+   "cast": {
+    "Mom": [
+     "W",
+     "👩"
+    ],
+    "Lucas": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "Lucas",
+     "t": "Mom, I've been offered a job in Seoul.",
+     "fr": "Maman, on m'a proposé un poste à Séoul."
+    },
+    {
+     "s": "Mom",
+     "t": "Seoul? That's wonderful… but it's so far away.",
+     "fr": "Séoul ? C'est merveilleux… mais c'est tellement loin."
+    },
+    {
+     "s": "Lucas",
+     "t": "I know. It's a two-year contract, and I'd come back for the holidays.",
+     "fr": "Je sais. C'est un contrat de deux ans, et je reviendrais pour les vacances."
+    },
+    {
+     "q": "How long is the contract?",
+     "o": [
+      "Two years",
+      "Six months",
+      "Five years"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Mom",
+     "t": "If it's what you really want, you should go for it.",
+     "fr": "Si c'est vraiment ce que tu veux, tu devrais foncer."
+    },
+    {
+     "s": "Lucas",
+     "t": "Thanks, Mom. It means a lot to me.",
+     "fr": "Merci, maman. Ça compte beaucoup pour moi."
+    },
+    {
+     "q": "How does his mother react in the end?",
+     "o": [
+      "She encourages him",
+      "She refuses",
+      "She wants to come with him"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e24",
+   "t": "Le client exigeant",
+   "ic": "📈",
+   "lv": 2,
+   "cast": {
+    "Client": [
+     "M",
+     "👨‍💼"
+    ],
+    "Julia": [
+     "W",
+     "👩‍💼"
+    ]
+   },
+   "items": [
+    {
+     "s": "Client",
+     "t": "The report you sent is too long. My boss won't read forty pages.",
+     "fr": "Le rapport que vous avez envoyé est trop long. Mon patron ne lira pas quarante pages."
+    },
+    {
+     "s": "Julia",
+     "t": "I understand. Would a two-page summary with the key figures work?",
+     "fr": "Je comprends. Un résumé de deux pages avec les chiffres clés conviendrait-il ?"
+    },
+    {
+     "s": "Client",
+     "t": "That would be perfect. Can you send it by Friday?",
+     "fr": "Ce serait parfait. Pouvez-vous l'envoyer d'ici vendredi ?"
+    },
+    {
+     "q": "What does the client want?",
+     "o": [
+      "A shorter summary",
+      "More data",
+      "A new price"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Julia",
+     "t": "Absolutely. I'll keep the full report as an appendix in case he needs details.",
+     "fr": "Bien sûr. Je garderai le rapport complet en annexe s'il a besoin de détails."
+    },
+    {
+     "q": "What will happen to the full report?",
+     "o": [
+      "It will be an appendix",
+      "It will be deleted",
+      "It will be translated"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e25",
+   "t": "L'objet trouvé",
+   "ic": "👜",
+   "lv": 2,
+   "cast": {
+    "Officer": [
+     "M",
+     "👮"
+    ],
+    "Hana": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Hana",
+     "t": "I lost my bag on the bus this morning. Has anyone brought it in?",
+     "fr": "J'ai perdu mon sac dans le bus ce matin. Quelqu'un l'a-t-il rapporté ?"
+    },
+    {
+     "s": "Officer",
+     "t": "Can you describe it?",
+     "fr": "Pouvez-vous le décrire ?"
+    },
+    {
+     "s": "Hana",
+     "t": "It's a small black leather bag with a gold zipper. My laptop is inside.",
+     "fr": "C'est un petit sac en cuir noir avec une fermeture dorée. Mon ordinateur portable est dedans."
+    },
+    {
+     "q": "What is inside the bag?",
+     "o": [
+      "A laptop",
+      "Her passport",
+      "Her keys"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Officer",
+     "t": "You're lucky. A driver found it an hour ago. I just need to see some ID.",
+     "fr": "Vous avez de la chance. Un chauffeur l'a trouvé il y a une heure. J'ai juste besoin d'une pièce d'identité."
+    },
+    {
+     "q": "Who found the bag?",
+     "o": [
+      "A bus driver",
+      "A police officer",
+      "A student"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e26",
+   "t": "Le voyage d'affaires",
+   "ic": "🧳",
+   "lv": 2,
+   "cast": {
+    "Boss": [
+     "M",
+     "👨‍💼"
+    ],
+    "Emma": [
+     "W",
+     "👩‍💼"
+    ]
+   },
+   "items": [
+    {
+     "s": "Boss",
+     "t": "Emma, I'd like you to represent us at the trade fair in Berlin next month.",
+     "fr": "Emma, j'aimerais que vous nous représentiez au salon professionnel de Berlin le mois prochain."
+    },
+    {
+     "s": "Emma",
+     "t": "I'd be glad to. Will I be going alone?",
+     "fr": "Avec plaisir. J'irai seule ?"
+    },
+    {
+     "s": "Boss",
+     "t": "No, Mark from sales will join you. You'll need to prepare the presentation together.",
+     "fr": "Non, Mark du service commercial vous accompagnera. Vous devrez préparer la présentation ensemble."
+    },
+    {
+     "q": "Where is the trade fair?",
+     "o": [
+      "In Berlin",
+      "In London",
+      "In Paris"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Emma",
+     "t": "Should we book the hotel ourselves?",
+     "fr": "Devons-nous réserver l'hôtel nous-mêmes ?"
+    },
+    {
+     "s": "Boss",
+     "t": "No, the travel department will handle everything.",
+     "fr": "Non, le service des voyages s'occupe de tout."
+    },
+    {
+     "q": "Who will book the hotel?",
+     "o": [
+      "The travel department",
+      "Emma",
+      "Mark"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e27",
+   "t": "La fête surprise",
+   "ic": "🎉",
+   "lv": 2,
+   "cast": {
+    "Zoe": [
+     "W",
+     "👩"
+    ],
+    "Max": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "Zoe",
+     "t": "Max, is everything ready? Nick will be here in fifteen minutes.",
+     "fr": "Max, tout est prêt ? Nick arrive dans quinze minutes."
+    },
+    {
+     "s": "Max",
+     "t": "Almost. The cake has arrived, but the balloons are still in my car.",
+     "fr": "Presque. Le gâteau est arrivé, mais les ballons sont encore dans ma voiture."
+    },
+    {
+     "s": "Zoe",
+     "t": "Go get them! And remind everyone to turn their phones off.",
+     "fr": "Va les chercher ! Et rappelle à tout le monde d'éteindre son téléphone."
+    },
+    {
+     "q": "What is still in Max's car?",
+     "o": [
+      "The balloons",
+      "The cake",
+      "The presents"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Max",
+     "t": "Wait… what if he's already guessed?",
+     "fr": "Attends… et s'il avait déjà deviné ?"
+    },
+    {
+     "s": "Zoe",
+     "t": "Impossible. He thinks we're taking him to a business dinner.",
+     "fr": "Impossible. Il croit qu'on l'emmène à un dîner d'affaires."
+    },
+    {
+     "q": "What does Nick think is happening?",
+     "o": [
+      "A business dinner",
+      "A surprise party",
+      "A movie night"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e28",
+   "t": "Le bénévolat",
+   "ic": "🤝",
+   "lv": 2,
+   "cast": {
+    "Coordinator": [
+     "W",
+     "👩"
+    ],
+    "Ali": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "Ali",
+     "t": "I'd like to volunteer on weekends. What kind of help do you need?",
+     "fr": "J'aimerais faire du bénévolat le week-end. De quelle aide avez-vous besoin ?"
+    },
+    {
+     "s": "Coordinator",
+     "t": "We mostly need people to sort donations and serve meals.",
+     "fr": "Nous avons surtout besoin de personnes pour trier les dons et servir les repas."
+    },
+    {
+     "s": "Ali",
+     "t": "I can do both. I also speak Arabic, if that's useful.",
+     "fr": "Je peux faire les deux. Je parle aussi arabe, si c'est utile."
+    },
+    {
+     "q": "What extra skill does Ali have?",
+     "o": [
+      "He speaks Arabic",
+      "He can drive a truck",
+      "He is a cook"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Coordinator",
+     "t": "That's extremely useful. Many of the families we help speak Arabic.",
+     "fr": "C'est extrêmement utile. Beaucoup des familles que nous aidons parlent arabe."
+    },
+    {
+     "q": "Why is his skill useful?",
+     "o": [
+      "Many families speak Arabic",
+      "They need to translate books",
+      "They want to open a school"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "en4",
+   "t": "L'entretien d'embauche",
+   "ic": "🤝",
+   "lv": 3,
+   "cast": {
+    "Mr. Davis": [
+     "M",
+     "👨‍💼"
+    ],
+    "Léa": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Mr. Davis",
+     "t": "So, Léa, why do you want to work for us?",
+     "fr": "Alors, Léa, pourquoi voulez-vous travailler chez nous ?"
+    },
+    {
+     "s": "Léa",
+     "t": "I've followed your company for years, and I admire how you've expanded into Asia.",
+     "fr": "Je suis votre entreprise depuis des années, et j'admire la façon dont vous vous êtes développés en Asie."
+    },
+    {
+     "s": "Mr. Davis",
+     "t": "Interesting. What would you say is your greatest weakness?",
+     "fr": "Intéressant. Quel serait votre plus grand défaut ?"
+    },
+    {
+     "s": "Léa",
+     "t": "I tend to take on too much. I've learned to delegate and prioritize, though.",
+     "fr": "J'ai tendance à trop en prendre. Mais j'ai appris à déléguer et à prioriser."
+    },
+    {
+     "q": "How does Léa describe her weakness?",
+     "o": [
+      "She takes on too many tasks",
+      "She is often late",
+      "She dislikes teamwork"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Mr. Davis",
+     "t": "Where do you see yourself in five years?",
+     "fr": "Où vous voyez-vous dans cinq ans ?"
+    },
+    {
+     "s": "Léa",
+     "t": "Leading a small team, ideally on international projects.",
+     "fr": "À la tête d'une petite équipe, idéalement sur des projets internationaux."
+    },
+    {
+     "q": "What is Léa's goal?",
+     "o": [
+      "To lead a team on international projects",
+      "To start her own company",
+      "To move to Asia"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Mr. Davis",
+     "t": "Last question: do you have any questions for me?",
+     "fr": "Dernière question : avez-vous des questions pour moi ?"
+    },
+    {
+     "s": "Léa",
+     "t": "Yes. What does a typical day look like in this role?",
+     "fr": "Oui. À quoi ressemble une journée type à ce poste ?"
+    },
+    {
+     "q": "What does Léa ask about?",
+     "o": [
+      "The daily tasks of the job",
+      "The salary",
+      "The holidays"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Mr. Davis",
+     "t": "Great question. Let's talk about that.",
+     "fr": "Excellente question. Parlons-en."
+    }
+   ]
+  },
+  {
+   "id": "e29",
+   "t": "La négociation",
+   "ic": "💼",
+   "lv": 3,
+   "cast": {
+    "Buyer": [
+     "M",
+     "👨‍💼"
+    ],
+    "Seller": [
+     "W",
+     "👩‍💼"
+    ]
+   },
+   "items": [
+    {
+     "s": "Buyer",
+     "t": "Your price is fifteen percent higher than your competitor's.",
+     "fr": "Votre prix est quinze pour cent plus élevé que celui de votre concurrent."
+    },
+    {
+     "s": "Seller",
+     "t": "That's true, but our product comes with a three-year warranty and on-site support.",
+     "fr": "C'est vrai, mais notre produit est livré avec une garantie de trois ans et une assistance sur site."
+    },
+    {
+     "s": "Buyer",
+     "t": "Even so, I can't justify that difference to my board.",
+     "fr": "Même ainsi, je ne peux pas justifier cet écart auprès de mon conseil d'administration."
+    },
+    {
+     "q": "What is the buyer's objection?",
+     "o": [
+      "The price is too high",
+      "The warranty is too short",
+      "Delivery is too slow"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Seller",
+     "t": "What if we offered free installation and a five percent discount on a two-year commitment?",
+     "fr": "Et si nous offrions l'installation gratuite et une remise de cinq pour cent pour un engagement de deux ans ?"
+    },
+    {
+     "s": "Buyer",
+     "t": "That would bring us much closer. Let me run the numbers and get back to you.",
+     "fr": "Ça nous rapprocherait beaucoup. Laissez-moi refaire les calculs et je reviens vers vous."
+    },
+    {
+     "q": "What does the seller propose?",
+     "o": [
+      "Free installation and a discount",
+      "A longer warranty only",
+      "A free trial month"
+     ],
+     "a": 0
+    },
+    {
+     "q": "What will the buyer do next?",
+     "o": [
+      "Check the figures",
+      "Sign immediately",
+      "Refuse the offer"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e30",
+   "t": "L'anomalie comptable",
+   "ic": "🗂️",
+   "lv": 3,
+   "cast": {
+    "Anna": [
+     "W",
+     "👩‍💼"
+    ],
+    "Ken": [
+     "M",
+     "👨‍💼"
+    ]
+   },
+   "items": [
+    {
+     "s": "Anna",
+     "t": "Ken, I found something odd in the accounts. Several invoices were paid twice.",
+     "fr": "Ken, j'ai trouvé quelque chose de bizarre dans les comptes. Plusieurs factures ont été payées deux fois."
+    },
+    {
+     "s": "Ken",
+     "t": "Could it be a technical glitch?",
+     "fr": "Ça pourrait être un bug technique ?"
+    },
+    {
+     "s": "Anna",
+     "t": "I thought so at first, but they were all approved by the same person.",
+     "fr": "Je l'ai cru au début, mais elles ont toutes été approuvées par la même personne."
+    },
+    {
+     "q": "What did Anna discover?",
+     "o": [
+      "Invoices paid twice",
+      "Missing salaries",
+      "A stolen laptop"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Ken",
+     "t": "That's serious. We need to inform the compliance team before we draw any conclusions.",
+     "fr": "C'est grave. Nous devons informer le service conformité avant de tirer des conclusions."
+    },
+    {
+     "s": "Anna",
+     "t": "Agreed. I'll put everything in writing today.",
+     "fr": "D'accord. Je mets tout par écrit aujourd'hui."
+    },
+    {
+     "q": "Why does Anna no longer think it's a glitch?",
+     "o": [
+      "The same person approved them",
+      "The bank confirmed it",
+      "The amounts were huge"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e31",
+   "t": "Le débat sur le télétravail",
+   "ic": "🎙️",
+   "lv": 3,
+   "cast": {
+    "Host": [
+     "M",
+     "🎙️"
+    ],
+    "Expert": [
+     "W",
+     "👩‍🏫"
+    ]
+   },
+   "items": [
+    {
+     "s": "Host",
+     "t": "Is remote work here to stay?",
+     "fr": "Le télétravail est-il là pour durer ?"
+    },
+    {
+     "s": "Expert",
+     "t": "In some form, yes. Most companies have settled on a hybrid model.",
+     "fr": "Sous une certaine forme, oui. La plupart des entreprises ont adopté un modèle hybride."
+    },
+    {
+     "s": "Host",
+     "t": "Critics say it hurts creativity and team spirit.",
+     "fr": "Les critiques disent que cela nuit à la créativité et à l'esprit d'équipe."
+    },
+    {
+     "s": "Expert",
+     "t": "That can happen, which is why the office is becoming a place for collaboration rather than routine tasks.",
+     "fr": "Ça peut arriver, c'est pourquoi le bureau devient un lieu de collaboration plutôt que de tâches routinières."
+    },
+    {
+     "q": "According to the expert, what is the office becoming?",
+     "o": [
+      "A place for collaboration",
+      "A place for routine tasks",
+      "Unnecessary"
+     ],
+     "a": 0
+    },
+    {
+     "q": "What is the main criticism mentioned?",
+     "o": [
+      "It hurts creativity and team spirit",
+      "It costs too much",
+      "It is bad for the environment"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e32",
+   "t": "La présentation ratée",
+   "ic": "📽️",
+   "lv": 3,
+   "cast": {
+    "Mentor": [
+     "W",
+     "👩‍💼"
+    ],
+    "Leo": [
+     "M",
+     "🧑‍💼"
+    ]
+   },
+   "items": [
+    {
+     "s": "Leo",
+     "t": "That presentation was a disaster. The projector didn't work and I lost my train of thought.",
+     "fr": "Cette présentation a été une catastrophe. Le projecteur ne marchait pas et j'ai perdu le fil."
+    },
+    {
+     "s": "Mentor",
+     "t": "I was there. Honestly, you handled it better than you think.",
+     "fr": "J'étais là. Honnêtement, tu t'en es mieux sorti que tu ne le penses."
+    },
+    {
+     "s": "Leo",
+     "t": "Really? I felt everyone was staring at me.",
+     "fr": "Vraiment ? J'avais l'impression que tout le monde me fixait."
+    },
+    {
+     "s": "Mentor",
+     "t": "You stayed calm and kept talking without slides. That takes skill.",
+     "fr": "Tu es resté calme et tu as continué à parler sans diapositives. Ça demande du talent."
+    },
+    {
+     "q": "What went wrong during the presentation?",
+     "o": [
+      "The projector didn't work",
+      "Leo arrived late",
+      "Nobody came"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Mentor",
+     "t": "Next time, bring a printed copy of your key points, just in case.",
+     "fr": "La prochaine fois, apporte une copie papier de tes points clés, au cas où."
+    },
+    {
+     "q": "What advice does the mentor give?",
+     "o": [
+      "Bring printed notes",
+      "Speak faster",
+      "Cancel if there's a problem"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e33",
+   "t": "L'interview du chef",
+   "ic": "👨‍🍳",
+   "lv": 3,
+   "cast": {
+    "Host": [
+     "W",
+     "🎙️"
+    ],
+    "Chef": [
+     "M",
+     "👨‍🍳"
+    ]
+   },
+   "items": [
+    {
+     "s": "Host",
+     "t": "Your restaurant has just won its first star. How do you feel?",
+     "fr": "Votre restaurant vient de décrocher sa première étoile. Comment vous sentez-vous ?"
+    },
+    {
+     "s": "Chef",
+     "t": "Overwhelmed, to be honest. Ten years ago I was washing dishes in this very kitchen.",
+     "fr": "Submergé, pour être honnête. Il y a dix ans, je faisais la vaisselle dans cette même cuisine."
+    },
+    {
+     "s": "Host",
+     "t": "What made the difference?",
+     "fr": "Qu'est-ce qui a fait la différence ?"
+    },
+    {
+     "s": "Chef",
+     "t": "My team, above all. And sticking to local, seasonal ingredients even when it was more expensive.",
+     "fr": "Mon équipe, avant tout. Et le fait de rester fidèle aux produits locaux et de saison, même quand c'était plus cher."
+    },
+    {
+     "q": "What was the chef doing ten years ago?",
+     "o": [
+      "Washing dishes in the same kitchen",
+      "Studying in Paris",
+      "Running another restaurant"
+     ],
+     "a": 0
+    },
+    {
+     "q": "What does the chef credit for his success?",
+     "o": [
+      "His team and local ingredients",
+      "Luck and advertising",
+      "A famous investor"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e34",
+   "t": "Le dilemme",
+   "ic": "⚖️",
+   "lv": 3,
+   "cast": {
+    "Mia": [
+     "W",
+     "👩"
+    ],
+    "Josh": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "Mia",
+     "t": "I've been offered a promotion, but it means moving to another city.",
+     "fr": "On m'a proposé une promotion, mais ça implique de déménager dans une autre ville."
+    },
+    {
+     "s": "Josh",
+     "t": "Congratulations! So why don't you look happy?",
+     "fr": "Félicitations ! Alors pourquoi tu n'as pas l'air contente ?"
+    },
+    {
+     "s": "Mia",
+     "t": "Because my parents are getting older, and I'd be four hours away from them.",
+     "fr": "Parce que mes parents vieillissent, et je serais à quatre heures d'eux."
+    },
+    {
+     "q": "Why is Mia hesitant?",
+     "o": [
+      "She'd be far from her parents",
+      "The salary is lower",
+      "She doesn't like the job"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Josh",
+     "t": "Could you negotiate working remotely a few days a month?",
+     "fr": "Tu pourrais négocier du télétravail quelques jours par mois ?"
+    },
+    {
+     "s": "Mia",
+     "t": "That's worth asking. If they agree, I'll accept.",
+     "fr": "Ça vaut le coup de demander. S'ils acceptent, je dis oui."
+    },
+    {
+     "q": "Under what condition will Mia accept?",
+     "o": [
+      "If she can work remotely sometimes",
+      "If the salary doubles",
+      "If Josh comes with her"
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ],
+ "fr": [
+  {
+   "id": "fr3",
+   "t": "Le message à la nounou",
+   "ic": "📝",
+   "lv": 0,
+   "cast": {
+    "Mère": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Mère",
+     "t": "Bonjour Léa, les enfants ont déjà mangé à midi.",
+     "fr": ""
+    },
+    {
+     "q": "Complète : « Ils ___ joué dans le jardin. »",
+     "o": [
+      "ont",
+      "on",
+      "onts"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Mère",
+     "t": "Ils ont joué dans le jardin tout l'après-midi.",
+     "fr": ""
+    },
+    {
+     "s": "Mère",
+     "t": "Leurs devoirs sont sur la table de la cuisine.",
+     "fr": ""
+    },
+    {
+     "q": "« Leurs devoirs » : pourquoi « leurs » prend un s ?",
+     "o": [
+      "Il y a plusieurs devoirs (déterminant pluriel)",
+      "Il est toujours au pluriel",
+      "C'est un verbe"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Mère",
+     "t": "Je rentre vers dix-neuf heures. Merci beaucoup !",
+     "fr": ""
+    },
+    {
+     "q": "Quelle phrase est correcte ?",
+     "o": [
+      "Je rentre vers dix-neuf heures.",
+      "Je rentre vers dix-neufs heures.",
+      "Je rentre ver dix-neuf heures."
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "fr4",
+   "t": "La liste de courses",
+   "ic": "🛒",
+   "lv": 0,
+   "cast": {
+    "Paul": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "Paul",
+     "t": "N'oublie pas d'acheter des pommes et des poires.",
+     "fr": ""
+    },
+    {
+     "q": "Complète : « Les pommes ___ dans le panier. »",
+     "o": [
+      "sont",
+      "son",
+      "sons"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Paul",
+     "t": "Il faut aussi trois baguettes et du beurre.",
+     "fr": ""
+    },
+    {
+     "q": "Pluriel correct :",
+     "o": [
+      "des choux",
+      "des chous",
+      "des choues"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Paul",
+     "t": "Prends des choux-fleurs s'ils sont frais.",
+     "fr": ""
+    },
+    {
+     "s": "Paul",
+     "t": "Et surtout, garde le ticket de caisse !",
+     "fr": ""
+    },
+    {
+     "q": "Dans « s'ils sont frais », « s' » remplace…",
+     "o": [
+      "si",
+      "se",
+      "ces"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "fl1",
+   "t": "Le premier café",
+   "ic": "☕",
+   "lv": 0,
+   "cast": {
+    "Serveur": [
+     "M",
+     "🧑‍🍳"
+    ],
+    "Emma": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Serveur",
+     "t": "Bonjour madame, vous désirez ?",
+     "fr": "Hello madam, what would you like?"
+    },
+    {
+     "s": "Emma",
+     "t": "Bonjour ! Je voudrais un café et un croissant, s'il vous plaît.",
+     "fr": "Hello! I'd like a coffee and a croissant, please."
+    },
+    {
+     "s": "Serveur",
+     "t": "Sur place ou à emporter ?",
+     "fr": "For here or to take away?"
+    },
+    {
+     "s": "Emma",
+     "t": "Sur place. C'est combien ?",
+     "fr": "For here. How much is it?"
+    },
+    {
+     "q": "What does Emma order?",
+     "o": [
+      "A coffee and a croissant",
+      "A tea and a cake",
+      "An orange juice"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Serveur",
+     "t": "Ça fait quatre euros cinquante.",
+     "fr": "That's four euros fifty."
+    },
+    {
+     "s": "Emma",
+     "t": "Voilà. Merci beaucoup !",
+     "fr": "Here you go. Thank you very much!"
+    },
+    {
+     "q": "How much does she pay?",
+     "o": [
+      "€4.50",
+      "€14.50",
+      "€5.40"
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  },
+  {
+   "id": "fl2",
+   "t": "Le nouveau collègue",
+   "ic": "🤝",
+   "lv": 0,
+   "cast": {
+    "Julie": [
+     "W",
+     "👩‍💼"
+    ],
+    "Tom": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "Julie",
+     "t": "Salut, tu es nouveau ici ?",
+     "fr": "Hi, are you new here?"
+    },
+    {
+     "s": "Tom",
+     "t": "Oui, je m'appelle Tom. Je viens de Londres.",
+     "fr": "Yes, my name is Tom. I come from London."
+    },
+    {
+     "s": "Julie",
+     "t": "Enchantée ! Moi, c'est Julie. Tu habites où ?",
+     "fr": "Nice to meet you! I'm Julie. Where do you live?"
+    },
+    {
+     "s": "Tom",
+     "t": "J'habite près de la gare, avec ma sœur.",
+     "fr": "I live near the station, with my sister."
+    },
+    {
+     "q": "Where does Tom come from?",
+     "o": [
+      "London",
+      "Lyon",
+      "Paris"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Julie",
+     "t": "On déjeune ensemble à midi ?",
+     "fr": "Shall we have lunch together at noon?"
+    },
+    {
+     "s": "Tom",
+     "t": "Avec plaisir !",
+     "fr": "With pleasure!"
+    },
+    {
+     "q": "What does Julie suggest?",
+     "o": [
+      "Having lunch together",
+      "Going to the station",
+      "Visiting his sister"
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  },
+  {
+   "id": "fl3",
+   "t": "Perdue dans Paris",
+   "ic": "🗺️",
+   "lv": 0,
+   "cast": {
+    "Anna": [
+     "W",
+     "👩"
+    ],
+    "Passant": [
+     "M",
+     "👴"
+    ]
+   },
+   "items": [
+    {
+     "s": "Anna",
+     "t": "Excusez-moi, je suis perdue. Où est le musée ?",
+     "fr": "Excuse me, I'm lost. Where is the museum?"
+    },
+    {
+     "s": "Passant",
+     "t": "C'est facile. Allez tout droit, puis tournez à droite.",
+     "fr": "It's easy. Go straight ahead, then turn right."
+    },
+    {
+     "s": "Anna",
+     "t": "C'est loin d'ici ?",
+     "fr": "Is it far from here?"
+    },
+    {
+     "s": "Passant",
+     "t": "Non, à dix minutes à pied.",
+     "fr": "No, ten minutes on foot."
+    },
+    {
+     "q": "What is Anna looking for?",
+     "o": [
+      "The museum",
+      "The station",
+      "Her hotel"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Anna",
+     "t": "Merci beaucoup, monsieur !",
+     "fr": "Thank you very much, sir!"
+    },
+    {
+     "q": "How far is it?",
+     "o": [
+      "Ten minutes on foot",
+      "Ten minutes by bus",
+      "One hour"
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  },
+  {
+   "id": "fl4",
+   "t": "Au marché",
+   "ic": "🧺",
+   "lv": 0,
+   "cast": {
+    "Marchande": [
+     "W",
+     "👩‍🌾"
+    ],
+    "Paul": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "Marchande",
+     "t": "Bonjour ! Qu'est-ce que je vous sers ?",
+     "fr": "Hello! What can I get you?"
+    },
+    {
+     "s": "Paul",
+     "t": "Un kilo de tomates et des pommes, s'il vous plaît.",
+     "fr": "A kilo of tomatoes and some apples, please."
+    },
+    {
+     "s": "Marchande",
+     "t": "Et avec ceci ?",
+     "fr": "Anything else?"
+    },
+    {
+     "s": "Paul",
+     "t": "Vous avez du fromage de chèvre ?",
+     "fr": "Do you have goat's cheese?"
+    },
+    {
+     "s": "Marchande",
+     "t": "Désolée, je n'ai pas de fromage aujourd'hui.",
+     "fr": "Sorry, I don't have any cheese today."
+    },
+    {
+     "q": "What does Paul buy?",
+     "o": [
+      "Tomatoes and apples",
+      "Cheese and bread",
+      "Only apples"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Why can't he buy cheese?",
+     "o": [
+      "There is none today",
+      "It's too expensive",
+      "He forgot his money"
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  },
+  {
+   "id": "fr1",
+   "t": "Le mail du lundi",
+   "ic": "📧",
+   "lv": 1,
+   "cast": {
+    "Claire": [
+     "W",
+     "👩‍💼"
+    ]
+   },
+   "items": [
+    {
+     "s": "Claire",
+     "t": "Bonjour à tous, je vous écris pour vous rappeler la réunion de lundi."
+    },
+    {
+     "q": "Complète : « Les documents que j'ai ___ hier sont en pièce jointe. »",
+     "o": [
+      "envoyés",
+      "envoyé",
+      "envoyées"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Claire",
+     "t": "Les documents que j'ai envoyés hier sont en pièce jointe."
+    },
+    {
+     "s": "Claire",
+     "t": "Merci de les lire avant la réunion, quels que soient vos impératifs."
+    },
+    {
+     "q": "Pourquoi écrit-on « quels que soient » ici ?",
+     "o": [
+      "Il s'accorde avec « impératifs »",
+      "Il est toujours au pluriel",
+      "Il s'accorde avec « vous »"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Claire",
+     "t": "Si vous aviez des questions, n'hésitez pas à me contacter."
+    },
+    {
+     "q": "Après un « si » de condition, on n'emploie jamais…",
+     "o": [
+      "le conditionnel",
+      "l'imparfait",
+      "le présent"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Claire",
+     "t": "Les participants se sont déjà inscrits. Bonne journée à tous !"
+    },
+    {
+     "q": "« Les participants se sont inscrits » : pourquoi « inscrits » ?",
+     "o": [
+      "Verbe pronominal : accord avec le sujet",
+      "Avec avoir, on accorde toujours",
+      "C'est un adjectif invariable"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "fr5",
+   "t": "L'e-mail au propriétaire",
+   "ic": "🏠",
+   "lv": 1,
+   "cast": {
+    "Inès": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Inès",
+     "t": "Monsieur, je vous écris au sujet de la fuite d'eau.",
+     "fr": ""
+    },
+    {
+     "q": "« Je vous écris » : quelle terminaison avec « je » ?",
+     "o": [
+      "-s (j'écris)",
+      "-t (j'écrit)",
+      "-e (j'écrie)"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Inès",
+     "t": "Le plombier que vous avez envoyé n'est jamais venu.",
+     "fr": ""
+    },
+    {
+     "q": "Accord : « Les plombiers que vous avez ___ »",
+     "o": [
+      "envoyés",
+      "envoyé",
+      "envoyer"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Inès",
+     "t": "Je vous serais reconnaissante de bien vouloir le recontacter rapidement.",
+     "fr": ""
+    },
+    {
+     "q": "« Je vous serais reconnaissante » : pourquoi le conditionnel ?",
+     "o": [
+      "C'est une formule de politesse",
+      "Il y a un « si »",
+      "C'est une faute"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "fr6",
+   "t": "Le compte rendu",
+   "ic": "📋",
+   "lv": 1,
+   "cast": {
+    "Hugo": [
+     "M",
+     "🧑‍💼"
+    ]
+   },
+   "items": [
+    {
+     "s": "Hugo",
+     "t": "Lors de la réunion, nous avons abordé trois points.",
+     "fr": ""
+    },
+    {
+     "q": "« nous avons abordé trois points » : pourquoi pas d'accord ?",
+     "o": [
+      "Le COD est placé après le verbe",
+      "Le sujet est masculin",
+      "« abordé » est invariable"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Hugo",
+     "t": "Les décisions qui ont été prises seront appliquées dès lundi.",
+     "fr": ""
+    },
+    {
+     "q": "« Les décisions qui ont été ___ »",
+     "o": [
+      "prises",
+      "pris",
+      "prise"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Hugo",
+     "t": "Chacun recevra le planning mis à jour.",
+     "fr": ""
+    },
+    {
+     "q": "« Chacun recevra » : le verbe est au…",
+     "o": [
+      "singulier",
+      "pluriel",
+      "participe"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "fr11",
+   "t": "Le SMS de Léo",
+   "ic": "📱",
+   "lv": 1,
+   "cast": {
+    "Léo": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "Léo",
+     "t": "Salut ! On se voit ce soir ou demain ?",
+     "fr": ""
+    },
+    {
+     "q": "Ici, « ou » signifie…",
+     "o": [
+      "ou bien (sans accent)",
+      "un lieu (où)",
+      "les deux"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Léo",
+     "t": "Je ne sais pas où se trouve le restaurant, tu m'envoies l'adresse ?",
+     "fr": ""
+    },
+    {
+     "q": "Complète : « Je ne sais pas ___ il est. »",
+     "o": [
+      "où",
+      "ou",
+      "oû"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Léo",
+     "t": "Ça fait longtemps qu'on ne s'est pas vus, j'ai hâte !",
+     "fr": ""
+    },
+    {
+     "q": "Dans « Ça fait longtemps », « ça » signifie…",
+     "o": [
+      "cela",
+      "son, sa (possessif)",
+      "ici (çà)"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "fl5",
+   "t": "Un week-end à Lyon",
+   "ic": "🚄",
+   "lv": 1,
+   "cast": {
+    "Léa": [
+     "W",
+     "👩"
+    ],
+    "Hugo": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "Léa",
+     "t": "Qu'est-ce que tu as fait ce week-end ?",
+     "fr": "What did you do this weekend?"
+    },
+    {
+     "s": "Hugo",
+     "t": "Je suis allé à Lyon pour voir mes grands-parents.",
+     "fr": "I went to Lyon to see my grandparents."
+    },
+    {
+     "s": "Léa",
+     "t": "Tu as pris le train ?",
+     "fr": "Did you take the train?"
+    },
+    {
+     "s": "Hugo",
+     "t": "Oui, et il est arrivé avec une heure de retard !",
+     "fr": "Yes, and it arrived an hour late!"
+    },
+    {
+     "q": "Why did Hugo go to Lyon?",
+     "o": [
+      "To see his grandparents",
+      "For work",
+      "For a concert"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Léa",
+     "t": "Oh non ! Et sinon, c'était bien ?",
+     "fr": "Oh no! Apart from that, was it nice?"
+    },
+    {
+     "s": "Hugo",
+     "t": "Super ! Nous avons mangé dans un bouchon lyonnais.",
+     "fr": "Great! We ate in a traditional Lyon restaurant."
+    },
+    {
+     "q": "What went wrong?",
+     "o": [
+      "The train was late",
+      "The restaurant was closed",
+      "It rained all weekend"
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  },
+  {
+   "id": "fl6",
+   "t": "Chez le médecin",
+   "ic": "🩺",
+   "lv": 1,
+   "cast": {
+    "Médecin": [
+     "M",
+     "👨‍⚕️"
+    ],
+    "Sophie": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Médecin",
+     "t": "Qu'est-ce qui ne va pas ?",
+     "fr": "What's wrong?"
+    },
+    {
+     "s": "Sophie",
+     "t": "J'ai mal à la gorge et je tousse depuis trois jours.",
+     "fr": "I have a sore throat and I've been coughing for three days."
+    },
+    {
+     "s": "Médecin",
+     "t": "Vous avez de la fièvre ?",
+     "fr": "Do you have a fever?"
+    },
+    {
+     "s": "Sophie",
+     "t": "Un peu, surtout le soir.",
+     "fr": "A little, especially in the evening."
+    },
+    {
+     "q": "How long has Sophie been coughing?",
+     "o": [
+      "Three days",
+      "One week",
+      "Since this morning"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Médecin",
+     "t": "Reposez-vous et prenez ce sirop trois fois par jour.",
+     "fr": "Rest and take this syrup three times a day."
+    },
+    {
+     "q": "What does the doctor recommend?",
+     "o": [
+      "Rest and a syrup",
+      "Going back to work",
+      "An operation"
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  },
+  {
+   "id": "fl7",
+   "t": "La réservation",
+   "ic": "🍽️",
+   "lv": 1,
+   "cast": {
+    "Hôte": [
+     "W",
+     "👩‍💼"
+    ],
+    "Marc": [
+     "M",
+     "👨"
+    ]
+   },
+   "items": [
+    {
+     "s": "Marc",
+     "t": "Bonsoir, je voudrais réserver une table pour samedi soir.",
+     "fr": "Good evening, I'd like to book a table for Saturday night."
+    },
+    {
+     "s": "Hôte",
+     "t": "Pour combien de personnes ?",
+     "fr": "For how many people?"
+    },
+    {
+     "s": "Marc",
+     "t": "Quatre personnes, vers vingt heures.",
+     "fr": "Four people, around eight o'clock."
+    },
+    {
+     "s": "Hôte",
+     "t": "Désolée, à vingt heures c'est complet. Vingt et une heures, ça vous irait ?",
+     "fr": "Sorry, eight o'clock is full. Would nine o'clock suit you?"
+    },
+    {
+     "q": "How many people is the booking for?",
+     "o": [
+      "Four",
+      "Two",
+      "Eight"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Marc",
+     "t": "Parfait, à vingt et une heures alors.",
+     "fr": "Perfect, nine o'clock then."
+    },
+    {
+     "q": "At what time will they eat?",
+     "o": [
+      "9 p.m.",
+      "8 p.m.",
+      "7 p.m."
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  },
+  {
+   "id": "fr7",
+   "t": "La lettre de réclamation",
+   "ic": "✉️",
+   "lv": 2,
+   "cast": {
+    "Sophie": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Sophie",
+     "t": "Malgré mes nombreuses relances, je n'ai reçu aucune réponse.",
+     "fr": ""
+    },
+    {
+     "q": "« aucune réponse » : « aucun » s'accorde…",
+     "o": [
+      "en genre avec le nom (féminin)",
+      "toujours au pluriel",
+      "jamais"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Sophie",
+     "t": "Quoique patiente, je ne peux accepter davantage ce retard.",
+     "fr": ""
+    },
+    {
+     "q": "« Quoique patiente » : pourquoi en un mot ?",
+     "o": [
+      "Quoique = bien que",
+      "Quoi que = quelle que soit la chose que",
+      "Les deux sont possibles"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Sophie",
+     "t": "Je vous prie de bien vouloir me rembourser la somme que j'ai versée.",
+     "fr": ""
+    },
+    {
+     "q": "« la somme que j'ai ___ »",
+     "o": [
+      "versée",
+      "versé",
+      "versés"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "fr8",
+   "t": "Le rapport de stage",
+   "ic": "🎓",
+   "lv": 2,
+   "cast": {
+    "Nina": [
+     "W",
+     "👩‍🎓"
+    ]
+   },
+   "items": [
+    {
+     "s": "Nina",
+     "t": "Durant ces six mois, j'ai acquis de nombreuses compétences.",
+     "fr": ""
+    },
+    {
+     "q": "« j'ai ___ » (acquérir)",
+     "o": [
+      "acquis",
+      "acquit",
+      "aquis"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Nina",
+     "t": "Les tâches que l'on m'a confiées étaient variées et enrichissantes.",
+     "fr": ""
+    },
+    {
+     "q": "« Les tâches que l'on m'a ___ »",
+     "o": [
+      "confiées",
+      "confié",
+      "confiés"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Nina",
+     "t": "Je remercie l'ensemble de l'équipe, qui m'a accueillie chaleureusement.",
+     "fr": ""
+    },
+    {
+     "q": "« qui m'a accueillie » : pourquoi « accueillie » ?",
+     "o": [
+      "Le COD « m' » (Nina, féminin) est placé avant",
+      "« Accueillir » prend toujours -ie",
+      "Le sujet commande l'accord"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "fr12",
+   "t": "Les conseils du tuteur",
+   "ic": "⏳",
+   "lv": 2,
+   "cast": {
+    "Tutrice": [
+     "W",
+     "👩‍💼"
+    ]
+   },
+   "items": [
+    {
+     "s": "Tutrice",
+     "t": "Il faut que tu envoies ce dossier avant que le client ne parte en congé.",
+     "fr": ""
+    },
+    {
+     "q": "« Il faut que tu ___ » (envoyer)",
+     "o": [
+      "envoies",
+      "envoie",
+      "envoyes"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Tutrice",
+     "t": "Si tu avais relu ton message, tu aurais vu la faute.",
+     "fr": ""
+    },
+    {
+     "q": "Après un « si » de condition, on utilise…",
+     "o": [
+      "l'imparfait ou le plus-que-parfait",
+      "le conditionnel",
+      "le futur"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Tutrice",
+     "t": "Je crois que tu feras un excellent travail.",
+     "fr": ""
+    },
+    {
+     "q": "« tu feras » est au…",
+     "o": [
+      "futur",
+      "conditionnel",
+      "subjonctif"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "fl8",
+   "t": "Souvenir d'enfance",
+   "ic": "🏡",
+   "lv": 2,
+   "cast": {
+    "Grand-mère": [
+     "W",
+     "👵"
+    ],
+    "Lucas": [
+     "M",
+     "👦"
+    ]
+   },
+   "items": [
+    {
+     "s": "Lucas",
+     "t": "Mamie, comment c'était quand tu étais petite ?",
+     "fr": "Grandma, what was it like when you were little?"
+    },
+    {
+     "s": "Grand-mère",
+     "t": "J'habitais à la campagne. Il n'y avait pas de télévision.",
+     "fr": "I lived in the countryside. There was no television."
+    },
+    {
+     "s": "Lucas",
+     "t": "Qu'est-ce que tu faisais le soir ?",
+     "fr": "What did you do in the evenings?"
+    },
+    {
+     "s": "Grand-mère",
+     "t": "Nous lisions et nous jouions aux cartes. Un jour, la neige est tombée pendant une semaine !",
+     "fr": "We read and played cards. One day, it snowed for a whole week!"
+    },
+    {
+     "q": "Where did the grandmother live?",
+     "o": [
+      "In the countryside",
+      "In Paris",
+      "By the sea"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Lucas",
+     "t": "Et l'école était fermée ?",
+     "fr": "And was the school closed?"
+    },
+    {
+     "s": "Grand-mère",
+     "t": "Oui, et nous avons construit un énorme bonhomme de neige.",
+     "fr": "Yes, and we built an enormous snowman."
+    },
+    {
+     "q": "What happened one day?",
+     "o": [
+      "It snowed for a week",
+      "The school burned down",
+      "They got a TV"
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  },
+  {
+   "id": "fl9",
+   "t": "Le nouvel appartement",
+   "ic": "🔑",
+   "lv": 2,
+   "cast": {
+    "Propriétaire": [
+     "M",
+     "👨‍💼"
+    ],
+    "Nina": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Propriétaire",
+     "t": "Voici le salon. L'appartement fait cinquante mètres carrés.",
+     "fr": "Here is the living room. The flat is fifty square metres."
+    },
+    {
+     "s": "Nina",
+     "t": "Il est lumineux ! Le loyer, c'est combien ?",
+     "fr": "It's bright! How much is the rent?"
+    },
+    {
+     "s": "Propriétaire",
+     "t": "Neuf cents euros par mois, charges comprises.",
+     "fr": "Nine hundred euros a month, charges included."
+    },
+    {
+     "s": "Nina",
+     "t": "Il y a un ascenseur ? J'ai beaucoup de livres à monter.",
+     "fr": "Is there a lift? I have lots of books to carry up."
+    },
+    {
+     "q": "How much is the rent?",
+     "o": [
+      "€900, charges included",
+      "€900 plus charges",
+      "€500"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Propriétaire",
+     "t": "Oui, et le chauffage est neuf.",
+     "fr": "Yes, and the heating is new."
+    },
+    {
+     "s": "Nina",
+     "t": "Je le prends ! Quand est-ce que je peux emménager ?",
+     "fr": "I'll take it! When can I move in?"
+    },
+    {
+     "q": "What does Nina decide?",
+     "o": [
+      "To take the flat",
+      "To visit another flat",
+      "To negotiate the rent"
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  },
+  {
+   "id": "fr2",
+   "t": "La lettre de motivation",
+   "ic": "✉️",
+   "lv": 3,
+   "cast": {
+    "Hugo": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "Hugo",
+     "t": "Madame, Monsieur, c'est avec un vif intérêt que j'ai lu votre annonce."
+    },
+    {
+     "q": "Choisis la bonne forme : « Les compétences que j'ai ___ au cours de mes stages… »",
+     "o": [
+      "acquises",
+      "acquis",
+      "acquit"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Hugo",
+     "t": "Les compétences que j'ai acquises au cours de mes stages correspondent à vos attentes."
+    },
+    {
+     "s": "Hugo",
+     "t": "Je serais ravi de vous rencontrer afin de vous exposer mes motivations."
+    },
+    {
+     "q": "« Je serais ravi » : pourquoi le conditionnel ?",
+     "o": [
+      "Pour exprimer une possibilité polie",
+      "Parce qu'il y a un « si »",
+      "C'est une faute, il faut « serai »"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Hugo",
+     "t": "Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées."
+    },
+    {
+     "q": "Quelle phrase est correcte ?",
+     "o": [
+      "Quelles que soient vos exigences, je m'adapterai.",
+      "Quelque soient vos exigences, je m'adapterai.",
+      "Quel que soit vos exigences, je m'adapterai."
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "fr9",
+   "t": "L'invitation officielle",
+   "ic": "🎟️",
+   "lv": 3,
+   "cast": {
+    "Directeur": [
+     "M",
+     "👨‍💼"
+    ]
+   },
+   "items": [
+    {
+     "s": "Directeur",
+     "t": "Madame, Monsieur, nous avons l'honneur de vous convier à l'inauguration de nos nouveaux locaux.",
+     "fr": ""
+    },
+    {
+     "q": "Pluriel de « nouveau local » :",
+     "o": [
+      "nouveaux locaux",
+      "nouveaus locals",
+      "nouveaux locals"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Directeur",
+     "t": "Quelles que soient vos contraintes, nous espérons vivement vous compter parmi nous.",
+     "fr": ""
+    },
+    {
+     "q": "« Quelles que soient vos contraintes » : « quelles » s'accorde avec…",
+     "o": [
+      "contraintes (féminin pluriel)",
+      "vous",
+      "nous"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Directeur",
+     "t": "Un cocktail sera servi à l'issue des allocutions, aux alentours de dix-huit heures.",
+     "fr": ""
+    },
+    {
+     "q": "Orthographe correcte :",
+     "o": [
+      "à l'issue de",
+      "à l'issu de",
+      "a l'issue de"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "fr10",
+   "t": "Le discours de mariage",
+   "ic": "💍",
+   "lv": 3,
+   "cast": {
+    "Témoin": [
+     "M",
+     "🤵"
+    ]
+   },
+   "items": [
+    {
+     "s": "Témoin",
+     "t": "Je me souviens du jour où ils se sont rencontrés : il pleuvait des cordes.",
+     "fr": ""
+    },
+    {
+     "q": "« ils se sont ___ » (se rencontrer)",
+     "o": [
+      "rencontrés",
+      "rencontré",
+      "rencontrer"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Témoin",
+     "t": "Elle s'était perdue et il lui a prêté son parapluie.",
+     "fr": ""
+    },
+    {
+     "q": "« Elle s'était ___ »",
+     "o": [
+      "perdue",
+      "perdu",
+      "perdus"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Témoin",
+     "t": "Les années qu'ils ont passées ensemble les ont rendus inséparables.",
+     "fr": ""
+    },
+    {
+     "q": "« Les années qu'ils ont ___ »",
+     "o": [
+      "passées",
+      "passé",
+      "passés"
+     ],
+     "a": 0
+    },
+    {
+     "q": "« les ont rendus inséparables » : pourquoi « rendus » ?",
+     "o": [
+      "COD « les » (eux, masculin pluriel) placé avant",
+      "Il faut toujours un s",
+      "Accord avec « années »"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "fl10",
+   "t": "L'entretien",
+   "ic": "💼",
+   "lv": 3,
+   "cast": {
+    "Recruteuse": [
+     "W",
+     "👩‍💼"
+    ],
+    "Ben": [
+     "M",
+     "🧑‍💼"
+    ]
+   },
+   "items": [
+    {
+     "s": "Recruteuse",
+     "t": "Pourquoi souhaitez-vous rejoindre notre entreprise ?",
+     "fr": "Why would you like to join our company?"
+    },
+    {
+     "s": "Ben",
+     "t": "J'aimerais travailler dans un environnement international et utiliser mon français tous les jours.",
+     "fr": "I'd like to work in an international environment and use my French every day."
+    },
+    {
+     "s": "Recruteuse",
+     "t": "Quel est votre principal point fort ?",
+     "fr": "What is your main strength?"
+    },
+    {
+     "s": "Ben",
+     "t": "Mon sens de l'organisation. Dans mon dernier poste, j'ai dirigé une équipe de six personnes.",
+     "fr": "My sense of organisation. In my last job, I led a team of six people."
+    },
+    {
+     "q": "Why does Ben want this job?",
+     "o": [
+      "To work internationally and use his French",
+      "For a higher salary",
+      "To work from home"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Recruteuse",
+     "t": "Si nous vous proposions le poste, quand pourriez-vous commencer ?",
+     "fr": "If we offered you the position, when could you start?"
+    },
+    {
+     "s": "Ben",
+     "t": "Je serais disponible dès le mois prochain.",
+     "fr": "I would be available from next month."
+    },
+    {
+     "q": "When could Ben start?",
+     "o": [
+      "Next month",
+      "Immediately",
+      "Next year"
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  }
+ ],
+ "ko": [
+  {
+   "id": "ko1",
+   "t": "Au café à Séoul",
+   "ic": "🧋",
+   "lv": 0,
+   "cast": {
+    "직원": [
+     "M",
+     "🧑‍🍳"
+    ],
+    "민지": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "직원",
+     "t": "어서 오세요! 주문하시겠어요?",
+     "fr": "Bienvenue ! Vous voulez commander ?"
+    },
+    {
+     "s": "민지",
+     "t": "아이스 아메리카노 한 잔 주세요.",
+     "fr": "Un americano glacé, s'il vous plaît."
+    },
+    {
+     "s": "직원",
+     "t": "사이즈는 어떻게 해 드릴까요?",
+     "fr": "Quelle taille désirez-vous ?"
+    },
+    {
+     "s": "민지",
+     "t": "큰 걸로 주세요.",
+     "fr": "Une grande, s'il vous plaît."
+    },
+    {
+     "q": "Qu'est-ce que Minji commande ?",
+     "o": [
+      "Un americano glacé",
+      "Un thé chaud",
+      "Un jus d'orange"
+     ],
+     "a": 0
+    },
+    {
+     "s": "직원",
+     "t": "드시고 가세요? 가져가세요?",
+     "fr": "Sur place ou à emporter ?"
+    },
+    {
+     "s": "민지",
+     "t": "여기서 먹을게요. 그리고 치즈 케이크도 하나 주세요.",
+     "fr": "Je reste ici. Et un cheesecake aussi, s'il vous plaît."
+    },
+    {
+     "q": "Où Minji va-t-elle consommer ?",
+     "o": [
+      "Sur place",
+      "À emporter",
+      "Au bureau"
+     ],
+     "a": 0
+    },
+    {
+     "s": "직원",
+     "t": "네, 모두 구천 원입니다.",
+     "fr": "D'accord, ça fait 9 000 wons en tout."
+    },
+    {
+     "s": "민지",
+     "t": "카드로 계산할게요.",
+     "fr": "Je paie par carte."
+    },
+    {
+     "q": "Combien Minji paie-t-elle ?",
+     "o": [
+      "9 000 wons",
+      "7 000 wons",
+      "19 000 wons"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko3",
+   "t": "Au restaurant coréen",
+   "ic": "🍜",
+   "lv": 0,
+   "cast": {
+    "직원": [
+     "W",
+     "👩‍🍳"
+    ],
+    "준호": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "직원",
+     "t": "어서 오세요. 몇 분이세요?",
+     "fr": "Bienvenue. Vous êtes combien ?"
+    },
+    {
+     "s": "준호",
+     "t": "두 명이에요.",
+     "fr": "Nous sommes deux."
+    },
+    {
+     "s": "직원",
+     "t": "이쪽으로 앉으세요. 메뉴 여기 있어요.",
+     "fr": "Asseyez-vous par ici. Voici le menu."
+    },
+    {
+     "s": "준호",
+     "t": "비빔밥 하나하고 김치찌개 하나 주세요.",
+     "fr": "Un bibimbap et un kimchi-jjigae, s'il vous plaît."
+    },
+    {
+     "q": "Combien sont-ils ?",
+     "o": [
+      "Deux",
+      "Trois",
+      "Un seul"
+     ],
+     "a": 0
+    },
+    {
+     "s": "직원",
+     "t": "네, 잠시만 기다리세요.",
+     "fr": "D'accord, patientez un instant."
+    },
+    {
+     "q": "Qu'est-ce que Junho commande ?",
+     "o": [
+      "Un bibimbap et un kimchi-jjigae",
+      "Deux bibimbaps",
+      "Du poulet frit"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko4",
+   "t": "Dans le taxi",
+   "ic": "🚕",
+   "lv": 0,
+   "cast": {
+    "기사": [
+     "M",
+     "👨"
+    ],
+    "민지": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "기사",
+     "t": "어디로 가세요?",
+     "fr": "Où allez-vous ?"
+    },
+    {
+     "s": "민지",
+     "t": "서울역으로 가 주세요.",
+     "fr": "À la gare de Séoul, s'il vous plaît."
+    },
+    {
+     "s": "기사",
+     "t": "길이 좀 막히네요. 이십 분쯤 걸릴 거예요.",
+     "fr": "Ça bouchonne un peu. Ça prendra environ vingt minutes."
+    },
+    {
+     "q": "Où va Minji ?",
+     "o": [
+      "À la gare de Séoul",
+      "À l'aéroport",
+      "À l'université"
+     ],
+     "a": 0
+    },
+    {
+     "s": "민지",
+     "t": "괜찮아요. 천천히 가 주세요.",
+     "fr": "Pas de souci. Allez-y doucement."
+    },
+    {
+     "q": "Combien de temps faut-il ?",
+     "o": [
+      "Environ vingt minutes",
+      "Deux heures",
+      "Cinq minutes"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko5",
+   "t": "Se présenter en cours",
+   "ic": "🏫",
+   "lv": 0,
+   "cast": {
+    "선생님": [
+     "W",
+     "👩‍🏫"
+    ],
+    "톰": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "선생님",
+     "t": "자기소개 해 주세요.",
+     "fr": "Présente-toi, s'il te plaît."
+    },
+    {
+     "s": "톰",
+     "t": "안녕하세요. 저는 톰이에요. 프랑스 사람이에요.",
+     "fr": "Bonjour. Je m'appelle Tom. Je suis français."
+    },
+    {
+     "s": "선생님",
+     "t": "한국어를 왜 배워요?",
+     "fr": "Pourquoi apprends-tu le coréen ?"
+    },
+    {
+     "s": "톰",
+     "t": "한국 드라마를 좋아해서 배워요.",
+     "fr": "Je l'apprends parce que j'aime les dramas coréens."
+    },
+    {
+     "q": "D'où vient Tom ?",
+     "o": [
+      "De France",
+      "D'Angleterre",
+      "Du Japon"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Pourquoi apprend-il le coréen ?",
+     "o": [
+      "Il aime les dramas coréens",
+      "Pour son travail",
+      "Pour ses études"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko6",
+   "t": "Au marché",
+   "ic": "🍎",
+   "lv": 0,
+   "cast": {
+    "상인": [
+     "W",
+     "👵"
+    ],
+    "지수": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "지수",
+     "t": "사과 얼마예요?",
+     "fr": "Combien coûtent les pommes ?"
+    },
+    {
+     "s": "상인",
+     "t": "한 개에 천 원이에요.",
+     "fr": "Mille wons pièce."
+    },
+    {
+     "s": "지수",
+     "t": "다섯 개 주세요.",
+     "fr": "J'en prends cinq."
+    },
+    {
+     "s": "상인",
+     "t": "오천 원이에요. 하나 더 드릴게요.",
+     "fr": "Ça fait cinq mille wons. Je vous en donne une de plus."
+    },
+    {
+     "q": "Combien coûte une pomme ?",
+     "o": [
+      "1 000 wons",
+      "500 wons",
+      "5 000 wons"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Que fait la marchande ?",
+     "o": [
+      "Elle offre une pomme de plus",
+      "Elle fait une réduction",
+      "Elle refuse de vendre"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko7",
+   "t": "Rendez-vous entre amis",
+   "ic": "☕",
+   "lv": 1,
+   "cast": {
+    "수진": [
+     "W",
+     "👩"
+    ],
+    "민호": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "수진",
+     "t": "민호야, 내일 시간 있어?",
+     "fr": "Minho, tu as du temps demain ?"
+    },
+    {
+     "s": "민호",
+     "t": "오후에는 괜찮아. 왜?",
+     "fr": "L'après-midi, ça va. Pourquoi ?"
+    },
+    {
+     "s": "수진",
+     "t": "새로 생긴 카페에 같이 가자.",
+     "fr": "Allons ensemble au nouveau café."
+    },
+    {
+     "s": "민호",
+     "t": "좋아! 몇 시에 만날까?",
+     "fr": "Avec plaisir ! On se retrouve à quelle heure ?"
+    },
+    {
+     "s": "수진",
+     "t": "세 시에 강남역 2번 출구에서 보자.",
+     "fr": "Retrouvons-nous à trois heures à la sortie 2 de la station Gangnam."
+    },
+    {
+     "q": "Quand Minho est-il libre ?",
+     "o": [
+      "L'après-midi",
+      "Le matin",
+      "Le soir"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Où se retrouvent-ils ?",
+     "o": [
+      "Sortie 2 de la station Gangnam",
+      "Devant le café",
+      "Chez Sujin"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko8",
+   "t": "À la pharmacie",
+   "ic": "💊",
+   "lv": 1,
+   "cast": {
+    "약사": [
+     "M",
+     "👨‍⚕️"
+    ],
+    "지은": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "지은",
+     "t": "머리가 아프고 열이 나요.",
+     "fr": "J'ai mal à la tête et j'ai de la fièvre."
+    },
+    {
+     "s": "약사",
+     "t": "언제부터 아팠어요?",
+     "fr": "Depuis quand avez-vous mal ?"
+    },
+    {
+     "s": "지은",
+     "t": "어제 저녁부터요.",
+     "fr": "Depuis hier soir."
+    },
+    {
+     "s": "약사",
+     "t": "이 약을 하루에 세 번, 식후에 드세요.",
+     "fr": "Prenez ce médicament trois fois par jour, après les repas."
+    },
+    {
+     "q": "Quels sont ses symptômes ?",
+     "o": [
+      "Mal de tête et fièvre",
+      "Mal au ventre",
+      "Une toux"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Comment prendre le médicament ?",
+     "o": [
+      "Trois fois par jour après les repas",
+      "Une fois le matin",
+      "Avant de dormir"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko9",
+   "t": "Un appel au travail",
+   "ic": "📞",
+   "lv": 1,
+   "cast": {
+    "과장님": [
+     "M",
+     "👨‍💼"
+    ],
+    "서연": [
+     "W",
+     "👩‍💼"
+    ]
+   },
+   "items": [
+    {
+     "s": "과장님",
+     "t": "서연 씨, 내일 회의 자료 준비됐어요?",
+     "fr": "Seoyeon, les documents pour la réunion de demain sont prêts ?"
+    },
+    {
+     "s": "서연",
+     "t": "거의 다 했습니다. 오늘 저녁까지 보내 드리겠습니다.",
+     "fr": "C'est presque fini. Je vous les envoie d'ici ce soir."
+    },
+    {
+     "s": "과장님",
+     "t": "좋아요. 회의는 열 시에서 두 시로 바뀌었어요.",
+     "fr": "Très bien. La réunion est passée de dix heures à quatorze heures."
+    },
+    {
+     "q": "Que doit envoyer Seoyeon ?",
+     "o": [
+      "Les documents de la réunion",
+      "Un contrat",
+      "Un rapport annuel"
+     ],
+     "a": 0
+    },
+    {
+     "s": "서연",
+     "t": "네, 알겠습니다. 다른 분들께도 알려 드릴까요?",
+     "fr": "D'accord, compris. Voulez-vous que je prévienne les autres ?"
+    },
+    {
+     "s": "과장님",
+     "t": "네, 부탁해요.",
+     "fr": "Oui, je compte sur vous."
+    },
+    {
+     "q": "À quelle heure est la réunion maintenant ?",
+     "o": [
+      "À deux heures (14 h)",
+      "À dix heures",
+      "À trois heures"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko10",
+   "t": "Le week-end à Busan",
+   "ic": "🌊",
+   "lv": 1,
+   "cast": {
+    "하늘": [
+     "W",
+     "👩"
+    ],
+    "준": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "하늘",
+     "t": "주말에 뭐 했어?",
+     "fr": "Tu as fait quoi ce week-end ?"
+    },
+    {
+     "s": "준",
+     "t": "친구들이랑 부산에 갔다 왔어.",
+     "fr": "Je suis allé à Busan avec des amis."
+    },
+    {
+     "s": "하늘",
+     "t": "와, 좋았겠다! 뭐 했어?",
+     "fr": "Ouah, ça devait être bien ! Vous avez fait quoi ?"
+    },
+    {
+     "s": "준",
+     "t": "해운대에서 수영하고 회를 먹었어.",
+     "fr": "On a nagé à Haeundae et mangé du poisson cru."
+    },
+    {
+     "q": "Avec qui Jun est-il allé à Busan ?",
+     "o": [
+      "Avec des amis",
+      "Avec sa famille",
+      "Seul"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Qu'ont-ils mangé ?",
+     "o": [
+      "Du poisson cru (회)",
+      "Du poulet frit",
+      "Des nouilles"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko2",
+   "t": "Chez la grand-mère",
+   "ic": "🍲",
+   "lv": 2,
+   "cast": {
+    "민지": [
+     "W",
+     "👩"
+    ],
+    "할머니": [
+     "W",
+     "👵"
+    ]
+   },
+   "items": [
+    {
+     "s": "민지",
+     "t": "할머니, 진지 드셨어요?",
+     "fr": "Grand-mère, vous avez mangé ?"
+    },
+    {
+     "s": "할머니",
+     "t": "그럼, 아까 먹었지. 너는?",
+     "fr": "Bien sûr, j'ai mangé tout à l'heure. Et toi ?"
+    },
+    {
+     "q": "Pourquoi Minji dit-elle « 진지 드셨어요 » ?",
+     "o": [
+      "Par respect pour sa grand-mère",
+      "Parce qu'elle est en retard",
+      "Parce qu'elle parle à un enfant"
+     ],
+     "a": 0
+    },
+    {
+     "s": "민지",
+     "t": "저는 아직요. 배고파요.",
+     "fr": "Pas encore. J'ai faim."
+    },
+    {
+     "s": "할머니",
+     "t": "내가 떡국 끓여 줄게. 조금만 기다려.",
+     "fr": "Je vais te préparer une soupe de tteok. Attends un peu."
+    },
+    {
+     "s": "민지",
+     "t": "감사합니다! 제가 도와드릴게요.",
+     "fr": "Merci ! Je vais vous aider."
+    },
+    {
+     "q": "Que propose Minji ?",
+     "o": [
+      "D'aider sa grand-mère",
+      "De commander à manger",
+      "De rentrer chez elle"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Dans « 도와드릴게요 », -아/어 드리다 exprime…",
+     "o": [
+      "l'humilité envers une personne respectée",
+      "le passé",
+      "une question"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko11",
+   "t": "Chez le coiffeur",
+   "ic": "💇",
+   "lv": 2,
+   "cast": {
+    "미용사": [
+     "W",
+     "👩"
+    ],
+    "유나": [
+     "W",
+     "👧"
+    ]
+   },
+   "items": [
+    {
+     "s": "미용사",
+     "t": "어떻게 해 드릴까요?",
+     "fr": "Qu'est-ce que je vous fais ?"
+    },
+    {
+     "s": "유나",
+     "t": "너무 짧지 않게 다듬어 주세요.",
+     "fr": "Rafraîchissez, mais pas trop court, s'il vous plaît."
+    },
+    {
+     "s": "미용사",
+     "t": "앞머리도 자를까요?",
+     "fr": "Je coupe aussi la frange ?"
+    },
+    {
+     "s": "유나",
+     "t": "아니요, 앞머리는 그냥 두세요. 지난번에 너무 짧게 잘라서 후회했거든요.",
+     "fr": "Non, laissez la frange. La dernière fois, je l'ai coupée trop court et je l'ai regretté."
+    },
+    {
+     "q": "Que veut Yuna ?",
+     "o": [
+      "Une coupe pas trop courte",
+      "Une coupe très courte",
+      "Une couleur"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Pourquoi ne veut-elle pas couper sa frange ?",
+     "o": [
+      "Elle l'a regretté la dernière fois",
+      "Elle n'a pas le temps",
+      "C'est trop cher"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko12",
+   "t": "Le colis perdu",
+   "ic": "📦",
+   "lv": 2,
+   "cast": {
+    "상담원": [
+     "W",
+     "👩‍💻"
+    ],
+    "태민": [
+     "M",
+     "🧑"
+    ]
+   },
+   "items": [
+    {
+     "s": "태민",
+     "t": "일주일 전에 주문했는데 아직 택배가 안 왔어요.",
+     "fr": "J'ai commandé il y a une semaine et le colis n'est toujours pas arrivé."
+    },
+    {
+     "s": "상담원",
+     "t": "불편을 드려 죄송합니다. 주문 번호를 알려 주시겠어요?",
+     "fr": "Désolée pour la gêne occasionnée. Pourriez-vous me donner votre numéro de commande ?"
+    },
+    {
+     "s": "태민",
+     "t": "1234번이에요.",
+     "fr": "C'est le 1234."
+    },
+    {
+     "s": "상담원",
+     "t": "확인해 보니 주소가 잘못 입력되어 있었습니다. 오늘 다시 보내 드리겠습니다.",
+     "fr": "J'ai vérifié : l'adresse avait été mal saisie. Je vous le renvoie aujourd'hui."
+    },
+    {
+     "q": "Quel était le problème ?",
+     "o": [
+      "L'adresse était mal saisie",
+      "Le colis était abîmé",
+      "Le produit était épuisé"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Depuis quand Taemin attend-il ?",
+     "o": [
+      "Une semaine",
+      "Un jour",
+      "Un mois"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko13",
+   "t": "L'entretien d'embauche",
+   "ic": "🤝",
+   "lv": 3,
+   "cast": {
+    "면접관": [
+     "M",
+     "👨‍💼"
+    ],
+    "지원자": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "면접관",
+     "t": "우리 회사에 지원하신 이유가 무엇입니까?",
+     "fr": "Pour quelle raison avez-vous postulé dans notre entreprise ?"
+    },
+    {
+     "s": "지원자",
+     "t": "해외 시장에 진출하시는 점이 인상 깊었습니다. 제 외국어 능력을 살리고 싶습니다.",
+     "fr": "J'ai été impressionnée par votre développement à l'international. Je souhaite mettre à profit mes compétences en langues étrangères."
+    },
+    {
+     "s": "면접관",
+     "t": "본인의 단점은 무엇이라고 생각하십니까?",
+     "fr": "Selon vous, quel est votre point faible ?"
+    },
+    {
+     "s": "지원자",
+     "t": "완벽하게 하려다 보니 시간이 오래 걸릴 때가 있습니다. 요즘은 우선순위를 정해서 일하고 있습니다.",
+     "fr": "À force de vouloir tout faire parfaitement, je prends parfois trop de temps. Ces temps-ci, je travaille en fixant des priorités."
+    },
+    {
+     "q": "Pourquoi la candidate a-t-elle postulé ?",
+     "o": [
+      "Le développement international de l'entreprise",
+      "Le salaire",
+      "La proximité de chez elle"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Quel est son point faible ?",
+     "o": [
+      "Le perfectionnisme qui lui prend du temps",
+      "Elle est souvent en retard",
+      "Elle n'aime pas le travail en équipe"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko14",
+   "t": "Le pot de départ",
+   "ic": "🥂",
+   "lv": 3,
+   "cast": {
+    "부장님": [
+     "M",
+     "👨‍💼"
+    ],
+    "수아": [
+     "W",
+     "👩‍💼"
+    ]
+   },
+   "items": [
+    {
+     "s": "부장님",
+     "t": "그동안 정말 수고 많으셨습니다. 수아 씨가 없으면 많이 허전할 거예요.",
+     "fr": "Merci pour tout votre travail. Sans vous, Sua, ça va faire un grand vide."
+    },
+    {
+     "s": "수아",
+     "t": "부족한 저를 잘 이끌어 주셔서 감사합니다.",
+     "fr": "Merci de m'avoir si bien guidée malgré mes lacunes."
+    },
+    {
+     "s": "부장님",
+     "t": "새 회사에서도 잘하실 거라고 믿어요.",
+     "fr": "Je suis sûr que vous réussirez aussi dans votre nouvelle entreprise."
+    },
+    {
+     "s": "수아",
+     "t": "연락드리겠습니다. 언제든지 찾아뵐게요.",
+     "fr": "Je vous donnerai des nouvelles. Je passerai vous voir quand vous voudrez."
+    },
+    {
+     "q": "Que se passe-t-il ?",
+     "o": [
+      "Sua quitte l'entreprise",
+      "Sua est promue",
+      "Sua prend sa retraite"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Pourquoi Sua dit-elle « 부족한 저 » ?",
+     "o": [
+      "Par modestie (formule d'humilité)",
+      "Elle est vraiment incompétente",
+      "Elle est fâchée"
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

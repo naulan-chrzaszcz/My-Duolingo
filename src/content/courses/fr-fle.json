@@ -1,0 +1,2961 @@
+{
+ "name": "Learn French",
+ "icon": "🥐",
+ "lang": "fr-FR",
+ "kind": "trans",
+ "units": [
+  {
+   "t": "Hello & introductions",
+   "lv": 0,
+   "d": "Greet people, say your name, where you're from",
+   "tip": "Use « vous » with strangers and at work, « tu » with friends and children. « Je m'appelle » literally means « I call myself ».",
+   "p": [
+    [
+     "Hello, my name is Emma.",
+     "Bonjour, je m'appelle Emma.",
+     "Bonjour, moi c'est Emma.",
+     "Salut, je m'appelle Emma."
+    ],
+    [
+     "Nice to meet you.",
+     "Enchanté.",
+     "Enchantée.",
+     "Ravi de vous rencontrer.",
+     "Ravie de vous rencontrer."
+    ],
+    [
+     "How are you? (formal)",
+     "Comment allez-vous ?",
+     "Vous allez bien ?"
+    ],
+    [
+     "I'm fine, thank you. And you?",
+     "Je vais bien, merci. Et toi ?",
+     "Je vais bien, merci. Et vous ?",
+     "Ça va bien, merci. Et toi ?",
+     "Ça va, merci. Et toi ?"
+    ],
+    [
+     "I'm English.",
+     "Je suis anglais.",
+     "Je suis anglaise."
+    ],
+    [
+     "I live in London.",
+     "J'habite à Londres.",
+     "Je vis à Londres."
+    ],
+    [
+     "Where are you from? (informal)",
+     "Tu viens d'où ?",
+     "D'où viens-tu ?",
+     "Tu es d'où ?"
+    ],
+    [
+     "See you tomorrow!",
+     "À demain !"
+    ],
+    [
+     "Goodbye, have a nice day!",
+     "Au revoir, bonne journée !"
+    ]
+   ],
+   "v": [
+    [
+     "hello",
+     "bonjour"
+    ],
+    [
+     "thank you",
+     "merci"
+    ],
+    [
+     "please",
+     "s'il vous plaît"
+    ],
+    [
+     "goodbye",
+     "au revoir"
+    ],
+    [
+     "friend",
+     "ami"
+    ],
+    [
+     "yes",
+     "oui"
+    ],
+    [
+     "no",
+     "non"
+    ]
+   ],
+   "c": [
+    [
+     "Je ___ Emma.",
+     [
+      "m'appelle",
+      "appelle",
+      "suis appelle",
+      "m'appeler"
+     ],
+     0,
+     "« s'appeler » is reflexive: je m'appelle, tu t'appelles, il s'appelle."
+    ],
+    [
+     "Je ___ anglaise.",
+     [
+      "suis",
+      "ai",
+      "es",
+      "est"
+     ],
+     0,
+     "« être » (to be): je suis, tu es, il/elle est. Nationality uses être, not avoir."
+    ],
+    [
+     "J'habite ___ Paris.",
+     [
+      "à",
+      "en",
+      "au",
+      "dans"
+     ],
+     0,
+     "Use « à » before a city: à Paris, à Londres. Countries take en / au / aux."
+    ],
+    [
+     "Tu ___ bien ?",
+     [
+      "vas",
+      "va",
+      "allez",
+      "vais"
+     ],
+     0,
+     "« aller »: je vais, tu vas, il va, vous allez. « Tu vas bien ? » = Are you well?"
+    ],
+    [
+     "___ allez-vous ?",
+     [
+      "Comment",
+      "Quoi",
+      "Qui",
+      "Où"
+     ],
+     0,
+     "« Comment allez-vous ? » = How are you? (formal)."
+    ]
+   ],
+   "dd": [
+    "Bonjour, je m'appelle Paul et j'habite à Lyon.",
+    "Enchantée, je suis anglaise.",
+    "Au revoir et à demain !"
+   ],
+   "wt": [
+    "Introduce yourself in 3 sentences: your name, your nationality and where you live.",
+    "Write a short message (40 to 80 words) to a new French colleague: say hello, introduce yourself and ask two questions about them."
+   ]
+  },
+  {
+   "t": "At the café",
+   "lv": 0,
+   "d": "Order a drink, ask for the bill, be polite",
+   "tip": "To order politely, say « Je voudrais… » (I would like) rather than « Je veux… » (I want), which sounds blunt. In a café, « un café » is an espresso.",
+   "p": [
+    [
+     "I would like a coffee, please.",
+     "Je voudrais un café, s'il vous plaît.",
+     "Je voudrais un café, s'il te plaît.",
+     "Un café, s'il vous plaît."
+    ],
+    [
+     "A croissant and an orange juice, please.",
+     "Un croissant et un jus d'orange, s'il vous plaît."
+    ],
+    [
+     "How much is it?",
+     "C'est combien ?",
+     "Ça fait combien ?",
+     "Combien ça coûte ?"
+    ],
+    [
+     "The bill, please.",
+     "L'addition, s'il vous plaît."
+    ],
+    [
+     "Can I pay by card?",
+     "Je peux payer par carte ?",
+     "Est-ce que je peux payer par carte ?",
+     "Puis-je payer par carte ?"
+    ],
+    [
+     "A table for two, please.",
+     "Une table pour deux, s'il vous plaît."
+    ],
+    [
+     "Do you have tea?",
+     "Vous avez du thé ?",
+     "Avez-vous du thé ?",
+     "Est-ce que vous avez du thé ?"
+    ],
+    [
+     "Thank you very much!",
+     "Merci beaucoup !"
+    ]
+   ],
+   "v": [
+    [
+     "coffee",
+     "café"
+    ],
+    [
+     "tea",
+     "thé"
+    ],
+    [
+     "water",
+     "eau"
+    ],
+    [
+     "bill",
+     "addition"
+    ],
+    [
+     "waiter",
+     "serveur"
+    ],
+    [
+     "table",
+     "table"
+    ],
+    [
+     "sugar",
+     "sucre"
+    ]
+   ],
+   "c": [
+    [
+     "Je ___ un thé, s'il vous plaît.",
+     [
+      "voudrais",
+      "veux",
+      "voulez",
+      "voudrait"
+     ],
+     0,
+     "« Je voudrais » (conditional of vouloir) is the polite way to order."
+    ],
+    [
+     "___ addition, s'il vous plaît.",
+     [
+      "L'",
+      "La",
+      "Le",
+      "Un"
+     ],
+     0,
+     "« addition » is feminine and starts with a vowel: la → l'."
+    ],
+    [
+     "Un jus ___ orange.",
+     [
+      "d'",
+      "de",
+      "du",
+      "des"
+     ],
+     0,
+     "« de » becomes « d' » before a vowel: un jus d'orange."
+    ],
+    [
+     "Vous avez ___ thé ?",
+     [
+      "du",
+      "de la",
+      "des",
+      "un des"
+     ],
+     0,
+     "« du » = some (masculine). Le thé → du thé."
+    ],
+    [
+     "Je peux payer ___ carte ?",
+     [
+      "par",
+      "avec la",
+      "en",
+      "à"
+     ],
+     0,
+     "Payer par carte, payer en espèces (cash)."
+    ]
+   ],
+   "dd": [
+    "Je voudrais un café et un croissant, s'il vous plaît.",
+    "L'addition, s'il vous plaît.",
+    "Est-ce que je peux payer par carte ?"
+   ],
+   "wt": [
+    "Write a 3-line dialogue: you order a drink and something to eat in a café.",
+    "Write a short message (40 to 80 words) to invite a friend for a coffee: day, time, place."
+   ]
+  },
+  {
+   "t": "Numbers, age & time",
+   "lv": 0,
+   "d": "Count to 100, say your age, tell the time",
+   "tip": "In French you HAVE an age: « J'ai vingt ans » (I have twenty years). Never « je suis vingt ». The time uses « il est » : « Il est huit heures ».",
+   "p": [
+    [
+     "I'm twenty-five years old.",
+     "J'ai vingt-cinq ans."
+    ],
+    [
+     "How old are you? (informal)",
+     "Tu as quel âge ?",
+     "Quel âge as-tu ?",
+     "Quel âge tu as ?"
+    ],
+    [
+     "What time is it?",
+     "Quelle heure est-il ?",
+     "Il est quelle heure ?"
+    ],
+    [
+     "It's eight o'clock.",
+     "Il est huit heures."
+    ],
+    [
+     "It's half past three.",
+     "Il est trois heures et demie.",
+     "Il est trois heures trente.",
+     "Il est quinze heures trente."
+    ],
+    [
+     "The shop opens at nine.",
+     "Le magasin ouvre à neuf heures."
+    ],
+    [
+     "I have two brothers.",
+     "J'ai deux frères."
+    ],
+    [
+     "My phone number is zero six, twelve, thirty-four.",
+     "Mon numéro est le zéro six, douze, trente-quatre.",
+     "Mon numéro, c'est le zéro six, douze, trente-quatre."
+    ]
+   ],
+   "v": [
+    [
+     "one",
+     "un"
+    ],
+    [
+     "two",
+     "deux"
+    ],
+    [
+     "ten",
+     "dix"
+    ],
+    [
+     "twenty",
+     "vingt"
+    ],
+    [
+     "seventy",
+     "soixante-dix"
+    ],
+    [
+     "hundred",
+     "cent"
+    ],
+    [
+     "hour",
+     "heure"
+    ]
+   ],
+   "c": [
+    [
+     "J'___ trente ans.",
+     [
+      "ai",
+      "suis",
+      "es",
+      "a"
+     ],
+     0,
+     "Age uses « avoir »: j'ai trente ans."
+    ],
+    [
+     "Il ___ dix heures.",
+     [
+      "est",
+      "a",
+      "fait",
+      "sont"
+     ],
+     0,
+     "Telling the time: « il est » + heure(s)."
+    ],
+    [
+     "Soixante-dix, c'est ___.",
+     [
+      "70",
+      "60",
+      "17",
+      "700"
+     ],
+     0,
+     "French counts 70 as « soixante-dix » (sixty-ten)."
+    ],
+    [
+     "Quatre-vingts, c'est ___.",
+     [
+      "80",
+      "40",
+      "24",
+      "90"
+     ],
+     0,
+     "80 = « quatre-vingts » (four twenties)."
+    ],
+    [
+     "Il est deux heures et ___.",
+     [
+      "demie",
+      "demi",
+      "moitié",
+      "mi"
+     ],
+     0,
+     "After « heures » (feminine): et demie. But « midi et demi »."
+    ]
+   ],
+   "dd": [
+    "J'ai vingt-cinq ans et deux frères.",
+    "Il est trois heures et demie.",
+    "Le magasin ouvre à neuf heures."
+   ],
+   "wt": [
+    "Write 3 sentences: your age, the time you get up and the time you go to bed.",
+    "Describe your family in numbers (40 to 80 words): ages, how many brothers, sisters, children…"
+   ]
+  },
+  {
+   "t": "Family & describing people",
+   "lv": 0,
+   "d": "être / avoir, possessives, adjectives",
+   "tip": "Adjectives agree with the noun: « un ami grand, une amie grande ». Possessives agree with the THING owned: « sa mère » = his OR her mother.",
+   "p": [
+    [
+     "My sister is tall and funny.",
+     "Ma sœur est grande et drôle.",
+     "Ma soeur est grande et drôle."
+    ],
+    [
+     "My father is a doctor.",
+     "Mon père est médecin."
+    ],
+    [
+     "Her brother is called Lucas.",
+     "Son frère s'appelle Lucas."
+    ],
+    [
+     "We have a dog and a cat.",
+     "Nous avons un chien et un chat.",
+     "On a un chien et un chat."
+    ],
+    [
+     "My parents live in Nice.",
+     "Mes parents habitent à Nice.",
+     "Mes parents vivent à Nice."
+    ],
+    [
+     "She has brown hair and blue eyes.",
+     "Elle a les cheveux bruns et les yeux bleus.",
+     "Elle a les cheveux châtains et les yeux bleus."
+    ],
+    [
+     "Are you married? (formal)",
+     "Vous êtes marié ?",
+     "Vous êtes mariée ?",
+     "Êtes-vous marié ?",
+     "Êtes-vous mariée ?"
+    ],
+    [
+     "My grandmother is very kind.",
+     "Ma grand-mère est très gentille."
+    ]
+   ],
+   "v": [
+    [
+     "mother",
+     "mère"
+    ],
+    [
+     "father",
+     "père"
+    ],
+    [
+     "sister",
+     "sœur"
+    ],
+    [
+     "brother",
+     "frère"
+    ],
+    [
+     "children",
+     "enfants"
+    ],
+    [
+     "kind",
+     "gentil"
+    ],
+    [
+     "tall",
+     "grand"
+    ]
+   ],
+   "c": [
+    [
+     "Ma sœur est ___.",
+     [
+      "grande",
+      "grand",
+      "grands",
+      "grandes"
+     ],
+     0,
+     "Feminine singular: add -e → grande."
+    ],
+    [
+     "Il ___ les yeux verts.",
+     [
+      "a",
+      "est",
+      "ont",
+      "as"
+     ],
+     0,
+     "Physical features use « avoir »: il a les yeux verts."
+    ],
+    [
+     "___ père est professeur.",
+     [
+      "Mon",
+      "Ma",
+      "Mes",
+      "Me"
+     ],
+     0,
+     "« père » is masculine: mon père."
+    ],
+    [
+     "Paul aime ___ mère.",
+     [
+      "sa",
+      "son",
+      "ses",
+      "leur"
+     ],
+     0,
+     "Possessives agree with the noun owned: « mère » is feminine → sa mère (his mother)."
+    ],
+    [
+     "Nous ___ deux enfants.",
+     [
+      "avons",
+      "sommes",
+      "avez",
+      "ont"
+     ],
+     0,
+     "avoir: nous avons, vous avez, ils ont."
+    ],
+    [
+     "Elle est très ___.",
+     [
+      "gentille",
+      "gentil",
+      "gentile",
+      "gentils"
+     ],
+     0,
+     "gentil → gentille (feminine doubles the l)."
+    ]
+   ],
+   "dd": [
+    "Ma sœur est grande et très gentille.",
+    "Nous avons un chien et deux chats.",
+    "Mon père a les yeux bleus."
+   ],
+   "wt": [
+    "Describe one member of your family in 3 sentences (appearance and personality).",
+    "Write a short text (40 to 80 words) about your family: who they are, where they live, what they are like."
+   ]
+  },
+  {
+   "t": "Food & shopping",
+   "lv": 0,
+   "d": "du / de la / des, quantities, at the market",
+   "tip": "French uses « some » almost always: « Je mange du pain » (I eat bread). After a quantity or a negative, it becomes « de »: « un kilo de pommes », « pas de lait ».",
+   "p": [
+    [
+     "I'd like a kilo of apples.",
+     "Je voudrais un kilo de pommes."
+    ],
+    [
+     "Do you have any bread left?",
+     "Il vous reste du pain ?",
+     "Vous avez encore du pain ?",
+     "Est-ce qu'il vous reste du pain ?"
+    ],
+    [
+     "I don't eat meat.",
+     "Je ne mange pas de viande."
+    ],
+    [
+     "A baguette, please.",
+     "Une baguette, s'il vous plaît."
+    ],
+    [
+     "I'm buying cheese and wine.",
+     "J'achète du fromage et du vin."
+    ],
+    [
+     "It costs three euros.",
+     "Ça coûte trois euros.",
+     "Ça fait trois euros.",
+     "C'est trois euros."
+    ],
+    [
+     "Anything else?",
+     "Et avec ceci ?",
+     "Autre chose ?",
+     "Ce sera tout ?"
+    ],
+    [
+     "That's all, thank you.",
+     "C'est tout, merci.",
+     "Ce sera tout, merci."
+    ]
+   ],
+   "v": [
+    [
+     "bread",
+     "pain"
+    ],
+    [
+     "cheese",
+     "fromage"
+    ],
+    [
+     "apple",
+     "pomme"
+    ],
+    [
+     "meat",
+     "viande"
+    ],
+    [
+     "milk",
+     "lait"
+    ],
+    [
+     "market",
+     "marché"
+    ],
+    [
+     "bakery",
+     "boulangerie"
+    ]
+   ],
+   "c": [
+    [
+     "Je mange ___ pain.",
+     [
+      "du",
+      "de la",
+      "des",
+      "le"
+     ],
+     0,
+     "Partitive « du » with a masculine noun: du pain (some bread)."
+    ],
+    [
+     "Je bois ___ eau.",
+     [
+      "de l'",
+      "du",
+      "de la",
+      "des"
+     ],
+     0,
+     "Before a vowel: de l'eau."
+    ],
+    [
+     "Je ne mange pas ___ viande.",
+     [
+      "de",
+      "de la",
+      "du",
+      "la"
+     ],
+     0,
+     "After a negative, du / de la / des → de: pas de viande."
+    ],
+    [
+     "Un kilo ___ tomates.",
+     [
+      "de",
+      "des",
+      "du",
+      "les"
+     ],
+     0,
+     "After a quantity: de (un kilo de, un peu de, beaucoup de)."
+    ],
+    [
+     "J'___ des fruits au marché.",
+     [
+      "achète",
+      "achete",
+      "achètes",
+      "acheter"
+     ],
+     0,
+     "acheter takes an accent: j'achète, tu achètes, nous achetons."
+    ]
+   ],
+   "dd": [
+    "Je voudrais un kilo de pommes et une baguette.",
+    "Je ne mange pas de viande.",
+    "J'achète du fromage au marché."
+   ],
+   "wt": [
+    "Write your shopping list in 3 sentences using du, de la, des.",
+    "Write a short dialogue (40 to 80 words) at the market: you ask for three things, the price, and you pay."
+   ]
+  },
+  {
+   "t": "Getting around town",
+   "lv": 0,
+   "d": "Ask the way, aller, à / au / en",
+   "tip": "« aller à » + city, « au » + masculine place (au cinéma), « à la » + feminine place (à la gare), « en » for transport you sit in (en bus, en train) but « à pied » (on foot).",
+   "p": [
+    [
+     "Where is the train station?",
+     "Où est la gare ?",
+     "Où se trouve la gare ?"
+    ],
+    [
+     "Go straight ahead, then turn left.",
+     "Allez tout droit, puis tournez à gauche.",
+     "Continuez tout droit, puis tournez à gauche."
+    ],
+    [
+     "It's next to the bank.",
+     "C'est à côté de la banque."
+    ],
+    [
+     "I'm going to the cinema.",
+     "Je vais au cinéma."
+    ],
+    [
+     "We take the metro.",
+     "Nous prenons le métro.",
+     "On prend le métro."
+    ],
+    [
+     "Is it far from here?",
+     "C'est loin d'ici ?",
+     "Est-ce que c'est loin d'ici ?"
+    ],
+    [
+     "I walk to work.",
+     "Je vais au travail à pied."
+    ],
+    [
+     "Excuse me, I'm lost.",
+     "Excusez-moi, je suis perdu.",
+     "Excusez-moi, je suis perdue.",
+     "Pardon, je suis perdu.",
+     "Pardon, je suis perdue."
+    ]
+   ],
+   "v": [
+    [
+     "station",
+     "gare"
+    ],
+    [
+     "street",
+     "rue"
+    ],
+    [
+     "left",
+     "gauche"
+    ],
+    [
+     "right",
+     "droite"
+    ],
+    [
+     "straight ahead",
+     "tout droit"
+    ],
+    [
+     "far",
+     "loin"
+    ],
+    [
+     "near",
+     "près"
+    ]
+   ],
+   "c": [
+    [
+     "Je vais ___ cinéma.",
+     [
+      "au",
+      "à le",
+      "à la",
+      "en"
+     ],
+     0,
+     "à + le → au (au cinéma, au restaurant)."
+    ],
+    [
+     "Elle va ___ gare.",
+     [
+      "à la",
+      "au",
+      "à le",
+      "en"
+     ],
+     0,
+     "Feminine noun: à la gare."
+    ],
+    [
+     "Nous allons à Paris ___ train.",
+     [
+      "en",
+      "à",
+      "au",
+      "par le"
+     ],
+     0,
+     "Transport you sit inside: en train, en bus, en voiture."
+    ],
+    [
+     "Je vais au travail ___ pied.",
+     [
+      "à",
+      "en",
+      "au",
+      "par"
+     ],
+     0,
+     "On foot: à pied (also à vélo)."
+    ],
+    [
+     "C'est à côté ___ la banque.",
+     [
+      "de",
+      "à",
+      "du",
+      "par"
+     ],
+     0,
+     "à côté de = next to."
+    ],
+    [
+     "Tournez à ___.",
+     [
+      "droite",
+      "droit",
+      "drois",
+      "la droit"
+     ],
+     0,
+     "à droite = (to the) right; tout droit = straight ahead."
+    ]
+   ],
+   "dd": [
+    "Allez tout droit, puis tournez à gauche.",
+    "La gare est à côté de la banque.",
+    "Je vais au travail à pied."
+   ],
+   "wt": [
+    "Explain in 3 sentences how to go from your home to your favourite café.",
+    "Write a message (40 to 80 words) to a friend visiting your city: where to meet and how to get there."
+   ]
+  },
+  {
+   "t": "My daily routine",
+   "lv": 1,
+   "d": "Reflexive verbs, frequency, days of the week",
+   "tip": "Many routine verbs are reflexive: se lever, se doucher, s'habiller. The pronoun matches the subject: je me lève, tu te lèves, nous nous levons.",
+   "p": [
+    [
+     "I get up at seven.",
+     "Je me lève à sept heures."
+    ],
+    [
+     "She takes a shower in the morning.",
+     "Elle se douche le matin.",
+     "Elle prend une douche le matin."
+    ],
+    [
+     "We have lunch at noon.",
+     "Nous déjeunons à midi.",
+     "On déjeune à midi."
+    ],
+    [
+     "I usually go to bed early.",
+     "D'habitude, je me couche tôt.",
+     "Je me couche tôt d'habitude.",
+     "En général, je me couche tôt."
+    ],
+    [
+     "On Saturdays, I go to the gym.",
+     "Le samedi, je vais à la salle de sport.",
+     "Le samedi, je vais au sport."
+    ],
+    [
+     "He never watches TV.",
+     "Il ne regarde jamais la télé.",
+     "Il ne regarde jamais la télévision."
+    ],
+    [
+     "What time do you finish work? (informal)",
+     "Tu finis le travail à quelle heure ?",
+     "À quelle heure tu finis le travail ?",
+     "À quelle heure finis-tu le travail ?"
+    ],
+    [
+     "I'm getting dressed.",
+     "Je m'habille."
+    ]
+   ],
+   "v": [
+    [
+     "to get up",
+     "se lever"
+    ],
+    [
+     "to go to bed",
+     "se coucher"
+    ],
+    [
+     "breakfast",
+     "petit-déjeuner"
+    ],
+    [
+     "often",
+     "souvent"
+    ],
+    [
+     "never",
+     "jamais"
+    ],
+    [
+     "morning",
+     "matin"
+    ],
+    [
+     "evening",
+     "soir"
+    ]
+   ],
+   "c": [
+    [
+     "Je ___ lève à six heures.",
+     [
+      "me",
+      "te",
+      "se",
+      "nous"
+     ],
+     0,
+     "Reflexive pronoun for « je »: me (je me lève)."
+    ],
+    [
+     "Nous ___ couchons tard.",
+     [
+      "nous",
+      "vous",
+      "se",
+      "nous nous"
+     ],
+     0,
+     "Nous nous couchons: the pronoun « nous » appears twice in the sentence."
+    ],
+    [
+     "Il ne regarde ___ la télé.",
+     [
+      "jamais",
+      "pas jamais",
+      "rien",
+      "personne"
+     ],
+     0,
+     "ne … jamais = never."
+    ],
+    [
+     "___ lundi, je travaille.",
+     [
+      "Le",
+      "Les",
+      "Un",
+      "Au"
+     ],
+     0,
+     "« le lundi » = on Mondays (every Monday); « lundi » alone = this Monday."
+    ],
+    [
+     "Tu ___ à quelle heure ?",
+     [
+      "finis",
+      "finit",
+      "finir",
+      "fini"
+     ],
+     0,
+     "finir: je finis, tu finis, il finit."
+    ]
+   ],
+   "dd": [
+    "Je me lève à sept heures et je prends un café.",
+    "Le samedi, nous nous levons tard.",
+    "Il ne regarde jamais la télévision le soir."
+   ],
+   "wt": [
+    "Describe your morning in 3 sentences with reflexive verbs.",
+    "Write a short text (60 to 100 words) about a typical day: morning, work or studies, evening."
+   ]
+  },
+  {
+   "t": "The past: passé composé (avoir)",
+   "lv": 1,
+   "d": "What you did yesterday, last weekend",
+   "tip": "Passé composé = avoir (present) + past participle: j'ai mangé, j'ai fini, j'ai pris. Negative goes around avoir: je n'ai pas mangé.",
+   "p": [
+    [
+     "Yesterday, I watched a film.",
+     "Hier, j'ai regardé un film.",
+     "J'ai regardé un film hier."
+    ],
+    [
+     "We ate at a restaurant.",
+     "Nous avons mangé au restaurant.",
+     "On a mangé au restaurant."
+    ],
+    [
+     "Did you sleep well? (informal)",
+     "Tu as bien dormi ?",
+     "As-tu bien dormi ?"
+    ],
+    [
+     "I didn't understand.",
+     "Je n'ai pas compris."
+    ],
+    [
+     "She bought a new phone.",
+     "Elle a acheté un nouveau téléphone."
+    ],
+    [
+     "They finished the project.",
+     "Ils ont fini le projet.",
+     "Elles ont fini le projet."
+    ],
+    [
+     "I took the bus this morning.",
+     "J'ai pris le bus ce matin."
+    ],
+    [
+     "What did you do last weekend? (informal)",
+     "Qu'est-ce que tu as fait le week-end dernier ?",
+     "Tu as fait quoi le week-end dernier ?"
+    ]
+   ],
+   "v": [
+    [
+     "yesterday",
+     "hier"
+    ],
+    [
+     "last week",
+     "la semaine dernière"
+    ],
+    [
+     "to understand",
+     "comprendre"
+    ],
+    [
+     "to buy",
+     "acheter"
+    ],
+    [
+     "to sleep",
+     "dormir"
+    ],
+    [
+     "already",
+     "déjà"
+    ],
+    [
+     "weekend",
+     "week-end"
+    ]
+   ],
+   "c": [
+    [
+     "Hier, j'___ travaillé.",
+     [
+      "ai",
+      "suis",
+      "avais",
+      "as"
+     ],
+     0,
+     "Most verbs use « avoir » in the passé composé."
+    ],
+    [
+     "Nous avons ___ une pizza.",
+     [
+      "mangé",
+      "manger",
+      "mangez",
+      "mangeons"
+     ],
+     0,
+     "Past participle of -er verbs ends in -é: mangé."
+    ],
+    [
+     "Il a ___ le bus.",
+     [
+      "pris",
+      "prendu",
+      "prit",
+      "prendre"
+     ],
+     0,
+     "prendre → pris (irregular participle)."
+    ],
+    [
+     "Je ___ pas compris.",
+     [
+      "n'ai",
+      "ne ai",
+      "n'ai pas",
+      "ai"
+     ],
+     0,
+     "Negative: ne + avoir + pas + participle → je n'ai pas compris."
+    ],
+    [
+     "Tu as ___ ce livre ?",
+     [
+      "lu",
+      "lit",
+      "lire",
+      "lisé"
+     ],
+     0,
+     "lire → lu. Other irregulars: voir → vu, faire → fait, boire → bu."
+    ],
+    [
+     "Elles ont ___ leurs devoirs.",
+     [
+      "fait",
+      "faites",
+      "faire",
+      "fais"
+     ],
+     0,
+     "With avoir, the participle does not agree with the subject: elles ont fait."
+    ]
+   ],
+   "dd": [
+    "Hier soir, nous avons regardé un film.",
+    "Je n'ai pas compris la question.",
+    "Elle a pris le métro ce matin."
+   ],
+   "wt": [
+    "Write 3 sentences about what you did yesterday (passé composé with avoir).",
+    "Tell a friend about your last weekend (60 to 100 words) in an informal message."
+   ]
+  },
+  {
+   "t": "The past with être",
+   "lv": 1,
+   "d": "aller, venir, partir, arriver… and agreement",
+   "tip": "About 15 verbs of movement or change use « être »: aller, venir, arriver, partir, entrer, sortir, monter, descendre, naître, mourir, rester, tomber, retourner. The participle agrees with the subject: elle est allée, ils sont partis.",
+   "p": [
+    [
+     "She went to Spain.",
+     "Elle est allée en Espagne."
+    ],
+    [
+     "We arrived late.",
+     "Nous sommes arrivés en retard.",
+     "Nous sommes arrivées en retard.",
+     "On est arrivés en retard."
+    ],
+    [
+     "I was born in 1995.",
+     "Je suis né en 1995.",
+     "Je suis née en 1995."
+    ],
+    [
+     "They left at six.",
+     "Ils sont partis à six heures.",
+     "Elles sont parties à six heures."
+    ],
+    [
+     "He stayed at home.",
+     "Il est resté à la maison."
+    ],
+    [
+     "Did you go out last night? (informal)",
+     "Tu es sorti hier soir ?",
+     "Tu es sortie hier soir ?",
+     "Es-tu sorti hier soir ?"
+    ],
+    [
+     "The children fell asleep.",
+     "Les enfants se sont endormis."
+    ],
+    [
+     "I came back on Monday.",
+     "Je suis rentré lundi.",
+     "Je suis rentrée lundi.",
+     "Je suis revenu lundi.",
+     "Je suis revenue lundi."
+    ]
+   ],
+   "v": [
+    [
+     "to arrive",
+     "arriver"
+    ],
+    [
+     "to leave",
+     "partir"
+    ],
+    [
+     "to go out",
+     "sortir"
+    ],
+    [
+     "to stay",
+     "rester"
+    ],
+    [
+     "to be born",
+     "naître"
+    ],
+    [
+     "to fall",
+     "tomber"
+    ],
+    [
+     "late",
+     "en retard"
+    ]
+   ],
+   "c": [
+    [
+     "Elle ___ allée au cinéma.",
+     [
+      "est",
+      "a",
+      "été",
+      "ai"
+     ],
+     0,
+     "« aller » uses être in the passé composé."
+    ],
+    [
+     "Marie est ___ hier.",
+     [
+      "partie",
+      "parti",
+      "partis",
+      "partir"
+     ],
+     0,
+     "With être, agree with the subject: Marie (feminine) → partie."
+    ],
+    [
+     "Ils sont ___ à minuit.",
+     [
+      "rentrés",
+      "rentré",
+      "rentrées",
+      "rentrer"
+     ],
+     0,
+     "Masculine plural subject → rentrés."
+    ],
+    [
+     "Nous ___ restés à Paris.",
+     [
+      "sommes",
+      "avons",
+      "êtes",
+      "sont"
+     ],
+     0,
+     "rester uses être: nous sommes restés."
+    ],
+    [
+     "Je ___ né à Londres.",
+     [
+      "suis",
+      "ai",
+      "étais",
+      "sommes"
+     ],
+     0,
+     "naître uses être: je suis né(e)."
+    ],
+    [
+     "Elles se sont ___.",
+     [
+      "levées",
+      "levé",
+      "levés",
+      "lever"
+     ],
+     0,
+     "Reflexive verbs use être and usually agree: elles se sont levées."
+    ]
+   ],
+   "dd": [
+    "Elle est allée en Espagne l'été dernier.",
+    "Nous sommes arrivés en retard à la gare.",
+    "Les enfants sont restés à la maison."
+   ],
+   "wt": [
+    "Write 3 sentences about a trip: when you left, where you went, when you came back.",
+    "Tell the story of your last holiday (60 to 100 words) with verbs that use être and avoir."
+   ]
+  },
+  {
+   "t": "At the restaurant",
+   "lv": 1,
+   "d": "Book, order, polite requests, conditional",
+   "tip": "Polite French relies on the conditional: « Je voudrais », « Pourriez-vous… ? », « Ce serait possible de… ? ». « Le menu » is the set meal; the list of dishes is « la carte ».",
+   "p": [
+    [
+     "I'd like to book a table for four.",
+     "Je voudrais réserver une table pour quatre personnes.",
+     "Je voudrais réserver une table pour quatre."
+    ],
+    [
+     "Could you bring us some water?",
+     "Pourriez-vous nous apporter de l'eau ?",
+     "Vous pourriez nous apporter de l'eau ?"
+    ],
+    [
+     "What do you recommend?",
+     "Qu'est-ce que vous me conseillez ?",
+     "Que me conseillez-vous ?",
+     "Qu'est-ce que vous recommandez ?"
+    ],
+    [
+     "I'll have the set menu.",
+     "Je vais prendre le menu.",
+     "Je prends le menu."
+    ],
+    [
+     "I'm allergic to nuts.",
+     "Je suis allergique aux noix.",
+     "Je suis allergique aux fruits à coque."
+    ],
+    [
+     "The steak, medium rare, please.",
+     "Le steak, à point, s'il vous plaît.",
+     "Le steak à point, s'il vous plaît."
+    ],
+    [
+     "It was delicious!",
+     "C'était délicieux !"
+    ],
+    [
+     "Can we split the bill?",
+     "On peut payer séparément ?",
+     "Est-ce qu'on peut payer séparément ?"
+    ]
+   ],
+   "v": [
+    [
+     "menu (list of dishes)",
+     "carte"
+    ],
+    [
+     "starter",
+     "entrée"
+    ],
+    [
+     "main course",
+     "plat"
+    ],
+    [
+     "dessert",
+     "dessert"
+    ],
+    [
+     "to book",
+     "réserver"
+    ],
+    [
+     "delicious",
+     "délicieux"
+    ],
+    [
+     "glass",
+     "verre"
+    ]
+   ],
+   "c": [
+    [
+     "___-vous nous apporter le sel ?",
+     [
+      "Pourriez",
+      "Pouvoir",
+      "Pourrais",
+      "Pouvons"
+     ],
+     0,
+     "Polite request with vous: Pourriez-vous… ?"
+    ],
+    [
+     "Je vais ___ le poisson.",
+     [
+      "prendre",
+      "prends",
+      "pris",
+      "prenez"
+     ],
+     0,
+     "Futur proche: aller + infinitive → je vais prendre."
+    ],
+    [
+     "Je suis allergique ___ arachides.",
+     [
+      "aux",
+      "à",
+      "des",
+      "au"
+     ],
+     0,
+     "allergique à + les → aux."
+    ],
+    [
+     "C'___ délicieux !",
+     [
+      "était",
+      "été",
+      "étais",
+      "est été"
+     ],
+     0,
+     "Imperfect of être to describe: c'était délicieux."
+    ],
+    [
+     "En entrée, je prends ___ soupe.",
+     [
+      "la",
+      "le",
+      "du",
+      "de"
+     ],
+     0,
+     "« soupe » is feminine: la soupe."
+    ]
+   ],
+   "dd": [
+    "Je voudrais réserver une table pour ce soir.",
+    "Pourriez-vous nous apporter la carte, s'il vous plaît ?",
+    "C'était délicieux, merci beaucoup !"
+   ],
+   "wt": [
+    "Write a 3-line dialogue with a waiter: you order a starter, a main course and a drink.",
+    "Write a review (60 to 100 words) of a restaurant you like: food, service, price."
+   ]
+  },
+  {
+   "t": "Weather, seasons & plans",
+   "lv": 1,
+   "d": "Il fait…, futur proche, making plans",
+   "tip": "Weather uses « il fait » (il fait beau, il fait froid) or a verb (il pleut, il neige). For near-future plans: aller + infinitive → « Je vais partir demain ».",
+   "p": [
+    [
+     "It's nice weather today.",
+     "Il fait beau aujourd'hui.",
+     "Aujourd'hui, il fait beau."
+    ],
+    [
+     "It's raining.",
+     "Il pleut."
+    ],
+    [
+     "It's cold in winter.",
+     "Il fait froid en hiver.",
+     "En hiver, il fait froid."
+    ],
+    [
+     "Tomorrow, we're going to the beach.",
+     "Demain, nous allons à la plage.",
+     "Demain, on va à la plage."
+    ],
+    [
+     "I'm going to visit my parents.",
+     "Je vais rendre visite à mes parents.",
+     "Je vais voir mes parents."
+    ],
+    [
+     "What are you doing this weekend? (informal)",
+     "Qu'est-ce que tu fais ce week-end ?",
+     "Tu fais quoi ce week-end ?"
+    ],
+    [
+     "Shall we go for a walk?",
+     "On va se promener ?",
+     "Et si on allait se promener ?"
+    ],
+    [
+     "In summer, it's very hot.",
+     "En été, il fait très chaud.",
+     "Il fait très chaud en été."
+    ]
+   ],
+   "v": [
+    [
+     "sun",
+     "soleil"
+    ],
+    [
+     "rain",
+     "pluie"
+    ],
+    [
+     "snow",
+     "neige"
+    ],
+    [
+     "summer",
+     "été"
+    ],
+    [
+     "winter",
+     "hiver"
+    ],
+    [
+     "spring",
+     "printemps"
+    ],
+    [
+     "autumn",
+     "automne"
+    ]
+   ],
+   "c": [
+    [
+     "Il ___ chaud.",
+     [
+      "fait",
+      "est",
+      "a",
+      "va"
+     ],
+     0,
+     "Temperature uses « il fait »: il fait chaud / froid."
+    ],
+    [
+     "___ hiver, il neige.",
+     [
+      "En",
+      "Au",
+      "À",
+      "Dans"
+     ],
+     0,
+     "en été, en automne, en hiver — but au printemps."
+    ],
+    [
+     "___ printemps, les fleurs poussent.",
+     [
+      "Au",
+      "En",
+      "À la",
+      "Le"
+     ],
+     0,
+     "Exception: au printemps."
+    ],
+    [
+     "Demain, je ___ partir.",
+     [
+      "vais",
+      "va",
+      "vas",
+      "aller"
+     ],
+     0,
+     "Futur proche: je vais + infinitive."
+    ],
+    [
+     "Nous allons ___ visite à Léa.",
+     [
+      "rendre",
+      "faire",
+      "visiter",
+      "rendons"
+     ],
+     0,
+     "rendre visite à quelqu'un = to visit someone (visiter = a place)."
+    ]
+   ],
+   "dd": [
+    "Il fait beau, nous allons à la plage.",
+    "En hiver, il fait froid et il neige.",
+    "Demain, je vais rendre visite à mes parents."
+   ],
+   "wt": [
+    "Describe today's weather and your plans for tomorrow in 3 sentences.",
+    "Write a message (60 to 100 words) proposing a weekend plan to a friend, depending on the weather."
+   ]
+  },
+  {
+   "t": "Health & the doctor",
+   "lv": 1,
+   "d": "avoir mal à, symptoms, at the pharmacy",
+   "tip": "Pain: « avoir mal à » + body part with the article: j'ai mal à la tête, au dos, aux dents. « Je me sens » = I feel.",
+   "p": [
+    [
+     "I have a headache.",
+     "J'ai mal à la tête."
+    ],
+    [
+     "My back hurts.",
+     "J'ai mal au dos."
+    ],
+    [
+     "I have a fever.",
+     "J'ai de la fièvre."
+    ],
+    [
+     "I've had a cough for three days.",
+     "Je tousse depuis trois jours."
+    ],
+    [
+     "I'd like an appointment with the doctor.",
+     "Je voudrais un rendez-vous avec le médecin.",
+     "Je voudrais prendre rendez-vous chez le médecin."
+    ],
+    [
+     "I don't feel well.",
+     "Je ne me sens pas bien."
+    ],
+    [
+     "Take this medicine twice a day.",
+     "Prenez ce médicament deux fois par jour."
+    ],
+    [
+     "Get well soon!",
+     "Bon rétablissement !",
+     "Remets-toi vite !"
+    ]
+   ],
+   "v": [
+    [
+     "head",
+     "tête"
+    ],
+    [
+     "back",
+     "dos"
+    ],
+    [
+     "teeth",
+     "dents"
+    ],
+    [
+     "stomach",
+     "ventre"
+    ],
+    [
+     "medicine",
+     "médicament"
+    ],
+    [
+     "pharmacy",
+     "pharmacie"
+    ],
+    [
+     "appointment",
+     "rendez-vous"
+    ]
+   ],
+   "c": [
+    [
+     "J'ai mal ___ ventre.",
+     [
+      "au",
+      "à la",
+      "aux",
+      "à le"
+     ],
+     0,
+     "à + le ventre → au ventre."
+    ],
+    [
+     "J'ai mal ___ dents.",
+     [
+      "aux",
+      "au",
+      "à les",
+      "des"
+     ],
+     0,
+     "à + les dents → aux dents."
+    ],
+    [
+     "Je tousse ___ deux jours.",
+     [
+      "depuis",
+      "pendant",
+      "il y a",
+      "pour"
+     ],
+     0,
+     "depuis + present = an action that is still going on (for/since)."
+    ],
+    [
+     "Je ne me ___ pas bien.",
+     [
+      "sens",
+      "sent",
+      "sentir",
+      "senti"
+     ],
+     0,
+     "se sentir: je me sens, il se sent."
+    ],
+    [
+     "Prenez ce médicament deux fois ___ jour.",
+     [
+      "par",
+      "le",
+      "au",
+      "en"
+     ],
+     0,
+     "Frequency: deux fois par jour."
+    ]
+   ],
+   "dd": [
+    "J'ai mal à la tête depuis ce matin.",
+    "Je voudrais prendre rendez-vous avec le médecin.",
+    "Prenez ce médicament trois fois par jour."
+   ],
+   "wt": [
+    "Write 3 sentences describing your symptoms to a doctor.",
+    "Write an email (60 to 100 words) to your manager: you are ill and cannot come to work today."
+   ]
+  },
+  {
+   "t": "Telling a story: imparfait vs passé composé",
+   "lv": 2,
+   "d": "Background vs events, quand, pendant que",
+   "tip": "The imparfait sets the scene (what was going on, descriptions, habits): « Il pleuvait, j'étais fatigué ». The passé composé tells the events: « Soudain, le téléphone a sonné ».",
+   "p": [
+    [
+     "When I was a child, I lived in the countryside.",
+     "Quand j'étais petit, j'habitais à la campagne.",
+     "Quand j'étais petite, j'habitais à la campagne.",
+     "Quand j'étais enfant, j'habitais à la campagne."
+    ],
+    [
+     "It was raining when I left.",
+     "Il pleuvait quand je suis parti.",
+     "Il pleuvait quand je suis partie."
+    ],
+    [
+     "I was reading when the phone rang.",
+     "Je lisais quand le téléphone a sonné."
+    ],
+    [
+     "Every summer, we went to the sea.",
+     "Chaque été, nous allions à la mer.",
+     "Tous les étés, nous allions à la mer.",
+     "Chaque été, on allait à la mer."
+    ],
+    [
+     "Suddenly, the lights went out.",
+     "Soudain, la lumière s'est éteinte.",
+     "Tout à coup, la lumière s'est éteinte."
+    ],
+    [
+     "She was tired, so she went to bed.",
+     "Elle était fatiguée, alors elle s'est couchée.",
+     "Elle était fatiguée, donc elle s'est couchée."
+    ],
+    [
+     "While he was cooking, I set the table.",
+     "Pendant qu'il cuisinait, j'ai mis la table."
+    ],
+    [
+     "We didn't know the answer.",
+     "Nous ne savions pas la réponse.",
+     "Nous ne connaissions pas la réponse.",
+     "On ne savait pas la réponse."
+    ]
+   ],
+   "v": [
+    [
+     "suddenly",
+     "soudain"
+    ],
+    [
+     "while",
+     "pendant que"
+    ],
+    [
+     "childhood",
+     "enfance"
+    ],
+    [
+     "countryside",
+     "campagne"
+    ],
+    [
+     "to ring",
+     "sonner"
+    ],
+    [
+     "at that time",
+     "à l'époque"
+    ],
+    [
+     "every day",
+     "tous les jours"
+    ]
+   ],
+   "c": [
+    [
+     "Quand j'étais jeune, je ___ au foot.",
+     [
+      "jouais",
+      "ai joué",
+      "joue",
+      "jouerai"
+     ],
+     0,
+     "A past habit → imparfait: je jouais."
+    ],
+    [
+     "Je dormais quand tu ___.",
+     [
+      "as appelé",
+      "appelais",
+      "appelles",
+      "appeler"
+     ],
+     0,
+     "The event that interrupts → passé composé."
+    ],
+    [
+     "Il ___ beau ce jour-là.",
+     [
+      "faisait",
+      "a fait",
+      "fait",
+      "fera"
+     ],
+     0,
+     "Description of the scene (weather) → imparfait."
+    ],
+    [
+     "Soudain, quelqu'un ___ à la porte.",
+     [
+      "a frappé",
+      "frappait",
+      "frappe",
+      "frappé"
+     ],
+     0,
+     "« Soudain » introduces a sudden event → passé composé."
+    ],
+    [
+     "Nous ___ à la mer tous les étés.",
+     [
+      "allions",
+      "sommes allés",
+      "allons",
+      "irons"
+     ],
+     0,
+     "Repeated past action (tous les étés) → imparfait."
+    ],
+    [
+     "___ qu'il cuisinait, j'ai mis la table.",
+     [
+      "Pendant",
+      "Durant",
+      "Lorsque",
+      "Depuis"
+     ],
+     0,
+     "pendant que + clause = while."
+    ]
+   ],
+   "dd": [
+    "Il pleuvait quand nous sommes arrivés à Paris.",
+    "Quand j'étais petite, j'allais à la mer chaque été.",
+    "Je lisais tranquillement quand le téléphone a sonné."
+   ],
+   "wt": [
+    "Write 3 sentences: describe a scene in the past (imparfait), then something unexpected happens (passé composé).",
+    "Tell a childhood memory (80 to 120 words), mixing imparfait and passé composé."
+   ]
+  },
+  {
+   "t": "Work & emails",
+   "lv": 2,
+   "d": "Office life, formal emails, polite formulas",
+   "tip": "A French work email opens with « Bonjour Madame, » or « Bonjour Monsieur, » and often closes with « Cordialement, » or « Bien cordialement, ». « Je vous prie de bien vouloir… » is very formal.",
+   "p": [
+    [
+     "Please find attached the report.",
+     "Veuillez trouver ci-joint le rapport.",
+     "Vous trouverez ci-joint le rapport.",
+     "Je vous envoie le rapport en pièce jointe."
+    ],
+    [
+     "I'm writing to you about the meeting.",
+     "Je vous écris au sujet de la réunion.",
+     "Je vous écris concernant la réunion."
+    ],
+    [
+     "Could we postpone the meeting to Thursday?",
+     "Pourrions-nous reporter la réunion à jeudi ?",
+     "Est-ce qu'on pourrait reporter la réunion à jeudi ?"
+    ],
+    [
+     "I look forward to hearing from you.",
+     "Dans l'attente de votre réponse.",
+     "J'attends votre réponse avec impatience."
+    ],
+    [
+     "Best regards,",
+     "Cordialement,",
+     "Bien cordialement,"
+    ],
+    [
+     "I'll get back to you by Friday.",
+     "Je reviens vers vous d'ici vendredi.",
+     "Je vous recontacte d'ici vendredi."
+    ],
+    [
+     "My manager is in a meeting.",
+     "Mon responsable est en réunion.",
+     "Ma responsable est en réunion.",
+     "Mon manager est en réunion."
+    ],
+    [
+     "Thank you for your quick reply.",
+     "Merci pour votre réponse rapide.",
+     "Merci de votre réponse rapide."
+    ]
+   ],
+   "v": [
+    [
+     "meeting",
+     "réunion"
+    ],
+    [
+     "attached",
+     "ci-joint"
+    ],
+    [
+     "attachment",
+     "pièce jointe"
+    ],
+    [
+     "deadline",
+     "date limite"
+    ],
+    [
+     "colleague",
+     "collègue"
+    ],
+    [
+     "to postpone",
+     "reporter"
+    ],
+    [
+     "manager",
+     "responsable"
+    ]
+   ],
+   "c": [
+    [
+     "Veuillez trouver ___ le document.",
+     [
+      "ci-joint",
+      "ci-joints",
+      "si-joint",
+      "ci joint"
+     ],
+     0,
+     "« Veuillez trouver ci-joint » (invariable when placed before the noun)."
+    ],
+    [
+     "Je vous écris ___ sujet de votre commande.",
+     [
+      "au",
+      "à",
+      "du",
+      "sur le"
+     ],
+     0,
+     "au sujet de = about, regarding."
+    ],
+    [
+     "___-nous reporter la réunion ?",
+     [
+      "Pourrions",
+      "Pouvons-nous",
+      "Pourrons",
+      "Pourriez"
+     ],
+     0,
+     "Polite suggestion with nous: Pourrions-nous… ?"
+    ],
+    [
+     "Je reviens ___ vous rapidement.",
+     [
+      "vers",
+      "à",
+      "pour",
+      "chez"
+     ],
+     0,
+     "revenir vers quelqu'un = to get back to someone (business French)."
+    ],
+    [
+     "Dans l'attente de votre ___.",
+     [
+      "réponse",
+      "répondre",
+      "répondu",
+      "réponds"
+     ],
+     0,
+     "Fixed closing formula: Dans l'attente de votre réponse."
+    ]
+   ],
+   "dd": [
+    "Veuillez trouver ci-joint le compte rendu de la réunion.",
+    "Je vous écris au sujet de votre commande.",
+    "Dans l'attente de votre réponse, je vous souhaite une bonne journée."
+   ],
+   "wt": [
+    "Write the opening and the closing lines of a formal email to a client.",
+    "Write a professional email (80 to 120 words) asking to move a meeting, with a reason and two new times."
+   ]
+  },
+  {
+   "t": "Pronouns: le, lui, y, en",
+   "lv": 2,
+   "d": "Replace words to sound natural",
+   "tip": "COD (direct): le, la, les → Je LE vois. COI (à + person): lui, leur → Je LUI parle. « y » replaces à + place/thing (J'y vais). « en » replaces de + noun or a quantity (J'en veux deux).",
+   "p": [
+    [
+     "I see her every day.",
+     "Je la vois tous les jours."
+    ],
+    [
+     "I'm calling him tonight.",
+     "Je l'appelle ce soir.",
+     "Je vais l'appeler ce soir."
+    ],
+    [
+     "I'm talking to them.",
+     "Je leur parle."
+    ],
+    [
+     "We're going there tomorrow.",
+     "Nous y allons demain.",
+     "On y va demain."
+    ],
+    [
+     "Do you want some? Yes, I'd like two.",
+     "Tu en veux ? Oui, j'en voudrais deux.",
+     "Tu en veux ? Oui, j'en veux deux."
+    ],
+    [
+     "I'm thinking about it.",
+     "J'y pense."
+    ],
+    [
+     "I gave him the book.",
+     "Je lui ai donné le livre."
+    ],
+    [
+     "I don't have any.",
+     "Je n'en ai pas."
+    ]
+   ],
+   "v": [
+    [
+     "to think about",
+     "penser à"
+    ],
+    [
+     "to give",
+     "donner"
+    ],
+    [
+     "to need",
+     "avoir besoin de"
+    ],
+    [
+     "to answer",
+     "répondre à"
+    ],
+    [
+     "to call",
+     "appeler"
+    ],
+    [
+     "to talk about",
+     "parler de"
+    ]
+   ],
+   "c": [
+    [
+     "Tu vois Marie ? Oui, je ___ vois.",
+     [
+      "la",
+      "lui",
+      "le",
+      "en"
+     ],
+     0,
+     "voir quelqu'un (direct object, feminine) → la."
+    ],
+    [
+     "Tu parles à Paul ? Oui, je ___ parle.",
+     [
+      "lui",
+      "le",
+      "y",
+      "leur"
+     ],
+     0,
+     "parler À quelqu'un → indirect object: lui."
+    ],
+    [
+     "Tu vas à Lyon ? Oui, j'___ vais.",
+     [
+      "y",
+      "en",
+      "le",
+      "lui"
+     ],
+     0,
+     "y replaces à + place."
+    ],
+    [
+     "Tu as des enfants ? Oui, j'___ ai trois.",
+     [
+      "en",
+      "y",
+      "les",
+      "leur"
+     ],
+     0,
+     "en replaces a quantity: j'en ai trois."
+    ],
+    [
+     "Tu réponds à tes parents ? Oui, je ___ réponds.",
+     [
+      "leur",
+      "les",
+      "lui",
+      "y"
+     ],
+     0,
+     "répondre à + people (plural) → leur."
+    ],
+    [
+     "Tu as besoin de ton ordinateur ? Oui, j'___ ai besoin.",
+     [
+      "en",
+      "y",
+      "le",
+      "lui"
+     ],
+     0,
+     "avoir besoin DE → en."
+    ]
+   ],
+   "dd": [
+    "Je la vois tous les jours au bureau.",
+    "Nous y allons demain matin.",
+    "Tu veux des fraises ? Oui, j'en voudrais un kilo."
+   ],
+   "wt": [
+    "Answer 3 questions using a pronoun: « Tu vas souvent au cinéma ? », « Tu bois du café ? », « Tu parles à tes voisins ? »",
+    "Write a short dialogue (80 to 120 words) between two friends planning a party, using le, lui, y and en."
+   ]
+  },
+  {
+   "t": "Housing & renting a flat",
+   "lv": 2,
+   "d": "Describe a flat, contact a landlord, problems at home",
+   "tip": "Rooms: « un T2 » or « un deux-pièces » = one bedroom + living room. « Le loyer » is the rent, « les charges » the service charges, « la caution » the deposit.",
+   "p": [
+    [
+     "I'm looking for a two-room flat.",
+     "Je cherche un deux-pièces.",
+     "Je cherche un appartement de deux pièces.",
+     "Je cherche un T2."
+    ],
+    [
+     "The rent is 900 euros a month, charges included.",
+     "Le loyer est de 900 euros par mois, charges comprises.",
+     "Le loyer est de 900 euros par mois charges comprises."
+    ],
+    [
+     "Is the flat furnished?",
+     "L'appartement est meublé ?",
+     "Est-ce que l'appartement est meublé ?"
+    ],
+    [
+     "The heating doesn't work.",
+     "Le chauffage ne marche pas.",
+     "Le chauffage ne fonctionne pas."
+    ],
+    [
+     "When can I visit it?",
+     "Quand est-ce que je peux le visiter ?",
+     "Quand puis-je le visiter ?"
+    ],
+    [
+     "There is a balcony and a lift.",
+     "Il y a un balcon et un ascenseur."
+    ],
+    [
+     "I'm moving next month.",
+     "Je déménage le mois prochain."
+    ],
+    [
+     "The neighbours are very noisy.",
+     "Les voisins sont très bruyants."
+    ]
+   ],
+   "v": [
+    [
+     "rent",
+     "loyer"
+    ],
+    [
+     "landlord",
+     "propriétaire"
+    ],
+    [
+     "deposit",
+     "caution"
+    ],
+    [
+     "furnished",
+     "meublé"
+    ],
+    [
+     "lift",
+     "ascenseur"
+    ],
+    [
+     "to move (house)",
+     "déménager"
+    ],
+    [
+     "heating",
+     "chauffage"
+    ]
+   ],
+   "c": [
+    [
+     "Le loyer est ___ 800 euros.",
+     [
+      "de",
+      "à",
+      "du",
+      "pour"
+     ],
+     0,
+     "Le loyer est de + amount."
+    ],
+    [
+     "Charges ___.",
+     [
+      "comprises",
+      "compris",
+      "comprise",
+      "comprend"
+     ],
+     0,
+     "« charges » is feminine plural → comprises."
+    ],
+    [
+     "Il y ___ deux chambres.",
+     [
+      "a",
+      "ont",
+      "sont",
+      "est"
+     ],
+     0,
+     "« il y a » is invariable: il y a deux chambres."
+    ],
+    [
+     "Je ___ samedi prochain.",
+     [
+      "déménage",
+      "déménager",
+      "déménagé",
+      "déménages"
+     ],
+     0,
+     "Present tense can express the near future: je déménage samedi."
+    ],
+    [
+     "L'appartement ___ trois pièces.",
+     [
+      "fait",
+      "est",
+      "va",
+      "a de"
+     ],
+     0,
+     "faire for size: l'appartement fait trois pièces / 60 m²."
+    ]
+   ],
+   "dd": [
+    "Je cherche un appartement meublé près du centre.",
+    "Le loyer est de neuf cents euros, charges comprises.",
+    "Le chauffage ne marche plus depuis lundi."
+   ],
+   "wt": [
+    "Describe your home in 3 sentences: size, rooms, what you like.",
+    "Write an email (80 to 120 words) to your landlord about a problem in the flat, and ask for a repair."
+   ]
+  },
+  {
+   "t": "Opinions & the subjunctive",
+   "lv": 2,
+   "d": "Give your opinion, agree, il faut que, je veux que",
+   "tip": "After expressions of necessity, wish or emotion, French uses the subjunctive: « il faut que tu viennes », « je veux qu'il parte ». But « je pense que » + indicative: « je pense qu'il a raison ».",
+   "p": [
+    [
+     "In my opinion, it's a good idea.",
+     "À mon avis, c'est une bonne idée.",
+     "Selon moi, c'est une bonne idée."
+    ],
+    [
+     "I agree with you.",
+     "Je suis d'accord avec toi.",
+     "Je suis d'accord avec vous."
+    ],
+    [
+     "I don't agree at all.",
+     "Je ne suis pas du tout d'accord."
+    ],
+    [
+     "You have to come with us.",
+     "Il faut que tu viennes avec nous."
+    ],
+    [
+     "I want you to be on time.",
+     "Je veux que tu sois à l'heure.",
+     "Je veux que vous soyez à l'heure."
+    ],
+    [
+     "I think he's right.",
+     "Je pense qu'il a raison.",
+     "Je crois qu'il a raison."
+    ],
+    [
+     "It's important that we do this together.",
+     "Il est important que nous fassions ça ensemble.",
+     "C'est important qu'on le fasse ensemble.",
+     "Il est important que nous le fassions ensemble."
+    ],
+    [
+     "On the one hand… on the other hand…",
+     "D'un côté… de l'autre…",
+     "D'une part… d'autre part…"
+    ]
+   ],
+   "v": [
+    [
+     "opinion",
+     "avis"
+    ],
+    [
+     "to agree",
+     "être d'accord"
+    ],
+    [
+     "to be right",
+     "avoir raison"
+    ],
+    [
+     "to be wrong",
+     "avoir tort"
+    ],
+    [
+     "however",
+     "cependant"
+    ],
+    [
+     "although",
+     "bien que"
+    ]
+   ],
+   "c": [
+    [
+     "Il faut que tu ___ tes devoirs.",
+     [
+      "fasses",
+      "fais",
+      "feras",
+      "faire"
+     ],
+     0,
+     "Il faut que + subjunctive: faire → que tu fasses."
+    ],
+    [
+     "Je pense qu'il ___ raison.",
+     [
+      "a",
+      "ait",
+      "avoir",
+      "aura eu"
+     ],
+     0,
+     "« penser que » (affirmative) + indicative."
+    ],
+    [
+     "Je veux que vous ___ à l'heure.",
+     [
+      "soyez",
+      "êtes",
+      "serez",
+      "étiez"
+     ],
+     0,
+     "vouloir que + subjunctive: être → que vous soyez."
+    ],
+    [
+     "Bien qu'il ___ tard, nous continuons.",
+     [
+      "soit",
+      "est",
+      "sera",
+      "était"
+     ],
+     0,
+     "bien que + subjunctive."
+    ],
+    [
+     "___ mon avis, c'est trop cher.",
+     [
+      "À",
+      "De",
+      "Pour",
+      "Selon à"
+     ],
+     0,
+     "À mon avis = in my opinion."
+    ],
+    [
+     "Je suis d'accord ___ toi.",
+     [
+      "avec",
+      "à",
+      "de",
+      "pour"
+     ],
+     0,
+     "être d'accord avec quelqu'un."
+    ]
+   ],
+   "dd": [
+    "À mon avis, il faut que nous partions plus tôt.",
+    "Je ne suis pas du tout d'accord avec cette idée.",
+    "Je veux que tu sois à l'heure demain."
+   ],
+   "wt": [
+    "Give your opinion in 3 sentences on remote work, using « à mon avis » and « il faut que ».",
+    "Write a short argument (80 to 120 words): should cars be banned from city centres? Give two arguments for and one against."
+   ]
+  },
+  {
+   "t": "Hypotheses & the conditional",
+   "lv": 3,
+   "d": "si + imparfait → conditionnel, regrets, advice",
+   "tip": "Hypothesis about the present: « Si j'avais le temps, je voyagerais ». About the past: « Si j'avais su, je serais venu ». Never use the conditional right after « si ».",
+   "p": [
+    [
+     "If I had more time, I would travel.",
+     "Si j'avais plus de temps, je voyagerais."
+    ],
+    [
+     "If I were you, I would accept.",
+     "Si j'étais toi, j'accepterais.",
+     "À ta place, j'accepterais.",
+     "Si j'étais vous, j'accepterais.",
+     "À votre place, j'accepterais."
+    ],
+    [
+     "If I had known, I would have come.",
+     "Si j'avais su, je serais venu.",
+     "Si j'avais su, je serais venue."
+    ],
+    [
+     "You should rest.",
+     "Tu devrais te reposer.",
+     "Vous devriez vous reposer."
+    ],
+    [
+     "It would be nice to meet.",
+     "Ce serait sympa de se voir.",
+     "Ce serait bien de se rencontrer.",
+     "Ce serait sympa de se rencontrer."
+    ],
+    [
+     "I would have liked to go with you.",
+     "J'aurais aimé venir avec toi.",
+     "J'aurais aimé partir avec toi.",
+     "J'aurais aimé aller avec toi."
+    ],
+    [
+     "If it rains, we'll stay at home.",
+     "S'il pleut, nous resterons à la maison.",
+     "S'il pleut, on restera à la maison."
+    ],
+    [
+     "What would you do in my place?",
+     "Qu'est-ce que tu ferais à ma place ?",
+     "Que ferais-tu à ma place ?"
+    ]
+   ],
+   "v": [
+    [
+     "if",
+     "si"
+    ],
+    [
+     "to regret",
+     "regretter"
+    ],
+    [
+     "in my place",
+     "à ma place"
+    ],
+    [
+     "luckily",
+     "heureusement"
+    ],
+    [
+     "otherwise",
+     "sinon"
+    ],
+    [
+     "to imagine",
+     "imaginer"
+    ]
+   ],
+   "c": [
+    [
+     "Si j'avais de l'argent, j'___ une maison.",
+     [
+      "achèterais",
+      "achèterai",
+      "achetais",
+      "aurais acheté"
+     ],
+     0,
+     "si + imparfait → conditionnel présent."
+    ],
+    [
+     "Si tu ___ venu, tu l'aurais vu.",
+     [
+      "étais",
+      "serais",
+      "es",
+      "avais"
+     ],
+     0,
+     "si + plus-que-parfait → conditionnel passé: si tu étais venu…"
+    ],
+    [
+     "S'il ___ demain, nous resterons ici.",
+     [
+      "pleut",
+      "pleuvrait",
+      "pleuvait",
+      "pleuvra"
+     ],
+     0,
+     "Real condition: si + present → future."
+    ],
+    [
+     "Tu ___ te reposer.",
+     [
+      "devrais",
+      "devras",
+      "doit",
+      "devrait"
+     ],
+     0,
+     "Advice: devoir in the conditional → tu devrais."
+    ],
+    [
+     "J'___ aimé le rencontrer.",
+     [
+      "aurais",
+      "aurai",
+      "avais",
+      "serais"
+     ],
+     0,
+     "Regret: conditionnel passé → j'aurais aimé."
+    ],
+    [
+     "Si j'___ toi, je partirais.",
+     [
+      "étais",
+      "serais",
+      "suis",
+      "été"
+     ],
+     0,
+     "Never conditional right after si: si j'étais toi."
+    ]
+   ],
+   "dd": [
+    "Si j'avais plus de temps, je voyagerais en Asie.",
+    "Si nous avions su, nous serions venus plus tôt.",
+    "À ta place, j'accepterais cette offre."
+   ],
+   "wt": [
+    "Write 3 sentences starting with « Si j'étais… » or « Si j'avais… ».",
+    "Write a text (100 to 150 words): what would you change in your life if you could start again?"
+   ]
+  },
+  {
+   "t": "Job interview",
+   "lv": 3,
+   "d": "Present your experience, strengths, questions to ask",
+   "tip": "In an interview, use « vous ». Talk about experience with the passé composé and « depuis » for something still true: « Je travaille dans le marketing depuis cinq ans ».",
+   "p": [
+    [
+     "I've been working in marketing for five years.",
+     "Je travaille dans le marketing depuis cinq ans."
+    ],
+    [
+     "I'm applying for the project manager position.",
+     "Je postule au poste de chef de projet.",
+     "Je postule pour le poste de chef de projet."
+    ],
+    [
+     "My main strength is my sense of organisation.",
+     "Mon principal point fort, c'est mon sens de l'organisation.",
+     "Ma principale qualité est mon sens de l'organisation."
+    ],
+    [
+     "I led a team of six people.",
+     "J'ai dirigé une équipe de six personnes.",
+     "J'ai encadré une équipe de six personnes."
+    ],
+    [
+     "Why do you want to join our company?",
+     "Pourquoi voulez-vous rejoindre notre entreprise ?",
+     "Pourquoi souhaitez-vous rejoindre notre entreprise ?"
+    ],
+    [
+     "I am available immediately.",
+     "Je suis disponible immédiatement.",
+     "Je suis disponible tout de suite."
+    ],
+    [
+     "What are the next steps?",
+     "Quelles sont les prochaines étapes ?"
+    ],
+    [
+     "I would like to know more about the team.",
+     "J'aimerais en savoir plus sur l'équipe.",
+     "Je voudrais en savoir plus sur l'équipe."
+    ]
+   ],
+   "v": [
+    [
+     "job, position",
+     "poste"
+    ],
+    [
+     "to apply",
+     "postuler"
+    ],
+    [
+     "skills",
+     "compétences"
+    ],
+    [
+     "salary",
+     "salaire"
+    ],
+    [
+     "experience",
+     "expérience"
+    ],
+    [
+     "company",
+     "entreprise"
+    ],
+    [
+     "CV",
+     "CV"
+    ]
+   ],
+   "c": [
+    [
+     "Je travaille ici ___ trois ans.",
+     [
+      "depuis",
+      "pendant",
+      "il y a",
+      "pour"
+     ],
+     0,
+     "depuis + present = still true now."
+    ],
+    [
+     "Je postule ___ poste de comptable.",
+     [
+      "au",
+      "à",
+      "pour le",
+      "sur le"
+     ],
+     0,
+     "postuler à un poste → au poste (also: pour le poste)."
+    ],
+    [
+     "J'___ en savoir plus.",
+     [
+      "aimerais",
+      "aimerai",
+      "aime à",
+      "aimais"
+     ],
+     0,
+     "Polite wish: conditional j'aimerais."
+    ],
+    [
+     "Quels sont vos points ___ ?",
+     [
+      "forts",
+      "fort",
+      "fortes",
+      "forte"
+     ],
+     0,
+     "« points » is masculine plural → forts."
+    ],
+    [
+     "J'ai ___ une équipe de dix personnes.",
+     [
+      "dirigé",
+      "diriger",
+      "dirigée",
+      "dirigés"
+     ],
+     0,
+     "With avoir and the object after the verb, no agreement: j'ai dirigé."
+    ]
+   ],
+   "dd": [
+    "Je travaille dans la finance depuis six ans.",
+    "Je postule au poste de chef de projet.",
+    "Quelles sont les prochaines étapes du recrutement ?"
+   ],
+   "wt": [
+    "Answer in 3 sentences: « Parlez-moi de vous. »",
+    "Write a cover letter (100 to 150 words) for a job you would like in France."
+   ]
+  },
+  {
+   "t": "News, culture & complex sentences",
+   "lv": 3,
+   "d": "dont, où, ce qui / ce que, passive voice, connectors",
+   "tip": "« dont » replaces de + noun: « le livre dont je parle » (parler de). « où » is also used for time: « le jour où je suis arrivé ». Passive: être + participle that agrees: « La loi a été votée ».",
+   "p": [
+    [
+     "This is the film I told you about.",
+     "C'est le film dont je t'ai parlé.",
+     "C'est le film dont je vous ai parlé."
+    ],
+    [
+     "The day I arrived, it was snowing.",
+     "Le jour où je suis arrivé, il neigeait.",
+     "Le jour où je suis arrivée, il neigeait."
+    ],
+    [
+     "What I like is the atmosphere.",
+     "Ce que j'aime, c'est l'ambiance."
+    ],
+    [
+     "The law was passed last year.",
+     "La loi a été votée l'année dernière."
+    ],
+    [
+     "The museum is visited by millions of tourists.",
+     "Le musée est visité par des millions de touristes."
+    ],
+    [
+     "Although it is expensive, it's worth it.",
+     "Bien que ce soit cher, ça vaut le coup.",
+     "Même si c'est cher, ça vaut le coup.",
+     "Bien que ce soit cher, cela en vaut la peine."
+    ],
+    [
+     "According to the newspaper, the strike will continue.",
+     "Selon le journal, la grève va continuer.",
+     "D'après le journal, la grève va continuer.",
+     "Selon le journal, la grève continuera."
+    ],
+    [
+     "That's what surprised me.",
+     "C'est ce qui m'a surpris.",
+     "C'est ce qui m'a surprise."
+    ]
+   ],
+   "v": [
+    [
+     "newspaper",
+     "journal"
+    ],
+    [
+     "strike",
+     "grève"
+    ],
+    [
+     "law",
+     "loi"
+    ],
+    [
+     "according to",
+     "selon"
+    ],
+    [
+     "to be worth it",
+     "valoir le coup"
+    ],
+    [
+     "exhibition",
+     "exposition"
+    ]
+   ],
+   "c": [
+    [
+     "C'est l'ami ___ je t'ai parlé.",
+     [
+      "dont",
+      "que",
+      "où",
+      "qui"
+     ],
+     0,
+     "parler DE quelqu'un → dont."
+    ],
+    [
+     "La ville ___ j'habite est calme.",
+     [
+      "où",
+      "dont",
+      "que",
+      "qui"
+     ],
+     0,
+     "Place → où."
+    ],
+    [
+     "___ m'intéresse, c'est l'histoire.",
+     [
+      "Ce qui",
+      "Ce que",
+      "Qui",
+      "Que"
+     ],
+     0,
+     "Subject of the verb → ce qui."
+    ],
+    [
+     "___ je préfère, c'est le cinéma.",
+     [
+      "Ce que",
+      "Ce qui",
+      "Dont",
+      "Que"
+     ],
+     0,
+     "Object of the verb (je préfère quelque chose) → ce que."
+    ],
+    [
+     "La décision a été ___ hier.",
+     [
+      "prise",
+      "pris",
+      "prises",
+      "prendre"
+     ],
+     0,
+     "Passive: the participle agrees with the subject (la décision → prise)."
+    ],
+    [
+     "Les résultats seront ___ demain.",
+     [
+      "publiés",
+      "publié",
+      "publiées",
+      "publier"
+     ],
+     0,
+     "Passive with a masculine plural subject → publiés."
+    ]
+   ],
+   "dd": [
+    "C'est le livre dont tout le monde parle.",
+    "La loi a été votée par le Parlement.",
+    "Ce qui m'a surpris, c'est la gentillesse des gens."
+   ],
+   "wt": [
+    "Summarise a piece of news you read recently in 3 sentences.",
+    "Write a review (100 to 150 words) of a film, book or exhibition, using dont, où and ce que."
+   ]
+  }
+ ]
+}

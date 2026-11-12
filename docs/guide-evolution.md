@@ -1,0 +1,94 @@
+# Guide d'évolution : comment ajouter…
+
+Chaque recette dit quels fichiers toucher. Après toute modification :
+
+```bash
+npm run check   # construit et vérifie les types
+npm test        # tests rapides ; npm run test:all avant de livrer
+```
+
+## Une unité dans un cours existant
+
+1. Ouvrir `src/content/courses/<cours>.json` et ajouter un objet dans `units`.
+   - La place dans la liste est l'ordre du parcours ; le champ `lv` donne le niveau (0 à 3).
+2. Champs :
+   - `t` : titre.
+   - `d` : description.
+   - `tip` : astuce du guide.
+   - `p` : phrases `[français, cible, ...variantes acceptées]`.
+   - `v` : vocabulaire `[français, cible]`.
+   - `c` : QCM `[question avec ___, options, index de la bonne réponse, explication]`.
+   - TOEIC : `l` (Part 2), `ph` (Part 1), `cv` et `rd` (Parts 3, 4 et 7). Voltaire : `dd` (dictées).
+   - Le détail est dans `src/types.ts` (interface `Unit`).
+3. Viser au moins 8 phrases et 6 mots : les 18 étapes de l'unité sont générées à partir de ces données.
+4. Traduire le titre, la description, l'astuce et les phrases françaises :
+   - section `content` de `src/i18n/ko.json`, pour les cours anglais et FLE vus depuis l'interface coréenne ;
+   - section `content` de `src/i18n/en.json`, pour Voltaire et coréen vus depuis l'interface anglaise.
+5. Lancer `node tests/run.mjs data_integrity` puis `node tests/run.mjs play_lessons fr <cours>`.
+
+Attention : insérer une unité au milieu décale la progression enregistrée des profils existants. Ajouter de préférence à la fin d'un niveau, ou prévoir une migration (`core/progress.js`, fonction `hydrate`, et `UNIT_REMAP`).
+
+## Un nouveau cours
+
+1. Créer `src/content/courses/<id>.json` sur le modèle d'un cours existant (`name`, `icon`, `lang`, `kind`, `units`).
+2. Le déclarer dans `src/content/data.js` (import + entrée dans `COURSES`).
+3. L'ajouter aux `tracks` d'une section dans `src/content/sections.json`.
+4. `kind` choisit le modèle de leçon dans `TEMPL` (`src/exercises/generate.js`). Un nouveau `kind` demande son propre modèle.
+5. Adapter `content/index.js` si le cours doit être masqué ou traduit selon la langue d'interface.
+
+## Un texte d'interface
+
+1. Écrire le texte en français dans le code, comme d'habitude.
+2. Ajouter la même clé, au caractère près, dans la section `ui` de `src/i18n/en.json` et de `src/i18n/ko.json`.
+3. Une partie variable s'écrit `¤` dans la clé.
+   - Exemple : `"Bravo ¤ !": "Well done ¤!"`.
+   - `¤1`, `¤2`… changent l'ordre des parties.
+4. Vérifier avec `node tests/run.mjs i18n_cards` et `node tests/run.mjs i18n_leaks ko`.
+
+## Une carte d'entraînement
+
+1. `src/screens/training.js`, fonction `renderTrain` : ajouter un `add(icône, titre, description, ...)` à l'endroit voulu.
+2. Écrire la fonction qui lance la séance, sur le modèle de `trainDictee` ou `trainChoice` :
+   - fabriquer des exercices avec `make(type, ctxFor(cours, unités))` ;
+   - les lancer avec `openSession({ mode: 'train', cid, exs })`.
+3. Traduire le titre et la description (voir « Un texte d'interface »).
+
+## Un type d'exercice
+
+1. Génération : dans `src/exercises/generate.js`, fonction `make0`, ajouter une branche `if (t === "montype") return { t, lang, answer, ... }`.
+2. Affichage : dans `src/exercises/render.js`, ajouter `R.montype = (ex, b) => { ... }`.
+   - La fonction remplit le conteneur `b`, appelle `setReady(true)` quand une réponse est prête.
+   - Elle renvoie `{ grade: give => ({ ok, ... }), key: i => ... }`. Modèle simple : `R.mc`.
+3. Utilisation : l'ajouter dans un modèle de leçon (`TEMPL` dans `generate.js`) ou une carte d'entraînement.
+4. Si c'est un exercice d'écoute ou de micro : l'ajouter dans `isAudioEx` et `pauseAudio` (`src/lesson/engine.js`).
+5. Libellé du type pour le coach : `TYPE_FR` dans `src/features/coach.js`.
+6. Tests : ajouter la bonne réponse automatique dans `tests/solver.py`.
+7. Traduire les nouveaux textes (voir « Un texte d'interface »).
+
+## Un écran
+
+1. Créer `src/screens/<nom>.js` qui exporte `renderXxx(view)`.
+2. Dans `src/ui/router.js` :
+   - ajouter son nom à la liste des écrans de `route()` ;
+   - appeler sa fonction de rendu dans `renderAll()`.
+   - S'il a un onglet dans la barre du bas, l'ajouter aussi dans `src/index.html`.
+3. Importer le module dans `src/main.js` (liste des imports).
+
+## Un objet de boutique
+
+- Bonus : tableau `items` de `renderShop` (`src/screens/shop.js`), puis son effet dans `buy()`.
+- Tenue de la mascotte : objet `ACCS` dans `src/ui/mascot.js`.
+
+## Une route de l'API
+
+1. `server/api/account.php` : ajouter un `case 'monaction':` dans le `switch`.
+   - Utiliser `out([...])` pour répondre.
+   - Exiger le jeton comme les actions existantes.
+2. Côté application : `srv("monaction", {...})` (`src/services/cloud.js`).
+3. Ajouter un cas dans `tests/server_security.py` (accès sans jeton refusé).
+
+## Écrire en TypeScript
+
+- Un nouveau module peut être un fichier `.ts` : `src/exercises/hangul.ts` sert d'exemple.
+- Les autres modules l'importent avec l'extension `.js` (`import { hgCompose } from './hangul.js'`) : esbuild trouve le `.ts`.
+- `npm run check` vérifie les types des fichiers `.ts`. Les types communs sont dans `src/types.ts`.

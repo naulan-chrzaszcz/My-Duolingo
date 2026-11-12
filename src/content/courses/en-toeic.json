@@ -1,0 +1,6381 @@
+{
+ "name": "TOEIC",
+ "icon": "🎯",
+ "lang": "en-US",
+ "kind": "toeic",
+ "units": [
+  {
+   "t": "Part 5 : temps & verbes",
+   "lv": 0,
+   "d": "Temps, modaux, passif",
+   "tip": "Repère les indices de temps (yesterday, since, by the time…) : ils donnent souvent la réponse en 3 secondes.",
+   "c": [
+    [
+     "The manager ___ the report yesterday.",
+     [
+      "reviewed",
+      "reviews",
+      "will review",
+      "has reviewed"
+     ],
+     0,
+     "« yesterday » = moment passé précis → prétérit."
+    ],
+    [
+     "Ms. Kim has worked here ___ 2019.",
+     [
+      "since",
+      "for",
+      "from",
+      "during"
+     ],
+     0,
+     "since + point de départ ; for + durée."
+    ],
+    [
+     "All employees ___ attend the safety training next week.",
+     [
+      "must",
+      "must to",
+      "musts",
+      "have"
+     ],
+     0,
+     "Modal must + base verbale, sans to."
+    ],
+    [
+     "The new printer ___ installed on Monday.",
+     [
+      "will be",
+      "will",
+      "is being to",
+      "has"
+     ],
+     0,
+     "Passif futur : will be + participe passé."
+    ],
+    [
+     "By the time we arrived, the meeting ___.",
+     [
+      "had already started",
+      "has already started",
+      "already starts",
+      "is starting"
+     ],
+     0,
+     "Action antérieure à une autre action passée → plus-que-parfait."
+    ],
+    [
+     "Mr. Lee ___ to the Tokyo office last month.",
+     [
+      "was transferred",
+      "transferred to",
+      "is transferring",
+      "transfers"
+     ],
+     0,
+     "Il a été muté : passif au prétérit."
+    ],
+    [
+     "If the shipment ___ late, please notify the client.",
+     [
+      "arrives",
+      "will arrive",
+      "arrived",
+      "arriving"
+     ],
+     0,
+     "Après if (condition réelle) : présent, même pour parler du futur."
+    ],
+    [
+     "The conference room is ___ for the entire afternoon.",
+     [
+      "reserved",
+      "reserving",
+      "reserve",
+      "reservation"
+     ],
+     0,
+     "Être réservé : participe passé après is."
+    ]
+   ],
+   "l": [
+    [
+     "When does the training session start?",
+     [
+      "At nine o'clock tomorrow.",
+      "In the main conference room.",
+      "Yes, it was very useful."
+     ],
+     0
+    ],
+    [
+     "Where should I put these boxes?",
+     [
+      "Next to the copier, please.",
+      "Around three o'clock.",
+      "Because they're heavy."
+     ],
+     0
+    ],
+    [
+     "Who is leading the project?",
+     [
+      "Mr. Park from marketing.",
+      "By next Friday.",
+      "It's a big project, yes."
+     ],
+     0
+    ],
+    [
+     "Would you like some coffee?",
+     [
+      "No thanks, I just had one.",
+      "It's in the kitchen.",
+      "I like it very much."
+     ],
+     0
+    ]
+   ],
+   "p": [
+    [
+     "La réunion a été reportée à demain.",
+     "The meeting has been postponed until tomorrow.",
+     "The meeting was postponed until tomorrow.",
+     "The meeting has been postponed to tomorrow.",
+     "The meeting was postponed to tomorrow."
+    ],
+    [
+     "Veuillez signer le formulaire ci-joint.",
+     "Please sign the attached form."
+    ],
+    [
+     "Le colis sera livré d'ici vendredi.",
+     "The package will be delivered by Friday.",
+     "The parcel will be delivered by Friday."
+    ],
+    [
+     "Nous embauchons un nouveau comptable.",
+     "We are hiring a new accountant.",
+     "We're hiring a new accountant."
+    ]
+   ],
+   "v": [
+    [
+     "embaucher",
+     "hire"
+    ],
+    [
+     "comptable",
+     "accountant"
+    ],
+    [
+     "fournisseur",
+     "supplier"
+    ],
+    [
+     "livraison",
+     "delivery"
+    ],
+    [
+     "entrepôt",
+     "warehouse"
+    ],
+    [
+     "stock",
+     "inventory"
+    ]
+   ],
+   "orig": 1,
+   "ph": [
+    [
+     "👩‍💼💻☕",
+     "Une femme travaille sur un ordinateur portable, une tasse posée à côté.",
+     [
+      "A woman is typing on a laptop.",
+      "A woman is pouring some coffee.",
+      "A woman is closing a window.",
+      "A woman is answering the phone."
+     ],
+     0
+    ],
+    [
+     "👥📊🗣️",
+     "Des personnes écoutent une présentation devant un graphique.",
+     [
+      "People are attending a presentation.",
+      "People are leaving the room.",
+      "A chart is being printed.",
+      "Someone is cleaning the board."
+     ],
+     0
+    ],
+    [
+     "🚶‍♀️🚶🚦🏙️",
+     "Des piétons traversent une rue en ville.",
+     [
+      "Pedestrians are crossing the street.",
+      "Cars are parked along the road.",
+      "A bus is stopping at the corner.",
+      "People are waiting in line."
+     ],
+     0
+    ],
+    [
+     "🛒🧍‍♀️🍎",
+     "Une cliente choisit des fruits au supermarché.",
+     [
+      "A woman is selecting some fruit.",
+      "A woman is pushing a stroller.",
+      "Some fruit is being weighed.",
+      "A woman is paying at the register."
+     ],
+     0
+    ],
+    [
+     "🚲🚲🚲🌳",
+     "Des vélos sont garés en rang près d'un arbre.",
+     [
+      "Some bicycles have been parked in a row.",
+      "People are riding bicycles.",
+      "A tree is being cut down.",
+      "A bicycle is being repaired."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Part 1 : le vocabulaire du bureau",
+   "lv": 0,
+   "d": "Objets, actions, situations au travail",
+   "tip": "Faux amis fréquents : attend (assister à) ≠ assist (aider) ; apply for (postuler) ; out of order (en panne).",
+   "c": [
+    [
+     "The documents are stacked ___ the desk.",
+     [
+      "on",
+      "in",
+      "at",
+      "into"
+     ],
+     0,
+     "on = sur une surface."
+    ],
+    [
+     "A woman is ___ a presentation.",
+     [
+      "giving",
+      "doing",
+      "making to",
+      "taking"
+     ],
+     0,
+     "give a presentation = faire une présentation."
+    ],
+    [
+     "The employees are ___ a meeting.",
+     [
+      "attending",
+      "assisting",
+      "joining to",
+      "attending to"
+     ],
+     0,
+     "attend a meeting = assister à une réunion (assist = aider)."
+    ],
+    [
+     "The printer is out of ___.",
+     [
+      "order",
+      "work",
+      "use",
+      "service to"
+     ],
+     0,
+     "out of order = en panne."
+    ],
+    [
+     "Please ___ the form before the deadline.",
+     [
+      "fill out",
+      "fill",
+      "full out",
+      "fill to"
+     ],
+     0,
+     "fill out a form = remplir un formulaire."
+    ],
+    [
+     "He is ___ for a new job.",
+     [
+      "applying",
+      "applicating",
+      "postulating",
+      "appealing"
+     ],
+     0,
+     "apply for a job = postuler."
+    ]
+   ],
+   "l": [
+    [
+     "Where is the supply cabinet?",
+     [
+      "Next to the elevator.",
+      "Yes, I supplied it.",
+      "At three o'clock."
+     ],
+     0
+    ],
+    [
+     "Who's in charge of the budget?",
+     [
+      "Ms. Tanaka is.",
+      "It's in charge.",
+      "About two thousand dollars."
+     ],
+     0
+    ],
+    [
+     "When is the report due?",
+     [
+      "By Thursday afternoon.",
+      "To the director.",
+      "It's a good report."
+     ],
+     0
+    ]
+   ],
+   "p": [
+    [
+     "L'imprimante est en panne.",
+     "The printer is out of order.",
+     "The printer is broken."
+    ],
+    [
+     "Il assiste à une réunion.",
+     "He is attending a meeting.",
+     "He's attending a meeting.",
+     "He's in a meeting.",
+     "He is in a meeting."
+    ],
+    [
+     "Veuillez remplir ce formulaire.",
+     "Please fill out this form.",
+     "Please fill in this form.",
+     "Please complete this form."
+    ],
+    [
+     "Elle postule pour un nouveau poste.",
+     "She is applying for a new position.",
+     "She's applying for a new position.",
+     "She's applying for a new job.",
+     "She is applying for a new job."
+    ]
+   ],
+   "v": [
+    [
+     "fournitures",
+     "supplies"
+    ],
+    [
+     "en panne",
+     "out of order"
+    ],
+    [
+     "postuler",
+     "apply"
+    ],
+    [
+     "assister à",
+     "attend"
+    ],
+    [
+     "remplir",
+     "fill out"
+    ],
+    [
+     "classeur",
+     "binder"
+    ]
+   ],
+   "ph": [
+    [
+     "📦📦🚚👷",
+     "Un ouvrier charge des cartons dans un camion.",
+     [
+      "A worker is loading boxes into a truck.",
+      "A truck is being repaired.",
+      "Some boxes are being opened.",
+      "A worker is driving away."
+     ],
+     0
+    ],
+    [
+     "🧑‍🍳🍳🔥",
+     "Un cuisinier prépare un plat sur le feu.",
+     [
+      "A chef is cooking a meal.",
+      "A chef is washing the dishes.",
+      "A waiter is serving a customer.",
+      "Some food is being delivered."
+     ],
+     0
+    ],
+    [
+     "🧑‍💼🗄️📁",
+     "Un homme range des dossiers dans une armoire.",
+     [
+      "A man is filing some documents.",
+      "A man is reading a newspaper.",
+      "A man is fixing a cabinet.",
+      "A man is carrying a ladder."
+     ],
+     0
+    ],
+    [
+     "✈️🧳🧍",
+     "Un voyageur attend avec sa valise à l'aéroport.",
+     [
+      "A traveler is waiting with his luggage.",
+      "A plane is taking off.",
+      "Some suitcases are being unloaded.",
+      "A traveler is checking in online."
+     ],
+     0
+    ],
+    [
+     "🧑‍🔧🖨️🔧",
+     "Un technicien répare une imprimante.",
+     [
+      "A technician is repairing a printer.",
+      "A man is printing some documents.",
+      "A printer is being delivered.",
+      "A technician is reading a manual."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Part 5 : familles de mots",
+   "lv": 1,
+   "d": "Nom, adjectif, adverbe : la bonne forme",
+   "tip": "Méthode : regarde le mot AVANT et APRÈS le blanc. Après un déterminant → nom ; devant un nom → adjectif ; près d'un verbe/adjectif → adverbe.",
+   "c": [
+    [
+     "The new software is ___ easy to use.",
+     [
+      "remarkably",
+      "remarkable",
+      "remark",
+      "remarked"
+     ],
+     0,
+     "Un adverbe modifie un adjectif (easy)."
+    ],
+    [
+     "We received many ___ about the delay.",
+     [
+      "complaints",
+      "complain",
+      "complained",
+      "complaining"
+     ],
+     0,
+     "Après many → nom pluriel."
+    ],
+    [
+     "Please read the instructions ___ before starting.",
+     [
+      "carefully",
+      "careful",
+      "care",
+      "caring"
+     ],
+     0,
+     "Adverbe qui modifie le verbe read."
+    ],
+    [
+     "Her ___ to the team has been outstanding.",
+     [
+      "contribution",
+      "contribute",
+      "contributing",
+      "contributive"
+     ],
+     0,
+     "Après le possessif her → nom."
+    ],
+    [
+     "The hotel offers ___ rates for group bookings.",
+     [
+      "competitive",
+      "compete",
+      "competition",
+      "competitively"
+     ],
+     0,
+     "Adjectif devant le nom rates."
+    ],
+    [
+     "The project was a great ___.",
+     [
+      "success",
+      "succeed",
+      "successful",
+      "successfully"
+     ],
+     0,
+     "Après l'adjectif great → nom."
+    ],
+    [
+     "Mr. Ortiz is ___ for approving all expenses.",
+     [
+      "responsible",
+      "responsibility",
+      "responsibly",
+      "response"
+     ],
+     0,
+     "be responsible for = être responsable de."
+    ],
+    [
+     "Applicants must submit their forms ___.",
+     [
+      "electronically",
+      "electronic",
+      "electronics",
+      "electrify"
+     ],
+     0,
+     "Adverbe de manière pour submit."
+    ]
+   ],
+   "l": [
+    [
+     "How was the client meeting?",
+     [
+      "It went really well.",
+      "At two o'clock.",
+      "With the sales team."
+     ],
+     0
+    ],
+    [
+     "Why is the office closed today?",
+     [
+      "It's a national holiday.",
+      "Close to the station.",
+      "Yes, it opens at nine."
+     ],
+     0
+    ],
+    [
+     "Can you help me with this spreadsheet?",
+     [
+      "Sure, what do you need?",
+      "It's on the second floor.",
+      "I spread it out."
+     ],
+     0
+    ],
+    [
+     "Haven't you sent the invoice yet?",
+     [
+      "I'll do it right away.",
+      "Her voice is very clear.",
+      "It's in the envelope."
+     ],
+     0
+    ]
+   ],
+   "p": [
+    [
+     "Ce produit est très demandé.",
+     "This product is in high demand.",
+     "This product is in great demand."
+    ],
+    [
+     "Les candidats qualifiés seront contactés.",
+     "Qualified candidates will be contacted.",
+     "Qualified applicants will be contacted."
+    ],
+    [
+     "Nos bureaux sont fermés le week-end.",
+     "Our offices are closed on weekends.",
+     "Our offices are closed at the weekend.",
+     "Our offices are closed on the weekend."
+    ],
+    [
+     "Le budget doit être approuvé par la direction.",
+     "The budget must be approved by management.",
+     "The budget has to be approved by management.",
+     "The budget must be approved by the management."
+    ]
+   ],
+   "v": [
+    [
+     "candidat",
+     "applicant"
+    ],
+    [
+     "remboursement",
+     "refund"
+    ],
+    [
+     "facture",
+     "invoice"
+    ],
+    [
+     "succursale",
+     "branch"
+    ],
+    [
+     "salarié",
+     "employee"
+    ],
+    [
+     "direction",
+     "management"
+    ]
+   ],
+   "orig": 1,
+   "ph": [
+    [
+     "👩‍💼💻☕",
+     "Une femme travaille sur un ordinateur portable, une tasse posée à côté.",
+     [
+      "A woman is typing on a laptop.",
+      "A woman is pouring some coffee.",
+      "A woman is closing a window.",
+      "A woman is answering the phone."
+     ],
+     0
+    ],
+    [
+     "👥📊🗣️",
+     "Des personnes écoutent une présentation devant un graphique.",
+     [
+      "People are attending a presentation.",
+      "People are leaving the room.",
+      "A chart is being printed.",
+      "Someone is cleaning the board."
+     ],
+     0
+    ],
+    [
+     "🚶‍♀️🚶🚦🏙️",
+     "Des piétons traversent une rue en ville.",
+     [
+      "Pedestrians are crossing the street.",
+      "Cars are parked along the road.",
+      "A bus is stopping at the corner.",
+      "People are waiting in line."
+     ],
+     0
+    ],
+    [
+     "🛒🧍‍♀️🍎",
+     "Une cliente choisit des fruits au supermarché.",
+     [
+      "A woman is selecting some fruit.",
+      "A woman is pushing a stroller.",
+      "Some fruit is being weighed.",
+      "A woman is paying at the register."
+     ],
+     0
+    ],
+    [
+     "🚲🚲🚲🌳",
+     "Des vélos sont garés en rang près d'un arbre.",
+     [
+      "Some bicycles have been parked in a row.",
+      "People are riding bicycles.",
+      "A tree is being cut down.",
+      "A bicycle is being repaired."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Part 5 : pronoms & comparatifs",
+   "lv": 1,
+   "d": "him/his/himself, more/most, whose/whom",
+   "tip": "Après une préposition → pronom complément (to him). Each/every + verbe au singulier.",
+   "c": [
+    [
+     "Mr. Hall asked that all reports be sent directly to ___.",
+     [
+      "him",
+      "his",
+      "he",
+      "himself"
+     ],
+     0,
+     "Après une préposition → pronom complément."
+    ],
+    [
+     "The manager reviewed the proposal ___ before approving it.",
+     [
+      "herself",
+      "her",
+      "hers",
+      "she"
+     ],
+     0,
+     "Pronom réfléchi d'insistance : elle-même."
+    ],
+    [
+     "This year's sales were ___ than last year's.",
+     [
+      "higher",
+      "highest",
+      "more high",
+      "high"
+     ],
+     0,
+     "Comparatif d'un adjectif court : -er + than."
+    ],
+    [
+     "It was the ___ successful campaign in the company's history.",
+     [
+      "most",
+      "more",
+      "much",
+      "best"
+     ],
+     0,
+     "Superlatif d'un adjectif long : the most."
+    ],
+    [
+     "Our new office is ___ larger than the old one.",
+     [
+      "much",
+      "very",
+      "more",
+      "most"
+     ],
+     0,
+     "much + comparatif = bien plus."
+    ],
+    [
+     "Each of the candidates ___ interviewed by two managers.",
+     [
+      "was",
+      "were",
+      "are",
+      "have been"
+     ],
+     0,
+     "Each of + pluriel → verbe au singulier."
+    ],
+    [
+     "The client ___ we met yesterday called again.",
+     [
+      "whom",
+      "whose",
+      "which",
+      "what"
+     ],
+     0,
+     "Relatif COD pour une personne : whom (ou who/that)."
+    ],
+    [
+     "The company ___ headquarters are in Seoul opened a branch in Paris.",
+     [
+      "whose",
+      "who",
+      "which",
+      "that's"
+     ],
+     0,
+     "whose = dont (possession)."
+    ]
+   ],
+   "l": [
+    [
+     "Which hotel did you book?",
+     [
+      "The one near the airport.",
+      "For three nights.",
+      "Yes, I booked it."
+     ],
+     0
+    ],
+    [
+     "Is this seat taken?",
+     [
+      "No, go ahead.",
+      "I'll take it to go.",
+      "Yes, by bus."
+     ],
+     0
+    ],
+    [
+     "How often do you visit the factory?",
+     [
+      "About twice a month.",
+      "For two hours.",
+      "It's a big factory."
+     ],
+     0
+    ]
+   ],
+   "p": [
+    [
+     "Les ventes de cette année sont plus élevées.",
+     "This year's sales are higher.",
+     "Sales are higher this year."
+    ],
+    [
+     "C'est le projet le plus important de l'année.",
+     "It's the most important project of the year.",
+     "It is the most important project of the year.",
+     "This is the most important project of the year."
+    ],
+    [
+     "Chacun des employés a reçu une prime.",
+     "Each of the employees received a bonus.",
+     "Each employee received a bonus.",
+     "Each of the employees has received a bonus."
+    ]
+   ],
+   "v": [
+    [
+     "prime",
+     "bonus"
+    ],
+    [
+     "siège social",
+     "headquarters"
+    ],
+    [
+     "usine",
+     "factory"
+    ],
+    [
+     "concurrent",
+     "competitor"
+    ],
+    [
+     "part de marché",
+     "market share"
+    ],
+    [
+     "croissance",
+     "growth"
+    ]
+   ],
+   "ph": [
+    [
+     "📦📦🚚👷",
+     "Un ouvrier charge des cartons dans un camion.",
+     [
+      "A worker is loading boxes into a truck.",
+      "A truck is being repaired.",
+      "Some boxes are being opened.",
+      "A worker is driving away."
+     ],
+     0
+    ],
+    [
+     "🧑‍🍳🍳🔥",
+     "Un cuisinier prépare un plat sur le feu.",
+     [
+      "A chef is cooking a meal.",
+      "A chef is washing the dishes.",
+      "A waiter is serving a customer.",
+      "Some food is being delivered."
+     ],
+     0
+    ],
+    [
+     "🧑‍💼🗄️📁",
+     "Un homme range des dossiers dans une armoire.",
+     [
+      "A man is filing some documents.",
+      "A man is reading a newspaper.",
+      "A man is fixing a cabinet.",
+      "A man is carrying a ladder."
+     ],
+     0
+    ],
+    [
+     "✈️🧳🧍",
+     "Un voyageur attend avec sa valise à l'aéroport.",
+     [
+      "A traveler is waiting with his luggage.",
+      "A plane is taking off.",
+      "Some suitcases are being unloaded.",
+      "A traveler is checking in online."
+     ],
+     0
+    ],
+    [
+     "🧑‍🔧🖨️🔧",
+     "Un technicien répare une imprimante.",
+     [
+      "A technician is repairing a printer.",
+      "A man is printing some documents.",
+      "A printer is being delivered.",
+      "A technician is reading a manual."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Part 2 : questions-réponses",
+   "lv": 1,
+   "d": "Questions en Wh-, oui/non, indirectes, suggestions, pièges de sons",
+   "tip": "En Part 2, méfie-toi des réponses qui répètent un mot de la question ou un son proche (copy / coffee) : ce sont souvent des pièges. Une réponse indirecte (« I'll check the schedule ») est souvent la bonne.",
+   "p": [
+    [
+     "Où se trouve la salle de réunion ?",
+     "Where is the meeting room?",
+     "Where's the meeting room?"
+    ],
+    [
+     "Qui est responsable du budget ?",
+     "Who is in charge of the budget?",
+     "Who is responsible for the budget?",
+     "Who's in charge of the budget?"
+    ],
+    [
+     "Pourquoi le vol a-t-il été retardé ?",
+     "Why was the flight delayed?"
+    ],
+    [
+     "Voulez-vous que je vous aide ?",
+     "Would you like me to help you?",
+     "Do you want me to help you?",
+     "Would you like some help?"
+    ]
+   ],
+   "v": [
+    [
+     "délai, date limite",
+     "deadline"
+    ],
+    [
+     "fournisseur",
+     "supplier"
+    ],
+    [
+     "devis",
+     "quote"
+    ],
+    [
+     "emploi du temps",
+     "schedule"
+    ],
+    [
+     "salle de pause",
+     "break room"
+    ],
+    [
+     "remplacer",
+     "replace"
+    ]
+   ],
+   "l": [
+    [
+     "Who's going to lead the training session?",
+     [
+      "Ms. Chen volunteered.",
+      "It starts at ten.",
+      "Yes, I trained hard."
+     ],
+     0
+    ],
+    [
+     "Where can I find the printer paper?",
+     [
+      "In the supply closet.",
+      "The newspaper is on the desk.",
+      "It was printed yesterday."
+     ],
+     0
+    ],
+    [
+     "Why hasn't the shipment arrived yet?",
+     [
+      "There was a delay at customs.",
+      "Yes, it's shipping now.",
+      "The ship is very large."
+     ],
+     0
+    ],
+    [
+     "Would you like to join us for lunch?",
+     [
+      "I'd love to, thanks.",
+      "It was a light lunch.",
+      "He joined last year."
+     ],
+     0
+    ],
+    [
+     "When is the report due?",
+     [
+      "By Friday afternoon.",
+      "Mr. Lee wrote it.",
+      "In the meeting room."
+     ],
+     0
+    ],
+    [
+     "Should we take a taxi or the subway?",
+     [
+      "The subway is faster at this hour.",
+      "Yes, we should.",
+      "I took it last week."
+     ],
+     0
+    ],
+    [
+     "Haven't you met the new manager?",
+     [
+      "Not yet, but I will tomorrow.",
+      "She managed the team well.",
+      "The meeting is new."
+     ],
+     0
+    ],
+    [
+     "How often do you update the website?",
+     [
+      "Every two weeks.",
+      "For about an hour.",
+      "At the main office."
+     ],
+     0
+    ],
+    [
+     "The copier is out of toner again.",
+     [
+      "I'll order some more.",
+      "Make two copies, please.",
+      "Yes, the coffee is ready."
+     ],
+     0
+    ],
+    [
+     "Can you send me the sales figures?",
+     [
+      "Sure, I'll e-mail them now.",
+      "The sale ends tomorrow.",
+      "Five figures, I think."
+     ],
+     0
+    ],
+    [
+     "Whose turn is it to clean the break room?",
+     [
+      "I think it's Daniel's.",
+      "It breaks easily.",
+      "Turn left at the corner."
+     ],
+     0
+    ],
+    [
+     "Isn't the conference in Boston this year?",
+     [
+      "No, it's been moved to Chicago.",
+      "Yes, I conferred with him.",
+      "It lasts three days."
+     ],
+     0
+    ]
+   ],
+   "c": [
+    [
+     "___ did you hear about the job opening? — From a colleague.",
+     [
+      "How",
+      "Who",
+      "When",
+      "Which"
+     ],
+     0,
+     "La réponse indique une source, un moyen : How ?"
+    ],
+    [
+     "___ is the presentation? — About thirty minutes.",
+     [
+      "How long",
+      "How far",
+      "How often",
+      "How much"
+     ],
+     0,
+     "Une durée répond à « How long »."
+    ],
+    [
+     "___ is the train station? — About two kilometers from here.",
+     [
+      "How far",
+      "How long",
+      "How soon",
+      "How many"
+     ],
+     0,
+     "Une distance répond à « How far »."
+    ],
+    [
+     "You've finished the budget, ___ you?",
+     [
+      "haven't",
+      "didn't",
+      "don't",
+      "aren't"
+     ],
+     0,
+     "Question tag : on reprend l'auxiliaire (have) à la forme inverse."
+    ],
+    [
+     "Let's start the meeting, ___ we?",
+     [
+      "shall",
+      "will",
+      "don't",
+      "do"
+     ],
+     0,
+     "Après « Let's », le question tag est « shall we ? »."
+    ],
+    [
+     "Do you know ___?",
+     [
+      "when the store opens",
+      "when does the store open",
+      "when opens the store",
+      "the store opens when"
+     ],
+     0,
+     "Question indirecte : ordre sujet + verbe, sans auxiliaire do."
+    ],
+    [
+     "___ about postponing the meeting? — Good idea.",
+     [
+      "How",
+      "What if",
+      "Why not",
+      "Shall"
+     ],
+     0,
+     "« How about + -ing ? » = suggestion."
+    ],
+    [
+     "___ you mind closing the window?",
+     [
+      "Would",
+      "Are",
+      "Could",
+      "Should"
+     ],
+     0,
+     "« Would you mind + -ing ? » = formule polie de demande."
+    ]
+   ]
+  },
+  {
+   "t": "Part 1 : les pièges de la photo",
+   "lv": 1,
+   "d": "being + participe, have been + participe, positions, objets",
+   "tip": "« The chairs are being stacked » = quelqu'un est en train de les empiler : une personne doit être visible. « The chairs have been stacked » = c'est déjà fait. Sur une photo sans personne, « being + participe » est presque toujours un piège.",
+   "ph": [
+    [
+     "🪑🪑🪑📚",
+     "Des chaises sont empilées dans une salle vide.",
+     [
+      "Some chairs have been stacked.",
+      "Some chairs are being stacked.",
+      "People are sitting in a row.",
+      "A man is moving furniture."
+     ],
+     0
+    ],
+    [
+     "👩‍🌾🌷💧",
+     "Une femme arrose des plantes.",
+     [
+      "A woman is watering some plants.",
+      "Some flowers are being cut.",
+      "A woman is picking fruit.",
+      "A garden is being designed."
+     ],
+     0
+    ],
+    [
+     "🚗🚙🅿️",
+     "Des voitures sont garées sur un parking.",
+     [
+      "Cars are parked in a lot.",
+      "Cars are being washed.",
+      "A driver is opening a door.",
+      "Traffic is moving quickly."
+     ],
+     0
+    ],
+    [
+     "👨‍🏫📋👥",
+     "Un homme fait une démonstration devant un groupe.",
+     [
+      "A man is giving a demonstration.",
+      "A group is leaving the building.",
+      "A man is being interviewed.",
+      "Some papers are being collected."
+     ],
+     0
+    ],
+    [
+     "🍽️🍷🕯️",
+     "Une table est dressée pour un repas, personne n'est présent.",
+     [
+      "A table has been set for a meal.",
+      "Someone is setting the table.",
+      "Dishes are being washed.",
+      "Guests are eating dinner."
+     ],
+     0
+    ],
+    [
+     "👩‍💼📞🖥️",
+     "Une femme parle au téléphone devant son écran.",
+     [
+      "A woman is talking on the phone.",
+      "A woman is turning off the monitor.",
+      "A phone is being repaired.",
+      "A woman is hanging up a picture."
+     ],
+     0
+    ],
+    [
+     "🚧👷🧱",
+     "Des ouvriers construisent un mur.",
+     [
+      "Workers are building a wall.",
+      "A wall has been painted.",
+      "Workers are taking a break.",
+      "Bricks are being delivered by truck."
+     ],
+     0
+    ],
+    [
+     "📚📚🧑‍🦰",
+     "Une personne range des livres sur une étagère.",
+     [
+      "A person is arranging books on a shelf.",
+      "Books have been left on the floor.",
+      "A person is reading in a chair.",
+      "A shelf is being assembled."
+     ],
+     0
+    ]
+   ],
+   "p": [
+    [
+     "Les chaises ont été empilées.",
+     "The chairs have been stacked.",
+     "The chairs were stacked."
+    ],
+    [
+     "Quelqu'un est en train de nettoyer la vitre.",
+     "Someone is cleaning the window.",
+     "Somebody is cleaning the window."
+    ],
+    [
+     "La table a été dressée pour le dîner.",
+     "The table has been set for dinner."
+    ],
+    [
+     "Des documents sont étalés sur le bureau.",
+     "Some documents are spread out on the desk.",
+     "Documents are spread out on the desk."
+    ]
+   ],
+   "v": [
+    [
+     "empiler",
+     "stack"
+    ],
+    [
+     "étagère",
+     "shelf"
+    ],
+    [
+     "s'appuyer contre",
+     "lean against"
+    ],
+    [
+     "échafaudage",
+     "scaffolding"
+    ],
+    [
+     "trottoir",
+     "sidewalk"
+    ],
+    [
+     "quai (de gare)",
+     "platform"
+    ]
+   ],
+   "c": [
+    [
+     "(Photo d'une salle vide) The chairs ___ in rows.",
+     [
+      "have been arranged",
+      "are being arranged",
+      "are arranging",
+      "arranged themselves"
+     ],
+     0,
+     "Sans personne sur la photo, l'action est terminée : passif au present perfect."
+    ],
+    [
+     "(Un homme peint un mur) The wall ___.",
+     [
+      "is being painted",
+      "has been painted",
+      "is painting",
+      "paints"
+     ],
+     0,
+     "L'action est en cours : passif progressif (is being + participe)."
+    ],
+    [
+     "A ladder is leaning ___ the wall.",
+     [
+      "against",
+      "on",
+      "at",
+      "to"
+     ],
+     0,
+     "lean against = s'appuyer contre."
+    ],
+    [
+     "Some boxes have been ___ on the floor.",
+     [
+      "left",
+      "leave",
+      "leaving",
+      "leaved"
+     ],
+     0,
+     "Passif : have been + participe passé (leave → left)."
+    ],
+    [
+     "A woman is ___ a document.",
+     [
+      "reviewing",
+      "reviewed",
+      "review",
+      "reviews"
+     ],
+     0,
+     "Présent progressif : is + -ing."
+    ],
+    [
+     "Boats are ___ at the dock.",
+     [
+      "tied up",
+      "tying up",
+      "being tie up",
+      "tie"
+     ],
+     0,
+     "« are tied up » : état (les bateaux sont amarrés)."
+    ]
+   ],
+   "l": [
+    [
+     "Are these seats taken?",
+     [
+      "No, you can sit anywhere.",
+      "Yes, they were stacked.",
+      "I'll take two, please."
+     ],
+     0
+    ],
+    [
+     "Who moved the boxes into the hallway?",
+     [
+      "The cleaning staff did.",
+      "Into the hallway.",
+      "Yes, they're moving."
+     ],
+     0
+    ],
+    [
+     "Is the elevator working again?",
+     [
+      "Yes, it was fixed this morning.",
+      "On the fifth floor.",
+      "I walked to work."
+     ],
+     0
+    ],
+    [
+     "When will the windows be cleaned?",
+     [
+      "The crew comes on Thursday.",
+      "It's a clean window.",
+      "Please close it."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Vocabulaire métiers TOEIC",
+   "lv": 1,
+   "d": "Ressources humaines, finance, marketing, logistique",
+   "tip": "Le TOEIC reprend toujours les mêmes univers : ressources humaines (hire, promote, résumé), finance (invoice, budget, expense), marketing (launch, survey, campaign), logistique (shipment, warehouse, inventory), voyages (itinerary, boarding pass).",
+   "p": [
+    [
+     "Nous allons lancer une campagne publicitaire.",
+     "We are going to launch an advertising campaign.",
+     "We're going to launch an advertising campaign.",
+     "We will launch an advertising campaign.",
+     "We're going to launch an ad campaign."
+    ],
+    [
+     "La facture est jointe à cet e-mail.",
+     "The invoice is attached to this e-mail.",
+     "The invoice is attached to this email.",
+     "Please find the invoice attached."
+    ],
+    [
+     "L'entrepôt est plein.",
+     "The warehouse is full."
+    ],
+    [
+     "Elle a été promue directrice des ventes.",
+     "She was promoted to sales director.",
+     "She has been promoted to sales director.",
+     "She's been promoted to sales director."
+    ]
+   ],
+   "v": [
+    [
+     "facture",
+     "invoice"
+    ],
+    [
+     "note de frais",
+     "expense report"
+    ],
+    [
+     "entrepôt",
+     "warehouse"
+    ],
+    [
+     "stock, inventaire",
+     "inventory"
+    ],
+    [
+     "embaucher",
+     "hire"
+    ],
+    [
+     "enquête, sondage",
+     "survey"
+    ]
+   ],
+   "c": [
+    [
+     "Please submit your expense ___ by Friday.",
+     [
+      "report",
+      "account",
+      "note",
+      "bill"
+     ],
+     0,
+     "expense report = note de frais."
+    ],
+    [
+     "The company will ___ its new product in May.",
+     [
+      "launch",
+      "throw",
+      "shoot",
+      "start up"
+     ],
+     0,
+     "launch a product = lancer un produit."
+    ],
+    [
+     "We need to check the ___ before ordering more supplies.",
+     [
+      "inventory",
+      "invention",
+      "invoice",
+      "income"
+     ],
+     0,
+     "inventory = l'état des stocks."
+    ],
+    [
+     "She was ___ to regional manager last year.",
+     [
+      "promoted",
+      "promotion",
+      "promoting",
+      "promote"
+     ],
+     0,
+     "be promoted to = être promu."
+    ],
+    [
+     "All ___ must be approved by the finance department.",
+     [
+      "expenditures",
+      "expensive",
+      "expends",
+      "expanding"
+     ],
+     0,
+     "expenditure = dépense (nom)."
+    ],
+    [
+     "The customer ___ showed that 80% of clients are satisfied.",
+     [
+      "survey",
+      "surveyor",
+      "surface",
+      "surgery"
+     ],
+     0,
+     "survey = enquête."
+    ],
+    [
+     "The ___ will arrive at the warehouse on Monday.",
+     [
+      "shipment",
+      "shipping",
+      "ship",
+      "shipper"
+     ],
+     0,
+     "shipment = l'envoi, la cargaison (nom)."
+    ],
+    [
+     "Please keep the ___ for your records.",
+     [
+      "receipt",
+      "recipe",
+      "receive",
+      "reception"
+     ],
+     0,
+     "receipt = reçu."
+    ]
+   ],
+   "l": [
+    [
+     "Who's handling the new marketing campaign?",
+     [
+      "Ms. Grant's team is.",
+      "Handle it with care.",
+      "The camp is open."
+     ],
+     0
+    ],
+    [
+     "Where should I send the invoice?",
+     [
+      "To the accounting department.",
+      "By the end of the month.",
+      "It's three hundred dollars."
+     ],
+     0
+    ],
+    [
+     "Has the shipment been delivered?",
+     [
+      "It arrived this morning.",
+      "Ship it by air.",
+      "The delivery man is tall."
+     ],
+     0
+    ],
+    [
+     "Why was Mr. Silva promoted?",
+     [
+      "His sales results were excellent.",
+      "At the next meeting.",
+      "In the promotions catalog."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Part 5 : prépositions après verbes, noms & adjectifs",
+   "lv": 1,
+   "d": "responsible for, increase in, comply with, in charge of, depend on, apply for, refer to, consist of",
+   "tip": "Au TOEIC, beaucoup de questions de Part 5 ne testent qu'une préposition « collée » au mot qui précède. Apprends-les par paires : responsible for, increase in, comply with, depend on, familiar with, demand for, consist of. Attention : increase IN (ce qui augmente), increase OF (la quantité : an increase of 10%).",
+   "p": [
+    [
+     "Elle est responsable du recrutement.",
+     "She is responsible for recruitment.",
+     "She's responsible for recruitment.",
+     "She is responsible for hiring.",
+     "She's responsible for hiring."
+    ],
+    [
+     "Les ventes en ligne ont fortement augmenté.",
+     "There has been a sharp increase in online sales.",
+     "Online sales have increased sharply.",
+     "Online sales have risen sharply."
+    ],
+    [
+     "Merci de vous reporter au document ci-joint.",
+     "Please refer to the attached document."
+    ],
+    [
+     "Le comité se compose de cinq membres.",
+     "The committee consists of five members.",
+     "The committee is made up of five members.",
+     "The committee is composed of five members."
+    ]
+   ],
+   "v": [
+    [
+     "se conformer à",
+     "comply with"
+    ],
+    [
+     "être responsable de",
+     "be responsible for"
+    ],
+    [
+     "dépendre de",
+     "depend on"
+    ],
+    [
+     "postuler à (un poste)",
+     "apply for"
+    ],
+    [
+     "se reporter à",
+     "refer to"
+    ],
+    [
+     "se composer de",
+     "consist of"
+    ]
+   ],
+   "c": [
+    [
+     "Ms. Patel is responsible ___ training new staff.",
+     [
+      "for",
+      "of",
+      "to",
+      "about"
+     ],
+     0,
+     "be responsible for + nom ou -ing."
+    ],
+    [
+     "There has been a sharp increase ___ online orders.",
+     [
+      "in",
+      "of",
+      "on",
+      "at"
+     ],
+     0,
+     "an increase in + ce qui augmente (an increase of + chiffre)."
+    ],
+    [
+     "All visitors must comply ___ the safety regulations.",
+     [
+      "with",
+      "to",
+      "at",
+      "for"
+     ],
+     0,
+     "comply with = se conformer à."
+    ],
+    [
+     "Mr. Cho is in charge ___ the marketing campaign.",
+     [
+      "of",
+      "for",
+      "with",
+      "on"
+     ],
+     0,
+     "in charge of = responsable de."
+    ],
+    [
+     "The success of the launch depends ___ the weather.",
+     [
+      "on",
+      "of",
+      "from",
+      "at"
+     ],
+     0,
+     "depend on (jamais « depend of »)."
+    ],
+    [
+     "She applied ___ the position of sales manager.",
+     [
+      "for",
+      "to",
+      "on",
+      "at"
+     ],
+     0,
+     "apply for a job / a position ; apply to a company."
+    ],
+    [
+     "The main reason ___ the delay was a shortage of parts.",
+     [
+      "for",
+      "of",
+      "to",
+      "about"
+     ],
+     0,
+     "the reason for something."
+    ],
+    [
+     "Are you familiar ___ the new software?",
+     [
+      "with",
+      "to",
+      "about",
+      "of"
+     ],
+     0,
+     "be familiar with = connaître, maîtriser."
+    ],
+    [
+     "The demand ___ electric cars keeps growing.",
+     [
+      "for",
+      "of",
+      "on",
+      "in"
+     ],
+     0,
+     "demand for = la demande de (produits)."
+    ],
+    [
+     "Please refer ___ the attached document.",
+     [
+      "to",
+      "at",
+      "on",
+      "for"
+     ],
+     0,
+     "refer to = se reporter à."
+    ],
+    [
+     "The price includes a discount ___ 15%.",
+     [
+      "of",
+      "in",
+      "for",
+      "on"
+     ],
+     0,
+     "a discount of + pourcentage (a discount on + produit)."
+    ],
+    [
+     "The committee consists ___ five members.",
+     [
+      "of",
+      "in",
+      "from",
+      "with"
+     ],
+     0,
+     "consist of = se composer de."
+    ]
+   ],
+   "l": [
+    [
+     "Who's responsible for ordering supplies?",
+     [
+      "Ms. Diaz in the main office.",
+      "Yes, we ordered them yesterday.",
+      "On the top shelf."
+     ],
+     0
+    ],
+    [
+     "Did you apply for the manager position?",
+     [
+      "I sent my application last week.",
+      "It's on the second floor.",
+      "He manages the team well."
+     ],
+     0
+    ],
+    [
+     "What caused the increase in costs?",
+     [
+      "Mostly the new shipping fees.",
+      "It increased by ten percent.",
+      "Around five o'clock."
+     ],
+     0
+    ],
+    [
+     "Are you familiar with this software?",
+     [
+      "I used it at my last job.",
+      "It's a soft chair.",
+      "No, the family is away."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Part 1 : vraies photos",
+   "lv": 1,
+   "d": "Décrire une photo réelle : actions (is + -ing), états (have been + participe), objets et positions",
+   "tip": "Sur une photo, élimine d'abord les phrases qui décrivent une action invisible (taking a photograph alors qu'il tient seulement un appareil) ou des personnes absentes (People are reading… dans une salle vide). Personne sur la photo ? La bonne réponse décrit souvent un état : have been arranged, are lined up, are displayed.",
+   "p": [
+    [
+     "Des chaises ont été disposées autour d'une longue table.",
+     "Chairs have been arranged around a long table.",
+     "Some chairs have been arranged around a long table."
+    ],
+    [
+     "Un homme regarde le panneau des départs.",
+     "A man is looking at a departure board.",
+     "A man is looking at the departure board."
+    ],
+    [
+     "Des vélos sont alignés.",
+     "Bicycles are lined up in a row.",
+     "Bicycles are lined up.",
+     "Some bicycles are lined up."
+    ],
+    [
+     "Des légumes sont présentés dans des paniers.",
+     "Produce is displayed in baskets.",
+     "Vegetables are displayed in baskets.",
+     "Some vegetables are displayed in baskets."
+    ]
+   ],
+   "v": [
+    [
+     "chariot élévateur",
+     "forklift"
+    ],
+    [
+     "abribus",
+     "bus shelter"
+    ],
+    [
+     "charpente",
+     "frame"
+    ],
+    [
+     "produits frais",
+     "produce"
+    ],
+    [
+     "se pencher sur",
+     "lean over"
+    ],
+    [
+     "être aligné",
+     "be lined up"
+    ]
+   ],
+   "c": [
+    [
+     "Some boxes ___ into the van.",
+     [
+      "have been loaded",
+      "are loading",
+      "have loaded",
+      "loads"
+     ],
+     0,
+     "Personne n'agit : état résultant au passif (have been loaded)."
+    ],
+    [
+     "A man ___ over a car engine.",
+     [
+      "is leaning",
+      "is leaned",
+      "has leaned",
+      "leans to"
+     ],
+     0,
+     "Action en cours visible : is + -ing."
+    ],
+    [
+     "Chairs ___ around a long table.",
+     [
+      "have been arranged",
+      "are arranging",
+      "arrange",
+      "have arranged"
+     ],
+     0,
+     "Les chaises ne s'organisent pas elles-mêmes : passif."
+    ],
+    [
+     "A sign is hanging ___ the platform.",
+     [
+      "above",
+      "among",
+      "between",
+      "along to"
+     ],
+     0,
+     "above = au-dessus de."
+    ]
+   ],
+   "l": [
+    [
+     "Where should I put these boxes?",
+     [
+      "In the back of the van.",
+      "Yes, they're heavy.",
+      "A box of pens."
+     ],
+     0
+    ],
+    [
+     "Has the conference room been set up?",
+     [
+      "The chairs are already arranged.",
+      "It's a big conference.",
+      "I set my alarm."
+     ],
+     0
+    ],
+    [
+     "Who's that man by the departure board?",
+     [
+      "He's on my flight to Rome.",
+      "It departs at noon.",
+      "The board meets on Monday."
+     ],
+     0
+    ]
+   ],
+   "ph": [
+    [
+     "☕👨‍🍳",
+     "Un barista verse du lait dans une tasse de café, au comptoir.",
+     [
+      "A man is pouring milk into a cup.",
+      "A man is washing some cups.",
+      "A man is taking off his apron.",
+      "A man is drinking a cup of coffee."
+     ],
+     0,
+     "1532713107108-dfb5d8d2fc42"
+    ],
+    [
+     "🚐📦",
+     "L'arrière d'une camionnette ouverte, remplie de cartons ; un diable chargé de colis devant.",
+     [
+      "Some boxes have been loaded into a vehicle.",
+      "The doors of the van are closed.",
+      "A van is being repaired in a garage.",
+      "Some boxes are being stacked on a shelf."
+     ],
+     0,
+     "1620455800201-7f00aeef12ed"
+    ],
+    [
+     "🏭🚜",
+     "Un chariot élévateur circule dans une allée d'entrepôt aux étagères remplies.",
+     [
+      "Shelves have been stocked with merchandise.",
+      "Some workers are climbing a ladder.",
+      "The shelves in the warehouse are empty.",
+      "A truck is parked at the loading dock."
+     ],
+     0,
+     "1645736315000-6f788915923b"
+    ],
+    [
+     "🧳🕐",
+     "Un voyageur avec un sac à dos regarde les panneaux des départs.",
+     [
+      "A man is looking at a departure board.",
+      "A man is taking a photograph.",
+      "A man is boarding a plane.",
+      "A man is buying a ticket from a machine."
+     ],
+     0,
+     "1517400508447-f8dd518b86db"
+    ],
+    [
+     "✈️🧍🧍",
+     "Un grand hall d'aéroport : des voyageurs font la queue avec leurs bagages.",
+     [
+      "Travelers are waiting in line with their luggage.",
+      "The terminal is completely empty.",
+      "Passengers are boarding a train.",
+      "A pilot is greeting passengers at the gate."
+     ],
+     0,
+     "1730288278805-42d46b17438d"
+    ],
+    [
+     "🪑🪑🪟",
+     "Une salle de réunion vide : une longue table entourée de fauteuils, de grandes baies vitrées.",
+     [
+      "Chairs have been arranged around a long table.",
+      "People are attending a meeting.",
+      "Some blinds are being lowered.",
+      "A table is being set for dinner."
+     ],
+     0,
+     "1431540015161-0bf868a2d407"
+    ],
+    [
+     "🖊️📋",
+     "Deux personnes écrivent sur un tableau blanc avec des feutres.",
+     [
+      "Some people are writing on a whiteboard.",
+      "Some people are erasing a board.",
+      "Some people are typing on keyboards.",
+      "A whiteboard is being carried into a room."
+     ],
+     0,
+     "1532622785990-d2c36a76f5a6"
+    ],
+    [
+     "🔧🚗",
+     "Un mécanicien se penche sur le moteur d'une voiture, capot ouvert.",
+     [
+      "A man is leaning over a car engine.",
+      "A man is washing a car.",
+      "A man is driving out of a garage.",
+      "A car is being towed away."
+     ],
+     0,
+     "1625047509248-ec889cbff17f"
+    ],
+    [
+     "🪴💧",
+     "Une femme arrose des plantes près d'une fenêtre.",
+     [
+      "A woman is watering some plants.",
+      "A woman is opening a window.",
+      "A woman is planting a tree outside.",
+      "A woman is buying some flowers."
+     ],
+     0,
+     "1673853233647-17ebc2d71b5f"
+    ],
+    [
+     "🛍️👩‍💼",
+     "Une cliente debout au comptoir d'une boutique, une employée derrière avec un ordinateur.",
+     [
+      "A woman is standing at a counter.",
+      "Both women are seated at a table.",
+      "A woman is stocking some shelves.",
+      "A clerk is wrapping a gift."
+     ],
+     0,
+     "1556741533-6e6a62bd8b49"
+    ],
+    [
+     "🚏🧍",
+     "Un homme est assis seul sous un abribus.",
+     [
+      "A man is sitting in a bus shelter.",
+      "A bus is pulling up to the stop.",
+      "Passengers are getting off a bus.",
+      "A man is putting up a poster."
+     ],
+     0,
+     "1759687391122-4e41d779a808"
+    ],
+    [
+     "🚲🚲🚲",
+     "Des vélos en libre-service alignés les uns à côté des autres.",
+     [
+      "Bicycles are lined up in a row.",
+      "Someone is riding a bicycle.",
+      "A bicycle is being repaired.",
+      "Bicycles are hanging from the ceiling."
+     ],
+     0,
+     "1639638794534-c964bf817a0f"
+    ],
+    [
+     "🧪🧤",
+     "Une personne en gants bleus utilise une pipette au-dessus de tubes à essai.",
+     [
+      "She is using a pipette.",
+      "She is removing her gloves.",
+      "She is washing some test tubes.",
+      "She is looking through a microscope."
+     ],
+     0,
+     "1614935151651-0bea6508db6b"
+    ],
+    [
+     "👷🏗️",
+     "Un ouvrier se tient debout sur une charpente en bois, sous un ciel bleu.",
+     [
+      "A worker is standing on a wooden frame.",
+      "A worker is painting a wall.",
+      "A crane is lifting a steel beam.",
+      "Some workers are taking a break."
+     ],
+     0,
+     "1587582423116-ec07293f0395"
+    ],
+    [
+     "🥬🧺",
+     "Un marché couvert : des légumes présentés dans des paniers, des clients autour.",
+     [
+      "Produce is displayed in baskets.",
+      "The market is closed for the day.",
+      "Customers are pushing shopping carts.",
+      "A vendor is weighing some fish."
+     ],
+     0,
+     "1757609907613-57c5ad21f12a"
+    ],
+    [
+     "📚📚",
+     "Des rayonnages de bibliothèque remplis de livres, sans personne.",
+     [
+      "Shelves are filled with books.",
+      "People are reading at a table.",
+      "Books are being packed into boxes.",
+      "A librarian is stacking some books."
+     ],
+     0,
+     "1709924168698-620ea32c3488"
+    ],
+    [
+     "🤝👔",
+     "Deux hommes en costume se serrent la main dans un bureau.",
+     [
+      "Two men are shaking hands.",
+      "Two men are sitting at a desk.",
+      "A man is handing over a document.",
+      "They are opening a window."
+     ],
+     0,
+     "1759310610325-2c7cb621e5e3"
+    ],
+    [
+     "🔪🥒",
+     "Des mains coupent des légumes verts sur une planche à découper.",
+     [
+      "Someone is chopping vegetables.",
+      "Someone is washing the dishes.",
+      "Food is being served on plates.",
+      "Someone is peeling potatoes."
+     ],
+     0,
+     "1551218808-94e220e084d2"
+    ],
+    [
+     "💻💻👥",
+     "Des personnes travaillent sur leurs ordinateurs portables autour d'une table.",
+     [
+      "People are working on laptops.",
+      "People are eating lunch together.",
+      "A man is giving a presentation.",
+      "Laptops are being packed away."
+     ],
+     0,
+     "1522071820081-009f0129c71c"
+    ],
+    [
+     "🚉🪧",
+     "Un quai de gare vide, un panneau suspendu indique la voie 2.",
+     [
+      "A sign is hanging above the platform.",
+      "A train is arriving at the station.",
+      "Passengers are waiting on the platform.",
+      "A sign is being installed."
+     ],
+     0,
+     "1768677675301-627aae4d9427"
+    ]
+   ]
+  },
+  {
+   "t": "Prépositions & connecteurs",
+   "lv": 2,
+   "d": "Part 5-6 : despite, due to, provided that…",
+   "tip": "despite / due to / because of + NOM. although / because / provided that + PROPOSITION (sujet + verbe).",
+   "c": [
+    [
+     "The seminar was canceled ___ low registration.",
+     [
+      "due to",
+      "although",
+      "despite of",
+      "because"
+     ],
+     0,
+     "due to + nom. because + proposition. « despite of » n'existe pas."
+    ],
+    [
+     "___ the heavy rain, the event was a success.",
+     [
+      "Despite",
+      "Although",
+      "Because of",
+      "Unless"
+     ],
+     0,
+     "Despite + nom = malgré. Although demande une proposition."
+    ],
+    [
+     "Please submit your expense reports ___ the 15th of each month.",
+     [
+      "by",
+      "until",
+      "within",
+      "since"
+     ],
+     0,
+     "by = au plus tard (échéance)."
+    ],
+    [
+     "The office will remain open ___ the renovation.",
+     [
+      "throughout",
+      "while",
+      "among",
+      "beside"
+     ],
+     0,
+     "throughout = pendant toute la durée de."
+    ],
+    [
+     "We will offer a discount ___ the order exceeds 100 units.",
+     [
+      "provided that",
+      "in spite of",
+      "regardless",
+      "so as"
+     ],
+     0,
+     "provided that = à condition que (+ proposition)."
+    ],
+    [
+     "The package was left ___ the front desk.",
+     [
+      "at",
+      "on",
+      "into",
+      "over"
+     ],
+     0,
+     "at the front desk = à l'accueil (point précis)."
+    ],
+    [
+     "Sales were strong; ___, profits declined.",
+     [
+      "however",
+      "therefore",
+      "moreover",
+      "otherwise"
+     ],
+     0,
+     "Contraste → however."
+    ],
+    [
+     "Neither the director ___ her assistant was available.",
+     [
+      "nor",
+      "or",
+      "and",
+      "but"
+     ],
+     0,
+     "neither … nor = ni … ni."
+    ]
+   ],
+   "l": [
+    [
+     "Should we take a taxi or the subway?",
+     [
+      "The subway is faster at this hour.",
+      "Yes, we should.",
+      "I took it yesterday."
+     ],
+     0
+    ],
+    [
+     "Isn't the deadline next Monday?",
+     [
+      "No, it was moved to Wednesday.",
+      "The line is very long.",
+      "I'll be there at noon."
+     ],
+     0
+    ],
+    [
+     "Who approved this budget?",
+     [
+      "The finance director did.",
+      "About ten thousand dollars.",
+      "It was proven wrong."
+     ],
+     0
+    ],
+    [
+     "I can't find the projector remote.",
+     [
+      "Have you checked the top drawer?",
+      "It's a remote location.",
+      "The project is finished."
+     ],
+     0
+    ]
+   ],
+   "p": [
+    [
+     "Malgré la grève, les employés sont venus travailler.",
+     "Despite the strike, the employees came to work.",
+     "Despite the strike, employees came to work."
+    ],
+    [
+     "Les inscriptions sont ouvertes jusqu'à la fin du mois.",
+     "Registration is open until the end of the month.",
+     "Registrations are open until the end of the month."
+    ],
+    [
+     "Le séminaire a été annulé faute de participants.",
+     "The seminar was canceled due to a lack of participants.",
+     "The seminar was cancelled due to a lack of participants.",
+     "The seminar was canceled because of a lack of participants.",
+     "The seminar was cancelled because of a lack of participants."
+    ]
+   ],
+   "v": [
+    [
+     "malgré",
+     "despite"
+    ],
+    [
+     "cependant",
+     "however"
+    ],
+    [
+     "donc",
+     "therefore"
+    ],
+    [
+     "à condition que",
+     "provided that"
+    ],
+    [
+     "de plus",
+     "moreover"
+    ],
+    [
+     "sinon",
+     "otherwise"
+    ]
+   ],
+   "orig": 1
+  },
+  {
+   "t": "Part 3 & 4 : conversations et annonces",
+   "lv": 2,
+   "d": "Écouter un dialogue ou une annonce, répondre aux questions",
+   "tip": "Lis les questions AVANT l'écoute : tu sauras quoi chercher (qui, où, pourquoi, que va-t-il faire ensuite ?). Les mots entendus tels quels dans une réponse sont souvent un piège.",
+   "cv": [
+    {
+     "d": [
+      [
+       "M",
+       "Hi, I'm calling about the apartment you advertised. Is it still available?"
+      ],
+      [
+       "W",
+       "Yes, it is. Would you like to come and see it this week?"
+      ],
+      [
+       "M",
+       "That would be great. Is Thursday afternoon possible?"
+      ],
+      [
+       "W",
+       "Thursday works. Let's say four o'clock, and please bring a copy of your ID."
+      ]
+     ],
+     "q": [
+      [
+       "Why is the man calling?",
+       [
+        "To ask about an apartment",
+        "To cancel a visit",
+        "To complain about noise",
+        "To pay his rent"
+       ],
+       0,
+       "Il appelle « about the apartment you advertised »."
+      ],
+      [
+       "What does the woman ask the man to bring?",
+       [
+        "An identification document",
+        "A deposit",
+        "His bank details",
+        "A reference letter"
+       ],
+       0,
+       "« a copy of your ID » = une pièce d'identité. La bonne réponse reformule souvent le texte."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "W",
+       "Did you finish the sales report for the board meeting?"
+      ],
+      [
+       "M",
+       "Almost. I'm still waiting for the figures from the Lyon branch."
+      ],
+      [
+       "W",
+       "The meeting was moved up to tomorrow morning, so we need them today."
+      ],
+      [
+       "M",
+       "Then I'll call the branch manager right away."
+      ]
+     ],
+     "q": [
+      [
+       "What problem does the man mention?",
+       [
+        "Some figures are missing",
+        "The printer is broken",
+        "The meeting room is booked",
+        "He lost the report"
+       ],
+       0,
+       "« still waiting for the figures » = des chiffres manquent."
+      ],
+      [
+       "What will the man probably do next?",
+       [
+        "Call a branch manager",
+        "Cancel the meeting",
+        "Print the report",
+        "Go to Lyon"
+       ],
+       0,
+       "Question « next » : la réponse est dans la dernière réplique."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "N",
+       "Attention passengers. Flight 208 to Seoul has been delayed due to bad weather. The new departure time is 6:45 p.m. Passengers may collect a meal voucher at the service desk near gate 12. We apologize for the inconvenience."
+      ]
+     ],
+     "q": [
+      [
+       "Why has the flight been delayed?",
+       [
+        "Because of the weather",
+        "Because of a technical problem",
+        "Because of a strike",
+        "Because the crew is late"
+       ],
+       0,
+       "« due to bad weather »."
+      ],
+      [
+       "What can passengers get at the service desk?",
+       [
+        "A meal voucher",
+        "A new ticket",
+        "A hotel room",
+        "A seat upgrade"
+       ],
+       0,
+       "« collect a meal voucher » = un bon repas."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "N",
+       "Welcome to our monthly staff meeting. First, I'm happy to announce that our new online store exceeded its sales targets in its first quarter. Next week, the IT team will hold training sessions on the updated inventory software. Please sign up on the intranet by Friday."
+      ]
+     ],
+     "q": [
+      [
+       "What is the speaker happy to announce?",
+       [
+        "Sales targets were exceeded",
+        "A new manager was hired",
+        "The office is moving",
+        "Salaries will increase"
+       ],
+       0,
+       "« exceeded its sales targets »."
+      ],
+      [
+       "What are listeners asked to do by Friday?",
+       [
+        "Sign up for training",
+        "Submit a report",
+        "Update their passwords",
+        "Visit the online store"
+       ],
+       0,
+       "« Please sign up on the intranet by Friday » pour les formations."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "W",
+       "Excuse me, I bought this jacket here last week, but the zipper is already broken."
+      ],
+      [
+       "M",
+       "I'm sorry about that. Do you have your receipt?"
+      ],
+      [
+       "W",
+       "Yes, here it is. Can I exchange it for the same model?"
+      ],
+      [
+       "M",
+       "Unfortunately, that model is sold out, but I can give you a full refund."
+      ]
+     ],
+     "q": [
+      [
+       "Where most likely are the speakers?",
+       [
+        "In a clothing store",
+        "At a bank",
+        "In a restaurant",
+        "At a train station"
+       ],
+       0,
+       "Veste, reçu, échange : un magasin de vêtements."
+      ],
+      [
+       "What does the man offer?",
+       [
+        "A full refund",
+        "A discount on another item",
+        "A free repair",
+        "A store credit"
+       ],
+       0,
+       "« I can give you a full refund »."
+      ]
+     ]
+    }
+   ],
+   "p": [
+    [
+     "Le vol a été retardé à cause du mauvais temps.",
+     "The flight has been delayed due to bad weather.",
+     "The flight was delayed due to bad weather.",
+     "The flight has been delayed because of bad weather.",
+     "The flight was delayed because of bad weather."
+    ],
+    [
+     "Veuillez vous inscrire sur l'intranet avant vendredi.",
+     "Please sign up on the intranet by Friday.",
+     "Please register on the intranet by Friday."
+    ],
+    [
+     "Ce modèle est épuisé.",
+     "That model is sold out.",
+     "This model is sold out."
+    ]
+   ],
+   "v": [
+    [
+     "bon (d'achat)",
+     "voucher"
+    ],
+    [
+     "épuisé (stock)",
+     "sold out"
+    ],
+    [
+     "avancer (une réunion)",
+     "move up"
+    ],
+    [
+     "s'inscrire",
+     "sign up"
+    ],
+    [
+     "annonce",
+     "announcement"
+    ],
+    [
+     "objectif",
+     "target"
+    ]
+   ],
+   "orig": 1,
+   "c": [
+    [
+     "The meeting has been ___ until next week.",
+     [
+      "postponed",
+      "post",
+      "postponing",
+      "postpone"
+     ],
+     0,
+     "has been + participe passé (passif)."
+    ],
+    [
+     "Passengers are ___ to board at gate 5.",
+     [
+      "requested",
+      "request",
+      "requesting",
+      "requests"
+     ],
+     0,
+     "be requested to = être prié de."
+    ],
+    [
+     "Please take all your ___ with you.",
+     [
+      "belongings",
+      "belongs",
+      "belonging to",
+      "belonged"
+     ],
+     0,
+     "belongings = affaires personnelles."
+    ],
+    [
+     "The store will be closed ___ renovation.",
+     [
+      "for",
+      "to",
+      "at",
+      "since"
+     ],
+     0,
+     "closed for renovation."
+    ]
+   ]
+  },
+  {
+   "t": "Part 6 : textes à trous",
+   "lv": 2,
+   "d": "Connecteurs et cohérence dans un document",
+   "tip": "En Part 6, lis la phrase d'avant ET d'après le blanc : le connecteur dépend de la logique entre les deux.",
+   "c": [
+    [
+     "Thank you for your order. ___, the item you requested is out of stock.",
+     [
+      "Unfortunately",
+      "Fortunately",
+      "Consequently",
+      "Similarly"
+     ],
+     0,
+     "Mauvaise nouvelle introduite poliment."
+    ],
+    [
+     "We have received your application. ___, we would like to invite you for an interview.",
+     [
+      "Therefore",
+      "However",
+      "Nevertheless",
+      "Otherwise"
+     ],
+     0,
+     "Conséquence logique → Therefore."
+    ],
+    [
+     "The store will close early on Friday ___ the holiday.",
+     [
+      "because of",
+      "because",
+      "so that",
+      "even though"
+     ],
+     0,
+     "because of + nom."
+    ],
+    [
+     "___ you have any questions, please contact our support team.",
+     [
+      "Should",
+      "Would",
+      "Unless",
+      "Had"
+     ],
+     0,
+     "Should you have… = If you have… (inversion formelle)."
+    ],
+    [
+     "Please find ___ the updated schedule.",
+     [
+      "attached",
+      "attaching",
+      "attach",
+      "attachment"
+     ],
+     0,
+     "Please find attached = veuillez trouver ci-joint."
+    ],
+    [
+     "The renovation is expected to last ___ three months.",
+     [
+      "approximately",
+      "approximate",
+      "approximation",
+      "approximated"
+     ],
+     0,
+     "Adverbe devant un nombre."
+    ],
+    [
+     "We look forward to ___ you at the conference.",
+     [
+      "welcoming",
+      "welcome",
+      "welcomed",
+      "be welcoming"
+     ],
+     0,
+     "look forward to + -ing."
+    ],
+    [
+     "All staff members are ___ to attend the training.",
+     [
+      "required",
+      "requiring",
+      "requirement",
+      "require"
+     ],
+     0,
+     "be required to = être tenu de."
+    ]
+   ],
+   "l": [
+    [
+     "Would you rather meet in person or online?",
+     [
+      "Online is easier for me.",
+      "Yes, I would.",
+      "I met him in person."
+     ],
+     0
+    ],
+    [
+     "Didn't you receive my e-mail?",
+     [
+      "Sorry, it went to my spam folder.",
+      "I'll mail it tomorrow.",
+      "Yes, he received it."
+     ],
+     0
+    ],
+    [
+     "Why was the shipment returned?",
+     [
+      "The address was incorrect.",
+      "By express mail.",
+      "It was shipped yesterday."
+     ],
+     0
+    ]
+   ],
+   "p": [
+    [
+     "Malheureusement, l'article est en rupture de stock.",
+     "Unfortunately, the item is out of stock.",
+     "Unfortunately, the item is sold out."
+    ],
+    [
+     "Si vous avez des questions, contactez-nous.",
+     "If you have any questions, contact us.",
+     "If you have any questions, please contact us.",
+     "Should you have any questions, please contact us."
+    ],
+    [
+     "Tout le personnel est tenu d'assister à la formation.",
+     "All staff are required to attend the training.",
+     "All staff members are required to attend the training.",
+     "All employees are required to attend the training."
+    ]
+   ],
+   "v": [
+    [
+     "en rupture de stock",
+     "out of stock"
+    ],
+    [
+     "ci-joint",
+     "attached"
+    ],
+    [
+     "environ",
+     "approximately"
+    ],
+    [
+     "formation",
+     "training"
+    ],
+    [
+     "personnel",
+     "staff"
+    ],
+    [
+     "planning",
+     "schedule"
+    ]
+   ]
+  },
+  {
+   "t": "Part 5 : gérondif, infinitif & subjonctif",
+   "lv": 2,
+   "d": "look forward to + -ing, avoid/consider + -ing, plan/agree + to, recommend that + base verbale",
+   "tip": "Après recommend, suggest, insist, require, it is essential + that, le verbe est à la base verbale (subjonctif) : We recommend that he attend. Certains verbes appellent -ing (avoid, consider, look forward to), d'autres to + verbe (plan, agree, decide).",
+   "p": [
+    [
+     "Nous avons hâte de travailler avec vous.",
+     "We look forward to working with you.",
+     "We are looking forward to working with you.",
+     "We're looking forward to working with you."
+    ],
+    [
+     "Je vous recommande de réserver à l'avance.",
+     "I recommend that you book in advance.",
+     "I recommend booking in advance.",
+     "I recommend that you book ahead."
+    ],
+    [
+     "Il a décidé de démissionner.",
+     "He decided to resign.",
+     "He has decided to resign.",
+     "He's decided to resign."
+    ],
+    [
+     "Évitez d'utiliser votre téléphone en réunion.",
+     "Avoid using your phone in meetings.",
+     "Avoid using your phone during meetings."
+    ]
+   ],
+   "v": [
+    [
+     "démissionner",
+     "resign"
+    ],
+    [
+     "exiger",
+     "require"
+    ],
+    [
+     "soumettre",
+     "submit"
+    ],
+    [
+     "succursale",
+     "branch"
+    ],
+    [
+     "prolonger",
+     "extend"
+    ],
+    [
+     "respecter (une règle)",
+     "comply with"
+    ]
+   ],
+   "c": [
+    [
+     "We look forward to ___ you at the conference.",
+     [
+      "seeing",
+      "see",
+      "seen",
+      "saw"
+     ],
+     0,
+     "« look forward to » + -ing (to est une préposition)."
+    ],
+    [
+     "The manager suggested that he ___ the report by Monday.",
+     [
+      "submit",
+      "submits",
+      "submitting",
+      "to submit"
+     ],
+     0,
+     "suggest that + base verbale (subjonctif) : that he submit."
+    ],
+    [
+     "Please avoid ___ personal calls during work hours.",
+     [
+      "making",
+      "to make",
+      "make",
+      "made"
+     ],
+     0,
+     "avoid + -ing."
+    ],
+    [
+     "The company plans ___ a new branch in Lyon.",
+     [
+      "to open",
+      "opening",
+      "open",
+      "opened"
+     ],
+     0,
+     "plan + to + verbe."
+    ],
+    [
+     "It is essential that every employee ___ the safety rules.",
+     [
+      "follow",
+      "follows",
+      "followed",
+      "following"
+     ],
+     0,
+     "It is essential that + base verbale."
+    ],
+    [
+     "Mr. Park agreed ___ the contract.",
+     [
+      "to sign",
+      "signing",
+      "sign",
+      "signed"
+     ],
+     0,
+     "agree + to + verbe."
+    ],
+    [
+     "Would you consider ___ the meeting to Thursday?",
+     [
+      "moving",
+      "to move",
+      "move",
+      "moved"
+     ],
+     0,
+     "consider + -ing."
+    ],
+    [
+     "The client insisted that the delivery ___ on time.",
+     [
+      "be",
+      "is",
+      "was",
+      "being"
+     ],
+     0,
+     "insist that + base verbale : be."
+    ],
+    [
+     "She is used to ___ long hours.",
+     [
+      "working",
+      "work",
+      "worked",
+      "works"
+     ],
+     0,
+     "be used to + -ing = être habitué à."
+    ],
+    [
+     "He used ___ in Seoul before joining us.",
+     [
+      "to live",
+      "living",
+      "lived",
+      "to living"
+     ],
+     0,
+     "used to + verbe = habitude passée."
+    ],
+    [
+     "We stopped ___ from that supplier last year.",
+     [
+      "ordering",
+      "to order",
+      "order",
+      "ordered"
+     ],
+     0,
+     "stop + -ing = arrêter de faire."
+    ],
+    [
+     "Remember ___ the door when you leave.",
+     [
+      "to lock",
+      "locking",
+      "lock",
+      "locked"
+     ],
+     0,
+     "remember + to + verbe = penser à faire."
+    ]
+   ],
+   "l": [
+    [
+     "Have you decided to accept the offer?",
+     [
+      "I'm still thinking about it.",
+      "It was a special offer.",
+      "Yes, I accepted the delivery."
+     ],
+     0
+    ],
+    [
+     "Why did you stop using that software?",
+     [
+      "It kept crashing.",
+      "At the stop sign.",
+      "Since last spring."
+     ],
+     0
+    ],
+    [
+     "Do you mind waiting a few minutes?",
+     [
+      "Not at all.",
+      "Yes, the minutes were sent.",
+      "A few weeks ago."
+     ],
+     0
+    ],
+    [
+     "What did the consultant recommend?",
+     [
+      "That we hire more staff.",
+      "She's highly recommended.",
+      "At the consulting firm."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Part 5 : conjonctions, relatifs & quantifieurs",
+   "lv": 2,
+   "d": "despite/although, due to, whose/whom/where, every/few/little, unless",
+   "tip": "Despite / in spite of / due to / because of + nom ; although / even though / because / while + proposition (sujet + verbe). Each / every + singulier ; few / many + pluriel ; little / much + indénombrable.",
+   "p": [
+    [
+     "Malgré le retard, le client est satisfait.",
+     "Despite the delay, the client is satisfied.",
+     "In spite of the delay, the client is satisfied.",
+     "Despite the delay, the customer is satisfied."
+    ],
+    [
+     "Bien que le prix soit élevé, nous l'achèterons.",
+     "Although the price is high, we will buy it.",
+     "Even though the price is high, we will buy it.",
+     "Although the price is high, we'll buy it."
+    ],
+    [
+     "Chaque employé a reçu une prime.",
+     "Every employee received a bonus.",
+     "Each employee received a bonus.",
+     "Every employee got a bonus."
+    ],
+    [
+     "Le fournisseur dont nous parlions a appelé.",
+     "The supplier we were talking about called.",
+     "The supplier that we were talking about called.",
+     "The supplier who we were talking about called."
+    ]
+   ],
+   "v": [
+    [
+     "malgré",
+     "despite"
+    ],
+    [
+     "à moins que",
+     "unless"
+    ],
+    [
+     "de plus",
+     "moreover"
+    ],
+    [
+     "cependant",
+     "however"
+    ],
+    [
+     "tandis que",
+     "whereas"
+    ],
+    [
+     "en raison de",
+     "due to"
+    ]
+   ],
+   "c": [
+    [
+     "___ its high price, the new model is selling well.",
+     [
+      "Despite",
+      "Although",
+      "Even though",
+      "However"
+     ],
+     0,
+     "Despite + groupe nominal (its high price). Although / even though seraient suivis d'un sujet et d'un verbe."
+    ],
+    [
+     "___ it rained heavily, the event was a success.",
+     [
+      "Although",
+      "Despite",
+      "In spite of",
+      "Due to"
+     ],
+     0,
+     "Devant une proposition (sujet + verbe) : although."
+    ],
+    [
+     "The flight was cancelled ___ the storm.",
+     [
+      "due to",
+      "because",
+      "although",
+      "since"
+     ],
+     0,
+     "Devant un nom : due to / because of."
+    ],
+    [
+     "The candidate ___ résumé impressed us will be called today.",
+     [
+      "whose",
+      "who",
+      "whom",
+      "which"
+     ],
+     0,
+     "« whose » = dont (possession)."
+    ],
+    [
+     "The supplier ___ we met last week has sent a quote.",
+     [
+      "whom",
+      "whose",
+      "which",
+      "what"
+     ],
+     0,
+     "Complément représentant une personne : whom (ou who / that)."
+    ],
+    [
+     "This is the office ___ I started my career.",
+     [
+      "where",
+      "which",
+      "who",
+      "what"
+     ],
+     0,
+     "Un lieu : where."
+    ],
+    [
+     "___ employee must wear a badge.",
+     [
+      "Every",
+      "All",
+      "Most",
+      "Few"
+     ],
+     0,
+     "every + nom singulier."
+    ],
+    [
+     "We have very ___ time before the deadline.",
+     [
+      "little",
+      "few",
+      "many",
+      "several"
+     ],
+     0,
+     "time est indénombrable : little."
+    ],
+    [
+     "Only a ___ applicants were selected.",
+     [
+      "few",
+      "little",
+      "much",
+      "less"
+     ],
+     0,
+     "applicants est dénombrable pluriel : a few."
+    ],
+    [
+     "___ the manager nor her assistant was available.",
+     [
+      "Neither",
+      "Either",
+      "Both",
+      "Not"
+     ],
+     0,
+     "neither … nor."
+    ],
+    [
+     "The new system is faster; ___, it is cheaper.",
+     [
+      "moreover",
+      "however",
+      "otherwise",
+      "instead"
+     ],
+     0,
+     "moreover = de plus (ajout)."
+    ],
+    [
+     "Sales rose ___ costs remained stable.",
+     [
+      "while",
+      "during",
+      "despite",
+      "unless"
+     ],
+     0,
+     "while + proposition = tandis que."
+    ],
+    [
+     "You won't get a refund ___ you keep the receipt.",
+     [
+      "unless",
+      "if",
+      "whether",
+      "although"
+     ],
+     0,
+     "unless = à moins que (sauf si)."
+    ]
+   ],
+   "l": [
+    [
+     "Why was the meeting postponed?",
+     [
+      "Because the director is sick.",
+      "Despite the weather.",
+      "It's in room B."
+     ],
+     0
+    ],
+    [
+     "Is there enough paper for the printer?",
+     [
+      "Only a little, I'm afraid.",
+      "A few printers.",
+      "Yes, I printed it."
+     ],
+     0
+    ],
+    [
+     "Whose car is parked outside?",
+     [
+      "It's Mr. Ortiz's.",
+      "Outside the main gate.",
+      "Park it over there."
+     ],
+     0
+    ],
+    [
+     "Can we finish today, or should we wait?",
+     [
+      "Let's finish it now.",
+      "Wait at the entrance.",
+      "Yes, we finished."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Part 3 : conversations (2 ou 3 personnes)",
+   "lv": 2,
+   "d": "Situation, problème, prochaine étape, questions d'intention",
+   "tip": "Lis les 3 questions AVANT l'écoute pour savoir quoi chercher. Les réponses reformulent ce qui est dit (« running late » → « delayed »). Les questions « Why does the man say… ? » portent sur l'intention, pas sur le sens littéral.",
+   "cv": [
+    {
+     "d": [
+      [
+       "W",
+       "Hi Jake, did you get a chance to look at the new floor plan for the office?"
+      ],
+      [
+       "M",
+       "I did. I like the open space, but I'm worried it'll be too noisy for the sales team. They're on the phone all day."
+      ],
+      [
+       "W",
+       "Good point. What if we set up a few small meeting rooms they could use for calls?"
+      ],
+      [
+       "M",
+       "That would help. I'll ask the architect how much it would add to the budget."
+      ]
+     ],
+     "q": [
+      [
+       "What are the speakers discussing?",
+       [
+        "An office layout",
+        "A sales report",
+        "A hiring plan",
+        "A phone contract"
+       ],
+       0,
+       "« the new floor plan for the office » = l'aménagement des bureaux."
+      ],
+      [
+       "What is the man concerned about?",
+       [
+        "The noise level",
+        "The cost of furniture",
+        "The size of the kitchen",
+        "The moving date"
+       ],
+       0,
+       "« I'm worried it'll be too noisy »."
+      ],
+      [
+       "What will the man do next?",
+       [
+        "Contact the architect",
+        "Call the sales team",
+        "Reserve a meeting room",
+        "Sign a contract"
+       ],
+       0,
+       "« I'll ask the architect »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "M",
+       "Thanks for coming, Maria and Lisa. The client wants the brochure finished by Thursday instead of next week."
+      ],
+      [
+       "W",
+       "Thursday? That's only two days away. The photos haven't even been approved yet."
+      ],
+      [
+       "W",
+       "I can call the client this afternoon and get the approval. Then the design team could finish it tomorrow."
+      ],
+      [
+       "M",
+       "Great, Lisa. And I'll let the printer know we need a rush order."
+      ]
+     ],
+     "q": [
+      [
+       "What problem does the man mention?",
+       [
+        "A deadline has been moved up",
+        "A printer is broken",
+        "A client canceled an order",
+        "Some photos were lost"
+       ],
+       0,
+       "Le client veut la brochure jeudi au lieu de la semaine prochaine."
+      ],
+      [
+       "What has not been done yet?",
+       [
+        "The photos have not been approved",
+        "The budget has not been approved",
+        "The price has not been agreed on",
+        "The printer has not been chosen"
+       ],
+       0,
+       "« The photos haven't even been approved yet »."
+      ],
+      [
+       "What will the man do?",
+       [
+        "Contact the printer",
+        "Call the client",
+        "Redesign the brochure",
+        "Hire a photographer"
+       ],
+       0,
+       "« I'll let the printer know »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "M",
+       "Excuse me, I'd like to return this coffee maker. It stopped working after two days."
+      ],
+      [
+       "W",
+       "I'm sorry to hear that. Do you have your receipt?"
+      ],
+      [
+       "M",
+       "I'm afraid I threw it away."
+      ],
+      [
+       "W",
+       "Well, if you paid by card, I can find the purchase in our system."
+      ]
+     ],
+     "q": [
+      [
+       "Where most likely are the speakers?",
+       [
+        "In an appliance store",
+        "In a café",
+        "At a bank",
+        "At a factory"
+       ],
+       0,
+       "Il rapporte une cafetière achetée en magasin."
+      ],
+      [
+       "Why does the man say, « I'm afraid I threw it away »?",
+       [
+        "To explain that he cannot show the receipt",
+        "To complain about the packaging",
+        "To ask for a new bag",
+        "To apologize for being late"
+       ],
+       0,
+       "Il répond à la demande de ticket : il ne l'a plus."
+      ],
+      [
+       "What does the woman offer to do?",
+       [
+        "Look up the purchase",
+        "Repair the item",
+        "Give a discount",
+        "Call the manufacturer"
+       ],
+       0,
+       "« I can find the purchase in our system »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "W",
+       "Hi, this is Ana from Delta Logistics. Your shipment is being held at the port because some customs documents are missing."
+      ],
+      [
+       "M",
+       "Oh no. Which documents do you need?"
+      ],
+      [
+       "W",
+       "The certificate of origin. If you e-mail it today, the goods should be released by Friday."
+      ],
+      [
+       "M",
+       "I'll send it within the hour. Thanks for letting me know."
+      ]
+     ],
+     "q": [
+      [
+       "Why is the woman calling?",
+       [
+        "A shipment is delayed",
+        "An invoice is wrong",
+        "A meeting is canceled",
+        "A price has changed"
+       ],
+       0,
+       "La marchandise est bloquée au port."
+      ],
+      [
+       "What does the woman need?",
+       [
+        "A certificate of origin",
+        "A payment",
+        "A new address",
+        "A signature"
+       ],
+       0,
+       "« The certificate of origin »."
+      ],
+      [
+       "When should the goods be released?",
+       [
+        "By Friday",
+        "Today",
+        "Within an hour",
+        "Next month"
+       ],
+       0,
+       "« should be released by Friday »."
+      ]
+     ]
+    }
+   ],
+   "p": [
+    [
+     "Je suis désolé, je vais être en retard.",
+     "I'm sorry, I'm going to be late.",
+     "Sorry, I'm running late.",
+     "I'm sorry, I'll be late.",
+     "I'm sorry, I'm running late."
+    ],
+    [
+     "Pouvez-vous m'envoyer le document aujourd'hui ?",
+     "Can you send me the document today?",
+     "Could you send me the document today?",
+     "Could you e-mail me the document today?"
+    ],
+    [
+     "Je vais en parler à mon responsable.",
+     "I'll talk to my manager about it.",
+     "I will talk to my manager about it.",
+     "I'll discuss it with my manager."
+    ]
+   ],
+   "v": [
+    [
+     "plan d'aménagement",
+     "floor plan"
+    ],
+    [
+     "commande urgente",
+     "rush order"
+    ],
+    [
+     "ticket de caisse",
+     "receipt"
+    ],
+    [
+     "douane",
+     "customs"
+    ],
+    [
+     "avancer (une date)",
+     "move up"
+    ],
+    [
+     "libérer (des marchandises)",
+     "release"
+    ]
+   ],
+   "c": [
+    [
+     "The deadline has been moved ___ to Thursday.",
+     [
+      "up",
+      "on",
+      "off",
+      "out"
+     ],
+     0,
+     "move up a deadline = avancer une date."
+    ],
+    [
+     "I'm ___ late because of the traffic.",
+     [
+      "running",
+      "going",
+      "making",
+      "being"
+     ],
+     0,
+     "I'm running late = je suis en retard."
+    ],
+    [
+     "Could you ___ me know when the goods arrive?",
+     [
+      "let",
+      "make",
+      "have",
+      "allow"
+     ],
+     0,
+     "let someone know = prévenir quelqu'un."
+    ],
+    [
+     "Thanks for ___ me know.",
+     [
+      "letting",
+      "let",
+      "to let",
+      "lets"
+     ],
+     0,
+     "Thanks for + -ing."
+    ]
+   ],
+   "l": [
+    [
+     "When can you deliver the order?",
+     [
+      "By the end of the week.",
+      "Three boxes.",
+      "The delivery truck."
+     ],
+     0
+    ],
+    [
+     "Do you have your receipt?",
+     [
+      "I'm afraid I lost it.",
+      "Yes, I received it.",
+      "It's a recipe book."
+     ],
+     0
+    ],
+    [
+     "Who approved the photos?",
+     [
+      "The client did this morning.",
+      "They're on page two.",
+      "Yes, they look great."
+     ],
+     0
+    ],
+    [
+     "Should I call the supplier or e-mail them?",
+     [
+      "An e-mail is fine.",
+      "Yes, you should.",
+      "At their office."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Part 4 : annonces, messages & visites",
+   "lv": 2,
+   "d": "Annonce d'aéroport, message vocal, visite guidée, publicité",
+   "tip": "Part 4 = un seul locuteur : annonce, message vocal, publicité, visite guidée, bulletin. Les premières phrases donnent le contexte (qui parle, où, pourquoi) ; note les chiffres (heures, portes, prix, dates).",
+   "cv": [
+    {
+     "d": [
+      [
+       "N",
+       "Attention, passengers on Flight 208 to Toronto. Due to a mechanical problem, your departure gate has changed from gate 12 to gate 31. Boarding will now begin at 4:45. We apologize for the inconvenience and thank you for your patience."
+      ]
+     ],
+     "q": [
+      [
+       "What is the main purpose of the announcement?",
+       [
+        "To report a gate change",
+        "To announce a cancellation",
+        "To offer a free meal",
+        "To introduce a new airline"
+       ],
+       0,
+       "« your departure gate has changed »."
+      ],
+      [
+       "What caused the change?",
+       [
+        "A mechanical problem",
+        "Bad weather",
+        "A staff shortage",
+        "A security check"
+       ],
+       0,
+       "« Due to a mechanical problem »."
+      ],
+      [
+       "What time will boarding begin?",
+       [
+        "At 4:45",
+        "At 2:08",
+        "At 12:31",
+        "At 3:12"
+       ],
+       0,
+       "« Boarding will now begin at 4:45 »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "N",
+       "Hello, this is Karen Wu from Bright Dental Clinic, calling for Mr. Thomas. This is a reminder of your appointment tomorrow at ten a.m. Please arrive fifteen minutes early to fill out some forms. If you need to reschedule, call us back before five o'clock today."
+      ]
+     ],
+     "q": [
+      [
+       "Why is the speaker calling?",
+       [
+        "To remind the listener of an appointment",
+        "To cancel a meeting",
+        "To request a payment",
+        "To offer a job"
+       ],
+       0,
+       "« This is a reminder of your appointment »."
+      ],
+      [
+       "What is the listener asked to do?",
+       [
+        "Arrive early",
+        "Bring a friend",
+        "Send an e-mail",
+        "Pay in advance"
+       ],
+       0,
+       "« Please arrive fifteen minutes early »."
+      ],
+      [
+       "What should the listener do to reschedule?",
+       [
+        "Call before five today",
+        "Visit the website",
+        "Reply by text message",
+        "Come in person"
+       ],
+       0,
+       "« call us back before five o'clock today »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "N",
+       "Welcome to the Harbor Chocolate Factory. On today's tour, we'll first see how the cocoa beans are roasted, and then you'll watch our chocolatiers at work. Please note that photography is not allowed in the production area. At the end of the tour, everyone will receive a free sample in our gift shop."
+      ]
+     ],
+     "q": [
+      [
+       "Who most likely is the speaker?",
+       [
+        "A tour guide",
+        "A chef",
+        "A store manager",
+        "A photographer"
+       ],
+       0,
+       "Elle accueille le groupe et présente la visite."
+      ],
+      [
+       "What are the listeners asked not to do?",
+       [
+        "Take pictures",
+        "Touch the machines",
+        "Eat during the tour",
+        "Leave the group"
+       ],
+       0,
+       "« photography is not allowed »."
+      ],
+      [
+       "What will the listeners receive at the end?",
+       [
+        "A free sample",
+        "A discount coupon",
+        "A souvenir photo",
+        "A recipe book"
+       ],
+       0,
+       "« a free sample »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "N",
+       "Are you tired of long lines at the bank? With the new GreenPay app, you can transfer money, pay bills, and check your balance in seconds. Download it before the end of the month and get your first three months free. GreenPay: banking made simple."
+      ]
+     ],
+     "q": [
+      [
+       "What is being advertised?",
+       [
+        "A mobile app",
+        "A new bank branch",
+        "A credit card",
+        "An online store"
+       ],
+       0,
+       "« the new GreenPay app »."
+      ],
+      [
+       "What problem does the speaker mention?",
+       [
+        "Long lines at the bank",
+        "High fees",
+        "Slow internet",
+        "Lost cards"
+       ],
+       0,
+       "« tired of long lines at the bank »."
+      ],
+      [
+       "What special offer is mentioned?",
+       [
+        "Three free months",
+        "A cash bonus",
+        "A free phone",
+        "Lower interest rates"
+       ],
+       0,
+       "« get your first three months free »."
+      ]
+     ]
+    }
+   ],
+   "p": [
+    [
+     "Le vol a été retardé en raison d'un problème technique.",
+     "The flight has been delayed due to a technical problem.",
+     "The flight was delayed due to a technical problem.",
+     "The flight has been delayed because of a technical problem.",
+     "The flight was delayed because of a technical problem."
+    ],
+    [
+     "Merci de me rappeler avant 17 heures.",
+     "Please call me back before 5 p.m.",
+     "Please call me back before five p.m.",
+     "Please call me back before five o'clock."
+    ],
+    [
+     "Les photos ne sont pas autorisées.",
+     "Photography is not allowed.",
+     "Photos are not allowed.",
+     "Taking pictures is not allowed."
+    ]
+   ],
+   "v": [
+    [
+     "porte d'embarquement",
+     "gate"
+    ],
+    [
+     "embarquement",
+     "boarding"
+    ],
+    [
+     "reporter un rendez-vous",
+     "reschedule"
+    ],
+    [
+     "échantillon",
+     "sample"
+    ],
+    [
+     "solde (du compte)",
+     "balance"
+    ],
+    [
+     "virer de l'argent",
+     "transfer money"
+    ]
+   ],
+   "c": [
+    [
+     "Boarding will ___ at 4:45.",
+     [
+      "begin",
+      "beginning",
+      "begun",
+      "began"
+     ],
+     0,
+     "will + base verbale."
+    ],
+    [
+     "Please arrive fifteen minutes ___.",
+     [
+      "early",
+      "soon",
+      "before",
+      "sooner than"
+     ],
+     0,
+     "arrive early = arriver en avance."
+    ],
+    [
+     "We apologize ___ the inconvenience.",
+     [
+      "for",
+      "of",
+      "about",
+      "to"
+     ],
+     0,
+     "apologize for something."
+    ],
+    [
+     "Thank you for your ___.",
+     [
+      "patience",
+      "patient",
+      "patiently",
+      "patients"
+     ],
+     0,
+     "Après « your » : un nom (patience)."
+    ]
+   ],
+   "l": [
+    [
+     "Has the gate changed?",
+     [
+      "Yes, it's now gate 31.",
+      "The garden gate is open.",
+      "I changed my ticket."
+     ],
+     0
+    ],
+    [
+     "Did anyone call while I was out?",
+     [
+      "Ms. Wu left a message.",
+      "I was out of town.",
+      "Call me later."
+     ],
+     0
+    ],
+    [
+     "Can I take photos in here?",
+     [
+      "Only in the gift shop.",
+      "They're nice photos.",
+      "Yes, I took them."
+     ],
+     0
+    ],
+    [
+     "How do I download the app?",
+     [
+      "Just scan this code.",
+      "It's very popular.",
+      "Since last month."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Part 5 : modaux, discours indirect & questions indirectes",
+   "lv": 2,
+   "d": "must have / can't have, don't need to, had better, told us / said that, asked whether, Do you know where… is?",
+   "tip": "Déduction sur le passé : must have + participe (sûrement), can't have + participe (impossible). Discours indirect : tell + personne (told us), say sans personne (said that) ; les temps reculent (will → would, is → was). Question indirecte : l'ordre redevient sujet + verbe (Do you know where the room is?).",
+   "p": [
+    [
+     "Il a dû partir tôt.",
+     "He must have left early.",
+     "He must've left early."
+    ],
+    [
+     "Pourriez-vous me dire où se trouve la salle de réunion ?",
+     "Could you tell me where the meeting room is?",
+     "Can you tell me where the meeting room is?",
+     "Could you tell me where the conference room is?"
+    ],
+    [
+     "Elle nous a dit que la réunion était annulée.",
+     "She told us that the meeting was canceled.",
+     "She told us the meeting was canceled.",
+     "She told us that the meeting had been canceled.",
+     "She told us the meeting had been canceled.",
+     "She told us that the meeting was cancelled.",
+     "She told us the meeting was cancelled."
+    ],
+    [
+     "Tu n'as pas besoin d'apporter ton ordinateur.",
+     "You don't need to bring your laptop.",
+     "You don't have to bring your laptop.",
+     "You needn't bring your laptop.",
+     "You don't need to bring your computer.",
+     "You don't have to bring your computer."
+    ]
+   ],
+   "v": [
+    [
+     "déduire",
+     "deduce"
+    ],
+    [
+     "suggérer",
+     "suggest"
+    ],
+    [
+     "demander si",
+     "ask whether"
+    ],
+    [
+     "il vaudrait mieux",
+     "had better"
+    ],
+    [
+     "obligatoire",
+     "mandatory"
+    ],
+    [
+     "facultatif",
+     "optional"
+    ]
+   ],
+   "c": [
+    [
+     "Mr. Lee ___ have left already; his coat is still here.",
+     [
+      "can't",
+      "mustn't",
+      "needn't",
+      "ought"
+     ],
+     0,
+     "can't have + participe = c'est impossible (déduction sur le passé)."
+    ],
+    [
+     "The lights are off, so everyone ___ have gone home.",
+     [
+      "must",
+      "can't",
+      "needn't",
+      "ought"
+     ],
+     0,
+     "must have + participe = c'est sûrement ce qui s'est passé."
+    ],
+    [
+     "You ___ bring your laptop; we will provide one.",
+     [
+      "don't need to",
+      "mustn't",
+      "can't",
+      "shouldn't to"
+     ],
+     0,
+     "Absence d'obligation : don't need to / don't have to (mustn't = interdiction)."
+    ],
+    [
+     "We ___ leave now if we want to catch the train.",
+     [
+      "had better",
+      "would better",
+      "had to better",
+      "better had"
+     ],
+     0,
+     "had better + base verbale = il vaudrait mieux."
+    ],
+    [
+     "She told ___ that the meeting had been canceled.",
+     [
+      "us",
+      "to us",
+      "at us",
+      "for us"
+     ],
+     0,
+     "tell + personne directement (told us), sans « to »."
+    ],
+    [
+     "He said ___ the budget would be approved.",
+     [
+      "that",
+      "us that",
+      "to that",
+      "me"
+     ],
+     0,
+     "say n'est pas suivi directement de la personne : said that…"
+    ],
+    [
+     "The client asked ___ the order had been shipped.",
+     [
+      "whether",
+      "that",
+      "what",
+      "about"
+     ],
+     0,
+     "Question fermée rapportée : ask whether / if."
+    ],
+    [
+     "Do you know where ___?",
+     [
+      "the conference room is",
+      "is the conference room",
+      "the conference room it is",
+      "is it the conference room"
+     ],
+     0,
+     "Question indirecte : sujet + verbe, sans inversion."
+    ],
+    [
+     "Could you tell me when ___?",
+     [
+      "the store opens",
+      "does the store open",
+      "opens the store",
+      "the store does open"
+     ],
+     0,
+     "Question indirecte : pas d'auxiliaire do, ordre sujet + verbe."
+    ],
+    [
+     "She said she ___ the report the next day.",
+     [
+      "would finish",
+      "will finish",
+      "finishes",
+      "has finished"
+     ],
+     0,
+     "Discours rapporté au passé : will → would."
+    ],
+    [
+     "The manager suggested ___ the deadline.",
+     [
+      "extending",
+      "to extend",
+      "extend",
+      "us to extend"
+     ],
+     0,
+     "suggest + -ing (ou suggest that we extend)."
+    ],
+    [
+     "You ___ have told me earlier; I could have helped.",
+     [
+      "should",
+      "must",
+      "can",
+      "would to"
+     ],
+     0,
+     "should have + participe = reproche (tu aurais dû)."
+    ]
+   ],
+   "l": [
+    [
+     "Do you know when the shipment will arrive?",
+     [
+      "The tracking says Thursday.",
+      "Yes, I know him well.",
+      "It was shipped by truck."
+     ],
+     0
+    ],
+    [
+     "Should I call the client back today?",
+     [
+      "Yes, she said it was urgent.",
+      "I called him a taxi.",
+      "No, it's on the back."
+     ],
+     0
+    ],
+    [
+     "What did the manager say about the budget?",
+     [
+      "That it would be approved next week.",
+      "She's a good manager.",
+      "About ten thousand people."
+     ],
+     0
+    ],
+    [
+     "Can you tell me where the printer is?",
+     [
+      "It's next to the kitchen.",
+      "Yes, I can print it.",
+      "He repairs printers."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Part 5 : so/such, too/enough, used to & verbes + -ing/to",
+   "lv": 2,
+   "d": "such a… that, so… that, too + adj + to, adj + enough, used to / be used to, remember to / remember -ing, would rather, the more… the better, twice as… as",
+   "tip": "so + adjectif (so long), such + nom (such a long meeting). too + adjectif + to (trop… pour), adjectif + enough (assez). used to + base verbale = habitude passée ; be/get used to + -ing = être/s'habituer à. remember TO do (ne pas oublier) ≠ remember DOING (se souvenir).",
+   "p": [
+    [
+     "C'était une si bonne présentation que tout le monde a applaudi.",
+     "It was such a good presentation that everyone applauded.",
+     "The presentation was so good that everyone applauded."
+    ],
+    [
+     "Je préférerais travailler de chez moi demain.",
+     "I would rather work from home tomorrow.",
+     "I'd rather work from home tomorrow.",
+     "I would prefer to work from home tomorrow.",
+     "I'd prefer to work from home tomorrow."
+    ],
+    [
+     "Elle avait l'habitude de travailler à Séoul.",
+     "She used to work in Seoul."
+    ],
+    [
+     "Je ne suis pas habituée à me lever tôt.",
+     "I'm not used to getting up early.",
+     "I am not used to getting up early.",
+     "I'm not used to waking up early.",
+     "I am not used to waking up early."
+    ]
+   ],
+   "v": [
+    [
+     "avoir l'habitude de (passé)",
+     "used to"
+    ],
+    [
+     "être habitué à",
+     "be used to"
+    ],
+    [
+     "s'habituer à",
+     "get used to"
+    ],
+    [
+     "préférer",
+     "would rather"
+    ],
+    [
+     "deux fois plus rapide",
+     "twice as fast"
+    ],
+    [
+     "assez",
+     "enough"
+    ]
+   ],
+   "c": [
+    [
+     "It was ___ a successful event that we will repeat it next year.",
+     [
+      "such",
+      "so",
+      "too",
+      "very"
+     ],
+     0,
+     "such + (a) + adjectif + nom + that."
+    ],
+    [
+     "The presentation was ___ long that some people left.",
+     [
+      "so",
+      "such",
+      "too",
+      "enough"
+     ],
+     0,
+     "so + adjectif seul + that."
+    ],
+    [
+     "The room is not big ___ for fifty people.",
+     [
+      "enough",
+      "too",
+      "so",
+      "such"
+     ],
+     0,
+     "adjectif + enough (assez grand)."
+    ],
+    [
+     "The box is ___ heavy to lift alone.",
+     [
+      "too",
+      "so",
+      "enough",
+      "such"
+     ],
+     0,
+     "too + adjectif + to = trop… pour."
+    ],
+    [
+     "She ___ work in Seoul before moving to Paris.",
+     [
+      "used to",
+      "is used to",
+      "was used to",
+      "uses to"
+     ],
+     0,
+     "used to + base verbale = habitude passée, terminée."
+    ],
+    [
+     "I'm not used to ___ so early.",
+     [
+      "getting up",
+      "get up",
+      "got up",
+      "be getting up"
+     ],
+     0,
+     "be used to + -ing (to est ici une préposition)."
+    ],
+    [
+     "Please remember ___ the door when you leave.",
+     [
+      "to lock",
+      "locking",
+      "lock",
+      "locked"
+     ],
+     0,
+     "remember to do = penser à faire (action à venir)."
+    ],
+    [
+     "I remember ___ him at last year's conference.",
+     [
+      "meeting",
+      "to meet",
+      "meet",
+      "met"
+     ],
+     0,
+     "remember doing = se souvenir d'avoir fait."
+    ],
+    [
+     "I would rather ___ by train.",
+     [
+      "travel",
+      "to travel",
+      "traveling",
+      "traveled"
+     ],
+     0,
+     "would rather + base verbale, sans to."
+    ],
+    [
+     "The more you practice, ___ you become.",
+     [
+      "the better",
+      "better",
+      "the best",
+      "best"
+     ],
+     0,
+     "The + comparatif…, the + comparatif."
+    ],
+    [
+     "The new model is twice ___ the old one.",
+     [
+      "as fast as",
+      "faster as",
+      "as fast than",
+      "so fast as"
+     ],
+     0,
+     "twice as + adjectif + as."
+    ]
+   ],
+   "l": [
+    [
+     "Is the room big enough for the workshop?",
+     [
+      "It holds about forty people.",
+      "Yes, the shop is open.",
+      "Enough paper for everyone."
+     ],
+     0
+    ],
+    [
+     "Would you rather meet on Monday or Tuesday?",
+     [
+      "Tuesday works better for me.",
+      "Yes, I would.",
+      "We met last week."
+     ],
+     0
+    ],
+    [
+     "Didn't you use to work in sales?",
+     [
+      "Yes, for about three years.",
+      "I use it every day.",
+      "The sale ends tomorrow."
+     ],
+     0
+    ],
+    [
+     "Why was the event so popular?",
+     [
+      "The speakers were excellent.",
+      "It was very crowded at the door.",
+      "At the convention center."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Vocabulaire : chiffres, tendances & graphiques",
+   "lv": 2,
+   "d": "rise / raise, increase by, peak, level off, fluctuate, double, steady, quarter, revenue",
+   "tip": "rise (intransitif : les ventes montent) ≠ raise (transitif : on augmente les prix). La préposition change le sens : rose BY 12% (de 12 points), rose TO 12% (jusqu'à 12 %). Ces mots reviennent dans les graphiques des Parts 3-4 et dans les rapports de la Part 7.",
+   "p": [
+    [
+     "Les ventes ont augmenté de 12 %.",
+     "Sales increased by 12%.",
+     "Sales rose by 12%.",
+     "Sales went up by 12%.",
+     "Sales increased by 12 percent.",
+     "Sales rose by 12 percent."
+    ],
+    [
+     "Les bénéfices ont atteint un pic en décembre.",
+     "Profits peaked in December.",
+     "Profits reached a peak in December."
+    ],
+    [
+     "La demande s'est stabilisée.",
+     "Demand has leveled off.",
+     "Demand has levelled off.",
+     "Demand has stabilized.",
+     "Demand has stabilised."
+    ],
+    [
+     "Le chiffre d'affaires a doublé en deux ans.",
+     "Revenue has doubled in two years.",
+     "Revenue doubled in two years.",
+     "Sales have doubled in two years."
+    ]
+   ],
+   "v": [
+    [
+     "chiffre d'affaires",
+     "revenue"
+    ],
+    [
+     "bénéfices",
+     "profits"
+    ],
+    [
+     "atteindre un pic",
+     "peak"
+    ],
+    [
+     "se stabiliser",
+     "level off"
+    ],
+    [
+     "fluctuer",
+     "fluctuate"
+    ],
+    [
+     "trimestre",
+     "quarter"
+    ]
+   ],
+   "c": [
+    [
+     "Sales rose ___ 12% in the third quarter.",
+     [
+      "by",
+      "of",
+      "to",
+      "at"
+     ],
+     0,
+     "by = de (l'écart) ; to = jusqu'à (le niveau atteint)."
+    ],
+    [
+     "Profits reached a ___ in December before falling.",
+     [
+      "peak",
+      "top up",
+      "pick",
+      "summit up"
+     ],
+     0,
+     "reach a peak = atteindre un sommet."
+    ],
+    [
+     "After months of growth, demand has leveled ___.",
+     [
+      "off",
+      "up",
+      "down",
+      "out"
+     ],
+     0,
+     "level off = se stabiliser."
+    ],
+    [
+     "There was a slight ___ in prices last month.",
+     [
+      "decrease",
+      "decreasing",
+      "decreased",
+      "decreasingly"
+     ],
+     0,
+     "Après l'adjectif slight : un nom."
+    ],
+    [
+     "The number of visitors ___ dramatically after the ad campaign.",
+     [
+      "increased",
+      "raised",
+      "arose",
+      "rised"
+     ],
+     0,
+     "Intransitif (pas de complément) : increase ou rise, jamais raise."
+    ],
+    [
+     "The company ___ its prices last year.",
+     [
+      "raised",
+      "rose",
+      "risen",
+      "arose"
+     ],
+     0,
+     "Transitif (its prices) : raise, raised."
+    ],
+    [
+     "Revenue has ___ from $2 million to $4 million.",
+     [
+      "doubled",
+      "double",
+      "doubling",
+      "twice"
+     ],
+     0,
+     "has + participe passé : doubled."
+    ],
+    [
+     "Prices have ___ throughout the year, going up and down.",
+     [
+      "fluctuated",
+      "fluctuate",
+      "fluctuating",
+      "fluctuation"
+     ],
+     0,
+     "fluctuate = varier dans les deux sens."
+    ],
+    [
+     "Sales of tablets remained ___ at 3,000 units.",
+     [
+      "steady",
+      "steadily",
+      "steadiness",
+      "steadied"
+     ],
+     0,
+     "remain + adjectif (comme be) : steady."
+    ],
+    [
+     "The figures are ___ estimated, not final.",
+     [
+      "roughly",
+      "rough",
+      "roughness",
+      "roughed"
+     ],
+     0,
+     "Un adverbe modifie le participe estimated."
+    ]
+   ],
+   "l": [
+    [
+     "How did sales do last quarter?",
+     [
+      "They rose by about ten percent.",
+      "He sells cars.",
+      "A quarter past nine."
+     ],
+     0
+    ],
+    [
+     "Why did profits drop in March?",
+     [
+      "Our main supplier raised its prices.",
+      "Yes, I dropped it.",
+      "In the first week of March."
+     ],
+     0
+    ],
+    [
+     "Has the number of subscribers leveled off?",
+     [
+      "It's still growing slightly.",
+      "The level is on the third floor.",
+      "She subscribed yesterday."
+     ],
+     0
+    ],
+    [
+     "When did revenue peak?",
+     [
+      "Right before the holidays.",
+      "At the top of the mountain.",
+      "About two million dollars."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Vocabulaire : usine, sécurité, garanties & consignes",
+   "lv": 2,
+   "d": "plant, assembly line, maintenance, inspection, warranty, recall, shortage, authorized personnel only",
+   "tip": "Les panneaux et consignes (Part 7) utilisent souvent le passif et des formules figées : « Authorized personnel only », « must be worn at all times », « Employees are required to… ». warranty = garantie d'un produit ; recall = rappel d'un produit défectueux.",
+   "p": [
+    [
+     "Accès réservé au personnel autorisé.",
+     "Authorized personnel only.",
+     "Authorised personnel only.",
+     "Access restricted to authorized personnel.",
+     "Only authorized personnel may enter."
+    ],
+    [
+     "Le produit est garanti deux ans.",
+     "The product has a two-year warranty.",
+     "The product comes with a two-year warranty.",
+     "The product is under warranty for two years.",
+     "The product is guaranteed for two years."
+    ],
+    [
+     "La chaîne de montage sera arrêtée pour maintenance.",
+     "The assembly line will be shut down for maintenance.",
+     "The assembly line will be stopped for maintenance."
+    ],
+    [
+     "Les employés doivent porter leur badge.",
+     "Employees must wear their badges.",
+     "Employees are required to wear their badges.",
+     "Employees have to wear their badges."
+    ]
+   ],
+   "v": [
+    [
+     "usine",
+     "plant"
+    ],
+    [
+     "chaîne de montage",
+     "assembly line"
+    ],
+    [
+     "garantie",
+     "warranty"
+    ],
+    [
+     "rappeler (un produit)",
+     "recall"
+    ],
+    [
+     "pénurie",
+     "shortage"
+    ],
+    [
+     "entretien (machines)",
+     "maintenance"
+    ]
+   ],
+   "c": [
+    [
+     "Only ___ personnel may enter this area.",
+     [
+      "authorized",
+      "authorizing",
+      "authority",
+      "authorize"
+     ],
+     0,
+     "Adjectif (participe passé) devant le nom."
+    ],
+    [
+     "Safety goggles must be worn ___ all times.",
+     [
+      "at",
+      "in",
+      "on",
+      "by"
+     ],
+     0,
+     "at all times = en permanence."
+    ],
+    [
+     "The product comes with a two-year ___.",
+     [
+      "warranty",
+      "warrant",
+      "guaranteeing",
+      "warned"
+     ],
+     0,
+     "warranty = garantie commerciale."
+    ],
+    [
+     "The manufacturer has ___ thousands of defective heaters.",
+     [
+      "recalled",
+      "reminded",
+      "recovered",
+      "returned back"
+     ],
+     0,
+     "recall a product = rappeler un produit."
+    ],
+    [
+     "The assembly line will be shut down for routine ___.",
+     [
+      "maintenance",
+      "maintain",
+      "maintained",
+      "maintaining"
+     ],
+     0,
+     "Après l'adjectif routine : le nom maintenance."
+    ],
+    [
+     "All machinery must be ___ before each shift.",
+     [
+      "inspected",
+      "inspecting",
+      "inspection",
+      "inspect"
+     ],
+     0,
+     "must be + participe passé (passif)."
+    ],
+    [
+     "The plant ___ 5,000 units per day.",
+     [
+      "produces",
+      "product",
+      "productive",
+      "production"
+     ],
+     0,
+     "Il faut le verbe conjugué : produces."
+    ],
+    [
+     "Employees are ___ to wear their badges.",
+     [
+      "required",
+      "requiring",
+      "requirement",
+      "require"
+     ],
+     0,
+     "be required to = être tenu de."
+    ],
+    [
+     "The shipment was delayed due to a ___ of raw materials.",
+     [
+      "shortage",
+      "short",
+      "shortly",
+      "shorten"
+     ],
+     0,
+     "a shortage of = une pénurie de."
+    ]
+   ],
+   "l": [
+    [
+     "When will the assembly line be running again?",
+     [
+      "After the inspection on Thursday.",
+      "He runs every morning.",
+      "Line up at the entrance."
+     ],
+     0
+    ],
+    [
+     "Is this heater still under warranty?",
+     [
+      "Yes, until next March.",
+      "It's warmer in here.",
+      "Under the desk."
+     ],
+     0
+    ],
+    [
+     "Who should I report the problem to?",
+     [
+      "Your shift supervisor.",
+      "It was reported in the news.",
+      "The problem is solved."
+     ],
+     0
+    ],
+    [
+     "Why was production slowed down?",
+     [
+      "There's a shortage of parts.",
+      "It's slower than walking.",
+      "In the production office."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Vocabulaire TOEIC 750+",
+   "lv": 3,
+   "d": "Paronymes et collocations des hauts scores",
+   "tip": "Pièges classiques : expand / expend, extensive / expensive, renew / renovate. Le TOEIC adore les mots qui se ressemblent.",
+   "c": [
+    [
+     "The company plans to ___ its operations into Asia next year.",
+     [
+      "expand",
+      "expend",
+      "extend to",
+      "expense"
+     ],
+     0,
+     "expand into = s'étendre sur un marché. expend = dépenser."
+    ],
+    [
+     "All visitors must ___ with the safety regulations.",
+     [
+      "comply",
+      "obey to",
+      "respect with",
+      "follow up"
+     ],
+     0,
+     "comply with = se conformer à."
+    ],
+    [
+     "The contract will be ___ for another two years.",
+     [
+      "renewed",
+      "renovated",
+      "refreshed",
+      "restored"
+     ],
+     0,
+     "On renouvelle (renew) un contrat ; on rénove (renovate) un bâtiment."
+    ],
+    [
+     "Our quarterly earnings ___ analysts' expectations.",
+     [
+      "exceeded",
+      "excelled",
+      "exceeded to",
+      "accessed"
+     ],
+     0,
+     "exceed = dépasser (attentes, budget)."
+    ],
+    [
+     "Keep all receipts so that you can be ___ for travel expenses.",
+     [
+      "reimbursed",
+      "refunded to",
+      "repaid back",
+      "rewarded"
+     ],
+     0,
+     "Se faire rembourser des frais : be reimbursed."
+    ],
+    [
+     "The CEO's speech was ___ by the entire staff.",
+     [
+      "well received",
+      "good received",
+      "well receiving",
+      "received good"
+     ],
+     0,
+     "Adverbe well + participe passé."
+    ],
+    [
+     "Candidates with ___ experience will be given priority.",
+     [
+      "extensive",
+      "expansive",
+      "expensive",
+      "extended"
+     ],
+     0,
+     "extensive experience = une solide expérience. expensive = cher."
+    ],
+    [
+     "The merger is ___ to be finalized by the end of the year.",
+     [
+      "expected",
+      "expecting",
+      "expectation",
+      "expects"
+     ],
+     0,
+     "be expected to = devoir normalement (passif)."
+    ]
+   ],
+   "l": [
+    [
+     "Why don't we hire a temporary worker?",
+     [
+      "That's a good idea.",
+      "He worked there temporarily.",
+      "Higher than last year."
+     ],
+     0
+    ],
+    [
+     "Has the shipment arrived?",
+     [
+      "It's being unloaded now.",
+      "Ship it by air.",
+      "A large arrival hall."
+     ],
+     0
+    ],
+    [
+     "When will the renovations be completed?",
+     [
+      "Not until next spring.",
+      "The innovation center.",
+      "They were very complete."
+     ],
+     0
+    ],
+    [
+     "Could you review my proposal this afternoon?",
+     [
+      "Sure, send it over.",
+      "A new pro sale.",
+      "Yes, I viewed it last year."
+     ],
+     0
+    ]
+   ],
+   "p": [
+    [
+     "Nous devons réduire nos coûts de production.",
+     "We need to reduce our production costs.",
+     "We have to reduce our production costs.",
+     "We must reduce our production costs.",
+     "We need to cut our production costs."
+    ],
+    [
+     "La fusion devrait être finalisée en décembre.",
+     "The merger is expected to be finalized in December.",
+     "The merger should be finalized in December.",
+     "The merger is expected to be finalised in December."
+    ],
+    [
+     "Tous les visiteurs doivent se conformer aux règles de sécurité.",
+     "All visitors must comply with the safety rules.",
+     "All visitors must comply with safety rules.",
+     "All visitors must comply with the safety regulations."
+    ]
+   ],
+   "v": [
+    [
+     "fusion",
+     "merger"
+    ],
+    [
+     "se conformer",
+     "comply"
+    ],
+    [
+     "dépasser",
+     "exceed"
+    ],
+    [
+     "rembourser",
+     "reimburse"
+    ],
+    [
+     "renouveler",
+     "renew"
+    ],
+    [
+     "actionnaire",
+     "shareholder"
+    ]
+   ],
+   "orig": 1
+  },
+  {
+   "t": "Part 7 : compréhension écrite",
+   "lv": 3,
+   "d": "E-mails, annonces, offres d'emploi, messages",
+   "tip": "Lis d'abord la question, puis cherche le passage précis. Pour « NOT mentioned », élimine les trois réponses que tu retrouves dans le texte.",
+   "rd": [
+    {
+     "x": "To: All staff\nFrom: Facilities Department\nSubject: Parking lot maintenance\n\nPlease note that the east parking lot will be closed from Monday, March 3, to Wednesday, March 5, for repainting. During this period, employees may park in the visitor lot on Green Street. Shuttle buses will run every 15 minutes between the visitor lot and the main entrance. We apologize for any inconvenience.",
+     "q": [
+      [
+       "What is the purpose of the e-mail?",
+       [
+        "To announce a temporary closure",
+        "To introduce a new shuttle company",
+        "To ask staff to repaint the lot",
+        "To change office hours"
+       ],
+       0,
+       "Le parking sera fermé trois jours : fermeture temporaire."
+      ],
+      [
+       "How often will the shuttle buses run?",
+       [
+        "Every 15 minutes",
+        "Every 5 minutes",
+        "Every hour",
+        "Only in the morning"
+       ],
+       0,
+       "« every 15 minutes »."
+      ]
+     ]
+    },
+    {
+     "x": "Brightline Hotels is seeking a Front Desk Supervisor for its downtown location. Responsibilities include training new staff, handling guest complaints, and preparing weekly schedules. Candidates must have at least three years of experience in hospitality. Fluency in a second language is a plus. To apply, send your résumé by April 30.",
+     "q": [
+      [
+       "What is NOT mentioned as a responsibility?",
+       [
+        "Ordering supplies",
+        "Training new staff",
+        "Handling complaints",
+        "Preparing schedules"
+       ],
+       0,
+       "Les trois autres tâches sont citées ; la commande de fournitures n'apparaît pas."
+      ],
+      [
+       "What is required for the position?",
+       [
+        "Three years of hospitality experience",
+        "Fluency in two languages",
+        "A university degree",
+        "A driver's license"
+       ],
+       0,
+       "« must have » = obligatoire. La langue étrangère est seulement « a plus »."
+      ]
+     ]
+    },
+    {
+     "x": "Riverside Library — Summer Reading Program\nChildren aged 6 to 12 can join our free summer reading program starting June 15. Participants who read ten books by August 31 will receive a certificate and a free ticket to the city aquarium. Registration is available online or at the information desk. Space is limited to 50 children.",
+     "q": [
+      [
+       "What will participants receive for reading ten books?",
+       [
+        "A certificate and an aquarium ticket",
+        "A new book",
+        "A library card",
+        "A cash prize"
+       ],
+       0,
+       "« a certificate and a free ticket to the city aquarium »."
+      ],
+      [
+       "What is suggested about the program?",
+       [
+        "The number of places is limited",
+        "It costs ten dollars",
+        "It is for adults",
+        "It ends in June"
+       ],
+       0,
+       "« Space is limited to 50 children »."
+      ]
+     ]
+    },
+    {
+     "x": "Mina Park (9:12 A.M.): Hi Tom, the client from Osaka just landed. Can you pick him up at the airport?\nTom Reyes (9:14 A.M.): I'm in a meeting until 10. Could Julia go instead?\nMina Park (9:15 A.M.): She's off today. I'll call a taxi for him then.\nTom Reyes (9:16 A.M.): Good idea. I'll meet him at the office at 10:30.",
+     "q": [
+      [
+       "Why can't Tom go to the airport?",
+       [
+        "He is in a meeting",
+        "He is on vacation",
+        "He doesn't have a car",
+        "He is sick"
+       ],
+       0,
+       "« I'm in a meeting until 10 »."
+      ],
+      [
+       "At 9:15 A.M., what does Mina mean when she writes, \"She's off today\"?",
+       [
+        "Julia is not working today",
+        "Julia left early",
+        "Julia is angry",
+        "Julia's phone is off"
+       ],
+       0,
+       "« to be off » = être en congé / ne pas travailler."
+      ]
+     ]
+    }
+   ],
+   "c": [
+    [
+     "The parking lot will be closed ___ Monday to Wednesday.",
+     [
+      "from",
+      "since",
+      "between",
+      "during"
+     ],
+     0,
+     "from … to … = du … au …"
+    ],
+    [
+     "Fluency in a second language is a ___, but not required.",
+     [
+      "plus",
+      "more",
+      "bonus to",
+      "benefit of"
+     ],
+     0,
+     "« is a plus » = est un atout."
+    ]
+   ],
+   "v": [
+    [
+     "atout",
+     "asset"
+    ],
+    [
+     "candidature",
+     "application"
+    ],
+    [
+     "inscription",
+     "registration"
+    ],
+    [
+     "navette",
+     "shuttle"
+    ],
+    [
+     "entretien (travaux)",
+     "maintenance"
+    ],
+    [
+     "responsabilités",
+     "duties"
+    ]
+   ],
+   "orig": 1
+  },
+  {
+   "t": "Part 6 : insérer la bonne phrase",
+   "lv": 3,
+   "d": "Phrase manquante, connecteurs logiques, références (they, it)",
+   "tip": "En Part 6, une question sur quatre demande d'insérer une phrase entière : relis la phrase d'avant et celle d'après. La bonne phrase reprend une idée précise (pronom, connecteur, référence) ; les autres sont souvent vraies mais hors sujet.",
+   "c": [
+    [
+     "« Our office will be closed on Monday for the holiday. ___ We will reopen on Tuesday at 9 a.m. »",
+     [
+      "During this time, urgent requests can be sent to help@corp.com.",
+      "Our new office has a large parking lot.",
+      "Thank you for applying for the position.",
+      "The holiday party was a great success."
+     ],
+     0,
+     "La phrase doit concerner la fermeture : que faire pendant ce temps."
+    ],
+    [
+     "« Thank you for your order #4521. ___ You will receive a tracking number by e-mail. »",
+     [
+      "Your package was shipped this morning.",
+      "We are currently hiring drivers.",
+      "Our store opens at ten.",
+      "Please visit our new showroom."
+     ],
+     0,
+     "Le numéro de suivi suit logiquement l'expédition."
+    ],
+    [
+     "« We are pleased to welcome Ms. Diaz as our new marketing director. ___ She will start on May 1. »",
+     [
+      "She has over fifteen years of experience in the field.",
+      "The marketing budget was reduced.",
+      "Please return your keys to reception.",
+      "Our offices are located downtown."
+     ],
+     0,
+     "On présente une nouvelle recrue : son expérience."
+    ],
+    [
+     "« The elevator in Building B will be inspected on Friday. ___ We apologize for any inconvenience. »",
+     [
+      "Please use the stairs or the elevator in Building A.",
+      "The inspection report was very positive.",
+      "Building B was built in 1998.",
+      "Friday is a public holiday."
+     ],
+     0,
+     "La phrase propose une solution pendant l'inspection, avant les excuses."
+    ],
+    [
+     "Sales have doubled this year. ___, we will hire five new employees.",
+     [
+      "Therefore",
+      "However",
+      "Otherwise",
+      "Instead"
+     ],
+     0,
+     "Conséquence : therefore (par conséquent)."
+    ],
+    [
+     "The new software is easy to use. ___, it is not compatible with older computers.",
+     [
+      "However",
+      "Therefore",
+      "In addition",
+      "As a result"
+     ],
+     0,
+     "Opposition : however."
+    ],
+    [
+     "Please read the attached guidelines. ___ will help you prepare for the interview.",
+     [
+      "They",
+      "It's",
+      "Their",
+      "There"
+     ],
+     0,
+     "« They » reprend « the guidelines » (pluriel)."
+    ],
+    [
+     "We have received your application. ___, the position has already been filled.",
+     [
+      "Unfortunately",
+      "Fortunately",
+      "Similarly",
+      "Consequently"
+     ],
+     0,
+     "Mauvaise nouvelle : unfortunately."
+    ],
+    [
+     "The conference was ___ attended, with over 500 participants.",
+     [
+      "well",
+      "good",
+      "greatly",
+      "goodly"
+     ],
+     0,
+     "well attended = très fréquenté (adverbe well)."
+    ],
+    [
+     "Our records show that your payment is overdue. Please ___ it as soon as possible.",
+     [
+      "submit",
+      "submitted",
+      "submitting",
+      "to submit"
+     ],
+     0,
+     "Après « please » : base verbale."
+    ]
+   ],
+   "p": [
+    [
+     "Par conséquent, nous recruterons cinq personnes.",
+     "Therefore, we will hire five people.",
+     "Therefore, we'll hire five people.",
+     "As a result, we will hire five people."
+    ],
+    [
+     "Malheureusement, le poste a déjà été pourvu.",
+     "Unfortunately, the position has already been filled.",
+     "Unfortunately, the job has already been filled."
+    ],
+    [
+     "Veuillez utiliser l'escalier.",
+     "Please use the stairs.",
+     "Please take the stairs."
+    ]
+   ],
+   "v": [
+    [
+     "pourvoir (un poste)",
+     "fill"
+    ],
+    [
+     "en retard (paiement)",
+     "overdue"
+    ],
+    [
+     "directives",
+     "guidelines"
+    ],
+    [
+     "numéro de suivi",
+     "tracking number"
+    ],
+    [
+     "par conséquent",
+     "therefore"
+    ],
+    [
+     "candidature",
+     "application"
+    ]
+   ],
+   "l": [
+    [
+     "Has the position been filled?",
+     [
+      "Yes, we hired someone last week.",
+      "Fill it to the top.",
+      "It's a full-time job."
+     ],
+     0
+    ],
+    [
+     "When will the elevator be inspected?",
+     [
+      "On Friday morning.",
+      "On the second floor.",
+      "It goes up quickly."
+     ],
+     0
+    ],
+    [
+     "Did you get the tracking number?",
+     [
+      "It came by e-mail.",
+      "Track three is closed.",
+      "The number is very high."
+     ],
+     0
+    ],
+    [
+     "Why was the payment late?",
+     [
+      "The invoice went to the wrong address.",
+      "Late in the afternoon.",
+      "Pay at the front desk."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Part 7 : chats, annonces & doubles documents",
+   "lv": 3,
+   "d": "Messagerie, questions d'intention, croiser deux documents, insertion de phrase, NOT true",
+   "tip": "Lis d'abord les questions, puis cherche les mots clés dans le texte. Dans les doubles documents, une réponse demande souvent de croiser deux infos. Pour les questions « NOT mentioned », élimine les trois infos présentes dans le texte.",
+   "rd": [
+    {
+     "x": "Mia Lopez [10:02] Hi team, the client moved our call to 3 p.m. Can everyone still make it?\nRaj Patel [10:04] I have a dentist appointment at 3:30. I can join for the first half hour.\nTom Becker [10:05] Fine for me. Should I prepare the budget slides?\nMia Lopez [10:06] Yes please, Tom. Raj, could you send me your notes before you leave?\nRaj Patel [10:07] Sure, I'll e-mail them by noon.",
+     "q": [
+      [
+       "What is the purpose of Ms. Lopez's first message?",
+       [
+        "To announce a schedule change",
+        "To cancel a project",
+        "To request a budget increase",
+        "To invite the team to lunch"
+       ],
+       0,
+       "« the client moved our call to 3 p.m. »."
+      ],
+      [
+       "At 10:04, what does Mr. Patel mean when he writes, « I can join for the first half hour »?",
+       [
+        "He will have to leave the call early",
+        "He will arrive late",
+        "He cannot attend at all",
+        "He will lead the call"
+       ],
+       0,
+       "Rendez-vous à 15 h 30 : il partira au bout de 30 minutes."
+      ],
+      [
+       "What will Mr. Patel do by noon?",
+       [
+        "Send his notes",
+        "Prepare slides",
+        "Call the client",
+        "See the dentist"
+       ],
+       0,
+       "« I'll e-mail them by noon »."
+      ]
+     ]
+    },
+    {
+     "x": "NOTICE — Riverside Fitness Center\nStarting June 1, our opening hours will change: Monday to Friday 6 a.m. – 10 p.m., weekends 8 a.m. – 6 p.m. Monthly membership: $45. Annual membership: $450 (two months free!).\n\n— E-mail —\nTo: info@riversidefitness.com\nFrom: Paul Grant\nSubject: Membership\nHello, I usually work out on Sunday evenings after 7 p.m. Will that still be possible after June 1? Also, I'd like to switch to the annual plan. Can I pay in two installments?\nPaul Grant",
+     "q": [
+      [
+       "Why will Mr. Grant probably need to change his habits?",
+       [
+        "The center will close at 6 p.m. on weekends",
+        "The monthly fee will increase",
+        "The center will close on Sundays",
+        "His membership will expire"
+       ],
+       0,
+       "Il s'entraîne le dimanche après 19 h ; le week-end, le centre fermera à 18 h."
+      ],
+      [
+       "How much does the plan Mr. Grant wants cost?",
+       [
+        "$450",
+        "$45",
+        "$540",
+        "$90"
+       ],
+       0,
+       "Il veut l'abonnement annuel : 450 $."
+      ],
+      [
+       "What does Mr. Grant ask about?",
+       [
+        "Paying in two parts",
+        "Getting a refund",
+        "Bringing a guest",
+        "Using the pool"
+       ],
+       0,
+       "« Can I pay in two installments? »."
+      ]
+     ]
+    },
+    {
+     "x": "JOB OPENING — Customer Support Specialist (Remote)\nNovaTech is looking for a friendly, organized person to answer customer questions by phone and chat. Requirements: at least two years of experience in customer service, fluent English, and basic computer skills. Knowledge of Spanish is a plus. Benefits include flexible hours and a yearly training budget. To apply, send your résumé and a short cover letter to jobs@novatech.com by March 15.",
+     "q": [
+      [
+       "What is NOT mentioned as a requirement?",
+       [
+        "A university degree",
+        "Fluent English",
+        "Customer service experience",
+        "Computer skills"
+       ],
+       0,
+       "Le diplôme n'est jamais mentionné ; les trois autres sont exigés."
+      ],
+      [
+       "What is indicated about the position?",
+       [
+        "It can be done from home",
+        "It requires travel",
+        "It is part-time",
+        "It starts on March 15"
+       ],
+       0,
+       "« Remote » = à distance."
+      ],
+      [
+       "What would give an applicant an advantage?",
+       [
+        "Speaking Spanish",
+        "Owning a car",
+        "Living near the office",
+        "Having a sales license"
+       ],
+       0,
+       "« Knowledge of Spanish is a plus »."
+      ]
+     ]
+    },
+    {
+     "x": "Dear Ms. Romano,\nThank you for staying at the Grand Lake Hotel last week. We are sorry to hear that the air conditioning in your room was not working properly. [1] As an apology, we have refunded one night of your stay to your credit card. [2] We have also asked our maintenance team to check every unit on your floor. [3] We hope to welcome you again soon.\nSincerely,\nDavid Moore, Guest Relations Manager",
+     "q": [
+      [
+       "Why did Mr. Moore write to Ms. Romano?",
+       [
+        "To respond to a complaint",
+        "To confirm a reservation",
+        "To offer her a job",
+        "To announce a price increase"
+       ],
+       0,
+       "Il répond à un problème de climatisation qu'elle a signalé."
+      ],
+      [
+       "What has the hotel done for Ms. Romano?",
+       [
+        "Refunded one night",
+        "Upgraded her room",
+        "Sent her a gift",
+        "Canceled her booking"
+       ],
+       0,
+       "« we have refunded one night »."
+      ],
+      [
+       "In which position does this sentence best fit: « The refund should appear within five business days »?",
+       [
+        "[2]",
+        "[1]",
+        "[3]",
+        "After « Sincerely »"
+       ],
+       0,
+       "La phrase parle du remboursement : juste après la phrase qui l'annonce, en [2]."
+      ]
+     ]
+    }
+   ],
+   "p": [
+    [
+     "Pouvez-vous m'envoyer vos notes avant midi ?",
+     "Can you send me your notes before noon?",
+     "Could you send me your notes before noon?",
+     "Could you send me your notes by noon?"
+    ],
+    [
+     "Les horaires d'ouverture vont changer.",
+     "The opening hours will change.",
+     "The opening hours are going to change.",
+     "Opening hours will change."
+    ],
+    [
+     "Nous vous avons remboursé une nuit.",
+     "We have refunded you one night.",
+     "We refunded you one night.",
+     "We have refunded one night."
+    ]
+   ],
+   "v": [
+    [
+     "en plusieurs fois (paiement)",
+     "in installments"
+    ],
+    [
+     "à distance",
+     "remote"
+    ],
+    [
+     "avantages (sociaux)",
+     "benefits"
+    ],
+    [
+     "un atout",
+     "a plus"
+    ],
+    [
+     "jours ouvrés",
+     "business days"
+    ],
+    [
+     "candidat",
+     "applicant"
+    ]
+   ],
+   "c": [
+    [
+     "Can I pay in two ___?",
+     [
+      "installments",
+      "instants",
+      "stalls",
+      "insulations"
+     ],
+     0,
+     "pay in installments = payer en plusieurs fois."
+    ],
+    [
+     "Knowledge of Spanish is a ___.",
+     [
+      "plus",
+      "more",
+      "most",
+      "major"
+     ],
+     0,
+     "« is a plus » = est un atout."
+    ],
+    [
+     "The refund should appear within five ___ days.",
+     [
+      "business",
+      "busy",
+      "office",
+      "businesses"
+     ],
+     0,
+     "business days = jours ouvrés."
+    ],
+    [
+     "Applicants must have ___ two years of experience.",
+     [
+      "at least",
+      "at last",
+      "at most of",
+      "less"
+     ],
+     0,
+     "at least = au moins."
+    ]
+   ],
+   "l": [
+    [
+     "Did you read the notice about the new hours?",
+     [
+      "Yes, the gym closes earlier on weekends.",
+      "I read it in an hour.",
+      "It's a new watch."
+     ],
+     0
+    ],
+    [
+     "Are you applying for the support job?",
+     [
+      "I already sent my résumé.",
+      "The job is supported.",
+      "Apply the cream twice a day."
+     ],
+     0
+    ],
+    [
+     "Has the refund been processed?",
+     [
+      "It should appear within five days.",
+      "Proceed to the exit.",
+      "It's a full refund policy."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Part 5 : passif, participes & inversions",
+   "lv": 3,
+   "d": "will be + participe, must be submitted, interested/interesting, have something done, Should you…, Not only did…",
+   "tip": "Si le sujet subit l'action, passif : be + participe passé. -ed décrit ce que ressent la personne (interested), -ing ce qui provoque le sentiment (interesting). Une phrase qui commence par Should, Had, Not only, Rarely ou Hardly inverse sujet et auxiliaire.",
+   "p": [
+    [
+     "La nouvelle politique sera mise en place le mois prochain.",
+     "The new policy will be implemented next month.",
+     "The new policy will be put in place next month."
+    ],
+    [
+     "J'ai fait réparer ma voiture.",
+     "I had my car repaired.",
+     "I got my car repaired."
+    ],
+    [
+     "Si vous avez besoin d'aide, contactez-nous.",
+     "Should you need help, contact us.",
+     "Should you need help, please contact us.",
+     "If you need help, contact us.",
+     "If you need help, please contact us.",
+     "Should you need any help, please contact us.",
+     "If you need any help, please contact us."
+    ],
+    [
+     "Les résultats étaient décevants.",
+     "The results were disappointing."
+    ]
+   ],
+   "v": [
+    [
+     "mettre en œuvre",
+     "implement"
+    ],
+    [
+     "soumettre",
+     "submit"
+    ],
+    [
+     "décevant",
+     "disappointing"
+    ],
+    [
+     "intéressé",
+     "interested"
+    ],
+    [
+     "conseil d'administration",
+     "board of directors"
+    ],
+    [
+     "concessionnaire",
+     "dealership"
+    ]
+   ],
+   "c": [
+    [
+     "The new policy ___ next month.",
+     [
+      "will be implemented",
+      "will implement",
+      "implementing",
+      "implements"
+     ],
+     0,
+     "La politique subit l'action : passif futur (will be + participe)."
+    ],
+    [
+     "All applications must ___ by Friday.",
+     [
+      "be submitted",
+      "submit",
+      "submitting",
+      "submitted"
+     ],
+     0,
+     "Modal + be + participe passé : passif."
+    ],
+    [
+     "Employees ___ in the workshop should register online.",
+     [
+      "interested",
+      "interesting",
+      "interest",
+      "interests"
+     ],
+     0,
+     "Ce que ressentent les employés : -ed (interested in)."
+    ],
+    [
+     "The results of the survey were ___.",
+     [
+      "disappointing",
+      "disappointed",
+      "disappoint",
+      "disappointment"
+     ],
+     0,
+     "Les résultats provoquent la déception : -ing."
+    ],
+    [
+     "Ms. Lee had her car ___ at the dealership.",
+     [
+      "repaired",
+      "repair",
+      "repairing",
+      "to repair"
+     ],
+     0,
+     "have + objet + participe passé = faire faire quelque chose par quelqu'un."
+    ],
+    [
+     "The manager had the intern ___ the files.",
+     [
+      "organize",
+      "organized",
+      "organizing",
+      "to organize"
+     ],
+     0,
+     "have + personne + base verbale = faire faire à quelqu'un."
+    ],
+    [
+     "___ you need further assistance, please contact our help desk.",
+     [
+      "Should",
+      "Would",
+      "Had",
+      "Were"
+     ],
+     0,
+     "Should you need… = If you need… (inversion très fréquente au TOEIC)."
+    ],
+    [
+     "Not only ___ the team finish on time, but it also stayed under budget.",
+     [
+      "did",
+      "does",
+      "has",
+      "was"
+     ],
+     0,
+     "Not only en tête de phrase → inversion avec l'auxiliaire (did)."
+    ],
+    [
+     "Rarely ___ such strong sales in the first quarter.",
+     [
+      "have we seen",
+      "we have seen",
+      "we saw",
+      "did we saw"
+     ],
+     0,
+     "Rarely en tête → inversion : have we seen."
+    ],
+    [
+     "___ the report, Mr. Kim sent it to the board.",
+     [
+      "Having reviewed",
+      "Reviewed",
+      "Being reviewed",
+      "To review"
+     ],
+     0,
+     "Having + participe = action terminée avant la suivante."
+    ],
+    [
+     "The documents ___ to the client yesterday contained an error.",
+     [
+      "sent",
+      "sending",
+      "were sent",
+      "send"
+     ],
+     0,
+     "Relative réduite : the documents (which were) sent."
+    ],
+    [
+     "Hardly ___ the meeting begun when the power went out.",
+     [
+      "had",
+      "has",
+      "did",
+      "was"
+     ],
+     0,
+     "Hardly … when + past perfect inversé : Hardly had the meeting begun."
+    ]
+   ],
+   "l": [
+    [
+     "Has the budget been approved yet?",
+     [
+      "Not yet, the board meets on Friday.",
+      "It's a very large budget.",
+      "Yes, I approve of it."
+     ],
+     0
+    ],
+    [
+     "Who's going to be interviewed for the position?",
+     [
+      "Three candidates from the shortlist.",
+      "The position was advertised online.",
+      "At ten tomorrow."
+     ],
+     0
+    ],
+    [
+     "Why was the shipment delayed?",
+     [
+      "Because of a storm at the port.",
+      "It was shipped by air.",
+      "On the loading dock."
+     ],
+     0
+    ],
+    [
+     "Should I have the printer repaired or replaced?",
+     [
+      "Let's get a quote for both first.",
+      "Yes, it printed fine.",
+      "Two copies, please."
+     ],
+     0
+    ]
+   ]
+  },
+  {
+   "t": "Part 3 & 4 : questions avec graphique",
+   "lv": 3,
+   "d": "Look at the graphic : planning, liste de prix, plan d'étage, tableau des départs",
+   "tip": "Avant l'écoute, lis le graphique et repère ce qui change d'une ligne à l'autre. La réponse n'est presque jamais citée telle quelle : on entend l'autre colonne (le nom de la session) et tu dois lire l'horaire ou le prix correspondant.",
+   "p": [
+    [
+     "Ma présentation a été déplacée à cet après-midi.",
+     "My presentation has been moved to this afternoon.",
+     "My presentation was moved to this afternoon."
+    ],
+    [
+     "Quelle formule nous conviendrait le mieux ?",
+     "Which plan would suit us best?",
+     "Which plan would work best for us?"
+    ],
+    [
+     "Le prochain train express part à 9 h 05.",
+     "The next express train leaves at 9:05.",
+     "The next express train departs at 9:05."
+    ]
+   ],
+   "v": [
+    [
+     "emploi du temps",
+     "schedule"
+    ],
+    [
+     "tarif, formule",
+     "plan"
+    ],
+    [
+     "quai",
+     "platform"
+    ],
+    [
+     "annuaire des étages",
+     "floor directory"
+    ],
+    [
+     "échanger",
+     "swap"
+    ],
+    [
+     "annulé",
+     "canceled"
+    ]
+   ],
+   "c": [
+    [
+     "The session has been moved ___ 2:30.",
+     [
+      "to",
+      "at",
+      "on",
+      "in"
+     ],
+     0,
+     "move something to + nouvel horaire."
+    ],
+    [
+     "They ___ the two sessions because the speaker was late.",
+     [
+      "swapped",
+      "swept",
+      "swap",
+      "swapping"
+     ],
+     0,
+     "swap = échanger (prétérit : swapped)."
+    ],
+    [
+     "Video calls are only ___ with the Premium plan.",
+     [
+      "available",
+      "availability",
+      "avail",
+      "availably"
+     ],
+     0,
+     "Après be : adjectif (available)."
+    ],
+    [
+     "The 8:15 train has been ___.",
+     [
+      "canceled",
+      "cancel",
+      "canceling",
+      "cancellation"
+     ],
+     0,
+     "Passif : has been + participe."
+    ]
+   ],
+   "cv": [
+    {
+     "d": [
+      [
+       "W",
+       "Did you see the conference schedule? My budget presentation has been moved."
+      ],
+      [
+       "M",
+       "Yes, they swapped it with the customer feedback session because that speaker's flight was delayed."
+      ],
+      [
+       "W",
+       "So I'm presenting right after lunch now. I'd better finish my slides this morning."
+      ]
+     ],
+     "g": "CONFERENCE SCHEDULE — ROOM A\n9:00  Marketing trends\n10:30  Budget review\n1:00  Customer feedback\n2:30  New product launch",
+     "q": [
+      [
+       "Look at the graphic. When will the woman give her presentation?",
+       [
+        "At 1:00",
+        "At 10:30",
+        "At 9:00",
+        "At 2:30"
+       ],
+       0,
+       "Sa présentation (Budget review, 10:30) est échangée avec « Customer feedback » : elle passe donc à 1:00, « right after lunch »."
+      ],
+      [
+       "Why was the schedule changed?",
+       [
+        "A speaker's flight was delayed",
+        "A room was unavailable",
+        "The budget was cut",
+        "A client canceled"
+       ],
+       0,
+       "« that speaker's flight was delayed »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "M",
+       "We need video calls and file sharing for our team of twelve."
+      ],
+      [
+       "W",
+       "The Basic plan only covers five users. The Standard plan includes file sharing, but video calls start with Premium."
+      ],
+      [
+       "M",
+       "Then let's go with that one. Enterprise is more than we need."
+      ]
+     ],
+     "g": "PRICE LIST (per month)\nBasic — $10 · 5 users\nStandard — $25 · file sharing\nPremium — $40 · file sharing + video calls\nEnterprise — $60 · all features + training",
+     "q": [
+      [
+       "Look at the graphic. How much will the man's company pay per month?",
+       [
+        "$40",
+        "$25",
+        "$10",
+        "$60"
+       ],
+       0,
+       "Il faut les appels vidéo : à partir de Premium, soit 40 $."
+      ],
+      [
+       "What does the man say about the Enterprise plan?",
+       [
+        "It offers more than they need",
+        "It is too slow",
+        "It is unavailable",
+        "It includes no training"
+       ],
+       0,
+       "« Enterprise is more than we need »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "N",
+       "Welcome to your first day at Norland Industries. After this orientation, please go straight to Human Resources to collect your badge. Then, if you have any trouble logging in to your computer, the IT team on the top floor will be happy to help."
+      ]
+     ],
+     "g": "FLOOR DIRECTORY\n1F  Reception\n2F  Accounting\n3F  Human Resources\n4F  IT Support",
+     "q": [
+      [
+       "Look at the graphic. Which floor should the listeners go to first?",
+       [
+        "The third floor",
+        "The first floor",
+        "The second floor",
+        "The fourth floor"
+       ],
+       0,
+       "Human Resources = 3F."
+      ],
+      [
+       "Who is the speaker most likely talking to?",
+       [
+        "New employees",
+        "Clients",
+        "Job applicants",
+        "Delivery drivers"
+       ],
+       0,
+       "« your first day », « orientation » : de nouveaux employés."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "W",
+       "Excuse me, my 8:15 express to Boston was canceled. What's the fastest way to get there?"
+      ],
+      [
+       "M",
+       "The local train leaves earlier, but it stops at every station. You'll actually arrive sooner on the next express."
+      ],
+      [
+       "W",
+       "Then I'll wait for that one. Thanks a lot."
+      ]
+     ],
+     "g": "DEPARTURES — BOSTON\n8:15  Express  Platform 2  CANCELED\n8:40  Local  Platform 5\n9:05  Express  Platform 2",
+     "q": [
+      [
+       "Look at the graphic. Which train will the woman take?",
+       [
+        "The 9:05 express",
+        "The 8:40 local",
+        "The 8:15 express",
+        "A later local train"
+       ],
+       0,
+       "Elle attend le prochain express : 9:05."
+      ],
+      [
+       "What does the man say about the local train?",
+       [
+        "It makes many stops",
+        "It is canceled",
+        "It is more expensive",
+        "It leaves from Platform 2"
+       ],
+       0,
+       "« it stops at every station »."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "t": "Part 7 : triples documents",
+   "lv": 3,
+   "d": "Annonce + e-mail + facture, avis + message + bon de livraison : croiser les trois documents",
+   "tip": "Dans un triple document, au moins une question oblige à croiser deux textes (ex. : le nombre de personnes dans la facture et la règle de remise dans l'annonce). Lis d'abord les questions, puis repère dans quel document chercher. Les noms, dates et chiffres qui reviennent d'un document à l'autre sont la clé.",
+   "p": [
+    [
+     "Merci de passer commande au moins 48 heures à l'avance.",
+     "Please place your order at least 48 hours in advance.",
+     "Please order at least 48 hours in advance."
+    ],
+    [
+     "Le monte-charge reste disponible pour les livraisons.",
+     "The freight elevator remains available for deliveries.",
+     "The freight elevator is still available for deliveries."
+    ],
+    [
+     "Six repas végétariens sont inclus.",
+     "Six vegetarian meals are included."
+    ]
+   ],
+   "v": [
+    [
+     "facture",
+     "invoice"
+    ],
+    [
+     "monte-charge",
+     "freight elevator"
+    ],
+    [
+     "hors service",
+     "out of service"
+    ],
+    [
+     "remise",
+     "discount"
+    ],
+    [
+     "traiteur",
+     "caterer"
+    ],
+    [
+     "livraison",
+     "delivery"
+    ]
+   ],
+   "c": [
+    [
+     "Orders must be placed at least 48 hours ___ advance.",
+     [
+      "in",
+      "on",
+      "at",
+      "by"
+     ],
+     0,
+     "in advance = à l'avance."
+    ],
+    [
+     "Elevator A will be out ___ service on Monday.",
+     [
+      "of",
+      "from",
+      "off",
+      "for"
+     ],
+     0,
+     "out of service = hors service."
+    ]
+   ],
+   "l": [
+    [
+     "Has the invoice been sent to the client?",
+     [
+      "It went out this morning.",
+      "It's in my voice mail.",
+      "The client is new."
+     ],
+     0
+    ],
+    [
+     "Which elevator is out of service today?",
+     [
+      "Elevator B, until Thursday.",
+      "Yes, the service was great.",
+      "On the ninth floor."
+     ],
+     0
+    ],
+    [
+     "Did you order lunch for the training day?",
+     [
+      "Yes, the premium menu.",
+      "The training was useful.",
+      "I'd like to, thanks."
+     ],
+     0
+    ]
+   ],
+   "rd": [
+    {
+     "x": "DOCUMENT 1 — Advertisement\nGreenleaf Catering\nBusiness lunches delivered anywhere downtown.\nStandard menu: $12 per person · Premium menu: $18 per person\nOrders of 30 people or more: 10% off.\nOrders must be placed at least 48 hours in advance.\n\nDOCUMENT 2 — E-mail\nTo: orders@greenleafcatering.com\nFrom: Paula Grant, Orion Consulting\nDate: Monday, May 4\nSubject: Lunch for our training day\n\nHello,\nWe would like the premium menu for our training day on Thursday, May 7. We expect 25 participants. Could you also include vegetarian options for six of them?\nThank you,\nPaula Grant\n\nDOCUMENT 3 — Invoice\nGreenleaf Catering — Invoice #4471\nClient: Orion Consulting\nDelivery: Thursday, May 7, 12:00\nPremium menu × 32 ........ $576.00\nDiscount (10%) .......... −$57.60\nTotal .................... $518.40\nNote: Six vegetarian meals included.",
+     "q": [
+      [
+       "Why was Orion Consulting given a discount?",
+       [
+        "The final order was for more than 30 people",
+        "The order was placed 48 hours in advance",
+        "Ms. Grant asked for vegetarian meals",
+        "It was the company's first order"
+       ],
+       0,
+       "Annonce : −10 % dès 30 personnes ; la facture compte 32 repas."
+      ],
+      [
+       "What is suggested about the training day?",
+       [
+        "More people attended than first expected",
+        "It was postponed to May 8",
+        "It took place at Greenleaf Catering",
+        "Only vegetarian meals were served"
+       ],
+       0,
+       "E-mail : 25 participants prévus ; facture : 32 repas."
+      ],
+      [
+       "How much does one premium lunch cost before any discount?",
+       [
+        "$18",
+        "$12",
+        "$16.20",
+        "$576"
+       ],
+       0,
+       "Annonce : Premium menu: $18 per person."
+      ],
+      [
+       "Did Ms. Grant meet the ordering deadline?",
+       [
+        "Yes, she ordered three days before the event",
+        "No, she ordered on the day of the event",
+        "No, she ordered one day too late",
+        "The documents do not say when she ordered"
+       ],
+       0,
+       "E-mail du lundi 4 mai pour le jeudi 7 mai : bien plus de 48 heures avant."
+      ]
+     ]
+    },
+    {
+     "x": "DOCUMENT 1 — Notice\nRiverside Business Center — Elevator maintenance\nElevator A: out of service Monday and Tuesday\nElevator B: out of service Wednesday and Thursday\nThe freight elevator remains available, for deliveries only.\n\nDOCUMENT 2 — Text message (Tuesday, 8:52 A.M.)\nFrom: Ken Ito\nHi Sara, the new printers are arriving at our office on the 9th floor tomorrow at 10. The supplier says they're too heavy to carry up the stairs. Can you take care of it? I'll be at the client's all day tomorrow.\n\nDOCUMENT 3 — Delivery confirmation\nPrintPro Supplies\nDelivered to: Ito & Partners, 9th floor, Riverside Business Center\nDate: Wednesday, 10:05 A.M.\nItems: 2 laser printers\nReceived by: S. Moreau\nComments: Delivered using the freight elevator.",
+     "q": [
+      [
+       "Which elevator was out of service when the printers were delivered?",
+       [
+        "Elevator B",
+        "Elevator A",
+        "The freight elevator",
+        "None of the elevators"
+       ],
+       0,
+       "Livraison le mercredi : l'ascenseur B est en maintenance mercredi et jeudi."
+      ],
+      [
+       "Who most likely is S. Moreau?",
+       [
+        "Sara, Mr. Ito's colleague",
+        "The supplier's driver",
+        "The building manager",
+        "A client of Ito & Partners"
+       ],
+       0,
+       "Ken demande à Sara de s'en occuper ; c'est « S. Moreau » qui réceptionne."
+      ],
+      [
+       "How were the printers taken up to the 9th floor?",
+       [
+        "In the freight elevator",
+        "By the stairs",
+        "In Elevator A",
+        "In Elevator B"
+       ],
+       0,
+       "Bon de livraison : « Delivered using the freight elevator »."
+      ],
+      [
+       "Why couldn't Mr. Ito receive the delivery himself?",
+       [
+        "He was at a client's office",
+        "He was on vacation",
+        "He was repairing the elevator",
+        "He does not work on the 9th floor"
+       ],
+       0,
+       "« I'll be at the client's all day tomorrow »."
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

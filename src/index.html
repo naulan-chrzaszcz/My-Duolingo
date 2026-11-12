@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F6F4FF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15121F" media="(prefers-color-scheme: dark)">
+<script>try{var t=localStorage.getItem("speakeasy-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Speakeasy">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="description" content="Apprends l'anglais (quotidien, pro, TOEIC), l'orthographe française et le coréen, façon jeu.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🐯%3C/text%3E%3C/svg%3E">
+<title>Speakeasy — Anglais, Voltaire & Coréen</title>
+<link href="fonts/fonts.css" rel="stylesheet">
+<style>
+/*CSS*/
+</style>
+</head>
+<body>
+<div id="app">
+ <header id="topbar"><div class="topin"><div class="brand"></div><button class="accbtn" id="accBtn" aria-label="Changer de compte"></button><button class="chip" id="secBtn" aria-label="Changer de section"></button><div id="stats" style="display:flex;gap:2px"></div></div></header>
+ <main id="view"></main>
+ <nav id="bottomnav">
+  <a href="#parcours" data-v="parcours"><span>🗺️</span>Parcours</a>
+  <a href="#entrainement" data-v="entrainement"><span>🏋️</span>Entraînement</a>
+  <a href="#histoires" data-v="histoires"><span>📖</span>Histoires</a>
+  <a href="#ligue" data-v="ligue"><span>🏆</span>Ligue</a>
+  <a href="#boutique" data-v="boutique"><span>🛍️</span>Boutique</a>
+  <a href="#profil" data-v="profil"><span>🐯</span>Profil</a>
+ </nav>
+</div>
+<div id="lesson" class="hidden"></div>
+<div id="modal" class="hidden"></div>
+<canvas id="confetti"></canvas>
+<div id="toasts" aria-live="polite"></div>
+<script>
+/*JS*/
+</script>
+</body>
+</html>

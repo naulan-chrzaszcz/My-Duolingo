@@ -1,0 +1,300 @@
+// Écran Profil et réglages
+import { COURSES } from "../content/index.js";
+import { ACC, MEM, S, curAcc, save, saveAcc, set_S } from "../core/accounts.js";
+import { hydrate } from "../core/progress.js";
+import { KEY } from "../core/state.js";
+import { $, dkey, esc } from "../core/util.js";
+import { level, lvlXp } from "../core/xp.js";
+import { pairOf } from "../exercises/generate.js";
+import { shareProgress } from "../features/coach.js";
+import { BADGES } from "../features/quests.js";
+import { KO_READY, UI } from "../i18n/locale.js";
+import { unlockedUnits } from "../lesson/build.js";
+import { accountForm, accountPicker, deleteAcc, exportAcc, importAcc } from "./accounts.js";
+import { setUi } from "./language.js";
+import { weekStart, weekXp } from "./league.js";
+import { AI_MODELS, aiCfg, aiDetect, aiDirect, aiKey, aiLabel, aiSetCfg } from "../services/ai.js";
+import { SRV, srv } from "../services/cloud.js";
+import { goOnline, pushCapable, remindSet } from "../services/reminders.js";
+import { SR0, beep, say, set_SR } from "../services/speech.js";
+import { mascot } from "../ui/mascot.js";
+import { IOS, STANDALONE, THEME, haptic, setTheme } from "../ui/platform.js";
+import { avatar, curCid, curSec, renderAll } from "../ui/router.js";
+import { closeModal, modal, toast } from "../ui/ui.js";
+
+export function renderProfile(v) {
+  const lv = level(S.xp),
+    a = lvlXp(lv),
+    b = lvlXp(lv + 1);
+  const days = [];
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    days.push({ k: dkey(d), l: "DLMMJVS"[d.getDay()], x: S.week[dkey(d)] || 0, t: i === 0 });
+  }
+  const mx = Math.max(S.goal, ...days.map(d => d.x));
+  v.innerHTML = `<div class="phead">${mascot("happy", "jump")}<div style="flex:1"><h1 class="sectitle">${esc((curAcc() || {}).name || "Mon profil")}</h1><div style="color:var(--muted);margin-bottom:8px">Niveau ${lv} · ${S.xp} XP au total</div><div class="bar pri"><i style="width:${Math.round(((S.xp - a) / (b - a)) * 100)}%"></i><span>${S.xp - a} / ${b - a} XP → niveau ${lv + 1}</span></div></div></div>
+ <div class="sgrid"><div class="sbox"><span class="si">🔥</span><div><b>${S.streak}</b><small>jours de série</small></div></div><div class="sbox"><span class="si">⚡</span><div><b>${S.xp}</b><small>XP total</small></div></div><div class="sbox"><span class="si">📘</span><div><b>${S.lessons}</b><small>séances</small></div></div><div class="sbox"><span class="si">💯</span><div><b>${S.perfect}</b><small>leçons parfaites</small></div></div><div class="sbox"><span class="si">🎯</span><div><b>${S.bestCombo}</b><small>meilleur combo</small></div></div><div class="sbox"><span class="si">🎙️</span><div><b>${S.spoke}</b><small>phrases dites</small></div></div></div>
+ <div class="card"><h3>📊 Cette semaine</h3><div class="week">${days.map(d => `<div class="${d.t ? "today" : ""}"><small>${d.x}</small><i style="height:${Math.max(3, (d.x / mx) * 90)}%"></i><small>${d.l}</small></div>`).join("")}</div></div>
+ <div class="card"><h3>🏅 Badges (${S.badges.length}/${BADGES.length})</h3><div class="badges">${BADGES.map(x => `<div class="badge ${S.badges.includes(x.id) ? "" : "lock"}"><div class="bi">${x.ic}</div><b>${x.n}</b><small>${x.d}</small></div>`).join("")}</div></div>
+ <div class="card"><h3>📊 Statistiques par notion</h3><p class="secsub" style="margin:0 0 10px">Ta réussite par unité, par compétence et tes erreurs récurrentes.</p><button class="btn" onclick="location.hash='stats'">Voir mes statistiques</button></div>
+ <div class="card"><h3>👤 Compte</h3>
+  <div class="setrow"><span style="display:flex;align-items:center;gap:10px">${avatar(curAcc(), 40)}<span>${esc((curAcc() || {}).name || "")}<br><small style="color:var(--muted)">${(curAcc() || {}).srv ? "☁️ Compte en ligne · synchronisé" : (curAcc() || {}).pin ? "🔒 Protégé par code PIN" : "Sans code PIN"}</small></span></span><button class="btn ghost" id="aEdit" style="padding:8px 14px">Modifier</button></div>
+  <div class="setrow"><span>Changer de compte (${ACC.list.length})</span><button class="btn ghost" id="aSwitch" style="padding:8px 14px">Changer</button></div>
+  <div class="setrow"><span>Transférer ma progression sur un autre appareil</span><button class="btn ghost" id="aExp" style="padding:8px 14px">Exporter</button></div>
+  <div class="setrow"><span>Récupérer une progression exportée</span><button class="btn ghost" id="aImp" style="padding:8px 14px">Importer</button></div>
+  ${(curAcc() || {}).srv ? `<div class="setrow"><span>Se déconnecter de cet appareil</span><button class="btn ghost" id="aOut" style="padding:8px 14px">Déconnexion</button></div>` : ""}
+  <div class="setrow"><span>Supprimer ce compte</span><button class="btn badb" id="aDel" style="padding:8px 14px">Supprimer</button></div></div>
+ ${IOS && !STANDALONE && !(curAcc() || {}).srv ? "<div class=\"tipbox\">⚠️ Sur iPhone, Safari peut effacer les données d'un site que tu n'as pas ouvert depuis 7 jours. Pour ne jamais perdre ta progression : crée un compte en ligne, ou installe l'app sur l'écran d'accueil.</div>" : ""}
+ <div class="card" id="aiCard"><h3>🤖 Mon Claude</h3><p class="secsub" style="margin:0 0 10px">L'IA crée tes exercices toujours différents, le coach d'erreurs, les thèmes, les rédactions corrigées, les unités et les histoires inédites. Chaque profil utilise <b>sa propre clé</b> : elle reste sur cet appareil et n'est jamais envoyée à notre serveur de comptes.</p>
+  <div class="setrow"><span>État</span><span id="aiStat" style="color:var(--muted);font-size:14px;text-align:right">…</span></div>
+  <label class="flabel">Clé API Claude</label><div class="keyrow"><input class="finput" id="aiKey" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="sk-ant-api03-…" value="${esc(aiKey())}"><button class="iconbtn" id="aiEye" aria-label="Afficher la clé">👁️</button></div>
+  <label class="flabel">Modèle</label><select id="aiModel" class="finput">${Object.entries(AI_MODELS)
+    .map(([k, v]) => `<option value="${k}" ${(aiCfg().model || "auto") === k ? "selected" : ""}>${v[0]}</option>`)
+    .join("")}</select>
+  <div id="aiMsg" class="aimsg"></div>
+  <div class="aibtns"><button class="btn" id="aiSave">Enregistrer et tester</button>${aiKey() ? '<button class="btn ghost" id="aiDel">Retirer ma clé</button>' : ""}</div>
+  <details class="aihelp"><summary>Comment obtenir ma clé ?</summary><ol><li>Va sur <b>console.anthropic.com</b> et connecte-toi (ou crée un compte).</li><li>Menu <b>Billing</b> : ajoute quelques euros de crédit (l'API est facturée à l'usage, séparément de l'abonnement claude.ai).</li><li>Menu <b>API Keys</b> → <b>Create Key</b>, puis copie la clé qui commence par <code>sk-ant-</code>.</li><li>Colle-la ici. « Automatique » utilise Haiku pour les exercices (quelques centimes par séance) et Sonnet pour les corrections et les créations.</li></ol></details></div>
+ <div class="card"><h3>⚙️ Réglages</h3>
+  <div class="setrow"><span>🌓 Thème</span><select id="sTheme"><option value="auto" ${THEME() === "auto" ? "selected" : ""}>Automatique</option><option value="light" ${THEME() === "light" ? "selected" : ""}>Clair</option><option value="dark" ${THEME() === "dark" ? "selected" : ""}>Sombre</option></select></div>
+  <div class="setrow"><span>🌐 Langue · Language${KO_READY ? " · 언어" : ""}</span><select id="sUi" class="notr"><option value="fr" ${UI === "fr" ? "selected" : ""}>Français</option><option value="en" ${UI === "en" ? "selected" : ""}>English</option>${KO_READY ? `<option value="ko" ${UI === "ko" ? "selected" : ""}>한국어</option>` : ""}</select></div>
+  <div class="setrow"><span>Objectif quotidien</span><select id="sGoal">${[
+    [10, "Tranquille"],
+    [20, "Normal"],
+    [30, "Sérieux"],
+    [50, "Intense"],
+  ]
+    .map(([x, l]) => `<option value="${x}" ${S.goal === x ? "selected" : ""}>${l} · ${x} XP</option>`)
+    .join("")}</select></div>
+  <div class="setrow"><span>Vitesse de la voix</span><input id="sRate" type="range" min="0.6" max="1.2" step="0.05" value="${S.set.rate}"></div>
+  <div class="setrow"><span>Lecture auto après chaque réponse</span><button class="switch ${S.set.auto ? "on" : ""}" id="sAuto" aria-label="Lecture auto"></button></div>
+  <div class="setrow"><span>Effets sonores</span><button class="switch ${S.set.sound ? "on" : ""}" id="sSound" aria-label="Sons"></button></div>
+  <div class="setrow"><span>Exercices de micro</span><button class="switch ${S.speakOff > Date.now() ? "" : "on"}" id="sMic" aria-label="Micro"></button></div>
+  <div class="setrow"><span>Exercices d'écoute</span><button class="switch ${S.listenOff > Date.now() ? "" : "on"}" id="sListen" aria-label="Écoute"></button></div>
+  <div class="setrow"><span>Vibrations (iPhone · Android)</span><button class="switch ${S.set.haptic ? "on" : ""}" id="sHap" aria-label="Vibrations"></button></div>
+  <div class="setrow"><span>🔔 Rappel quotidien<br><small style="color:var(--muted)">${!pushCapable() ? (IOS && !STANDALONE ? "Ajoute Speakeasy à l'écran d'accueil (Partager › Sur l'écran d'accueil) puis ouvre-le depuis l'icône pour l'activer." : "Non disponible sur ce navigateur.") : !(curAcc() || {}).srv ? "Nécessite un compte en ligne (gratuit) :" : S.set.remind ? "Activé à " + S.set.remind + " h, uniquement si tu n'as pas encore pratiqué ce jour-là." : "Uniquement si tu n'as pas encore pratiqué ce jour-là."}</small></span>${!pushCapable() ? "" : !(curAcc() || {}).srv ? (SRV.ok ? '<button class="chipbtn" id="sOnline">☁️ Passer en ligne</button>' : "") : `<span class="remrow"><select id="sRemH">${[8, 9, 12, 13, 17, 18, 19, 20, 21, 22].map(h => `<option value="${h}" ${(S.set.remind || 19) === h ? "selected" : ""}>${h} h</option>`).join("")}</select><button class="chipbtn" id="sRemB">${S.set.remind ? "🔕 Couper" : "🔔 Activer"}</button></span>`}</div>
+  <div class="setrow"><span>Partager ma progression</span><button class="btn ghost" id="sShare" style="padding:8px 14px">📤 Partager</button></div>
+  <div class="setrow"><span>Tester la voix</span><button class="btn ghost" id="sTest" style="padding:8px 14px">🔊 Écouter</button></div>
+  <div class="setrow"><span>Réinitialiser la progression de ce compte</span><button class="btn badb" id="sReset" style="padding:8px 14px">Réinitialiser</button></div></div>`;
+  const ao = $("#aOut");
+  if (ao)
+    ao.onclick = async () => {
+      const a = curAcc();
+      save();
+      clearTimeout(SRV.timer);
+      try {
+        await srv("save", {
+          token: a.token,
+          state: JSON.stringify(S),
+          ts: S.ts,
+          wxp: weekXp(S),
+          week: dkey(weekStart(0)),
+          xp: S.xp,
+          emoji: a.emoji,
+          color: a.color,
+        });
+        await srv("logout", { token: a.token });
+      } catch (e) {}
+      try {
+        localStorage.removeItem(KEY + ":" + a.id);
+      } catch (e) {}
+      delete MEM[a.id];
+      ACC.list = ACC.list.filter(x => x !== a);
+      ACC.current = null;
+      saveAcc();
+      set_S(hydrate({}));
+      toast("👋 Déconnecté·e");
+      if (ACC.list.length) accountPicker(true);
+      else accountForm(null, true);
+    };
+  $("#aEdit").onclick = () => accountForm(curAcc());
+  $("#aSwitch").onclick = () => accountPicker();
+  $("#aExp").onclick = exportAcc;
+  $("#aImp").onclick = importAcc;
+  $("#aDel").onclick = deleteAcc;
+  aiDetect().then(m => {
+    const e = $("#aiStat");
+    if (e) e.textContent = aiLabel(m);
+  });
+  $("#aiEye").onclick = () => {
+    const i = $("#aiKey");
+    i.type = i.type === "password" ? "text" : "password";
+  };
+  $("#aiModel").onchange = e => {
+    const c = aiCfg();
+    if (c.key) {
+      c.model = e.target.value;
+      aiSetCfg(c);
+      aiDetect().then(m => {
+        $("#aiStat").textContent = aiLabel(m);
+      });
+    }
+  };
+  $("#aiSave").onclick = async () => {
+    const k = $("#aiKey").value.trim(),
+      msg = $("#aiMsg");
+    if (!k) {
+      msg.className = "aimsg bad";
+      msg.textContent = "Colle ta clé (elle commence par sk-ant-).";
+      return;
+    }
+    if (!/^sk-ant-[A-Za-z0-9_\-]{20,}$/.test(k)) {
+      msg.className = "aimsg bad";
+      msg.textContent =
+        "Ça ne ressemble pas à une clé Claude : elle commence par « sk-ant- » et fait une centaine de caractères. Copie-la en entier.";
+      return;
+    }
+    const prev = aiCfg();
+    aiSetCfg({ key: k, model: $("#aiModel").value });
+    msg.className = "aimsg";
+    msg.textContent = "⏳ Test de la clé…";
+    await aiDetect();
+    try {
+      const t = await aiDirect(
+        'Réponds uniquement par le mot JSON {"ok":true}.',
+        { mode: "word", lang: "en-US", words: ["hello"] },
+        "quick",
+        25000,
+        20,
+      );
+      msg.className = "aimsg ok";
+      msg.textContent = "✅ Clé valide : ton Claude est connecté !";
+      beep("win");
+      haptic(2);
+    } catch (e) {
+      const fb = e && e.fallback;
+      msg.className = "aimsg " + (fb ? "" : "bad");
+      msg.textContent = fb
+        ? "Clé enregistrée. Ici l'appel direct est bloqué : Speakeasy utilisera Claude de la page."
+        : e.userMsg ||
+          (e.message === "timeout"
+            ? "⏳ Pas de réponse (réseau ?). La clé est enregistrée, réessaie plus tard."
+            : "Clé enregistrée, mais le test a échoué (" + esc(String(e.message || e).slice(0, 80)) + ").");
+      if (e && e.status === 401 && prev.key !== k) aiSetCfg(prev.key ? prev : null);
+    }
+    aiDetect().then(m => {
+      $("#aiStat").textContent = aiLabel(m);
+    });
+    if (!$("#aiDel") && aiKey()) {
+      $(".aibtns").insertAdjacentHTML("beforeend", '<button class="btn ghost" id="aiDel">Retirer ma clé</button>');
+      $("#aiDel").onclick = () => {
+        aiSetCfg(null);
+        toast("🔑 Clé retirée de cet appareil");
+        renderAll();
+      };
+    }
+  };
+  const ad = $("#aiDel");
+  if (ad)
+    ad.onclick = () => {
+      aiSetCfg(null);
+      toast("🔑 Clé retirée de cet appareil");
+      renderAll();
+    };
+  $("#sHap").onclick = e => {
+    S.set.haptic = !S.set.haptic;
+    e.target.classList.toggle("on", S.set.haptic);
+    save();
+    haptic(1);
+  };
+  $("#sShare").onclick = shareProgress;
+  const rb = $("#sRemB"),
+    rh = $("#sRemH");
+  if (rb)
+    rb.onclick = async () => {
+      rb.disabled = true;
+      const ok = await remindSet(S.set.remind ? 0 : +rh.value);
+      rb.disabled = false;
+      if (ok) renderAll();
+    };
+  if (rh)
+    rh.onchange = async () => {
+      if (S.set.remind) {
+        await remindSet(+rh.value);
+        renderAll();
+      }
+    };
+  const so = $("#sOnline");
+  if (so) so.onclick = () => goOnline();
+  $("#sGoal").onchange = e => {
+    S.goal = +e.target.value;
+    save();
+  };
+  $("#sUi").onchange = e => setUi(e.target.value);
+  $("#sTheme").onchange = e => setTheme(e.target.value);
+  $("#sRate").onchange = e => {
+    S.set.rate = +e.target.value;
+    save();
+    say("Hello! This is how I sound.", "en-US");
+  };
+  $("#sAuto").onclick = e => {
+    S.set.auto = !S.set.auto;
+    e.target.classList.toggle("on", S.set.auto);
+    save();
+  };
+  $("#sSound").onclick = e => {
+    S.set.sound = !S.set.sound;
+    e.target.classList.toggle("on", S.set.sound);
+    save();
+  };
+  $("#sListen").onclick = e => {
+    S.listenOff = S.listenOff > Date.now() ? 0 : Date.now() + 365 * 864e5;
+    e.target.classList.toggle("on", !(S.listenOff > Date.now()));
+    save();
+  };
+  $("#sMic").onclick = e => {
+    try {
+      localStorage.removeItem("speakeasy-micko");
+    } catch (x) {}
+    if (SR0 && !(IOS && STANDALONE)) set_SR(SR0);
+    S.speakOff = S.speakOff > Date.now() ? 0 : Date.now() + 365 * 864e5;
+    e.target.classList.toggle("on", !(S.speakOff > Date.now()));
+    save();
+  };
+  $("#sTest").onclick = () => {
+    const l = COURSES[curCid()].lang;
+    say(
+      l.startsWith("ko")
+        ? "안녕하세요! 반가워요."
+        : l.startsWith("fr")
+          ? "Bonjour ! Prêt pour la dictée ?"
+          : "Hello! Ready to practice your English?",
+      l,
+    );
+  };
+  $("#sReset").onclick = () => {
+    const m = modal(
+      `<div class="mcenter">${mascot("sad", "sad")}<h2>Tout effacer ?</h2><p>XP, série, badges et progression seront remis à zéro. C'est définitif.</p><button class="btn badb" id="ry">Oui, tout effacer</button><button class="btn ghost" onclick="closeModal()">Annuler</button></div>`,
+    );
+    m.querySelector("#ry").onclick = () => {
+      set_S(hydrate({ onb: true, ts: Date.now(), sec: S.sec }));
+      save();
+      closeModal();
+      renderAll();
+      toast("Progression réinitialisée");
+    };
+  };
+}
+export function myWords() {
+  const s = curSec();
+  let html = "";
+  s.tracks.forEach(cid => {
+    const C = COURSES[cid];
+    const us = unlockedUnits(cid);
+    const items = [];
+    us.forEach(U => {
+      (U.v || []).forEach(w => items.push([w[1], w[0], ""]));
+      (U.p || []).forEach(a => {
+        const P = pairOf(C, a);
+        items.push([P.tgt, P.src, P.rom]);
+      });
+      (U.dd || []).forEach(d => items.push([d, "Dictée", ""]));
+    });
+    if (items.length)
+      html += `<h3 style="margin-top:12px">${C.icon} ${C.name} · ${items.length}</h3><div class="vlist">${items.map(x => `<div class="vitem"><button class="spk" data-say="${esc(x[0])}" data-l="${C.lang}">🔊</button><div class="tg">${esc(x[0])}${x[2] ? `<div class="rom">${esc(x[2])}</div>` : ""}<div class="fr">${esc(x[1])}</div></div></div>`).join("")}</div>`;
+  });
+  const m = modal(
+    `<h2>📒 Mes mots ${s.flag}</h2><p>Tout ce que tu as débloqué dans le parcours. Touche 🔊 pour écouter.</p>${html || '<div class="empty">Rien pour l\'instant</div>'}<button class="btn" onclick="closeModal()">Fermer</button>`,
+  );
+  m.querySelectorAll("[data-say]").forEach(b => (b.onclick = () => say(b.dataset.say, b.dataset.l)));
+}

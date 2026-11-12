@@ -1,0 +1,24 @@
+{
+  "name": "speakeasy",
+  "version": "26.0.0",
+  "description": "Speakeasy : application d'apprentissage des langues façon Duolingo (anglais, TOEIC, Voltaire, coréen, FLE)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check && tsc --noEmit -p .",
+    "format": "prettier --write \"src/**/*.{js,ts}\"",
+    "serve": "node scripts/serve.mjs",
+    "test": "node tests/run.mjs quick",
+    "test:all": "node tests/run.mjs all",
+    "zip": "node scripts/build.mjs --minify && node scripts/package.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "prettier": "^3.8.0",
+    "typescript": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,36 @@
+{
+ "levels": [
+  "Facile",
+  "Intermédiaire",
+  "Avancé",
+  "Expert"
+ ],
+ "sections": [
+  {
+   "id": "en",
+   "name": "Anglais",
+   "flag": "🇬🇧",
+   "tracks": [
+    "en-daily",
+    "en-pro",
+    "en-toeic"
+   ]
+  },
+  {
+   "id": "fr",
+   "name": "Voltaire",
+   "flag": "🇫🇷",
+   "tracks": [
+    "fr-volt"
+   ]
+  },
+  {
+   "id": "ko",
+   "name": "Coréen",
+   "flag": "🇰🇷",
+   "tracks": [
+    "ko"
+   ]
+  }
+ ]
+}

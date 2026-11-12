@@ -1,0 +1,182 @@
+// Décomposition et composition des syllabes coréennes.
+// Premier module écrit en TypeScript : modèle pour le nouveau code (les autres modules l'importent avec « ./hangul.js »).
+
+/** Consonnes initiales (19), dans l'ordre Unicode. */
+export const HG_CHO: readonly string[] = [
+  "ㄱ",
+  "ㄲ",
+  "ㄴ",
+  "ㄷ",
+  "ㄸ",
+  "ㄹ",
+  "ㅁ",
+  "ㅂ",
+  "ㅃ",
+  "ㅅ",
+  "ㅆ",
+  "ㅇ",
+  "ㅈ",
+  "ㅉ",
+  "ㅊ",
+  "ㅋ",
+  "ㅌ",
+  "ㅍ",
+  "ㅎ",
+];
+/** Voyelles (21), dans l'ordre Unicode. */
+export const HG_JUNG: readonly string[] = [
+  "ㅏ",
+  "ㅐ",
+  "ㅑ",
+  "ㅒ",
+  "ㅓ",
+  "ㅔ",
+  "ㅕ",
+  "ㅖ",
+  "ㅗ",
+  "ㅘ",
+  "ㅙ",
+  "ㅚ",
+  "ㅛ",
+  "ㅜ",
+  "ㅝ",
+  "ㅞ",
+  "ㅟ",
+  "ㅠ",
+  "ㅡ",
+  "ㅢ",
+  "ㅣ",
+];
+/** Consonnes finales (27 + absence), dans l'ordre Unicode. */
+export const HG_JONG: readonly string[] = [
+  "",
+  "ㄱ",
+  "ㄲ",
+  "ㄳ",
+  "ㄴ",
+  "ㄵ",
+  "ㄶ",
+  "ㄷ",
+  "ㄹ",
+  "ㄺ",
+  "ㄻ",
+  "ㄼ",
+  "ㄽ",
+  "ㄾ",
+  "ㄿ",
+  "ㅀ",
+  "ㅁ",
+  "ㅂ",
+  "ㅄ",
+  "ㅅ",
+  "ㅆ",
+  "ㅇ",
+  "ㅈ",
+  "ㅊ",
+  "ㅋ",
+  "ㅌ",
+  "ㅍ",
+  "ㅎ",
+];
+
+/** Découpe une syllabe en lettres : « 한 » → ["ㅎ","ㅏ","ㄴ"]. Un caractère qui n'est pas une syllabe est renvoyé tel quel. */
+export function hgDecomp(ch: string): string[] {
+  const c = ch.charCodeAt(0) - 0xac00;
+  if (c < 0 || c > 11171) return [ch];
+  return [HG_CHO[Math.floor(c / 588)], HG_JUNG[Math.floor((c % 588) / 28)], HG_JONG[c % 28]].filter(Boolean);
+}
+
+/** Assemble des lettres en syllabe : ["ㅎ","ㅏ","ㄴ"] → « 한 ». Renvoie les lettres collées si elles ne forment pas une syllabe. */
+export function hgCompose(p: string[]): string {
+  const ci = HG_CHO.indexOf(p[0]),
+    vi = HG_JUNG.indexOf(p[1]),
+    ti = p[2] ? HG_JONG.indexOf(p[2]) : 0;
+  if (ci < 0 || vi < 0 || ti < 0 || p.length > 3) return p.join("");
+  return String.fromCharCode(0xac00 + (ci * 21 + vi) * 28 + ti);
+}
+
+/** Suites de types d'exercices utilisées pour les unités d'alphabet coréen (une suite par unité). */
+export const HG_T: readonly string[][] = [
+  [
+    "jamo",
+    "jamo",
+    "jamoRev",
+    "hear",
+    "jamo",
+    "match",
+    "jamoRev",
+    "build",
+    "jamo",
+    "hear",
+    "jamoRev",
+    "build",
+    "readw",
+    "speak",
+  ],
+  [
+    "jamoRev",
+    "jamo",
+    "hear",
+    "build",
+    "jamoRev",
+    "match",
+    "build",
+    "hear",
+    "jamo",
+    "readw",
+    "build",
+    "jamoRev",
+    "hear",
+    "speak",
+  ],
+  [
+    "build",
+    "hear",
+    "readw",
+    "jamoRev",
+    "build",
+    "match",
+    "readw",
+    "hear",
+    "build",
+    "mc",
+    "readw",
+    "speak",
+    "build",
+    "hear",
+  ],
+  [
+    "readw",
+    "build",
+    "hear",
+    "readw",
+    "mc",
+    "speak",
+    "build",
+    "hear",
+    "readw",
+    "jamo",
+    "build",
+    "readw",
+    "speak",
+    "hear",
+  ],
+  [
+    "jamo",
+    "jamoRev",
+    "hear",
+    "build",
+    "readw",
+    "match",
+    "build",
+    "hear",
+    "readw",
+    "speak",
+    "mc",
+    "jamoRev",
+    "build",
+    "hear",
+    "readw",
+    "speak",
+  ],
+];

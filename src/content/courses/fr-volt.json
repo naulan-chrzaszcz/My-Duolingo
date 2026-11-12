@@ -1,0 +1,2595 @@
+{
+ "name": "Voltaire",
+ "icon": "✒️",
+ "lang": "fr-FR",
+ "kind": "volt",
+ "units": [
+  {
+   "t": "Homophones grammaticaux",
+   "lv": 0,
+   "d": "a/à, et/est, ces/ses, ou/où…",
+   "tip": "Astuce : remplace par l'imparfait. Si « avait » marche → a ; si « était » marche → est.",
+   "c": [
+    [
+     "Il ___ parti tôt ce matin.",
+     [
+      "est",
+      "et",
+      "es",
+      "ai"
+     ],
+     0,
+     "« est » = verbe être (on peut dire « était »)."
+    ],
+    [
+     "Elle ___ toujours raison.",
+     [
+      "a",
+      "à",
+      "as",
+      "ah"
+     ],
+     0,
+     "« a » = verbe avoir (on peut dire « avait »)."
+    ],
+    [
+     "Je pense ___ toi.",
+     [
+      "à",
+      "a",
+      "as",
+      "ha"
+     ],
+     0,
+     "« à » = préposition (« avait » est impossible)."
+    ],
+    [
+     "___ livres sont sur la table.",
+     [
+      "Ces",
+      "Ses",
+      "C'est",
+      "S'est"
+     ],
+     0,
+     "« Ces » = démonstratif (ceux-là). « Ses » = possessif (les siens)."
+    ],
+    [
+     "Il ___ blessé en tombant.",
+     [
+      "s'est",
+      "c'est",
+      "ses",
+      "ces"
+     ],
+     0,
+     "« s'est » = verbe pronominal (se blesser)."
+    ],
+    [
+     "___ fait longtemps que j'attends.",
+     [
+      "Ça",
+      "Sa",
+      "Çà",
+      "Sà"
+     ],
+     0,
+     "« Ça » = cela."
+    ],
+    [
+     "Tu viens ___ tu restes ?",
+     [
+      "ou",
+      "où",
+      "oû",
+      "houx"
+     ],
+     0,
+     "« ou » = ou bien. « où » = lieu ou temps."
+    ],
+    [
+     "Je ne sais pas ___ il habite.",
+     [
+      "où",
+      "ou",
+      "oû",
+      "hou"
+     ],
+     0,
+     "« où » indique le lieu."
+    ]
+   ],
+   "dd": [
+    "Il est allé à la poste et il a acheté des timbres.",
+    "Ces enfants jouent avec leurs ballons.",
+    "Où as-tu mis les clés ?",
+    "Ça m'étonnerait qu'il ait oublié."
+   ],
+   "orig": 1
+  },
+  {
+   "t": "Pluriels & féminins",
+   "lv": 0,
+   "d": "bijoux, travaux, festivals, mots composés",
+   "tip": "Bijou, caillou, chou, genou, hibou, joujou, pou prennent un x au pluriel. Bal, carnaval, chacal, festival, récital, régal prennent un s.",
+   "c": [
+    [
+     "Des ___ de famille.",
+     [
+      "bijoux",
+      "bijous",
+      "bijoues",
+      "bijou"
+     ],
+     0,
+     "Bijou fait partie des 7 mots en -ou qui prennent un x."
+    ],
+    [
+     "Les ___ de la région sont terminés.",
+     [
+      "travaux",
+      "travails",
+      "travaus",
+      "travals"
+     ],
+     0,
+     "Travail → travaux."
+    ],
+    [
+     "Elle porte des gants ___.",
+     [
+      "bleus",
+      "bleux",
+      "bleu",
+      "bleues"
+     ],
+     0,
+     "bleu → bleus (exception : pas de x)."
+    ],
+    [
+     "Des ___ de musique.",
+     [
+      "festivals",
+      "festivaux",
+      "festivales",
+      "festival"
+     ],
+     0,
+     "Festival fait partie des exceptions en -als."
+    ],
+    [
+     "C'est une ___ exigeante.",
+     [
+      "directrice",
+      "directeuse",
+      "directrise",
+      "directeure"
+     ],
+     0,
+     "Directeur → directrice."
+    ],
+    [
+     "Mes deux ___ viennent dîner.",
+     [
+      "grands-mères",
+      "grand-mères",
+      "grands-mère",
+      "grand-mère"
+     ],
+     0,
+     "Les deux éléments s'accordent : grands-mères."
+    ],
+    [
+     "Ma sœur est très ___.",
+     [
+      "sportive",
+      "sportif",
+      "sportife",
+      "sportiv"
+     ],
+     0,
+     "-if → -ive au féminin."
+    ],
+    [
+     "Les ___ sont fermées.",
+     [
+      "portes-fenêtres",
+      "porte-fenêtres",
+      "portes-fenêtre",
+      "porte-fenêtre"
+     ],
+     0,
+     "Nom + nom : les deux s'accordent."
+    ]
+   ],
+   "dd": [
+    "Il s'est mis à genoux pour ramasser les cailloux.",
+    "Nos grands-mères adorent les festivals d'été.",
+    "Ma voisine est une directrice très active."
+   ]
+  },
+  {
+   "t": "Terminaisons en [é] : -é, -er, -ez, -ai, -ais",
+   "lv": 0,
+   "d": "infinitif ou participe, vous -ez, futur -ai ou conditionnel -ais, imparfait",
+   "tip": "Le test du verbe « vendre » : si tu peux dire « vendre », écris -er (infinitif) ; si tu peux dire « vendu », écris -é (participe). Pour je -ai / -ais : remplace par « nous » → « nous finirons » = futur (-ai), « nous finirions » = conditionnel (-ais).",
+   "c": [
+    [
+     "Il faut ___ ce dossier avant midi.",
+     [
+      "envoyer",
+      "envoyé",
+      "envoyez"
+     ],
+     0,
+     "Après « il faut », on met l'infinitif (il faut vendre) : -er."
+    ],
+    [
+     "Nous avons ___ le contrat hier.",
+     [
+      "signé",
+      "signer",
+      "signez"
+     ],
+     0,
+     "Après l'auxiliaire avoir, c'est le participe passé (nous avons vendu) : -é."
+    ],
+    [
+     "Elle vient d'___ ses clients.",
+     [
+      "appeler",
+      "appelé",
+      "appelée"
+     ],
+     0,
+     "Après une préposition (de, à, pour, sans…), on met l'infinitif : -er."
+    ],
+    [
+     "Les documents ___ par le service sont prêts.",
+     [
+      "envoyés",
+      "envoyer",
+      "envoyé"
+     ],
+     0,
+     "Participe employé comme adjectif (les documents vendus) : il s'accorde avec « documents »."
+    ],
+    [
+     "Vous ___ trop vite, ralentissez !",
+     [
+      "parlez",
+      "parlé",
+      "parler"
+     ],
+     0,
+     "Avec « vous », le verbe conjugué au présent se termine par -ez."
+    ],
+    [
+     "Je l'ai entendu ___ au téléphone.",
+     [
+      "crier",
+      "crié",
+      "criait"
+     ],
+     0,
+     "Après un verbe de perception (entendre, voir), l'infinitif : « je l'ai entendu rire »."
+    ],
+    [
+     "Demain, je ___ le rapport.",
+     [
+      "terminerai",
+      "terminerais"
+     ],
+     0,
+     "Action future certaine : futur (nous terminerons) → -ai."
+    ],
+    [
+     "Si j'avais le temps, je ___ volontiers.",
+     [
+      "viendrais",
+      "viendrai"
+     ],
+     0,
+     "Après « si + imparfait », conditionnel (nous viendrions) → -ais."
+    ],
+    [
+     "Hier, je ___ au bureau quand il a appelé.",
+     [
+      "travaillais",
+      "travaillai",
+      "travaillé"
+     ],
+     0,
+     "Action en cours dans le passé (décor) : imparfait."
+    ],
+    [
+     "Ils sont allés ___ des fournitures.",
+     [
+      "acheter",
+      "acheté",
+      "achetés"
+     ],
+     0,
+     "Après un verbe de mouvement (aller, venir), l'infinitif : « ils sont allés vendre »."
+    ],
+    [
+     "Merci de ___ ce formulaire.",
+     [
+      "compléter",
+      "complété",
+      "complétez"
+     ],
+     0,
+     "Après « merci de », l'infinitif."
+    ],
+    [
+     "Veuillez ___, Madame, l'expression de mes salutations distinguées.",
+     [
+      "agréer",
+      "agréé",
+      "agréez"
+     ],
+     0,
+     "« Veuillez » est déjà l'impératif de vouloir : il est suivi de l'infinitif."
+    ]
+   ],
+   "dd": [
+    "Il faut envoyer les documents signés avant de quitter le bureau.",
+    "Demain, je terminerai le rapport que vous m'avez demandé.",
+    "Veuillez agréer, Madame, l'expression de mes salutations distinguées."
+   ]
+  },
+  {
+   "t": "Accord du participe passé",
+   "lv": 1,
+   "d": "Avec être, avec avoir, verbes pronominaux",
+   "tip": "Avec avoir : accord avec le COD seulement s'il est placé AVANT le verbe.",
+   "c": [
+    [
+     "Les lettres que j'ai ___ sont arrivées.",
+     [
+      "écrites",
+      "écrit",
+      "écrits",
+      "écrire"
+     ],
+     0,
+     "Avec avoir, accord avec le COD placé avant : que = les lettres (fém. pluriel)."
+    ],
+    [
+     "Elles sont ___ hier soir.",
+     [
+      "parties",
+      "parti",
+      "partis",
+      "partie"
+     ],
+     0,
+     "Avec être, accord avec le sujet : elles → parties."
+    ],
+    [
+     "Nous avons ___ nos devoirs.",
+     [
+      "fini",
+      "finis",
+      "finit",
+      "finies"
+     ],
+     0,
+     "COD placé après le verbe → pas d'accord."
+    ],
+    [
+     "Elle s'est ___ les mains.",
+     [
+      "lavé",
+      "lavée",
+      "lavés",
+      "laver"
+     ],
+     0,
+     "Le COD « les mains » est après le verbe → pas d'accord."
+    ],
+    [
+     "Les décisions qu'ils ont ___ sont courageuses.",
+     [
+      "prises",
+      "pris",
+      "prise",
+      "prit"
+     ],
+     0,
+     "COD qu' (= les décisions) placé avant → prises."
+    ],
+    [
+     "Ils se sont ___ pendant des heures.",
+     [
+      "parlé",
+      "parlés",
+      "parlée",
+      "parler"
+     ],
+     0,
+     "On parle À quelqu'un : se est COI → invariable."
+    ],
+    [
+     "Combien de pommes as-tu ___ ?",
+     [
+      "mangées",
+      "mangé",
+      "mangés",
+      "mangée"
+     ],
+     0,
+     "COD « combien de pommes » placé avant → accord."
+    ],
+    [
+     "Elle s'est ___ de son erreur.",
+     [
+      "aperçue",
+      "aperçu",
+      "aperçus",
+      "apercevoir"
+     ],
+     0,
+     "Verbe essentiellement pronominal (s'apercevoir) : accord avec le sujet."
+    ]
+   ],
+   "dd": [
+    "Les fleurs qu'il m'a offertes sont magnifiques.",
+    "Elles se sont souvenues de cette journée.",
+    "Nous sommes arrivés en retard à la réunion."
+   ],
+   "orig": 1
+  },
+  {
+   "t": "Accents & signes",
+   "lv": 1,
+   "d": "dû/du, là/la, crois/croîs…",
+   "tip": "L'accent distingue des homonymes : dû (devoir) / du (article), là (lieu) / la (article), où (lieu) / ou (choix).",
+   "c": [
+    [
+     "Il a ___ partir plus tôt.",
+     [
+      "dû",
+      "du",
+      "dut",
+      "dù"
+     ],
+     0,
+     "Participe passé de devoir : dû (accent pour le distinguer de « du »)."
+    ],
+    [
+     "C'est ___ que je l'ai vu.",
+     [
+      "là",
+      "la",
+      "lâ",
+      "l'a"
+     ],
+     0,
+     "« là » = adverbe de lieu."
+    ],
+    [
+     "Il a ___ le livre en une nuit.",
+     [
+      "lu",
+      "lût",
+      "lû",
+      "lus"
+     ],
+     0,
+     "Lire → lu, sans accent."
+    ],
+    [
+     "Je ___ que tu as raison.",
+     [
+      "crois",
+      "croîs",
+      "croit",
+      "croix"
+     ],
+     0,
+     "Croire : je crois (croître : je croîs)."
+    ],
+    [
+     "Il faut ___ ce problème.",
+     [
+      "résoudre",
+      "resoudre",
+      "résoudr",
+      "résoudrent"
+     ],
+     0,
+     "Résoudre : accent aigu sur le premier e."
+    ],
+    [
+     "Elle s'est ___ dans la forêt.",
+     [
+      "égarée",
+      "egarée",
+      "égaré",
+      "égarrée"
+     ],
+     0,
+     "Égarer : accent aigu, un seul r ; accord avec le sujet."
+    ],
+    [
+     "Quel ___ de temps !",
+     [
+      "gâchis",
+      "gachis",
+      "gâchi",
+      "gachîs"
+     ],
+     0,
+     "Gâchis : accent circonflexe sur le a."
+    ],
+    [
+     "Il ___ son train ce matin.",
+     [
+      "a manqué",
+      "à manqué",
+      "a manquer",
+      "à manquer"
+     ],
+     0,
+     "a (avoir) + participe passé."
+    ]
+   ],
+   "dd": [
+    "Il a dû résoudre ce problème tout seul.",
+    "Quel gâchis, il a manqué son train !",
+    "Je crois qu'elle s'est égarée dans la forêt."
+   ]
+  },
+  {
+   "t": "Homophones : la suite",
+   "lv": 1,
+   "d": "on/ont, son/sont, ce/se, leur/leurs, quant/quand, sans/s'en, peu/peut, plutôt/plus tôt",
+   "tip": "Remplace pour vérifier : on → il, ont → avaient ; son → mon, sont → étaient ; ce → cela, se → me. Devant un verbe, « leur » (= à eux) est toujours invariable.",
+   "c": [
+    [
+     "Ils ___ terminé le rapport hier soir.",
+     [
+      "ont",
+      "on",
+      "on n'"
+     ],
+     0,
+     "« ont » se remplace par « avaient » : c'est le verbe avoir."
+    ],
+    [
+     "___ nous a prévenus trop tard.",
+     [
+      "On",
+      "Ont"
+     ],
+     0,
+     "« On » se remplace par « il » : c'est le pronom."
+    ],
+    [
+     "Ses collègues ___ arrivés en avance.",
+     [
+      "sont",
+      "son"
+     ],
+     0,
+     "« sont » se remplace par « étaient » : verbe être."
+    ],
+    [
+     "Elle ___ demande si la réunion est maintenue.",
+     [
+      "se",
+      "ce"
+     ],
+     0,
+     "« se » accompagne un verbe pronominal (se demander : je me demande, elle se demande)."
+    ],
+    [
+     "___ dossier est prioritaire.",
+     [
+      "Ce",
+      "Se"
+     ],
+     0,
+     "« Ce » est ici un déterminant démonstratif (ce dossier-ci)."
+    ],
+    [
+     "Il ___ rendu compte de son erreur.",
+     [
+      "s'est",
+      "c'est",
+      "ses"
+     ],
+     0,
+     "« s'est » = se + est (se rendre compte) ; « c'est » = cela est."
+    ],
+    [
+     "Je ___ ai donné les clés hier.",
+     [
+      "leur",
+      "leurs"
+     ],
+     0,
+     "Devant un verbe, « leur » est un pronom (= à eux) : toujours invariable."
+    ],
+    [
+     "Ils ont présenté ___ résultats au comité.",
+     [
+      "leurs",
+      "leur"
+     ],
+     0,
+     "Devant un nom pluriel, le déterminant « leurs » prend un s."
+    ],
+    [
+     "___ à moi, je préfère attendre.",
+     [
+      "Quant",
+      "Quand",
+      "Qu'en"
+     ],
+     0,
+     "« Quant à » = en ce qui concerne. « Quand » = lorsque. « Qu'en » = que + en."
+    ],
+    [
+     "Il est parti ___ dire au revoir.",
+     [
+      "sans",
+      "s'en",
+      "sens"
+     ],
+     0,
+     "« sans » = préposition (absence de). « s'en » = se + en (il s'en va)."
+    ],
+    [
+     "Il ___ va toujours avant 18 h.",
+     [
+      "s'en",
+      "sans",
+      "cent"
+     ],
+     0,
+     "« s'en aller » : se + en."
+    ],
+    [
+     "Il ___ venir demain s'il le souhaite.",
+     [
+      "peut",
+      "peu",
+      "peux"
+     ],
+     0,
+     "« peut » = verbe pouvoir (il pouvait). Avec « il », jamais de x."
+    ],
+    [
+     "Nous avons ___ de temps pour finir.",
+     [
+      "peu",
+      "peut"
+     ],
+     0,
+     "« peu » = adverbe de quantité (pas beaucoup)."
+    ],
+    [
+     "Arrivez ___ que prévu : la salle ouvre à 8 h.",
+     [
+      "plus tôt",
+      "plutôt"
+     ],
+     0,
+     "« plus tôt » s'oppose à « plus tard » ; « plutôt » = de préférence."
+    ],
+    [
+     "Je prendrai ___ le train que la voiture.",
+     [
+      "plutôt",
+      "plus tôt"
+     ],
+     0,
+     "« plutôt » = de préférence."
+    ],
+    [
+     "Le dossier est ___ : vous pouvez l'envoyer.",
+     [
+      "prêt",
+      "près"
+     ],
+     0,
+     "« prêt » = préparé (féminin : prête). « près » = proche."
+    ],
+    [
+     "Il ne boit ___ café ni thé.",
+     [
+      "ni",
+      "n'y"
+     ],
+     0,
+     "« ni » = conjonction de négation (ni… ni) ; « n'y » = ne + y (il n'y va pas)."
+    ]
+   ],
+   "dd": [
+    "Quant à leurs dossiers, ils ont dit qu'on les leur rendrait plus tôt que prévu.",
+    "Elle s'est demandé si ce projet était prêt ; c'est pourquoi elle est partie sans attendre.",
+    "Ses collègues sont arrivés tôt, mais on n'avait pas encore ouvert la salle."
+   ]
+  },
+  {
+   "t": "Accord sujet-verbe",
+   "lv": 1,
+   "d": "c'est moi qui ai, sujet inversé, la plupart, plus d'un, chacun",
+   "tip": "Cherche le vrai sujet en posant « qui est-ce qui ? ». Après « c'est moi qui », le verbe s'accorde avec « moi » : c'est moi qui ai. « La plupart des… » entraîne le pluriel, « plus d'un » le singulier.",
+   "c": [
+    [
+     "C'est moi qui ___ raison.",
+     [
+      "ai",
+      "a"
+     ],
+     0,
+     "« qui » reprend « moi » : le verbe se conjugue à la 1re personne (moi qui ai)."
+    ],
+    [
+     "C'est toi qui ___ choisi cette date.",
+     [
+      "as",
+      "a"
+     ],
+     0,
+     "« qui » reprend « toi » : toi qui as."
+    ],
+    [
+     "Ce sont eux qui ___ le projet.",
+     [
+      "mènent",
+      "mène"
+     ],
+     0,
+     "« qui » reprend « eux » : 3e personne du pluriel."
+    ],
+    [
+     "La plupart des clients ___ satisfaits.",
+     [
+      "sont",
+      "est"
+     ],
+     0,
+     "Avec « la plupart », le verbe s'accorde avec le complément au pluriel."
+    ],
+    [
+     "Les dossiers que m'___ remis le directeur sont complets.",
+     [
+      "a",
+      "ont"
+     ],
+     0,
+     "Sujet inversé : c'est « le directeur » qui a remis → singulier."
+    ],
+    [
+     "Où ___ les documents que je t'ai envoyés ?",
+     [
+      "sont",
+      "est"
+     ],
+     0,
+     "Sujet inversé « les documents » : pluriel."
+    ],
+    [
+     "Mon collègue et moi ___ d'accord.",
+     [
+      "sommes",
+      "sont"
+     ],
+     0,
+     "Lui et moi = nous : 1re personne du pluriel."
+    ],
+    [
+     "Vous et lui ___ invités au séminaire.",
+     [
+      "êtes",
+      "sont"
+     ],
+     0,
+     "Vous et lui = vous : 2e personne du pluriel."
+    ],
+    [
+     "Plus d'un candidat ___ échoué.",
+     [
+      "a",
+      "ont"
+     ],
+     0,
+     "« Plus d'un » se construit avec le singulier."
+    ],
+    [
+     "Moins de deux semaines ___ suffi.",
+     [
+      "ont",
+      "a"
+     ],
+     0,
+     "« Moins de deux » entraîne le pluriel."
+    ],
+    [
+     "Chacun des participants ___ reçu un badge.",
+     [
+      "a",
+      "ont"
+     ],
+     0,
+     "« Chacun » est singulier."
+    ],
+    [
+     "Tout le monde ___ prévenu.",
+     [
+      "est",
+      "sont"
+     ],
+     0,
+     "« Tout le monde » est singulier."
+    ],
+    [
+     "Les erreurs que ___ chaque stagiaire sont normales.",
+     [
+      "commet",
+      "commettent"
+     ],
+     0,
+     "Le sujet inversé est « chaque stagiaire » : singulier."
+    ]
+   ],
+   "dd": [
+    "C'est moi qui ai envoyé les documents que m'a demandés la directrice.",
+    "La plupart des employés sont venus, mais plus d'un a oublié son badge.",
+    "Mon collègue et moi sommes prêts ; c'est toi qui as la clé."
+   ]
+  },
+  {
+   "t": "Orthographe d'usage",
+   "lv": 1,
+   "d": "développement, connexion, courrier, dilemme, parmi, occurrence, accueil, envoi",
+   "tip": "Les fautes d'usage les plus fréquentes au travail : développement (2 p, 1 l), connexion (avec x), courrier (2 r), dilemme (2 m), parmi (sans s), occurrence (2 c, 2 r), langage (sans u), accueil (ue après c).",
+   "c": [
+    [
+     "Le ___ du projet prendra six mois.",
+     [
+      "développement",
+      "dévelopement",
+      "développemment"
+     ],
+     0,
+     "Développer : 2 p, 1 l."
+    ],
+    [
+     "Vérifiez votre ___ internet.",
+     [
+      "connexion",
+      "connection",
+      "conexion"
+     ],
+     0,
+     "En français : connexion (avec x). « connection » est l'anglais."
+    ],
+    [
+     "Je n'ai pas reçu votre ___.",
+     [
+      "courrier",
+      "courier"
+     ],
+     0,
+     "Courrier : 2 r."
+    ],
+    [
+     "Nous faisons face à un ___.",
+     [
+      "dilemme",
+      "dilème",
+      "dilemne"
+     ],
+     0,
+     "Dilemme : 2 m, et pas de n."
+    ],
+    [
+     "___ les candidats, deux ont été retenus.",
+     [
+      "Parmi",
+      "Parmis"
+     ],
+     0,
+     "« Parmi » ne prend jamais de s."
+    ],
+    [
+     "Ce mot apparaît à chaque ___.",
+     [
+      "occurrence",
+      "occurence",
+      "ocurrence"
+     ],
+     0,
+     "Occurrence : 2 c et 2 r."
+    ],
+    [
+     "Évitez le ___ familier dans vos e-mails.",
+     [
+      "langage",
+      "language"
+     ],
+     0,
+     "En français : langage (sans u). « language » est l'anglais."
+    ],
+    [
+     "Nous vous remercions de votre ___.",
+     [
+      "accueil",
+      "acceuil"
+     ],
+     0,
+     "Après c, on écrit « ue » pour garder le son [k] : accueil, cueillir."
+    ],
+    [
+     "Merci de confirmer l'___ du colis.",
+     [
+      "envoi",
+      "envoie"
+     ],
+     0,
+     "Le nom « envoi » n'a pas de e (≠ il envoie, verbe)."
+    ],
+    [
+     "Il ne s'en est pas ___.",
+     [
+      "aperçu",
+      "apperçu"
+     ],
+     0,
+     "Apercevoir s'écrit avec un seul p."
+    ],
+    [
+     "Il l'a fait ___ pour vous agacer.",
+     [
+      "exprès",
+      "express"
+     ],
+     0,
+     "« exprès » = volontairement. « express » = rapide (un train express)."
+    ],
+    [
+     "Vous pouvez verser un ___ de 30 %.",
+     [
+      "acompte",
+      "accompte"
+     ],
+     0,
+     "Acompte : un seul c (à + compte)."
+    ],
+    [
+     "C'est un choix très ___.",
+     [
+      "rationnel",
+      "rationel"
+     ],
+     0,
+     "Rationnel : 2 n."
+    ]
+   ],
+   "dd": [
+    "Parmi les courriers reçus aujourd'hui, l'envoi de l'acompte a fait l'objet d'un bon accueil.",
+    "Le développement de la connexion pose un dilemme à chaque occurrence.",
+    "Il ne s'en est pas aperçu, mais elle l'a fait exprès."
+   ]
+  },
+  {
+   "t": "Conjugaison piège",
+   "lv": 2,
+   "d": "Subjonctif, futur/conditionnel, si + imparfait",
+   "tip": "Jamais de conditionnel après « si » ! Si j'avais su, je serais venu.",
+   "c": [
+    [
+     "Il faut que tu ___ à l'heure.",
+     [
+      "sois",
+      "soit",
+      "soient",
+      "es"
+     ],
+     0,
+     "Subjonctif de être, 2e personne : que tu sois."
+    ],
+    [
+     "Quand j'___ le temps, je t'appellerai.",
+     [
+      "aurai",
+      "aurais",
+      "aurait",
+      "aurez"
+     ],
+     0,
+     "Futur (action certaine) : j'aurai. « aurais » = conditionnel."
+    ],
+    [
+     "Si j'___ su, je serais venu.",
+     [
+      "avais",
+      "aurais",
+      "avait",
+      "aurai"
+     ],
+     0,
+     "Si + plus-que-parfait, jamais de conditionnel après si."
+    ],
+    [
+     "Bien qu'il ___ tard, nous continuons.",
+     [
+      "soit",
+      "est",
+      "sera",
+      "serait"
+     ],
+     0,
+     "« Bien que » + subjonctif."
+    ],
+    [
+     "Vous ___ ce que vous voulez.",
+     [
+      "faites",
+      "faisez",
+      "fesez",
+      "faîtes"
+     ],
+     0,
+     "Faire : vous faites."
+    ],
+    [
+     "Ils ___ demain matin.",
+     [
+      "partiront",
+      "partirons",
+      "partirent",
+      "partiraient"
+     ],
+     0,
+     "Futur, 3e personne du pluriel : ils partiront."
+    ],
+    [
+     "Il ___ ses fiançailles.",
+     [
+      "a rompu",
+      "a rompt",
+      "à rompu",
+      "a romput"
+     ],
+     0,
+     "Participe passé de rompre : rompu."
+    ],
+    [
+     "Je ___ que tu viennes.",
+     [
+      "veux",
+      "veut",
+      "veus",
+      "veu"
+     ],
+     0,
+     "Vouloir : je veux, tu veux, il veut."
+    ]
+   ],
+   "dd": [
+    "Il faut que nous soyons prêts avant midi.",
+    "Si tu avais travaillé, tu aurais réussi.",
+    "Bien qu'elle soit fatiguée, elle continue."
+   ],
+   "orig": 1
+  },
+  {
+   "t": "Adverbes & mots invariables",
+   "lv": 2,
+   "d": "-amment/-emment, quoique/quoi que, peut-être",
+   "tip": "Adjectif en -ant → -amment (courant → couramment) ; en -ent → -emment (évident → évidemment).",
+   "c": [
+    [
+     "Elle parle ___ coréen.",
+     [
+      "couramment",
+      "courament",
+      "courrament",
+      "couramant"
+     ],
+     0,
+     "courant → couramment."
+    ],
+    [
+     "Il a ___ raison.",
+     [
+      "évidemment",
+      "évidament",
+      "évidamment",
+      "évidement"
+     ],
+     0,
+     "évident → évidemment."
+    ],
+    [
+     "Ils sont ___ arrivés.",
+     [
+      "déjà",
+      "déja",
+      "dejà",
+      "deja"
+     ],
+     0,
+     "déjà : deux accents."
+    ],
+    [
+     "___ il soit tard, je reste.",
+     [
+      "Quoiqu'",
+      "Quoi qu'",
+      "Quoique",
+      "Quoi que"
+     ],
+     0,
+     "Quoique (en un mot) = bien que."
+    ],
+    [
+     "___ tu dises, je reste.",
+     [
+      "Quoi que",
+      "Quoique",
+      "Quoiqu'",
+      "Quoi-que"
+     ],
+     0,
+     "Quoi que (en deux mots) = quelle que soit la chose que."
+    ],
+    [
+     "Il est parti ___.",
+     [
+      "aussitôt",
+      "aussi tôt",
+      "aussitot",
+      "aussitôts"
+     ],
+     0,
+     "aussitôt = immédiatement (un mot)."
+    ],
+    [
+     "Je viendrai ___ demain.",
+     [
+      "peut-être",
+      "peut être",
+      "peutêtre",
+      "peu-être"
+     ],
+     0,
+     "peut-être (adverbe) = éventuellement."
+    ],
+    [
+     "Il ___ en retard, ce n'est pas grave.",
+     [
+      "peut être",
+      "peut-être",
+      "peu être",
+      "peut-étre"
+     ],
+     0,
+     "Verbe pouvoir + être (= il pourrait être) : sans trait d'union."
+    ]
+   ],
+   "dd": [
+    "Elle parle couramment trois langues, évidemment.",
+    "Quoi que tu dises, il viendra peut-être.",
+    "Ils sont déjà partis aussitôt après la réunion."
+   ]
+  },
+  {
+   "t": "Accord de l'adjectif",
+   "lv": 2,
+   "d": "nu, demi, ci-joint, excepté, vu, possible, grand ouvert, adjectifs composés",
+   "tip": "Placés devant le nom, « nu », « demi », « ci-joint », « excepté », « vu », « passé » restent invariables (nu-pieds, une demi-heure, excepté les stagiaires) ; placés après, ils s'accordent (pieds nus, deux heures et demie, les factures ci-jointes).",
+   "c": [
+    [
+     "Il marchait ___ sur la plage.",
+     [
+      "pieds nus",
+      "pieds nu"
+     ],
+     0,
+     "Après le nom, « nu » s'accorde : pieds nus (mais nu-pieds)."
+    ],
+    [
+     "Il attendait ___ sous la pluie.",
+     [
+      "nu-tête",
+      "nue-tête",
+      "nus-tête"
+     ],
+     0,
+     "Devant le nom, avec trait d'union, « nu » est invariable : nu-tête."
+    ],
+    [
+     "La réunion a duré une ___.",
+     [
+      "demi-heure",
+      "demie-heure",
+      "demi heure"
+     ],
+     0,
+     "Devant le nom, « demi » est invariable et suivi d'un trait d'union."
+    ],
+    [
+     "Rendez-vous à midi et ___.",
+     [
+      "demi",
+      "demie"
+     ],
+     0,
+     "« Midi » est masculin : midi et demi (mais une heure et demie)."
+    ],
+    [
+     "Il est arrivé à trois heures et ___.",
+     [
+      "demie",
+      "demi",
+      "demies"
+     ],
+     0,
+     "Après le nom, « demi » s'accorde en genre seulement : trois heures et demie."
+    ],
+    [
+     "___ les factures demandées.",
+     [
+      "Ci-joint",
+      "Ci-jointes"
+     ],
+     0,
+     "En tête de phrase, « ci-joint » est invariable."
+    ],
+    [
+     "Les factures ___ sont à régler avant lundi.",
+     [
+      "ci-jointes",
+      "ci-joint"
+     ],
+     0,
+     "Après le nom, « ci-joint » s'accorde : les factures ci-jointes."
+    ],
+    [
+     "Tous les salariés sont venus, ___ les stagiaires.",
+     [
+      "excepté",
+      "exceptés"
+     ],
+     0,
+     "Placé devant le nom, « excepté » est une préposition invariable."
+    ],
+    [
+     "___ les circonstances, la réunion est reportée.",
+     [
+      "Vu",
+      "Vues"
+     ],
+     0,
+     "Devant le nom, « vu » est une préposition invariable."
+    ],
+    [
+     "___ dix heures, l'accueil ferme.",
+     [
+      "Passé",
+      "Passées"
+     ],
+     0,
+     "Placé devant le nom, « passé » est invariable."
+    ],
+    [
+     "Il a relu le plus de pages ___.",
+     [
+      "possible",
+      "possibles"
+     ],
+     0,
+     "Après « le plus de… », « possible » reste invariable (= qu'il est possible)."
+    ],
+    [
+     "Les fenêtres étaient ___.",
+     [
+      "grandes ouvertes",
+      "grand ouvertes",
+      "grands ouverts"
+     ],
+     0,
+     "Dans « grand ouvert », « grand » s'accorde comme un adjectif : des fenêtres grandes ouvertes."
+    ],
+    [
+     "La maternité accueille les ___.",
+     [
+      "nouveau-nés",
+      "nouveaux-nés"
+     ],
+     0,
+     "Dans « nouveau-né », « nouveau » a valeur d'adverbe (nouvellement) : il reste invariable."
+    ],
+    [
+     "Les accords ___ ont été signés.",
+     [
+      "franco-allemands",
+      "francos-allemands",
+      "franco-allemand"
+     ],
+     0,
+     "Dans un adjectif composé de deux adjectifs ethniques, le premier élément en -o est invariable."
+    ]
+   ],
+   "dd": [
+    "Ci-joint les documents : la réunion durera une demi-heure et commencera à midi et demi.",
+    "Passé neuf heures, les portes restent grandes ouvertes pendant une heure et demie.",
+    "Les factures ci-jointes concernent les accords franco-allemands signés hier."
+   ]
+  },
+  {
+   "t": "Nombres & noms composés",
+   "lv": 2,
+   "d": "vingt, cent, mille, million, pluriel des noms composés",
+   "tip": "« Vingt » et « cent » prennent un s quand ils sont multipliés et terminent le nombre (quatre-vingts, deux cents), pas s'ils sont suivis d'un autre nombre (quatre-vingt-deux, deux cent trois). « Mille » est invariable ; « million » et « milliard » sont des noms et prennent un s. Noms composés : seuls les noms et adjectifs s'accordent, jamais le verbe.",
+   "c": [
+    [
+     "Le colis pèse ___ kilos.",
+     [
+      "quatre-vingts",
+      "quatre-vingt"
+     ],
+     0,
+     "« Vingt » multiplié et en fin de nombre : quatre-vingts."
+    ],
+    [
+     "La salle compte ___ places.",
+     [
+      "quatre-vingt-deux",
+      "quatre-vingts-deux"
+     ],
+     0,
+     "Suivi d'un autre nombre, « vingt » ne prend pas de s."
+    ],
+    [
+     "Le billet coûte ___ euros.",
+     [
+      "trois cents",
+      "trois cent"
+     ],
+     0,
+     "« Cent » multiplié et en fin de nombre prend un s."
+    ],
+    [
+     "Il y avait ___ participants.",
+     [
+      "deux cent cinquante",
+      "deux cents cinquante"
+     ],
+     0,
+     "Suivi d'un autre nombre, « cent » reste invariable."
+    ],
+    [
+     "L'entreprise emploie ___ salariés.",
+     [
+      "trois mille",
+      "trois milles"
+     ],
+     0,
+     "« Mille » est toujours invariable."
+    ],
+    [
+     "Le projet a coûté deux ___ d'euros.",
+     [
+      "millions",
+      "million"
+     ],
+     0,
+     "« Million » est un nom : il prend un s au pluriel."
+    ],
+    [
+     "Lisez la page ___ du rapport.",
+     [
+      "deux cent",
+      "deux cents"
+     ],
+     0,
+     "Quand le nombre a valeur d'ordinal (page deux cent = la deux-centième), « cent » reste invariable."
+    ],
+    [
+     "Nous avons acheté des ___.",
+     [
+      "tire-bouchons",
+      "tires-bouchons"
+     ],
+     0,
+     "Verbe + nom : seul le nom prend la marque du pluriel."
+    ],
+    [
+     "Les ___ de la voiture sont neufs.",
+     [
+      "essuie-glaces",
+      "essuies-glaces"
+     ],
+     0,
+     "Verbe + nom : le verbe reste invariable."
+    ],
+    [
+     "Il a rédigé les ___ de la semaine.",
+     [
+      "comptes rendus",
+      "compte rendus",
+      "comptes rendu"
+     ],
+     0,
+     "Nom + participe : les deux s'accordent."
+    ],
+    [
+     "Les ___ arrivent demain.",
+     [
+      "grands-parents",
+      "grand-parents"
+     ],
+     0,
+     "Adjectif + nom : les deux prennent la marque du pluriel."
+    ],
+    [
+     "Mes ___ partent avec nous.",
+     [
+      "belles-sœurs",
+      "belle-sœurs"
+     ],
+     0,
+     "Adjectif + nom : les deux s'accordent."
+    ]
+   ],
+   "dd": [
+    "Quatre-vingts personnes et deux cent trois salariés ont assisté à la réunion.",
+    "Mes grands-parents ont réuni deux millions d'euros en vendant des tire-bouchons.",
+    "Relisez les comptes rendus de la page quatre-vingt : il y manque deux cents mots."
+   ]
+  },
+  {
+   "t": "Conjugaison : formes pièges",
+   "lv": 2,
+   "d": "impératif, -cer/-ger, appeler, -indre/-soudre, envoyer, passé simple/imparfait",
+   "tip": "À l'impératif, les verbes en -er n'ont pas de s à la 2e personne (mange, va), sauf devant « en » et « y » (manges-en, vas-y). Les verbes en -indre et -soudre perdent le d : il peint, il résout. Futur d'« envoyer » : j'enverrai.",
+   "c": [
+    [
+     "___ le dossier avant midi.",
+     [
+      "Envoie",
+      "Envoies"
+     ],
+     0,
+     "Impératif d'un verbe en -er : pas de s à la 2e personne du singulier."
+    ],
+    [
+     "Des légumes ? ___-en davantage.",
+     [
+      "Manges",
+      "Mange"
+     ],
+     0,
+     "Devant « en » et « y », on ajoute un s pour la liaison : manges-en, vas-y."
+    ],
+    [
+     "___-y sans attendre !",
+     [
+      "Vas",
+      "Va"
+     ],
+     0,
+     "Devant « y », « va » prend un s : vas-y."
+    ],
+    [
+     "Nous ___ la réunion à 9 h.",
+     [
+      "commençons",
+      "commencons"
+     ],
+     0,
+     "Devant a et o, le c prend une cédille : nous commençons."
+    ],
+    [
+     "Nous ___ ensemble ce midi.",
+     [
+      "mangeons",
+      "mangons"
+     ],
+     0,
+     "Devant a et o, on garde le e après le g : nous mangeons."
+    ],
+    [
+     "Je t'___ dès que j'arrive.",
+     [
+      "appelle",
+      "appele"
+     ],
+     0,
+     "« Appeler » double le l devant un e muet : j'appelle."
+    ],
+    [
+     "Il ___ le mur de sa chambre.",
+     [
+      "peint",
+      "peind"
+     ],
+     0,
+     "Verbes en -indre : il peint (le d disparaît)."
+    ],
+    [
+     "Elle ___ toujours les problèmes rapidement.",
+     [
+      "résout",
+      "résoud"
+     ],
+     0,
+     "Verbes en -soudre : il résout, je résous."
+    ],
+    [
+     "J'___ le colis demain matin.",
+     [
+      "enverrai",
+      "envoierai",
+      "envoyerai"
+     ],
+     0,
+     "Futur d'« envoyer » : j'enverrai."
+    ],
+    [
+     "Vous ___ du bon travail.",
+     [
+      "faites",
+      "faisez"
+     ],
+     0,
+     "Faire : vous faites. Dire : vous dites."
+    ],
+    [
+     "Il ___ son discours par des remerciements.",
+     [
+      "conclut",
+      "conclue"
+     ],
+     0,
+     "Conclure au présent : il conclut (comme inclure : il inclut)."
+    ],
+    [
+     "Quand j'étais petit, j'___ souvent à la mer.",
+     [
+      "allais",
+      "allai"
+     ],
+     0,
+     "Habitude dans le passé : imparfait (j'allais)."
+    ],
+    [
+     "Soudain, j'___ un cri et je me retournai.",
+     [
+      "entendis",
+      "entendais"
+     ],
+     0,
+     "Action soudaine et brève, en série avec « je me retournai » : passé simple."
+    ],
+    [
+     "Il faut que tu ___ ce soir.",
+     [
+      "viennes",
+      "viens"
+     ],
+     0,
+     "Après « il faut que » : subjonctif (que tu viennes)."
+    ]
+   ],
+   "dd": [
+    "Nous commençons la réunion : appelle-moi et envoie le dossier, vas-y sans attendre.",
+    "Il peint le soir et résout ses problèmes ; nous mangeons ensuite et vous faites la vaisselle.",
+    "Soudain, j'entendis un bruit : quand j'étais enfant, j'allais souvent dans cette maison."
+   ]
+  },
+  {
+   "t": "Traits d'union, élision & négation",
+   "lv": 2,
+   "d": "donne-le-moi, a-t-il, peut-être, quelqu'un, on n'a pas, ci-dessous, c'est-à-dire",
+   "tip": "Entre un verbe et un pronom inversé, on met un trait d'union (dis-le-moi) et un « t » euphonique encadré de traits d'union si besoin (a-t-il). Pour « on n' », remplace « on » par « il » : si tu dis « il n'a pas », il faut « n' ».",
+   "c": [
+    [
+     "Donne-___ dès que possible.",
+     [
+      "le-moi",
+      "le moi",
+      "moi-le"
+     ],
+     0,
+     "À l'impératif, verbe et pronoms sont reliés par des traits d'union : donne-le-moi."
+    ],
+    [
+     "Où ___ rangé le dossier ?",
+     [
+      "a-t-il",
+      "a t-il",
+      "a-t'il"
+     ],
+     0,
+     "Le « t » euphonique s'encadre de deux traits d'union : a-t-il. Jamais d'apostrophe."
+    ],
+    [
+     "Il viendra ___ demain.",
+     [
+      "peut-être",
+      "peut être"
+     ],
+     0,
+     "« peut-être » (adverbe) = probablement."
+    ],
+    [
+     "Ce dossier ___ traité plus tard.",
+     [
+      "peut être",
+      "peut-être"
+     ],
+     0,
+     "Ici c'est le verbe « pouvoir » + « être » (il pourrait être traité)."
+    ],
+    [
+     "___ a laissé un message.",
+     [
+      "Quelqu'un",
+      "Quelque un"
+     ],
+     0,
+     "Quelqu'un : élision avec apostrophe."
+    ],
+    [
+     "___ il arrivera, prévenez-moi.",
+     [
+      "Lorsqu'",
+      "Lorsque"
+     ],
+     0,
+     "« Lorsque » s'élide devant il, elle, on, un, une : lorsqu'il."
+    ],
+    [
+     "___ pas encore reçu la réponse.",
+     [
+      "On n'a",
+      "On a"
+     ],
+     0,
+     "Dans une négation, le « ne » s'élide en « n' » : on n'a pas (comme il n'a pas)."
+    ],
+    [
+     "Nous ___ deux jours pour finir.",
+     [
+      "n'avons que",
+      "avons que"
+     ],
+     0,
+     "La restriction « ne… que » exige le « ne » à l'écrit."
+    ],
+    [
+     "Reportez-vous au tableau ___.",
+     [
+      "ci-dessous",
+      "ci dessous"
+     ],
+     0,
+     "« ci-dessous » prend un trait d'union."
+    ],
+    [
+     "La température est ___ zéro.",
+     [
+      "au-dessous de",
+      "au dessous de"
+     ],
+     0,
+     "« au-dessous », « au-dessus » prennent un trait d'union."
+    ],
+    [
+     "Les résultats, ___ les chiffres, sont bons.",
+     [
+      "c'est-à-dire",
+      "c'est à dire"
+     ],
+     0,
+     "« c'est-à-dire » prend deux traits d'union (abréviation : c.-à-d.)."
+    ],
+    [
+     "___ immédiatement !",
+     [
+      "Va-t'en",
+      "Va-t-en"
+     ],
+     0,
+     "Ici le t est le pronom « te » élidé (va + te + en) : apostrophe. Ne pas confondre avec le t euphonique."
+    ],
+    [
+     "Je l'ai vu ___.",
+     [
+      "là-bas",
+      "là bas",
+      "la-bas"
+     ],
+     0,
+     "là-bas : accent et trait d'union."
+    ]
+   ],
+   "dd": [
+    "Peut-être viendra-t-il demain ; dis-le-moi lorsqu'il arrivera.",
+    "On n'a que deux jours : reportez-vous au tableau ci-dessous, c'est-à-dire au résumé.",
+    "Quelqu'un est-il là-bas ? Va-t'en si tu n'as rien à faire."
+   ]
+  },
+  {
+   "t": "Participe présent, adjectif verbal & homophones lexicaux",
+   "lv": 2,
+   "d": "fatigant/fatiguant, convaincant/convainquant, précédent/précédant, censé/sensé, voire/voir, tâche/tache, davantage, qu'elle/quelle",
+   "tip": "Le participe présent est un verbe invariable : il a souvent un complément (en convainquant ses clients). L'adjectif verbal décrit et s'accorde (des arguments convaincants) ; son orthographe change parfois : fatigant, convaincant, précédent, négligent, différent, excellent.",
+   "c": [
+    [
+     "C'est un travail très ___.",
+     [
+      "fatigant",
+      "fatiguant"
+     ],
+     0,
+     "Adjectif verbal (il décrit le travail) : fatigant, sans u."
+    ],
+    [
+     "Ses arguments sont ___.",
+     [
+      "convaincants",
+      "convainquants",
+      "convaincant"
+     ],
+     0,
+     "Adjectif verbal accordé : convaincants (avec c)."
+    ],
+    [
+     "C'est en ___ ses clients qu'il a signé le contrat.",
+     [
+      "convainquant",
+      "convaincant"
+     ],
+     0,
+     "Participe présent (verbe, avec un complément) : convainquant, avec qu."
+    ],
+    [
+     "Les jours ___ la réunion, tout le monde était stressé.",
+     [
+      "précédant",
+      "précédents"
+     ],
+     0,
+     "Les jours qui précèdent la réunion : participe présent, invariable, -ant."
+    ],
+    [
+     "Le mois ___, nous avions dépassé l'objectif.",
+     [
+      "précédent",
+      "précédant"
+     ],
+     0,
+     "Adjectif (le mois d'avant) : précédent, avec -ent."
+    ],
+    [
+     "C'est un employé ___.",
+     [
+      "négligent",
+      "négligeant"
+     ],
+     0,
+     "Adjectif : négligent ; participe présent : en négligeant ses dossiers."
+    ],
+    [
+     "Il est ___ arriver à 9 heures.",
+     [
+      "censé",
+      "sensé"
+     ],
+     0,
+     "Censé = supposé ; sensé = qui a du bon sens."
+    ],
+    [
+     "C'est une décision ___.",
+     [
+      "sensée",
+      "censée"
+     ],
+     0,
+     "Sensé = raisonnable."
+    ],
+    [
+     "Cela prendra deux, ___ trois semaines.",
+     [
+      "voire",
+      "voir"
+     ],
+     0,
+     "Voire = et même (adverbe)."
+    ],
+    [
+     "Cette ___ est urgente.",
+     [
+      "tâche",
+      "tache"
+     ],
+     0,
+     "Tâche (travail) prend un accent circonflexe ; une tache est une salissure."
+    ],
+    [
+     "Il travaille ___ que ses collègues.",
+     [
+      "davantage",
+      "d'avantage"
+     ],
+     0,
+     "Davantage (en un mot) = plus."
+    ],
+    [
+     "Je pense ___ a raison.",
+     [
+      "qu'elle",
+      "quelle"
+     ],
+     0,
+     "On peut dire « qu'il a raison » : c'est que + elle."
+    ],
+    [
+     "___ belle présentation !",
+     [
+      "Quelle",
+      "Qu'elle"
+     ],
+     0,
+     "Exclamation : déterminant « quel », accordé au féminin."
+    ],
+    [
+     "Nous ferons le point lors de la prochaine ___.",
+     [
+      "session",
+      "cession"
+     ],
+     0,
+     "Session = période de réunion ; cession = action de céder (la cession d'une entreprise)."
+    ]
+   ],
+   "dd": [
+    "Ses arguments convaincants ont rassuré les clients le mois précédent.",
+    "Il est censé terminer cette tâche urgente, voire la présenter demain.",
+    "Je pense qu'elle travaille davantage que ses collègues."
+   ]
+  },
+  {
+   "t": "Pièges experts",
+   "lv": 3,
+   "d": "quel que, tout, couleurs, paronymes",
+   "tip": "« Quel(le)(s) que » + être au subjonctif s'accorde avec le sujet : quelles que soient vos raisons.",
+   "c": [
+    [
+     "___ soient tes choix, je te soutiendrai.",
+     [
+      "Quels que",
+      "Quelques",
+      "Quelque",
+      "Quel que"
+     ],
+     0,
+     "Quels que + être au subjonctif, accordé avec « choix » (masc. pluriel)."
+    ],
+    [
+     "Ils sont ___ fatigués.",
+     [
+      "tout",
+      "tous",
+      "toutes",
+      "toute"
+     ],
+     0,
+     "« tout » adverbe (= entièrement) devant un adjectif masculin : invariable."
+    ],
+    [
+     "Nous avons eu un ___ avec le fournisseur.",
+     [
+      "différend",
+      "différent",
+      "différant",
+      "diférend"
+     ],
+     0,
+     "« différend » (nom) = désaccord ; « différent » = adjectif."
+    ],
+    [
+     "J'ai acheté des chaussures ___.",
+     [
+      "marron",
+      "marrons",
+      "marronnes",
+      "marrone"
+     ],
+     0,
+     "Les couleurs issues d'un nom (marron, orange…) sont invariables."
+    ],
+    [
+     "C'est un problème ___ à résoudre.",
+     [
+      "difficile",
+      "dificile",
+      "difficil",
+      "diffissile"
+     ],
+     0,
+     "Deux f, un c : difficile."
+    ],
+    [
+     "Les ___ de ce projet sont nombreux.",
+     [
+      "intérêts",
+      "intérets",
+      "interêts",
+      "intérêt"
+     ],
+     0,
+     "Intérêt : é puis ê."
+    ],
+    [
+     "Il a ___ le dossier hier.",
+     [
+      "envoyé",
+      "envoyer",
+      "envoyez",
+      "envoyait"
+     ],
+     0,
+     "Après « a » → participe passé (remplace par « vendu »)."
+    ],
+    [
+     "___ efforts qu'il fasse, il échoue.",
+     [
+      "Quelques",
+      "Quels que",
+      "Quelque",
+      "Quel que"
+     ],
+     0,
+     "Quelques + nom pluriel = un certain nombre de."
+    ]
+   ],
+   "dd": [
+    "Quels que soient vos arguments, ils ne changeront rien.",
+    "Elles étaient tout étonnées de le voir ici.",
+    "Nous avons eu un différend avec notre fournisseur."
+   ],
+   "orig": 1
+  },
+  {
+   "t": "Accords complexes",
+   "lv": 3,
+   "d": "Pronominaux, verbes de durée, participes invariables",
+   "tip": "Avec un verbe pronominal, cherche le COD : s'il est placé avant (« que », « les »…), on accorde ; sinon, non.",
+   "c": [
+    [
+     "Elle s'est ___ de partir sans prévenir.",
+     [
+      "permis",
+      "permise",
+      "permit",
+      "permises"
+     ],
+     0,
+     "Se permettre de : « se » est COI → invariable."
+    ],
+    [
+     "Ils se sont ___ des cadeaux.",
+     [
+      "offert",
+      "offerts",
+      "offertes",
+      "offrir"
+     ],
+     0,
+     "COD « des cadeaux » après le verbe → invariable."
+    ],
+    [
+     "Les cadeaux qu'ils se sont ___ étaient beaux.",
+     [
+      "offerts",
+      "offert",
+      "offertes",
+      "offrent"
+     ],
+     0,
+     "COD « que » (= les cadeaux) placé avant → accord."
+    ],
+    [
+     "Les chaleurs qu'il a ___ cet été ont été terribles.",
+     [
+      "fait",
+      "faites",
+      "faits",
+      "faite"
+     ],
+     0,
+     "Faire impersonnel (il a fait chaud) : invariable."
+    ],
+    [
+     "Les vingt minutes qu'il a ___ lui ont paru longues.",
+     [
+      "couru",
+      "courues",
+      "courus",
+      "courue"
+     ],
+     0,
+     "Courir + durée : pas de COD → invariable."
+    ],
+    [
+     "La somme que ce livre m'a ___.",
+     [
+      "coûté",
+      "coûtée",
+      "coûtés",
+      "coûtées"
+     ],
+     0,
+     "Coûter (prix) : pas de COD → invariable."
+    ],
+    [
+     "Ils se sont ___ la main.",
+     [
+      "serré",
+      "serrés",
+      "serrées",
+      "serrer"
+     ],
+     0,
+     "COD « la main » après le verbe → invariable."
+    ],
+    [
+     "Les efforts qu'il a ___ fournir.",
+     [
+      "dû",
+      "dus",
+      "due",
+      "dûs"
+     ],
+     0,
+     "dû suivi d'un infinitif : invariable."
+    ]
+   ],
+   "dd": [
+    "Les cadeaux qu'ils se sont offerts étaient magnifiques.",
+    "Les vingt minutes qu'il a couru lui ont paru longues.",
+    "Elle s'est permis de partir sans prévenir."
+   ]
+  },
+  {
+   "t": "Orthotypographie",
+   "lv": 3,
+   "d": "Heures, nombres, majuscules, abréviations",
+   "tip": "Comme dans le module Orthotypographie du Projet Voltaire : 8 h 30 (espaces autour du h), n° 10, 1er / 1re, 2e (jamais « 2ème »), majuscules accentuées (À), milliers séparés par une espace.",
+   "c": [
+    [
+     "Rendez-vous à ___.",
+     [
+      "8 h 30",
+      "8h30",
+      "8 H 30",
+      "8h. 30"
+     ],
+     0,
+     "Norme typographique : une espace avant et après « h » : 8 h 30."
+    ],
+    [
+     "Voir l'article ___.",
+     [
+      "n° 10",
+      "n°10",
+      "N°10",
+      "num 10"
+     ],
+     0,
+     "« n° » est suivi d'une espace : n° 10."
+    ],
+    [
+     "___ Paris, il fait beau.",
+     [
+      "À",
+      "A",
+      "Á",
+      "Â"
+     ],
+     0,
+     "Les majuscules gardent leurs accents : À Paris."
+    ],
+    [
+     "Au ___ siècle.",
+     [
+      "XXIe",
+      "XXIème",
+      "21ème",
+      "XXIè"
+     ],
+     0,
+     "Siècle en chiffres romains + « e » : XXIe siècle."
+    ],
+    [
+     "Il a obtenu le ___ prix.",
+     [
+      "1er",
+      "1ier",
+      "1e",
+      "1ère"
+     ],
+     0,
+     "premier → 1er ; première → 1re."
+    ],
+    [
+     "Elle est arrivée à la ___ place.",
+     [
+      "2e",
+      "2ème",
+      "2è",
+      "2nde"
+     ],
+     0,
+     "deuxième → 2e (et non « 2ème »)."
+    ],
+    [
+     "Le projet coûte ___.",
+     [
+      "1 000 euros",
+      "1000euros",
+      "1.000 euros",
+      "1,000 euros"
+     ],
+     0,
+     "Les milliers se séparent par une espace, jamais par un point ni une virgule."
+    ],
+    [
+     "La réunion aura lieu le ___.",
+     [
+      "lundi 3 mars",
+      "Lundi 3 Mars",
+      "lundi 3 Mars",
+      "Lundi 3 mars"
+     ],
+     0,
+     "Les jours et les mois s'écrivent sans majuscule."
+    ],
+    [
+     "Il habite au ___ étage.",
+     [
+      "3e",
+      "3ème",
+      "3ième",
+      "3è"
+     ],
+     0,
+     "troisième → 3e."
+    ],
+    [
+     "Veuillez agréer, ___, mes salutations.",
+     [
+      "Madame",
+      "madame",
+      "MADAME",
+      "Mme."
+     ],
+     0,
+     "Dans une formule d'appel ou de politesse : Madame, avec majuscule et en toutes lettres."
+    ]
+   ],
+   "dd": [
+    "À 8 h 30, la réunion du lundi 3 mars commencera au 2e étage.",
+    "Le XXIe siècle a commencé le 1er janvier 2001.",
+    "Le projet coûte 1 000 euros, voir l'article n° 10."
+   ]
+  },
+  {
+   "t": "Participe passé : cas difficiles",
+   "lv": 3,
+   "d": "suivi d'un infinitif, fait + infinitif, en, se sont succédé, verbes impersonnels",
+   "tip": "Avec un infinitif, accorde si le COD placé avant fait l'action de l'infinitif (les musiciens que j'ai entendus jouer). « Fait » suivi d'un infinitif est toujours invariable. Avec « en », le participe reste invariable. Les participes de verbes impersonnels (il a fallu) ne s'accordent jamais.",
+   "c": [
+    [
+     "Les musiciens que j'ai ___ jouer étaient excellents.",
+     [
+      "entendus",
+      "entendu"
+     ],
+     0,
+     "Les musiciens font l'action de jouer : le COD placé avant commande l'accord."
+    ],
+    [
+     "La chanson que j'ai ___ chanter était très ancienne.",
+     [
+      "entendu",
+      "entendue"
+     ],
+     0,
+     "La chanson ne chante pas : elle est chantée. Le participe reste invariable."
+    ],
+    [
+     "Elle s'est ___ couper les cheveux.",
+     [
+      "fait",
+      "faite"
+     ],
+     0,
+     "« Fait » suivi d'un infinitif est toujours invariable."
+    ],
+    [
+     "Des pommes ? J'en ai ___ trois kilos.",
+     [
+      "acheté",
+      "achetées"
+     ],
+     0,
+     "Avec le pronom « en », le participe passé reste invariable."
+    ],
+    [
+     "Les ministres se sont ___ à ce poste.",
+     [
+      "succédé",
+      "succédés"
+     ],
+     0,
+     "On succède À quelqu'un : « se » est COI, le participe reste invariable."
+    ],
+    [
+     "Elles se sont ___ dès le premier jour.",
+     [
+      "plu",
+      "plues"
+     ],
+     0,
+     "On plaît À quelqu'un : « se » est COI, « plu » reste invariable."
+    ],
+    [
+     "Elles se sont ___ tous les jours pendant un an.",
+     [
+      "téléphoné",
+      "téléphonées"
+     ],
+     0,
+     "On téléphone à quelqu'un : « se » est complément indirect, le participe reste invariable."
+    ],
+    [
+     "Elles se sont ___ les mains.",
+     [
+      "lavé",
+      "lavées"
+     ],
+     0,
+     "Le COD est « les mains », placé après : pas d'accord."
+    ],
+    [
+     "Les mains qu'elle s'est ___ étaient sales.",
+     [
+      "lavées",
+      "lavé"
+     ],
+     0,
+     "Le COD « que » (les mains) est placé avant : accord au féminin pluriel."
+    ],
+    [
+     "Les efforts qu'il a ___ pour finir étaient énormes.",
+     [
+      "fallu",
+      "fallus"
+     ],
+     0,
+     "Le participe d'un verbe impersonnel (il faut) est toujours invariable."
+    ],
+    [
+     "Les orages qu'il y a ___ ont détruit les récoltes.",
+     [
+      "eu",
+      "eus"
+     ],
+     0,
+     "« Il y a eu » est une tournure impersonnelle : son participe passé ne s'accorde jamais."
+    ],
+    [
+     "Elle n'a pas fait toutes les démarches qu'elle aurait ___.",
+     [
+      "dû",
+      "dues"
+     ],
+     0,
+     "Après « dû, pu, voulu », un infinitif est sous-entendu (qu'elle aurait dû faire) : invariable."
+    ],
+    [
+     "Ils se sont ___ compte de leur erreur.",
+     [
+      "rendu",
+      "rendus"
+     ],
+     0,
+     "Le COD est « compte », placé après : invariable."
+    ]
+   ],
+   "dd": [
+    "Elle s'est fait couper les cheveux par la coiffeuse que j'ai vue travailler hier.",
+    "Les présidents qui se sont succédé ont tous pris les décisions qu'il a fallu.",
+    "Des erreurs, j'en ai commis ; mais les deux associées se sont plu et se sont souri dès le début."
+   ]
+  },
+  {
+   "t": "Confusions lexicales & expressions fautives",
+   "lv": 3,
+   "d": "pallier, se rappeler, bien que, au temps pour moi, paronymes",
+   "tip": "On pallie un problème (sans « à »), on se rappelle quelque chose (sans « de ») mais on se souvient DE quelque chose, et l'on écrit « bien que » plutôt que « malgré que ». Paronymes fréquents : conjoncture/conjecture, imminent/éminent, infester/infecter, acceptation/acception.",
+   "c": [
+    [
+     "Nous devons ___ ce manque de personnel.",
+     [
+      "pallier",
+      "pallier à",
+      "palier à"
+     ],
+     0,
+     "« Pallier » est transitif direct : on pallie quelque chose."
+    ],
+    [
+     "Je ___ très bien de cette réunion.",
+     [
+      "me souviens",
+      "me rappelle"
+     ],
+     0,
+     "On se souvient DE quelque chose, mais on se rappelle quelque chose (sans « de »)."
+    ],
+    [
+     "Je ___ très bien cette réunion.",
+     [
+      "me rappelle",
+      "me souviens"
+     ],
+     0,
+     "« Se rappeler » est transitif direct : je me rappelle cette réunion."
+    ],
+    [
+     "Il est venu ___ il soit malade.",
+     [
+      "bien qu'",
+      "malgré qu'"
+     ],
+     0,
+     "« Malgré que » est à éviter : on écrit « bien que » + subjonctif."
+    ],
+    [
+     "Je me suis trompé, ___ !",
+     [
+      "au temps pour moi",
+      "autant pour moi"
+     ],
+     0,
+     "L'expression vient du vocabulaire militaire : reprendre le mouvement « au temps »."
+    ],
+    [
+     "La ___ économique est difficile cette année.",
+     [
+      "conjoncture",
+      "conjecture"
+     ],
+     0,
+     "Conjoncture = situation ; conjecture = supposition."
+    ],
+    [
+     "Le départ est ___ : préparez vos bagages.",
+     [
+      "imminent",
+      "éminent"
+     ],
+     0,
+     "Imminent = très proche ; éminent = remarquable (un éminent spécialiste)."
+    ],
+    [
+     "Les rats ___ la cave.",
+     [
+      "infestent",
+      "infectent"
+     ],
+     0,
+     "Infester = envahir ; infecter = contaminer."
+    ],
+    [
+     "Il est très ___ de son argent.",
+     [
+      "prodigue",
+      "prodige"
+     ],
+     0,
+     "Prodigue = qui dépense sans compter ; prodige = personne aux dons exceptionnels."
+    ],
+    [
+     "Nous attendons l'___ de votre devis.",
+     [
+      "acceptation",
+      "acception"
+     ],
+     0,
+     "Acceptation = fait d'accepter ; acception = sens d'un mot."
+    ],
+    [
+     "Ce mot a plusieurs ___.",
+     [
+      "acceptions",
+      "acceptations"
+     ],
+     0,
+     "Les différents sens d'un mot sont ses acceptions."
+    ],
+    [
+     "Les voleurs sont entrés par ___.",
+     [
+      "effraction",
+      "infraction"
+     ],
+     0,
+     "Effraction = bris de clôture ; infraction = violation de la loi."
+    ],
+    [
+     "Une ___ entre deux voitures a bloqué la route.",
+     [
+      "collision",
+      "collusion"
+     ],
+     0,
+     "Collision = choc ; collusion = entente secrète."
+    ]
+   ],
+   "dd": [
+    "Bien qu'il ait plu, nous avons pallié le retard ; au temps pour moi, j'avais mal compris.",
+    "Dans cette conjoncture, l'acceptation du devis semble imminente.",
+    "Je me rappelle cette collision : un éminent chirurgien était présent."
+   ]
+  },
+  {
+   "t": "Modes, pronoms & pléonasmes",
+   "lv": 3,
+   "d": "après que + indicatif, avant que + subjonctif, dont, quelque (environ), tout + adjectif, même(s), pléonasmes",
+   "tip": "« Après que » exprime un fait réel : indicatif (après qu'il est parti). « Avant que » exprime un fait pas encore réalisé : subjonctif (avant qu'il parte). « Dont » remplace « de + nom » : n'ajoute jamais un second « de » (c'est ce dont j'ai besoin).",
+   "c": [
+    [
+     "Après qu'il ___ parti, nous avons fermé le bureau.",
+     [
+      "est",
+      "soit",
+      "fût"
+     ],
+     0,
+     "Après que + indicatif : le fait est accompli."
+    ],
+    [
+     "Prévenons-le avant qu'il ne ___.",
+     [
+      "parte",
+      "part",
+      "partira"
+     ],
+     0,
+     "Avant que + subjonctif (le « ne » explétif est facultatif)."
+    ],
+    [
+     "C'est le dossier ___ je t'ai parlé.",
+     [
+      "dont",
+      "que",
+      "duquel que"
+     ],
+     0,
+     "Parler de quelque chose → dont."
+    ],
+    [
+     "C'est ce ___ j'ai besoin.",
+     [
+      "dont",
+      "que",
+      "qu'"
+     ],
+     0,
+     "Avoir besoin de → dont."
+    ],
+    [
+     "C'est de cela ___ je voulais te parler.",
+     [
+      "que",
+      "dont"
+     ],
+     0,
+     "« De cela » contient déjà « de » : on écrit « que » pour ne pas le répéter."
+    ],
+    [
+     "Il y avait ___ deux cents personnes.",
+     [
+      "quelque",
+      "quelques"
+     ],
+     0,
+     "Devant un nombre, « quelque » = environ : adverbe invariable."
+    ],
+    [
+     "Les ___ erreurs qui restent seront corrigées.",
+     [
+      "quelques",
+      "quelque"
+     ],
+     0,
+     "Quelques = un petit nombre de : déterminant, il s'accorde."
+    ],
+    [
+     "Elles sont ___ étonnées.",
+     [
+      "tout",
+      "toutes"
+     ],
+     0,
+     "Tout (= tout à fait) reste invariable devant un adjectif féminin commençant par une voyelle."
+    ],
+    [
+     "Elles sont ___ contentes.",
+     [
+      "toutes",
+      "tout"
+     ],
+     0,
+     "Devant un adjectif féminin commençant par une consonne, tout varie : toutes contentes."
+    ],
+    [
+     "Ce sont les ___ erreurs que l'an dernier.",
+     [
+      "mêmes",
+      "même"
+     ],
+     0,
+     "Même adjectif (= identiques) s'accorde avec le nom."
+    ],
+    [
+     "Les directeurs ___ ont reconnu l'erreur.",
+     [
+      "eux-mêmes",
+      "eux-même",
+      "eux mêmes"
+     ],
+     0,
+     "Après un pronom pluriel, mêmes s'accorde et prend un trait d'union."
+    ],
+    [
+     "Cela prendra deux heures, ___ trois.",
+     [
+      "voire",
+      "voire même"
+     ],
+     0,
+     "« Voire même » est un pléonasme : voire signifie déjà « et même »."
+    ],
+    [
+     "Il faut ___ au troisième étage.",
+     [
+      "monter",
+      "monter en haut"
+     ],
+     0,
+     "« Monter en haut » est un pléonasme."
+    ],
+    [
+     "___, la situation est stable.",
+     [
+      "Aujourd'hui",
+      "Au jour d'aujourd'hui"
+     ],
+     0,
+     "« Au jour d'aujourd'hui » est un pléonasme (le « hui » signifie déjà « ce jour »)."
+    ]
+   ],
+   "dd": [
+    "Après qu'il est parti, nous avons fermé le dossier dont je t'ai parlé.",
+    "Il y avait quelque deux cents personnes, toutes étonnées par la nouvelle.",
+    "Cela prendra deux heures, voire trois, avant qu'il ne parte."
+   ]
+  }
+ ]
+}
