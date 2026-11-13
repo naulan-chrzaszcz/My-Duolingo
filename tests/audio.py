@@ -34,7 +34,7 @@ async def main():
     print('   leçon terminée :',await p.evaluate("!!document.querySelector('#endc')"),'| erreurs comptées',await p.evaluate("L?L.wrong:'-'"))
     while await p.evaluate("!!document.querySelector('#endc')"): await p.click('#endc')
     print('   leçon suivante pendant la pause :',await p.evaluate("[...new Set(buildLesson('en-daily',1,6).map(e=>e.t))].join(',')"),'| TOEIC :',await p.evaluate("[...new Set([4,8,12].flatMap(n=>buildLesson('en-toeic',3,n).map(e=>e.t)))].join(',')"))
-    await p.evaluate("location.hash='profil';route()"); await p.wait_for_timeout(300); print('   réglage écoute :',await p.evaluate("document.querySelector('#sListen').classList.contains('on')"),'→ clic →',await p.evaluate("(document.querySelector('#sListen').click(),[document.querySelector('#sListen').classList.contains('on'),S.listenOff])"))
+    await p.evaluate("location.hash='reglages/preferences';route()"); await p.wait_for_timeout(300); print('   réglage écoute :',await p.evaluate("document.querySelector('#sListen').classList.contains('on')"),'→ clic →',await p.evaluate("(document.querySelector('#sListen').click(),[document.querySelector('#sListen').classList.contains('on'),S.listenOff])"))
     await p.evaluate("trainListen(['en-toeic'])"); await p.wait_for_timeout(200); print('   « Écoute TOEIC » relance le son :',await p.evaluate("[S.listenOff,L.ex.t]")); await p.evaluate("closeLesson()")
     # 3. voix
     print('3. voix :',await p.evaluate("JSON.stringify([speakParts('I','en-US'),speakParts('I am Léa.','en-US'),speakParts('À quelqu\\'un qui reste, en partant : 안녕히 계세요','ko-KR'),speakParts('K-pop 좋아해요','ko-KR'),speakParts('안녕하세요','ko-KR')])"))

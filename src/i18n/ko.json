@@ -1093,7 +1093,13 @@
   "👤 Compte": "👤 계정",
   "🔔 Rappel quotidien": "🔔 매일 알림",
   "Vibrations (iPhone · Android)": "진동 (iPhone · Android)",
-  "Menu": "메뉴"
+  "Menu": "메뉴",
+  "Paramètres": "설정",
+  "Préférences": "환경설정",
+  "Profil et compte": "프로필 및 계정",
+  "Notifications": "알림",
+  "Raccourcis": "바로가기",
+  "Compte": "계정"
  },
  "content": {
   "Quotidien": "일상",

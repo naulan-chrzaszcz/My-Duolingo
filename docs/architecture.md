@@ -30,7 +30,7 @@ server/ (api PHP, installateur, LISEZ-MOI) ──────▶ dist/
 | `exercises/` | `generate.js`, `distractors.js`, `validate.js`, `render.js`, `hangul.ts`, `drills.ts` | `make(type, ctx)`, mauvaises réponses, correction, affichage `R[type]`, hangul, phrases générées par gabarits |
 | `lesson/` | `build.js`, `engine.js`, `writing.js`, `keyboard.js` | Construction et déroulé d'une leçon (`L`), rédactions, clavier |
 | `features/` | `placement.js`, `quests.js`, `word-bank.js`, `theme-training.js`, `ai-units.js`, `coach.js`, `grammar.js` | Test de niveau, quêtes et badges, répétition espacée, thèmes, unités IA, coach, notions de grammaire |
-| `screens/` | `path.js`, `training.js`, `stories.js`, `league.js`, `shop.js`, `profile.js`, `stats.js`, `streak.js`, `accounts.js`, `onboarding.js`, `language.js` | Un module par écran ou fenêtre principale |
+| `screens/` | `path.js`, `training.js`, `stories.js`, `league.js`, `shop.js`, `profile.js`, `settings.js`, `stats.js`, `streak.js`, `accounts.js`, `onboarding.js`, `language.js` | Un module par écran ou fenêtre principale |
 | `services/` | `cloud.js`, `ai.js`, `reminders.js`, `speech.js` | Comptes en ligne et ligue, IA, rappels push, voix et micro |
 | `ui/` | `ui.js`, `router.js`, `platform.js`, `mascot.js`, `icons.ts`, `back-button.js`, `typography.js` | Toasts et modales, routage par hash, iOS/Android/thème, mascotte, icônes SVG (drapeaux, coupes, médailles), bouton retour, typographie |
 | racine | `main.js`, `globals.js`, `types.ts` | Démarrage, API globale, types |
@@ -77,4 +77,5 @@ L'ordre compte : la traduction du DOM doit observer la page avant la typographie
 - Barre du haut : `renderTop()` (`ui/router.js`) ; choix de langue : `sectionPicker()` (modale `langdrop`).
 - Parcours : pièces `.node.coin` (`stepKind`), bannière d'unité collante (`--toph` = hauteur de la barre du haut), bulle d'étape `placePop()` dans `screens/path.js`.
 - Série : `screens/streak.js` (`openStreak`, paliers `MILESTONES`, `streakMilestone`, `streakReset`). Historique : `S.week` garde ~13 mois, `S.frz` les jours protégés par un gel, `S.smil` les paliers déjà payés pour la série en cours.
+- Paramètres (v28.1) : `screens/settings.js`, ouvert par la roue dentée du profil. Adresses `#reglages` (menu) et `#reglages/<page>` (`preferences`, `compte`, `notifications`, `claude`, liste `SETTINGS_PAGES`). Les réglages gardent leurs identifiants ; `bindSettings()` ignore ceux qui ne sont pas sur la sous-page affichée.
 - Entraînement : `TMAP` (titre de carte → rubrique, icône, couleur) dans `screens/training.js`.

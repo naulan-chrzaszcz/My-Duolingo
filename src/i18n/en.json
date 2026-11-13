@@ -1051,7 +1051,13 @@
   "👤 Compte": "👤 Account",
   "🔔 Rappel quotidien": "🔔 Daily reminder",
   "Vibrations (iPhone · Android)": "Vibrations (iPhone · Android)",
-  "Menu": "Menu"
+  "Menu": "Menu",
+  "Paramètres": "Settings",
+  "Préférences": "Preferences",
+  "Profil et compte": "Profile and account",
+  "Notifications": "Notifications",
+  "Raccourcis": "Shortcuts",
+  "Compte": "Account"
  },
  "content": {
   "Hangul 1 : les voyelles": "Hangul 1: vowels",

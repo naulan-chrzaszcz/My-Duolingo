@@ -11,6 +11,7 @@ import { dueCount } from "../lesson/engine.js";
 import { renderLeague } from "../screens/league.js";
 import { renderPath } from "../screens/path.js";
 import { renderProfile } from "../screens/profile.js";
+import { renderSettings } from "../screens/settings.js";
 import { renderShop } from "../screens/shop.js";
 import { renderStats } from "../screens/stats.js";
 import { renderStories } from "../screens/stories.js";
@@ -20,14 +21,19 @@ import { closeModal, modal, toast } from "./ui.js";
 
 // ===================== NAVIGATION & RENDU =====================
 export let VIEW = "parcours";
+/** Sous-page de l'écran Paramètres (#reglages/<page>). */
+export let SUBVIEW = "";
 export const curSec = () => SECTIONS.find(s => s.id === S.sec) || SECTIONS[0];
 export const curCid = () => {
   const s = curSec();
   return s.tracks.includes(S.track[s.id]) ? S.track[s.id] : s.tracks[0];
 };
 export function route() {
-  const h = (location.hash || "").slice(1);
-  VIEW = ["parcours", "entrainement", "histoires", "ligue", "boutique", "profil", "stats"].includes(h) ? h : "parcours";
+  const [h, sub] = (location.hash || "").slice(1).split("/");
+  VIEW = ["parcours", "entrainement", "histoires", "ligue", "boutique", "profil", "stats", "reglages"].includes(h)
+    ? h
+    : "parcours";
+  SUBVIEW = VIEW === "reglages" ? sub || "" : "";
   renderAll();
 }
 export function updateBadge() {
@@ -44,7 +50,9 @@ export function renderAll() {
   updateBadge();
   document
     .querySelectorAll("#bottomnav a")
-    .forEach(a => a.classList.toggle("on", a.dataset.v === (VIEW === "stats" ? "profil" : VIEW)));
+    .forEach(a =>
+      a.classList.toggle("on", a.dataset.v === (VIEW === "stats" || VIEW === "reglages" ? "profil" : VIEW)),
+    );
   const v = $("#view");
   if (VIEW === "parcours") renderPath(v);
   else if (VIEW === "entrainement") renderTrain(v);
@@ -52,6 +60,7 @@ export function renderAll() {
   else if (VIEW === "ligue") renderLeague(v);
   else if (VIEW === "boutique") renderShop(v);
   else if (VIEW === "stats") renderStats(v);
+  else if (VIEW === "reglages") renderSettings(v, SUBVIEW);
   else renderProfile(v);
 }
 export const safeColor = c => (/^#[0-9a-fA-F]{3,8}$/.test(String(c || "")) ? c : "#7C4DFF");

@@ -28,6 +28,8 @@ import "./features/theme-training.js";
 import "./features/word-bank.js";
 import "./features/grammar.js";
 import "./screens/profile.js";
+import "./screens/settings.js";
+import "./screens/streak.js";
 import "./features/ai-units.js";
 import "./screens/stats.js";
 import "./screens/stories.js";
@@ -92,7 +94,7 @@ window.addEventListener("beforeinstallprompt", e => {
   e.preventDefault();
   INSTALL.ev = e;
   try {
-    if (S && location.hash.replace("#", "") !== "profil") renderAll();
+    if (S && !/^#?(profil|reglages)/.test(location.hash)) renderAll();
   } catch (x) {}
 });
 window.addEventListener("appinstalled", () => {

@@ -960,3 +960,18 @@ body:has(.langdrop) #secBtn{border-color:#3D8BFF;background:#EAF2FF}
 .ptool .ic:last-child{color:var(--ink2)}
 .tlock .tlk{fill:#ECE9F6;stroke:#C9C4DD}
 .tlock .tld{fill:#C9C4DD}
+/* paramètres v28 : menu façon Duolingo et sous-pages */
+.sethead{display:grid;grid-template-columns:48px 1fr 48px;align-items:center;margin:-6px -4px 10px;padding-bottom:10px;border-bottom:2px solid var(--line)}
+.sethead h1{margin:0;text-align:center;font-size:22px}
+.setx{width:48px;height:48px;border:none;background:transparent;color:var(--ink2);display:flex;align-items:center;justify-content:center;border-radius:12px;cursor:pointer;padding:0}
+.setx:hover{background:var(--soft)}
+.seth2{margin:22px 4px 6px;font-size:15px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)}
+.setlist{display:flex;flex-direction:column}
+.setitem{display:flex;align-items:center;gap:14px;min-height:64px;padding:8px 4px;text-decoration:none;color:var(--ink);font-size:19px;font-weight:900;border-bottom:2px solid var(--line);animation:lrowin .35s cubic-bezier(.2,.9,.3,1) both}
+.setitem:nth-child(2){animation-delay:.04s}.setitem:nth-child(3){animation-delay:.08s}.setitem:nth-child(4){animation-delay:.12s}
+.setitem:last-child{border-bottom:none}
+.setitem>span:nth-child(2){flex:1}
+.setitem>.ic:last-child{color:var(--ink2)}
+.setitem:active{opacity:.7}
+.setic{flex:none;width:40px;height:40px;border-radius:12px;background:#EFE9FF;color:#7C4DFF;display:flex;align-items:center;justify-content:center}
+.setcard{margin-top:6px}

@@ -42,9 +42,9 @@ async def main():
       await p.evaluate("Object.keys(COURSES).forEach(c=>{S.dn[c]={};COURSES[c].units.forEach((U,u)=>S.dn[c][u]=u<3?262143:u<5?4095:0)});S.bank={};save()")
       tag0=f'{W}px/{scheme}'
       for sec,trk in TR:
-        for v in ["parcours","entrainement","histoires","ligue","boutique","profil","stats"]:
+        for v in ["parcours","entrainement","histoires","ligue","boutique","profil","stats","reglages","reglages/preferences","reglages/compte","reglages/notifications","reglages/claude"]:
           await p.evaluate(f"if(L)closeLesson();closeModal();S.sec='{sec}';S.track['{sec}']='{trk}';save();location.hash='{v}';route()"); await p.wait_for_timeout(250); await grab(p,f'{tag0} {trk}/{v}',dark)
-          if W==320 or dark: await p.screenshot(path=f'{OUT}/L_{ui}_{W}_{trk}_{v}.png')
+          if W==320 or dark: await p.screenshot(path=f'{OUT}/L_{ui}_{W}_{trk}_{v.replace("/","-")}.png')
         await p.evaluate("location.hash='parcours';route();document.querySelectorAll('.unit').forEach(u=>u.classList.remove('folded'))"); await grab(p,f'{tag0} {trk}/parcours déplié',dark)
         for js in [f"nodeSheet('{trk}',0,1)",f"nodeSheet('{trk}',4,13)",f"nodeSheet('{trk}',6,0)",f"guide('{trk}',0)",f"guide('{trk}',5)",f"rulesSheet('{trk}')",f"placeIntro('{trk}')","bankView()","themePicker()","myWords()","sectionPicker()","accountPicker()","accountForm(null)","exportAcc()","importAcc()","unitPicker(curCid())","storyGenPicker('"+sec+"')","langPicker(()=>{})","quitAsk&&0","hangulChart&&S.sec==='ko'&&hangulChart()"]:
           try:

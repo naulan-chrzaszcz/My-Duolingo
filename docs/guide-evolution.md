@@ -88,6 +88,11 @@ Attention : insérer une unité au milieu décale la progression enregistrée de
    - S'il a un onglet dans la barre du bas, l'ajouter aussi dans `src/index.html`.
 3. Importer le module dans `src/main.js` (liste des imports).
 
+## Un réglage
+
+- Ajouter sa ligne `setrow` dans la sous-page voulue de `src/screens/settings.js` (`pageHtml`) et son gestionnaire dans `bindSettings()` avec `$$("#id")` (sans effet si la ligne n'est pas affichée).
+- Nouvelle rubrique : une entrée dans `SETTINGS_PAGES` (identifiant, titre, icône) et sa branche dans `pageHtml`.
+
 ## Une icône
 
 - Ajouter son tracé (viewBox 24 × 24, trait sans remplissage) dans l'objet `P` de `src/ui/icons.ts`, puis l'utiliser avec `ic("nom", taille)`.
