@@ -1,4 +1,4 @@
-# Catalogue des cours et des unités (v25)
+# Catalogue des cours et des unités (v31)
 
 Généré automatiquement à partir des données de l'application. Chaque unité compte 18 étapes (la dernière est le bilan) et une version extrême.
 
@@ -114,7 +114,7 @@ Généré automatiquement à partir des données de l'application. Chaque unité
 | 20 | Confusions lexicales & expressions fautives | 3 | pallier, se rappeler, bien que, au temps pour moi, paronymes | 0 | 0 |
 | 21 | Modes, pronoms & pléonasmes | 3 | après que + indicatif, avant que + subjonctif, dont, quelque (environ), tout + adjectif, même(s), pléonasmes | 0 | 0 |
 
-## Coréen — `ko` (ko-KR, 14 unités)
+## Coréen — `ko` (ko-KR, 30 unités)
 
 | # | Unité | Niveau | Description | Vocabulaire | Phrases |
 | --- | --- | --- | --- | --- | --- |
@@ -124,14 +124,30 @@ Généré automatiquement à partir des données de l'application. Chaque unité
 | 4 | Hangul 4 : diphtongues & batchim |  | ㅑ ㅕ ㅛ ㅠ ㅘ ㅝ ㅢ · consonnes finales | 6 | 8 |
 | 5 | Les bases |  | Saluer, remercier, se présenter | 6 | 8 |
 | 6 | Les nombres & l'heure |  | Nombres natifs et sino-coréens | 6 | 7 |
-| 7 | Conversation quotidienne | 1 | Commander, demander, comprendre | 6 | 8 |
-| 8 | Au travail (회사) | 1 | Bureau, réunions, collègues | 6 | 8 |
-| 9 | Shopping & transports | 1 | Métro, bus, magasins | 6 | 8 |
-| 10 | Politesse & honorifiques | 2 | 존댓말 : parler aux aînés et aux supérieurs | 6 | 8 |
-| 11 | Émotions & opinions | 2 | Dire ce qu'on ressent et ce qu'on pense | 6 | 8 |
-| 12 | 맞춤법 : pièges d'orthographe | 3 | 되/돼, 안/않, 웬/왠, 로서/로써… | 0 | 3 |
-| 13 | Expressions & 속담 | 3 | Expressions naturelles et proverbes | 6 | 6 |
-| 14 | Coréen soutenu & e-mails | 3 | Écrire à un client, à un supérieur | 6 | 6 |
+| 7 | Au café (카페) |  | Commander une boisson, sur place ou à emporter | 6 | 8 |
+| 8 | Au restaurant (식당) |  | Appeler le serveur, commander, payer | 6 | 8 |
+| 9 | À la supérette (편의점) |  | Trouver un produit, payer, faire réchauffer | 6 | 8 |
+| 10 | Météo & saisons (날씨) |  | Parler du temps qu'il fait et des saisons | 6 | 8 |
+| 11 | Conversation quotidienne | 1 | Commander, demander, comprendre | 6 | 8 |
+| 12 | Au travail (회사) | 1 | Bureau, réunions, collègues | 6 | 8 |
+| 13 | Shopping & transports | 1 | Métro, bus, magasins | 6 | 8 |
+| 14 | Métro & bus (지하철, 버스) | 1 | Trouver sa ligne, changer, descendre au bon arrêt | 6 | 8 |
+| 15 | En taxi (택시) | 1 | Donner une destination, s'arrêter, payer | 6 | 8 |
+| 16 | Pharmacie & hôpital (약국, 병원) | 1 | Dire où on a mal, acheter un médicament | 6 | 8 |
+| 17 | À la banque (은행) | 1 | Ouvrir un compte, retirer, changer de l'argent | 6 | 8 |
+| 18 | Au téléphone (전화) | 1 | Appeler, demander quelqu'un, rappeler | 6 | 8 |
+| 19 | Rendez-vous & invitations (약속) | 1 | Proposer, accepter, refuser, fixer l'heure | 6 | 8 |
+| 20 | Loisirs & week-end (취미) | 1 | Parler de ses loisirs et de son week-end | 6 | 8 |
+| 21 | Politesse & honorifiques | 2 | 존댓말 : parler aux aînés et aux supérieurs | 6 | 8 |
+| 22 | Émotions & opinions | 2 | Dire ce qu'on ressent et ce qu'on pense | 6 | 8 |
+| 23 | Trouver un logement (집 구하기) | 2 | Visiter, parler du loyer, des charges et des voisins | 6 | 8 |
+| 24 | Chez le coiffeur (미용실) | 2 | Expliquer la coupe que l'on veut | 6 | 8 |
+| 25 | Poste & livraisons (우체국, 택배) | 2 | Envoyer un colis, suivre une livraison | 6 | 8 |
+| 26 | Voyager en Corée (여행) | 2 | Hôtel, visites, demander son chemin | 6 | 8 |
+| 27 | Fêtes : 설날 & 추석 | 2 | Nouvel An lunaire, fête des récoltes et vœux | 6 | 8 |
+| 28 | 맞춤법 : pièges d'orthographe | 3 | 되/돼, 안/않, 웬/왠, 로서/로써… | 0 | 3 |
+| 29 | Expressions & 속담 | 3 | Expressions naturelles et proverbes | 6 | 6 |
+| 30 | Coréen soutenu & e-mails | 3 | Écrire à un client, à un supérieur | 6 | 6 |
 
 ## Learn French — `fr-fle` (fr-FR, 20 unités) — textes en anglais (cours pour anglophones)
 

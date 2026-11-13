@@ -168,5 +168,15 @@
 ["guitar", "leisure", "la guitare", "guitar", "기타", "gita"],
 ["piano", "leisure", "le piano", "piano", "피아노", "piano"],
 ["tent", "leisure", "la tente", "tent", "텐트", "tenteu"],
-["drum", "leisure", "le tambour", "drum", "북", "buk"]
+["drum", "leisure", "le tambour", "drum", "북", "buk"],
+["hanbok", "korea", "le hanbok", "hanbok", "한복", "hanbok"],
+["tteokguk", "korea", "le tteokguk", "rice cake soup", "떡국", "tteokguk"],
+["songpyeon", "korea", "les songpyeon", "songpyeon", "송편", "songpyeon"],
+["kimbap", "korea", "le kimbap", "kimbap", "김밥", "gimbap"],
+["bibimbap", "korea", "le bibimbap", "bibimbap", "비빔밥", "bibimbap"],
+["tteokbokki", "korea", "les tteokbokki", "tteokbokki", "떡볶이", "tteokbokki"],
+["ramyeon", "korea", "les nouilles instantanées", "instant noodles", "라면", "ramyeon"],
+["hairdryer", "home", "le sèche-cheveux", "hair dryer", "드라이기", "deuraigi"],
+["stamp", "office", "le timbre", "stamp", "우표", "upyo"],
+["atm", "money", "le distributeur", "ATM", "현금인출기", "hyeongeuminchulgi"]
 ]

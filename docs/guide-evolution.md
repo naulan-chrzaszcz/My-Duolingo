@@ -27,7 +27,7 @@ npm test        # tests rapides ; npm run test:all avant de livrer
    - section `content` de `src/i18n/en.json`, pour Voltaire et coréen vus depuis l'interface anglaise.
 5. Lancer `node tests/run.mjs data_integrity` puis `node tests/run.mjs play_lessons fr <cours>`.
 
-Attention : insérer une unité au milieu décale la progression enregistrée des profils existants. Ajouter de préférence à la fin d'un niveau, ou prévoir une migration (`core/progress.js`, fonction `hydrate`, et `UNIT_REMAP`).
+Insérer une unité au milieu est possible : la progression des profils est recalée par titre d'unité au chargement (`relayout` dans `core/progress.js`, liste `S.lay`). Garder les unités triées par niveau (`lv` croissant) et ne jamais renommer le titre d'une unité existante (sa progression serait perdue).
 
 ## Une image de vocabulaire (v30)
 

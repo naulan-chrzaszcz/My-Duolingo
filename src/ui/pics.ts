@@ -3,12 +3,13 @@ import words from "../content/pics.json";
 import { svg } from "./pics/kit.js";
 import { ICONS_A } from "./pics/icons-a.js";
 import { ICONS_B } from "./pics/icons-b.js";
+import { ICONS_C } from "./pics/icons-c.js";
 import { P1_SCENES } from "./pics/scenes-p1.js";
 
 /** Mots illustrés : [id, catégorie, français, anglais, coréen, romanisation]. */
 export const PIC_WORDS: string[][] = words as string[][];
 export const PIC_BY_ID: Record<string, string[]> = Object.fromEntries(PIC_WORDS.map(w => [w[0], w]));
-const ICONS: Record<string, string> = { ...ICONS_A, ...ICONS_B };
+const ICONS: Record<string, string> = { ...ICONS_A, ...ICONS_B, ...ICONS_C };
 
 /** Dessin d'un mot (SVG prêt à insérer), ou "" s'il n'existe pas. */
 export function picSvg(id: string, cls = "picsvg"): string {

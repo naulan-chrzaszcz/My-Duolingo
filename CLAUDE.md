@@ -32,7 +32,7 @@ La propriétaire écrit en français : réponds en français.
 - `src/features/` : fonctions transverses (test de niveau, quêtes, mots à retenir, coach…).
 - `src/services/` : réseau (comptes, IA, rappels) et audio.
 - `src/core/` : état `S` du profil, progression, XP, outils.
-- `src/ui/` : composants, routeur, plateforme, bouton retour, icônes SVG (`icons.ts`).
+- `src/ui/` : composants, routeur, plateforme, bouton retour, icônes SVG (`icons.ts`), images de vocabulaire et scènes de la Part 1 (`pics.ts`, dossier `pics/`, mots dans `src/content/pics.json`).
 - `src/types.ts` : types du modèle de données. Le nouveau code peut être écrit en `.ts`.
 - `src/globals.js` : expose les exports sur `window`. Sert aux `onclick="…"` inline, aux tests et à la console.
 - `public/` : fichiers copiés tels quels (`sw.js`, manifest, icônes, polices).
