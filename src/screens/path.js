@@ -134,7 +134,7 @@ export function renderPath(v) {
       const crown = (S.ext[cid] || []).includes(idx);
       nodes += `<div class="nodewrap${st === "cur" || (st === "open" && n === 0) ? " bub" : ""}" style="transform:translateX(${off}px);--c:${c};--d:${d}">${st === "cur" ? `<div class="ring"></div><button class="startbub" data-u="${u}" data-n="${n}">${idx === 0 ? "Commencer" : "Go !"}</button>` : st === "open" && n === 0 ? `<button class="startbub soft" data-u="${u}" data-n="${n}">Ouvrir</button>` : ""}<button class="node coin ${st} ${n === NPU - 1 ? "chest" : ""} ${NODE[n] === "ai" ? "ainode" : NODE[n] === "w" ? "wnode" : ""}" data-u="${u}" data-n="${n}" aria-label="${stepName(n)} · ${n + 1} / ${NPU}">${st === "done" || st === "cur" ? '<span class="gloss"></span>' : ""}${ic(k, k === "star" ? 38 : 34, "", 2.6)}${crown ? `<span class="crown">${ic("crown", 14, "", 2.2, "currentColor")}</span>` : ""}</button></div>`;
       if (n === 2 || n === 11)
-        nodes += `<div class="pathmascot" style="${(u + (n > 2 ? 1 : 0)) % 2 ? "left" : "right"}:4%;top:${n * 94 + 40}px">${mascot((u + n) % 2 ? "calm" : "happy")}<i class="mshadow"></i></div>`;
+        nodes += `<div class="pathmascot" style="${off > 0 ? "left" : "right"}:3%;top:${n * 94 + 50}px">${mascot((u + n) % 2 ? "calm" : "happy")}<i class="mshadow"></i></div>`;
     }
     const locked = !unitOpen(cid, u);
     const us = unitSteps(cid, u),
@@ -351,20 +351,21 @@ export function placePop(m, u, n, col, dk) {
   const el = document.querySelector(`#view .node[data-u="${u}"][data-n="${n}"]`);
   if (!el) return;
   let r = el.getBoundingClientRect();
-  if (!r.width || r.bottom < 0 || r.top > innerHeight) return;
+  if (!r.width || el.closest(".folded")) return;
   m.classList.add("at");
   const nav = document.querySelector("#bottomnav");
   const nr = nav ? nav.getBoundingClientRect() : null;
   const bottom = nr && nr.top > innerHeight / 2 ? nr.top - 10 : innerHeight - 10;
-  const top0 = (document.querySelector("#topbar") || { offsetHeight: 60 }).offsetHeight + 10;
+  const ban = el.closest(".unit")?.querySelector(".ubanner");
+  const minTop =
+    (document.querySelector("#topbar") || { offsetHeight: 60 }).offsetHeight + (ban ? ban.offsetHeight + 24 : 20);
   const h = m.offsetHeight;
-  let need = r.bottom + 18 + h - bottom;
-  if (need > 0) {
-    need = Math.min(need, Math.max(0, r.top - top0));
-    window.scrollBy(0, need);
+  const maxTop = bottom - 18 - h - r.height;
+  if (r.top < minTop || r.top > maxTop) {
+    window.scrollBy(0, Math.round(r.top - Math.max(minTop, Math.min(maxTop, innerHeight * 0.3))));
     r = el.getBoundingClientRect();
   }
-  if (r.bottom + 18 + h > bottom + 4) {
+  if (r.bottom + 18 + h > bottom + 4 || r.top < 0) {
     m.classList.remove("at");
     return;
   }

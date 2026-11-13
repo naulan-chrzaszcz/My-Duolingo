@@ -15,10 +15,63 @@ import { dueCount, openSession } from "../lesson/engine.js";
 import { myWords } from "./profile.js";
 import { startAI } from "../services/ai.js";
 import { beep, say } from "../services/speech.js";
+import { ic } from "../ui/icons.ts";
 import { mascot } from "../ui/mascot.js";
 import { curCid, curSec, renderAll } from "../ui/router.js";
 import { closeModal, modal, toast } from "../ui/ui.js";
 
+const OR = "#FF9F1C",
+  BL = "#3D8BFF",
+  VI = "#7C4DFF",
+  GR = "#22B573",
+  PK = "#E0457B",
+  GO = "#FFB020",
+  TE = "#13A8A8";
+/** Rubriques de l'écran Entraînement, dans l'ordre d'affichage. */
+const TGROUPS = ["Hangul", "Révisions", "Grammaire", "Écoute & oral", "Vocabulaire", "Examens", "Défis & IA"];
+/** Titre de carte → [rubrique, icône, couleur]. Une carte absente de la table va dans « Défis & IA ». */
+const TMAP = {
+  "Alphabet hangul": ["Hangul", "hangul", PK],
+  "Sons proches (가 / 카 / 까)": ["Hangul", "ear", TE],
+  "Compose les syllabes": ["Hangul", "layers", VI],
+  "Tableau du hangul": ["Hangul", "grid", BL],
+  "Mes erreurs (ancrage)": ["Révisions", "repeat", OR],
+  "Mes mots à retenir": ["Révisions", "bookmark", PK],
+  "Mes mots": ["Révisions", "book", BL],
+  "Réviser une unité au choix": ["Révisions", "layers", BL],
+  "Notions de grammaire": ["Grammaire", "grid", VI],
+  "Grammaire en rafale": ["Grammaire", "bolt", GO],
+  "Règles en rafale": ["Grammaire", "bolt", GO],
+  "Grammar sprint": ["Grammaire", "bolt", GO],
+  "Trouve l'erreur": ["Grammaire", "search", TE],
+  "Find the mistake": ["Grammaire", "search", TE],
+  "Clique sur la faute": ["Grammaire", "search", TE],
+  "Trouve l'erreur (맞춤법)": ["Grammaire", "search", TE],
+  "맞춤법 & dictée": ["Grammaire", "pencil", PK],
+  "Fiches de cours": ["Grammaire", "doc", BL],
+  "Règles du Certificat": ["Grammaire", "doc", BL],
+  "Écoute TOEIC": ["Écoute & oral", "phones", BL],
+  Listening: ["Écoute & oral", "phones", BL],
+  Écoute: ["Écoute & oral", "phones", BL],
+  Prononciation: ["Écoute & oral", "mic", GR],
+  Pronunciation: ["Écoute & oral", "mic", GR],
+  Dictée: ["Écoute & oral", "pencil", VI],
+  Dictation: ["Écoute & oral", "pencil", VI],
+  "Dictées Voltaire": ["Écoute & oral", "pencil", VI],
+  "Mots utiles — Conversation": ["Vocabulaire", "chat", GR],
+  "Mots utiles — Rédaction pro": ["Vocabulaire", "brief", OR],
+  "Mots utiles — TOEIC": ["Vocabulaire", "target", PK],
+  "Useful words — French": ["Vocabulaire", "chat", GR],
+  "Mots utiles": ["Vocabulaire", "chat", PK],
+  "Lecture TOEIC (Part 7)": ["Examens", "doc", TE],
+  "TOEIC blanc express": ["Examens", "clip", VI],
+  "Examen blanc Voltaire": ["Examens", "clip", VI],
+  "Examen blanc coréen": ["Examens", "clip", VI],
+  "Test de niveau": ["Examens", "gauge", GO],
+  "Sprint 60 secondes": ["Défis & IA", "timer", OR],
+  "Révision IA illimitée": ["Défis & IA", "spark", VI],
+  "Entraînement à thème": ["Défis & IA", "palette", PK],
+};
 export function renderTrain(v) {
   const s = curSec();
   const cards = [];
@@ -179,6 +232,7 @@ export function renderTrain(v) {
     "Perso",
     () => bankView(),
   );
+  if (bankDue(s.id)) cards[cards.length - 1].badge = `${bankDue(s.id)} à revoir`;
   add(
     "🎨",
     "Entraînement à thème",
@@ -225,12 +279,26 @@ export function renderTrain(v) {
   const co = S.coach[ccid],
     st = errStats(ccid),
     due = dueCount(s.tracks);
-  const hero = `<div class="coach"><div class="coachl">${mascot("calm")}</div><div style="flex:1;min-width:220px"><small>🧠 Coach IA · ${COURSES[ccid].icon} ${COURSES[ccid].name}</small><h2>Tes erreurs récurrentes</h2>
-  ${s.tracks.length > 1 ? `<div class="tracks" style="margin:8px 0">${s.tracks.map(t => `<button data-ct="${t}" class="${t === ccid ? "on" : ""}">${COURSES[t].icon} ${COURSES[t].name}</button>`).join("")}</div>` : ""}
+  const C = COURSES[ccid];
+  const hero = `<header class="trhero"><div class="trtop"><h1>Entraînement</h1><button class="trstat" onclick="location.hash='stats'" aria-label="Statistiques">${ic("chart", 20, "", 2.4)}</button></div>
+  <p class="trsub">Illimité · +3 💎 par séance terminée. Les exercices portent sur les unités que tu as commencées ou validées au test de niveau.</p>
+  <div class="coach"><small><span>Coach IA</span> · <span>${esc(C.name)}</span></small><h2>Tes erreurs récurrentes</h2>
   <p>${co ? esc(co.diag) : st.n ? `${st.n} erreur(s) enregistrée(s). Lance le coach : il analyse tes fautes (mots, constructions, temps, accords…) et crée des exercices ciblés, toujours différents.` : "Fais quelques leçons : chaque erreur est analysée ici pour créer des exercices sur mesure."}</p>
   ${co && co.focus && co.focus.length ? `<div class="chips">${co.focus.map(x => `<span>${esc(x)}</span>`).join("")}</div>` : ""}
-  <div class="coachb"><button class="btn ghost" style="background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.3);box-shadow:none" onclick="location.hash='stats'">📊 Statistiques</button><button class="btn goldb" id="coachGo">${st.n ? "Séance ciblée" : "Séance découverte"}</button><span>🔁 ${due} rappel${due > 1 ? "s" : ""} à ancrer aujourd'hui</span></div></div></div>`;
-  v.innerHTML = `<h1 class="sectitle">Entraînement ${s.flag}</h1><p class="secsub">Illimité · +3 💎 par séance terminée. Les exercices portent sur les unités que tu as commencées ou validées au test de niveau.</p>${hero}<div class="tgrid">${cards.map((c, i) => `<button class="tcard" data-i="${i}"><span class="ti">${c.ic}</span><h3>${c.t}</h3><p>${c.d}</p><span class="tag">${c.tag}</span></button>`).join("")}</div>`;
+  <div class="coachb"><button class="btn" id="coachGo">${st.n ? "Séance ciblée" : "Séance découverte"}</button><span class="cdue">${ic("repeat", 16, "", 2.6)}<span>${due} rappel${due > 1 ? "s" : ""} à ancrer aujourd'hui</span></span></div>
+  <div class="coachl">${mascot("calm")}</div></div>
+  ${s.tracks.length > 1 ? `<div class="tracks trpills">${s.tracks.map(t => `<button data-ct="${t}" class="${t === ccid ? "on" : ""}">${esc(COURSES[t].name)}</button>`).join("")}</div>` : ""}</header>`;
+  const groups = {};
+  cards.forEach((c, i) => {
+    const [g, k, col] = TMAP[c.t] || ["Défis & IA", "star", VI];
+    (groups[g] = groups[g] || []).push(
+      `<button class="tcard trow" data-i="${i}"><span class="trt"><span class="trh"><h3>${c.t}</h3>${c.badge ? `<span class="tbadge">${c.badge}</span>` : ""}</span><p>${c.d}</p><span class="tag">${c.tag}</span></span><span class="tric" style="background:${col}"><i></i>${ic(k, 28, "", 2.4)}</span></button>`,
+    );
+  });
+  const body = TGROUPS.filter(g => groups[g])
+    .map(g => `<section class="tsec"><h2>${g}</h2>${groups[g].join("")}</section>`)
+    .join("");
+  v.innerHTML = `${hero}<div class="tsecs">${body}</div>`;
   v.querySelectorAll(".tcard").forEach(
     b =>
       (b.onclick = () => {
