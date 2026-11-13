@@ -32,7 +32,7 @@ Insérer une unité au milieu est possible : la progression des profils est reca
 ## Une image de vocabulaire (v30)
 
 1. Ajouter la ligne `[id, catégorie, français, anglais, coréen, romanisation]` dans `src/content/pics.json` (français avec son article : « la pomme »).
-2. Dessiner l'image dans `src/ui/pics/icons-a.ts` ou `icons-b.ts`, sous la même clé `id` : repère 64 × 64, outils de `kit.ts`, contour automatique.
+2. Dessiner l'image dans `src/ui/pics/icons-a.ts`, `icons-b.ts` ou `icons-c.ts`, sous la même clé `id` : repère 64 × 64, outils de `kit.ts`, contour automatique.
 3. L'ajouter au champ `pk` des unités concernées.
 4. Vérifier le rendu : `trainPics("<cours>")` dans la console, puis `node tests/run.mjs data_integrity`.
 

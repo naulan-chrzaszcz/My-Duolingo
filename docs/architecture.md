@@ -1,4 +1,4 @@
-# Architecture du code (v30)
+# Architecture du code (v31)
 
 La v26 reprend exactement le comportement de la v25 dans un projet découpé en modules.
 
@@ -88,7 +88,7 @@ L'ordre compte : la traduction du DOM doit observer la page avant la typographie
 
 - `content/pics.json` : mots illustrés `[id, catégorie, français, anglais, coréen, romanisation]`.
 - `ui/pics/kit.ts` : outils de dessin (`ci`, `el`, `re`, `pa`, `li`, `limb`, `star`, `svg`), contour `K` et palette `C`.
-- `ui/pics/icons-a.ts` et `icons-b.ts` : un dessin par mot, repère 64 × 64.
+- `ui/pics/icons-a.ts`, `icons-b.ts` et `icons-c.ts` (v31, vie coréenne) : un dessin par mot, repère 64 × 64.
 - `ui/pics/people.ts` : personnages (`person` : pose, direction, vue, mains…) et décors (`room`, `outside`, `desk`, `chairS`…).
 - `ui/pics/scenes-p1.ts` : scènes de la Part 1, repère 160 × 100, indexées par la phrase correcte.
 - `ui/pics.ts` : `picSvg(id)`, `picWord(id, langue)`, `hasPic(id)`, `p1Svg(phrase)`, `PIC_WORDS`.
