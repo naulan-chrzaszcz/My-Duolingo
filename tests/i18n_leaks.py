@@ -18,7 +18,7 @@ async def main():
     leaks={}
     for sec,trk in SECS:
       await p.evaluate(f"S.sec='{sec}';S.track['{sec}']='{trk}';save()")
-      for h in ['parcours','entrainement','histoires','ligue','boutique','profil','stats','reglages','reglages/preferences','reglages/compte','reglages/notifications','reglages/claude']:
+      for h in ['parcours','entrainement','histoires','ligue','boutique','profil','stats','reglages','reglages/preferences','reglages/compte','reglages/notifications','reglages/claude','chapitres','quetes']:
         await p.evaluate(f"closeModal();location.hash='x';location.hash='{h}';route()"); await p.wait_for_timeout(250)
         for t in await p.evaluate(JS): leaks.setdefault(t,set()).add(f'{trk}/{h}')
     for t,w in sorted(leaks.items()): print(repr(t),sorted(w)[:3])

@@ -93,6 +93,10 @@ Attention : insérer une unité au milieu décale la progression enregistrée de
 - Ajouter sa ligne `setrow` dans la sous-page voulue de `src/screens/settings.js` (`pageHtml`) et son gestionnaire dans `bindSettings()` avec `$$("#id")` (sans effet si la ligne n'est pas affichée).
 - Nouvelle rubrique : une entrée dans `SETTINGS_PAGES` (identifiant, titre, icône) et sa branche dans `pageHtml`.
 
+## Une quête
+
+- Quête du jour : tableau `QUESTS` de `src/features/quests.js` (`id`, `t`, `cur`, `max`, `g`). Chaque quête accomplie donne 1 point à la quête du mois (`QM_GOAL`, paliers `QM_STEPS`).
+
 ## Une icône
 
 - Ajouter son tracé (viewBox 24 × 24, trait sans remplissage) dans l'objet `P` de `src/ui/icons.ts`, puis l'utiliser avec `ic("nom", taille)`.

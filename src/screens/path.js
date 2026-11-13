@@ -23,8 +23,9 @@ import { openSession } from "../lesson/engine.js";
 import { writeTasks } from "../lesson/writing.js";
 import { AI, startAI } from "../services/ai.js";
 import { beep, say } from "../services/speech.js";
-import { ic } from "../ui/icons.ts";
+import { flagSvg, ic } from "../ui/icons.ts";
 import { mascot } from "../ui/mascot.js";
+import { horangScene } from "../ui/scenes.ts";
 import { ANDROID, INSTALL, IOS, STANDALONE, haptic } from "../ui/platform.js";
 import { curCid, curSec, renderAll } from "../ui/router.js";
 import { closeModal, deep, modal, toast } from "../ui/ui.js";
@@ -76,6 +77,52 @@ export function stepName(n) {
   if (NODE[n] === "w") return "Rédaction";
   return "Leçon " + lessonNo(n) + " sur 12";
 }
+/** Chapitres d'un cours : ses niveaux, dans l'ordre (0 = les bases… 3 = expert). */
+export function chapters(cid) {
+  return [...new Set(COURSES[cid].units.map(U => U.lv))].sort((a, b) => a - b);
+}
+/** Chapitre affiché : celui choisi, sinon celui de l'étape conseillée. */
+export function curChapter(cid, ns) {
+  const chs = chapters(cid);
+  const c = (S.chap || {})[cid];
+  if (chs.includes(c)) return c;
+  if (ns) return COURSES[cid].units[ns.u].lv;
+  return chs[chs.length - 1];
+}
+/** Change de chapitre ; « goCur » descend ensuite jusqu'à l'étape conseillée. */
+export function setChapter(cid, lv, goCur) {
+  S.chap = S.chap || {};
+  S.chap[cid] = lv;
+  save();
+  if (location.hash !== "#parcours") location.hash = "parcours";
+  renderAll();
+  if (goCur) {
+    const ns = nextStep(cid);
+    const el = ns && document.querySelector(`.node[data-u="${ns.u}"][data-n="${ns.n}"]`);
+    if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "center" }), 60);
+  }
+}
+/** Écran « Chapitres » du cours, façon Duolingo. */
+export function renderChapters(v) {
+  const cid = curCid(),
+    C = COURSES[cid];
+  const ns = nextStep(cid);
+  const cur = curChapter(cid, ns);
+  let first = 1;
+  const cards = chapters(cid)
+    .map((lv, i) => {
+      const us = C.units.map((U, u) => [U, u]).filter(([U]) => U.lv === lv);
+      const d = us.filter(([U, u]) => unitComplete(cid, u)).length;
+      const a = first,
+        b = first + us.length - 1;
+      first = b + 1;
+      return `<button class="chapcard ${lv === cur ? "on" : ""}" data-ch="${lv}" style="animation-delay:${(i * 0.05).toFixed(2)}s"><span class="cct"><b>Chapitre ${i + 1}</b><span class="ccr">${flagSvg(curSec().id, 26, 17, 4)}<span>Unités ${a} à ${b}</span></span></span><small>${secName(cid, lv)}</small><span class="ccbar"><i style="width:${Math.round((d / Math.max(1, us.length)) * 100)}%"></i></span><span class="ccn">${d} / ${us.length}</span></button>`;
+    })
+    .join("");
+  v.innerHTML = `<div class="sethead"><button class="setx" id="chapClose" aria-label="Fermer">${ic("x", 28, "", 3)}</button><h1>${esc(C.name)}</h1><span></span></div><div class="chaplist">${cards}</div>`;
+  $("#chapClose").onclick = () => (location.hash = "parcours");
+  v.querySelectorAll("[data-ch]").forEach(b => (b.onclick = () => setChapter(cid, +b.dataset.ch)));
+}
 let curObs = null;
 /** Bouton flottant « revenir à l'étape conseillée », visible quand elle sort de l'écran. */
 function curFab(v, cid, ns) {
@@ -87,13 +134,18 @@ function curFab(v, cid, ns) {
   fab.setAttribute("aria-label", "Revenir à l'étape conseillée");
   v.appendChild(fab);
   fab.onclick = () => {
-    toggleFold(cid, ns.u, false);
+    if (!v.querySelector(`.node[data-u="${ns.u}"][data-n="${ns.n}"]`))
+      return setChapter(cid, COURSES[cid].units[ns.u].lv, true);
     const el = document.querySelector(`.node[data-u="${ns.u}"][data-n="${ns.n}"]`);
     if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
   };
   const el = v.querySelector(`.node[data-u="${ns.u}"][data-n="${ns.n}"]`);
   const target = el || v.querySelector(`#unit${ns.u} .ubanner`);
-  if (!target) return;
+  if (!target) {
+    fab.innerHTML = ic("down", 26, "", 2.8);
+    fab.classList.remove("hidden");
+    return;
+  }
   curObs = new IntersectionObserver(es => {
     const e = es[es.length - 1];
     if (!fab.isConnected) return curObs && curObs.disconnect();
@@ -109,13 +161,16 @@ export function renderPath(v) {
     C = COURSES[cid],
     done = doneCount(cid),
     ns = nextStep(cid);
-  const tabs =
-    s.tracks.length > 1
-      ? `<div class="tracks">${s.tracks.map(t => `<button data-t="${t}" class="${t === cid ? "on" : ""}">${COURSES[t].icon} ${COURSES[t].name}</button>`).join("")}</div>`
-      : "";
+  // chapitres = niveaux du cours (comme Duolingo : on n'affiche que le chapitre choisi)
+  const chs = chapters(cid);
+  const ch = curChapter(cid, ns);
+  const ci = chs.indexOf(ch);
   let units = "";
   let gi = 0;
+  let k = 0;
   C.units.forEach((U, u) => {
+    if (U.lv !== ch) return;
+    k++;
     const col = UCOLORS[u % 6],
       dk = UDARK[u % 6];
     let nodes = "";
@@ -134,29 +189,29 @@ export function renderPath(v) {
       const crown = (S.ext[cid] || []).includes(idx);
       nodes += `<div class="nodewrap${st === "cur" || (st === "open" && n === 0) ? " bub" : ""}" style="transform:translateX(${off}px);--c:${c};--d:${d}">${st === "cur" ? `<div class="ring"></div><button class="startbub" data-u="${u}" data-n="${n}">${idx === 0 ? "Commencer" : "Go !"}</button>` : st === "open" && n === 0 ? `<button class="startbub soft" data-u="${u}" data-n="${n}">Ouvrir</button>` : ""}<button class="node coin ${st} ${n === NPU - 1 ? "chest" : ""} ${NODE[n] === "ai" ? "ainode" : NODE[n] === "w" ? "wnode" : ""}" data-u="${u}" data-n="${n}" aria-label="${stepName(n)}">${st === "done" || st === "cur" ? '<span class="gloss"></span>' : ""}${ic(k, k === "star" ? 38 : 34, "", 2.6)}${crown ? `<span class="crown">${ic("crown", 14, "", 2.2, "currentColor")}</span>` : ""}</button></div>`;
       if (n === 2 || n === 11)
-        nodes += `<div class="pathmascot" style="${off > 0 ? "left" : "right"}:3%;top:${n * 94 + 50}px">${mascot((u + n) % 2 ? "calm" : "happy")}<i class="mshadow"></i></div>`;
+        nodes += `<div class="pathmascot" style="${off > 0 ? "left" : "right"}:3%;top:${n * 94 + 50}px">${horangScene(u * 2 + (n > 2 ? 1 : 0))}</div>`;
     }
     const locked = !unitOpen(cid, u);
     const us = unitSteps(cid, u),
       uc = unitComplete(cid, u);
-    if (u === 0 || C.units[u - 1].lv !== U.lv)
-      units += `<div class="pathsec"><span>Section ${U.lv + 1}</span><h3>${secName(cid, U.lv)}</h3><small>${C.units.filter(x => x.lv === U.lv).length} unités</small></div>`;
-    const fd = isFolded(cid, u, ns);
+    const fd = false;
     const pc = Math.round((us / NPU) * 100);
-    units += `<section class="unit ${fd ? "folded" : ""}" id="unit${u}"><div class="ubanner" role="button" tabindex="0" aria-expanded="${!fd}" data-fold="${u}" style="--c:${locked ? "#8F89AD" : deep(col)};--d:${locked ? "#6E6890" : dk}"><div class="ut"><small>Unité ${u + 1} · ${LEVELS[U.lv]}${U.gen ? " · ✨ créée par l'IA" : ""}${uc ? " · ✓ terminée" : us ? ` · ${us}/${NPU} étapes` : U.lv < ((S.place || {})[cid] || 0) ? " · niveau validé au test" : ""}${ns && ns.u === u ? " · 👉 conseillée" : ""}</small><h2>${esc(U.t)}</h2><p>${esc(U.d)}</p><div class="umini"><i style="width:${pc}%"></i></div></div><div class="ubtns"><span class="ufold" aria-hidden="true">${ic("chev", 24, "", 3)}</span>${locked && !U.hg && u === C.units.findIndex(x => !x.hg) ? `<button class="guide" data-j="${u}">⏩ Tester mon hangul</button>` : ""}<button class="guide" data-g="${u}" aria-label="Guide de l'unité">${ic("guide", 26, "", 2.4)}<span>Guide</span></button></div></div><div class="nodes">${nodes}</div></section>`;
+    units += `<section class="unit ${fd ? "folded" : ""}" id="unit${u}"><div class="ubanner" style="--c:${locked ? "#8F89AD" : deep(col)};--d:${locked ? "#6E6890" : dk}"><div class="ut"><small><span>Chapitre ${ci + 1}, unité ${k}</span>${uc ? ` <span class="udone">${ic("check", 14, "", 3.4)}</span>` : ""}</small><h2>${esc(U.t)}</h2><p>${esc(U.d)}</p><div class="umini"><i style="width:${pc}%"></i></div></div><div class="ubtns">${locked && !U.hg && u === C.units.findIndex(x => !x.hg) ? `<button class="guide" data-j="${u}">⏩ Tester mon hangul</button>` : ""}<button class="guide" data-g="${u}" aria-label="Guide de l'unité">${ic("guide", 26, "", 2.4)}<span>Guide</span></button></div></div><div class="nodes">${nodes}</div></section>`;
   });
+  const nx = chs[ci + 1];
+  if (nx !== undefined) {
+    const nu = C.units.filter(U => U.lv === nx).length;
+    units += `<div class="chapnext"><span class="chnk">Chapitre ${ci + 2}</span><b>${secName(cid, nx)}</b><small>${nu} unités</small><button class="btn" id="chapNext">Continuer</button></div>`;
+  }
   const nGen = (S.genU[cid] || []).length;
   const lastDone = unitSteps(cid, C.units.length - 1) > 0 || C.units.every((U, u) => unitComplete(cid, u));
-  units += `<div class="endtrophy"><div>🏆</div>${C.units.every((U, u) => unitComplete(cid, u)) ? `Toutes les unités de ${C.name} sont terminées, bravo !` : `Fin du parcours ${C.name} : continue !`}${nGen ? `<br><small>${nGen} unité(s) créée(s) par l'IA pour toi</small>` : ""}
-  <div class="genbox"><b>✨ La suite, à l'infini</b><p>Dès que tu as commencé la dernière unité, l'IA crée une nouvelle unité complète (phrases, vocabulaire, règles${C.kind === "toeic" ? ", écoute, lecture" : ""}) qui prolonge ce que tu as appris, avec des notions nouvelles.</p><button class="btn ${lastDone ? "goldb" : "ghost"}" id="genU" ${lastDone ? "" : "disabled"}>${lastDone ? "Créer l'unité suivante" : "Disponible dès la dernière unité commencée"}</button></div></div>`;
+  if (nx === undefined)
+    units += `<div class="endtrophy"><span class="endtr">${ic("trophy", 40, "", 2.4)}</span><b>${C.units.every((U, u) => unitComplete(cid, u)) ? `Toutes les unités de ${C.name} sont terminées, bravo !` : `Fin du parcours ${C.name} : continue !`}</b>${nGen ? `<small>${nGen} unité(s) créée(s) par l'IA pour toi</small>` : ""}
+  <div class="genbox"><span>${ic("spark", 20, "", 2.4)}<b>La suite, à l'infini</b></span><p>L'IA crée une nouvelle unité dès que la dernière est commencée.</p><button class="btn ${lastDone ? "goldb" : "ghost"}" id="genU" ${lastDone ? "" : "disabled"}>${lastDone ? "Créer l'unité suivante" : "Disponible dès la dernière unité commencée"}</button></div></div>`;
   const gx = todayXp(),
     gp = Math.min(100, Math.round((gx / S.goal) * 100));
   const side = `<div class="side"><div class="card"><div class="goalrow">${mascot(gp >= 100 ? "happy" : "calm", "jump")}<div style="flex:1"><h3 style="margin-bottom:6px">Objectif du jour</h3><div class="bar"><i style="width:${gp}%"></i><span>${gx} / ${S.goal} XP</span></div></div></div></div>
-  <div class="card"><h3>🎯 Quêtes du jour</h3>${QUESTS.map(q => {
-    const c = Math.min(q.cur(), q.max()),
-      dn = S.q.claimed.includes(q.id);
-    return `<div class="quest ${dn ? "done" : ""}"><div class="qi">${dn ? "✅" : q.ic}</div><div class="qb"><div>${q.t()} <span style="color:var(--blue)">+${q.g}💎</span></div><div class="bar pri"><i style="width:${(c / q.max()) * 100}%"></i><span>${c} / ${q.max()}</span></div></div></div>`;
-  }).join("")}</div>
+  <a class="card sidequest" href="#quetes"><span>${ic("chest", 26, "", 2.4)}</span><b>Quêtes du jour</b><em>${S.q.claimed.length} / ${QUESTS.length}</em>${ic("chevr", 20, "", 2.8)}</a>
   <div class="card"><h3>📈 Progression ${C.name}</h3><div class="bar ok"><i style="width:${Math.round((done / (C.units.length * NPU)) * 100)}%"></i><span>${done} / ${C.units.length * NPU} étapes</span></div><p class="secsub" style="margin:10px 0 0">🧭 Parcours libre : ${cid === "ko" && !hgDone(cid) ? "termine les 4 unités de hangul, puis" : ""} commence n'importe quelle unité avec « Ouvrir ». L'étape 👉 conseillée suit l'ordre du parcours.</p>${ns ? `<button class="btn ghost" id="goNext" style="margin-top:10px">👉 Aller à l'étape conseillée</button>` : ""}<button class="btn ghost" id="placeGo2" style="margin-top:8px">🎯 ${(S.place || {})[cid] != null ? "Refaire le test de niveau" : "Test de niveau"}</button>${(S.place || {})[cid] != null ? `<p class="secsub" style="margin:8px 0 0">${esc(placeEstimate(cid, S.place[cid]))}</p>` : ""}</div></div>`;
   const inst =
     ANDROID && !STANDALONE && !S.set.hideInstall
@@ -168,8 +223,10 @@ export function renderPath(v) {
     !doneCount(cid) && (S.place || {})[cid] == null
       ? `<div class="placeban"><span>🎯</span><div><b>Tu as déjà des bases en ${esc(C.name)} ?</b><br>Passe le test de niveau (5 min) : ton parcours démarrera au bon endroit.</div><button class="btn goldb" id="placeGo">Faire le test</button></div>`
       : "";
-  const foldbar = `<div class="foldbar"><button class="chipbtn" id="unfoldAll">⌄ Tout déplier</button><button class="chipbtn" id="foldAll">⌃ Tout replier</button><button class="chipbtn" id="foldSmart">👉 En cours</button></div>`;
-  v.innerHTML = `${inst}<div class="pathgrid"><div>${tabs}${placeBan}${foldbar}${units}</div>${side}</div>`;
+  const cu = C.units.filter(U => U.lv === ch),
+    cd = cu.filter(U => unitComplete(cid, C.units.indexOf(U))).length;
+  const chead = `<button class="chaphead" id="chapGo"><span class="chk">Chapitre ${ci + 1}</span><b>${secName(cid, ch)}</b><span class="chbar"><i style="width:${Math.round((cd / Math.max(1, cu.length)) * 100)}%"></i></span><span class="chn">${cd} / ${cu.length}</span>${ic("chevr", 22, "", 2.8)}</button>`;
+  v.innerHTML = `${inst}<div class="pathgrid"><div>${placeBan}${chead}${units}</div>${side}</div>`;
   const ix = $("#instx");
   if (ix)
     ix.onclick = () => {
@@ -194,45 +251,14 @@ export function renderPath(v) {
       } catch (x) {}
       renderAll();
     };
-  v.querySelectorAll("[data-t]").forEach(
-    b =>
-      (b.onclick = () => {
-        S.track[s.id] = b.dataset.t;
-        save();
-        renderAll();
-      }),
-  );
+  $("#chapGo").onclick = () => (location.hash = "chapitres");
+  const cn = $("#chapNext");
+  if (cn)
+    cn.onclick = () => {
+      setChapter(cid, nx);
+      scrollTo(0, 0);
+    };
   v.querySelectorAll(".node,.startbub").forEach(b => (b.onclick = () => nodeSheet(cid, +b.dataset.u, +b.dataset.n)));
-  v.querySelectorAll("[data-fold]").forEach(b => {
-    const u = +b.dataset.fold;
-    b.onclick = e => {
-      if (e.target.closest("button")) return;
-      toggleFold(cid, u);
-    };
-    b.onkeydown = e => {
-      if ((e.key === "Enter" || e.key === " ") && e.target === b) {
-        e.preventDefault();
-        toggleFold(cid, u);
-      }
-    };
-  });
-  const setAll = f => {
-    const o = {};
-    C.units.forEach((U, u) => {
-      o[u] = typeof f === "function" ? f(u) : f;
-    });
-    foldSet(cid, o);
-    v.querySelectorAll(".unit").forEach((sec, u) => {
-      sec.classList.toggle("folded", o[u]);
-      sec.querySelector(".ubanner").setAttribute("aria-expanded", String(!o[u]));
-    });
-  };
-  $("#unfoldAll").onclick = () => setAll(false);
-  $("#foldAll").onclick = () => setAll(true);
-  $("#foldSmart").onclick = () => {
-    foldSet(cid, {});
-    setAll(u => isFolded(cid, u, ns));
-  };
   v.querySelectorAll("[data-j]").forEach(b => (b.onclick = () => jumpAsk(cid, +b.dataset.j)));
   const gb = $("#genU");
   if (gb) gb.onclick = () => genUnit(cid);
@@ -242,7 +268,7 @@ export function renderPath(v) {
   const gn = $("#goNext");
   if (gn && ns)
     gn.onclick = () => {
-      toggleFold(cid, ns.u, false);
+      if (C.units[ns.u].lv !== ch) return setChapter(cid, C.units[ns.u].lv, true);
       const el = document.querySelector(`.node[data-u="${ns.u}"][data-n="${ns.n}"]`);
       if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
     };
@@ -293,7 +319,7 @@ export function nodeSheet(cid, u, n, force) {
   const head = `<div class="npk"><span>${stepName(n)}</span> · <span>Étape ${n + 1} sur ${NPU}</span></div><h2>${esc(U.t)}</h2>`;
   if (NODE[n] === "w") {
     const m = modal(
-      `<div class="mcenter npc">${head}<p>Écris de vrais textes avec ce que tu as appris. ${AI.mode === "local" ? "Sans IA, tu compares avec un modèle et une liste de vérification." : "L'IA corrige ton texte, explique chaque faute et l'ajoute à tes statistiques."}</p><button class="btn big" id="go">${idx < done ? "Nouvelle rédaction (+XP)" : "Commencer"}</button></div>`,
+      `<div class="mcenter npc">${head}<button class="btn big" id="go">${idx < done ? "Nouvelle rédaction (+XP)" : "Commencer"}</button></div>`,
       "npop",
     );
     m.querySelector("#go").onclick = () => {
@@ -317,7 +343,7 @@ export function nodeSheet(cid, u, n, force) {
   }
   if (NODE[n] === "ai") {
     const m = modal(
-      `<div class="mcenter npc">${head}<p>Des exercices inédits, générés à chaque fois, pour consolider cette unité et les deux précédentes. Jamais deux fois les mêmes !</p><button class="btn big" id="go">${idx < done ? "Nouvelle révision (+XP)" : "Commencer"}</button></div>`,
+      `<div class="mcenter npc">${head}<button class="btn big" id="go">${idx < done ? "Nouvelle révision (+XP)" : "Commencer"}</button></div>`,
       "npop",
     );
     m.querySelector("#go").onclick = () => {
@@ -332,7 +358,7 @@ export function nodeSheet(cid, u, n, force) {
   }
   const isCk = n === NPU - 1;
   const m = modal(
-    `<div class="mcenter npc">${head}<p><span>${LEVELS[U.lv]}</span> · <span>${isCk ? "Un test plus long et plus difficile. Réussis-le pour ouvrir le coffre (+20 💎)." : ["Découverte en douceur", "On ajoute l'écoute", "On passe à l'écrit", "Mode difficile : tout à l'écrit et à l'oral"][TIER[n]]}</span></p><button class="btn big" id="go">${idx < done ? "Revoir (+XP)" : "Commencer"}</button></div>`,
+    `<div class="mcenter npc">${head}${isCk ? `<p>+20 💎</p>` : ""}<button class="btn big" id="go">${idx < done ? "Revoir (+XP)" : "Commencer"}</button></div>`,
     isCk ? "npop chestpop" : "npop",
   );
   m.querySelector("#go").onclick = () => {
@@ -388,10 +414,9 @@ export function placePop(m, u, n, col, dk) {
 export function extBtn(m, cid, u, n, idx, done, start) {
   const got = (S.ext[cid] || []).includes(idx);
   const card = m.querySelector(".mcenter") || m;
-  const base = isDone(cid, u, n);
   card.insertAdjacentHTML(
     "beforeend",
-    `<div class="extbox"><button class="btn extb" id="extgo"><span>Version extrême · XP ×2</span>${got ? ` <span class="crown">${ic("crown", 14, "", 2.2, "currentColor")}</span>` : ""}</button><small>Tout à l'écrit et à l'oral, plus de pièges, audio seul, 3 erreurs maximum. XP ×2 et une couronne 👑 sur l'étape.${base ? "" : "<br>💡 Conseil : fais d'abord la version de base de cette étape."}</small></div>`,
+    `<div class="extbox"><button class="btn extb" id="extgo" title="Tout à l'écrit et à l'oral, plus de pièges, audio seul, 3 erreurs maximum. XP ×2 et une couronne 👑 sur l'étape."><span>Version extrême · XP ×2</span>${got ? ` <span class="crown">${ic("crown", 14, "", 2.2, "currentColor")}</span>` : ""}</button></div>`,
   );
   m.querySelector("#extgo").onclick = () => {
     closeModal();

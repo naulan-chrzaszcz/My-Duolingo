@@ -287,7 +287,7 @@ export function renderTrain(v) {
   ${co && co.focus && co.focus.length ? `<div class="chips">${co.focus.map(x => `<span>${esc(x)}</span>`).join("")}</div>` : ""}
   <div class="coachb"><button class="btn" id="coachGo">${st.n ? "Séance ciblée" : "Séance découverte"}</button><span class="cdue">${ic("repeat", 16, "", 2.6)}<span>${due} rappel${due > 1 ? "s" : ""} à ancrer aujourd'hui</span></span></div>
   <div class="coachl">${mascot("calm")}</div></div>
-  ${s.tracks.length > 1 ? `<div class="tracks trpills">${s.tracks.map(t => `<button data-ct="${t}" class="${t === ccid ? "on" : ""}">${esc(COURSES[t].name)}</button>`).join("")}</div>` : ""}</header>`;
+</header>`;
   const groups = {};
   const ord = Object.keys(TMAP);
   const rank = c => ord.indexOf(c.t) + 1 || 99;

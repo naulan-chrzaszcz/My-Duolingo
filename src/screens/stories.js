@@ -1,4 +1,5 @@
 // Écran Histoires
+import { flagSvg, ic } from "../ui/icons.ts";
 import { LEVELS, SECTIONS, STORIES } from "../content/index.js";
 import { S, save, uid } from "../core/accounts.js";
 import { $, UCOLORS, esc, shuffle } from "../core/util.js";
@@ -65,10 +66,10 @@ export function renderStories(v) {
     })
     .join("");
   const gens = shown.filter(x => x.gen);
-  v.innerHTML = `<h1 class="sectitle">Histoires ${s.flag}</h1><p class="secsub">${s.id === "fr" ? "Des textes du quotidien avec des pièges d'orthographe à repérer." : "De courtes scènes à écouter, avec des questions de compréhension."} <b>${list.length} histoires</b> · ${done} lue${done > 1 ? "s" : ""} · +15 XP. 👆 Touche un mot que tu ne comprends pas pour le mettre de côté et le réviser plus tard.</p>
+  v.innerHTML = `<h1 class="sectitle phd"><span>Histoires</span>${flagSvg(s.id, 34, 23, 6)}</h1><p class="secsub">${s.id === "fr" ? "Des textes du quotidien avec des pièges d'orthographe à repérer." : "De courtes scènes à écouter, avec des questions de compréhension."} <b>${list.length} histoires</b> · ${done} lue${done > 1 ? "s" : ""} · +15 XP. 👆 Touche un mot que tu ne comprends pas pour le mettre de côté et le réviser plus tard.</p>
  <div class="tracks sfilt">${F.map(([k, l]) => `<button data-f="${k}" class="${String(STORY_F) === String(k) ? "on" : ""}">${l}</button>`).join("")}</div>
  <button class="btn goldb sgen" id="sgen">✨ Nouvelle histoire inédite (IA)</button>
- ${groups}${gens.length ? `<h3 class="slvh">✨ Mes histoires IA <small>${gens.length}</small></h3><div class="sgrid2">${gens.map(card).join("")}</div>` : STORY_F === "gen" ? '<div class="empty">Aucune histoire IA pour l\'instant : crée la première avec le bouton ci-dessus !</div>' : ""}`;
+ ${groups}${gens.length ? `<h3 class="slvh"><span class="slvi">${ic("spark", 20, "", 2.4)}</span><span>Mes histoires IA</span> <small>${gens.length}</small></h3><div class="sgrid2">${gens.map(card).join("")}</div>` : STORY_F === "gen" ? '<div class="empty">Aucune histoire IA pour l\'instant : crée la première avec le bouton ci-dessus !</div>' : ""}`;
   v.querySelectorAll("[data-f]").forEach(
     b =>
       (b.onclick = () => {

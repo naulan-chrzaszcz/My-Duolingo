@@ -1,4 +1,5 @@
 // Écran Statistiques
+import { flagSvg, ic } from "../ui/icons.ts";
 import { COURSES } from "../content/index.js";
 import { S, save } from "../core/accounts.js";
 import { esc } from "../core/util.js";
@@ -38,11 +39,11 @@ export function renderStats(v) {
    <button class="btn ghost" data-ru="${ui}">🎯 Réviser cette unité</button></div></details>`;
     })
     .join("");
-  v.innerHTML = `<h1 class="sectitle">📊 Statistiques ${s.flag}</h1><p class="secsub">Chaque réponse est classée par unité, compétence et notion : tu vois exactement ce qui revient.</p>
+  v.innerHTML = `<h1 class="sectitle phd"><span>Statistiques</span>${flagSvg(s.id, 34, 23, 6)}</h1><p class="secsub">Chaque réponse est classée par unité, compétence et notion : tu vois exactement ce qui revient.</p>
   ${s.tracks.length > 1 ? `<div class="tracks">${s.tracks.map(t => `<button data-st="${t}" class="${t === cid ? "on" : ""}">${COURSES[t].icon} ${COURSES[t].name}</button>`).join("")}</div>` : ""}
   <div class="sgrid"><div class="sbox"><span class="si">✅</span><div><b>${tot[0] || tot[1] ? pct(...tot) + " %" : "—"}</b><small>réussite</small></div></div><div class="sbox"><span class="si">🧮</span><div><b>${tot[0]}</b><small>réponses</small></div></div><div class="sbox"><span class="si">📚</span><div><b>${Object.keys(st.u).filter(k => k !== "x").length}</b><small>unités travaillées</small></div></div><div class="sbox"><span class="si">🔁</span><div><b>${rules.length}</b><small>notions à revoir</small></div></div></div>
-  <div class="card"><h3>🔁 Erreurs récurrentes</h3>${rules.length ? rules.map((r, i) => `<div class="srule big"><span><b>${i + 1}.</b> ${esc(r.l)}${C.units[r.u] ? `<br><small>Unité : ${esc(C.units[r.u].t)}</small>` : ""}</span><small>❌ ${r.k} fois / ${r.a}</small><button class="btn ghost" data-rn="${i}">🎯</button></div>`).join("") : '<div class="empty">Pas encore d\'erreur enregistrée : fais quelques leçons !</div>'}</div>
-  <div class="card"><h3>📚 Par unité</h3>${rows || '<div class="empty">Aucune donnée pour ce parcours.</div>'}</div>
+  <div class="card"><h3 class="hic">${ic("repeat", 22, "", 2.6)}<span>Erreurs récurrentes</span></h3>${rules.length ? rules.map((r, i) => `<div class="srule big"><span><b>${i + 1}.</b> ${esc(r.l)}${C.units[r.u] ? `<br><small>Unité : ${esc(C.units[r.u].t)}</small>` : ""}</span><small>❌ ${r.k} fois / ${r.a}</small><button class="btn ghost" data-rn="${i}">🎯</button></div>`).join("") : '<div class="empty">Pas encore d\'erreur enregistrée : fais quelques leçons !</div>'}</div>
+  <div class="card"><h3 class="hic">${ic("layers", 22, "", 2.6)}<span>Par unité</span></h3>${rows || '<div class="empty">Aucune donnée pour ce parcours.</div>'}</div>
   <button class="btn ghost" onclick="location.hash='profil'">← Retour au profil</button>`;
   v.querySelectorAll("[data-st]").forEach(
     b =>

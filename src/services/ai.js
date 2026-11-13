@@ -2,6 +2,8 @@
 import { COURSES } from "../content/index.js";
 import { ACC, S, save } from "../core/accounts.js";
 import { esc, rnd, secName, shuffle } from "../core/util.js";
+import { drillLabel, drillSetFor, drillSub } from "../exercises/drills.js";
+import { drillExercises } from "../features/grammar.js";
 import { allPairs, ctxFor, distract, make } from "../exercises/generate.js";
 import { words } from "../exercises/validate.js";
 import { localDiag, localFocus } from "../features/coach.js";
@@ -193,6 +195,24 @@ export function aiLabel(m) {
         ? "✨ Clé commune du serveur"
         : "🔀 Sans IA : révisions mélangées localement";
 }
+/** Règles de grammaire (notions v27) du cours où l'élève se trompe le plus (identifiants). */
+export function weakRuleIds(cid) {
+  const set = drillSetFor(cid);
+  if (!set) return [];
+  const d = S.drill || {};
+  return Object.entries(d)
+    .filter(([id, x]) => x && x[0] >= 2 && x[1] / x[0] >= 0.3 && (drillSub(id) || {}).set === set)
+    .sort((a, b) => b[1][1] / b[1][0] - a[1][1] / a[1][0])
+    .slice(0, 5)
+    .map(([id]) => id);
+}
+/** Les mêmes règles, décrites pour l'IA (titre et taux d'erreur). */
+export function weakRules(cid) {
+  const d = S.drill || {};
+  return weakRuleIds(cid).map(id =>
+    `${drillLabel(id)} (${Math.round((d[id][1] / d[id][0]) * 100)} % d'erreurs)`.slice(0, 120),
+  );
+}
 export function aiRequest(cid, units, errors, theme) {
   const C = COURSES[cid];
   const seen = [];
@@ -211,6 +231,7 @@ export function aiRequest(cid, units, errors, theme) {
     course: C.name,
     level: secName(cid, Math.max(...units.map(u => u.lv))),
     units: units.map(u => u.t).slice(-6),
+    weak: weakRules(cid),
     seen: shuffle(seen).slice(0, 36),
     errors: errs,
     theme: (theme || "").slice(0, 80),
@@ -240,7 +261,7 @@ export function aiPrompt(r) {
       (ko ? '"romanisation révisée",' : "") +
       '"variante correcte acceptée"]],"c":[["phrase en ' +
       L +
-      ' avec ___ à la place d\'un mot",["bonne réponse","distracteur","distracteur","distracteur"],0,"explication courte en français"]],"v":[["mot français","traduction ' +
+      ' avec ___ à la place d\'un mot",["bonne réponse","distracteur","distracteur","distracteur"],0,"explication courte en français","indice : forme de base du mot manquant (infinitif…) ou chaîne vide"]],"v":[["mot français","traduction ' +
       L +
       '"]]' +
       (toeic
@@ -277,6 +298,11 @@ export function aiPrompt(r) {
       ? "Erreurs récentes de l'élève (exercice | réponse attendue | réponse donnée) :\n- " +
         r.errors.join("\n- ") +
         '\n\nAnalyse ces erreurs et repère les erreurs RÉCURRENTES : mots ou vocabulaire, construction des phrases, temps et conjugaison, accords, prépositions, orthographe, écoute. Dans "diag", écris un diagnostic bienveillant en français (2 à 3 phrases, tutoiement). Dans "focus", liste 2 à 4 points faibles courts. Au moins 70 % des exercices doivent cibler ces points faibles, sous des formes variées.\n\n'
+      : "") +
+    (r.weak && r.weak.length
+      ? "Règles de grammaire où l'élève se trompe souvent :\n- " +
+        r.weak.join("\n- ") +
+        '\nConsacre au moins 3 éléments de "c" et 2 de "p" à ces règles.\n\n'
       : "") +
     "Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n" +
     schema +
@@ -350,8 +376,12 @@ export function validateGen(raw, C) {
       a[2] >= 0 &&
       a[2] < a[1].length &&
       new Set(a[1].map(x => x.trim())).size === a[1].length
-    )
-      out.c.push([a[0].trim(), a[1].map(x => x.trim()), a[2], str(a[3]) ? a[3] : ""]);
+    ) {
+      const c = [a[0].trim(), a[1].map(x => x.trim()), a[2], str(a[3]) ? a[3] : ""];
+      // indice (forme de base) : permet l'exercice « écris le mot qui manque » (v27)
+      if (str(a[4]) && a[4].length < 40 && a[0].includes("___")) c._h = a[4].trim();
+      out.c.push(c);
+    }
   });
   (raw.v || []).forEach(a => {
     if (Array.isArray(a) && a.length >= 2 && str(a[0]) && str(a[1]) && a[1].length < 40)
@@ -438,7 +468,7 @@ export const AI_T = {
     "choice",
     "tiles",
     "mc",
-    "choice",
+    "fill",
     "listenTiles",
     "tiles",
     "spot",
@@ -447,7 +477,7 @@ export const AI_T = {
     "choice",
     "tilesRev",
     "type",
-    "choice",
+    "fill",
     "listen",
     "spot",
   ],
@@ -464,7 +494,7 @@ export const AI_T = {
     "type",
     "spot",
     "read",
-    "choice",
+    "fill",
     "listen",
     "part2",
     "speak",
@@ -520,6 +550,12 @@ export async function startAI(cid, units, cfg) {
   if (!G) G = localRemix(cid, units);
   closeModal();
   let exs = buildFromGen(cid, units, G, cfg.ext);
+  // règles de grammaire les moins réussies : quelques phrases générées par gabarits, avec ou sans IA
+  const wk = weakRuleIds(cid);
+  if (wk.length && !cfg.ext) {
+    const extra = drillExercises(cid, rnd(wk), 3);
+    exs = exs.concat(extra);
+  }
   const rv = dueReviews(cid, coach ? 6 : 3);
   exs = coach ? shuffle(rv.concat(exs)) : exs.concat(rv);
   if (src === "mix" && AI.mode === "local")

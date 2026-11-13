@@ -29,6 +29,7 @@ import "./features/word-bank.js";
 import "./features/grammar.js";
 import "./screens/profile.js";
 import "./screens/settings.js";
+import "./screens/quests.js";
 import "./screens/streak.js";
 import "./features/ai-units.js";
 import "./screens/stats.js";

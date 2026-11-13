@@ -9,8 +9,9 @@ import { COURSE_IC, flagSvg, ic } from "./icons.ts";
 import { bankDue } from "../features/word-bank.js";
 import { dueCount } from "../lesson/engine.js";
 import { renderLeague } from "../screens/league.js";
-import { renderPath } from "../screens/path.js";
+import { renderChapters, renderPath } from "../screens/path.js";
 import { renderProfile } from "../screens/profile.js";
+import { renderQuests } from "../screens/quests.js";
 import { renderSettings } from "../screens/settings.js";
 import { renderShop } from "../screens/shop.js";
 import { renderStats } from "../screens/stats.js";
@@ -30,7 +31,18 @@ export const curCid = () => {
 };
 export function route() {
   const [h, sub] = (location.hash || "").slice(1).split("/");
-  VIEW = ["parcours", "entrainement", "histoires", "ligue", "boutique", "profil", "stats", "reglages"].includes(h)
+  VIEW = [
+    "parcours",
+    "entrainement",
+    "histoires",
+    "ligue",
+    "boutique",
+    "profil",
+    "stats",
+    "reglages",
+    "chapitres",
+    "quetes",
+  ].includes(h)
     ? h
     : "parcours";
   SUBVIEW = VIEW === "reglages" ? sub || "" : "";
@@ -51,7 +63,10 @@ export function renderAll() {
   document
     .querySelectorAll("#bottomnav a")
     .forEach(a =>
-      a.classList.toggle("on", a.dataset.v === (VIEW === "stats" || VIEW === "reglages" ? "profil" : VIEW)),
+      a.classList.toggle(
+        "on",
+        a.dataset.v === (VIEW === "stats" || VIEW === "reglages" ? "profil" : VIEW === "chapitres" ? "parcours" : VIEW),
+      ),
     );
   const v = $("#view");
   if (VIEW === "parcours") renderPath(v);
@@ -61,6 +76,8 @@ export function renderAll() {
   else if (VIEW === "boutique") renderShop(v);
   else if (VIEW === "stats") renderStats(v);
   else if (VIEW === "reglages") renderSettings(v, SUBVIEW);
+  else if (VIEW === "chapitres") renderChapters(v);
+  else if (VIEW === "quetes") renderQuests(v);
   else renderProfile(v);
 }
 export const safeColor = c => (/^#[0-9a-fA-F]{3,8}$/.test(String(c || "")) ? c : "#7C4DFF");

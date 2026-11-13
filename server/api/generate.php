@@ -73,6 +73,8 @@ $mode = (string)($in['mode'] ?? '');
 // Seuls les types de génération de l'application sont acceptés (pas de prompt libre)
 if (!in_array($mode, ['', 'exercise', 'word', 'write', 'unit', 'story'], true)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_mode']); exit; }
 $wordMode = $mode === 'word';
+// règles de grammaire les moins réussies (notions v27), envoyées par l'application
+$weak   = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 120); }, (array)($in['weak'] ?? [])), 0, 5);
 $words  = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 60); }, (array)($in['words'] ?? [])), 0, 10);
 
 // ---- Prompt (identique à celui de index.html) ----
@@ -83,7 +85,7 @@ if ($kind === 'volt') {
   $rules  = 'Donne 14 éléments dans "c" et 4 dans "d". Pièges comme au Projet Voltaire / Certificat Voltaire : homophones, accords du participe passé, conjugaison, pluriels, orthographe d\'usage, orthotypographie.';
 } else {
   $ko = $lang === 'ko-KR'; $toeic = $kind === 'toeic';
-  $schema = '{' . $dg . '"p":[["phrase en français","traduction ' . $L . ' principale",' . ($ko ? '"romanisation révisée",' : '') . '"variante correcte acceptée"]],"c":[["phrase en ' . $L . ' avec ___ à la place d\'un mot",["bonne réponse","distracteur","distracteur","distracteur"],0,"explication courte en français"]],"v":[["mot français","traduction ' . $L . '"]]'
+  $schema = '{' . $dg . '"p":[["phrase en français","traduction ' . $L . ' principale",' . ($ko ? '"romanisation révisée",' : '') . '"variante correcte acceptée"]],"c":[["phrase en ' . $L . ' avec ___ à la place d\'un mot",["bonne réponse","distracteur","distracteur","distracteur"],0,"explication courte en français","indice : forme de base du mot manquant (infinitif…) ou chaîne vide"]],"v":[["mot français","traduction ' . $L . '"]]'
     . ($toeic ? ',"l":[["question orale",["meilleure réponse","réponse piège","réponse piège"],0]],"cv":[{"d":[["M","réplique"],["W","réplique"]],"q":[["question",["bonne réponse","distracteur","distracteur","distracteur"],0,"explication en français"]]}],"rd":[{"x":"document (e-mail, annonce, messages…)","q":[["question",["bonne réponse","distracteur","distracteur","distracteur"],0,"explication en français"]]}]' : '') . '}';
   $rules  = 'Donne 8 éléments dans "p" (1 à 3 variantes de traduction correctes par phrase), '
     . ($toeic ? '10 dans "c" (style TOEIC Parts 5-6), 4 dans "l" (Part 2), 2 dans "cv" (Parts 3-4 : conversation de 4 répliques entre M et W, ou annonce d\'un seul locuteur N ; 3 questions chacune), 2 dans "rd" (Part 7, 2 questions chacun), ' : '8 dans "c", ')
@@ -96,6 +98,7 @@ $prompt = "Tu es le coach d'une application d'apprentissage façon Duolingo. L'�
   . ($theme !== '' ? "Thème imposé par l'élève : « $theme ». TOUS les exercices doivent porter sur ce thème (vocabulaire, situations, phrases), au niveau indiqué, en réutilisant si possible les structures déjà vues.\n\n" : '')
   . ($coach ? "Erreurs récentes de l'élève (exercice | réponse attendue | réponse donnée) :\n- " . implode("\n- ", $errors)
       . "\n\nAnalyse ces erreurs et repère les erreurs RÉCURRENTES : mots ou vocabulaire, construction des phrases, temps et conjugaison, accords, prépositions, orthographe, écoute. Dans \"diag\", écris un diagnostic bienveillant en français (2 à 3 phrases, tutoiement). Dans \"focus\", liste 2 à 4 points faibles courts. Au moins 70 % des exercices doivent cibler ces points faibles, sous des formes variées.\n\n" : '')
+  . ($weak ? "Règles de grammaire où l'élève se trompe souvent :\n- " . implode("\n- ", $weak) . "\nConsacre au moins 3 éléments de \"c\" et 2 de \"p\" à ces règles.\n\n" : '')
   . "Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n$schema\n$rules\n"
   . "Règles : langue naturelle et 100 % correcte ; difficulté adaptée au niveau, de la plus facile à la plus difficile ; dans \"c\", une seule bonne réponse sans ambiguïté et des distracteurs plausibles ; varie les thèmes de la vie quotidienne et professionnelle.";
 

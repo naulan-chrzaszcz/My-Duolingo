@@ -13,12 +13,33 @@ export const QUESTS = [
   { id: "c", ic: "🔥", t: () => "Enchaîne 8 bonnes réponses", cur: () => S.q.c, max: () => 8, g: 15 },
   { id: "s", ic: "🎧", t: () => "Réussis 4 exercices d'écoute ou d'oral", cur: () => S.q.s, max: () => 4, g: 10 },
 ];
+/** Quête du mois : chaque quête du jour accomplie donne 1 point ; paliers [points, gemmes]. */
+export const QM_GOAL = 30;
+export const QM_STEPS = [
+  [10, 20],
+  [20, 30],
+  [30, 50],
+];
+export function questMonth() {
+  const m = new Date().toISOString().slice(0, 7);
+  if (!S.qm || S.qm.m !== m) S.qm = { m, pts: 0, got: [] };
+  return S.qm;
+}
 export function checkQuests() {
   QUESTS.forEach(q => {
     if (!S.q.claimed.includes(q.id) && q.cur() >= q.max()) {
       S.q.claimed.push(q.id);
       S.gems += q.g;
       toast(`${q.ic} Quête accomplie : +${q.g} 💎`);
+      const qm = questMonth();
+      qm.pts++;
+      QM_STEPS.forEach(([n, g]) => {
+        if (qm.pts >= n && !qm.got.includes(n)) {
+          qm.got.push(n);
+          S.gems += g;
+          setTimeout(() => toast(`🏆 Quête du mois : ${n} points, +${g} 💎`), 1200);
+        }
+      });
     }
   });
 }

@@ -78,4 +78,8 @@ L'ordre compte : la traduction du DOM doit observer la page avant la typographie
 - Parcours : pièces `.node.coin` (`stepKind`), bannière d'unité collante (`--toph` = hauteur de la barre du haut), bulle d'étape `placePop()` dans `screens/path.js`.
 - Série : `screens/streak.js` (`openStreak`, paliers `MILESTONES`, `streakMilestone`, `streakReset`). Historique : `S.week` garde ~13 mois, `S.frz` les jours protégés par un gel, `S.smil` les paliers déjà payés pour la série en cours.
 - Paramètres (v28.1) : `screens/settings.js`, ouvert par la roue dentée du profil. Adresses `#reglages` (menu) et `#reglages/<page>` (`preferences`, `compte`, `notifications`, `claude`, liste `SETTINGS_PAGES`). Les réglages gardent leurs identifiants ; `bindSettings()` ignore ceux qui ne sont pas sur la sous-page affichée.
+- Chapitres (v29) : `chapters()`, `curChapter()`, `setChapter()` et `renderChapters()` dans `screens/path.js` ; chapitre choisi dans `S.chap[cours]`, adresse `#chapitres`. Les fonctions de repli des unités restent mais ne sont plus affichées.
+- Quêtes (v29) : `screens/quests.js` (adresse `#quetes`), quête du mois `S.qm` (`questMonth`, `QM_STEPS` dans `features/quests.js`).
+- Scènes de Horang le long du parcours : `ui/scenes.ts` (`horangScene`).
+- IA (v29) : `weakRuleIds()` / `weakRules()` dans `services/ai.js` envoient les règles de grammaire les moins réussies (`weak`) au prompt (`generate.php` et prompt direct) et ajoutent 3 phrases générées par gabarits à chaque séance IA ou locale. Les QCM générés peuvent porter un indice (5ᵉ champ) qui permet l'exercice `fill`.
 - Entraînement : `TMAP` (titre de carte → rubrique, icône, couleur) dans `screens/training.js`.

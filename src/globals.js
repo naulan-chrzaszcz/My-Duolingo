@@ -34,6 +34,7 @@ import * as m_screens_onboarding from "./screens/onboarding.js";
 import * as m_screens_path from "./screens/path.js";
 import * as m_screens_profile from "./screens/profile.js";
 import * as m_screens_settings from "./screens/settings.js";
+import * as m_screens_quests from "./screens/quests.js";
 import * as m_screens_streak from "./screens/streak.js";
 import * as m_screens_shop from "./screens/shop.js";
 import * as m_screens_stats from "./screens/stats.js";
@@ -84,6 +85,7 @@ const MODULES = [
   m_screens_path,
   m_screens_profile,
   m_screens_settings,
+  m_screens_quests,
   m_screens_streak,
   m_screens_shop,
   m_screens_stats,

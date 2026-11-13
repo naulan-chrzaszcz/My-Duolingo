@@ -1,4 +1,5 @@
 // Écran Boutique
+import { ic } from "../ui/icons.ts";
 import { S, save } from "../core/accounts.js";
 import { $ } from "../core/util.js";
 import { checkBadges } from "../features/quests.js";
@@ -15,6 +16,8 @@ export function renderShop(v) {
     {
       id: "freeze",
       ic: "❄️",
+      k: "snow",
+      col: "#3D8BFF",
       n: "Gel de série",
       d: `Protège ta série si tu rates un jour. Équipés : ${S.freeze}/2`,
       p: 50,
@@ -24,6 +27,8 @@ export function renderShop(v) {
     {
       id: "boost",
       ic: "⚡",
+      k: "bolt",
+      col: "#FFB020",
       n: "Double XP · 15 min",
       d: boost
         ? `Actif encore ${Math.ceil((S.boostUntil - now) / 60000)} min`
@@ -33,9 +38,9 @@ export function renderShop(v) {
       lab: boost ? "Actif" : null,
     },
   ];
-  v.innerHTML = `<div class="shophead"><h1 class="sectitle">Boutique</h1><span class="gembal">💎 ${S.gems}</span></div><p class="secsub">Gagne des gemmes avec les leçons (+5), les bilans d'unité (+20), l'entraînement (+3) et les quêtes du jour.</p>
- <h3 class="shoph">Bonus</h3><div class="tgrid">${items.map(it => `<div class="tcard"><span class="ti">${it.ic}</span><h3>${it.n}</h3><p>${it.d}</p><button class="btn ${it.dis ? "ghost" : "goldb"}" data-buy="${it.id}" ${it.dis || S.gems < it.p ? "disabled" : ""}>${it.lab || it.p + " 💎"}</button></div>`).join("")}</div>
- <h3 class="shoph">Tenues de Horang</h3><div class="tgrid">${Object.entries(ACCS)
+  v.innerHTML = `<div class="shophead"><h1 class="sectitle">Boutique</h1><span class="gembal">${ic("gem", 22, "", 2.4, "#9CC4FF")}<b>${S.gems}</b></span></div><p class="secsub">Gagne des gemmes avec les leçons (+5), les bilans d'unité (+20), l'entraînement (+3) et les quêtes du jour.</p>
+ <h2 class="ph2">Bonus</h2><div class="tgrid">${items.map(it => `<div class="tcard"><span class="ti shopic" style="background:${it.col}">${ic(it.k, 30, "", 2.4)}</span><h3>${it.n}</h3><p>${it.d}</p><button class="btn ${it.dis ? "ghost" : "goldb"}" data-buy="${it.id}" ${it.dis || S.gems < it.p ? "disabled" : ""}>${it.lab || it.p + " 💎"}</button></div>`).join("")}</div>
+ <h2 class="ph2">Tenues de Horang</h2><div class="tgrid">${Object.entries(ACCS)
    .map(([k, a]) => {
      const own = S.owned.includes(k),
        on = S.wear === k;

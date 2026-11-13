@@ -91,7 +91,7 @@ export async function genUnit(cid) {
     t: String(raw.t).slice(0, 60),
     d: String(typeof raw.d === "string" ? raw.d : "").slice(0, 160),
     tip: String(raw.tip || "").slice(0, 400),
-    lv: 3,
+    lv: Math.max(...C.units.filter(x => !x.gen).map(x => x.lv)), // dernier chapitre du cours
     gen: 1,
     p: G.p,
     v: G.v,

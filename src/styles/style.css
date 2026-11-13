@@ -975,3 +975,88 @@ body:has(.langdrop) #secBtn{border-color:#3D8BFF;background:#EAF2FF}
 .setitem:active{opacity:.7}
 .setic{flex:none;width:40px;height:40px;border-radius:12px;background:#EFE9FF;color:#7C4DFF;display:flex;align-items:center;justify-content:center}
 .setcard{margin-top:6px}
+/* v29 : chapitres façon Duolingo */
+.chaphead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;width:100%;border:2px solid var(--line);background:var(--card);border-radius:18px;padding:12px 14px;margin:0 0 18px;font:inherit;color:var(--ink);cursor:pointer;box-shadow:0 4px 0 var(--line);text-align:left}
+.chaphead:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line)}
+.chaphead .chk{font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);width:100%}
+.chaphead b{font-size:18px;flex:1;min-width:0}
+.chaphead .chbar,.chapcard .ccbar{flex:1 1 100%;order:5;height:12px;border-radius:99px;background:#EEEAF9;overflow:hidden}
+.chaphead .chbar i,.chapcard .ccbar i{display:block;height:100%;border-radius:99px;background:linear-gradient(180deg,#5FE3A5,#22B573);box-shadow:inset 0 -3px 0 rgba(0,0,0,.08);animation:grow .7s cubic-bezier(.2,.9,.3,1) both}
+.chaphead .chn{font-size:14px;color:var(--ink2)}
+.chaphead>.ic:last-of-type{color:var(--ink2)}
+.ubanner .udone{display:inline-flex;vertical-align:middle;margin-left:4px;background:rgba(255,255,255,.25);border-radius:50%;width:20px;height:20px;align-items:center;justify-content:center}
+.chapnext{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;border:2px dashed var(--line);border-radius:22px;padding:22px 18px;margin:20px 0 10px}
+.chapnext .chnk{font-size:13px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)}
+.chapnext b{font-size:21px}
+.chapnext small{color:var(--ink2)}
+.chapnext .btn{margin-top:10px;max-width:320px}
+.endtrophy{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding:24px 10px;color:var(--ink)}
+.endtrophy .endtr{width:72px;height:72px;border-radius:50%;background:#FFC83D;color:#7A4E00;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 -6px 0 rgba(0,0,0,.12);animation:float 3s ease-in-out infinite}
+.endtrophy b{font-size:17px}
+.endtrophy small{color:var(--ink2)}
+.endtrophy .genbox{margin-top:14px;width:100%;max-width:440px;border:2px solid var(--line);border-radius:20px;padding:16px;background:var(--card);text-align:left}
+.endtrophy .genbox>span{display:flex;align-items:center;gap:8px;color:#7C4DFF;font-size:17px}
+.endtrophy .genbox b{color:var(--ink)}
+.endtrophy .genbox p{margin:6px 0 4px;font-size:14px;color:var(--ink2)}
+.chaplist{display:flex;flex-direction:column;gap:16px;margin-top:6px}
+.chapcard{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;width:100%;border:2px solid var(--line);background:var(--card);border-radius:22px;padding:18px 18px 16px;box-shadow:0 5px 0 var(--line);font:inherit;color:var(--ink);text-align:left;cursor:pointer;animation:lrowin .35s cubic-bezier(.2,.9,.3,1) both;background-image:repeating-linear-gradient(135deg,transparent 0 60px,rgba(124,77,255,.04) 60px 120px)}
+.chapcard.on{border-color:#7C4DFF;box-shadow:0 5px 0 #CDBEFF}
+.chapcard:active{transform:translateY(3px);box-shadow:0 2px 0 var(--line)}
+.chapcard .cct{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%}
+.chapcard .cct b{font-size:26px}
+.chapcard .ccr{display:flex;align-items:center;gap:8px;background:var(--soft);border-radius:12px;padding:6px 10px;font-size:14px;font-weight:900;color:var(--ink2)}
+.chapcard small{width:100%;color:var(--ink2);font-size:14px}
+.chapcard .ccn{font-size:13px;color:var(--ink2);order:6}
+/* v29 : onglet Quêtes */
+.qhero{position:relative;overflow:hidden;margin:-18px -16px 0;padding:22px 20px 26px;background:linear-gradient(160deg,#7C4DFF,#5A30D8);color:#fff;border-radius:0 0 28px 28px}
+@media(min-width:640px){.qhero{margin:0;border-radius:28px}}
+.qht h1{margin:0;font-size:28px;line-height:1.15;color:#fff;max-width:calc(100% - 110px)}
+.qleft{display:flex;align-items:center;gap:6px;margin-top:6px;font-size:15px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;color:#E6E1FF}
+.qmasc{position:absolute;right:-6px;top:4px;width:118px;pointer-events:none;animation:float 3.2s ease-in-out infinite}
+.qmasc svg{width:118px;height:118px}
+.qmcard{position:relative;margin-top:22px;background:#FFFFFE;color:#2B2851;border-radius:20px;padding:16px 18px 14px;box-shadow:0 6px 0 rgba(20,10,60,.25)}
+.qmt{display:flex;justify-content:space-between;gap:8px;font-size:17px}
+.qmt span{font-weight:900;color:#7C4DFF}
+.qmbar{position:relative;height:16px;border-radius:99px;background:#EEEAFA;margin:18px 14px 40px 0}
+.qmbar>i{display:block;height:100%;border-radius:99px;background:linear-gradient(180deg,#9B7BFF,#7C4DFF);animation:grow .8s cubic-bezier(.2,.9,.3,1) both}
+.qmk{position:absolute;top:50%;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;background:#E3E0F0;color:#625E87;display:flex;align-items:center;justify-content:center;font-size:13px;border:3px solid #FFFFFE}
+.qmk.on{background:#FFC83D;color:#7A4E00}
+.qmk small{position:absolute;top:36px;white-space:nowrap;font-size:11px;color:#625E87;font-weight:900}
+.qmcard p{margin:0;font-size:13px;color:#625E87}
+.qdhead{display:flex;align-items:center;justify-content:space-between;margin:26px 4px 6px}
+.qdhead h2{margin:0;font-size:15px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)}
+.qdhead>span{display:flex;align-items:center;gap:6px;font-weight:900;color:var(--ink2)}
+.qlist{display:flex;flex-direction:column}
+.qrow{display:flex;align-items:center;gap:14px;padding:16px 4px;border-bottom:2px solid var(--line);animation:lrowin .4s cubic-bezier(.2,.9,.3,1) both}
+.qrow:last-child{border-bottom:none}
+.qtx{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px}
+.qtx b{font-size:18px;line-height:1.25}
+.qtx small{color:var(--ink2);font-size:13px}
+.qbar{position:relative;display:block;height:24px;border-radius:99px;background:#EEEAF9;overflow:hidden}
+.qbar i{display:block;height:100%;border-radius:99px;background:linear-gradient(180deg,#FF8BB8,#E0457B);animation:grow .7s cubic-bezier(.2,.9,.3,1) both}
+.qbar em{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:13px;font-weight:900;color:var(--ink2)}
+.qchest{flex:none}
+.qrow:not(.done) .qchest{animation:wiggle 3.2s ease-in-out infinite;transform-origin:50% 90%}
+.qrow.done .qtx b{color:var(--ink2)}
+.sidequest{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.sidequest>span{color:#FF9F1C;display:flex}
+.sidequest b{flex:1}
+.sidequest em{font-style:normal;font-weight:900;color:var(--ink2)}
+/* v29 : scènes de Horang le long du parcours */
+.pathmascot .hscene{display:block;width:100%;height:auto}
+.pathmascot{width:130px}
+@media(max-width:600px){.pathmascot{width:104px}}
+.hscene .zz text{animation:zz 2.4s ease-in-out infinite}
+.hscene .zz text:nth-child(2){animation-delay:.6s}
+@keyframes zz{0%{opacity:0;transform:translateY(6px)}40%{opacity:1}100%{opacity:0;transform:translateY(-10px)}}
+.hscene .steam{animation:zz 2.2s ease-in-out infinite}
+.hscene.music{animation:bob 1s ease-in-out infinite}
+/* v29 : harmonisation des écrans Histoires, Boutique, Statistiques */
+.sectitle.phd{display:flex;align-items:center;gap:12px;font-size:31px}
+.slvh{display:flex;align-items:center;gap:8px}
+.slvi{display:flex;color:#7C4DFF}
+.card h3.hic{display:flex;align-items:center;gap:10px}
+.card h3.hic .ic{color:#7C4DFF}
+.gembal{display:inline-flex;align-items:center;gap:6px;color:#1D6FD8}
+.gembal .ic{color:#3D8BFF}
+.ti.shopic{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#FFFFFE;box-shadow:inset 0 -5px 0 rgba(0,0,0,.12);margin-bottom:6px}

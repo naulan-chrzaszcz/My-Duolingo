@@ -23,6 +23,8 @@ export const DEF = () => ({
   freeze: 0,
   frz: [],
   smil: [],
+  qm: null,
+  chap: {},
   boostUntil: 0,
   owned: [],
   wear: "",
