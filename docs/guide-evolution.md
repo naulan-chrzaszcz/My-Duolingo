@@ -51,7 +51,8 @@ Attention : insérer une unité au milieu décale la progression enregistrée de
 2. Écrire la fonction qui lance la séance, sur le modèle de `trainDictee` ou `trainChoice` :
    - fabriquer des exercices avec `make(type, ctxFor(cours, unités))` ;
    - les lancer avec `openSession({ mode: 'train', cid, exs })`.
-3. Traduire le titre et la description (voir « Un texte d'interface »).
+3. Choisir sa rubrique, son icône et sa couleur dans `TMAP` (même fichier) ; sans entrée, la carte va dans « Défis & IA ».
+4. Traduire le titre et la description (voir « Un texte d'interface »).
 
 ## Un type d'exercice
 
@@ -86,6 +87,15 @@ Attention : insérer une unité au milieu décale la progression enregistrée de
    - appeler sa fonction de rendu dans `renderAll()`.
    - S'il a un onglet dans la barre du bas, l'ajouter aussi dans `src/index.html`.
 3. Importer le module dans `src/main.js` (liste des imports).
+
+## Une icône
+
+- Ajouter son tracé (viewBox 24 × 24, trait sans remplissage) dans l'objet `P` de `src/ui/icons.ts`, puis l'utiliser avec `ic("nom", taille)`.
+- Couleur : `color` du parent en CSS (thème sombre automatique), pas de couleur en dur dans le tracé.
+
+## Un palier de série
+
+- Tableau `MILESTONES` de `src/screens/streak.js` : `[jours, gemmes]`. L'écran Série et la fin de leçon s'adaptent seuls.
 
 ## Un objet de boutique
 

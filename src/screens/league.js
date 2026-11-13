@@ -98,7 +98,7 @@ export function renderLeague(v) {
     const box = document.createElement("div");
     box.className = "card lgcard";
     box.innerHTML = '<h3>🌍 Classement de tous les membres</h3><div class="empty">Chargement…</div>';
-    v.insertBefore(box, v.querySelector(".card"));
+    v.insertBefore(box, v.querySelector(".lloc"));
     srvBoard().then(B => {
       if (VIEW !== "ligue" || !box.isConnected) return;
       if (!B) {

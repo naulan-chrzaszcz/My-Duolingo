@@ -32,7 +32,7 @@ La propriétaire écrit en français : réponds en français.
 - `src/features/` : fonctions transverses (test de niveau, quêtes, mots à retenir, coach…).
 - `src/services/` : réseau (comptes, IA, rappels) et audio.
 - `src/core/` : état `S` du profil, progression, XP, outils.
-- `src/ui/` : composants, routeur, plateforme, bouton retour.
+- `src/ui/` : composants, routeur, plateforme, bouton retour, icônes SVG (`icons.ts`).
 - `src/types.ts` : types du modèle de données. Le nouveau code peut être écrit en `.ts`.
 - `src/globals.js` : expose les exports sur `window`. Sert aux `onclick="…"` inline, aux tests et à la console.
 - `public/` : fichiers copiés tels quels (`sw.js`, manifest, icônes, polices).
@@ -54,6 +54,8 @@ La propriétaire écrit en français : réponds en français.
 - Aucun contenu protégé (TOEIC/ETS, GlobalExam) : exercices originaux seulement.
 - Validation des réponses tolérante, sauf dictées Voltaire et orthographe coréenne.
 - Le nom du cache du service worker est calculé au build (version + empreinte) : rien à changer à la main.
+- Pas de système de vies (cœurs) : ne pas en réintroduire.
+- Icônes : `ic()` de `src/ui/icons.ts`, pas d'emoji pour les nouveaux éléments de la barre du haut, de la barre du bas, du parcours, de la ligue et du profil.
 - Avant de livrer :
   - `npm run check` puis `npm run test:all` doivent passer.
   - Le bilan affiche « N/N tests réussis » ; en cas d'échec, le journal est dans `tests/out/`.

@@ -1,4 +1,4 @@
-# Architecture du code (v27)
+# Architecture du code (v28)
 
 La v26 reprend exactement le comportement de la v25 dans un projet découpé en modules.
 
@@ -30,9 +30,9 @@ server/ (api PHP, installateur, LISEZ-MOI) ──────▶ dist/
 | `exercises/` | `generate.js`, `distractors.js`, `validate.js`, `render.js`, `hangul.ts`, `drills.ts` | `make(type, ctx)`, mauvaises réponses, correction, affichage `R[type]`, hangul, phrases générées par gabarits |
 | `lesson/` | `build.js`, `engine.js`, `writing.js`, `keyboard.js` | Construction et déroulé d'une leçon (`L`), rédactions, clavier |
 | `features/` | `placement.js`, `quests.js`, `word-bank.js`, `theme-training.js`, `ai-units.js`, `coach.js`, `grammar.js` | Test de niveau, quêtes et badges, répétition espacée, thèmes, unités IA, coach, notions de grammaire |
-| `screens/` | `path.js`, `training.js`, `stories.js`, `league.js`, `shop.js`, `profile.js`, `stats.js`, `accounts.js`, `onboarding.js`, `language.js` | Un module par écran ou fenêtre principale |
+| `screens/` | `path.js`, `training.js`, `stories.js`, `league.js`, `shop.js`, `profile.js`, `stats.js`, `streak.js`, `accounts.js`, `onboarding.js`, `language.js` | Un module par écran ou fenêtre principale |
 | `services/` | `cloud.js`, `ai.js`, `reminders.js`, `speech.js` | Comptes en ligne et ligue, IA, rappels push, voix et micro |
-| `ui/` | `ui.js`, `router.js`, `platform.js`, `mascot.js`, `back-button.js`, `typography.js` | Toasts et modales, routage par hash, iOS/Android/thème, mascotte, bouton retour, typographie |
+| `ui/` | `ui.js`, `router.js`, `platform.js`, `mascot.js`, `icons.ts`, `back-button.js`, `typography.js` | Toasts et modales, routage par hash, iOS/Android/thème, mascotte, icônes SVG (drapeaux, coupes, médailles), bouton retour, typographie |
 | racine | `main.js`, `globals.js`, `types.ts` | Démarrage, API globale, types |
 
 ## Démarrage (`src/main.js`)
@@ -69,3 +69,12 @@ L'ordre compte : la traduction du DOM doit observer la page avant la typographie
 1. **Traduction par texte exact.** Le code est écrit en français, puis traduit en cherchant chaque texte affiché dans `en.json` et `ko.json`. Une virgule différente suffit à laisser un texte en français. Prochaine étape : des clés `t('cle')`.
 2. **Un type d'exercice est réparti sur plusieurs fichiers** (génération, affichage, audio, coach, tests). Prochaine étape : un dossier par type avec `make`, `render` et `solve` réunis.
 3. **Rendu par chaînes HTML et état global.** Simple et rapide, mais sans composants. À garder tant que l'app reste de cette taille.
+
+## Direction artistique v28
+
+- Icônes : `src/ui/icons.ts` (`ic(nom, taille)`, `flagSvg`, `trophySvg`, `medalSvg`, `COURSE_IC`). Trait en `currentColor` : la couleur vient du CSS.
+- Couleurs : variables CSS (`--card`, `--ink`, `--ink2`, `--line`, `--soft`…) ou couleurs claires connues de `scripts/darkgen.mjs`. Les styles en ligne ne passent pas au thème sombre : préférer une classe. `#FFFFFE` sert de blanc qui reste blanc en sombre.
+- Barre du haut : `renderTop()` (`ui/router.js`) ; choix de langue : `sectionPicker()` (modale `langdrop`).
+- Parcours : pièces `.node.coin` (`stepKind`), bannière d'unité collante (`--toph` = hauteur de la barre du haut), bulle d'étape `placePop()` dans `screens/path.js`.
+- Série : `screens/streak.js` (`openStreak`, paliers `MILESTONES`, `streakMilestone`, `streakReset`). Historique : `S.week` garde ~13 mois, `S.frz` les jours protégés par un gel, `S.smil` les paliers déjà payés pour la série en cours.
+- Entraînement : `TMAP` (titre de carte → rubrique, icône, couleur) dans `screens/training.js`.
