@@ -289,12 +289,17 @@ export function renderTrain(v) {
   <div class="coachl">${mascot("calm")}</div></div>
   ${s.tracks.length > 1 ? `<div class="tracks trpills">${s.tracks.map(t => `<button data-ct="${t}" class="${t === ccid ? "on" : ""}">${esc(COURSES[t].name)}</button>`).join("")}</div>` : ""}</header>`;
   const groups = {};
-  cards.forEach((c, i) => {
-    const [g, k, col] = TMAP[c.t] || ["Défis & IA", "star", VI];
-    (groups[g] = groups[g] || []).push(
-      `<button class="tcard trow" data-i="${i}"><span class="trt"><span class="trh"><h3>${c.t}</h3>${c.badge ? `<span class="tbadge">${c.badge}</span>` : ""}</span><p>${c.d}</p><span class="tag">${c.tag}</span></span><span class="tric" style="background:${col}"><i></i>${ic(k, 28, "", 2.4)}</span></button>`,
-    );
-  });
+  const ord = Object.keys(TMAP);
+  const rank = c => ord.indexOf(c.t) + 1 || 99;
+  cards
+    .map((c, i) => [c, i])
+    .sort((a, b) => rank(a[0]) - rank(b[0]))
+    .forEach(([c, i]) => {
+      const [g, k, col] = TMAP[c.t] || ["Défis & IA", "star", VI];
+      (groups[g] = groups[g] || []).push(
+        `<button class="tcard trow" data-i="${i}"><span class="trt"><span class="trh"><h3>${c.t}</h3>${c.badge ? `<span class="tbadge">${c.badge}</span>` : ""}</span><p>${c.d}</p><span class="tag">${c.tag}</span></span><span class="tric" style="background:${col}"><i></i>${ic(k, 28, "", 2.4)}</span></button>`,
+      );
+    });
   const body = TGROUPS.filter(g => groups[g])
     .map(g => `<section class="tsec"><h2>${g}</h2>${groups[g].join("")}</section>`)
     .join("");

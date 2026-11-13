@@ -7,6 +7,7 @@ import { L } from "../lesson/engine.js";
 import { accountForm } from "./accounts.js";
 import { SRV, srvBoard } from "../services/cloud.js";
 import { beep } from "../services/speech.js";
+import { ic, medalSvg, trophySvg } from "../ui/icons.ts";
 import { mascot } from "../ui/mascot.js";
 import { VIEW, avatar, renderTop } from "../ui/router.js";
 import { closeModal, confetti, modal } from "../ui/ui.js";
@@ -36,6 +37,17 @@ export const TIERS = [
   [1000, "Rubis", "♦️", "#E0457B"],
   [1500, "Diamant", "💠", "#13A8A8"],
 ];
+/** Couleurs des coupes de ligue (face, contour), dans l'ordre de TIERS. */
+export const TROPHY = [
+  ["#D08C56", "#8A5224"],
+  ["#AEB8C8", "#5E6B80"],
+  ["#FFC83D", "#C98B00"],
+  ["#3D8BFF", "#1D5FC2"],
+  ["#E0457B", "#A8203F"],
+  ["#13A8A8", "#0C7F7F"],
+];
+/** Rang : médaille dessinée pour le podium, numéro ensuite. */
+export const rankMark = r => (r <= 3 ? medalSvg(r) : `${r}`);
 export function renderLeague(v) {
   const my = weekXp(S),
     last = weekXp(S, 1);
@@ -53,11 +65,33 @@ export function renderLeague(v) {
       return { a, x: weekXp(st) };
     })
     .sort((p, q) => q.x - p.x);
-  v.innerHTML = `<div class="league" style="background:linear-gradient(135deg,${T[3]},${T[3]}cc)"><div class="ltier">${T[2]}</div><div style="flex:1"><small>Ta ligue cette semaine</small><h2>Ligue ${T[1]}</h2><p>${my} XP cette semaine · encore ${left} jour${left > 1 ? "s" : ""}</p>${N ? `<div class="bar" style="background:rgba(255,255,255,.3)"><i style="width:${Math.min(100, ((my - T[0]) / (N[0] - T[0])) * 100)}%;background:#fff"></i><span style="color:#2B2850">${N[0] - my} XP pour la ligue ${N[1]}</span></div>` : "<p>Tu es au sommet 👑</p>"}</div></div>
- <div class="tiers">${TIERS.map((t, i) => `<div class="tier ${i === ti ? "on" : i < ti ? "past" : ""}"><span>${t[2]}</span><small>${t[1]}</small></div>`).join("")}</div>
- <div class="card"><h3>🏆 Classement de la semaine</h3>${rows.map((r, i) => `<div class="lrow ${r.a.id === ACC.current ? "me" : ""}"><span class="lrank">${["🥇", "🥈", "🥉"][i] || i + 1}</span>${avatar(r.a, 40)}<b>${esc(r.a.name)}</b><span class="lx">${r.x} XP</span></div>`).join("")}
- ${ACC.list.length < 2 ? `<p class="secsub" style="margin:12px 0 0">Ajoute des comptes (famille, amis, collègues) sur cet appareil pour vous défier chaque semaine !</p><button class="btn ghost" id="ladd" style="margin-top:10px">➕ Ajouter un compte</button>` : ""}</div>
- <div class="card"><h3>📊 Toi vs la semaine dernière</h3><div class="vs"><div><small>Semaine dernière</small><b>${last} XP</b></div><div class="vsarrow">${my >= last ? "📈" : "📉"}</div><div><small>Cette semaine</small><b>${my} XP</b></div></div><p class="secsub" style="margin:10px 0 0">${my > last ? "Tu fais déjà mieux que la semaine dernière, continue !" : `Encore ${last - my + 1} XP pour battre ton score de la semaine dernière.`}</p></div>`;
+  const trophies = TIERS.map((t, i) => {
+    const big = i === ti;
+    return `<button class="ltro ${big ? "on" : i < ti ? "past" : "lock"}" data-tier="${i}" aria-label="Ligue ${t[1]}">${big ? '<span class="lhalo"></span>' : ""}<span class="ltrs">${trophySvg(TROPHY[i][0], TROPHY[i][1], big ? 104 : 70, i > ti)}</span></button>`;
+  }).join("");
+  const pct = N ? Math.min(100, Math.round(((my - T[0]) / (N[0] - T[0])) * 100)) : 100;
+  v.innerHTML = `<div class="lghead"><div><h1>Ligue ${T[1]}</h1><div class="lgleft">${ic("clock", 20, "", 2.6)}<span>Encore ${left} jour${left > 1 ? "s" : ""}</span></div></div><span class="lgme"><b>${my} XP</b><small>cette semaine</small></span></div>
+ <div class="ltros">${trophies}</div><div class="ltip hidden" id="ltip"></div>
+ <div class="card lprog"><div class="lpt"><span>${my} XP cette semaine</span>${N ? `<span class="lpn" style="color:${TROPHY[ti + 1][1]}">${N[1]} : ${N[0]}</span>` : ""}</div><div class="lpbar"><i style="width:${pct}%"></i></div><p>${N ? `<span>Encore</span> <b style="color:${TROPHY[ti + 1][1]}">${N[0] - my} XP</b> <span>pour monter en ligue ${N[1]}.</span>` : "Tu es au sommet : ligue Diamant !"}</p></div>
+ <div class="card lloc"><h3>Classement de la semaine</h3>${rows.map((r, i) => `<div class="lrow ${r.a.id === ACC.current ? "me" : ""}" style="animation-delay:${(i * 0.05).toFixed(2)}s"><span class="lrank">${rankMark(i + 1)}</span>${avatar(r.a, 48)}<div class="lname"><b class="notr">${esc(r.a.name)}</b></div><span class="lx">${r.x} XP</span></div>`).join("")}
+ ${ACC.list.length < 2 ? `<p class="secsub" style="margin:12px 0 0">Ajoute des comptes (famille, amis, collègues) sur cet appareil pour vous défier chaque semaine !</p><button class="btn ghost" id="ladd" style="margin-top:10px">${ic("useradd", 20, "", 2.4)}<span>Ajouter un compte</span></button>` : ""}</div>
+ <div class="card"><h3>Toi vs la semaine dernière</h3><div class="vs"><div><small>Semaine dernière</small><b>${last} XP</b></div><div class="vsarrow ${my >= last ? "up" : "dn"}">${ic("chart", 30, "", 2.4)}</div><div><small>Cette semaine</small><b>${my} XP</b></div></div><p class="secsub" style="margin:10px 0 0">${my > last ? "Tu fais déjà mieux que la semaine dernière, continue !" : `Encore ${last - my + 1} XP pour battre ton score de la semaine dernière.`}</p></div>`;
+  v.querySelectorAll("[data-tier]").forEach(
+    b =>
+      (b.onclick = () => {
+        const i = +b.dataset.tier,
+          tip = $("#ltip"),
+          t = TIERS[i];
+        if (tip.dataset.i === String(i) && !tip.classList.contains("hidden")) {
+          tip.classList.add("hidden");
+          return;
+        }
+        tip.dataset.i = String(i);
+        tip.style.setProperty("--tc", TROPHY[i][0]);
+        tip.className = "ltip" + (i > ti ? " lock" : "");
+        tip.innerHTML = `<b>Ligue ${t[1]}</b> · <span>${i < ti ? "déjà atteinte cette semaine." : i === ti ? `ta ligue actuelle (à partir de ${t[0]} XP).` : `à partir de ${t[0]} XP gagnés dans la semaine.`}</span>`;
+      }),
+  );
   const la = $("#ladd");
   if (la) la.onclick = () => accountForm(null);
   if (SRV.ok) {
@@ -126,14 +160,15 @@ export function renderBoard(box, B, myWxp) {
       ? `<div class="podium">${pod
           .map((r, i) => {
             const pl = [2, 1, 3][i];
-            return `<div class="pcol p${pl} ${r.name === me ? "me" : ""}">${avatar(r, pl === 1 ? 64 : 50)}<b class="notr">${esc(r.name)}</b><small class="notr">${val(r, all)}</small><div class="pstep"><span>${["🥇", "🥈", "🥉"][pl - 1]}</span>${r.streak > 1 ? `<i class="notr">🔥 ${r.streak}</i>` : ""}</div></div>`;
+            return `<div class="pcol p${pl} ${r.name === me ? "me" : ""}">${avatar(r, pl === 1 ? 64 : 50)}<b class="notr">${esc(r.name)}</b><small class="notr">${val(r, all)}</small><div class="pstep">${medalSvg(pl)}${r.streak > 1 ? `<i class="notr">🔥 ${r.streak}</i>` : ""}</div></div>`;
           })
           .join("")}</div>`
       : ""
   }
-  ${rest.map((r, i) => `<div class="lrow ${r.name === me ? "me" : ""}"><span class="lrank">${pod ? i + 4 : ["🥇", "🥈", "🥉"][i] || i + 1}</span>${avatar(r, 40)}<div class="lname"><b class="notr">${esc(r.name)}</b>${sub(r, all)}</div><span class="lx notr">${val(r, all)}</span></div>`).join("")}
+  ${rest.map((r, i) => `<div class="lrow ${r.name === me ? "me" : ""}"><span class="lrank">${rankMark(pod ? i + 4 : i + 1)}</span>${avatar(r, 40)}<div class="lname"><b class="notr">${esc(r.name)}</b>${sub(r, all)}</div><span class="lx notr">${val(r, all)}</span></div>`).join("")}
   ${rank > 50 ? `<div class="lrow me"><span class="lrank">${rank}</span>${avatar(acc, 40)}<div class="lname"><b class="notr">${esc(me)}</b></div><span class="lx notr">${val({ xp: S.xp, wxp: myWxp }, all)}</span></div>` : ""}
   ${online ? "" : '<p class="secsub" style="margin:10px 0 0">Crée un compte en ligne pour apparaître dans ce classement.</p>'}
+  <div class="lprize"><span>Fin de semaine :</span> <b>+50</b>, <b>+30</b> <span>et</span> <b>+20 💎</b> <span>pour le podium.</span></div>
   ${B.last && B.last.length ? `<div class="lglast"><h4>🏅 Podium de la semaine dernière</h4><div class="lgl">${B.last.map((r, i) => `<span class="${r.name === me ? "me" : ""}">${["🥇", "🥈", "🥉"][i]} ${avatar(r, 26)} <b class="notr">${esc(r.name)}</b> <small class="notr">${r.wxp} XP</small></span>`).join("")}</div>${B.me && B.me.lrank ? `<p class="secsub" style="margin:8px 0 0">Tu as fini n° ${B.me.lrank} sur ${B.me.lcount} avec ${B.me.lwxp} XP.</p>` : ""}</div>` : ""}`;
     box.querySelectorAll(".lgtabs button").forEach(
       b =>

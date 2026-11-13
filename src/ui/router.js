@@ -15,6 +15,7 @@ import { renderShop } from "../screens/shop.js";
 import { renderStats } from "../screens/stats.js";
 import { renderStories } from "../screens/stories.js";
 import { renderTrain } from "../screens/training.js";
+import { openStreak } from "../screens/streak.js";
 import { closeModal, modal, toast } from "./ui.js";
 
 // ===================== NAVIGATION & RENDU =====================
@@ -99,21 +100,9 @@ export function renderTop() {
   $("#tStreak").onclick = () => streakInfo();
   $("#tXp").onclick = () => streakInfo("goal");
 }
-export function streakInfo() {
-  const ds = [];
-  for (let i = 6; i >= 0; i--) {
-    const d = new Date();
-    d.setDate(d.getDate() - i);
-    const k = dkey(d);
-    ds.push({ l: "DLMMJVS"[d.getDay()], on: (S.week[k] || 0) > 0 });
-  }
-  const m = modal(
-    `<div class="mcenter"><div class="bigflame" style="font-size:70px">🔥</div><h2>${S.streak} jour${S.streak > 1 ? "s" : ""} de série</h2><p>${S.lastDay === dkey() ? "Série prolongée aujourd'hui, bravo !" : "Termine une leçon aujourd'hui pour prolonger ta série."}</p><div class="wdots" style="justify-content:center">${ds.map(d => `<div><i class="${d.on ? "on" : ""}">${d.on ? "✓" : ""}</i>${d.l}</div>`).join("")}</div><p>❄️ Gels de série équipés : <b style="color:var(--ink)">${S.freeze}/2</b><br>Un gel protège ta série si tu rates une journée.</p><button class="btn" id="sgo">${S.freeze < 2 ? "Acheter un gel (50 💎)" : "Fermer"}</button></div>`,
-  );
-  m.querySelector("#sgo").onclick = () => {
-    closeModal();
-    if (S.freeze < 2) location.hash = "boutique";
-  };
+/** Écran Série (flamme) ou objectif du jour (éclair). */
+export function streakInfo(tab) {
+  openStreak(tab);
 }
 /** Menu déroulant du choix de langue (façon maquette « Choix de la langue »). */
 export function sectionPicker() {

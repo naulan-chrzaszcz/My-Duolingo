@@ -12,6 +12,7 @@ import { placeStage } from "../features/placement.js";
 import { checkBadges, checkQuests } from "../features/quests.js";
 import { bankApply } from "../features/word-bank.js";
 import { beep, say } from "../services/speech.js";
+import { streakMilestone, streakReset } from "../screens/streak.js";
 import { mascot } from "../ui/mascot.js";
 import { VIEW, renderAll, renderTop } from "../ui/router.js";
 import { burst, closeModal, confetti, countUp, modal, toast } from "../ui/ui.js";
@@ -590,11 +591,14 @@ export function finish() {
   S.bestCombo = Math.max(S.bestCombo, L.maxCombo);
   S.q.s += L.listenOk;
   S.spoke += L.spokeOk;
-  let streakUp = false;
+  let streakUp = false,
+    milGems = 0;
   if (S.lastDay !== dkey()) {
     S.streak = S.lastDay === yest() ? S.streak + 1 : 1;
+    if (S.streak === 1) streakReset();
     S.lastDay = dkey();
     streakUp = true;
+    milGems = streakMilestone();
   }
   if (L.mode === "story" && !S.stories.includes(L.story.id)) S.stories.push(L.story.id);
   if (L.mode === "jump") {
@@ -683,7 +687,7 @@ export function finish() {
       ds.push({ l: "DLMMJVS"[d.getDay()], on: i < S.streak });
     }
     scr.push({
-      html: `<div class="bigflame">🔥</div><div class="bignum" data-c="${S.streak}">0</div><h1 class="org">jour${S.streak > 1 ? "s" : ""} de série !</h1><p>${S.streak === 1 ? "C'est le début d'une belle série. Reviens demain pour la prolonger !" : "Ne casse pas la chaîne : reviens demain !"}</p><button class="btn ghost" style="max-width:420px" onclick="shareProgress()">📤 Partager ma série</button><div class="wdots">${ds.map(d => `<div><i class="${d.on ? "on" : ""}">${d.on ? "✓" : ""}</i>${d.l}</div>`).join("")}</div>`,
+      html: `<div class="bigflame">🔥</div><div class="bignum" data-c="${S.streak}">0</div><h1 class="org">jour${S.streak > 1 ? "s" : ""} de série !</h1><p>${S.streak === 1 ? "C'est le début d'une belle série. Reviens demain pour la prolonger !" : "Ne casse pas la chaîne : reviens demain !"}</p>${milGems ? `<p class="milgem"><b>Palier de ${S.streak} jours atteint : +${milGems} 💎</b></p>` : ""}<button class="btn ghost" style="max-width:420px" onclick="shareProgress()">📤 Partager ma série</button><div class="wdots">${ds.map(d => `<div><i class="${d.on ? "on" : ""}">${d.on ? "✓" : ""}</i>${d.l}</div>`).join("")}</div>`,
       after: () => {
         beep("combo");
         document.querySelectorAll("[data-c]").forEach(e => countUp(e, +e.dataset.c, 700));

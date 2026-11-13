@@ -21,6 +21,8 @@ export const DEF = () => ({
   coach: {},
   voltBest: 0,
   freeze: 0,
+  frz: [],
+  smil: [],
   boostUntil: 0,
   owned: [],
   wear: "",

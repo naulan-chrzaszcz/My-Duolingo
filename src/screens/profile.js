@@ -1,23 +1,25 @@
 // Écran Profil et réglages
 import { COURSES } from "../content/index.js";
-import { ACC, MEM, S, curAcc, save, saveAcc, set_S } from "../core/accounts.js";
+import { ACC, MEM, S, curAcc, loadState, save, saveAcc, set_S } from "../core/accounts.js";
 import { hydrate } from "../core/progress.js";
 import { KEY } from "../core/state.js";
-import { $, dkey, esc } from "../core/util.js";
+import { $, dkey, esc, yest } from "../core/util.js";
 import { level, lvlXp } from "../core/xp.js";
 import { pairOf } from "../exercises/generate.js";
 import { shareProgress } from "../features/coach.js";
 import { BADGES } from "../features/quests.js";
 import { KO_READY, UI } from "../i18n/locale.js";
 import { unlockedUnits } from "../lesson/build.js";
-import { accountForm, accountPicker, deleteAcc, exportAcc, importAcc } from "./accounts.js";
+import { accountForm, accountPicker, deleteAcc, exportAcc, importAcc, openAccount } from "./accounts.js";
 import { setUi } from "./language.js";
-import { weekStart, weekXp } from "./league.js";
+import { TROPHY, tierOf, weekStart, weekXp, TIERS } from "./league.js";
 import { AI_MODELS, aiCfg, aiDetect, aiDirect, aiKey, aiLabel, aiSetCfg } from "../services/ai.js";
 import { SRV, srv } from "../services/cloud.js";
 import { goOnline, pushCapable, remindSet } from "../services/reminders.js";
 import { SR0, beep, say, set_SR } from "../services/speech.js";
-import { mascot } from "../ui/mascot.js";
+import { flagSvg, ic } from "../ui/icons.ts";
+import { ACCS, mascot } from "../ui/mascot.js";
+import { secUnits } from "../ui/router.js";
 import { IOS, STANDALONE, THEME, haptic, setTheme } from "../ui/platform.js";
 import { avatar, curCid, curSec, renderAll } from "../ui/router.js";
 import { closeModal, modal, toast } from "../ui/ui.js";
@@ -33,11 +35,62 @@ export function renderProfile(v) {
     days.push({ k: dkey(d), l: "DLMMJVS"[d.getDay()], x: S.week[dkey(d)] || 0, t: i === 0 });
   }
   const mx = Math.max(S.goal, ...days.map(d => d.x));
-  v.innerHTML = `<div class="phead">${mascot("happy", "jump")}<div style="flex:1"><h1 class="sectitle">${esc((curAcc() || {}).name || "Mon profil")}</h1><div style="color:var(--muted);margin-bottom:8px">Niveau ${lv} · ${S.xp} XP au total</div><div class="bar pri"><i style="width:${Math.round(((S.xp - a) / (b - a)) * 100)}%"></i><span>${S.xp - a} / ${b - a} XP → niveau ${lv + 1}</span></div></div></div>
- <div class="sgrid"><div class="sbox"><span class="si">🔥</span><div><b>${S.streak}</b><small>jours de série</small></div></div><div class="sbox"><span class="si">⚡</span><div><b>${S.xp}</b><small>XP total</small></div></div><div class="sbox"><span class="si">📘</span><div><b>${S.lessons}</b><small>séances</small></div></div><div class="sbox"><span class="si">💯</span><div><b>${S.perfect}</b><small>leçons parfaites</small></div></div><div class="sbox"><span class="si">🎯</span><div><b>${S.bestCombo}</b><small>meilleur combo</small></div></div><div class="sbox"><span class="si">🎙️</span><div><b>${S.spoke}</b><small>phrases dites</small></div></div></div>
- <div class="card"><h3>📊 Cette semaine</h3><div class="week">${days.map(d => `<div class="${d.t ? "today" : ""}"><small>${d.x}</small><i style="height:${Math.max(3, (d.x / mx) * 90)}%"></i><small>${d.l}</small></div>`).join("")}</div></div>
- <div class="card"><h3>🏅 Badges (${S.badges.length}/${BADGES.length})</h3><div class="badges">${BADGES.map(x => `<div class="badge ${S.badges.includes(x.id) ? "" : "lock"}"><div class="bi">${x.ic}</div><b>${x.n}</b><small>${x.d}</small></div>`).join("")}</div></div>
- <div class="card"><h3>📊 Statistiques par notion</h3><p class="secsub" style="margin:0 0 10px">Ta réussite par unité, par compétence et tes erreurs récurrentes.</p><button class="btn" onclick="location.hash='stats'">Voir mes statistiques</button></div>
+  const acc = curAcc() || {};
+  const sec = curSec(),
+    su = secUnits(sec);
+  const wx = weekXp(S),
+    tr = tierOf(wx);
+  const trI = TIERS.indexOf(tr);
+  const wear = S.wear && ACCS[S.wear];
+  const recap = [
+    [ic("flame", 28, "", 2.6, "#FFE1BF"), "#FF9F1C", S.streak, "jours de série"],
+    [flagSvg(sec.id, 30, 20, 4), "", `${su.d} / ${su.t}`, `unités · ${sec.name}`],
+    [ic("trophy", 28, "", 2.6), TROPHY[trI][1], `Ligue ${tr[1]}`, "cette semaine"],
+    [ic("bolt", 28, "", 2.6, "#E2DAFF"), "#7C4DFF", S.xp, "XP total"],
+    [ic("check", 28, "", 3), "#22B573", S.lessons, "séances"],
+    [ic("crown", 28, "", 2.6, "#FFE7A8"), "#DFA300", S.perfect, "leçons parfaites"],
+    [ic("target", 28, "", 2.6), "#E0457B", S.bestCombo, "meilleur combo"],
+    [ic("mic", 28, "", 2.6), "#13A8A8", S.spoke, "phrases dites"],
+  ];
+  const others = ACC.list
+    .map(a => {
+      const st = a.id === ACC.current ? S : MEM[a.id] || loadState(a.id);
+      const sk = st.lastDay === dkey() || st.lastDay === yest() ? st.streak : 0;
+      return `<button class="pacc ${a.id === ACC.current ? "cur" : ""}" data-acc="${a.id}" aria-label="${esc(a.name)}"><span class="pav">${avatar(a, 62)}${sk ? `<i>${ic("flame", 13, "", 2.4, "#FFE1BF")}${sk}</i>` : ""}</span><span class="notr">${esc(a.name)}</span></button>`;
+    })
+    .join("");
+  const BM = {
+    first: ["egg", "#22B573", "#178A57", "1"],
+    l10: ["book", "#3D8BFF", "#1D5FC2", "10"],
+    l50: ["cap", "#7C4DFF", "#5A30D8", "50"],
+    s3: ["flame", "#FF9F1C", "#C2410C", "3"],
+    s7: ["flame", "#FF7A3C", "#C2410C", "7"],
+    s30: ["flame", "#E8434F", "#A8203F", "30"],
+    x500: ["bolt", "#FFB020", "#B45309", "500"],
+    x2000: ["star", "#FFC83D", "#C98B00", "2000"],
+    perf: ["hundred", "#22B573", "#178A57", "1"],
+    perf10: ["crown", "#FFB020", "#B45309", "10"],
+    combo15: ["target", "#E0457B", "#A8203F", "15"],
+    speak10: ["mic", "#13A8A8", "#0C7F7F", "10"],
+    toeic: ["brief", "#7C4DFF", "#5A30D8", ""],
+    volt: ["feather", "#3D8BFF", "#1D5FC2", ""],
+    ko: ["tiger", "#FF9F1C", "#C2410C", ""],
+    sprint: ["timer", "#E0457B", "#A8203F", "15"],
+    story: ["open", "#13A8A8", "#0C7F7F", ""],
+  };
+  const badges = BADGES.map((x, i) => {
+    const on = S.badges.includes(x.id);
+    const [k, c, d, num] = BM[x.id] || ["star", "#7C4DFF", "#5A30D8", ""];
+    return `<button class="bdg ${on ? "on" : "lock"}" data-b="${i}" aria-label="${x.n}" style="--bc:${c};--bd:${d};animation-delay:${(0.2 + i * 0.04).toFixed(2)}s"><span class="bmed">${on ? ic(k, 34, "", 2.6) : ic("lock", 28, "", 2.6)}${on ? '<span class="shine"></span>' : ""}</span>${num ? `<span class="bnum">${num}</span>` : ""}</button>`;
+  }).join("");
+  v.innerHTML = `<div class="pban"><div class="pbtop"><div><h1 class="notr">${esc(acc.name || "Mon profil")}</h1><div class="pbsub"><span>Niveau ${lv}</span> · <span>${acc.srv ? "compte en ligne" : "compte sur cet appareil"}</span></div></div><div class="pbbtns"><button class="pbi" id="pWear" aria-label="Tenues de Horang">${ic("hanger", 30, "", 2.2)}</button><button class="pbi" id="pGear" aria-label="Réglages">${ic("gear", 28, "", 2.2)}</button></div></div><div class="phop">${mascot("happy")}</div>${wear ? `<span class="pwear">${wear.n}</span>` : ""}</div>
+ <div class="pxp"><div class="pxpr"><b>Niv. ${lv}</b><span class="pxpbar"><i style="width:${Math.round(((S.xp - a) / (b - a)) * 100)}%"></i></span><b class="pnx">${lv + 1}</b></div><small><span>${S.xp} XP</span> · <span>encore ${b - S.xp} XP pour le niveau ${lv + 1}</span></small></div>
+ <div class="pacts"><button class="btn ghost" id="pAdd">${ic("useradd", 22, "", 2.4)}<span>Ajouter un compte</span></button><button class="btn ghost pshare" id="pShare" aria-label="Partager ma progression">${ic("share", 24, "", 2.4)}</button></div>
+ <h2 class="ph2">Récap</h2><div class="precap">${recap.map(([i, c, big, sm]) => `<div class="prc"><span class="prci" style="color:${c || "inherit"}">${i}</span><span><b>${big}</b><small>${sm}</small></span></div>`).join("")}</div>
+ <h2 class="ph2">Comptes sur cet appareil</h2><div class="paccs">${others}<button class="pacc add" id="pAdd2" aria-label="Ajouter un compte"><span class="padd">${ic("plus", 26, "", 2.6)}</span><span>Ajouter</span></button></div>
+ <div class="card"><h3>Cette semaine</h3><div class="week">${days.map(d => `<div class="${d.t ? "today" : ""}"><small>${d.x}</small><i style="height:${Math.max(3, (d.x / mx) * 90)}%"></i><small>${d.l}</small></div>`).join("")}</div></div>
+ <h2 class="ph2">Badges · ${S.badges.length} sur ${BADGES.length}</h2><div class="pbdgs">${badges}</div><div class="ltip hidden" id="btip"></div>
+ <h2 class="ph2">Mes outils</h2><div class="ptools"><button class="ptool" id="tStats">${ic("chart", 24, "", 2.4)}<span>Statistiques par notion</span>${ic("chevr", 20, "", 3)}</button><button class="ptool" id="tAi">${ic("spark", 24, "", 2.4)}<span>Mon Claude (IA)</span>${ic("chevr", 20, "", 3)}</button><button class="ptool" id="tWords">${ic("book", 24, "", 2.4)}<span>Mes mots</span>${ic("chevr", 20, "", 3)}</button></div>
  <div class="card"><h3>👤 Compte</h3>
   <div class="setrow"><span style="display:flex;align-items:center;gap:10px">${avatar(curAcc(), 40)}<span>${esc((curAcc() || {}).name || "")}<br><small style="color:var(--muted)">${(curAcc() || {}).srv ? "☁️ Compte en ligne · synchronisé" : (curAcc() || {}).pin ? "🔒 Protégé par code PIN" : "Sans code PIN"}</small></span></span><button class="btn ghost" id="aEdit" style="padding:8px 14px">Modifier</button></div>
   <div class="setrow"><span>Changer de compte (${ACC.list.length})</span><button class="btn ghost" id="aSwitch" style="padding:8px 14px">Changer</button></div>
@@ -55,7 +108,7 @@ export function renderProfile(v) {
   <div id="aiMsg" class="aimsg"></div>
   <div class="aibtns"><button class="btn" id="aiSave">Enregistrer et tester</button>${aiKey() ? '<button class="btn ghost" id="aiDel">Retirer ma clé</button>' : ""}</div>
   <details class="aihelp"><summary>Comment obtenir ma clé ?</summary><ol><li>Va sur <b>console.anthropic.com</b> et connecte-toi (ou crée un compte).</li><li>Menu <b>Billing</b> : ajoute quelques euros de crédit (l'API est facturée à l'usage, séparément de l'abonnement claude.ai).</li><li>Menu <b>API Keys</b> → <b>Create Key</b>, puis copie la clé qui commence par <code>sk-ant-</code>.</li><li>Colle-la ici. « Automatique » utilise Haiku pour les exercices (quelques centimes par séance) et Sonnet pour les corrections et les créations.</li></ol></details></div>
- <div class="card"><h3>⚙️ Réglages</h3>
+ <div class="card" id="setCard"><h3>⚙️ Réglages</h3>
   <div class="setrow"><span>🌓 Thème</span><select id="sTheme"><option value="auto" ${THEME() === "auto" ? "selected" : ""}>Automatique</option><option value="light" ${THEME() === "light" ? "selected" : ""}>Clair</option><option value="dark" ${THEME() === "dark" ? "selected" : ""}>Sombre</option></select></div>
   <div class="setrow"><span>🌐 Langue · Language${KO_READY ? " · 언어" : ""}</span><select id="sUi" class="notr"><option value="fr" ${UI === "fr" ? "selected" : ""}>Français</option><option value="en" ${UI === "en" ? "selected" : ""}>English</option>${KO_READY ? `<option value="ko" ${UI === "ko" ? "selected" : ""}>한국어</option>` : ""}</select></div>
   <div class="setrow"><span>Objectif quotidien</span><select id="sGoal">${[
@@ -109,6 +162,32 @@ export function renderProfile(v) {
     };
   $("#aEdit").onclick = () => accountForm(curAcc());
   $("#aSwitch").onclick = () => accountPicker();
+  $("#pWear").onclick = () => (location.hash = "boutique");
+  $("#pGear").onclick = () => $("#setCard").scrollIntoView({ behavior: "smooth", block: "start" });
+  $("#pAdd").onclick = $("#pAdd2").onclick = () => accountForm(null);
+  $("#pShare").onclick = shareProgress;
+  $("#tStats").onclick = () => (location.hash = "stats");
+  $("#tAi").onclick = () => $("#aiCard").scrollIntoView({ behavior: "smooth", block: "start" });
+  $("#tWords").onclick = () => myWords();
+  v.querySelectorAll("[data-acc]").forEach(
+    b =>
+      (b.onclick = () => {
+        if (b.dataset.acc !== ACC.current) openAccount(b.dataset.acc);
+      }),
+  );
+  v.querySelectorAll("[data-b]").forEach(
+    b =>
+      (b.onclick = () => {
+        const x = BADGES[+b.dataset.b],
+          tip = $("#btip"),
+          on = S.badges.includes(x.id);
+        if (tip.dataset.i === b.dataset.b && !tip.classList.contains("hidden")) return tip.classList.add("hidden");
+        tip.dataset.i = b.dataset.b;
+        tip.className = "ltip" + (on ? "" : " lock");
+        tip.style.setProperty("--tc", b.style.getPropertyValue("--bc"));
+        tip.innerHTML = `<b>${x.n}</b> · <span>${x.d}</span> · <span>${on ? "obtenu" : "pas encore obtenu"}</span>`;
+      }),
+  );
   $("#aExp").onclick = exportAcc;
   $("#aImp").onclick = importAcc;
   $("#aDel").onclick = deleteAcc;

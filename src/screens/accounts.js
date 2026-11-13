@@ -31,14 +31,19 @@ export function accountPicker(forced) {
   m.querySelectorAll("[data-a]").forEach(
     b =>
       (b.onclick = () => {
-        const a = ACC.list.find(x => x.id === b.dataset.a);
         beep("tap");
-        if (a.srv && !a.token) loginForm(a.name, forced);
-        else if (a.pin && (forced || a.id !== ACC.current)) askPin(a, () => switchTo(a.id), forced);
-        else switchTo(a.id);
+        openAccount(b.dataset.a, forced);
       }),
   );
   m.querySelector("#aNew").onclick = () => accountForm(null, forced);
+}
+/** Ouvre un compte de l'appareil (connexion ou code PIN si besoin). */
+export function openAccount(id, forced) {
+  const a = ACC.list.find(x => x.id === id);
+  if (!a) return;
+  if (a.srv && !a.token) loginForm(a.name, forced);
+  else if (a.pin && (forced || a.id !== ACC.current)) askPin(a, () => switchTo(a.id), forced);
+  else switchTo(a.id);
 }
 export function askPin(a, ok, forced) {
   const m = modal(
