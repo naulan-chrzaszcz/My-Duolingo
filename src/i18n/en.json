@@ -1058,7 +1058,14 @@
   "Notifications": "Notifications",
   "Raccourcis": "Shortcuts",
   "Compte": "Account",
-  "🏆 Quête du mois : ¤ points, +¤ 💎": "🏆 Monthly quest: ¤ points, +¤ 💎"
+  "🏆 Quête du mois : ¤ points, +¤ 💎": "🏆 Monthly quest: ¤ points, +¤ 💎",
+  "Choisis la bonne image": "Choose the right picture",
+  "Quel mot correspond à l'image ?": "Which word matches the picture?",
+  "Mots en images": "Words in pictures",
+  "Vocabulaire en images": "Words in pictures",
+  "vocabulaire en images": "words in pictures",
+  "Choisis la bonne image, puis le bon mot : les mots du quotidien en dessins.": "Pick the right picture, then the right word: everyday words as drawings.",
+  "Images": "Pictures"
  },
  "content": {
   "Hangul 1 : les voyelles": "Hangul 1: vowels",

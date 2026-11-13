@@ -26,6 +26,7 @@ import { beep, say } from "../services/speech.js";
 import { flagSvg, ic } from "../ui/icons.ts";
 import { mascot } from "../ui/mascot.js";
 import { horangScene } from "../ui/scenes.ts";
+import { hasPic, picSvg, picWord } from "../ui/pics.ts";
 import { ANDROID, INSTALL, IOS, STANDALONE, haptic } from "../ui/platform.js";
 import { curCid, curSec, renderAll } from "../ui/router.js";
 import { closeModal, deep, modal, toast } from "../ui/ui.js";
@@ -456,8 +457,15 @@ export function guide(cid, u) {
       return `<div class="vitem"><button class="spk" data-say="${esc(full)}">🔊</button><div class="tg">${esc(full)}<div class="fr">${esc(c[3])}</div></div></div>`;
     })
     .join("");
+  const pk = (U.pk || [])
+    .filter(hasPic)
+    .map(id => {
+      const W = picWord(id, lang);
+      return `<button class="picword" data-say="${esc(W.w)}">${picSvg(id)}<span lang="${lang}">${esc(W.w)}</span>${W.rom ? `<small>${esc(W.rom)}</small>` : ""}</button>`;
+    })
+    .join("");
   const m = modal(
-    `<h2>📖 ${esc(U.t)}</h2><p>${LEVELS[U.lv]} · ${esc(U.d)}</p>${U.tip ? `<div class="tipbox">💡 ${esc(U.tip)}</div>` : ""}${ph ? `<h3 style="margin-top:14px">Phrases clés</h3><div class="vlist">${ph}</div>` : ""}${vo ? `<h3>Mots utiles</h3><div class="vlist">${vo}</div>` : ""}${ch ? `<h3>Règles en exemples</h3><div class="vlist">${ch}</div>` : ""}<button class="btn" onclick="closeModal()">Fermer</button>`,
+    `<h2>📖 ${esc(U.t)}</h2><p>${LEVELS[U.lv]} · ${esc(U.d)}</p>${U.tip ? `<div class="tipbox">💡 ${esc(U.tip)}</div>` : ""}${ph ? `<h3 style="margin-top:14px">Phrases clés</h3><div class="vlist">${ph}</div>` : ""}${vo ? `<h3>Mots utiles</h3><div class="vlist">${vo}</div>` : ""}${pk ? `<h3>Mots en images</h3><div class="picwords">${pk}</div>` : ""}${ch ? `<h3>Règles en exemples</h3><div class="vlist">${ch}</div>` : ""}<button class="btn" onclick="closeModal()">Fermer</button>`,
   );
   m.querySelectorAll("[data-say]").forEach(b => (b.onclick = () => say(b.dataset.say, lang)));
 }

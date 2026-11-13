@@ -424,6 +424,8 @@ export const SKILL = {
   conv: "TOEIC Parts 3-4",
   read: "TOEIC Part 7",
   photo: "TOEIC Part 1",
+  pic: "Vocabulaire en images",
+  picw: "Vocabulaire en images",
   hg: "Lecture du hangul",
   build: "Écriture du hangul",
   match: "Vocabulaire & sens",
@@ -437,6 +439,7 @@ export function ruleOf(ex) {
   if (ex._sub) return ["d:" + ex._sub, drillLabel(ex._sub)];
   if (ex.t === "hg") return ["h:" + ex.q, "Hangul : " + ex.q];
   if (ex.t === "build") return ["h:" + ex.syl, "Syllabe " + ex.syl + " (" + ex.roman + ")"];
+  if (ex.t === "pic" || ex.t === "picw") return ["w:" + ex.q, "Mot : " + ex.q];
   if (ex.t === "mc" && ex.w) return ["w:" + ex.answer, "Mot : " + ex.answer + " (" + ex.prompt + ")"];
   if (["type", "tiles", "listen", "listenTiles", "speak"].includes(ex.t) && ex.answer && ex.answer.length < 70)
     return ["s:" + ex.answer, "Phrase : " + ex.answer];

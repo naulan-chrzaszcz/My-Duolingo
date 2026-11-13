@@ -16,6 +16,8 @@ export const EXT_MAP = {
   match: "type",
   choice: "spot",
   photo: "photo",
+  pic: "picw",
+  picw: "type",
   part2: "part2",
   jamo: "jamoRev",
   readw: "build",

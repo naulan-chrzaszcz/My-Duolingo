@@ -24,6 +24,8 @@ export const TYPE_FR = {
   dictee: "dictée",
   spot: "repérage de fautes",
   photo: "TOEIC Part 1",
+  pic: "vocabulaire en images",
+  picw: "vocabulaire en images",
   fill: "grammaire / règles",
 };
 export function errStats(cid) {

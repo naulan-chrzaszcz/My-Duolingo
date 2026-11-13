@@ -21,6 +21,7 @@ import {
 import { mascot } from "../ui/mascot.js";
 import { ANDROID, IOS, STANDALONE } from "../ui/platform.js";
 import { flyFrom } from "../ui/ui.js";
+import { p1Svg, picSvg } from "../ui/pics.ts";
 
 // ===================== TYPES D'EXERCICES =====================
 export const R = {};
@@ -470,7 +471,16 @@ R.spot = (ex, b) => {
   };
 };
 R.photo = (ex, b) => {
-  b.innerHTML = `<h2 class="ltitle">Part 1 — Quelle phrase décrit le mieux la ${ex.img ? "photo" : "scène"} ?</h2>${ex.img ? `<figure class="pscene"><img src="${PH_IMG(ex.img)}" alt="" decoding="async" onerror="this.closest('figure').outerHTML='<div class=&quot;scene&quot;>${esc(ex.scene)}</div>'"><figcaption>Photo · Unsplash</figcaption></figure>` : `<div class="scene">${ex.scene}</div>`}<div class="opts">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${"ABCD"[i]}</span><span>${ex.hidden ? "Affirmation " + "ABCD"[i] : esc(o)}</span><span class="spk" data-o="${i}" role="button" aria-label="Écouter">🔊</span></button>`).join("")}</div>${ex.hidden ? '<p class="micnote" style="margin-top:12px">Comme au vrai TOEIC, les affirmations ne sont qu\'audio : touche 🔊 pour les écouter.</p>' : ""}`;
+  // v30 : chaque scène a son dessin ; la photo réelle reste prioritaire, le dessin la remplace hors ligne
+  const art = p1Svg(ex.answer);
+  const fallback = art ? `<div class="scenebox">${art}</div>` : `<div class="scene">${esc(ex.scene)}</div>`;
+  b.innerHTML = `<h2 class="ltitle">Part 1 — Quelle phrase décrit le mieux la ${ex.img ? "photo" : "scène"} ?</h2>${ex.img ? `<figure class="pscene"><img src="${PH_IMG(ex.img)}" alt="" decoding="async"><figcaption>Photo · Unsplash</figcaption></figure>` : fallback}<div class="opts">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${"ABCD"[i]}</span><span>${ex.hidden ? "Affirmation " + "ABCD"[i] : esc(o)}</span><span class="spk" data-o="${i}" role="button" aria-label="Écouter">🔊</span></button>`).join("")}</div>${ex.hidden ? '<p class="micnote" style="margin-top:12px">Comme au vrai TOEIC, les affirmations ne sont qu\'audio : touche 🔊 pour les écouter.</p>' : ""}`;
+  const im = b.querySelector(".pscene img");
+  if (im)
+    im.onerror = () => {
+      const f = im.closest("figure");
+      if (f) f.outerHTML = fallback;
+    };
   let sel = -1;
   const os = b.querySelectorAll(".opt");
   b.querySelectorAll("[data-o]").forEach(
@@ -503,6 +513,57 @@ R.photo = (ex, b) => {
       markOpts(b, ex.options.indexOf(ex.answer), sel);
       if (ex.hidden) os.forEach((o, i) => (o.children[1].textContent = ex.options[i]));
       return { ok, sol: ex.answer, exp: "Scène : " + ex.cap, speak: ex.answer, lang: ex.lang };
+    },
+  };
+};
+// v30 : « Choisis la bonne image » (pic) et « Quel mot correspond à l'image ? » (picw)
+R.pic = (ex, b) => {
+  const word = `<button class="spk" data-say="n" aria-label="Écouter">🔊</button><span lang="${ex.lang}">${esc(ex.word)}</span>${ex.rom ? `<div class="rom">${esc(ex.rom)}</div>` : ""}`;
+  b.innerHTML = `<h2 class="ltitle">Choisis la bonne image</h2>${bubble(word)}<div class="opts picgrid">${ex.options.map((o, i) => `<button class="opt picopt" data-i="${i}" aria-label="${i + 1}"><span class="k">${i + 1}</span>${picSvg(o)}</button>`).join("")}</div>`;
+  wireSay(b, ex.word, ex.lang);
+  say(ex.word, ex.lang);
+  let sel = -1;
+  const os = b.querySelectorAll(".opt");
+  os.forEach(
+    o =>
+      (o.onclick = () => {
+        if (L.state !== "answer") return;
+        sel = +o.dataset.i;
+        os.forEach(x => x.classList.toggle("sel", x === o));
+        beep("tap");
+        setReady(true);
+      }),
+  );
+  return {
+    key: i => os[i] && os[i].click(),
+    grade: give => {
+      const ok = !give && ex.options[sel] === ex.answer;
+      markOpts(b, ex.options.indexOf(ex.answer), sel);
+      return { ok, sol: ex.word, rom: ex.rom, speak: ex.word, lang: ex.lang };
+    },
+  };
+};
+R.picw = (ex, b) => {
+  b.innerHTML = `<h2 class="ltitle">Quel mot correspond à l'image ?</h2><div class="picbig">${picSvg(ex.id)}</div><div class="opts optgrid">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${i + 1}</span><span lang="${ex.lang}">${esc(o)}</span></button>`).join("")}</div>`;
+  let sel = -1;
+  const os = b.querySelectorAll(".opt");
+  os.forEach(
+    o =>
+      (o.onclick = () => {
+        if (L.state !== "answer") return;
+        sel = +o.dataset.i;
+        os.forEach(x => x.classList.toggle("sel", x === o));
+        beep("tap");
+        say(ex.options[sel], ex.lang);
+        setReady(true);
+      }),
+  );
+  return {
+    key: i => os[i] && os[i].click(),
+    grade: give => {
+      const ok = !give && ex.options[sel] === ex.answer;
+      markOpts(b, ex.options.indexOf(ex.answer), sel);
+      return { ok, sol: ex.answer, rom: ex.rom, speak: ex.answer, lang: ex.lang };
     },
   };
 };

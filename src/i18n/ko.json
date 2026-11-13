@@ -1100,7 +1100,19 @@
   "Notifications": "알림",
   "Raccourcis": "바로가기",
   "Compte": "계정",
-  "🏆 Quête du mois : ¤ points, +¤ 💎": "🏆 이달의 퀘스트: ¤점, +¤ 💎"
+  "🏆 Quête du mois : ¤ points, +¤ 💎": "🏆 이달의 퀘스트: ¤점, +¤ 💎",
+  "Choisis la bonne image": "알맞은 그림을 고르세요",
+  "Quel mot correspond à l'image ?": "그림에 맞는 단어는 무엇일까요?",
+  "Mots en images": "그림으로 배우는 단어",
+  "Vocabulaire en images": "그림 단어",
+  "vocabulaire en images": "그림 단어",
+  "Choisis la bonne image, puis le bon mot : les mots du quotidien en dessins.": "알맞은 그림을 고르고, 알맞은 단어를 고르세요: 그림으로 보는 일상 단어.",
+  "Images": "그림",
+  "Words in pictures": "그림 단어",
+  "Pick the right picture, then the right word: everyday words as drawings.": "알맞은 그림을 고르고, 알맞은 단어를 고르세요: 그림으로 보는 일상 단어.",
+  "Pictures": "그림",
+  "Choose the right picture": "알맞은 그림을 고르세요",
+  "Which word matches the picture?": "그림에 맞는 단어는 무엇일까요?"
  },
  "content": {
   "Quotidien": "일상",

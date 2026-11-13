@@ -51,7 +51,7 @@ async def main():
             await p.evaluate("closeModal()"); await p.evaluate(js); await p.wait_for_timeout(200); await grab(p,f'{tag0} {trk}/{js}',dark)
           except Exception as e: pass
         await p.evaluate("closeModal()")
-        types=await p.evaluate(f"(()=>{{const C=COURSES['{trk}'];const ctx=ctxFor('{trk}',C.units);ctx.allHj=C.units.flatMap(x=>x.hj||[]);const T=['mc','mcw','tiles','tilesRev','listenTiles','type','listen','speak','match','choice','dictee','spot','part2','conv','read','photo','jamo','jamoRev','hear','readw','build'];window.__ex=[];T.forEach(t=>{{for(let i=0;i<3;i++){{try{{const e=make(t,ctx);if(e)window.__ex.push(e)}}catch(e){{}}}}}});window.__ex=window.__ex.concat(writeTasks('{trk}',2,0),writeTasks('{trk}',9,1));return window.__ex.map(e=>e.t)}})()")
+        types=await p.evaluate(f"(()=>{{const C=COURSES['{trk}'];const ctx=ctxFor('{trk}',C.units);ctx.allHj=C.units.flatMap(x=>x.hj||[]);const T=['mc','mcw','tiles','tilesRev','listenTiles','type','listen','speak','match','choice','dictee','spot','part2','conv','read','photo','pic','picw','jamo','jamoRev','hear','readw','build'];window.__ex=[];T.forEach(t=>{{for(let i=0;i<3;i++){{try{{const e=make(t,ctx);if(e)window.__ex.push(e)}}catch(e){{}}}}}});window.__ex=window.__ex.concat(writeTasks('{trk}',2,0),writeTasks('{trk}',9,1));return window.__ex.map(e=>e.t)}})()")
         for i,t in enumerate(types):
           await p.evaluate(f"if(L)closeLesson();openSession({{mode:'train',cid:'{trk}',exs:[window.__ex[{i}]]}})"); await p.wait_for_timeout(120); await grab(p,f'{tag0} {trk}/exercice {t}',dark)
           if i%3==0 and dark: await p.screenshot(path=f'{OUT}/X_{ui}_{trk}_{t}.png')

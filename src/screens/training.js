@@ -11,6 +11,7 @@ import { placeEstimate, placeIntro } from "../features/placement.js";
 import { themePicker } from "../features/theme-training.js";
 import { bankDue, bankView } from "../features/word-bank.js";
 import { unlockedUnits } from "../lesson/build.js";
+import { PIC_WORDS, hasPic } from "../ui/pics.ts";
 import { dueCount, openSession } from "../lesson/engine.js";
 import { myWords } from "./profile.js";
 import { startAI } from "../services/ai.js";
@@ -63,6 +64,8 @@ const TMAP = {
   "Mots utiles — TOEIC": ["Vocabulaire", "target", PK],
   "Useful words — French": ["Vocabulaire", "chat", GR],
   "Mots utiles": ["Vocabulaire", "chat", PK],
+  "Vocabulaire en images": ["Vocabulaire", "image", GR],
+  "Words in pictures": ["Vocabulaire", "image", GR],
   "Lecture TOEIC (Part 7)": ["Examens", "doc", TE],
   "TOEIC blanc express": ["Examens", "clip", VI],
   "Examen blanc Voltaire": ["Examens", "clip", VI],
@@ -88,6 +91,13 @@ export function renderTrain(v) {
     );
     add("💬", "Mots utiles — Conversation", "Expressions du quotidien pour parler naturellement.", "Quotidien", () =>
       trainVocab("en-daily"),
+    );
+    add(
+      "🖼️",
+      "Vocabulaire en images",
+      "Choisis la bonne image, puis le bon mot : les mots du quotidien en dessins.",
+      "Images",
+      () => trainPics("en-daily"),
     );
     add("💼", "Mots utiles — Rédaction pro", "E-mails, réunions, formules diplomatiques.", "Pro", () =>
       trainVocab("en-pro"),
@@ -130,6 +140,13 @@ export function renderTrain(v) {
     );
     add("💬", "Useful words — French", "Everyday words and phrases, with audio.", "Vocabulary", () =>
       trainVocab("fr-fle"),
+    );
+    add(
+      "🖼️",
+      "Words in pictures",
+      "Pick the right picture, then the right word: everyday words as drawings.",
+      "Pictures",
+      () => trainPics("fr-fle"),
     );
     add("🎧", "Listening", "Write what you hear, then check.", "Listening", () => trainListen(["fr-fle"]));
     add("🎙️", "Pronunciation", "Read French sentences aloud, the microphone corrects you.", "Speaking", () =>
@@ -199,6 +216,13 @@ export function renderTrain(v) {
       () => notionPicker("ko"),
     );
     add("🐯", "Mots utiles", "Vocabulaire et phrases essentielles.", "Vocabulaire", () => trainVocab("ko"));
+    add(
+      "🖼️",
+      "Vocabulaire en images",
+      "Choisis la bonne image, puis le bon mot : les mots du quotidien en dessins.",
+      "Images",
+      () => trainPics("ko"),
+    );
     add(
       "👆",
       "Trouve l'erreur (맞춤법)",
@@ -327,6 +351,18 @@ export function renderTrain(v) {
 export function trainVocab(cid) {
   const ctx = ctxFor(cid, unlockedUnits(cid));
   const T = ["match", "mcw", "mcw", "tilesRev", "mcw", "tiles", "match", "mcw", "listenTiles", "type", "speak", "mcw"];
+  openSession({ mode: "train", cid, exs: T.map(t => make(t, ctx)).filter(Boolean) });
+}
+/** v30 : vocabulaire en images (mots des unités débloquées d'abord, puis tous les mots illustrés). */
+export function trainPics(cid) {
+  const ctx = ctxFor(cid, unlockedUnits(cid));
+  const mine = ctx.pk.slice();
+  ctx.pk = [
+    ...shuffle(mine),
+    ...shuffle(PIC_WORDS.map(r => r[0]).filter(id => hasPic(id) && !mine.includes(id))),
+  ].slice(0, 24);
+  ctx.ptr.pk = 0;
+  const T = ["pic", "pic", "picw", "pic", "picw", "pic", "picw", "pic", "picw", "pic", "picw", "picw"];
   openSession({ mode: "train", cid, exs: T.map(t => make(t, ctx)).filter(Boolean) });
 }
 export function trainListen(cids) {

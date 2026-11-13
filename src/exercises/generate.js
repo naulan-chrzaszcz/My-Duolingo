@@ -7,6 +7,7 @@ import { HG_CHO, HG_JUNG, hgDecomp } from "./hangul.js";
 import { noNote, words } from "./validate.js";
 import { BASE_LANG } from "../i18n/locale.js";
 import { mixDrills } from "./drills.js";
+import { PIC_WORDS, hasPic, picWord } from "../ui/pics.ts";
 
 // ===================== GÉNÉRATION D'EXERCICES =====================
 export function pairOf(C, a) {
@@ -29,6 +30,7 @@ export function ctxFor(cid, units, o = {}) {
       mp: shuffle(g("mp")),
       allHj: C.units.flatMap(u => u.hj || []),
       ph: shuffle(g("ph")),
+      pk: shuffle(g("pk").filter(hasPic)),
       c: shuffle(g("c")),
       l: shuffle(g("l")),
       d: shuffle(g("dd")),
@@ -36,7 +38,7 @@ export function ctxFor(cid, units, o = {}) {
       rd: shuffle(g("rd")),
       v: g("v"),
       allP: allPairs(C),
-      ptr: { p: 0, c: 0, cs: 0, ph: 0, hj: 0, sy: 0, mp: 0, l: 0, d: 0, v: 0, cv: 0, rd: 0 },
+      ptr: { p: 0, c: 0, cs: 0, ph: 0, hj: 0, sy: 0, mp: 0, l: 0, d: 0, v: 0, cv: 0, rd: 0, pk: 0 },
       dis: 3,
       hideP2: false,
     },
@@ -69,6 +71,8 @@ export const NEED = {
   readw: "p",
   build: "sy",
   fill: "c",
+  pic: "pk",
+  picw: "pk",
 };
 export const FB = {
   match: ["mc"],
@@ -87,6 +91,8 @@ export const FB = {
   readw: ["mc"],
   build: ["mc"],
   fill: ["choice"],
+  pic: ["mcw", "mc"],
+  picw: ["mcw", "mc"],
 };
 export function take(ctx, k) {
   const a = ctx[k];
@@ -179,6 +185,24 @@ export function make0(t, ctx) {
           .map(x => x[1]),
       );
     return { t: "mc", lang, w: true, prompt: w[0], answer: w[1], options: shuffle([w[1], ...others]), speak: w[1] };
+  }
+  if (t === "pic" || t === "picw") {
+    // « Choisis la bonne image » (pic) et « Quel mot correspond à l'image ? » (picw) : 4 images ou 4 mots
+    const id = take(ctx, "pk");
+    const W = picWord(id, lang);
+    const seen = new Set([W.w]);
+    const pool = [...shuffle(ctx.pk), ...shuffle(PIC_WORDS.map(r => r[0]).filter(hasPic))];
+    const others = [];
+    for (const o of pool) {
+      if (others.length >= 3) break;
+      const w = picWord(o, lang).w;
+      if (o === id || seen.has(w)) continue; // pas deux images pour le même mot (눈 = œil et neige)
+      seen.add(w);
+      others.push(o);
+    }
+    const ids = shuffle([id, ...others]);
+    if (t === "pic") return { t, lang, id, word: W.w, rom: W.rom, answer: id, options: ids, q: W.w };
+    return { t, lang, id, answer: W.w, rom: W.rom, options: ids.map(o => picWord(o, lang).w), ids, q: W.w };
   }
   if (t === "fill") {
     // écrire le mot qui manque : seulement pour les phrases générées qui ont un indice (verbe à conjuguer…)
@@ -384,7 +408,7 @@ export const TEMPL = {
       "mc",
       "tiles",
       "listenTiles",
-      "mcw",
+      "pic",
       "tiles",
       "speak",
       "tilesRev",
@@ -403,7 +427,7 @@ export const TEMPL = {
       "speak",
       "tiles",
       "type",
-      "mcw",
+      "picw",
       "listenTiles",
       "tiles",
       "type",

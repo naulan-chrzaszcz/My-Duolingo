@@ -128,6 +128,16 @@
      0,
      "Nice to meet you = enchanté(e)."
     ]
+   ],
+   "pk": [
+    "cat",
+    "dog",
+    "house",
+    "book",
+    "school",
+    "phone",
+    "tree",
+    "flower"
    ]
   },
   {
@@ -256,6 +266,26 @@
      0,
      "Is service included? = le service est compris ?"
     ]
+   ],
+   "pk": [
+    "coffee",
+    "tea",
+    "water",
+    "juice",
+    "cake",
+    "sandwich",
+    "soup",
+    "pizza",
+    "cup",
+    "plate",
+    "fork",
+    "knife",
+    "spoon",
+    "wine",
+    "beer",
+    "bottle",
+    "restaurant",
+    "icecream"
    ]
   },
   {
@@ -408,6 +438,16 @@
      0,
      "Sujet pluriel (my parents) : have. Has va avec he / she / it."
     ]
+   ],
+   "pk": [
+    "cat",
+    "dog",
+    "bird",
+    "fish",
+    "rabbit",
+    "house",
+    "gift",
+    "cake"
    ]
   },
   {
@@ -560,6 +600,17 @@
      0,
      "Early = tôt. Quick est un adjectif, il ne convient pas ici."
     ]
+   ],
+   "pk": [
+    "clock",
+    "alarm",
+    "sun",
+    "moon",
+    "bed",
+    "toothbrush",
+    "shower",
+    "towel",
+    "coffee"
    ]
   },
   {
@@ -687,6 +738,19 @@
      0,
      "Avec « be », l'adverbe se place après le verbe : I'm always tired."
     ]
+   ],
+   "pk": [
+    "ball",
+    "guitar",
+    "piano",
+    "tent",
+    "bike",
+    "mountain",
+    "book",
+    "camera",
+    "drum",
+    "sea",
+    "park"
    ]
   },
   {
@@ -812,6 +876,29 @@
      0,
      "water est indénombrable : some water."
     ]
+   ],
+   "pk": [
+    "apple",
+    "banana",
+    "orange",
+    "tomato",
+    "carrot",
+    "potato",
+    "bread",
+    "cheese",
+    "egg",
+    "milk",
+    "meat",
+    "pan",
+    "pot",
+    "oven",
+    "fridge",
+    "basket",
+    "knife",
+    "mushroom",
+    "lemon",
+    "strawberry",
+    "grapes"
    ]
   },
   {
@@ -944,6 +1031,32 @@
      0,
      "between A and B = entre deux éléments."
     ]
+   ],
+   "pk": [
+    "bus",
+    "train",
+    "subway",
+    "taxi",
+    "car",
+    "ticket",
+    "receipt",
+    "trafficlight",
+    "busstop",
+    "shop",
+    "bag",
+    "map",
+    "card",
+    "money",
+    "wallet",
+    "tshirt",
+    "trousers",
+    "dress",
+    "skirt",
+    "coat",
+    "shoes",
+    "socks",
+    "hat",
+    "scarf"
    ]
   },
   {
@@ -1092,6 +1205,22 @@
      0,
      "Après if (condition réelle), le présent : if you get… you'll feel…"
     ]
+   ],
+   "pk": [
+    "medicine",
+    "thermometer",
+    "bandage",
+    "tooth",
+    "hospital",
+    "pharmacy",
+    "ambulance",
+    "mask",
+    "hand",
+    "eye",
+    "ear",
+    "nose",
+    "mouth",
+    "foot"
    ]
   },
   {
@@ -1222,6 +1351,23 @@
      0,
      "at night = la nuit."
     ]
+   ],
+   "pk": [
+    "house",
+    "door",
+    "window",
+    "key",
+    "bed",
+    "chair",
+    "table",
+    "sofa",
+    "lamp",
+    "washer",
+    "mirror",
+    "towel",
+    "plant",
+    "building",
+    "box"
    ]
   },
   {
@@ -1368,6 +1514,21 @@
      0,
      "Look forward to + -ing : to est ici une préposition."
     ]
+   ],
+   "pk": [
+    "suitcase",
+    "plane",
+    "passport",
+    "map",
+    "camera",
+    "sea",
+    "hotel",
+    "boat",
+    "sun",
+    "ticket",
+    "umbrella",
+    "hat",
+    "glasses"
    ]
   },
   {
@@ -1755,6 +1916,16 @@
      0,
      "link = lien."
     ]
+   ],
+   "pk": [
+    "phone",
+    "laptop",
+    "computer",
+    "charger",
+    "headphones",
+    "printer",
+    "camera",
+    "tv"
    ]
   },
   {
@@ -2003,7 +2174,17 @@
      "since + point de départ ; for + durée."
     ]
    ],
-   "orig": 1
+   "orig": 1,
+   "pk": [
+    "sun",
+    "rain",
+    "snow",
+    "cloud",
+    "rainbow",
+    "umbrella",
+    "coat",
+    "scarf"
+   ]
   },
   {
    "t": "Raconter une histoire",
@@ -2530,6 +2711,16 @@
      0,
      "proof of address."
     ]
+   ],
+   "pk": [
+    "bank",
+    "card",
+    "money",
+    "coin",
+    "wallet",
+    "receipt",
+    "letter",
+    "postoffice"
    ]
   },
   {
@@ -2656,6 +2847,15 @@
      0,
      "miss a flight / a train = rater."
     ]
+   ],
+   "pk": [
+    "wallet",
+    "ambulance",
+    "car",
+    "phone",
+    "hospital",
+    "bag",
+    "key"
    ]
   },
   {

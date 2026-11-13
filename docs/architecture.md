@@ -1,4 +1,4 @@
-# Architecture du code (v28)
+# Architecture du code (v30)
 
 La v26 reprend exactement le comportement de la v25 dans un projet découpé en modules.
 
@@ -83,3 +83,14 @@ L'ordre compte : la traduction du DOM doit observer la page avant la typographie
 - Scènes de Horang le long du parcours : `ui/scenes.ts` (`horangScene`).
 - IA (v29) : `weakRuleIds()` / `weakRules()` dans `services/ai.js` envoient les règles de grammaire les moins réussies (`weak`) au prompt (`generate.php` et prompt direct) et ajoutent 3 phrases générées par gabarits à chaque séance IA ou locale. Les QCM générés peuvent porter un indice (5ᵉ champ) qui permet l'exercice `fill`.
 - Entraînement : `TMAP` (titre de carte → rubrique, icône, couleur) dans `screens/training.js`.
+
+## Images de vocabulaire et scènes (v30)
+
+- `content/pics.json` : mots illustrés `[id, catégorie, français, anglais, coréen, romanisation]`.
+- `ui/pics/kit.ts` : outils de dessin (`ci`, `el`, `re`, `pa`, `li`, `limb`, `star`, `svg`), contour `K` et palette `C`.
+- `ui/pics/icons-a.ts` et `icons-b.ts` : un dessin par mot, repère 64 × 64.
+- `ui/pics/people.ts` : personnages (`person` : pose, direction, vue, mains…) et décors (`room`, `outside`, `desk`, `chairS`…).
+- `ui/pics/scenes-p1.ts` : scènes de la Part 1, repère 160 × 100, indexées par la phrase correcte.
+- `ui/pics.ts` : `picSvg(id)`, `picWord(id, langue)`, `hasPic(id)`, `p1Svg(phrase)`, `PIC_WORDS`.
+- Unités : champ `pk` (liste d'identifiants). `ctxFor` le charge dans `ctx.pk` ; types d'exercice `pic` (mot → 4 images) et `picw` (image → 4 mots). Sans `pk`, ils retombent sur `mcw` puis `mc`.
+- Les cartes d'images gardent un fond blanc (`#FFFFFE`) en thème sombre.

@@ -155,6 +155,14 @@
    "wt": [
     "Introduce yourself in 3 sentences: your name, your nationality and where you live.",
     "Write a short message (40 to 80 words) to a new French colleague: say hello, introduce yourself and ask two questions about them."
+   ],
+   "pk": [
+    "cat",
+    "dog",
+    "house",
+    "book",
+    "school",
+    "phone"
    ]
   },
   {
@@ -299,6 +307,17 @@
    "wt": [
     "Write a 3-line dialogue: you order a drink and something to eat in a café.",
     "Write a short message (40 to 80 words) to invite a friend for a coffee: day, time, place."
+   ],
+   "pk": [
+    "coffee",
+    "tea",
+    "water",
+    "juice",
+    "cake",
+    "cup",
+    "receipt",
+    "table",
+    "cookie"
    ]
   },
   {
@@ -595,6 +614,15 @@
    "wt": [
     "Describe one member of your family in 3 sentences (appearance and personality).",
     "Write a short text (40 to 80 words) about your family: who they are, where they live, what they are like."
+   ],
+   "pk": [
+    "cat",
+    "dog",
+    "bird",
+    "fish",
+    "rabbit",
+    "house",
+    "gift"
    ]
   },
   {
@@ -738,6 +766,23 @@
    "wt": [
     "Write your shopping list in 3 sentences using du, de la, des.",
     "Write a short dialogue (40 to 80 words) at the market: you ask for three things, the price, and you pay."
+   ],
+   "pk": [
+    "bread",
+    "cheese",
+    "apple",
+    "meat",
+    "milk",
+    "egg",
+    "banana",
+    "tomato",
+    "carrot",
+    "potato",
+    "strawberry",
+    "grapes",
+    "basket",
+    "wine",
+    "shop"
    ]
   },
   {
@@ -892,6 +937,23 @@
    "wt": [
     "Explain in 3 sentences how to go from your home to your favourite café.",
     "Write a message (40 to 80 words) to a friend visiting your city: where to meet and how to get there."
+   ],
+   "pk": [
+    "bus",
+    "train",
+    "subway",
+    "car",
+    "bike",
+    "trafficlight",
+    "map",
+    "school",
+    "hospital",
+    "bank",
+    "pharmacy",
+    "postoffice",
+    "park",
+    "building",
+    "ticket"
    ]
   },
   {
@@ -1036,6 +1098,15 @@
    "wt": [
     "Describe your morning in 3 sentences with reflexive verbs.",
     "Write a short text (60 to 100 words) about a typical day: morning, work or studies, evening."
+   ],
+   "pk": [
+    "alarm",
+    "clock",
+    "bed",
+    "shower",
+    "toothbrush",
+    "coffee",
+    "towel"
    ]
   },
   {
@@ -1188,6 +1259,21 @@
    "wt": [
     "Write 3 sentences about what you did yesterday (passé composé with avoir).",
     "Tell a friend about your last weekend (60 to 100 words) in an informal message."
+   ],
+   "pk": [
+    "tshirt",
+    "trousers",
+    "dress",
+    "skirt",
+    "coat",
+    "shoes",
+    "socks",
+    "hat",
+    "scarf",
+    "bag",
+    "glasses",
+    "watch",
+    "ring"
    ]
   },
   {
@@ -1488,6 +1574,19 @@
    "wt": [
     "Write a 3-line dialogue with a waiter: you order a starter, a main course and a drink.",
     "Write a review (60 to 100 words) of a restaurant you like: food, service, price."
+   ],
+   "pk": [
+    "restaurant",
+    "plate",
+    "fork",
+    "knife",
+    "spoon",
+    "wine",
+    "bottle",
+    "soup",
+    "pizza",
+    "icecream",
+    "cake"
    ]
   },
   {
@@ -1631,6 +1730,19 @@
    "wt": [
     "Describe today's weather and your plans for tomorrow in 3 sentences.",
     "Write a message (60 to 100 words) proposing a weekend plan to a friend, depending on the weather."
+   ],
+   "pk": [
+    "sun",
+    "rain",
+    "snow",
+    "cloud",
+    "rainbow",
+    "tree",
+    "flower",
+    "leaf",
+    "umbrella",
+    "sea",
+    "mountain"
    ]
   },
   {
@@ -1769,6 +1881,20 @@
    "wt": [
     "Write 3 sentences describing your symptoms to a doctor.",
     "Write an email (60 to 100 words) to your manager: you are ill and cannot come to work today."
+   ],
+   "pk": [
+    "hand",
+    "eye",
+    "ear",
+    "nose",
+    "mouth",
+    "foot",
+    "tooth",
+    "medicine",
+    "pharmacy",
+    "thermometer",
+    "bandage",
+    "hospital"
    ]
   },
   {
@@ -2071,6 +2197,18 @@
    "wt": [
     "Write the opening and the closing lines of a formal email to a client.",
     "Write a professional email (80 to 120 words) asking to move a meeting, with a reason and two new times."
+   ],
+   "pk": [
+    "computer",
+    "laptop",
+    "phone",
+    "printer",
+    "calendar",
+    "letter",
+    "pen",
+    "pencil",
+    "scissors",
+    "notebook"
    ]
   },
   {
@@ -2359,6 +2497,22 @@
    "wt": [
     "Describe your home in 3 sentences: size, rooms, what you like.",
     "Write an email (80 to 120 words) to your landlord about a problem in the flat, and ask for a repair."
+   ],
+   "pk": [
+    "house",
+    "key",
+    "door",
+    "window",
+    "bed",
+    "sofa",
+    "chair",
+    "table",
+    "lamp",
+    "washer",
+    "mirror",
+    "fridge",
+    "oven",
+    "building"
    ]
   },
   {

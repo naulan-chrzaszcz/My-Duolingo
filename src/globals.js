@@ -46,6 +46,7 @@ import * as m_services_reminders from "./services/reminders.js";
 import * as m_services_speech from "./services/speech.js";
 import * as m_ui_back_button from "./ui/back-button.js";
 import * as m_ui_mascot from "./ui/mascot.js";
+import * as m_ui_pics from "./ui/pics.ts";
 import * as m_ui_platform from "./ui/platform.js";
 import * as m_ui_router from "./ui/router.js";
 import * as m_ui_typography from "./ui/typography.js";
@@ -97,6 +98,7 @@ const MODULES = [
   m_services_speech,
   m_ui_back_button,
   m_ui_mascot,
+  m_ui_pics,
   m_ui_platform,
   m_ui_router,
   m_ui_typography,

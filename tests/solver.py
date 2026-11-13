@@ -28,7 +28,7 @@ async def solve(p):
     elif t=='spot':
         f=await p.evaluate("L.ex.faulty")
         await p.click('.spotw[data-k="B"]' if f else '.spotw.nofault')
-    elif t in('mc','choice','part2','conv','read','photo','hg'):
+    elif t in('mc','choice','part2','conv','read','photo','hg','pic','picw'):
         idx=await p.evaluate("L.ex.options.indexOf(L.ex.answer)")
         await p.click(f'.opt[data-i="{idx}"]')
     elif t in('tiles','tilesRev','listenTiles'):

@@ -907,6 +907,16 @@
      0,
      "Celui qui part dit 안녕히 계세요 (restez en paix) ; à celui qui part, on dit 안녕히 가세요."
     ]
+   ],
+   "pk": [
+    "water",
+    "school",
+    "house",
+    "book",
+    "cat",
+    "dog",
+    "tree",
+    "flower"
    ]
   },
   {
@@ -1019,6 +1029,12 @@
      0,
      "명 compte les personnes, avec les nombres natifs (두)."
     ]
+   ],
+   "pk": [
+    "clock",
+    "calendar",
+    "coin",
+    "money"
    ]
   },
   {
@@ -1149,6 +1165,15 @@
      0,
      "맛있어요 = c'est bon ; 맛없어요 = ce n'est pas bon."
     ]
+   ],
+   "pk": [
+    "coffee",
+    "subway",
+    "money",
+    "sun",
+    "rain",
+    "umbrella",
+    "phone"
    ]
   },
   {
@@ -1290,6 +1315,14 @@
      0,
      "까지 = d'ici, jusqu'à ; -겠습니다 = intention, registre formel. 부터 = à partir de ; 끝냈습니다 est au passé ; 끝내 est familier."
     ]
+   ],
+   "pk": [
+    "computer",
+    "laptop",
+    "calendar",
+    "printer",
+    "letter",
+    "pen"
    ]
   },
   {
@@ -1420,6 +1453,19 @@
      0,
      "내리다 = descendre (d'un véhicule) ; 타다 = monter."
     ]
+   ],
+   "pk": [
+    "subway",
+    "bus",
+    "taxi",
+    "busstop",
+    "tshirt",
+    "trousers",
+    "shoes",
+    "bag",
+    "hat",
+    "card",
+    "receipt"
    ]
   },
   {
@@ -1945,6 +1991,9 @@
      0,
      "Connaître beaucoup de monde."
     ]
+   ],
+   "pk": [
+    "tiger"
    ]
   },
   {

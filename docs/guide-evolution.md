@@ -19,6 +19,7 @@ npm test        # tests rapides ; npm run test:all avant de livrer
    - `v` : vocabulaire `[français, cible]`.
    - `c` : QCM `[question avec ___, options, index de la bonne réponse, explication]`.
    - TOEIC : `l` (Part 2), `ph` (Part 1), `cv` et `rd` (Parts 3, 4 et 7). Voltaire : `dd` (dictées).
+   - `pk` : mots illustrés de l'unité (identifiants de `src/content/pics.json`) pour les exercices en images et le guide.
    - Le détail est dans `src/types.ts` (interface `Unit`).
 3. Viser au moins 8 phrases et 6 mots : les 18 étapes de l'unité sont générées à partir de ces données.
 4. Traduire le titre, la description, l'astuce et les phrases françaises :
@@ -27,6 +28,19 @@ npm test        # tests rapides ; npm run test:all avant de livrer
 5. Lancer `node tests/run.mjs data_integrity` puis `node tests/run.mjs play_lessons fr <cours>`.
 
 Attention : insérer une unité au milieu décale la progression enregistrée des profils existants. Ajouter de préférence à la fin d'un niveau, ou prévoir une migration (`core/progress.js`, fonction `hydrate`, et `UNIT_REMAP`).
+
+## Une image de vocabulaire (v30)
+
+1. Ajouter la ligne `[id, catégorie, français, anglais, coréen, romanisation]` dans `src/content/pics.json` (français avec son article : « la pomme »).
+2. Dessiner l'image dans `src/ui/pics/icons-a.ts` ou `icons-b.ts`, sous la même clé `id` : repère 64 × 64, outils de `kit.ts`, contour automatique.
+3. L'ajouter au champ `pk` des unités concernées.
+4. Vérifier le rendu : `trainPics("<cours>")` dans la console, puis `node tests/run.mjs data_integrity`.
+
+## Une scène de la Part 1 (v30)
+
+- Dans `src/ui/pics/scenes-p1.ts`, ajouter une entrée dont la clé est exactement la phrase correcte de la scène (`ph` de l'unité).
+- Ne dessiner que ce que dit la bonne réponse, pour que les trois autres phrases restent fausses.
+- `data_integrity` signale toute scène sans dessin ni photo.
 
 ## Un nouveau cours
 

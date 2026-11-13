@@ -13,7 +13,8 @@ for(const cid in COURSES){const C=COURSES[cid],lang=C.lang;const seenT=new Set()
   for(let s=0;s<NPU;s++){let L;try{L=buildLesson(cid,u,s)}catch(e){B(id,'étape '+s+' : exception '+e.message);continue}
    if(!L||L.length<4)B(id,'étape '+s+' : '+(L?L.length:0)+' exercices');
    (L||[]).forEach(ex=>{n++;const t=ex.t;
-    if(['mc','choice','part2','conv','read','photo','hg'].includes(t)){
+    if(t==='pic'&&!hasPic(ex.answer))B(id,'pic : image inconnue '+ex.answer);if(t==='photo'&&!ex.img&&!p1Svg(ex.answer))B(id,'photo sans dessin — '+ex.answer);
+    if(['mc','choice','part2','conv','read','photo','hg','pic','picw'].includes(t)){
       if(!ex.options||ex.options.length<2)B(id,t+' : moins de 2 options');
       else{if(!ex.options.includes(ex.answer))B(id,t+' : bonne réponse absente des options — '+ex.answer);
        if(ex.options.some(o=>o==null||String(o).trim()===''))B(id,t+' : option vide');
@@ -35,6 +36,7 @@ for(const cid in COURSES){const C=COURSES[cid],lang=C.lang;const seenT=new Set()
   ['l'].forEach(k=>(U[k]||[]).forEach(x=>{if(!(x[2]>=0&&x[2]<x[1].length))B(id,'Part 2 index invalide');}));
   ['cv','rd'].forEach(k=>(U[k]||[]).forEach(x=>(x.q||[]).forEach(q=>{if(!(q[2]>=0&&q[2]<q[1].length))B(id,k+' index invalide');})));
   (U.ph||[]).forEach(x=>{if(!(x[3]>=0&&x[3]<x[2].length))B(id,'photo index invalide');});
+  (U.pk||[]).forEach(k=>{if(!hasPic(k))B(id,'image de vocabulaire inconnue '+k);});if(new Set(U.pk||[]).size!==(U.pk||[]).length)B(id,'image en double');
  });}
 // histoires
 for(const sec in STORIES)STORIES[sec].forEach(st=>{const id='histoire '+sec+' «'+st.t+'»';if(!st.items||st.items.length<4)B(id,'trop courte');let nq=0;st.items.forEach(it=>{if(it.q!==undefined){nq++;if(!(it.a>=0&&it.a<it.o.length))B(id,'question : index invalide');if(new Set(it.o).size!==it.o.length)B(id,'options en double');}else{if(!it.t)B(id,'réplique vide');if(!st.cast[it.s])B(id,'personnage inconnu '+it.s);}});if(!nq)B(id,'aucune question');});

@@ -35,6 +35,8 @@ export interface Unit {
   c?: Mcq[];
   l?: Part2[];
   ph?: Photo[];
+  /** Mots illustrés (v30) : identifiants de `content/pics.json`, pour « Choisis la bonne image » et le guide. */
+  pk?: string[];
   /** Dictées (Voltaire). */
   dd?: string[];
   /** Conversations et lectures TOEIC (Parts 3, 4, 7). */
