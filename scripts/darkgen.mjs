@@ -17,12 +17,12 @@ const SHADOW = {
   '#9FE6C3': '#1E6B47', '#FFB3BB': '#7A2632', '#1C1838': '#05040A',
 };
 const TEXT = {
-  '#2B2850': '#ECEAF8', '#5B5480': '#B8B3D8', '#5A3D00': '#F5D27A', '#7A5B00': '#F5D27A', '#147A3D': '#5FE3A5', '#B3261E': '#FF8A92',
+  '#2B2850': '#ECEAF8', '#625E86': '#B8B3D8', '#4A4670': '#C9C5E6', '#1D6FD8': '#7FB2FF', '#5B5480': '#B8B3D8', '#5A3D00': '#F5D27A', '#7A5B00': '#F5D27A', '#147A3D': '#5FE3A5', '#B3261E': '#FF8A92',
   '#A9A4C2': '#7E7A9E', '#ADA8C8': '#77739A', '#B3AECB': '#7E7A9E',
 };
 const TSHADOW = { '#FFF': '#000' };
 const RGBA = { 'rgba(246,244,255,.92)': 'rgba(23,20,36,.92)' };
-const VARS = ':root{--bg:#15121F;--card:#211D33;--ink:#ECEAF8;--muted:#9C98BE;--line:#3A3556;--okbg:#163A2A;--badbg:#43202A;--soft:#2B2643;--lockc:#3A3556;color-scheme:dark}';
+const VARS = ':root{--bg:#15121F;--card:#211D33;--ink:#ECEAF8;--muted:#9C98BE;--line:#3A3556;--okbg:#163A2A;--badbg:#43202A;--soft:#2B2643;--lockc:#3A3556;--ink2:#B8B3D8;color-scheme:dark}';
 
 function cat(p) {
   if (p.startsWith('background')) return BG;

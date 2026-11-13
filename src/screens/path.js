@@ -23,6 +23,7 @@ import { openSession } from "../lesson/engine.js";
 import { writeTasks } from "../lesson/writing.js";
 import { AI, startAI } from "../services/ai.js";
 import { beep, say } from "../services/speech.js";
+import { ic } from "../ui/icons.ts";
 import { mascot } from "../ui/mascot.js";
 import { ANDROID, INSTALL, IOS, STANDALONE, haptic } from "../ui/platform.js";
 import { curCid, curSec, renderAll } from "../ui/router.js";
@@ -60,6 +61,48 @@ export function toggleFold(cid, u, force) {
   foldSet(cid, f);
   haptic(1);
 }
+/** Icône d'une étape du parcours (pièce 3D). */
+export function stepKind(n, st) {
+  if (n === NPU - 1) return st === "done" ? "trophy" : "chest";
+  if (st === "lock") return "lock";
+  if (NODE[n] === "ai") return "spark";
+  if (NODE[n] === "w") return "pencil";
+  return ["star", "phones", "doc", "mic"][TIER[n]] || "star";
+}
+/** Nom court d'une étape (bulle et lecteur d'écran). */
+export function stepName(n) {
+  if (n === NPU - 1) return "Bilan de l'unité";
+  if (NODE[n] === "ai") return "Révision IA";
+  if (NODE[n] === "w") return "Rédaction";
+  return "Leçon " + lessonNo(n) + " sur 12";
+}
+let curObs = null;
+/** Bouton flottant « revenir à l'étape conseillée », visible quand elle sort de l'écran. */
+function curFab(v, cid, ns) {
+  if (curObs) curObs.disconnect();
+  curObs = null;
+  if (!ns || typeof IntersectionObserver === "undefined") return;
+  const fab = document.createElement("button");
+  fab.className = "pathfab hidden";
+  fab.setAttribute("aria-label", "Revenir à l'étape conseillée");
+  v.appendChild(fab);
+  fab.onclick = () => {
+    toggleFold(cid, ns.u, false);
+    const el = document.querySelector(`.node[data-u="${ns.u}"][data-n="${ns.n}"]`);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+  const el = v.querySelector(`.node[data-u="${ns.u}"][data-n="${ns.n}"]`);
+  const target = el || v.querySelector(`#unit${ns.u} .ubanner`);
+  if (!target) return;
+  curObs = new IntersectionObserver(es => {
+    const e = es[es.length - 1];
+    if (!fab.isConnected) return curObs && curObs.disconnect();
+    const up = e.boundingClientRect.top < 0;
+    fab.innerHTML = ic("down", 26, up ? "up" : "", 2.8);
+    fab.classList.toggle("hidden", e.isIntersecting);
+  });
+  curObs.observe(target);
+}
 export function renderPath(v) {
   const s = curSec(),
     cid = curCid(),
@@ -86,27 +129,12 @@ export function renderPath(v) {
             ? "open"
             : "lock";
       const off = Math.round(Math.sin(gi * 0.85) * 72);
-      const ic =
-        n === NPU - 1
-          ? st === "done"
-            ? "🏆"
-            : "🎁"
-          : NODE[n] === "ai"
-            ? st === "lock"
-              ? "🔒"
-              : "✨"
-            : NODE[n] === "w"
-              ? st === "lock"
-                ? "🔒"
-                : "✍️"
-              : st === "done"
-                ? "✔"
-                : st === "lock"
-                  ? "🔒"
-                  : ["⭐", "📖", "🎧", "💪"][TIER[n]];
-      nodes += `<div class="nodewrap${st === "cur" || (st === "open" && n === 0) ? " bub" : ""}" style="transform:translateX(${off}px);color:${col}">${st === "cur" ? `<div class="ring"></div><button class="startbub" data-u="${u}" data-n="${n}">${idx === 0 ? "Commencer" : "Go !"}</button>` : st === "open" && n === 0 ? `<button class="startbub soft" data-u="${u}" data-n="${n}">Ouvrir</button>` : ""}${(S.ext[cid] || []).includes(idx) ? '<span class="crown">👑</span>' : ""}<button class="node ${st} ${n === NPU - 1 ? "chest" : ""} ${NODE[n] === "ai" ? "ainode" : NODE[n] === "w" ? "wnode" : ""}" data-u="${u}" data-n="${n}" style="${st === "cur" ? `background:${col};box-shadow:0 7px 0 ${dk}` : st === "open" ? `border-color:${col};color:${col}` : ""}" aria-label="Leçon ${n + 1}">${ic}</button></div>`;
+      const k = stepKind(n, st);
+      const [c, d] = NODE[n] === "ai" ? ["#B07BFF", "#7B4DD6"] : NODE[n] === "w" ? ["#13A8A8", "#0C7F7F"] : [col, dk];
+      const crown = (S.ext[cid] || []).includes(idx);
+      nodes += `<div class="nodewrap${st === "cur" || (st === "open" && n === 0) ? " bub" : ""}" style="transform:translateX(${off}px);--c:${c};--d:${d}">${st === "cur" ? `<div class="ring"></div><button class="startbub" data-u="${u}" data-n="${n}">${idx === 0 ? "Commencer" : "Go !"}</button>` : st === "open" && n === 0 ? `<button class="startbub soft" data-u="${u}" data-n="${n}">Ouvrir</button>` : ""}<button class="node coin ${st} ${n === NPU - 1 ? "chest" : ""} ${NODE[n] === "ai" ? "ainode" : NODE[n] === "w" ? "wnode" : ""}" data-u="${u}" data-n="${n}" aria-label="${stepName(n)} · ${n + 1} / ${NPU}">${st === "done" || st === "cur" ? '<span class="gloss"></span>' : ""}${ic(k, k === "star" ? 38 : 34, "", 2.6)}${crown ? `<span class="crown">${ic("crown", 14, "", 2.2, "currentColor")}</span>` : ""}</button></div>`;
       if (n === 2 || n === 11)
-        nodes += `<div class="pathmascot" style="${u % 2 ? "left" : "right"}:4%;top:120px">${mascot(u % 2 ? "calm" : "happy")}</div>`;
+        nodes += `<div class="pathmascot" style="${(u + (n > 2 ? 1 : 0)) % 2 ? "left" : "right"}:4%;top:${n * 94 + 40}px">${mascot((u + n) % 2 ? "calm" : "happy")}<i class="mshadow"></i></div>`;
     }
     const locked = !unitOpen(cid, u);
     const us = unitSteps(cid, u),
@@ -115,7 +143,7 @@ export function renderPath(v) {
       units += `<div class="pathsec"><span>Section ${U.lv + 1}</span><h3>${secName(cid, U.lv)}</h3><small>${C.units.filter(x => x.lv === U.lv).length} unités</small></div>`;
     const fd = isFolded(cid, u, ns);
     const pc = Math.round((us / NPU) * 100);
-    units += `<section class="unit ${fd ? "folded" : ""}" id="unit${u}"><div class="ubanner" role="button" tabindex="0" aria-expanded="${!fd}" data-fold="${u}" style="background:${locked ? "#8F89AD" : deep(col)}"><div class="ut"><small>Unité ${u + 1} · ${LEVELS[U.lv]}${U.gen ? " · ✨ créée par l'IA" : ""}${uc ? " · ✓ terminée" : us ? ` · ${us}/${NPU} étapes` : U.lv < ((S.place || {})[cid] || 0) ? " · niveau validé au test" : ""}${ns && ns.u === u ? " · 👉 conseillée" : ""}</small><h2>${esc(U.t)}</h2><p>${esc(U.d)}</p><div class="umini"><i style="width:${pc}%"></i></div></div><div class="ubtns"><span class="ufold" aria-hidden="true">⌄</span>${locked && !U.hg && u === C.units.findIndex(x => !x.hg) ? `<button class="guide" data-j="${u}">⏩ Tester mon hangul</button>` : ""}<button class="guide" data-g="${u}">📖 Guide</button></div></div><div class="nodes">${nodes}</div></section>`;
+    units += `<section class="unit ${fd ? "folded" : ""}" id="unit${u}"><div class="ubanner" role="button" tabindex="0" aria-expanded="${!fd}" data-fold="${u}" style="--c:${locked ? "#8F89AD" : deep(col)};--d:${locked ? "#6E6890" : dk}"><div class="ut"><small>Unité ${u + 1} · ${LEVELS[U.lv]}${U.gen ? " · ✨ créée par l'IA" : ""}${uc ? " · ✓ terminée" : us ? ` · ${us}/${NPU} étapes` : U.lv < ((S.place || {})[cid] || 0) ? " · niveau validé au test" : ""}${ns && ns.u === u ? " · 👉 conseillée" : ""}</small><h2>${esc(U.t)}</h2><p>${esc(U.d)}</p><div class="umini"><i style="width:${pc}%"></i></div></div><div class="ubtns"><span class="ufold" aria-hidden="true">${ic("chev", 24, "", 3)}</span>${locked && !U.hg && u === C.units.findIndex(x => !x.hg) ? `<button class="guide" data-j="${u}">⏩ Tester mon hangul</button>` : ""}<button class="guide" data-g="${u}" aria-label="Guide de l'unité">${ic("guide", 26, "", 2.4)}<span>Guide</span></button></div></div><div class="nodes">${nodes}</div></section>`;
   });
   const nGen = (S.genU[cid] || []).length;
   const lastDone = unitSteps(cid, C.units.length - 1) > 0 || C.units.every((U, u) => unitComplete(cid, u));
@@ -219,6 +247,7 @@ export function renderPath(v) {
       if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
     };
   v.querySelectorAll("[data-g]").forEach(b => (b.onclick = () => guide(cid, +b.dataset.g)));
+  curFab(v, cid, ns);
 }
 export function nodeSheet(cid, u, n, force) {
   const C = COURSES[cid],
@@ -259,9 +288,13 @@ export function nodeSheet(cid, u, n, force) {
     return;
   }
   const done = isDone(cid, u, n) ? Infinity : -1;
+  const pc = UCOLORS[u % 6],
+    pd = UDARK[u % 6];
+  const head = `<div class="npk"><span>${stepName(n)}</span> · <span>Étape ${n + 1} sur ${NPU}</span></div><h2>${esc(U.t)}</h2>`;
   if (NODE[n] === "w") {
     const m = modal(
-      `<div class="mcenter">${mascot("calm", "jump")}<h2>✍️ Rédaction</h2><p><b style="color:var(--ink)">${esc(U.t)}</b><br>Écris de vrais textes avec ce que tu as appris. ${AI.mode === "local" ? "Sans IA, tu compares avec un modèle et une liste de vérification." : "L'IA corrige ton texte, explique chaque faute et l'ajoute à tes statistiques."}</p><button class="btn big" id="go">${idx < done ? "Nouvelle rédaction (+XP)" : "Commencer"}</button></div>`,
+      `<div class="mcenter npc">${head}<p>Écris de vrais textes avec ce que tu as appris. ${AI.mode === "local" ? "Sans IA, tu compares avec un modèle et une liste de vérification." : "L'IA corrige ton texte, explique chaque faute et l'ajoute à tes statistiques."}</p><button class="btn big" id="go">${idx < done ? "Nouvelle rédaction (+XP)" : "Commencer"}</button></div>`,
+      "npop",
     );
     m.querySelector("#go").onclick = () => {
       closeModal();
@@ -279,11 +312,13 @@ export function nodeSheet(cid, u, n, force) {
         exs: writeTasks(cid, u, 1).map(e => Object.assign(e, { min: Math.round((e.min || 10) * 1.5), strict: true })),
       }),
     );
+    placePop(m, u, n, "#13A8A8", "#0C7F7F");
     return;
   }
   if (NODE[n] === "ai") {
     const m = modal(
-      `<div class="mcenter">${mascot("wow", "dance")}<h2>✨ Révision IA</h2><p><b style="color:var(--ink)">${esc(U.t)}</b><br>Des exercices inédits, générés à chaque fois, pour consolider cette unité et les deux précédentes. Jamais deux fois les mêmes !</p><button class="btn big" id="go">${idx < done ? "Nouvelle révision (+XP)" : "Commencer"}</button></div>`,
+      `<div class="mcenter npc">${head}<p>Des exercices inédits, générés à chaque fois, pour consolider cette unité et les deux précédentes. Jamais deux fois les mêmes !</p><button class="btn big" id="go">${idx < done ? "Nouvelle révision (+XP)" : "Commencer"}</button></div>`,
+      "npop",
     );
     m.querySelector("#go").onclick = () => {
       closeModal();
@@ -292,11 +327,13 @@ export function nodeSheet(cid, u, n, force) {
     extBtn(m, cid, u, n, idx, done, () =>
       startAI(cid, C.units.slice(Math.max(0, u - 2), u + 1), { mode: "lesson", u, n, ext: true, jh: 3, noRetry: true }),
     );
+    placePop(m, u, n, "#9B6BFF", "#7B4DD6");
     return;
   }
   const isCk = n === NPU - 1;
   const m = modal(
-    `<div class="mcenter">${mascot(isCk ? "wow" : "happy", "jump")}<h2>${isCk ? "🎁 Bilan de l'unité" : "Leçon " + lessonNo(n) + " sur 12"}</h2><p><b style="color:var(--ink)">${esc(U.t)}</b> · ${LEVELS[U.lv]}<br>${isCk ? "Un test plus long et plus difficile. Réussis-le pour ouvrir le coffre (+20 💎)." : ["Découverte en douceur", "On ajoute l'écoute", "On passe à l'écrit", "Mode difficile : tout à l'écrit et à l'oral"][TIER[n]]}</p><button class="btn big" id="go">${idx < done ? "Revoir (+XP)" : "Commencer"}</button></div>`,
+    `<div class="mcenter npc">${head}<p><span>${LEVELS[U.lv]}</span> · <span>${isCk ? "Un test plus long et plus difficile. Réussis-le pour ouvrir le coffre (+20 💎)." : ["Découverte en douceur", "On ajoute l'écoute", "On passe à l'écrit", "Mode difficile : tout à l'écrit et à l'oral"][TIER[n]]}</span></p><button class="btn big" id="go">${idx < done ? "Revoir (+XP)" : "Commencer"}</button></div>`,
+    isCk ? "npop chestpop" : "npop",
   );
   m.querySelector("#go").onclick = () => {
     closeModal();
@@ -305,6 +342,47 @@ export function nodeSheet(cid, u, n, force) {
   extBtn(m, cid, u, n, idx, done, () =>
     openSession({ mode: "lesson", cid, u, n, ext: true, jh: 3, noRetry: true, exs: buildLesson(cid, u, n, true) }),
   );
+  placePop(m, u, n, isCk ? "#FFB020" : pc, isCk ? "#C98B4A" : pd);
+}
+/** Place la fiche d'étape en bulle sous la pièce touchée (comme la maquette), sinon elle reste en panneau. */
+export function placePop(m, u, n, col, dk) {
+  m.style.setProperty("--c", deep(col));
+  m.style.setProperty("--d", dk);
+  const el = document.querySelector(`#view .node[data-u="${u}"][data-n="${n}"]`);
+  if (!el) return;
+  let r = el.getBoundingClientRect();
+  if (!r.width || r.bottom < 0 || r.top > innerHeight) return;
+  m.classList.add("at");
+  const nav = document.querySelector("#bottomnav");
+  const nr = nav ? nav.getBoundingClientRect() : null;
+  const bottom = nr && nr.top > innerHeight / 2 ? nr.top - 10 : innerHeight - 10;
+  const top0 = (document.querySelector("#topbar") || { offsetHeight: 60 }).offsetHeight + 10;
+  const h = m.offsetHeight;
+  let need = r.bottom + 18 + h - bottom;
+  if (need > 0) {
+    need = Math.min(need, Math.max(0, r.top - top0));
+    window.scrollBy(0, need);
+    r = el.getBoundingClientRect();
+  }
+  if (r.bottom + 18 + h > bottom + 4) {
+    m.classList.remove("at");
+    return;
+  }
+  const w = m.offsetWidth;
+  const cx = r.left + r.width / 2;
+  const left = Math.max(8, Math.min(innerWidth - w - 8, cx - w / 2));
+  m.style.top = Math.round(r.bottom + 18) + "px";
+  m.style.left = Math.round(left) + "px";
+  m.style.setProperty("--cx", Math.round(cx - left - 10) + "px");
+  const y0 = scrollY;
+  const off = () => {
+    if (!m.isConnected) return removeEventListener("scroll", off);
+    if (Math.abs(scrollY - y0) > 60) {
+      removeEventListener("scroll", off);
+      closeModal();
+    }
+  };
+  setTimeout(() => addEventListener("scroll", off, { passive: true }), 120);
 }
 export function extBtn(m, cid, u, n, idx, done, start) {
   const got = (S.ext[cid] || []).includes(idx);
@@ -312,7 +390,7 @@ export function extBtn(m, cid, u, n, idx, done, start) {
   const base = isDone(cid, u, n);
   card.insertAdjacentHTML(
     "beforeend",
-    `<div class="extbox"><button class="btn extb" id="extgo">🔥 Version extrême${got ? " · 👑 réussie" : ""}</button><small>Tout à l'écrit et à l'oral, plus de pièges, audio seul, 3 erreurs maximum. XP ×2 et une couronne 👑 sur l'étape.${base ? "" : "<br>💡 Conseil : fais d'abord la version de base de cette étape."}</small></div>`,
+    `<div class="extbox"><button class="btn extb" id="extgo"><span>Version extrême · XP ×2</span>${got ? ` <span class="crown">${ic("crown", 14, "", 2.2, "currentColor")}</span>` : ""}</button><small>Tout à l'écrit et à l'oral, plus de pièges, audio seul, 3 erreurs maximum. XP ×2 et une couronne 👑 sur l'étape.${base ? "" : "<br>💡 Conseil : fais d'abord la version de base de cette étape."}</small></div>`,
   );
   m.querySelector("#extgo").onclick = () => {
     closeModal();

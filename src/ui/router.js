@@ -1,9 +1,11 @@
 // Navigation par hash et rendu des écrans
 import { COURSES, SECTIONS } from "../content/index.js";
 import { ACC, S, curAcc, save } from "../core/accounts.js";
-import { doneCount } from "../core/progress.js";
-import { $, NPU, dkey, esc } from "../core/util.js";
-import { regen } from "../core/xp.js";
+import { nextStep, unitComplete } from "../core/progress.js";
+import { todayXp } from "../core/xp.js";
+import { placeIntro } from "../features/placement.js";
+import { $, dkey, esc } from "../core/util.js";
+import { COURSE_IC, flagSvg, ic } from "./icons.ts";
 import { bankDue } from "../features/word-bank.js";
 import { dueCount } from "../lesson/engine.js";
 import { renderLeague } from "../screens/league.js";
@@ -37,7 +39,6 @@ export function updateBadge() {
   } catch (e) {}
 }
 export function renderAll() {
-  regen();
   renderTop();
   updateBadge();
   document
@@ -64,19 +65,39 @@ export function avatar(a, size = 34) {
     ? `<span class="avatar" style="background:${safeColor(a.color)};width:${size}px;height:${size}px;font-size:${Math.round(size * 0.58)}px">${safeEmoji(a.emoji)}</span>`
     : "";
 }
+/** Unités terminées / total d'une section (toutes ses formations). */
+export function secUnits(sec) {
+  let d = 0,
+    t = 0;
+  for (const c of sec.tracks) {
+    const C = COURSES[c];
+    if (!C) continue;
+    t += C.units.length;
+    C.units.forEach((u, i) => {
+      if (unitComplete(c, i)) d++;
+    });
+  }
+  return { d, t };
+}
 export function renderTop() {
   const s = curSec();
   $("#accBtn").innerHTML = avatar(curAcc());
-  $("#secBtn").innerHTML =
-    `<span style="font-size:20px">${s.flag}</span><span>${s.name}</span><span style="color:var(--muted)">▾</span>`;
+  const tb = $("#topbar");
+  if (tb) document.documentElement.style.setProperty("--toph", tb.offsetHeight + "px");
+  const { d } = secUnits(s);
+  const b = $("#secBtn");
+  b.innerHTML = `${flagSvg(s.id, 34, 23, 6)}<span class="tnum">${d}</span>`;
+  b.title = s.name;
   const st = $("#stats");
   const streakToday = S.lastDay === dkey();
-  const inf = S.infUntil > Date.now();
-  st.innerHTML = `<button class="stat streak ${streakToday ? "" : "off"}" id="tStreak" title="Série">🔥 ${S.streak}</button><button class="stat gem" id="tGem" title="Gemmes">💎 ${S.gems}</button>`;
+  const tx = todayXp(),
+    goal = S.goal || 20;
+  st.innerHTML = `<button class="stat streak ${streakToday ? "" : "off"}" id="tStreak" title="Série">${ic("flame", 24, "", 2.4, "currentColor")}<span>${S.streak}</span></button><button class="stat gem" id="tGem" title="Gemmes">${ic("gem", 24, "", 2.2, "currentColor")}<span>${S.gems}</span></button><button class="stat xpg ${tx >= goal ? "met" : ""}" id="tXp" title="Objectif du jour">${ic("bolt", 24, "", 2.2, "currentColor")}<span>${tx}</span></button>`;
   $("#tGem").onclick = () => {
     location.hash = "boutique";
   };
-  $("#tStreak").onclick = streakInfo;
+  $("#tStreak").onclick = () => streakInfo();
+  $("#tXp").onclick = () => streakInfo("goal");
 }
 export function streakInfo() {
   const ds = [];
@@ -94,40 +115,67 @@ export function streakInfo() {
     if (S.freeze < 2) location.hash = "boutique";
   };
 }
-export function heartInfo() {
-  regen();
-  const inf = S.infUntil > Date.now();
-  const next = S.hearts >= 5 ? 0 : Math.max(0, Math.ceil((S.hTs + 1200000 - Date.now()) / 60000));
-  const m = modal(
-    `<div class="mcenter"><div style="font-size:60px">❤️</div><h2>${inf ? "Cœurs illimités" : S.hearts + " / 5 cœurs"}</h2><p>${inf ? `Encore ${Math.ceil((S.infUntil - Date.now()) / 60000)} min de cœurs illimités.` : S.hearts >= 5 ? "Tu as tous tes cœurs. Tu perds un cœur à chaque erreur dans le parcours." : `Prochain cœur dans ${next} min. Chaque séance d'entraînement rend aussi 1 ❤️.`}</p>${!inf && S.hearts < 5 ? `<button class="btn goldb" id="hr" ${S.gems < 30 ? "disabled" : ""}>Recharger · 30 💎</button>` : ""}<button class="btn ghost" onclick="closeModal()">Fermer</button></div>`,
-  );
-  const hr = m.querySelector("#hr");
-  if (hr)
-    hr.onclick = () => {
-      S.gems -= 30;
-      S.hearts = 5;
+/** Menu déroulant du choix de langue (façon maquette « Choix de la langue »). */
+export function sectionPicker() {
+  const draw = () => {
+    const s = SECTIONS.find(x => x.id === pick) || curSec();
+    const { d, t } = secUnits(s);
+    const pct = t ? Math.round((d / t) * 100) : 0;
+    const cur = s.tracks.includes(S.track[s.id]) ? S.track[s.id] : s.tracks[0];
+    const ns = nextStep(cur);
+    const nu = ns ? COURSES[cur].units[ns.u] : null;
+    const tiles = SECTIONS.map(
+      x =>
+        `<button data-s="${x.id}" class="ldflag ${x.id === pick ? "sel" : ""}" aria-pressed="${x.id === pick}"><span class="ldfr">${flagSvg(x.id, 92, 62, 13)}</span><span class="ldn">${esc(x.name)}</span></button>`,
+    ).join("");
+    const tracks = s.tracks
+      .map(c => {
+        const [k, col, dk] = COURSE_IC[c] || ["book", "#7C4DFF", "#5A30D8"];
+        const on = c === curCid();
+        return `<button data-t="${c}" class="ldtr"><span class="ldti" style="background:${col};box-shadow:0 5px 0 ${dk}">${ic(k, 36, "", 2.6)}</span>${on ? `<span class="ldcur">En cours</span>` : ""}<span class="ldtn">${esc(COURSES[c].name)}</span></button>`;
+      })
+      .join("");
+    m.innerHTML = `<div class="ldflags">${tiles}</div>
+<div class="ldcard"><div class="ldprog"><b>${d}</b><span class="ldbar"><i style="width:${pct}%"></i></span><b>${t}</b></div>
+<div class="ldtxt"><span>Unités terminées :</span> <span>${d} / ${t}</span></div>
+${nu ? `<div class="ldnext"><span>Prochaine :</span> <span>${esc(nu.t || "")}</span></div>` : ""}
+<button class="ldlink" id="ldPlace">Test de niveau</button></div>
+<h2 class="ldh">Cours de cette langue</h2><div class="ldtracks">${tracks}</div>`;
+    m.querySelectorAll("[data-s]").forEach(
+      b =>
+        (b.onclick = () => {
+          pick = b.dataset.s;
+          S.sec = pick;
+          save();
+          renderAll();
+          draw();
+        }),
+    );
+    m.querySelectorAll("[data-t]").forEach(
+      b =>
+        (b.onclick = () => {
+          S.sec = s.id;
+          S.track[s.id] = b.dataset.t;
+          save();
+          closeModal();
+          location.hash = "parcours";
+          renderAll();
+        }),
+    );
+    m.querySelector("#ldPlace").onclick = () => {
+      S.sec = s.id;
       save();
       closeModal();
-      renderTop();
-      toast("❤️ Cœurs rechargés !");
+      renderAll();
+      placeIntro(s.tracks.includes(S.track[s.id]) ? S.track[s.id] : s.tracks[0]);
     };
-}
-export function sectionPicker() {
-  const html = `<h2>Que veux-tu travailler ?</h2><p>Chaque section a son propre parcours et ses entraînements.</p><div class="choices">${SECTIONS.map(
-    s => {
-      const tot = s.tracks.reduce((a, c) => a + COURSES[c].units.length * NPU, 0),
-        dn = s.tracks.reduce((a, c) => a + doneCount(c), 0);
-      return `<button data-s="${s.id}" class="${s.id === S.sec ? "sel" : ""}"><span class="e">${s.flag}</span><span>${s.name}<small>${s.id === "en" ? "Quotidien · Rédaction pro · TOEIC" : s.id === "fr" ? "Orthographe & grammaire (type Projet Voltaire)" : "Du débutant aux pièges de 맞춤법"} — ${Math.round((dn / tot) * 100)} %</small></span></button>`;
-    },
-  ).join("")}</div>`;
-  const m = modal(html);
-  m.querySelectorAll("[data-s]").forEach(
-    b =>
-      (b.onclick = () => {
-        S.sec = b.dataset.s;
-        save();
-        closeModal();
-        renderAll();
-      }),
-  );
+  };
+  let pick = curSec().id;
+  const m = modal("", "langdrop");
+  draw();
+  const b = $("#secBtn");
+  if (b) {
+    const r = b.getBoundingClientRect();
+    m.style.top = Math.round(r.bottom + 8) + "px";
+  }
 }

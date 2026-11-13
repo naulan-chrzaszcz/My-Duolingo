@@ -3,7 +3,7 @@ import { COURSES } from "../content/index.js";
 import { S, save } from "../core/accounts.js";
 import { FULL, hgIdx, isDone, setDone, syncProg } from "../core/progress.js";
 import { $, NPU, PRAISE, dkey, esc, rnd, shuffle, yest } from "../core/util.js";
-import { addToday, level, regen, todayXp } from "../core/xp.js";
+import { addToday, level, todayXp } from "../core/xp.js";
 import { distract } from "../exercises/generate.js";
 import { drillLabel, drillRecord } from "../exercises/drills.js";
 import { R } from "../exercises/render.js";
@@ -43,7 +43,6 @@ export function wakeOff() {
   WAKE = null;
 }
 export function openSession(cfg) {
-  regen();
   wakeOn();
   if (!cfg.exs || !cfg.exs.length) {
     toast("Pas encore assez de contenu débloqué ici.");
@@ -549,31 +548,6 @@ export function jumpFail() {
   modal(
     `<div class="mcenter">${mascot("sad", "sad")}<h2>Pas cette fois !</h2><p>${ext ? "3 erreurs : la version extrême t'a eue cette fois. Refais la version de base puis retente ta chance 🔥" : `Trop d'erreurs pour sauter à l'unité ${u + 1}. Continue le parcours normalement, tu y arriveras vite 💪`}</p><button class="btn" onclick="closeModal()">D'accord</button></div>`,
   );
-}
-export function noHearts(inLesson) {
-  const m = modal(
-    `<div class="mcenter">${mascot("sad", "sad")}<h2>Plus de cœurs 💔</h2><p>Un cœur revient toutes les 20 minutes. Tu peux aussi recharger avec des gemmes, ou t'entraîner : chaque séance d'entraînement rend 1 ❤️.</p><button class="btn goldb" id="h1" ${S.gems < 30 ? "disabled" : ""}>Recharger · 30 💎</button><button class="btn" id="h2">S'entraîner</button><button class="btn ghost" id="h3">${inLesson ? "Quitter la leçon" : "Plus tard"}</button></div>`,
-  );
-  m.querySelector("#h1").onclick = () => {
-    S.gems -= 30;
-    S.hearts = 5;
-    save();
-    closeModal();
-    renderTop();
-    if (inLesson && L) {
-      updHead();
-      nextEx();
-    }
-  };
-  m.querySelector("#h2").onclick = () => {
-    closeModal();
-    if (L) closeLesson();
-    location.hash = "entrainement";
-  };
-  m.querySelector("#h3").onclick = () => {
-    closeModal();
-    if (L) closeLesson();
-  };
 }
 export function finish() {
   if (!L) return;

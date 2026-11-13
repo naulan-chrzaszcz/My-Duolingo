@@ -10,8 +10,7 @@ import { confetti, toast } from "../ui/ui.js";
 // ---------- Boutique ----------
 export function renderShop(v) {
   const now = Date.now();
-  const boost = S.boostUntil > now,
-    inf = S.infUntil > now;
+  const boost = S.boostUntil > now;
   const items = [
     {
       id: "freeze",
@@ -80,24 +79,16 @@ export function mascotWith(k) {
   return h;
 }
 export function buy(id) {
-  const P = { freeze: 50, refill: 30, boost: 40, inf: 80 }[id];
+  const P = { freeze: 50, boost: 40 }[id];
   if (S.gems < P) return;
   S.gems -= P;
   if (id === "freeze") {
     S.freeze = Math.min(2, S.freeze + 1);
     toast("❄️ Gel de série équipé !");
   }
-  if (id === "refill") {
-    S.hearts = 5;
-    toast("❤️ Cœurs rechargés !");
-  }
   if (id === "boost") {
     S.boostUntil = Date.now() + 15 * 60000;
     toast("⚡ Double XP activé pour 15 min !");
-  }
-  if (id === "inf") {
-    S.infUntil = Date.now() + 60 * 60000;
-    toast("♾️ Cœurs illimités pendant 1 h !");
   }
   beep("win");
   save();
