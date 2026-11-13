@@ -20,6 +20,7 @@ import {
 } from "../services/speech.js";
 import { mascot } from "../ui/mascot.js";
 import { ANDROID, IOS, STANDALONE } from "../ui/platform.js";
+import { flyFrom } from "../ui/ui.js";
 
 // ===================== TYPES D'EXERCICES =====================
 export const R = {};
@@ -84,9 +85,12 @@ R.tiles = (ex, b) => {
       t =>
         (t.onclick = () => {
           if (L.state !== "answer") return;
+          const from = t.getBoundingClientRect(),
+            i = sel[+t.dataset.k];
           sel.splice(+t.dataset.k, 1);
           beep("tap");
           draw();
+          flyFrom(from, bank.querySelector(`.tile[data-i="${i}"]`));
         }),
     );
     setReady(sel.length > 0);
@@ -97,10 +101,12 @@ R.tiles = (ex, b) => {
         if (L.state !== "answer") return;
         const i = +t.dataset.i;
         if (sel.includes(i)) return;
+        const from = t.getBoundingClientRect();
         sel.push(i);
         beep("tap");
         if (!rev) say(ex.tiles[i], ex.ansLang || ex.lang);
         draw();
+        flyFrom(from, ans.lastElementChild);
       }),
   );
   return {
@@ -205,6 +211,78 @@ R.choice = (ex, b) => {
       const bl = b.querySelector("#blk");
       if (bl) bl.textContent = ex.answer;
       return { ok, sol: cleanSpeak(full) || full, exp: ex.e, speak: full, lang: ex.lang };
+    },
+  };
+};
+// Notions de grammaire : écrire le mot ou la forme qui manque (indice : le verbe à l'infinitif…)
+R.fill = (ex, b) => {
+  const fr = ex.lang.startsWith("fr"),
+    ko = ex.lang.startsWith("ko");
+  const qh = esc(ex.q).replace("___", '<span class="blank" id="blk">_____</span>');
+  b.innerHTML = `<h2 class="ltitle">Écris le mot qui manque</h2><div class="qcard">${qh}</div>${ex.hint ? `<p class="fhint">Indice : <b lang="${ex.lang}">${esc(ex.hint)}</b></p>` : ""}<input class="finput fillin" id="tin" lang="${ex.lang}" enterkeyhint="done" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="${ko ? "한국어로 입력하세요" : fr ? "Écris en français…" : "Type in English…"}">${fr ? `<div class="charbar">${FR_CHARS.map(c => `<button data-ch="${c}">${c}</button>`).join("")}</div>` : ""}`;
+  const tin = b.querySelector("#tin"),
+    blk = b.querySelector("#blk");
+  const upd = () => {
+    const v = tin.value.trim();
+    if (blk) {
+      blk.textContent = v || "_____";
+      blk.classList.toggle("typed", !!v);
+    }
+    setReady(!!v);
+  };
+  tin.oninput = upd;
+  tin.onkeydown = e => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      e.stopPropagation();
+      if (L.state === "answer" && tin.value.trim()) check();
+    }
+  };
+  b.querySelectorAll("[data-ch]").forEach(
+    x =>
+      (x.onclick = () => {
+        const s = tin.selectionStart ?? tin.value.length,
+          en = tin.selectionEnd ?? tin.value.length;
+        tin.value = tin.value.slice(0, s) + x.dataset.ch + tin.value.slice(en);
+        tin.focus();
+        tin.selectionStart = tin.selectionEnd = s + 1;
+        upd();
+      }),
+  );
+  setTimeout(() => {
+    try {
+      tin.focus({ preventScroll: true });
+    } catch (e) {}
+  }, 60);
+  return {
+    grade: give => {
+      tin.disabled = true;
+      const v = tin.value;
+      const al = ex.alts && ex.alts.length ? ex.alts : [ex.answer];
+      const nv = norm(v, ex.lang);
+      let ok = !give && !!nv && al.some(a => norm(a, ex.lang) === nv),
+        typo = false;
+      if (!ok && !give && fr && nv) {
+        // accents oubliés : accepté, avec un avertissement (comme les traductions du cours « Learn French »)
+        const da = x => x.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        if (al.some(a => da(norm(a, ex.lang)) === da(nv))) ok = typo = true;
+      }
+      const full = ex.q.replace("___", ex.answer);
+      if (blk) {
+        blk.textContent = ex.answer;
+        blk.classList.add(ok ? "good" : "bad");
+      }
+      return {
+        ok,
+        typo,
+        given: v,
+        sol: full,
+        solHtml:
+          ok && !typo ? "" : `<b>${esc(ex.answer)}</b><div class="rom" style="font-style:normal">${esc(full)}</div>`,
+        exp: ex.e,
+        speak: full,
+        lang: ex.lang,
+      };
     },
   };
 };
@@ -490,9 +568,11 @@ R.build = (ex, b) => {
         if (L.state !== "answer") return;
         const i = +t.dataset.i;
         if (sel.includes(i) || sel.length >= 3) return;
+        const from = t.getBoundingClientRect();
         sel.push(i);
         beep("tap");
         draw();
+        flyFrom(from, ans.lastElementChild);
       }),
   );
   return {
@@ -662,6 +742,7 @@ R.match = (ex, b) => {
             a.classList.add("ok");
             c.classList.add("ok");
             done++;
+            beep("match", done * 2);
             if (done === ex.pairs.length) setTimeout(() => check(false), 380);
           } else {
             miss++;

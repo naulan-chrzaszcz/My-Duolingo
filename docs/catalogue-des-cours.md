@@ -157,3 +157,13 @@ Généré automatiquement à partir des données de l'application. Chaque unité
 | 18 | Hypotheses & the conditional | 3 | si + imparfait → conditionnel, regrets, advice | 6 | 8 |
 | 19 | Job interview | 3 | Present your experience, strengths, questions to ask | 7 | 8 |
 | 20 | News, culture & complex sentences | 3 | dont, où, ce qui / ce que, passive voice, connectors | 6 | 8 |
+
+## Notions de grammaire (v27) — phrases générées
+
+Carte « 🧩 Notions de grammaire » de l'onglet Entraînement (anglais, Learn French, coréen) : 4 notions, chacune découpée en règles avec mémo et taux de réussite. Les mêmes règles alimentent environ la moitié des QCM des leçons des unités indiquées dans `units`.
+
+| Langue | Temps | Liaison | Modaux | Prépositions / particules |
+| --- | --- | --- | --- | --- |
+| Anglais (`en.json`) | présent simple / -ing, prétérit / present perfect, récit au passé, futur, conditionnels | opposition, cause et but, temps et ajout | obligation, conseil et permission, déduction, capacité | at / in / on, for / since / during…, lieu, verbe + préposition |
+| Learn French (`fr.json`) | passé composé avoir / être, imparfait / passé composé, futur, conditionnel | mais / bien que / malgré, parce que / à cause de / donc, avant de / après / pendant | pouvoir, devoir, vouloir, savoir, il faut | à / en / au / aux, depuis / pendant / il y a / dans, au / du / des |
+| Coréen (`ko.json`) | -았/었어요, -(으)ㄹ 거예요, -고 있어요 | -고 / -지만, -아서 / -(으)니까, -(으)면 / -는데 | -아야 해요 / -아도 돼요 / -(으)면 안 돼요, -(으)ㄹ 수 있어요 / -고 싶어요, -(으)ㄹ 것 같아요 | 에 / 에서, 에게 / (으)로, 에 / 부터 / 까지 / 동안 |

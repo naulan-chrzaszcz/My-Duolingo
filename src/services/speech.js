@@ -4,46 +4,52 @@ import { BASE_LANG } from "../i18n/locale.js";
 import { ANDROID, IOS, STANDALONE, haptic } from "../ui/platform.js";
 import { toast } from "../ui/ui.js";
 
-export function beep(type) {
-  haptic(type === "bad" ? 2 : type === "tap" ? 1 : type === "ok" || type === "combo" || type === "win" ? 1 : 0);
+// Contexte audio des effets sonores (créé au premier son, pendant un geste de l'utilisateur, comme l'exige iOS)
+let AC = null;
+// Petits sons synthétisés : « lvl » monte la note (série de bonnes réponses, paires trouvées…)
+export function beep(type, lvl = 0) {
+  haptic(type);
   if (!S.set.sound) return;
   try {
     AC = AC || new (window.AudioContext || window.webkitAudioContext)();
-    const seq = {
-      ok: [
-        [660, 0],
-        [990, 0.09],
-      ],
-      bad: [
-        [260, 0],
-        [190, 0.13],
-      ],
-      tap: [[540, 0]],
-      win: [
-        [523, 0],
-        [659, 0.12],
-        [784, 0.24],
-        [1047, 0.36],
-      ],
-      combo: [
-        [784, 0],
-        [988, 0.07],
-        [1319, 0.14],
-      ],
-    }[type];
-    const t0 = AC.currentTime;
-    seq.forEach(([f, dt]) => {
+    if (AC.state === "suspended") AC.resume();
+    const t0 = AC.currentTime + 0.01;
+    const up = Math.pow(2, Math.min(Math.max(0, lvl), 12) / 12);
+    // une note : fréquence, départ, durée, volume, forme d'onde
+    const note = (f, dt, dur, vol, wave = "triangle") => {
       const o = AC.createOscillator(),
         g = AC.createGain();
-      o.type = type === "bad" ? "square" : "triangle";
-      o.frequency.value = f;
+      o.type = wave;
+      o.frequency.setValueAtTime(f, t0 + dt);
       g.gain.setValueAtTime(0.0001, t0 + dt);
-      g.gain.exponentialRampToValueAtTime(type === "bad" ? 0.05 : type === "tap" ? 0.05 : 0.13, t0 + dt + 0.02);
-      g.gain.exponentialRampToValueAtTime(0.0001, t0 + dt + (type === "tap" ? 0.06 : 0.2));
+      g.gain.exponentialRampToValueAtTime(vol, t0 + dt + 0.015);
+      g.gain.exponentialRampToValueAtTime(0.0001, t0 + dt + dur);
       o.connect(g).connect(AC.destination);
       o.start(t0 + dt);
-      o.stop(t0 + dt + 0.22);
-    });
+      o.stop(t0 + dt + dur + 0.03);
+      return o;
+    };
+    if (type === "tap" || type === "select") note(560, 0, 0.06, 0.045);
+    else if (type === "ok") {
+      // « ding-ding » clair, un peu plus aigu à chaque bonne réponse d'affilée
+      const k = Math.pow(2, Math.min(lvl, 7) / 12);
+      note(784 * k, 0, 0.16, 0.11);
+      note(1175 * k, 0.085, 0.24, 0.11);
+      note(2350 * k, 0.085, 0.18, 0.025, "sine");
+    } else if (type === "combo") {
+      [784, 988, 1319, 1568].forEach((f, i) => note(f * up, i * 0.06, 0.2, 0.1));
+      note(3136 * up, 0.24, 0.25, 0.02, "sine");
+    } else if (type === "bad") {
+      // « bwoum » grave et doux (plus de son carré agressif)
+      const o = note(240, 0, 0.32, 0.09, "sine");
+      o.frequency.exponentialRampToValueAtTime(140, t0 + 0.3);
+      note(180, 0.11, 0.24, 0.05);
+    } else if (type === "match") note(880 * up, 0, 0.14, 0.08);
+    else if (type === "win") {
+      [523, 659, 784, 1047].forEach((f, i) => note(f, i * 0.12, 0.22, 0.12));
+      [523, 659, 784].forEach(f => note(f * 2, 0.5, 0.6, 0.05, "sine"));
+    } else if (type === "pop") note(1320 * up, 0, 0.08, 0.05, "sine");
+    else note(600, 0, 0.08, 0.05);
   } catch (e) {}
 }
 export let VOICES = [];

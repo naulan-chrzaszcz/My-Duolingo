@@ -29,7 +29,7 @@ export function bankView() {
       ? '<span class="due">à revoir</span>'
       : `<span class="later">dans ${Math.max(1, Math.round((w.due - now) / 864e5))} j</span>`;
   const m =
-    modal(`<h2>📌 Mes mots à retenir ${s.flag}</h2><p>Ajoute un mot ou une expression vu aujourd'hui. Tu t'entraînes dessus tout de suite, puis il revient après 1, 3, 7, 14 et 30 jours tant que tu ne le maîtrises pas.</p>
+    modal(`<h2>📌 Mes mots à retenir ${s.flag}</h2><div class="bankbar"><button class="btn goldb" id="btrain" ${list.length ? "" : "disabled"}>S'entraîner · ${bankDue(s.id) || list.length} mot(s)</button></div><p>Ajoute un mot ou une expression vu aujourd'hui. Tu t'entraînes dessus tout de suite, puis il revient après 1, 3, 7, 14 et 30 jours tant que tu ne le maîtrises pas.</p>
   <div class="bankadd"><input class="finput" id="bw" maxlength="60" placeholder="${s.id === "ko" ? "Ex. : 감사합니다" : s.id === "fr" ? "Ex. : quoique" : "Ex. : to look forward to"}" lang="${lang}"><input class="finput" id="bt" maxlength="80" placeholder="${s.id === "fr" ? "Définition (facultatif)" : "Traduction (facultatif)"}"><button class="btn" id="badd">Ajouter</button></div>
   <p class="micnote" style="text-align:left;margin:6px 0 0">${AI.mode === "local" ? "Sans IA configurée, pense à écrire la traduction." : "Laisse la traduction vide : l'IA la complète avec un exemple."}</p>
   <div class="vlist" id="blist">${
@@ -44,7 +44,7 @@ export function bankView() {
           .join("")
       : '<div class="empty">Aucun mot pour l\'instant.</div>'
   }</div>
-  <button class="btn goldb" id="btrain" ${list.length ? "" : "disabled"}>S'entraîner · ${bankDue(s.id) || list.length} mot(s)</button><button class="btn ghost" onclick="closeModal()">Fermer</button>`);
+  <button class="btn ghost" onclick="closeModal()">Fermer</button>`);
   const add = async () => {
     const w = m.querySelector("#bw").value.trim(),
       tr = m.querySelector("#bt").value.trim();

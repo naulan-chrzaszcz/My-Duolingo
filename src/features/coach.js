@@ -24,6 +24,7 @@ export const TYPE_FR = {
   dictee: "dictée",
   spot: "repérage de fautes",
   photo: "TOEIC Part 1",
+  fill: "grammaire / règles",
 };
 export function errStats(cid) {
   const a = S.elog[cid] || [];

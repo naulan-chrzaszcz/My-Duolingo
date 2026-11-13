@@ -46,20 +46,45 @@ export function iosTick() {
   l.click();
   l.remove();
 }
+// Un motif par effet : Android vibre (durées en ms), l'iPhone enchaîne de petits « tics » (décalages en ms)
+export const HAPTIC = {
+  tap: [8],
+  select: [8],
+  ok: [14, 50, 22],
+  bad: [35, 70, 35],
+  combo: [12, 35, 14, 35, 30],
+  win: [20, 60, 20, 60, 60],
+  match: [12],
+  pop: [6],
+};
+export const TICKS = {
+  tap: [0],
+  select: [0],
+  ok: [0, 90],
+  bad: [0, 140],
+  combo: [0, 70, 140],
+  win: [0, 90, 180, 320],
+  match: [0],
+  pop: [0],
+};
+/** Retour haptique : nom d'effet (ok, bad, combo, win…) ; un nombre est accepté pour l'ancien code (2 = erreur). */
 export function haptic(n) {
   if (!S || !S.set || !S.set.haptic) return;
+  const k = typeof n === "string" ? (HAPTIC[n] ? n : "tap") : n > 1 ? "bad" : "tap";
   try {
     if (navigator.vibrate && !IOS) {
-      navigator.vibrate(n > 1 ? [25, 60, 25] : 15);
+      navigator.vibrate(HAPTIC[k]);
       return;
     }
     if (!IOS) return;
-    iosTick();
-    if (n > 1)
-      setTimeout(() => {
-        try {
-          iosTick();
-        } catch (e) {}
-      }, 120);
+    TICKS[k].forEach(d =>
+      d
+        ? setTimeout(() => {
+            try {
+              iosTick();
+            } catch (e) {}
+          }, d)
+        : iosTick(),
+    );
   } catch (e) {}
 }

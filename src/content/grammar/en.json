@@ -1,0 +1,485 @@
+{
+ "_": "Notions de grammaire anglaises (textes en français, traduits en coréen dans ko.json > content). Gabarits : {a|b} = choix au hasard ; {1=a|b} = choix lié (même rang partout dans l'élément) ; {@liste} = mot du lexique. Élément : [question avec ___, options (la première est la bonne), n° de règle, indice pour « écris le mot » (facultatif), autres réponses acceptées (facultatif)]. Paire : s = phrase source par langue d'interface, t = traductions acceptées (la première sert aux étiquettes), x = traductions fautives (mauvaises réponses).",
+ "lang": "en-US",
+ "cid": "en-daily",
+ "lex": {
+  "S3": ["Tom", "Léa", "My sister", "Our neighbour", "The new intern", "Mr. Kim", "Anna", "My cousin"],
+  "SP": ["My parents", "The kids", "Our clients", "My friends", "The developers", "My grandparents"],
+  "city": ["Lyon", "Seoul", "Toronto", "Berlin", "Busan", "Lisbon", "Osaka", "Montreal"],
+  "since": ["2019", "last spring", "January", "Monday", "the summer", "March"],
+  "dur": ["two years", "six months", "ten minutes", "a long time", "three weeks", "an hour"],
+  "past": ["yesterday", "last week", "two days ago", "in 2018", "last night", "on Monday"],
+  "drink": ["coffee", "tea", "orange juice", "hot chocolate"]
+ },
+ "notions": [
+  {
+   "id": "tense",
+   "ic": "⏳",
+   "t": "Les temps",
+   "d": "Présent, passé, futur, conditionnel : choisis le temps qui colle aux indices.",
+   "subs": [
+    {
+     "id": "en.t.pres",
+     "t": "Présent simple ou présent en -ing",
+     "lv": 0,
+     "memo": "Présent simple pour les habitudes et les vérités générales (every day, usually, on Sundays). Présent en -ing pour ce qui se passe maintenant ou en ce moment (now, Look!, this week).",
+     "r": [
+      "Habitude, vérité générale, fréquence (every day, usually, on Sundays) → présent simple : she works.",
+      "Action en cours au moment où l'on parle (now, right now, Look!, Listen!) → présent en -ing : she is working.",
+      "Les verbes d'état (know, like, want, need, believe, mean) ne se mettent presque jamais en -ing : I know, et non I am knowing.",
+      "Situation temporaire (this week, these days, at the moment) → présent en -ing ; situation habituelle → présent simple."
+     ],
+     "i": [
+      ["{@S3} ___ {@drink} {every morning|before work|at breakfast}.", ["drinks", "is drinking", "drink", "are drinking"], 0, "drink"],
+      ["Shh! {@S3} ___ on the phone {right now|at the moment}.", ["is talking", "talks", "talk", "are talking"], 1, "talk"],
+      ["{@SP} ___ {football|tennis|basketball} {on Saturdays|twice a week|every weekend}.", ["play", "are playing", "plays", "is playing"], 0, "play"],
+      ["I can't talk now, I ___ {1=dinner|a report|the car}.", ["am {1=cooking|writing|washing}", "{1=cook|write|wash}", "{1=cooks|writes|washes}", "was {1=cooking|writing|washing}"], 1, "{1=cook|write|wash}"],
+      ["Sorry, I don't ___ what you mean.", ["understand", "understanding", "understands", "am understanding"], 2, "understand"],
+      ["{We|They} ___ a bigger flat {right now|at the moment}: the baby is coming!", ["need", "are needing", "needs", "is needing"], 2, "need"],
+      ["Water ___ at 100 degrees.", ["boils", "is boiling", "boil", "are boiling"], 0, "boil"],
+      ["Listen! Someone ___ at the door.", ["is knocking", "knocks", "knock", "are knocking"], 1, "knock"],
+      ["This week {@S3} ___ from home because the office is closed.", ["is working", "works", "work", "are working"], 3, "work"],
+      ["{@S3} ___ from home every {Friday|Monday|Wednesday}.", ["works", "is working", "work", "are working"], 3, "work"],
+      ["Look! The {kids|dogs} ___ in the garden.", ["are playing", "play", "plays", "is playing"], 1, "play"],
+      ["How often ___ you {go to the gym|see your parents|cook at home}?", ["do", "are", "does", "is"], 0],
+      ["{@S3} ___ like {spicy food|horror films|getting up early}.", ["doesn't", "don't", "isn't", "aren't"], 2]
+     ],
+     "p": [
+      {"s": {"fr": "Chut, {1=le bébé|mon frère|le chat} dort.", "ko": "쉿, {1=아기가|남동생이|고양이가} 자고 있어요."}, "t": ["Shh, {1=the baby|my brother|the cat} is sleeping.", "Shh, {1=the baby's|my brother's|the cat's} sleeping."], "x": ["Shh, {1=the baby|my brother|the cat} sleeps.", "Shh, {1=the baby|my brother|the cat} is sleep.", "Shh, {1=the baby|my brother|the cat} are sleeping."]},
+      {"s": {"fr": "{1=Ma mère|Mon père|Ma collègue} prend le bus tous les matins.", "ko": "{1=어머니는|아버지는|제 동료는} 매일 아침 버스를 타요."}, "t": ["{1=My mother|My father|My colleague} takes the bus every morning.", "{1=My mom|My dad|My colleague} takes the bus every morning.", "Every morning, {1=my mother|my father|my colleague} takes the bus."], "x": ["{1=My mother|My father|My colleague} is taking the bus every morning.", "{1=My mother|My father|My colleague} take the bus every morning.", "{1=My mother|My father|My colleague} takes the bus every mornings."]}
+     ]
+    },
+    {
+     "id": "en.t.past",
+     "t": "Prétérit ou present perfect",
+     "lv": 1,
+     "memo": "Une date ou un moment passé terminé (yesterday, ago, in 2019) → prétérit. Pas de date, lien avec aujourd'hui (ever, never, already, yet, just, so far) ou durée qui continue (since) → present perfect.",
+     "r": [
+      "Moment passé précis et terminé (yesterday, last week, in 2019, ago) → prétérit : I saw.",
+      "Lien avec le présent, sans date (ever, never, already, yet, just, so far) → present perfect : I have seen.",
+      "Durée qui continue jusqu'à maintenant (since, for) → present perfect : I have lived here since 2020.",
+      "Question sur un moment passé (When…? What time…?) → prétérit : When did you arrive?"
+     ],
+     "i": [
+      ["{@S3} ___ to {@city} {@past}.", ["went", "has gone", "has been", "goes"], 0, "go"],
+      ["{@S3} ___ to {@city} {twice|three times|four times} so far.", ["has been", "went", "was", "goes"], 1, "be"],
+      ["{@S3} ___ here since {@since}.", ["has worked", "worked", "works", "is working"], 2, "work"],
+      ["I ___ {this film|that series|the match} {@past}.", ["watched", "have watched", "watch", "was watched"], 0, "watch"],
+      ["___ you ever {tried|eaten} {kimchi|sushi|snails}?", ["Have", "Did", "Are", "Do"], 1],
+      ["When ___ you {arrive|get back} last night?", ["did", "have", "are", "do"], 3],
+      ["We ___ {our homework|the report|the dishes} yet.", ["haven't finished", "didn't finish", "don't finish", "aren't finishing"], 1, "finish", ["have not finished"]],
+      ["{@S3} has just ___ the {office|meeting|building}.", ["left", "leave", "leaving", "leaves"], 1, "leave"],
+      ["{@S3} ___ the {company|team|club} in {2015|2020|March}.", ["joined", "has joined", "joins", "is joining"], 0, "join"],
+      ["How long ___ you {lived here|had this car|been a nurse}? — Since {2019|last year|March}.", ["have", "did", "do", "are"], 2],
+      ["I ___ {my best friend|my husband|my boss} {ten years ago|in 2012|at university}.", ["met", "have met", "meet", "was meeting"], 0, "meet"],
+      ["{@S3} has never ___ on a plane.", ["been", "was", "be", "being"], 1, "be"],
+      ["I ___ three emails since this morning.", ["have sent", "sent", "send", "am sending"], 2, "send"]
+     ],
+     "p": [
+      {"s": {"fr": "{1=Léa|Tom|Ma sœur} habite à {2=Lyon|Séoul|Berlin} depuis {3=deux ans|six mois|2019}.", "ko": "{1=레아는|톰은|제 여동생은} {3=2년 전부터|6개월 전부터|2019년부터} {2=리옹에|서울에|베를린에} 살고 있어요."}, "t": ["{1=Léa|Tom|My sister} has lived in {2=Lyon|Seoul|Berlin} {3=for two years|for six months|since 2019}.", "{1=Léa|Tom|My sister} has been living in {2=Lyon|Seoul|Berlin} {3=for two years|for six months|since 2019}.", "{1=Léa's|Tom's|My sister's} lived in {2=Lyon|Seoul|Berlin} {3=for two years|for six months|since 2019}."], "x": ["{1=Léa|Tom|My sister} lives in {2=Lyon|Seoul|Berlin} {3=for two years|for six months|since 2019}.", "{1=Léa|Tom|My sister} has lived in {2=Lyon|Seoul|Berlin} {3=since two years|since six months|for 2019}.", "{1=Léa|Tom|My sister} is living in {2=Lyon|Seoul|Berlin} {3=since two years|since six months|from 2019}."]},
+      {"s": {"fr": "{1=Hier|Lundi dernier|Il y a deux jours}, j'ai vu {2=un bon film|mes cousins|un vieil ami}.", "ko": "{1=어제|지난 월요일에|이틀 전에} {2=좋은 영화를|사촌들을|오랜 친구를} 봤어요."}, "t": ["{1=Yesterday|Last Monday|Two days ago}, I saw {2=a good film|my cousins|an old friend}.", "I saw {2=a good film|my cousins|an old friend} {1=yesterday|last Monday|two days ago}.", "{1=Yesterday|Last Monday|Two days ago}, I saw {2=a good movie|my cousins|an old friend}.", "I saw {2=a good movie|my cousins|an old friend} {1=yesterday|last Monday|two days ago}."], "x": ["{1=Yesterday|Last Monday|Two days ago}, I have seen {2=a good film|my cousins|an old friend}.", "{1=Yesterday|Last Monday|Two days ago}, I see {2=a good film|my cousins|an old friend}.", "{1=Yesterday|Last Monday|Two days ago}, I seen {2=a good film|my cousins|an old friend}."]},
+      {"s": {"fr": "Tu as déjà mangé {1=des sushis|du kimchi|des escargots} ?", "ko": "{1=초밥을|김치를|달팽이 요리를} 먹어 본 적 있어요?"}, "t": ["Have you ever eaten {1=sushi|kimchi|snails}?", "Have you ever tried {1=sushi|kimchi|snails}?", "Have you ever had {1=sushi|kimchi|snails}?"], "x": ["Did you ever eaten {1=sushi|kimchi|snails}?", "Have you ever ate {1=sushi|kimchi|snails}?", "Are you ever eaten {1=sushi|kimchi|snails}?"]}
+     ]
+    },
+    {
+     "id": "en.t.prog",
+     "t": "Récit au passé : past continuous, prétérit, past perfect",
+     "lv": 2,
+     "memo": "Le décor ou l'action en cours → past continuous (I was cooking). L'événement qui arrive → prétérit (the phone rang). Ce qui s'est passé avant → past perfect (the train had left).",
+     "r": [
+      "Action en cours dans le passé, en arrière-plan ou interrompue (while…, when the phone rang) → past continuous : I was cooking.",
+      "Action courte et terminée, ou suite d'actions → prétérit : she opened the door and smiled.",
+      "Action antérieure à une autre action passée (by the time, already, before) → past perfect : the train had left."
+     ],
+     "i": [
+      ["I ___ {1=dinner|a shower|my homework} when the phone rang, so I didn't hear it.", ["was {1=cooking|having|doing}", "{1=cooked|had|did}", "am {1=cooking|having|doing}", "have {1=cooked|had|done}"], 0, "{1=cook|have|do}"],
+      ["While {@S3} ___ {to work|home|to the station}, it started to rain.", ["was walking", "walked", "walks", "has walked"], 0, "walk"],
+      ["By the time we arrived at the cinema, the film ___.", ["had started", "has started", "starts", "is starting"], 2, "start"],
+      ["{@S3} ___ the {letter|parcel|box}, looked inside and smiled.", ["opened", "was opening", "has opened", "opens"], 1, "open"],
+      ["By the time {1=Tom|Léa} {2=got to the station|reached the airport}, the {2=train|plane} ___.", ["had left", "has left", "leaves", "is leaving"], 2, "leave"],
+      ["What ___ you doing at 8 p.m. last night?", ["were", "did", "are", "have"], 0],
+      ["When I got home, my parents ___ already gone to bed.", ["had", "have", "were", "did"], 2],
+      ["We ___ {in the park|on the beach} when it suddenly started to snow.", ["were walking", "walk", "are walking", "had walked"], 0, "walk"]
+     ],
+     "p": [
+      {"s": {"fr": "Je cuisinais quand {1=le téléphone a sonné|tu es arrivé|l'électricité a été coupée}.", "ko": "{1=전화가 울렸을 때|네가 왔을 때|정전이 됐을 때} 저는 요리하고 있었어요."}, "t": ["I was cooking when {1=the phone rang|you arrived|the power went out}.", "When {1=the phone rang|you arrived|the power went out}, I was cooking."], "x": ["I cooked when {1=the phone was ringing|you were arriving|the power was going out}.", "I was cooking when {1=the phone was rang|you was arrived|the power was went out}.", "I am cooking when {1=the phone rang|you arrived|the power went out}."]}
+     ]
+    },
+    {
+     "id": "en.t.fut",
+     "t": "Le futur : will, going to, présent en -ing",
+     "lv": 1,
+     "memo": "Décision prise à l'instant → will. Projet déjà décidé ou prédiction sur un indice visible → going to. Rendez-vous fixé → présent en -ing. Après when, as soon as, until, if → présent.",
+     "r": [
+      "Intention déjà décidée → be going to : we're going to move.",
+      "Décision prise sur le moment, offre ou promesse → will : I'll help you.",
+      "Prédiction appuyée sur un indice visible (Look at the clouds!) → be going to.",
+      "Rendez-vous ou plan fixé avec une heure ou une date → présent en -ing : I'm seeing the dentist at 10.",
+      "Après when, as soon as, before, until, if : présent, jamais will : when I get home."
+     ],
+     "i": [
+      ["— The phone's ringing. — OK, I ___ it!", ["will get", "am getting", "get", "got"], 1, "get", ["'ll get"]],
+      ["Look at those {clouds|black clouds}! It ___ rain.", ["is going to", "goes to", "is going", "was going"], 2],
+      ["I ___ {the dentist|a client|my manager} {tomorrow at 10|on Friday at 3|at noon tomorrow}. It's in my diary.", ["am seeing", "see", "saw", "have seen"], 3, "see", ["am meeting"]],
+      ["When I ___ home, I'll call you.", ["get", "will get", "got", "am going to get"], 4, "get"],
+      ["I'll wait here until you ___ {1=back|ready}.", ["{1=come|are}", "will {1=come|be}", "{1=came|were}", "would {1=come|be}"], 4, "{1=come|be}"],
+      ["We've decided: we ___ a {house|flat} in {@city} next year.", ["are going to buy", "buy", "bought", "have bought"], 0, "buy"],
+      ["{This bag|This box|Your suitcase} looks heavy. I ___ you.", ["will help", "am helping", "help", "helped"], 1, "help", ["'ll help"]],
+      ["If it ___ tomorrow, we'll stay at home.", ["rains", "will rain", "rained", "would rain"], 4, "rain"],
+      ["As soon as the {meeting|film|match} ___, I'll send you a message.", ["ends", "will end", "ended", "would end"], 4, "end"],
+      ["My train ___ at {6:45|7:10|8:20} tomorrow morning.", ["leaves", "left", "has left", "was leaving"], 3, "leave"]
+     ],
+     "p": [
+      {"s": {"fr": "{1=L'année prochaine|Cet été|Bientôt}, nous allons déménager à {2=Lisbonne|Osaka|Montréal}.", "ko": "{1=내년에|이번 여름에|곧} 우리는 {2=리스본으로|오사카로|몬트리올로} 이사할 거예요."}, "t": ["{1=Next year|This summer|Soon}, we are going to move to {2=Lisbon|Osaka|Montreal}.", "{1=Next year|This summer|Soon}, we're going to move to {2=Lisbon|Osaka|Montreal}.", "We are going to move to {2=Lisbon|Osaka|Montreal} {1=next year|this summer|soon}.", "We're going to move to {2=Lisbon|Osaka|Montreal} {1=next year|this summer|soon}."], "x": ["{1=Next year|This summer|Soon}, we go to move to {2=Lisbon|Osaka|Montreal}.", "{1=Next year|This summer|Soon}, we are going to moving to {2=Lisbon|Osaka|Montreal}.", "{1=Next year|This summer|Soon}, we are going move to {2=Lisbon|Osaka|Montreal}."]},
+      {"s": {"fr": "Quand j'arriverai, je t'appellerai.", "ko": "도착하면 전화할게요."}, "t": ["When I arrive, I will call you.", "When I arrive, I'll call you.", "I will call you when I arrive.", "I'll call you when I arrive.", "When I get there, I'll call you."], "x": ["When I will arrive, I will call you.", "When I arrive, I call you.", "When I will arrive, I call you."]}
+     ]
+    },
+    {
+     "id": "en.t.cond",
+     "t": "Conditionnels & hypothèses",
+     "lv": 2,
+     "memo": "Réel : if + présent, will. Imaginaire : if + prétérit, would. Regret : if + past perfect, would have + participe. Jamais de would juste après if.",
+     "r": [
+      "Condition réelle : if + présent, puis will : If it rains, we'll stay home.",
+      "Hypothèse sur le présent : if + prétérit, puis would : If I had time, I would travel.",
+      "Regret sur le passé : if + past perfect, puis would have + participe : If I had known, I would have come.",
+      "Jamais de would juste après if. Avec be, on emploie were à toutes les personnes : If I were you."
+     ],
+     "i": [
+      ["If I ___ more time, I would {learn the guitar|travel more|cook every day}.", ["had", "have", "would have", "will have"], 3, "have"],
+      ["If I were you, I ___ {1=the job|the offer|this flat}.", ["would {1=take|accept|rent}", "will {1=take|accept|rent}", "{1=took|accepted|rented}", "had {1=taken|accepted|rented}"], 1, "{1=take|accept|rent}"],
+      ["If we ___ earlier, we would have caught the {train|bus|plane}.", ["had left", "left", "would leave", "have left"], 2, "leave"],
+      ["I ___ you if I had known you were in town.", ["would have called", "would call", "will call", "had called"], 2, "call"],
+      ["If I ___ rich, I would buy a {boat|house by the sea|small farm}.", ["were", "am", "would be", "will be"], 3, "be"],
+      ["What would you do if you ___ the lottery?", ["won", "win", "would win", "will win"], 1, "win"],
+      ["We'll miss the {bus|train|start of the film} if we ___ now.", ["don't leave", "won't leave", "didn't leave", "wouldn't leave"], 0, "leave", ["do not leave"]],
+      ["If you heat ice, it ___.", ["melts", "melted", "would melt", "had melted"], 0, "melt"]
+     ],
+     "p": [
+      {"s": {"fr": "Si j'avais plus de temps, je {1=voyagerais|lirais|cuisinerais} davantage.", "ko": "시간이 더 있으면 {1=여행을 더 많이 할|책을 더 많이 읽을|요리를 더 자주 할} 텐데요."}, "t": ["If I had more time, I would {1=travel|read|cook} more.", "If I had more time, I'd {1=travel|read|cook} more.", "I would {1=travel|read|cook} more if I had more time.", "I'd {1=travel|read|cook} more if I had more time."], "x": ["If I have more time, I would {1=travel|read|cook} more.", "If I would have more time, I would {1=travel|read|cook} more.", "If I had more time, I will {1=travel|read|cook} more."]}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "link",
+   "ic": "🔗",
+   "t": "Mots de liaison",
+   "d": "But, although, despite, because of, so, while, during… : relie tes idées sans te tromper de construction.",
+   "subs": [
+    {
+     "id": "en.l.opp",
+     "t": "Opposition & concession",
+     "lv": 1,
+     "memo": "Devant un nom ou un -ing : despite, in spite of. Devant sujet + verbe : although, even though. Entre deux phrases : however. Pour comparer deux faits : whereas, while.",
+     "r": [
+      "although / even though + sujet + verbe : Although it was raining, we went out.",
+      "despite / in spite of + nom ou verbe en -ing : Despite the rain… / Despite being tired…",
+      "however (cependant) relie deux phrases ; on met un point ou un point-virgule avant, une virgule après.",
+      "whereas / while opposent deux faits que l'on compare : I like tea, whereas my sister prefers coffee.",
+      "but relie deux idées opposées dans la même phrase."
+     ],
+     "i": [
+      ["___ the rain, {we went for a walk|the match went ahead|the concert took place}.", ["Despite", "Although", "However", "Even though"], 1],
+      ["___ it was raining, {we went for a walk|the match went ahead|the concert took place}.", ["Although", "Despite", "In spite of", "However"], 0],
+      ["The hotel was expensive. ___, the service was excellent.", ["However", "Although", "Despite", "Even though"], 2],
+      ["{1=I like tea|Tom loves the city|Our office is modern}, ___ {1=my sister prefers coffee|his wife prefers the countryside|theirs is very old}.", ["whereas", "despite", "however", "in spite of"], 3],
+      ["The flat is small, ___ it's very bright.", ["but", "despite", "however", "in spite of"], 4],
+      ["___ being tired, {@S3} finished the report.", ["Despite", "Although", "Even though", "But"], 1],
+      ["We enjoyed the trip ___ the bad weather.", ["despite", "although", "however", "even though"], 1],
+      ["{1=Tom|Léa|Mr. Kim|Anna} went to work ___ {1=he|she|he|she} had a fever.", ["even though", "despite", "in spite of", "however"], 0]
+     ],
+     "p": [
+      {"s": {"fr": "Malgré {1=la pluie|le froid|la grève}, nous sommes sortis.", "ko": "{1=비가 왔는데도|추웠는데도|파업이 있었는데도} 우리는 밖에 나갔어요."}, "t": ["Despite {1=the rain|the cold|the strike}, we went out.", "In spite of {1=the rain|the cold|the strike}, we went out.", "We went out despite {1=the rain|the cold|the strike}.", "We went out in spite of {1=the rain|the cold|the strike}."], "x": ["Although {1=the rain|the cold|the strike}, we went out.", "Despite of {1=the rain|the cold|the strike}, we went out.", "However {1=the rain|the cold|the strike}, we went out."]},
+      {"s": {"fr": "Bien qu'il soit fatigué, Tom continue de travailler.", "ko": "톰은 피곤한데도 계속 일하고 있어요."}, "t": ["Although he is tired, Tom keeps working.", "Although he's tired, Tom keeps working.", "Even though he is tired, Tom keeps working.", "Even though he's tired, Tom keeps working.", "Although he is tired, Tom is still working."], "x": ["Despite he is tired, Tom keeps working.", "Although he is tired, Tom keeps to work.", "However he is tired, Tom keeps working."]}
+     ]
+    },
+    {
+     "id": "en.l.cause",
+     "t": "Cause, conséquence & but",
+     "lv": 1,
+     "memo": "Cause : because + sujet + verbe, because of / due to + nom. Conséquence : so (dans la phrase), therefore / as a result (nouvelle phrase). But : so that + sujet + can / could.",
+     "r": [
+      "because + sujet + verbe ; because of / due to + nom : because it rained / because of the rain.",
+      "so introduit la conséquence dans la même phrase : It was late, so we went home.",
+      "therefore / as a result (donc, par conséquent) commencent souvent une nouvelle phrase.",
+      "so that + sujet + can / could exprime le but (pour que) : I spoke slowly so that everyone could understand."
+     ],
+     "i": [
+      ["The flight was cancelled ___ the {storm|strike|snow}.", ["because of", "because", "so", "therefore"], 0],
+      ["The flight was cancelled ___ there was a {storm|strike}.", ["because", "because of", "due to", "so"], 0],
+      ["It was {late|getting dark}, ___ we went home.", ["so", "because", "because of", "so that"], 1],
+      ["Sales fell sharply. ___, the company cut costs.", ["As a result", "Because", "Because of", "So that"], 2],
+      ["I {spoke slowly|wrote it on the board} ___ everyone could understand.", ["so that", "because", "therefore", "because of"], 3],
+      ["{@S3} stayed at home ___ {a cold|a headache|the strike}.", ["because of", "because", "so", "since"], 0],
+      ["The road was icy. ___, several schools closed.", ["Therefore", "Because", "Due to", "So that"], 2],
+      ["We took a taxi ___ we wouldn't be late.", ["so that", "because of", "therefore", "due to"], 3]
+     ],
+     "p": [
+      {"s": {"fr": "Le vol a été annulé à cause de {1=la tempête|la grève|la neige}.", "ko": "{1=폭풍|파업|눈} 때문에 비행기가 취소됐어요."}, "t": ["The flight was cancelled because of {1=the storm|the strike|the snow}.", "The flight was canceled because of {1=the storm|the strike|the snow}.", "The flight was cancelled due to {1=the storm|the strike|the snow}.", "The flight was canceled due to {1=the storm|the strike|the snow}.", "The flight has been cancelled because of {1=the storm|the strike|the snow}."], "x": ["The flight was cancelled because {1=the storm|the strike|the snow}.", "The flight was cancelled so {1=the storm|the strike|the snow}.", "The flight cancelled because of {1=the storm|the strike|the snow}."]}
+     ]
+    },
+    {
+     "id": "en.l.time",
+     "t": "Temps & ajout : during, while, until, by, moreover",
+     "lv": 1,
+     "memo": "during + nom, while + sujet + verbe. until = jusqu'à (l'action continue), by = au plus tard. moreover / in addition ajoutent un argument.",
+     "r": [
+      "during + nom (during the film) ; while + sujet + verbe (while I was watching the film).",
+      "moreover / in addition (de plus) ajoutent un argument dans le même sens.",
+      "until = jusqu'à (l'action continue jusqu'à ce moment) ; by = au plus tard (une échéance).",
+      "before / after + verbe en -ing ou sujet + verbe : before sending it, after we ate."
+     ],
+     "i": [
+      ["I fell asleep ___ the film.", ["during", "while", "meanwhile", "for"], 0],
+      ["I fell asleep ___ I was watching the film.", ["while", "during", "meanwhile", "for"], 0],
+      ["The flat is cheap. ___, it's close to the station.", ["Moreover", "However", "Therefore", "Although"], 1],
+      ["Please wait here ___ the doctor calls you.", ["until", "by", "during", "since"], 2],
+      ["Please send me the file ___ Friday at the latest.", ["by", "until", "during", "while"], 2],
+      ["Always check your work ___ {sending|submitting} it.", ["before", "during", "until", "since"], 3],
+      ["Don't use your phone ___ the {meeting|exam|lesson}.", ["during", "while", "until", "by"], 0],
+      ["___ lunch, we went for a walk by the river.", ["After", "While", "Until", "By"], 3]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "modal",
+   "ic": "🔑",
+   "t": "Les modaux",
+   "d": "Must, have to, should, can, could, might… : obligation, conseil, permission, déduction.",
+   "subs": [
+    {
+     "id": "en.m.obl",
+     "t": "Obligation, interdiction, pas nécessaire",
+     "lv": 1,
+     "memo": "must / have to = c'est obligatoire. mustn't = c'est interdit. don't have to = ce n'est pas nécessaire. Au passé : had to.",
+     "r": [
+      "must / have to = obligation : You must wear a helmet.",
+      "mustn't = interdiction : You mustn't smoke here.",
+      "don't have to / don't need to = ce n'est pas nécessaire (mais c'est permis) : You don't have to come.",
+      "had to = obligation dans le passé (must n'a pas de passé) : I had to wait."
+     ],
+     "i": [
+      ["You ___ smoke in the {hospital|plane|lab}: it's forbidden.", ["mustn't", "don't have to", "needn't", "had to"], 1],
+      ["It's {Sunday|a holiday}: you ___ get up early.", ["don't have to", "mustn't", "can't", "had to"], 2],
+      ["Yesterday I ___ wait two hours at the {station|airport|doctor's}.", ["had to", "must", "have to", "mustn't"], 3],
+      ["All visitors ___ show {their ID|a badge} at reception.", ["must", "mustn't", "don't have to", "can't"], 0],
+      ["The museum is free, so you ___ pay.", ["don't have to", "mustn't", "have to", "must"], 2],
+      ["{@S3} ___ work tomorrow: it's a day off.", ["doesn't have to", "mustn't", "has to", "must"], 2],
+      ["You ___ forget your passport, or you won't be able to board.", ["mustn't", "don't have to", "needn't", "didn't have to"], 1]
+     ],
+     "p": [
+      {"s": {"fr": "Tu n'es pas obligé de venir {1=demain|ce soir|samedi}.", "ko": "{1=내일|오늘 저녁에|토요일에} 안 와도 돼요."}, "t": ["You don't have to come {1=tomorrow|tonight|on Saturday}.", "You don't need to come {1=tomorrow|tonight|on Saturday}.", "You do not have to come {1=tomorrow|tonight|on Saturday}.", "You needn't come {1=tomorrow|tonight|on Saturday}."], "x": ["You mustn't come {1=tomorrow|tonight|on Saturday}.", "You don't have come {1=tomorrow|tonight|on Saturday}.", "You haven't to come {1=tomorrow|tonight|on Saturday}."]},
+      {"s": {"fr": "Tu ne dois pas fumer ici.", "ko": "여기서 담배를 피우면 안 돼요."}, "t": ["You mustn't smoke here.", "You must not smoke here.", "You can't smoke here.", "You cannot smoke here."], "x": ["You don't have to smoke here.", "You mustn't to smoke here.", "You needn't smoke here."]}
+     ]
+    },
+    {
+     "id": "en.m.adv",
+     "t": "Conseil, permission, demande polie",
+     "lv": 1,
+     "memo": "Conseil : should, ought to, had better. Permission : can, could, may (plus poli). Demande polie : Could you…?, Would you mind + -ing?",
+     "r": [
+      "should / ought to = conseil : You should rest.",
+      "can / could / may = permission ; could et may sont plus polis : Could I sit here?",
+      "Would you mind + -ing ? = demande polie : Would you mind closing the door?",
+      "had better + base verbale = mise en garde : You'd better hurry."
+     ],
+     "i": [
+      ["You look exhausted. You ___ {get some rest|see a doctor|go to bed early}.", ["should", "would", "ought", "shall"], 0],
+      ["Excuse me, ___ I {borrow your pen|sit here}? — Sure, go ahead.", ["could", "would", "must", "have"], 1],
+      ["Would you mind ___ the {door|window}?", ["closing", "to close", "close", "closed"], 2],
+      ["The train leaves in five minutes. We ___ hurry!", ["had better", "would rather", "had", "better to"], 3],
+      ["You ___ to apologize to her.", ["ought", "should", "must", "had better"], 0],
+      ["___ you help me with this box, please?", ["Could", "Should", "Must", "May"], 1],
+      ["It's late. You ___ take a taxi.", ["should", "would", "should to", "ought"], 0]
+     ],
+     "p": [
+      {"s": {"fr": "Tu devrais {1=te reposer|appeler ta mère|aller chez le médecin}.", "ko": "{1=좀 쉬는 게|어머니께 전화하는 게|병원에 가 보는 게} 좋겠어요."}, "t": ["You should {1=get some rest|call your mother|see a doctor}.", "You should {1=rest|call your mom|go to the doctor}.", "You ought to {1=get some rest|call your mother|see a doctor}."], "x": ["You should to {1=get some rest|call your mother|see a doctor}.", "You would {1=get some rest|call your mother|see a doctor}.", "You should {1=getting some rest|calling your mother|seeing a doctor}."]}
+     ]
+    },
+    {
+     "id": "en.m.ded",
+     "t": "Déduction : must, might, can't (+ have)",
+     "lv": 2,
+     "memo": "must = j'en suis presque sûr. can't = c'est impossible. might / may / could = c'est possible. Pour le passé : must / might / can't have + participe passé.",
+     "r": [
+      "must = presque sûr ; can't = impossible : He must be tired. That can't be true.",
+      "may / might / could = possible : She might be late.",
+      "Déduction sur le passé : must / might / can't have + participe passé : They must have left."
+     ],
+     "i": [
+      ["{1=Tom|Léa|Mr. Kim|Anna} has been working for twelve hours. {1=He|She|He|She} ___ be exhausted.", ["must", "can't", "mustn't", "needn't"], 0],
+      ["That ___ be {Anna|Léa|Sophie}: she's in {Tokyo|Seoul} this week.", ["can't", "must", "mustn't", "should"], 0],
+      ["The lights are off. They ___ have gone to bed.", ["must", "can't", "mustn't", "should"], 2],
+      ["I'm not sure, but it ___ rain later.", ["might", "must", "can't", "mustn't"], 1],
+      ["{1=Tom|Léa} was asleep, so {1=he|she} ___ have heard the phone.", ["can't", "mustn't", "must", "needn't"], 2],
+      ["Take an umbrella: it ___ rain this afternoon.", ["might", "must", "can't", "mustn't"], 1],
+      ["You've been travelling all day. You ___ be hungry.", ["must", "can't", "mustn't", "needn't"], 0]
+     ],
+     "p": [
+      {"s": {"fr": "Il va peut-être pleuvoir cet après-midi.", "ko": "오늘 오후에 비가 올지도 몰라요."}, "t": ["It might rain this afternoon.", "It may rain this afternoon.", "It could rain this afternoon.", "Maybe it will rain this afternoon."], "x": ["It must rain this afternoon.", "It might to rain this afternoon.", "It might raining this afternoon."]}
+     ]
+    },
+    {
+     "id": "en.m.abil",
+     "t": "Capacité : can, could, be able to",
+     "lv": 0,
+     "memo": "can = je sais / je peux maintenant. could = je pouvais (passé). Pour les autres temps : be able to (will be able to, have been able to).",
+     "r": [
+      "can = capacité au présent ; could = capacité dans le passé : I could swim at five.",
+      "Pour le futur et le present perfect, on emploie be able to : I won't be able to come. I haven't been able to sleep."
+     ],
+     "i": [
+      ["When I was {five|a child|ten}, I ___ swim.", ["could", "can", "will be able to", "am able to"], 0],
+      ["I'm sorry, I ___ come to your party next week.", ["won't be able to", "haven't been able to", "couldn't", "wasn't able to"], 1],
+      ["I ___ sleep {since Monday|for days|since the neighbours moved in} because of the noise.", ["haven't been able to", "couldn't", "can't", "won't be able to"], 1],
+      ["{@S3} ___ speak three languages.", ["can", "is able", "can to", "does can"], 0],
+      ["Last year I ___ run 10 km; now I can only run 5.", ["could", "can", "will be able to", "have been able to"], 0]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "prep",
+   "ic": "📍",
+   "t": "Les prépositions",
+   "d": "At, in, on, for, since, during, by, until, to… : le temps, le lieu, et les verbes qui en appellent une.",
+   "subs": [
+    {
+     "id": "en.p.time",
+     "t": "Temps : at, in, on",
+     "lv": 0,
+     "memo": "at + heure (at 6 p.m.), on + jour ou date (on Monday, on 3 May), in + mois, année, saison, partie de la journée (in July, in 2020, in the morning).",
+     "r": [
+      "at + heure ou moment précis : at 6 p.m., at noon, at night.",
+      "on + jour ou date : on Monday, on 3 May, on my birthday.",
+      "in + mois, année, saison, partie de la journée : in July, in 2020, in winter, in the morning."
+     ],
+     "i": [
+      ["The {meeting|film|class} starts ___ {7 p.m.|half past nine|noon|8:15}.", ["at", "on", "in", "by"], 0],
+      ["{My|Our} {birthday|anniversary} is ___ {12 May|Friday|the 3rd of June}.", ["on", "in", "at", "by"], 1],
+      ["{@S3} was born ___ {1995|July|the spring of 2001|winter}.", ["in", "on", "at", "since"], 2],
+      ["I usually go jogging ___ the morning.", ["in", "on", "at", "by"], 2],
+      ["See you ___ {Monday|Saturday morning|Christmas Day}!", ["on", "in", "at", "by"], 1],
+      ["I can't sleep ___ night when it's hot.", ["at", "in", "on", "for"], 0],
+      ["The shop is closed ___ {August|the summer|2025}.", ["in", "on", "at", "by"], 2]
+     ],
+     "p": [
+      {"s": {"fr": "Le cours commence à {1=huit heures|neuf heures|midi} {2=lundi|mardi|vendredi}.", "ko": "수업은 {2=월요일|화요일|금요일} {1=8시에|9시에|12시에} 시작해요."}, "t": ["The class starts at {1=eight|nine|noon} on {2=Monday|Tuesday|Friday}.", "The class starts on {2=Monday|Tuesday|Friday} at {1=eight|nine|noon}.", "The lesson starts at {1=eight|nine|noon} on {2=Monday|Tuesday|Friday}.", "The class begins at {1=eight|nine|noon} on {2=Monday|Tuesday|Friday}."], "x": ["The class starts in {1=eight|nine|noon} on {2=Monday|Tuesday|Friday}.", "The class starts at {1=eight|nine|noon} in {2=Monday|Tuesday|Friday}.", "The class starts on {1=eight|nine|noon} at {2=Monday|Tuesday|Friday}."]}
+     ]
+    },
+    {
+     "id": "en.p.dur",
+     "t": "Durée : for, since, during, ago, by, until",
+     "lv": 1,
+     "memo": "for + durée, since + point de départ, during + événement, ago après la durée (two years ago), by = au plus tard, until = jusqu'à.",
+     "r": [
+      "for + durée (for two hours) ; since + point de départ (since 2019).",
+      "during + nom d'événement ou de période : during the meeting.",
+      "ago se place après la durée, avec le prétérit : two years ago.",
+      "by = au plus tard (échéance) ; until = jusqu'à (l'action continue)."
+     ],
+     "i": [
+      ["{@S3} has lived here ___ {@dur}.", ["for", "since", "during", "ago"], 0],
+      ["{@S3} has lived here ___ {@since}.", ["since", "for", "during", "from"], 0],
+      ["I met my best friend ten years ___.", ["ago", "since", "for", "last"], 2],
+      ["Please don't use your phone ___ the {exam|meeting|film}.", ["during", "for", "since", "ago"], 1],
+      ["The shop is open ___ 9 p.m. tonight.", ["until", "by", "since", "for"], 3],
+      ["I need the report ___ Thursday at the latest.", ["by", "until", "since", "during"], 3],
+      ["We've been waiting ___ {twenty minutes|an hour|ages}!", ["for", "since", "during", "ago"], 0]
+     ]
+    },
+    {
+     "id": "en.p.place",
+     "t": "Lieu : in, on, at, to",
+     "lv": 0,
+     "memo": "in = dans (in the kitchen, in Paris). on = sur une surface (on the table, on the wall). at = un point précis (at the station, at work). to = direction (go to school, mais go home).",
+     "r": [
+      "in = à l'intérieur (in the kitchen, in Paris) ; on = sur une surface (on the table, on the wall).",
+      "at = un point précis, une adresse, un événement : at the bus stop, at work, at a party.",
+      "to = direction après un verbe de mouvement : go to the cinema (mais go home, sans to)."
+     ],
+     "i": [
+      ["Your keys are ___ the {kitchen table|shelf|floor}.", ["on", "in", "at", "to"], 0],
+      ["{@S3} lives ___ {@city}.", ["in", "at", "on", "to"], 0],
+      ["I'll meet you ___ the {bus stop|main entrance}.", ["at", "on", "to", "in"], 1],
+      ["We're going ___ {the cinema|the beach|Italy} this weekend.", ["to", "at", "in", "on"], 2],
+      ["There's a {picture|clock|map} ___ the wall.", ["on", "in", "at", "to"], 0],
+      ["{@S3} is ___ work until six.", ["at", "in", "on", "to"], 1],
+      ["The milk is ___ the fridge.", ["in", "on", "at", "to"], 0]
+     ]
+    },
+    {
+     "id": "en.p.verb",
+     "t": "Verbes et adjectifs + préposition",
+     "lv": 1,
+     "memo": "À apprendre par paires : depend on, good at, interested in, afraid of, wait for, belong to, listen to, apologize for.",
+     "r": [
+      "depend on, rely on, focus on (jamais depend of).",
+      "good at, interested in, afraid of, proud of, responsible for.",
+      "wait for, listen to, belong to, apologize for, look forward to + -ing."
+     ],
+     "i": [
+      ["It depends ___ the {weather|price|traffic}.", ["on", "of", "from", "to"], 0],
+      ["{@S3} is really good ___ {maths|languages|tennis}.", ["at", "on", "for", "of"], 1],
+      ["Are you interested ___ {photography|history|this job}?", ["in", "on", "for", "by"], 1],
+      ["I'm waiting ___ {the bus|a call|my results}.", ["for", "to", "after", "at"], 2],
+      ["This {bag|umbrella|laptop} belongs ___ my {sister|colleague}.", ["to", "at", "for", "with"], 2],
+      ["I'm afraid ___ {spiders|the dark|flying}.", ["of", "from", "for", "about"], 1],
+      ["We apologize ___ the delay.", ["for", "of", "from", "to"], 2],
+      ["Please listen ___ the instructions.", ["to", "at", "for", "on"], 2],
+      ["I'm looking forward ___ seeing you.", ["to", "for", "at", "of"], 2]
+     ],
+     "p": [
+      {"s": {"fr": "Ça dépend {1=du temps|du prix|de toi}.", "ko": "{1=날씨에|가격에|너에게} 달려 있어요."}, "t": ["It depends on {1=the weather|the price|you}.", "That depends on {1=the weather|the price|you}."], "x": ["It depends of {1=the weather|the price|you}.", "It depends from {1=the weather|the price|you}.", "It's depend on {1=the weather|the price|you}."]}
+     ]
+    }
+   ]
+  }
+ ],
+ "units": {
+  "en-daily": {
+   "Se présenter": ["en.t.pres"],
+   "Famille & amis": ["en.t.pres"],
+   "Ma journée & l'heure": ["en.t.pres", "en.p.time"],
+   "Loisirs & week-end": ["en.t.pres", "en.p.time"],
+   "Se déplacer & faire des achats": ["en.p.place"],
+   "Santé & bien-être": ["en.m.adv", "en.p.dur"],
+   "Logement & voisins": ["en.m.obl", "en.p.place"],
+   "Voyages & vacances": ["en.t.past", "en.p.place"],
+   "Au téléphone & rendez-vous": ["en.t.fut", "en.p.time"],
+   "Inviter, accepter, refuser": ["en.m.adv", "en.l.opp"],
+   "Le futur & les projets": ["en.t.fut"],
+   "Small talk & opinions": ["en.t.past", "en.l.opp"],
+   "Raconter une histoire": ["en.t.prog", "en.l.time"],
+   "Débattre & convaincre": ["en.l.opp", "en.l.cause"],
+   "Expériences & present perfect": ["en.t.past", "en.p.dur"],
+   "Banque, administration & services": ["en.m.obl", "en.m.adv"],
+   "Urgences & imprévus": ["en.t.prog", "en.m.obl"],
+   "Imprévus & expressions": ["en.m.ded", "en.t.cond"],
+   "Hypothèses & conditionnels": ["en.t.cond"]
+  },
+  "en-pro": {
+   "Réunions & appels": ["en.m.adv"],
+   "Projets & délais": ["en.p.dur", "en.t.fut"],
+   "Stand-up & tickets": ["en.t.past"],
+   "Entretien d'embauche & carrière": ["en.t.past", "en.p.dur"],
+   "Formules polies & diplomatie": ["en.m.adv", "en.t.cond"],
+   "Présentations orales": ["en.l.time", "en.l.cause"],
+   "Rapports, chiffres & négociation": ["en.l.cause", "en.l.opp"],
+   "Feedback & conflits": ["en.m.adv", "en.l.opp"],
+   "Incidents & post-mortems": ["en.t.prog", "en.m.ded"],
+   "Specs, RFC & design docs": ["en.t.cond", "en.l.cause"]
+  },
+  "en-toeic": {
+   "Part 5 : temps & verbes": ["en.t.past", "en.t.fut", "en.m.obl"],
+   "Part 5 : prépositions après verbes, noms & adjectifs": ["en.p.verb"],
+   "Prépositions & connecteurs": ["en.l.opp", "en.l.cause", "en.p.dur"],
+   "Part 6 : textes à trous": ["en.l.opp", "en.l.cause", "en.l.time"],
+   "Part 5 : conjonctions, relatifs & quantifieurs": ["en.l.opp", "en.l.cause"],
+   "Part 5 : modaux, discours indirect & questions indirectes": ["en.m.ded", "en.m.obl"],
+   "Part 5 : gérondif, infinitif & subjonctif": ["en.p.verb"]
+  }
+ }
+}

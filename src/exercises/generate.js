@@ -6,6 +6,7 @@ import { similarOptions } from "./distractors.js";
 import { HG_CHO, HG_JUNG, hgDecomp } from "./hangul.js";
 import { noNote, words } from "./validate.js";
 import { BASE_LANG } from "../i18n/locale.js";
+import { mixDrills } from "./drills.js";
 
 // ===================== GÉNÉRATION D'EXERCICES =====================
 export function pairOf(C, a) {
@@ -17,7 +18,7 @@ export const allPairs = C => C.units.flatMap(u => u.p || []);
 export function ctxFor(cid, units, o = {}) {
   const C = COURSES[cid];
   const g = k => units.flatMap(u => u[k] || []);
-  return Object.assign(
+  const ctx = Object.assign(
     {
       C,
       cid,
@@ -41,6 +42,9 @@ export function ctxFor(cid, units, o = {}) {
     },
     o,
   );
+  // phrases générées sur les règles de ces unités (notions de grammaire) : la moitié environ des QCM et quelques phrases
+  mixDrills(ctx, units);
+  return ctx;
 }
 export const NEED = {
   mc: "p",
@@ -64,6 +68,7 @@ export const NEED = {
   hear: "mp",
   readw: "p",
   build: "sy",
+  fill: "c",
 };
 export const FB = {
   match: ["mc"],
@@ -81,6 +86,7 @@ export const FB = {
   hear: ["listenTiles"],
   readw: ["mc"],
   build: ["mc"],
+  fill: ["choice"],
 };
 export function take(ctx, k) {
   const a = ctx[k];
@@ -90,15 +96,32 @@ export function take(ctx, k) {
   if (ctx.ptr[k] % a.length === 0 && a.length > 2) ctx[k] = shuffle(a);
   return it;
 }
+// Étiquettes en trop : de préférence des mots qui ressemblent à ceux de la réponse (même fin, même début, même longueur),
+// pour qu'on ne puisse pas les écarter d'un coup d'œil
 export function distract(pool, answerWords, k) {
   const set = new Set(answerWords.map(w => w.toLowerCase()));
-  const out = [];
-  for (const w of shuffle(pool)) {
+  const near = w => {
     const lw = w.toLowerCase();
-    if (!set.has(lw) && !out.some(o => o.toLowerCase() === lw)) out.push(lw === w ? w : w.toLowerCase());
-    if (out.length >= k) break;
+    let best = 0;
+    for (const a of set) {
+      let s = 0;
+      if (a.length > 2 && lw.slice(-2) === a.slice(-2)) s += 2;
+      if (lw[0] === a[0]) s += 1;
+      if (Math.abs(lw.length - a.length) <= 1) s += 1;
+      if (s > best) best = s;
+    }
+    return best;
+  };
+  const seen = new Set();
+  const cands = [];
+  for (const w of pool) {
+    const lw = w.toLowerCase();
+    if (set.has(lw) || seen.has(lw)) continue;
+    seen.add(lw);
+    cands.push([near(w) + Math.random() * 2.2, w]);
   }
-  return out;
+  cands.sort((a, b) => b[0] - a[0]);
+  return cands.slice(0, k).map(([, w]) => (w.toLowerCase() === w ? w : w.toLowerCase()));
 }
 export const ITEM_UNIT = new WeakMap();
 export const PROPER =
@@ -121,6 +144,8 @@ export function make(t, ctx) {
     const u = ITEM_UNIT.get(ctx.last);
     if (u != null) ex._u = u;
   }
+  // phrase générée (notions de grammaire) : on garde la règle d'origine pour les statistiques
+  if (ex && ctx.last && ctx.last._sub && !ex._sub) ex._sub = ctx.last._sub;
   return ex;
 }
 export function make0(t, ctx) {
@@ -154,6 +179,15 @@ export function make0(t, ctx) {
           .map(x => x[1]),
       );
     return { t: "mc", lang, w: true, prompt: w[0], answer: w[1], options: shuffle([w[1], ...others]), speak: w[1] };
+  }
+  if (t === "fill") {
+    // écrire le mot qui manque : seulement pour les phrases générées qui ont un indice (verbe à conjuguer…)
+    const pool = ctx.c.filter(c => c._h);
+    if (!pool.length) return make0("choice", ctx);
+    const c = rnd(pool);
+    ctx.last = c;
+    const ans = c[1][c[2]];
+    return { t, lang, q: c[0], answer: ans, alts: [ans, ...(c._a || [])], hint: c._h, e: c[3] };
   }
   if (t === "choice") {
     const c = take(ctx, "c");
@@ -293,8 +327,14 @@ export function make0(t, ctx) {
   }
   const P = pairOf(C, take(ctx, "p"));
   const base = { lang, prompt: P.src, answer: P.tgt, alts: P.alts, rom: P.rom };
+  // phrase générée : ses traductions fautives font les meilleures mauvaises réponses et les meilleures étiquettes en trop
+  const X = ctx.last && ctx.last._x && ctx.last._x.length ? ctx.last._x.filter(x => x !== P.tgt) : null;
   if (t === "mc") {
-    let others = ctx.last && ITEM_UNIT.has(ctx.last) ? similarOptions(C, "p", P.tgt, ctx.last[0], ctx.last, 3) : [];
+    let others = X
+      ? X.slice(0, 3)
+      : ctx.last && ITEM_UNIT.has(ctx.last)
+        ? similarOptions(C, "p", P.tgt, ctx.last[0], ctx.last, 3)
+        : [];
     if (others.length < 3)
       others = others.concat(
         shuffle(ctx.allP.map(a => a[1]).filter(x => x !== P.tgt && !others.includes(x))).slice(0, 3 - others.length),
@@ -303,8 +343,18 @@ export function make0(t, ctx) {
   }
   if (t === "tiles" || t === "listenTiles") {
     const w = words(P.tgt);
+    let extra = [];
+    if (X) {
+      // mots des traductions fautives absents de la réponse (since, lives, will…)
+      const lw = new Set(w.map(x => x.toLowerCase()));
+      extra = shuffle([...new Set(X.flatMap(words).filter(x => !lw.has(x.toLowerCase())))]).slice(
+        0,
+        Math.max(2, ctx.dis),
+      );
+    }
     const pool = ctx.allP.flatMap(a => words(a[1]));
-    return { ...base, t, audio: P.tgt, tiles: shuffle([...w, ...distract(pool, w, ctx.dis)]) };
+    const rest = Math.max(0, ctx.dis - extra.length);
+    return { ...base, t, audio: P.tgt, tiles: shuffle([...w, ...extra, ...distract(pool, [...w, ...extra], rest)]) };
   }
   if (t === "tilesRev") {
     const src = noNote(P.src);

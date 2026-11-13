@@ -122,8 +122,8 @@
      [
       "meet",
       "know",
-      "see to",
-      "meeting"
+      "meeting",
+      "met"
      ],
      0,
      "Nice to meet you = enchanté(e)."
@@ -500,7 +500,7 @@
       "usually",
       "am usually",
       "usual",
-      "use"
+      "usually am"
      ],
      0,
      "Adverbe de fréquence avant le verbe principal."
@@ -522,7 +522,7 @@
       "goes",
       "go",
       "going",
-      "is go"
+      "gone"
      ],
      0,
      "Habitude au présent simple, 3e personne : goes."
@@ -553,9 +553,9 @@
      "I'm tired, so I'm going to bed ___ tonight.",
      [
       "early",
-      "soon of",
       "quick",
-      "earlier than"
+      "late",
+      "ahead"
      ],
      0,
      "Early = tôt. Quick est un adjectif, il ne convient pas ici."
@@ -659,8 +659,8 @@
      [
       "usually",
       "usual",
-      "use",
-      "is usually to"
+      "is usually",
+      "use to"
      ],
      0,
      "L'adverbe de fréquence se place avant le verbe."
@@ -677,12 +677,12 @@
      "play the + instrument (play the piano)."
     ],
     [
-     "I'm ___ tired after work.",
+     "I ___ tired after work.",
      [
+      "am always",
       "always",
-      "alway",
-      "all way",
-      "allways"
+      "always be",
+      "be always"
      ],
      0,
      "Avec « be », l'adverbe se place après le verbe : I'm always tired."
@@ -784,7 +784,7 @@
      [
       "many",
       "much",
-      "lot of",
+      "lot",
       "little"
      ],
      0,
@@ -905,8 +905,8 @@
      [
       "ahead",
       "in front",
-      "forward to",
-      "before"
+      "before",
+      "front"
      ],
      0,
      "go straight ahead = continuer tout droit."
@@ -1042,8 +1042,8 @@
      [
       "should",
       "would",
-      "shall to",
-      "ought"
+      "ought",
+      "shall"
      ],
      0,
      "Conseil : should + base verbale."
@@ -1054,7 +1054,7 @@
       "a",
       "the",
       "in",
-      "per the"
+      "by"
      ],
      0,
      "Fréquence : twice a day, once a week."
@@ -1064,8 +1064,8 @@
      [
       "headache",
       "head pain",
-      "ache head",
-      "headhurt"
+      "pain of head",
+      "headaches"
      ],
      0,
      "Mal de tête = headache (de même : stomachache, toothache)."
@@ -1204,9 +1204,9 @@
      "The rent ___ €800 a month.",
      [
       "is",
-      "costs of",
       "makes",
-      "does"
+      "does",
+      "has"
      ],
      0,
      "The rent is €800 a month."
@@ -1308,7 +1308,7 @@
       "been",
       "went",
       "go",
-      "gone to"
+      "going"
      ],
      0,
      "Expérience : have been to."
@@ -1470,9 +1470,9 @@
      "I'll call you ___ later.",
      [
       "back",
-      "again back",
       "return",
-      "over"
+      "over",
+      "off"
      ],
      0,
      "call back = rappeler."
@@ -1492,9 +1492,9 @@
      "Does Friday ___ for you?",
      [
       "work",
-      "go well to",
-      "fit to",
-      "suits"
+      "suits",
+      "goes",
+      "fits"
      ],
      0,
      "Does it work for you? = ça te convient ?"
@@ -1728,7 +1728,7 @@
       "in",
       "at",
       "up",
-      "off to"
+      "off"
      ],
      0,
      "log in (to) = se connecter."
@@ -1841,9 +1841,9 @@
      "Look at those clouds! It ___ rain.",
      [
       "is going to",
-      "will to",
       "goes to",
-      "is raining to"
+      "is going",
+      "was going"
      ],
      0,
      "Prédiction fondée sur un indice visible : going to."
@@ -1863,9 +1863,9 @@
      "— The phone is ringing. — I ___ answer it!",
      [
       "'ll",
-      "am going",
+      "'m going",
       "answer",
-      "'m answering to"
+      "'d"
      ],
      0,
      "Décision prise sur le moment : will."
@@ -1874,9 +1874,9 @@
      "I ___ my dentist at 3 p.m. tomorrow.",
      [
       "am seeing",
-      "will be see",
-      "see to",
-      "am going see"
+      "was seeing",
+      "have seen",
+      "saw"
      ],
      0,
      "Rendez-vous fixé : présent progressif."
@@ -2247,7 +2247,7 @@
       "extent",
       "measure",
       "level",
-      "point of"
+      "way"
      ],
      0,
      "To some extent = dans une certaine mesure : pour nuancer son accord."
@@ -2351,7 +2351,7 @@
       "have been",
       "went",
       "was",
-      "have gone to"
+      "have"
      ],
      0,
      "Expérience sans date : present perfect (have been = y être allé et revenu)."
@@ -2393,9 +2393,9 @@
      "Have you finished ___?",
      [
       "yet",
-      "already yet",
       "still",
-      "since"
+      "since",
+      "ago"
      ],
      0,
      "yet en fin de question : déjà ?"
@@ -2502,8 +2502,8 @@
      [
       "withdraw",
       "withdrawal",
-      "draw out of",
-      "take of"
+      "withdrawn",
+      "pull"
      ],
      0,
      "withdraw money = retirer de l'argent."
@@ -2512,9 +2512,9 @@
      "Is there a ___ for this service?",
      [
       "fee",
-      "fees of",
       "pay",
-      "price to"
+      "fare",
+      "tip"
      ],
      0,
      "a fee = des frais."
@@ -2640,7 +2640,7 @@
       "file",
       "put",
       "make up",
-      "write up to"
+      "fill"
      ],
      0,
      "file a report = faire une déclaration (à la police)."
@@ -2773,7 +2773,7 @@
       "it is",
       "is it",
       "it does",
-      "does it be"
+      "is"
      ],
      0,
      "Question indirecte : sujet + verbe (what time it is)."
@@ -2806,7 +2806,7 @@
       "gave",
       "did give",
       "did gave",
-      "gives to"
+      "given"
      ],
      0,
      "Who est sujet : pas d'auxiliaire (Who gave you…?)."
@@ -2828,7 +2828,7 @@
       "whether",
       "that",
       "what",
-      "if not"
+      "which"
      ],
      0,
      "whether… or not = si… ou non."
@@ -3188,7 +3188,7 @@
       "could",
       "can",
       "will",
-      "would can"
+      "may"
      ],
      0,
      "wish + prétérit : I wish I could."
@@ -3198,8 +3198,8 @@
      [
       "in case",
       "unless",
-      "if not",
-      "whether"
+      "whether",
+      "so that"
      ],
      0,
      "in case = au cas où."

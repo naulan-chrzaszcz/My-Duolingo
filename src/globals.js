@@ -8,12 +8,14 @@ import * as m_core_state from "./core/state.js";
 import * as m_core_util from "./core/util.js";
 import * as m_core_xp from "./core/xp.js";
 import * as m_exercises_distractors from "./exercises/distractors.js";
+import * as m_exercises_drills from "./exercises/drills.js";
 import * as m_exercises_generate from "./exercises/generate.js";
 import * as m_exercises_hangul from "./exercises/hangul.js";
 import * as m_exercises_render from "./exercises/render.js";
 import * as m_exercises_validate from "./exercises/validate.js";
 import * as m_features_ai_units from "./features/ai-units.js";
 import * as m_features_coach from "./features/coach.js";
+import * as m_features_grammar from "./features/grammar.js";
 import * as m_features_placement from "./features/placement.js";
 import * as m_features_quests from "./features/quests.js";
 import * as m_features_theme_training from "./features/theme-training.js";
@@ -54,12 +56,14 @@ const MODULES = [
   m_core_util,
   m_core_xp,
   m_exercises_distractors,
+  m_exercises_drills,
   m_exercises_generate,
   m_exercises_hangul,
   m_exercises_render,
   m_exercises_validate,
   m_features_ai_units,
   m_features_coach,
+  m_features_grammar,
   m_features_placement,
   m_features_quests,
   m_features_theme_training,

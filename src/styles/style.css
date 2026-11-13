@@ -590,3 +590,47 @@ input[type=range]{min-height:32px}
 @media(max-width:420px){.ftxt h3{font-size:19px}}
 #instx{min-width:40px;min-height:40px}
 @media(max-width:359px){#bottomnav a{font-size:9px;letter-spacing:-.02em}}
+/* v27 : effets (éclats, série, envol des étiquettes, entrée des exercices) */
+.burst{position:fixed;z-index:96;width:0;height:0;pointer-events:none}
+.burst i{position:absolute;left:-4px;top:-4px;width:8px;height:8px;border-radius:50%;animation:burst .8s cubic-bezier(.15,.85,.3,1) both}
+.burst i.bsq{border-radius:2px;width:7px;height:10px}
+@keyframes burst{0%{transform:translate(0,0) scale(1.1) rotate(0);opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(.25) rotate(160deg);opacity:0}}
+.lfoot.ok .fic{animation:ficpop .45s cubic-bezier(.2,.9,.3,1.5)}
+.lfoot.bad .fic{animation:shake .4s}
+@keyframes ficpop{0%{transform:scale(.4)}60%{transform:scale(1.18)}100%{transform:scale(1)}}
+.lbody.enter>*{animation:slidein .3s cubic-bezier(.2,.9,.3,1) both}
+.lbody.enter>*:nth-child(2){animation-delay:.04s}.lbody.enter>*:nth-child(3){animation-delay:.08s}.lbody.enter>*:nth-child(n+4){animation-delay:.11s}
+@keyframes slidein{from{opacity:0;transform:translateY(14px)}}
+.opt.sel{animation:selpop .2s}
+@keyframes selpop{50%{transform:scale(1.025)}}
+.opt.right{animation:rightpop .45s}
+@keyframes rightpop{40%{transform:scale(1.04)}}
+.opt.wrong{animation:shake .35s}
+.pbar i.bump{animation:pbump .45s}
+@keyframes pbump{40%{filter:brightness(1.25) saturate(1.3)}}
+.pbar.hot i{background:linear-gradient(90deg,#5FE3A5,#FFC83D 70%,#FF9F1C);box-shadow:0 0 10px rgba(255,159,28,.45)}
+.pbar.fire i{background:linear-gradient(90deg,#FFC83D,#FF9F1C 55%,#FF5A3C);background-size:200% 100%;animation:fire 1.2s linear infinite;box-shadow:0 0 14px rgba(255,90,60,.55)}
+@keyframes fire{to{background-position:-200% 0}}
+.pbar.hot #pcombo{animation:bob 1s ease-in-out infinite}
+.pbar.fire #pcombo{font-size:15px;color:#FF5A3C}
+.tile:active,.opt:active,.btn:active,.tcard:active{transition-duration:.03s}
+.tcard:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line)}
+/* notions de grammaire */
+.nlist .nrow .un{font-size:18px;background:#F3EEFF}
+.nsubs{display:flex;flex-direction:column;gap:6px;margin:-2px 0 6px 46px}
+.nsub{display:flex;align-items:center;gap:8px;justify-content:space-between;text-align:left;border:2px solid var(--line);background:#fff;border-radius:12px;padding:8px 10px;font:inherit;font-size:13.5px;font-weight:800;color:var(--ink);cursor:pointer}
+.nsub:hover{border-color:var(--pri)}
+.nsub .ur{font-size:12px}
+.drules{padding-left:18px;margin:4px 0 10px;font-size:14px;line-height:1.5;color:var(--ink)}
+.drules li{margin-bottom:6px}
+.dex b.dans{color:var(--ok-d);background:var(--okbg);border-radius:6px;padding:0 4px}
+.fhint{margin:-8px 0 12px;color:var(--muted);font-size:15px}
+.fhint b{color:var(--pri)}
+.fillin{font-size:18px}
+.blank.typed{color:var(--ink)}
+.blank.good{color:var(--ok-d);border-bottom-color:var(--ok)}
+.blank.bad{color:var(--bad-d);border-bottom-color:var(--bad)}
+@media(max-width:600px){.nsubs{margin-left:10px}}
+/* mots à retenir : bouton « S'entraîner » en haut, toujours visible */
+.bankbar{position:sticky;top:-22px;z-index:4;background:var(--card);margin:6px -22px 4px;padding:8px 62px 10px 22px;box-shadow:0 8px 8px -8px rgba(43,40,80,.2)}
+.bankbar .btn{margin-top:0}

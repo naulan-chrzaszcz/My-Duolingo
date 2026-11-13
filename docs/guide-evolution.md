@@ -65,6 +65,19 @@ Attention : insérer une unité au milieu décale la progression enregistrée de
 6. Tests : ajouter la bonne réponse automatique dans `tests/solver.py`.
 7. Traduire les nouveaux textes (voir « Un texte d'interface »).
 
+## Une notion de grammaire, une règle ou un gabarit de phrase
+
+1. Ouvrir `src/content/grammar/<langue>.json` (`en` : anglais, textes en français ; `fr` : « Learn French », textes en anglais ; `ko` : coréen, textes en français).
+2. Une règle (`subs`) a un `id`, un titre `t`, un niveau `lv`, un mémo `memo`, ses règles `r`, ses QCM `i` et, en anglais et en FLE, des phrases à traduire `p`.
+3. QCM : `[question avec ___, options, n° de règle, indice, autres réponses acceptées]`.
+   - La première option est la bonne ; les autres doivent être de vraies formes fausses dans cette phrase (pas de mots inventés).
+   - L'indice (verbe à l'infinitif…) autorise l'exercice « écris le mot qui manque ».
+   - `{a|b}` = choix au hasard, `{1=a|b}` = choix lié (même rang dans toute la phrase, options comprises), `{@liste}` = mot du lexique `lex`.
+4. Phrase à traduire : `s` (phrase source par langue d'interface : `fr`, `en`, `ko`), `t` (traductions acceptées, la première sert aux étiquettes), `x` (au moins 3 traductions fausses : elles servent de mauvaises réponses et d'étiquettes en trop).
+5. Pour mêler la règle aux leçons d'une unité : ajouter son `id` dans `units` > cours > titre exact de l'unité.
+6. Traduire titre, mémo et règles : section `content` de `ko.json` (anglais et FLE) ou de `en.json` (coréen).
+7. Lancer `node tests/run.mjs grammar_drills` (chaque gabarit est tiré 40 fois) puis `node tests/run.mjs data_integrity`.
+
 ## Un écran
 
 1. Créer `src/screens/<nom>.js` qui exporte `renderXxx(view)`.

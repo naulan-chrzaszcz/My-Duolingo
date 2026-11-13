@@ -6,6 +6,7 @@ import { $, esc, shuffle } from "../core/util.js";
 import { TEMPL, ctxFor, make } from "../exercises/generate.js";
 import { HG_T } from "../exercises/hangul.js";
 import { errStats, startCoach } from "../features/coach.js";
+import { notionPicker } from "../features/grammar.js";
 import { placeEstimate, placeIntro } from "../features/placement.js";
 import { themePicker } from "../features/theme-training.js";
 import { bankDue, bankView } from "../features/word-bank.js";
@@ -23,7 +24,15 @@ export function renderTrain(v) {
   const cards = [];
   const ccid = curCid();
   const add = (ic, t, d, tag, fn) => cards.push({ ic, t, d, tag, fn });
+  const NOTIONS = "Notions de grammaire";
   if (s.id === "en") {
+    add(
+      "🧩",
+      NOTIONS,
+      "Temps, mots de liaison, modaux, prépositions : des phrases nouvelles à chaque séance.",
+      "Grammaire",
+      () => notionPicker(ccid),
+    );
     add("💬", "Mots utiles — Conversation", "Expressions du quotidien pour parler naturellement.", "Quotidien", () =>
       trainVocab("en-daily"),
     );
@@ -59,6 +68,13 @@ export function renderTrain(v) {
     );
     add("✍️", "Dictée", "Écoute et écris la phrase exacte, mot pour mot.", "Dictée", () => trainDictation(ccid));
   } else if (ccid === "fr-fle") {
+    add(
+      "🧩",
+      NOTIONS,
+      "Temps, mots de liaison, modaux, prépositions : des phrases nouvelles à chaque séance.",
+      "Grammaire",
+      () => notionPicker("fr-fle"),
+    );
     add("💬", "Useful words — French", "Everyday words and phrases, with audio.", "Vocabulary", () =>
       trainVocab("fr-fle"),
     );
@@ -122,6 +138,13 @@ export function renderTrain(v) {
       trainHangul("build"),
     );
     add("📋", "Tableau du hangul", "Toutes les lettres, à toucher pour les écouter.", "Référence", () => hangulChart());
+    add(
+      "🧩",
+      NOTIONS,
+      "Temps, connecteurs, modaux, particules : des phrases nouvelles à chaque séance.",
+      "Grammaire",
+      () => notionPicker("ko"),
+    );
     add("🐯", "Mots utiles", "Vocabulaire et phrases essentielles.", "Vocabulaire", () => trainVocab("ko"));
     add(
       "👆",

@@ -1,0 +1,254 @@
+{
+ "_": "Notions de grammaire coréennes (textes en français, traduits en anglais dans en.json > content). Même syntaxe de gabarits que en.json. Pas de paires de traduction : le cours coréen demande aussi la romanisation.",
+ "lang": "ko-KR",
+ "cid": "ko",
+ "lex": {},
+ "notions": [
+  {
+   "id": "tense",
+   "ic": "⏳",
+   "t": "Les temps",
+   "d": "Passé, futur, action en cours : -았/었어요, -(으)ㄹ 거예요, -고 있어요.",
+   "subs": [
+    {
+     "id": "ko.t.past",
+     "t": "Le passé : -았/었어요",
+     "lv": 0,
+     "memo": "Radical + 았어요 après ㅏ ou ㅗ (갔어요, 봤어요), 었어요 après les autres voyelles (먹었어요), 하다 → 했어요. Attention aux verbes irréguliers : 춥다 → 추웠어요, 쓰다 → 썼어요.",
+     "r": [
+      "Passé poli : radical + 았어요 après ㅏ ou ㅗ, 었어요 après les autres voyelles ; 하다 → 했어요 : 갔어요, 먹었어요, 공부했어요.",
+      "Un mot de temps passé (어제, 지난주, 아까, 작년) appelle le passé.",
+      "Verbes irréguliers : radical en ㅂ → 웠어요 (춥다 → 추웠어요) ; radical en ㅡ → ㅡ tombe (쓰다 → 썼어요)."
+     ],
+     "i": [
+      ["{어제|지난 주말에|아까} {1=친구를|영화를|점심을} ___.", ["{1=만났어요|봤어요|먹었어요}", "{1=만나요|봐요|먹어요}", "{1=만날 거예요|볼 거예요|먹을 거예요}", "{1=만나고 있어요|보고 있어요|먹고 있어요}"], 1, "{1=만나다|보다|먹다}"],
+      ["작년에 한국에서 한국어를 ___.", ["공부했어요", "공부해요", "공부할 거예요", "공부하세요"], 1, "공부하다"],
+      ["어제는 날씨가 정말 ___. 눈이 왔어요.", ["추웠어요", "추워요", "추울 거예요", "춥었어요"], 2, "춥다"],
+      ["지난주에 친구에게 편지를 ___.", ["썼어요", "써요", "쓸 거예요", "쓰었어요"], 2, "쓰다"],
+      ["아까 커피를 두 잔 ___.", ["마셨어요", "마셔요", "마실 거예요", "마시고 있어요"], 1, "마시다"]
+     ]
+    },
+    {
+     "id": "ko.t.fut",
+     "t": "Le futur : -(으)ㄹ 거예요",
+     "lv": 0,
+     "memo": "Radical + ㄹ 거예요 après une voyelle (갈 거예요), 을 거예요 après une consonne (먹을 거예요). Avec 내일, 다음 주, 주말에 : on parle du futur.",
+     "r": [
+      "Futur ou intention : radical + ㄹ 거예요 après une voyelle, 을 거예요 après une consonne : 갈 거예요, 먹을 거예요.",
+      "Un mot de temps futur (내일, 다음 주, 이따가, 이번 주말에) appelle le futur."
+     ],
+     "i": [
+      ["{내일|다음 주에|이번 주말에} {1=부산에|친구를|영화를} ___.", ["{1=갈 거예요|만날 거예요|볼 거예요}", "{1=갔어요|만났어요|봤어요}", "{1=가고 있어요|만나고 있어요|보고 있어요}", "{1=가을 거예요|만나을 거예요|보을 거예요}"], 1, "{1=가다|만나다|보다}"],
+      ["내일 저녁에 김치찌개를 ___.", ["먹을 거예요", "먹었어요", "먹고 있었어요", "먹어 봤어요"], 1, "먹다"],
+      ["다음 달에 이사___ 거예요.", ["할", "해서", "하고", "했을"], 0],
+      ["이따가 친구한테 ___.", ["전화할 거예요", "전화했어요", "전화하고 있었어요", "전화해 봤어요"], 1, "전화하다"]
+     ]
+    },
+    {
+     "id": "ko.t.prog",
+     "t": "En train de : -고 있어요",
+     "lv": 1,
+     "memo": "Radical + 고 있어요 = être en train de : 자고 있어요, 배우고 있어요. 지금 (maintenant) et 요즘 (ces temps-ci) vont souvent avec -고 있어요.",
+     "r": [
+      "Action en train de se faire : radical + 고 있어요 : 자고 있어요 (il est en train de dormir).",
+      "요즘 (ces temps-ci) décrit une activité qui dure : 요즘 한국어를 배우고 있어요."
+     ],
+     "i": [
+      ["전화하지 마세요. 지금 아기가 ___.", ["자고 있어요", "잤어요", "자고 싶어요", "자세요"], 0, "자다"],
+      ["요즘 저는 한국어를 열심히 ___.", ["배우고 있어요", "배웠어요", "배울 거예요", "배우세요"], 1, "배우다"],
+      ["버스 안이에요. 지금 회사에 ___.", ["가고 있어요", "갔어요", "갈 수 있어요", "가 봤어요"], 0, "가다"]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "link",
+   "ic": "🔗",
+   "t": "Les connecteurs",
+   "d": "-고, -지만, -아서/어서, -(으)니까, -(으)면, -는데 : relier deux propositions.",
+   "subs": [
+    {
+     "id": "ko.l.go",
+     "t": "Et, mais : -고, -지만",
+     "lv": 0,
+     "memo": "-고 relie deux actions ou deux faits qui vont ensemble (샤워를 하고 아침을 먹어요). -지만 oppose deux idées (비싸지만 예뻐요).",
+     "r": [
+      "-고 relie deux actions ou deux faits qui vont ensemble : 샤워를 하고 아침을 먹어요.",
+      "-지만 oppose deux idées : 비싸지만 예뻐요. Au passé : -았/었지만 (공부했지만)."
+     ],
+     "i": [
+      ["열심히 ___ 시험을 잘 못 봤어요.", ["공부했지만", "공부해서", "공부하면", "공부하러"], 1, "공부하다"],
+      ["저는 보통 샤워를 ___ 아침을 먹어요.", ["하고", "하지만", "하러", "하는데"], 0, "하다"],
+      ["이 가방은 좀 ___ 정말 예뻐요.", ["비싸지만", "비싸서", "비싸면", "비싸러"], 1, "비싸다"],
+      ["주말에 영화를 ___ 저녁을 먹었어요.", ["보고", "보지만", "보러", "보면"], 0, "보다"],
+      ["한국어는 ___ 재미있어요.", ["어렵지만", "어려우면", "어렵어서", "어려우러"], 1, "어렵다"]
+     ]
+    },
+    {
+     "id": "ko.l.seo",
+     "t": "La cause : -아서/어서, -(으)니까",
+     "lv": 1,
+     "memo": "-아서/어서 = parce que, mais jamais au passé et jamais devant un ordre ou une proposition (늦어서 미안해요). -(으)니까 = puisque, possible devant un ordre (비가 오니까 우산을 가져가세요).",
+     "r": [
+      "-아서/어서 = parce que (cause) ; jamais au passé, ni devant un ordre ou une proposition : 늦어서 미안해요.",
+      "-(으)니까 = puisque ; possible devant un ordre ou une proposition : 비가 오니까 우산을 가져가세요."
+     ],
+     "i": [
+      ["___ 미안해요.", ["늦어서", "늦으니까", "늦지만", "늦고"], 0, "늦다"],
+      ["비가 ___ 우산을 가져가세요.", ["오니까", "와서", "오지만", "오고"], 1, "오다"],
+      ["배가 ___ 라면을 먹었어요.", ["고파서", "고프지만", "고프면", "고파도"], 0, "고프다"],
+      ["시간이 ___ 택시를 탑시다.", ["없으니까", "없어서", "없지만", "없고"], 1, "없다"],
+      ["감기에 ___ 학교에 못 갔어요.", ["걸려서", "걸렸어서", "걸리지만", "걸리면"], 0, "걸리다"]
+     ]
+    },
+    {
+     "id": "ko.l.myeon",
+     "t": "Si, alors que : -(으)면, -는데",
+     "lv": 1,
+     "memo": "-(으)면 = si, quand (시간이 있으면 같이 가요). -(으)ㄴ/는데 pose le contexte avant une question ou une demande (지금 마트에 가는데 뭐 필요해요?).",
+     "r": [
+      "-(으)면 = si / quand (condition) : 시간이 있으면 같이 가요.",
+      "-(으)ㄴ/는데 pose le contexte avant une demande, une question ou une proposition : 지금 마트에 가는데 뭐 필요해요?"
+     ],
+     "i": [
+      ["시간이 ___ 같이 영화 봐요.", ["있으면", "있어서", "있지만", "있고"], 0, "있다"],
+      ["내일 비가 ___ 집에 있을 거예요.", ["오면", "오러", "오지만", "오고"], 0, "오다"],
+      ["지금 마트에 ___ 뭐 필요한 거 있어요?", ["가는데", "가러", "가지만", "가서"], 1, "가다"],
+      ["한국에 ___ 꼭 연락하세요.", ["오면", "오지만", "오러", "오는데"], 0, "오다"]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "modal",
+   "ic": "🔑",
+   "t": "Les expressions modales",
+   "d": "Devoir, pouvoir, avoir le droit, avoir envie, supposer : -아야 해요, -(으)ㄹ 수 있어요, -아도 돼요, -고 싶어요, -(으)ㄹ 것 같아요.",
+   "subs": [
+    {
+     "id": "ko.m.must",
+     "t": "Obligation, permission, interdiction",
+     "lv": 1,
+     "memo": "-아/어야 해요 = il faut (가야 해요). -아/어도 돼요 = on a le droit (들어가도 돼요?). -(으)면 안 돼요 = c'est interdit (사진을 찍으면 안 돼요).",
+     "r": [
+      "-아/어야 해요 = il faut, je dois : 가야 해요, 먹어야 해요.",
+      "-아/어도 돼요 = permission : 들어가도 돼요?",
+      "-(으)면 안 돼요 = interdiction : 여기서 사진을 찍으면 안 돼요."
+     ],
+     "i": [
+      ["내일 아침 일찍 ___ 해요.", ["일어나야", "일어나도", "일어나면", "일어나고"], 0, "일어나다"],
+      ["여기서 사진을 ___ 안 돼요.", ["찍으면", "찍어야", "찍어도", "찍고"], 2, "찍다"],
+      ["창문을 ___ 돼요? — 네, 열어도 돼요.", ["열어도", "열어야", "열고", "열지만"], 1, "열다"],
+      ["시험이 있어서 오늘 밤에 ___ 해요.", ["공부해야", "공부해도", "공부하면", "공부하고"], 0, "공부하다"],
+      ["박물관 안에서 음식을 ___ 안 돼요.", ["먹으면", "먹어야", "먹어도", "먹고"], 2, "먹다"]
+     ]
+    },
+    {
+     "id": "ko.m.can",
+     "t": "Pouvoir et avoir envie : -(으)ㄹ 수 있어요, -고 싶어요",
+     "lv": 0,
+     "memo": "-(으)ㄹ 수 있어요 / 없어요 = pouvoir / ne pas pouvoir (할 수 있어요). -고 싶어요 = j'ai envie de (가고 싶어요). Irrégulier : 걷다 → 걸을 수 있어요.",
+     "r": [
+      "-(으)ㄹ 수 있어요 / 없어요 = pouvoir / ne pas pouvoir : 수영할 수 있어요. 걷다 → 걸을 수 있어요 (ㄷ devient ㄹ).",
+      "-고 싶어요 = j'ai envie de (pour soi-même) : 한국에 가고 싶어요."
+     ],
+     "i": [
+      ["저는 한국어를 조금 ___ 수 있어요.", ["할", "하고", "해서", "하면"], 0, "하다"],
+      ["이번 휴가에 제주도에 ___ 싶어요.", ["가고", "가서", "가면", "가야"], 1, "가다"],
+      ["다리가 아파서 오늘은 ___ 수 없어요.", ["걸을", "걷을", "걸어", "걷고"], 0, "걷다"],
+      ["매운 음식을 ___ 수 있어요?", ["먹을", "먹는", "먹고", "먹어"], 0, "먹다"],
+      ["피곤해서 집에서 ___ 싶어요.", ["쉬고", "쉬어", "쉴", "쉬면"], 1, "쉬다"]
+     ]
+    },
+    {
+     "id": "ko.m.guess",
+     "t": "Supposer : -(으)ㄹ 것 같아요",
+     "lv": 2,
+     "memo": "-(으)ㄹ 것 같아요 = je crois que ça va… (비가 올 것 같아요). -는 것 같아요 = on dirait que, en ce moment (자는 것 같아요). -(으)ㄴ 것 같아요 = on dirait que c'est déjà fait (끝난 것 같아요).",
+     "r": [
+      "-(으)ㄹ 것 같아요 = supposition sur ce qui va se passer : 비가 올 것 같아요.",
+      "-는 것 같아요 = on dirait que (en ce moment) ; -(으)ㄴ 것 같아요 = on dirait que c'est déjà fait : 자는 것 같아요, 끝난 것 같아요."
+     ],
+     "i": [
+      ["하늘이 어두워요. 곧 비가 ___ 것 같아요.", ["올", "온", "오는", "와"], 0, "오다"],
+      ["민수 씨 방에 불이 꺼져 있어요. 벌써 ___ 것 같아요.", ["자는", "잘", "자고", "자서"], 1, "자다"],
+      ["회의가 벌써 ___ 것 같아요. 아무도 없어요.", ["끝난", "끝날", "끝나는", "끝나고"], 1, "끝나다"],
+      ["내일은 ___ 것 같아요. 일기예보를 봤어요.", ["추울", "추운", "춥을", "추워"], 0, "춥다"]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "prep",
+   "ic": "📍",
+   "t": "Les particules",
+   "d": "Le coréen n'a pas de prépositions : 에, 에서, 에게, (으)로, 부터, 까지, 동안 se collent après le nom.",
+   "subs": [
+    {
+     "id": "ko.p.place",
+     "t": "Le lieu : 에 ou 에서",
+     "lv": 0,
+     "memo": "에 = là où l'on va ou là où l'on est (학교에 가요, 집에 있어요). 에서 = là où l'action se passe (도서관에서 공부해요).",
+     "r": [
+      "에 = destination ou lieu où l'on se trouve (가다, 오다, 있다, 살다) : 학교에 가요, 집에 있어요.",
+      "에서 = lieu où se déroule une action : 도서관에서 공부해요."
+     ],
+     "i": [
+      ["저는 {도서관|카페|집}___ 공부해요.", ["에서", "에", "을", "로"], 1],
+      ["주말에 {부산|제주도|시골}___ 가요.", ["에", "에서", "와", "이"], 0],
+      ["고양이가 소파 위___ 있어요.", ["에", "에서", "를", "로"], 0],
+      ["저는 {회사|학교|식당}___ 일해요.", ["에서", "에", "를", "가"], 1],
+      ["제 동생은 서울___ 살아요.", ["에", "을", "로", "가"], 0]
+     ]
+    },
+    {
+     "id": "ko.p.target",
+     "t": "Personnes et moyens : 에게, (으)로",
+     "lv": 1,
+     "memo": "에게 / 한테 = à quelqu'un (친구에게 선물을 줬어요). (으)로 = avec, par, en (moyen) : 로 après une voyelle ou ㄹ (버스로, 지하철로), 으로 après une autre consonne (젓가락으로).",
+     "r": [
+      "에게 / 한테 = à quelqu'un (donner, téléphoner, écrire) : 친구에게 선물을 줬어요. 한테 est plus familier.",
+      "(으)로 = moyen ou direction : 로 après une voyelle ou ㄹ (버스로, 지하철로), 으로 après une autre consonne (젓가락으로)."
+     ],
+     "i": [
+      ["어제 친구___ 선물을 줬어요.", ["에게", "에", "에서", "을"], 0],
+      ["{지하철|버스|택시}___ 회사에 가요.", ["로", "으로", "에서", "을"], 1],
+      ["젓가락___ 먹어요.", ["으로", "로", "에서", "을"], 1],
+      ["어머니___ 전화했어요.", ["한테", "에서", "을", "로"], 0],
+      ["펜___ 이름을 쓰세요.", ["으로", "로", "에", "에서"], 1]
+     ]
+    },
+    {
+     "id": "ko.p.time",
+     "t": "Le temps : 에, 부터… 까지, 동안",
+     "lv": 1,
+     "memo": "에 après une heure ou un jour (세 시에, 월요일에) mais pas après 오늘, 내일, 어제. 부터 … 까지 = de … à. 동안 = pendant.",
+     "r": [
+      "에 + moment : 세 시에, 월요일에, 아침에 (mais pas de 에 après 오늘, 내일, 어제).",
+      "부터 … 까지 = de … à : 아홉 시부터 여섯 시까지.",
+      "동안 + durée = pendant : 두 시간 동안."
+     ],
+     "i": [
+      ["회의는 {세|네|다섯} 시___ 시작해요.", ["에", "에서", "동안", "을"], 0],
+      ["저는 아홉 시___ 여섯 시까지 일해요.", ["부터", "에", "까지", "동안"], 1],
+      ["{두|세} 시간 ___ 운동했어요.", ["동안", "부터", "에", "까지"], 2],
+      ["저는 {월요일|금요일|토요일}___ 수영을 배워요.", ["에", "에서", "을", "로"], 0],
+      ["___ 친구를 만날 거예요.", ["내일", "내일에", "내일에서", "내일을"], 0]
+     ]
+    }
+   ]
+  }
+ ],
+ "units": {
+  "ko": {
+   "Les bases": ["ko.p.place"],
+   "Les nombres & l'heure": ["ko.p.time"],
+   "Conversation quotidienne": ["ko.t.past", "ko.t.prog", "ko.m.can"],
+   "Au travail (회사)": ["ko.t.fut", "ko.m.must"],
+   "Shopping & transports": ["ko.p.target", "ko.p.place"],
+   "Politesse & honorifiques": ["ko.m.must"],
+   "Émotions & opinions": ["ko.l.seo", "ko.m.guess", "ko.l.myeon"],
+   "Coréen soutenu & e-mails": ["ko.l.go"]
+  }
+ }
+}

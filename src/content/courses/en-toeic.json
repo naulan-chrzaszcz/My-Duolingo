@@ -37,8 +37,8 @@
      [
       "must",
       "must to",
-      "musts",
-      "have"
+      "have",
+      "has to"
      ],
      0,
      "Modal must + base verbale, sans to."
@@ -48,8 +48,8 @@
      [
       "will be",
       "will",
-      "is being to",
-      "has"
+      "has",
+      "will have"
      ],
      0,
      "Passif futur : will be + participe passé."
@@ -69,9 +69,9 @@
      "Mr. Lee ___ to the Tokyo office last month.",
      [
       "was transferred",
-      "transferred to",
       "is transferring",
-      "transfers"
+      "transfers",
+      "has transferred"
      ],
      0,
      "Il a été muté : passif au prétérit."
@@ -267,8 +267,8 @@
      [
       "giving",
       "doing",
-      "making to",
-      "taking"
+      "taking",
+      "saying"
      ],
      0,
      "give a presentation = faire une présentation."
@@ -278,8 +278,8 @@
      [
       "attending",
       "assisting",
-      "joining to",
-      "attending to"
+      "attending to",
+      "assisting to"
      ],
      0,
      "attend a meeting = assister à une réunion (assist = aider)."
@@ -290,7 +290,7 @@
       "order",
       "work",
       "use",
-      "service to"
+      "function"
      ],
      0,
      "out of order = en panne."
@@ -301,7 +301,7 @@
       "fill out",
       "fill",
       "full out",
-      "fill to"
+      "fill up"
      ],
      0,
      "fill out a form = remplir un formulaire."
@@ -310,9 +310,9 @@
      "He is ___ for a new job.",
      [
       "applying",
-      "applicating",
       "postulating",
-      "appealing"
+      "appealing",
+      "applied"
      ],
      0,
      "apply for a job = postuler."
@@ -1918,7 +1918,7 @@
       "is leaning",
       "is leaned",
       "has leaned",
-      "leans to"
+      "was leaned"
      ],
      0,
      "Action en cours visible : is + -ing."
@@ -1940,7 +1940,7 @@
       "above",
       "among",
       "between",
-      "along to"
+      "along"
      ],
      0,
      "above = au-dessus de."
@@ -2675,7 +2675,7 @@
      [
       "belongings",
       "belongs",
-      "belonging to",
+      "belonging",
       "belonged"
      ],
      0,
@@ -3936,8 +3936,8 @@
      [
       "early",
       "soon",
-      "before",
-      "sooner than"
+      "quick",
+      "first"
      ],
      0,
      "arrive early = arriver en avance."
@@ -4094,7 +4094,7 @@
       "don't need to",
       "mustn't",
       "can't",
-      "shouldn't to"
+      "haven't to"
      ],
      0,
      "Absence d'obligation : don't need to / don't have to (mustn't = interdiction)."
@@ -4193,7 +4193,7 @@
       "should",
       "must",
       "can",
-      "would to"
+      "shall"
      ],
      0,
      "should have + participe = reproche (tu aurais dû)."
@@ -4531,9 +4531,9 @@
      "Profits reached a ___ in December before falling.",
      [
       "peak",
-      "top up",
       "pick",
-      "summit up"
+      "peek",
+      "top up"
      ],
      0,
      "reach a peak = atteindre un sommet."
@@ -4764,7 +4764,7 @@
       "recalled",
       "reminded",
       "recovered",
-      "returned back"
+      "retired"
      ],
      0,
      "recall a product = rappeler un produit."
@@ -4875,8 +4875,8 @@
      [
       "expand",
       "expend",
-      "extend to",
-      "expense"
+      "expense",
+      "extent"
      ],
      0,
      "expand into = s'étendre sur un marché. expend = dépenser."
@@ -4908,8 +4908,8 @@
      [
       "exceeded",
       "excelled",
-      "exceeded to",
-      "accessed"
+      "accessed",
+      "exited"
      ],
      0,
      "exceed = dépasser (attentes, budget)."
@@ -5178,8 +5178,8 @@
      [
       "plus",
       "more",
-      "bonus to",
-      "benefit of"
+      "most",
+      "much"
      ],
      0,
      "« is a plus » = est un atout."
@@ -5657,8 +5657,8 @@
      [
       "at least",
       "at last",
-      "at most of",
-      "less"
+      "at less",
+      "least"
      ],
      0,
      "at least = au moins."
@@ -6000,7 +6000,7 @@
       "available",
       "availability",
       "avail",
-      "availably"
+      "availed"
      ],
      0,
      "Après be : adjectif (available)."

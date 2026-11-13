@@ -5,6 +5,7 @@ import { FULL, hgIdx, isDone, setDone, syncProg } from "../core/progress.js";
 import { $, NPU, PRAISE, dkey, esc, rnd, shuffle, yest } from "../core/util.js";
 import { addToday, level, regen, todayXp } from "../core/xp.js";
 import { distract } from "../exercises/generate.js";
+import { drillLabel, drillRecord } from "../exercises/drills.js";
 import { R } from "../exercises/render.js";
 import { words } from "../exercises/validate.js";
 import { placeStage } from "../features/placement.js";
@@ -13,7 +14,7 @@ import { bankApply } from "../features/word-bank.js";
 import { beep, say } from "../services/speech.js";
 import { mascot } from "../ui/mascot.js";
 import { VIEW, renderAll, renderTop } from "../ui/router.js";
-import { closeModal, confetti, countUp, modal, toast } from "../ui/ui.js";
+import { burst, closeModal, confetti, countUp, modal, toast } from "../ui/ui.js";
 
 // ===================== MOTEUR DE LEÇON =====================
 /** Leçon en cours (null hors leçon). Lecture partout ; remplacement avec set_L(). */
@@ -105,6 +106,28 @@ export function updHead() {
         ? `<span style="color:var(--bad)">${L.ext ? "🔥" : ""}❤️ ${L.jh}</span>`
         : `<span style="color:${L.ai ? "var(--pri)" : "var(--gold-d)"}">${L.ai === "ia" ? "✨ IA" : L.ai ? "🔀 Mix" : "⚡ " + L.xp}</span>`;
   $("#pcombo").textContent = L.combo >= 3 ? `🔥 ${L.combo} d'affilée` : "";
+  // barre de progression : elle chauffe avec la série de bonnes réponses, et sursaute quand elle avance
+  const bar = $(".pbar");
+  if (bar) {
+    bar.classList.toggle("hot", L.combo >= 3);
+    bar.classList.toggle("fire", L.combo >= 5);
+  }
+  const fill = $("#pfill");
+  if (fill.dataset.p !== String(p)) {
+    if (fill.dataset.p && +fill.dataset.p < p) {
+      fill.classList.remove("bump");
+      void fill.offsetWidth;
+      fill.classList.add("bump");
+    }
+    fill.dataset.p = String(p);
+  }
+}
+/** Éclat de couleurs autour de la coche de la bonne réponse (plus fourni pendant une série). */
+export function okFx() {
+  const fic = $("#lfoot .fic");
+  if (!fic || !L) return;
+  const r = fic.getBoundingClientRect();
+  burst(r.left + r.width / 2, r.top + r.height / 2, L.combo >= 5 ? 24 : L.combo >= 3 ? 18 : 12);
 }
 // Exercices qui demandent d'écouter (haut-parleur) ou de parler (micro)
 export const isAudioEx = ex =>
@@ -171,7 +194,9 @@ export function nextEx() {
   L.state = "answer";
   const ex = L.ex;
   const body = $("#lbody");
-  body.classList.remove("shake");
+  body.classList.remove("shake", "enter");
+  void body.offsetWidth;
+  body.classList.add("enter");
   L.ctrl = (R[ex.t] || R.mc)(ex, body);
   if (ex._rev) {
     const t = body.querySelector(".ltitle");
@@ -237,7 +262,8 @@ export function result(res) {
     const first = !L.retries.has(ex);
     const g = L.mode === "sprint" ? 0 : (first ? 10 : 5) + (L.combo >= 5 ? 2 : 0);
     L.xp += g;
-    beep(L.combo > 0 && L.combo % 5 === 0 ? "combo" : "ok");
+    const combo = L.combo > 0 && L.combo % 5 === 0;
+    beep(combo ? "combo" : "ok", combo ? (L.combo / 5 - 1) * 2 : L.combo - 1);
     if (g) xpFly("+" + g + " XP");
     if ([3, 5, 10, 15, 20, 30].includes(L.combo)) {
       const d = document.createElement("div");
@@ -281,6 +307,7 @@ export function result(res) {
     const f = $("#lfoot");
     f.className = "lfoot " + (res.ok ? "ok" : "bad");
     f.innerHTML = `<div class="fin"><div class="fhead"><div class="fic">${res.ok ? "✓" : "✕"}</div><div class="ftxt"><h3>${res.ok ? rnd(PRAISE) : "Raté"}</h3>${res.ok ? "" : `<div class="fsol">${res.solHtml || esc(res.sol)}</div>`}</div></div></div>`;
+    if (res.ok) okFx();
     if (S.set.auto && res.speak) say(res.speak, res.lang);
     setTimeout(
       () => {
@@ -299,6 +326,7 @@ export function result(res) {
     : res.title || "Réponse correcte :";
   const sol = res.solHtml || (res.sol ? esc(res.sol) : "");
   f.innerHTML = `<div class="fin"><div class="fhead"><div class="fic">${res.ok ? "✓" : "✕"}</div><div class="ftxt"><h3>${title}</h3>${sol ? `<div class="fsol">${res.ok && !res.typo && !res.solHtml ? "🔊 " : ""}${sol}</div>` : ""}${res.rom ? `<div class="rom">${esc(res.rom)}</div>` : ""}${res.diff || ""}${res.exp ? `<div class="fexp">💡 ${esc(res.exp)}</div>` : ""}</div>${res.speak ? `<div class="faud"><button class="iconbtn" id="fa1" aria-label="Écouter">🔊</button><button class="iconbtn" id="fa2" aria-label="Écouter lentement">🐢</button></div>` : ""}</div><button class="btn ${res.ok ? "okb" : "badb"}" id="cont">Continuer</button></div>`;
+  if (res.ok) okFx();
   if (res.speak) {
     $("#fa1").onclick = autoSpeak;
     $("#fa2").onclick = () => say(res.speak2 ? res.speak2 : res.speak, res.lang, { slow: true });
@@ -400,9 +428,13 @@ export const SKILL = {
   build: "Écriture du hangul",
   match: "Vocabulaire & sens",
   write: "Rédaction",
+  fill: "Grammaire & règles",
 };
 export function ruleOf(ex) {
-  if ((ex.t === "choice" || ex.t === "spot") && ex.e) return ["r:" + ex.e.slice(0, 90), ex.e.slice(0, 110)];
+  if ((ex.t === "choice" || ex.t === "spot" || ex.t === "fill") && ex.e)
+    return ["r:" + ex.e.slice(0, 90), ex.e.slice(0, 110)];
+  // phrase générée d'une notion de grammaire : regroupée sous le titre de sa règle
+  if (ex._sub) return ["d:" + ex._sub, drillLabel(ex._sub)];
   if (ex.t === "hg") return ["h:" + ex.q, "Hangul : " + ex.q];
   if (ex.t === "build") return ["h:" + ex.syl, "Syllabe " + ex.syl + " (" + ex.roman + ")"];
   if (ex.t === "mc" && ex.w) return ["w:" + ex.answer, "Mot : " + ex.answer + " (" + ex.prompt + ")"];
@@ -431,6 +463,7 @@ export function statRule(c, u, key, label, ok) {
 export function recordStat(ex, ok) {
   const c = ex._cid || (L && L.cid);
   if (!c || ex._bank) return;
+  if (ex._sub) drillRecord(ex._sub, ok);
   const st = statBucket(c);
   const u = ex._u != null ? ex._u : L && L.u != null ? L.u : "x";
   const inc = (o, k) => {

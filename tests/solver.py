@@ -34,7 +34,7 @@ async def solve(p):
     elif t in('tiles','tilesRev','listenTiles'):
         order=await p.evaluate("""(()=>{const w=words(L.ex.answer);const used=[];return w.map(x=>{for(let i=0;i<L.ex.tiles.length;i++){if(!used.includes(i)&&L.ex.tiles[i]===x){used.push(i);return i}}return -1})})()""")
         for i in order: await p.click(f'#bank .tile[data-i="{i}"]')
-    elif t in('type','listen','dictee'):
+    elif t in('type','listen','dictee','fill'):
         await p.fill('#tin', await p.evaluate("L.ex.answer"))
     elif t=='speak':
         await p.click('#skip'); return True

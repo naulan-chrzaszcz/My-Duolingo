@@ -93,6 +93,50 @@ export function confetti(n = 140) {
     }
   })();
 }
+/** Réglage « Réduire les animations » de l'appareil. */
+export function REDUCED() {
+  try {
+    return matchMedia("(prefers-reduced-motion: reduce)").matches;
+  } catch (e) {
+    return false;
+  }
+}
+/** Éclat de particules autour d'un point de l'écran (bonne réponse). */
+export function burst(x, y, n = 14, cols) {
+  if (REDUCED()) return;
+  const box = document.createElement("div");
+  box.className = "burst";
+  box.style.left = x + "px";
+  box.style.top = y + "px";
+  const C = cols || ["#22B573", "#FFC83D", "#7C4DFF", "#3D8BFF", "#FF9F1C", "#FF7AC6"];
+  for (let i = 0; i < n; i++) {
+    const s = document.createElement("i");
+    const a = (i / n) * Math.PI * 2 + Math.random() * 0.6;
+    const d = 38 + Math.random() * 54;
+    s.style.setProperty("--dx", Math.cos(a) * d + "px");
+    s.style.setProperty("--dy", Math.sin(a) * d + "px");
+    s.style.background = C[i % C.length];
+    if (i % 3 === 0) s.className = "bsq";
+    s.style.animationDelay = Math.round(Math.random() * 70) + "ms";
+    box.appendChild(s);
+  }
+  document.body.appendChild(box);
+  setTimeout(() => box.remove(), 1000);
+}
+/** Fait glisser un élément depuis une ancienne position (étiquette qui part de la banque vers la réponse). */
+export function flyFrom(from, el) {
+  if (!from || !el || !el.animate || REDUCED()) return;
+  const to = el.getBoundingClientRect();
+  const dx = from.left - to.left,
+    dy = from.top - to.top;
+  if (Math.abs(dx) + Math.abs(dy) < 2) return;
+  try {
+    el.animate([{ transform: `translate(${dx}px,${dy}px) scale(1.04)` }, { transform: "translate(0,0) scale(1)" }], {
+      duration: 240,
+      easing: "cubic-bezier(.2,.9,.3,1.15)",
+    });
+  } catch (e) {}
+}
 export function countUp(el, to, ms = 900, suffix = "") {
   const t0 = performance.now();
   (function step(t) {

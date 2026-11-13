@@ -362,8 +362,8 @@
      [
       "repeat",
       "repeat again",
-      "say again to",
-      "tell"
+      "tell",
+      "speak"
      ],
      0,
      "Could you repeat that? (« repeat again » est redondant)."
@@ -484,7 +484,7 @@
       "by",
       "until",
       "in",
-      "on to"
+      "at"
      ],
      0,
      "by = au plus tard (date limite)."
@@ -493,9 +493,9 @@
      "The meeting has been ___ until next week.",
      [
       "postponed",
-      "delayed to",
-      "cancelled to",
-      "moved"
+      "cancelled",
+      "prolonged",
+      "advanced"
      ],
      0,
      "postpone until = reporter à."
@@ -633,9 +633,9 @@
      "Just a ___: the deployment is tonight.",
      [
       "heads-up",
-      "head-up",
       "headline",
-      "warning up"
+      "head start",
+      "warn"
      ],
      0,
      "a heads-up = un avertissement amical, une info préalable."
@@ -1290,9 +1290,9 @@
      "It was great ___ you at the meetup.",
      [
       "meeting",
-      "to meeting",
       "meet",
-      "met"
+      "met",
+      "meets"
      ],
      0,
      "It was great meeting you / great to meet you."
@@ -1393,7 +1393,7 @@
       "won't",
       "don't",
       "am not",
-      "wouldn't to"
+      "can't"
      ],
      0,
      "« I'm afraid I won't be able to… » : la façon polie de refuser ou d'annoncer une absence."
@@ -1415,7 +1415,7 @@
       "could",
       "can",
       "will",
-      "would to"
+      "shall"
      ],
      0,
      "Formule polie : I would appreciate it if you could…"
@@ -1660,9 +1660,9 @@
      "I've ___ all your comments, can you take another look?",
      [
       "addressed",
-      "adressed",
       "answered to",
-      "treated"
+      "treated",
+      "dressed"
      ],
      0,
      "address a comment = prendre en compte un commentaire (2 d en anglais)."
@@ -1715,9 +1715,9 @@
      "What do you think ___ splitting this file?",
      [
       "about",
-      "of to",
       "for",
-      "on"
+      "to",
+      "at"
      ],
      0,
      "What do you think about + -ing ?"
@@ -1843,8 +1843,8 @@
      [
       "deprecated",
       "depreciated",
-      "outdate",
-      "expired to"
+      "expired",
+      "outdate"
      ],
      0,
      "deprecated = obsolète, à ne plus utiliser (≠ depreciated = déprécié en valeur)."
@@ -1864,9 +1864,9 @@
      "Run the tests ___ opening a PR.",
      [
       "before",
-      "before to",
       "previously",
-      "prior"
+      "prior",
+      "ago"
      ],
      0,
      "before + -ing."
@@ -1995,8 +1995,8 @@
      [
       "for",
       "of",
-      "about to",
-      "from"
+      "from",
+      "to"
      ],
      0,
      "apologize for something."
@@ -2028,8 +2028,8 @@
      [
       "else",
       "other",
-      "more of",
-      "another"
+      "another",
+      "others"
      ],
      0,
      "anything else = autre chose."
@@ -2278,9 +2278,9 @@
      "Let me walk you through the main ___.",
      [
       "features",
-      "featurings",
       "feats",
-      "facts"
+      "facts",
+      "featured"
      ],
      0,
      "feature = fonctionnalité."
@@ -2290,8 +2290,8 @@
      [
       "roadmap",
       "road",
-      "waymap",
-      "timeline map"
+      "map",
+      "route"
      ],
      0,
      "roadmap = feuille de route."
@@ -2725,7 +2725,7 @@
      "We are ___ the situation closely.",
      [
       "monitoring",
-      "watching at",
+      "looking",
       "controlling",
       "surveying"
      ],
@@ -2749,7 +2749,7 @@
       "was caused",
       "caused",
       "is causing",
-      "has cause"
+      "has caused"
      ],
      0,
      "Passif : was caused by."
@@ -2878,7 +2878,7 @@
       "trade-off",
       "trade-in",
       "trademark",
-      "deal-off"
+      "tradeoffs"
      ],
      0,
      "trade-off = compromis."
@@ -2898,9 +2898,9 @@
      "My first approach ___ be to add an index.",
      [
       "would",
-      "will to",
-      "should to",
-      "is"
+      "is",
+      "has",
+      "does"
      ],
      0,
      "would + base verbale pour une hypothèse."

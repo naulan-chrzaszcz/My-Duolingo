@@ -20,7 +20,7 @@ La propriétaire écrit en français : réponds en français.
 ## Où est quoi
 
 - `src/main.js` : point d'entrée. Importe tous les modules, puis lance le démarrage dans l'ordre.
-- `src/content/` : contenu des cours en JSON (`courses/<id>.json`, `stories.json`, `sections.json`).
+- `src/content/` : contenu des cours en JSON (`courses/<id>.json`, `stories.json`, `sections.json`) et gabarits des notions de grammaire (`grammar/<langue>.json`).
   - Importer depuis `content/index.js`, qui applique la langue d'interface.
   - Ne jamais importer `data.js` directement.
 - `src/i18n/` :

@@ -1,4 +1,4 @@
-# Architecture du code (v26)
+# Architecture du code (v27)
 
 La v26 reprend exactement le comportement de la v25 dans un projet découpé en modules.
 
@@ -24,12 +24,12 @@ server/ (api PHP, installateur, LISEZ-MOI) ──────▶ dist/
 
 | Dossier | Modules | Rôle |
 | --- | --- | --- |
-| `content/` | `data.js`, `index.js`, `courses/*.json`, `stories.json`, `sections.json`, `unit-remap.json`, `real-photos.json`, `legacy.json` | Contenu des cours. `index.js` l'adapte à la langue d'interface au chargement |
+| `content/` | `data.js`, `index.js`, `courses/*.json`, `grammar/*.json`, `stories.json`, `sections.json`, `unit-remap.json`, `real-photos.json`, `legacy.json` | Contenu des cours et gabarits des notions de grammaire. `index.js` l'adapte à la langue d'interface au chargement |
 | `i18n/` | `locale.js`, `translate.js`, `en.json`, `ko.json`, `dict-en.js`, `dict-ko.js` | Langue d'interface, traduction du DOM à la volée, dictionnaires |
 | `core/` | `util.js`, `state.js`, `progress.js`, `accounts.js`, `xp.js` | Outils, état `S` du profil, migrations, progression, profils locaux, XP |
-| `exercises/` | `generate.js`, `distractors.js`, `validate.js`, `render.js`, `hangul.ts` | `make(type, ctx)`, mauvaises réponses, correction, affichage `R[type]`, hangul |
+| `exercises/` | `generate.js`, `distractors.js`, `validate.js`, `render.js`, `hangul.ts`, `drills.ts` | `make(type, ctx)`, mauvaises réponses, correction, affichage `R[type]`, hangul, phrases générées par gabarits |
 | `lesson/` | `build.js`, `engine.js`, `writing.js`, `keyboard.js` | Construction et déroulé d'une leçon (`L`), rédactions, clavier |
-| `features/` | `placement.js`, `quests.js`, `word-bank.js`, `theme-training.js`, `ai-units.js`, `coach.js` | Test de niveau, quêtes et badges, répétition espacée, thèmes, unités IA, coach |
+| `features/` | `placement.js`, `quests.js`, `word-bank.js`, `theme-training.js`, `ai-units.js`, `coach.js`, `grammar.js` | Test de niveau, quêtes et badges, répétition espacée, thèmes, unités IA, coach, notions de grammaire |
 | `screens/` | `path.js`, `training.js`, `stories.js`, `league.js`, `shop.js`, `profile.js`, `stats.js`, `accounts.js`, `onboarding.js`, `language.js` | Un module par écran ou fenêtre principale |
 | `services/` | `cloud.js`, `ai.js`, `reminders.js`, `speech.js` | Comptes en ligne et ligue, IA, rappels push, voix et micro |
 | `ui/` | `ui.js`, `router.js`, `platform.js`, `mascot.js`, `back-button.js`, `typography.js` | Toasts et modales, routage par hash, iOS/Android/thème, mascotte, bouton retour, typographie |
@@ -56,6 +56,13 @@ L'ordre compte : la traduction du DOM doit observer la page avant la typographie
   - Pour les remplacer : `set_S()` et `set_L()`.
 - `ui/back-button.js` enveloppe `modal`, `closeModal`, `openSession`, `closeLesson` et `playStory` avec les `set_…` correspondants.
   - Ainsi, chaque fenêtre ouverte ajoute une entrée d'historique.
+
+## Notions de grammaire (v27)
+
+- `content/grammar/en.json`, `fr.json`, `ko.json` : notions (temps, liaison, modaux, prépositions ou particules), règles, gabarits de QCM et de phrases à traduire, et correspondance avec les unités des cours (`units`).
+- `exercises/drills.ts` développe les gabarits (`genItem`, `genPair`) et mélange des phrases générées aux leçons : `ctxFor` appelle `mixDrills`, sauf avec l'option `noDrill`.
+- `features/grammar.js` : fenêtre de choix, mémo d'une règle, séance de 12 exercices (`drillExercises`).
+- Le taux de réussite par règle est gardé dans `S.drill` (`{ id de la règle: [réponses, erreurs] }`), synchronisé avec le profil.
 
 ## Points faibles connus (prochaines étapes)
 

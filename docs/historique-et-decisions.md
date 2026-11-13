@@ -41,6 +41,9 @@ Ce fichier garde le « pourquoi » des choix faits pendant le développement (no
 | En-têtes CSP et X-Frame-Options | Le site ne parle qu'à lui-même et à api.anthropic.com ; il ne peut pas être encadré |
 | Dictée du clavier en secours du micro | La reconnaissance vocale n'existe pas dans l'app iPhone installée |
 | Retour haptique iPhone par interrupteur caché | navigator.vibrate n'existe pas sur iOS ; astuce fonctionnelle sur iOS 18+ |
+| Phrases de grammaire générées par gabarits (v27) | Avec 4 à 8 QCM fixes par unité, on finissait par retenir la réponse ; un gabarit varie sujets, lieux et moments, et les mauvaises réponses sont toujours de vraies formes (autres temps du même verbe, autres prépositions) |
+| Explications rédigées par règle, pas par phrase (v27) | Une règle sert à des centaines de phrases : quelques dizaines de textes seulement à traduire en anglais et en coréen |
+| « Écris le mot qui manque » sans tolérance de faute de frappe (v27) | La forme exacte est le sujet de l'exercice (has / have, allé / allée) ; seuls la casse, la ponctuation, les contractions et, en français, les accents oubliés sont tolérés |
 
 ## Grandes étapes (versions)
 
@@ -58,3 +61,4 @@ Ce fichier garde le « pourquoi » des choix faits pendant le développement (no
 | v24 | Revue mobile iPhone/Android : toasts, zoom des champs, cibles tactiles, contraste, clavier, typographie française, polices auto-hébergées, CSP, liste blanche des modes IA |
 | v25 | Deux titres de cartes traduits en coréen ; test complet du site en ligne (147 leçons, toutes les cartes et histoires) |
 | v26 | Projet modulaire : 45 modules ES, contenu en JSON, build esbuild + TypeScript, Prettier, tests rapatriés avec lanceur, nom de cache automatique, minuteur du sprint fiabilisé. HTML identique à la v25 sur 430 écrans comparés |
+| v27 | Notions de grammaire (temps, mots de liaison, modaux, prépositions / particules) en anglais, FLE et coréen : phrases générées par gabarits, nouvel exercice « écris le mot qui manque », environ la moitié des QCM des leçons générés ; 70 QCM d'anglais aux mauvaises réponses plus crédibles ; étiquettes en trop proches de la réponse ; sons réparés (ils ne sortaient plus depuis la v26) et redessinés, motifs de vibration, éclats de couleurs, barre de série ; bouton « S'entraîner » en haut des mots à retenir |
