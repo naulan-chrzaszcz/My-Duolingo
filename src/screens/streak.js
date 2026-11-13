@@ -127,14 +127,14 @@ function tabStreak(st) {
   const today = S.lastDay === dkey();
   const fz = S.freeze || 0;
   return `<div class="shero"><div><div class="snum">${S.streak}</div><div class="slbl">${S.streak > 1 ? "jours d'affilée !" : S.streak === 1 ? "jour de série !" : "Aucune série en cours"}</div><div class="ssub">${today ? "Série prolongée aujourd'hui, bravo !" : "Termine une leçon aujourd'hui pour prolonger ta série."}</div></div>${FLAME}</div>
-<div class="sbox sfreeze"><span class="sfic">${ic("snow", 28, "", 2.4)}</span><div><p>Une séance par jour garde ta série. Un gel de série la protège si tu rates un jour.</p><p class="sfcount"><span>Gels de série équipés :</span> <b>${fz} / 2</b></p>${fz < 2 ? `<button class="slink" id="sBuy">Acheter un gel (50 💎)</button>` : ""}</div></div>
+<div class="skb sfreeze"><span class="sfic">${ic("snow", 28, "", 2.4)}</span><div><p>Une séance par jour garde ta série. Un gel de série la protège si tu rates un jour.</p><p class="sfcount"><span>Gels de série équipés :</span> <b>${fz} / 2</b></p>${fz < 2 ? `<button class="slink" id="sBuy">Acheter un gel (50 💎)</button>` : ""}</div></div>
 <div class="smonth"><h2 class="notr">${mname}</h2><div><button class="snav" id="sPrev" aria-label="Mois précédent" ${canPrev ? "" : "disabled"}>${ic("left", 24, "", 3)}</button><button class="snav" id="sNext" aria-label="Mois suivant" ${isNow ? "disabled" : ""}>${ic("chevr", 24, "", 3)}</button></div></div>
-<div class="sstats"><div class="sbox"><span class="sdot o">${ic("check", 18, "", 3)}</span><div><b>${nPr}</b><small>Jours d'entraînement</small></div></div><div class="sbox"><span class="sdot b">${ic("snow", 17, "", 2.6)}</span><div><b>${nFr}</b><small>Gels utilisés</small></div></div></div>
-<div class="sbox scal"><div class="swd notr">${Array.from(WD)
+<div class="sstats"><div class="skb"><span class="sdot o">${ic("check", 18, "", 3)}</span><div><b>${nPr}</b><small>Jours d'entraînement</small></div></div><div class="skb"><span class="sdot b">${ic("snow", 17, "", 2.6)}</span><div><b>${nFr}</b><small>Gels utilisés</small></div></div></div>
+<div class="skb scal"><div class="swd notr">${Array.from(WD)
     .map(x => `<span>${x}</span>`)
     .join("")}</div>${rows}</div>
 <h2 class="sh2">Objectif de série</h2>
-<div class="sbox smilbox"><div class="smils">${mil}</div><p>${next ? `<span>Encore ${next[0] - S.streak} jour(s) pour atteindre ${next[0]} jours d'affilée :</span> <b>+${next[1]} 💎</b>` : "Tous les paliers sont atteints : quelle régularité !"}</p></div>
+<div class="skb smilbox"><div class="smils">${mil}</div><p>${next ? `<span>Encore ${next[0] - S.streak} jour(s) pour atteindre ${next[0]} jours d'affilée :</span> <b>+${next[1]} 💎</b>` : "Tous les paliers sont atteints : quelle régularité !"}</p></div>
 <button class="btn sshare" id="sShare2">${ic("share", 22, "", 2.6)}<span>Partager ma série</span></button>`;
 }
 
@@ -154,13 +154,13 @@ function tabGoal(st) {
   return `<div class="sgoalhead"><div class="sring"><svg width="132" height="132" viewBox="0 0 132 132" aria-hidden="true"><circle cx="66" cy="66" r="54" fill="none" stroke="var(--soft)" stroke-width="16"/><circle class="sring2" cx="66" cy="66" r="54" fill="none" stroke="${pct >= 1 ? "#22B573" : "#7C4DFF"}" stroke-width="16" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${(C * (1 - pct)).toFixed(1)}" transform="rotate(-90 66 66)"/></svg><div><b>${tx}</b><small>sur ${g} XP</small></div></div>
 <div><h2>Objectif du jour</h2><p>${tx >= g ? "Objectif atteint, bravo ! Tout XP en plus compte pour la ligue." : `<span>Encore</span> <b>${g - tx} XP</b> <span>pour atteindre ton objectif.</span>`}</p></div></div>
 <h2 class="sh2">Cette semaine</h2>
-<div class="sbox sweek">${vals
+<div class="skb sweek">${vals
     .map(
       ([l, v, t], i) =>
         `<div class="swcol"><span class="swv">${v || ""}</span><span class="swbar ${t ? "t" : v >= g ? "ok" : ""}" style="height:${Math.max(4, Math.round((v / mx) * 110))}px;animation-delay:${(i * 0.06).toFixed(2)}s"></span><span class="swl notr ${t ? "t" : ""}">${l}</span></div>`,
     )
     .join("")}</div>
-<div class="sbox sgoalrow"><div><b>Objectif quotidien</b><small><span>${lvl}</span> · <span>${g} XP par jour</span></small></div><button class="slink" id="sGoalEd">Modifier</button></div>
+<div class="skb sgoalrow"><div><b>Objectif quotidien</b><small><span>${lvl}</span> · <span>${g} XP par jour</span></small></div><button class="slink" id="sGoalEd">Modifier</button></div>
 ${st.edit ? `<div class="sgoals">${GOALS.map(([x, l]) => `<button data-g="${x}" class="${x === g ? "on" : ""}"><b>${l}</b><small>${x} XP</small></button>`).join("")}</div>` : ""}`;
 }
 

@@ -44,7 +44,7 @@ export function renderProfile(v) {
   const wear = S.wear && ACCS[S.wear];
   const recap = [
     [ic("flame", 28, "", 2.6, "#FFE1BF"), "#FF9F1C", S.streak, "jours de série"],
-    [flagSvg(sec.id, 30, 20, 4), "", `${su.d} / ${su.t}`, `unités · ${sec.name}`],
+    [flagSvg(sec.id, 30, 20, 4), "", `${su.d} / ${su.t}`, `<span>unités</span> · <span>${sec.name}</span>`],
     [ic("trophy", 28, "", 2.6), TROPHY[trI][1], `Ligue ${tr[1]}`, "cette semaine"],
     [ic("bolt", 28, "", 2.6, "#E2DAFF"), "#7C4DFF", S.xp, "XP total"],
     [ic("check", 28, "", 3), "#22B573", S.lessons, "séances"],

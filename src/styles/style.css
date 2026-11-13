@@ -756,7 +756,7 @@ body:has(.langdrop) #secBtn{border-color:#3D8BFF;background:#EAF2FF}
 .trhero .coach .chips{max-width:calc(100% - 100px)}
 .trhero .coach .chips span{color:#4A3300}
 .trhero .coachb{margin-top:auto;padding-top:8px;position:relative;z-index:1;gap:12px}
-.trhero #coachGo{width:auto;margin:0;background:#FFFFFE;color:#5A30D8;box-shadow:0 5px 0 rgba(10,8,40,.35);text-transform:uppercase;letter-spacing:.05em;padding:14px 20px}
+.trhero #coachGo{width:auto;margin:0;background:#FFFFFE;color:#5A30D9;box-shadow:0 5px 0 rgba(10,8,40,.35);text-transform:uppercase;letter-spacing:.05em;padding:14px 20px}
 .trhero .cdue{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;color:#E6E1FF}
 .trhero .coachl{position:absolute;right:-24px;bottom:-20px;display:block;pointer-events:none}
 .trhero .coachl svg{width:140px;height:140px;animation:float 3.2s ease-in-out infinite}
@@ -798,7 +798,7 @@ body:has(.langdrop) #secBtn{border-color:#3D8BFF;background:#EAF2FF}
 .slbl{font-size:26px;font-weight:900;color:#E2552E;margin-top:6px}
 .ssub{font-size:14px;color:var(--ink2);margin-top:6px}
 .sflame{flex:none;animation:flick 1.8s ease-in-out infinite;transform-origin:50% 92%}
-.sbox{border:2px solid var(--line);border-radius:20px;padding:16px 18px;background:var(--card)}
+.skb{border:2px solid var(--line);border-radius:20px;padding:16px 18px;background:var(--card)}
 .sfreeze{display:flex;gap:16px;align-items:flex-start;margin-top:14px}
 .sfreeze p{margin:0;font-size:15.5px;line-height:1.45;color:var(--ink2)}
 .sfreeze .sfcount{margin-top:6px}
@@ -811,7 +811,7 @@ body:has(.langdrop) #secBtn{border-color:#3D8BFF;background:#EAF2FF}
 .snav{width:44px;height:44px;border:none;background:transparent;color:var(--ink2);display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:12px;padding:0}
 .snav:disabled{color:var(--lockc);cursor:default}
 .sstats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.sstats .sbox{display:flex;gap:10px;align-items:flex-start;padding:14px}
+.sstats .skb{display:flex;gap:10px;align-items:flex-start;padding:14px}
 .sstats b{display:block;font-size:24px}
 .sstats small{font-size:14px;color:var(--ink2)}
 .sdot{flex:none;width:28px;height:28px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;margin-top:2px}
@@ -932,7 +932,7 @@ body:has(.langdrop) #secBtn{border-color:#3D8BFF;background:#EAF2FF}
 .prc{display:flex;align-items:center;gap:10px;border:2px solid var(--line);border-radius:16px;padding:12px;background:var(--card);min-width:0}
 .prci{flex:none;width:32px;display:flex;justify-content:center}
 .prc>span:last-child{display:flex;flex-direction:column;min-width:0}
-.prc b{font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prc b{font-size:18px;line-height:1.2;overflow-wrap:anywhere}
 .prc small{font-size:13px;color:var(--ink2)}
 .paccs{display:flex;gap:18px;overflow-x:auto;padding:2px 4px 6px;scrollbar-width:none}
 .paccs::-webkit-scrollbar{display:none}
@@ -958,3 +958,5 @@ body:has(.langdrop) #secBtn{border-color:#3D8BFF;background:#EAF2FF}
 .ptool span{flex:1}
 .ptool .ic:first-child{color:#7C4DFF}#tAi .ic:first-child{color:#E0457B}#tWords .ic:first-child{color:#3D8BFF}
 .ptool .ic:last-child{color:var(--ink2)}
+.tlock .tlk{fill:#ECE9F6;stroke:#C9C4DD}
+.tlock .tld{fill:#C9C4DD}

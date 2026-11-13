@@ -113,14 +113,14 @@ export function flagSvg(id: string, w = 34, h = 23, r = 6): string {
 
 /** Coupe de ligue (verrouillée : grise avec un cadenas). */
 export function trophySvg(c: string, d: string, w: number, lock = false): string {
-  if (lock) {
-    c = "#ECE9F6";
-    d = "#C9C4DD";
-  }
+  // coupe verrouillée : couleurs portées par des classes CSS (adaptées au thème sombre)
+  const f = lock ? ' class="tlk"' : ` fill="${c}"`,
+    k = lock ? ' class="tld"' : ` fill="${d}"`,
+    s = lock ? "" : ` stroke="${d}"`;
   const deco = lock
-    ? `<g transform="translate(50 38)"><circle r="7" fill="${d}"/><path d="M-3 4h6l-1.5 9h-3z" fill="${d}"/></g>`
+    ? `<g transform="translate(50 38)"><circle r="7"${k}/><path d="M-3 4h6l-1.5 9h-3z"${k}/></g>`
     : '<path d="M30 22c4-4 12-6 20-6s16 2 20 6" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="5" stroke-linecap="round"/><path d="M36 36l8 10 6-14 6 14 8-10" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>';
-  return `<svg width="${w}" height="${Math.round(w * 1.1)}" viewBox="0 0 100 110" aria-hidden="true"><path d="M22 12h56v12c0 6 8 6 12 2 4 10-4 20-14 22-4 12-12 18-26 20-14-2-22-8-26-20-10-2-18-12-14-22 4 4 12 4 12-2z" fill="${c}" stroke="${d}" stroke-width="5" stroke-linejoin="round"/>${deco}<path d="M44 68h12v14H44z" fill="${d}"/><rect x="28" y="82" width="44" height="12" rx="5" fill="${c}" stroke="${d}" stroke-width="5"/><rect x="22" y="94" width="56" height="10" rx="4" fill="${d}"/></svg>`;
+  return `<svg width="${w}" height="${Math.round(w * 1.1)}" viewBox="0 0 100 110" aria-hidden="true"${lock ? ' class="tlock"' : ""}><path d="M22 12h56v12c0 6 8 6 12 2 4 10-4 20-14 22-4 12-12 18-26 20-14-2-22-8-26-20-10-2-18-12-14-22 4 4 12 4 12-2z"${f}${s} stroke-width="5" stroke-linejoin="round"/>${deco}<path d="M44 68h12v14H44z"${k}/><rect x="28" y="82" width="44" height="12" rx="5"${f}${s} stroke-width="5"/><rect x="22" y="94" width="56" height="10" rx="4"${k}/></svg>`;
 }
 
 const MEDAL: Record<number, [string, string, string]> = {
