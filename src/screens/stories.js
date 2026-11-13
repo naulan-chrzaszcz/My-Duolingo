@@ -167,7 +167,7 @@ export async function storyGenPicker(sec) {
   const mode = await aiDetect();
   if (mode === "local") {
     modal(
-      `<div class="mcenter">${mascot("calm")}<h2>Connecte ton Claude</h2><p>Les histoires inédites sont écrites par l'IA. Ajoute ta clé API Claude dans ton profil (rubrique « 🤖 Mon Claude »). En attendant, ${allStories(sec).length} histoires t'attendent déjà !</p><button class="btn" onclick="closeModal();location.hash='profil'">Ouvrir mon profil</button><button class="btn ghost" onclick="closeModal()">Plus tard</button></div>`,
+      `<div class="mcenter">${mascot("calm")}<h2>Connecte ton Claude</h2><p>Les histoires inédites sont écrites par l'IA. Ajoute ta clé API Claude dans Paramètres › Mon Claude. En attendant, ${allStories(sec).length} histoires t'attendent déjà !</p><button class="btn" onclick="closeModal();location.hash='reglages/claude'">Ouvrir Mon Claude</button><button class="btn ghost" onclick="closeModal()">Plus tard</button></div>`,
     );
     return;
   }

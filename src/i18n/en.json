@@ -1065,7 +1065,28 @@
   "Vocabulaire en images": "Words in pictures",
   "vocabulaire en images": "words in pictures",
   "Choisis la bonne image, puis le bon mot : les mots du quotidien en dessins.": "Pick the right picture, then the right word: everyday words as drawings.",
-  "Images": "Pictures"
+  "Images": "Pictures",
+  "Chapitre ¤": "Chapter ¤",
+  "Chapitre ¤, unité ¤": "Chapter ¤, unit ¤",
+  "Unités ¤ à ¤": "Units ¤ to ¤",
+  "Quêtes": "Quests",
+  "Quêtes du jour": "Daily quests",
+  "Quête de ¤": "¤ quest",
+  "¤ jours": "¤ days",
+  "Gagne ¤ points de quête": "Earn ¤ quest points",
+  "Chaque quête du jour accomplie rapporte 1 point.": "Each completed daily quest earns 1 point.",
+  "Erreurs récurrentes": "Recurring mistakes",
+  "Par unité": "By unit",
+  "¤ histoires": "¤ stories",
+  "Mes histoires IA": "My AI stories",
+  "🔑 Clé Claude refusée : vérifie-la dans Paramètres › Mon Claude.": "🔑 Claude key refused: check it in Settings › My Claude.",
+  "⏳ Beaucoup de générations récentes : révision mixte en attendant. Ajoute ta propre clé Claude dans Paramètres › Mon Claude pour ne plus être limitée.": "⏳ Lots of recent generations: mixed review in the meantime. Add your own Claude key in Settings › My Claude to remove the limit.",
+  "La création d'unités demande l'IA. Ajoute ta clé API Claude dans Paramètres › Mon Claude : elle n'est utilisée que pour ton compte.": "Creating units needs AI. Add your Claude API key in Settings › My Claude: it's only used for your account.",
+  "Les histoires inédites sont écrites par l'IA. Ajoute ta clé API Claude dans Paramètres › Mon Claude. En attendant, ¤ histoires t'attendent déjà !": "Brand-new stories are written by AI. Add your Claude API key in Settings › My Claude. Meanwhile, ¤ stories are already waiting for you!",
+  "Ouvrir Mon Claude": "Open My Claude",
+  "Tu pourras le changer dans les paramètres.": "You can change it in Settings.",
+  "Entretien d'embauche": "Job interview",
+  "Double XP · 15 min": "Double XP · 15 min"
  },
  "content": {
   "Hangul 1 : les voyelles": "Hangul 1: vowels",
@@ -2161,7 +2182,7 @@
   "arrêter (un véhicule)": "stop (a vehicle)",
   "jusqu'à": "until, as far as",
   "coffre (de voiture)": "trunk",
-  "monnaie (rendue)": "change",
+  "monnaie (rendue)": "change (money back)",
   "pressé": "in a hurry",
   "« À l'hôtel, s'il vous plaît » : 호텔___ 가 주세요.": "« To the hotel, please »: 호텔___ 가 주세요.",
   "« Arrêtez-vous ici » : 여기서 ___ 주세요.": "« Please stop here »: 여기서 ___ 주세요.",
@@ -2419,6 +2440,8 @@
   "새해 복 많이 받으세요 = recevez beaucoup de bonheur cette année.": "새해 복 많이 받으세요 = may you receive lots of luck this year.",
   "입다 pour les vêtements ; 쓰다 un chapeau, 신다 des chaussures, 끼다 des gants.": "입다 for clothes; 쓰다 for a hat, 신다 for shoes, 끼다 for gloves.",
   "Les dates et les fêtes prennent 에 : 추석에, 설날에.": "Dates and holidays take 에: 추석에, 설날에.",
-  "막히다 = être bouché (circulation).": "막히다 = to be blocked (traffic)."
+  "막히다 = être bouché (circulation).": "막히다 = to be blocked (traffic).",
+  "Je voudrais aussi une part de gâteau.": "I'd also like a slice of cake.",
+  "Il faut descendre à quel arrêt ?": "Which stop do I need to get off at?"
  }
 }

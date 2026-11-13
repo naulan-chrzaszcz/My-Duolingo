@@ -42,6 +42,9 @@ export function unitPrompt(r) {
     L0 +
     "). Unités déjà terminées (titre : notions) :\n- " +
     r.done.join("\n- ") +
+    (r.titles && r.titles.length
+      ? "\nThèmes déjà traités plus tôt dans le parcours (ne les reprends pas) : " + r.titles.join(" ; ") + "."
+      : "") +
     "\n\nCrée l'unité numéro " +
     r.num +
     " : un thème NOUVEAU et des notions NOUVELLES qui prolongent logiquement le parcours, niveau " +
@@ -62,7 +65,7 @@ export async function genUnit(cid) {
   const mode = await aiDetect();
   if (mode === "local") {
     modal(
-      `<div class="mcenter">${mascot("calm")}<h2>Connecte ton Claude</h2><p>La création d'unités demande l'IA. Ajoute ta clé API Claude dans ton profil (rubrique « 🤖 Mon Claude ») : elle n'est utilisée que pour ton compte.</p><button class="btn" onclick="closeModal();location.hash='profil'">Ouvrir mon profil</button><button class="btn ghost" onclick="closeModal()">Plus tard</button></div>`,
+      `<div class="mcenter">${mascot("calm")}<h2>Connecte ton Claude</h2><p>La création d'unités demande l'IA. Ajoute ta clé API Claude dans Paramètres › Mon Claude : elle n'est utilisée que pour ton compte.</p><button class="btn" onclick="closeModal();location.hash='reglages/claude'">Ouvrir Mon Claude</button><button class="btn ghost" onclick="closeModal()">Plus tard</button></div>`,
     );
     return;
   }
@@ -79,6 +82,11 @@ export async function genUnit(cid) {
     level: secName(cid, 3),
     num: C.units.length + 1,
     done: C.units.slice(-14).map(u => (u.t + " : " + u.d).slice(0, 140)),
+    // titres des unités plus anciennes : l'IA ne doit pas reprendre un thème déjà traité (30 unités en coréen)
+    titles: C.units
+      .slice(0, -14)
+      .slice(-60)
+      .map(u => String(u.t0 || u.t).slice(0, 60)),
   };
   const raw = await aiAsk(unitPrompt(req), req, { tier: "default", ms: 110000 });
   closeModal();

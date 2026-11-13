@@ -1086,11 +1086,11 @@
      "얼음을 많이 주세요."
     ],
     [
-     "Je paie par carte.",
-     "카드로 할게요.",
-     "kadeuro halgeyo",
-     "카드로 계산할게요.",
-     "카드로 낼게요."
+     "Je voudrais aussi une part de gâteau.",
+     "케이크도 한 조각 주세요.",
+     "keikeudo han jogak juseyo",
+     "케이크 한 조각도 주세요.",
+     "케이크도 하나 주세요."
     ],
     [
      "Quel est le mot de passe du wifi ?",
@@ -2079,11 +2079,11 @@
      "이 버스 시청 가요?"
     ],
     [
-     "Je descends au prochain arrêt.",
-     "다음 정류장에서 내려요.",
-     "daeum jeongnyujangeseo naeryeoyo",
-     "다음 정류장에서 내릴게요.",
-     "다음 정류장에서 내릴 거예요."
+     "Il faut descendre à quel arrêt ?",
+     "어느 정류장에서 내려야 해요?",
+     "eoneu jeongnyujangeseo naeryeoya haeyo",
+     "어느 정류장에서 내려야 돼요?",
+     "어디에서 내려야 해요?"
     ],
     [
      "Où est la sortie 3 ?",

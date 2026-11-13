@@ -1,12 +1,14 @@
 # Speakeasy — Cahier des charges et dossier technique
 
-Version de référence : v26 (projet modulaire, même comportement que la v25) · 12 novembre 2026 · Naulan
+Version de référence : v31.1 · 13 novembre 2026 · Naulan
+
+Les sections 1 et 2 décrivent l'application telle qu'elle est en v31.1. Le détail de chaque version est dans `historique-et-decisions.md`.
 
 Version vivante et commentable : https://claude.ai/artifact/ShUL8ouoWpa4PSS2iN3yFu
 
 ## 1. Présentation
 
-Speakeasy est une application web d'apprentissage des langues inspirée de Duolingo, auto-hébergée sur un VPS personnel à l'adresse https://www.naulan-chrzaszcz.fr/speakeasy/. La version de référence est la v26 (novembre 2026) : même comportement que la v25, code réorganisé en projet modulaire.
+Speakeasy est une application web d'apprentissage des langues inspirée de Duolingo, auto-hébergée sur un VPS personnel à l'adresse https://www.naulan-chrzaszcz.fr/speakeasy/. La version de référence est la v31.1 (novembre 2026). Le code est un projet modulaire depuis la v26 ; la direction artistique actuelle (icônes dessinées, chapitres, onglet Quêtes, images) date des v28 à v31.
 
 ### Objectifs
 
@@ -30,10 +32,10 @@ Speakeasy est une application web d'apprentissage des langues inspirée de Duoli
 | Anglais rédaction pro (dont dev logiciel) | en-pro | anglais (en-US) | 20 | fr, ko |
 | TOEIC (Parts 1 à 7) | en-toeic | anglais (en-US) | 27 | fr, ko |
 | Orthographe Voltaire | fr-volt | français (fr-FR) | 21 | fr, en, ko |
-| Coréen (hangul, vocabulaire, 맞춤법) | ko | coréen (ko-KR) | 14 | fr, en |
+| Coréen (hangul, vie quotidienne, 맞춤법) | ko | coréen (ko-KR) | 30 | fr, en |
 | Apprendre le français (FLE) | fr-fle | français (fr-FR) | 20 | en, ko |
 
-Chaque unité contient 18 étapes ; la dernière est un bilan d'unité. Chaque étape existe aussi en version extrême, qui rapporte une couronne. Le détail des unités est dans `02-catalogue-des-cours.md`.
+Chaque unité contient 18 étapes ; la dernière est un bilan d'unité. Chaque étape existe aussi en version extrême, qui rapporte une couronne. Le détail des 142 unités est dans `catalogue-des-cours.md`.
 
 ### Hors périmètre
 
@@ -43,13 +45,13 @@ Chaque unité contient 18 étapes ; la dernière est un bilan d'unité. Chaque �
 
 ## 2. Exigences fonctionnelles
 
-L'application doit couvrir les douze fonctions ci-dessous ; chacune est déjà en place depuis la v25.
+L'application doit couvrir les douze fonctions ci-dessous ; toutes sont en place.
 
 ### 2.1 Parcours
 
-- Un parcours par cours, découpé en sections puis en unités, du plus facile au plus difficile (A1 à C1).
+- Un parcours par cours, découpé en chapitres puis en unités, du plus facile au plus difficile (A1 à C1). Un chapitre correspond à un niveau du cours ; le parcours affiche un chapitre à la fois, un écran liste les chapitres et un bouton « Continuer » mène au suivant. C'est le design retenu (v29, confirmé en v31.1).
 - Parcours hybride : l'ordre est recommandé mais toute unité peut être commencée à tout moment.
-- Unités repliables, fiche d'unité avec le guide (règle, astuce, vocabulaire) et l'étape conseillée.
+- Bannière d'unité « Chapitre N, unité M », guide de l'unité (astuce, phrases clés, mots utiles, mots en images, règles) et étape conseillée. Les unités repliables d'avant la v29 ont été remplacées par les chapitres.
 - Test de niveau à l'entrée (24 questions) qui place l'apprenant dans le parcours.
 - Version extrême de chaque étape, récompensée par une couronne.
 - Pas de système de vies : usage illimité.
@@ -59,6 +61,8 @@ L'application doit couvrir les douze fonctions ci-dessous ; chacune est déjà e
 | Type | Identifiant | Ce que fait l'apprenant |
 | --- | --- | --- |
 | Choix multiple | mc, mcw, choice | Choisit la bonne traduction, le bon mot ou la bonne règle |
+| Images | pic, picw | Choisit la bonne image pour un mot, ou le bon mot pour une image (anglais quotidien, FLE, coréen) |
+| Mot manquant | fill | Écrit le mot qui manque dans une phrase générée (notions de grammaire) |
 | Tuiles | tiles, tilesRev | Reconstruit la phrase traduite avec des tuiles de mots |
 | Saisie | type | Tape la traduction |
 | Paires | match | Associe 5 paires mot/traduction |
@@ -67,7 +71,7 @@ L'application doit couvrir les douze fonctions ci-dessous ; chacune est déjà e
 | Dictée | dictee | Écrit la phrase exacte (Voltaire et coréen : strict) |
 | Prononciation | speak | Lit à voix haute, le micro évalue (seuil 0,65) |
 | Clique sur la faute | spot | Repère le mot fautif ou valide la phrase (méthode Voltaire) |
-| TOEIC | photo, part2, conv, read, readw | Parts 1 à 7 : photo, question-réponse, conversation, lecture |
+| TOEIC | photo, part2, conv, read, readw | Parts 1 à 7 : scène dessinée ou photo, question-réponse, conversation, lecture |
 | Hangul | jamo, jamoRev, hg | Reconnaît les lettres, les sons et les syllabes |
 | Rédaction | write | Écrit un texte libre, corrigé par l'IA (ou transcription) |
 
@@ -77,6 +81,7 @@ L'application doit couvrir les douze fonctions ci-dessous ; chacune est déjà e
 
 ### 2.3 Entraînement
 
+- Notions de grammaire (phrases générées par gabarits) et vocabulaire en images.
 - Mots utiles par thème (conversation, rédaction pro, TOEIC), écoute TOEIC, lecture Part 7, TOEIC blanc express de 20 questions avec score estimé sur 990.
 - Prononciation, dictée, clique sur la faute, sprint de grammaire, sprint de 60 secondes.
 - Mes mots, mes mots à retenir (répétition espacée à 1, 3, 7, 14 et 30 jours), mes erreurs (ancrage).
@@ -90,9 +95,10 @@ L'application doit couvrir les douze fonctions ci-dessous ; chacune est déjà e
 
 ### 2.5 Motivation
 
-- XP, objectif quotidien réglable, série de jours avec gel de série, quêtes du jour, badges, combo.
+- XP, objectif quotidien réglable, série de jours avec gel de série et paliers récompensés (7, 14, 30 et 50 jours), badges, combo.
+- Onglet Quêtes : quêtes du jour avec coffres et quête du mois (30 points, paliers à +20, +30 et +50 gemmes).
 - Gemmes : +5 par leçon, +20 par bilan d'unité, +3 par entraînement, plus les quêtes.
-- Boutique : gel de série (50 gemmes, 2 au maximum), double XP 15 minutes (40 gemmes), tenues pour la mascotte Horang.
+- Boutique : gel de série (50 gemmes, 2 au maximum), double XP 15 minutes (40 gemmes), tenues pour la mascotte Horang. Elle s'ouvre en touchant les gemmes de la barre du haut : son onglet a laissé la place à l'onglet Quêtes (v29, choix conservé).
 - Mascotte Horang (un tigre) qui réagit et porte les tenues achetées.
 
 ### 2.6 Ligues
@@ -123,14 +129,17 @@ L'application doit couvrir les douze fonctions ci-dessous ; chacune est déjà e
 
 ### 2.10 Intelligence artificielle
 
-- Chaque profil peut saisir sa propre clé API Claude, stockée sur l'appareil seulement.
+- Chaque profil peut saisir sa propre clé API Claude dans Paramètres › Mon Claude ; elle est stockée sur l'appareil seulement.
 - Usages : exercices générés, entraînement à thème, histoires, correction de rédaction, unités générées.
 - Modèles : Haiku par défaut, Sonnet ou Opus au choix.
 - Sans clé : repli local (révisions tirées des unités les plus proches du thème).
+- L'IA reçoit les règles de grammaire les moins réussies de l'élève ; chaque séance IA ou locale ajoute des phrases sur ces règles.
+- Une unité créée par l'IA arrive dans le dernier chapitre ; l'IA reçoit les titres de toutes les unités existantes pour ne pas reprendre un thème.
+- L'IA ne produit pas d'images : les exercices en images utilisent les dessins intégrés à l'application.
 
 ### 2.11 Interfaces et langues
 
-- Interface en français, anglais ou coréen, choisie au premier lancement et modifiable dans le profil.
+- Interface en français, anglais ou coréen, choisie au premier lancement et modifiable dans Paramètres › Préférences.
 - Les explications des cours sont traduites dans la langue de l'interface, y compris les prompts envoyés à l'IA.
 
 ### 2.12 Apparence et hors ligne
@@ -201,9 +210,9 @@ Le navigateur génère et corrige les exercices sans réseau ; le serveur n'inte
 | src/exercises/ | Génération (`make`), mauvaises réponses, correction, affichage par type (`R[type]`), hangul (TypeScript) |
 | src/lesson/ | Construction et déroulé des leçons, rédactions, clavier |
 | src/features/ | Test de niveau, quêtes et badges, mots à retenir, thèmes, unités IA, coach |
-| src/screens/ | Un module par écran : parcours, entraînement, histoires, ligue, boutique, profil, stats, comptes |
+| src/screens/ | Un module par écran : parcours et chapitres, entraînement, histoires, ligue, quêtes, boutique, profil, paramètres, série, stats, comptes |
 | src/services/ | Comptes en ligne, IA, rappels, voix et micro |
-| src/ui/ | Composants, routeur, plateforme (iOS/Android, thème), mascotte, bouton retour, typographie |
+| src/ui/ | Composants, routeur, plateforme (iOS/Android, thème), mascotte et scènes de Horang, icônes dessinées, images de vocabulaire et scènes de la Part 1 (`pics/`), bouton retour, typographie |
 | src/main.js, globals.js, types.ts | Démarrage, API globale sur window, types du modèle de données |
 | public/ | Service worker, manifest, icônes, polices |
 | server/ | API PHP (account, generate, push, remind), installateur Fedora, LISEZ-MOI |
@@ -327,7 +336,7 @@ Un seul script, installer-fedora.sh, installe ou met à jour le serveur ; il se 
 
 ## 7. Qualité, règles et pièges connus
 
-Chaque version passe une batterie de tests automatiques avec Playwright (Chromium) et un serveur PHP local, lancée par `npm test` (rapide) ou `npm run test:all` (complète). La v26 les passe tous. Son HTML est identique à celui de la v25 sur 430 écrans et leçons comparés.
+Chaque version passe une batterie de tests automatiques avec Playwright (Chromium) et un serveur PHP local, lancée par `npm test` (rapide) ou `npm run test:all` (complète). La v31.1 les passe tous. Le HTML de la v26 était identique à celui de la v25 sur 430 écrans et leçons comparés.
 
 ### 7.1 Tests automatiques
 
@@ -343,6 +352,7 @@ Chaque version passe une batterie de tests automatiques avec Playwright (Chromiu
 | Audio et micro | Pause micro ou son, bouton « Plus tard », micro absent ou muet, retour sur la dictée du clavier |
 | Rappels | Passage en ligne, abonnement, exécution de remind.php |
 | Bouton retour | Navigation, fermeture des leçons et modales sans quitter le site |
+| Textes non traduits | Parcourt tous les écrans en anglais et en coréen et échoue si un texte d'interface est resté en français (réparé en v31.1 : il ne voyait plus rien) |
 
 ### 7.2 Règles de validation des réponses
 
@@ -388,7 +398,7 @@ Le découpage en modules est fait (v26) ; les prochaines étapes rendent les ajo
 4. **Charger les cours à la demande.** Ne télécharger que le cours et la langue d'interface utilisés : premier chargement divisé par 3 environ.
 5. **Tester sur de vrais iPhone et Android.** Voix, dictée, notifications et retour haptique ne sont pas reproduits par l'émulation.
 6. **Récupérer un compte.** Aucune réinitialisation de mot de passe aujourd'hui : prévoir un code de secours affiché à l'inscription.
-7. **Enrichir le contenu.** Plus d'unités C1, d'histoires et de questions TOEIC Part 7 ; audio enregistré en option pour les voix absentes du téléphone.
+7. **Enrichir le contenu.** Plus d'unités dans les chapitres courts (chapitre 4 de coréen : 3 unités ; chapitre 1 d'anglais pro et de TOEIC : 2 unités), d'histoires et de questions TOEIC Part 7 ; audio enregistré en option pour les voix absentes du téléphone.
 8. **Tableau de bord.** Statistiques de progression par compétence et prédiction du score TOEIC dans le temps.
 9. **Clé IA commune avec quotas par compte.** Permettre aux invités sans clé d'utiliser l'IA dans une limite quotidienne.
 10. **Passer progressivement en TypeScript.** Convertir les modules au fil des modifications, en commençant par `core/` et `exercises/`.

@@ -52,7 +52,7 @@ export function aiErr(status, msg) {
   e.status = status;
   e.userMsg =
     status === 401 || /api.key|x-api-key|authentication/i.test(m)
-      ? "🔑 Clé Claude refusée : vérifie-la dans ton profil."
+      ? "🔑 Clé Claude refusée : vérifie-la dans Paramètres › Mon Claude."
       : /credit|balance|billing/i.test(m)
         ? "💳 Crédit API épuisé : recharge ton compte sur console.anthropic.com."
         : status === 429
@@ -142,7 +142,7 @@ export async function aiAsk(prompt, req, o) {
     if (!j.ok) {
       if (j.error === "rate_limited")
         toast(
-          "⏳ Beaucoup de générations récentes : révision mixte en attendant. Ajoute ta propre clé Claude dans ton profil pour ne plus être limitée.",
+          "⏳ Beaucoup de générations récentes : révision mixte en attendant. Ajoute ta propre clé Claude dans Paramètres › Mon Claude pour ne plus être limitée.",
         );
       return null;
     }

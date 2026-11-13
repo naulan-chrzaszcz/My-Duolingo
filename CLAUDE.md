@@ -55,6 +55,7 @@ La propriétaire écrit en français : réponds en français.
 - Validation des réponses tolérante, sauf dictées Voltaire et orthographe coréenne.
 - Le nom du cache du service worker est calculé au build (version + empreinte) : rien à changer à la main.
 - Pas de système de vies (cœurs) : ne pas en réintroduire.
+- Parcours en chapitres (un chapitre = un niveau) et onglet Quêtes dans la barre du bas : design retenu, ne pas revenir aux unités repliables ni à l'onglet Boutique.
 - Icônes : `ic()` de `src/ui/icons.ts`, pas d'emoji pour les nouveaux éléments de la barre du haut, de la barre du bas, du parcours, de la ligue et du profil.
 - Avant de livrer :
   - `npm run check` puis `npm run test:all` doivent passer.

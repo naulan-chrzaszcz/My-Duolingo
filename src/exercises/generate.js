@@ -171,7 +171,19 @@ export function make0(t, ctx) {
   t = order.find(x => ctx[NEED[x]] && ctx[NEED[x]].length);
   if (!t) return null;
   if (t === "match") {
-    const v = shuffle(ctx.v).slice(0, 5);
+    // jamais deux fois le même mot à gauche ou à droite (un mot peut figurer dans deux unités, parfois avec deux sens)
+    const L = new Set(),
+      R = new Set(),
+      v = [];
+    for (const w of shuffle(ctx.v)) {
+      const a = String(w[0]).trim().toLowerCase(),
+        b = String(w[1]).trim().toLowerCase();
+      if (L.has(a) || R.has(b)) continue;
+      L.add(a);
+      R.add(b);
+      v.push(w);
+      if (v.length === 5) break;
+    }
     if (v.length < 3) return make0("mc", ctx);
     return { t, lang, pairs: v };
   }
@@ -180,7 +192,7 @@ export function make0(t, ctx) {
     let others = similarOptions(C, "v", w[1], w[0], w, 3);
     if (others.length < 3)
       others = others.concat(
-        shuffle(ctx.v.filter(x => x[1] !== w[1] && !others.includes(x[1])))
+        shuffle(ctx.v.filter(x => x[1] !== w[1] && x[0] !== w[0] && !others.includes(x[1])))
           .slice(0, 3 - others.length)
           .map(x => x[1]),
       );

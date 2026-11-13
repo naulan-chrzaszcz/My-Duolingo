@@ -29,6 +29,8 @@ for(const cid in COURSES){const C=COURSES[cid],lang=C.lang;const seenT=new Set()
     if(t==='build'){if(!ex.parts||!ex.parts.every(x=>ex.tiles.includes(x)))B(id,'build : lettres manquantes '+ex.syl);}
     if(t==='conv'&&!(ex.d&&ex.d.length))B(id,'conv sans dialogue');if(t==='read'&&!ex.x)B(id,'read sans texte');
    });}
+  // séances sur plusieurs unités (version extrême, révision IA) : jamais deux fois le même mot dans « Associe les paires »
+  try{const cx=ctxFor(cid,C.units.slice(Math.max(0,u-2),u+1));for(let k=0;k<6;k++){const ex=make('match',cx);if(ex&&ex.t==='match'){const l=ex.pairs.map(p=>p[0]),r=ex.pairs.map(p=>p[1]);if(new Set(l).size!==l.length||new Set(r).size!==r.length)B(id,'match (3 unités) : mot en double — '+JSON.stringify(ex.pairs))}}}catch(e){B(id,'match (3 unités) : exception '+e.message)}
   // contenus bruts
   (U.c||[]).forEach(c=>{if(!(c[2]>=0&&c[2]<c[1].length))B(id,'QCM : index invalide — '+c[0]);if(!c[3])B(id,'QCM sans explication — '+c[0]);if(new Set(c[1]).size!==c[1].length)B(id,'QCM : options identiques — '+c[0]);});
   (U.p||[]).forEach(p=>{if(!p[0]||!p[1])B(id,'phrase incomplète '+JSON.stringify(p));});

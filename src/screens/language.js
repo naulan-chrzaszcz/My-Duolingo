@@ -10,7 +10,7 @@ export function langPicker(next) {
  <div class="choices"><button data-l="fr" class="${UI === "fr" ? "sel" : ""}"><span class="e">🇫🇷</span><span>Français<small>Apprendre l'anglais, le coréen, l'orthographe (Voltaire)</small></span></button>
  <button data-l="en" class="${UI === "en" ? "sel" : ""}"><span class="e">🇬🇧</span><span>English<small>Learn French, Korean and French spelling (Voltaire)</small></span></button>
  ${KO_READY ? `<button data-l="ko" class="${UI === "ko" ? "sel" : ""}"><span class="e">🇰🇷</span><span>한국어<small>영어(일상·비즈니스·TOEIC)와 프랑스어 배우기</small></span></button>` : ""}</div>
- <p style="font-size:13px">Modifiable plus tard dans ton profil · You can change it later in your profile${KO_READY ? " · 나중에 프로필에서 바꿀 수 있어요" : ""}</p></div>`,
+ <p style="font-size:13px">Modifiable plus tard dans les paramètres · You can change it later in Settings${KO_READY ? " · 나중에 설정에서 바꿀 수 있어요" : ""}</p></div>`,
     "",
     true,
   );

@@ -1,4 +1,4 @@
-# Architecture du code (v31)
+# Architecture du code (v31.1)
 
 La v26 reprend exactement le comportement de la v25 dans un projet découpé en modules.
 
@@ -24,15 +24,15 @@ server/ (api PHP, installateur, LISEZ-MOI) ──────▶ dist/
 
 | Dossier | Modules | Rôle |
 | --- | --- | --- |
-| `content/` | `data.js`, `index.js`, `courses/*.json`, `grammar/*.json`, `stories.json`, `sections.json`, `unit-remap.json`, `real-photos.json`, `legacy.json` | Contenu des cours et gabarits des notions de grammaire. `index.js` l'adapte à la langue d'interface au chargement |
+| `content/` | `data.js`, `index.js`, `courses/*.json`, `grammar/*.json`, `stories.json`, `sections.json`, `unit-remap.json`, `real-photos.json`, `pics.json`, `legacy.json` | Contenu des cours, gabarits des notions de grammaire et mots illustrés. `index.js` l'adapte à la langue d'interface au chargement |
 | `i18n/` | `locale.js`, `translate.js`, `en.json`, `ko.json`, `dict-en.js`, `dict-ko.js` | Langue d'interface, traduction du DOM à la volée, dictionnaires |
 | `core/` | `util.js`, `state.js`, `progress.js`, `accounts.js`, `xp.js` | Outils, état `S` du profil, migrations, progression, profils locaux, XP |
 | `exercises/` | `generate.js`, `distractors.js`, `validate.js`, `render.js`, `hangul.ts`, `drills.ts` | `make(type, ctx)`, mauvaises réponses, correction, affichage `R[type]`, hangul, phrases générées par gabarits |
 | `lesson/` | `build.js`, `engine.js`, `writing.js`, `keyboard.js` | Construction et déroulé d'une leçon (`L`), rédactions, clavier |
 | `features/` | `placement.js`, `quests.js`, `word-bank.js`, `theme-training.js`, `ai-units.js`, `coach.js`, `grammar.js` | Test de niveau, quêtes et badges, répétition espacée, thèmes, unités IA, coach, notions de grammaire |
-| `screens/` | `path.js`, `training.js`, `stories.js`, `league.js`, `shop.js`, `profile.js`, `settings.js`, `stats.js`, `streak.js`, `accounts.js`, `onboarding.js`, `language.js` | Un module par écran ou fenêtre principale |
+| `screens/` | `path.js` (parcours et chapitres), `training.js`, `stories.js`, `league.js`, `quests.js`, `shop.js`, `profile.js`, `settings.js`, `stats.js`, `streak.js`, `accounts.js`, `onboarding.js`, `language.js` | Un module par écran ou fenêtre principale |
 | `services/` | `cloud.js`, `ai.js`, `reminders.js`, `speech.js` | Comptes en ligne et ligue, IA, rappels push, voix et micro |
-| `ui/` | `ui.js`, `router.js`, `platform.js`, `mascot.js`, `icons.ts`, `back-button.js`, `typography.js` | Toasts et modales, routage par hash, iOS/Android/thème, mascotte, icônes SVG (drapeaux, coupes, médailles), bouton retour, typographie |
+| `ui/` | `ui.js`, `router.js`, `platform.js`, `mascot.js`, `scenes.ts`, `icons.ts`, `pics.ts`, `pics/*.ts`, `back-button.js`, `typography.js` | Toasts et modales, routage par hash, iOS/Android/thème, mascotte et scènes de Horang, icônes SVG (drapeaux, coupes, médailles), images de vocabulaire et scènes de la Part 1, bouton retour, typographie |
 | racine | `main.js`, `globals.js`, `types.ts` | Démarrage, API globale, types |
 
 ## Démarrage (`src/main.js`)
@@ -66,7 +66,7 @@ L'ordre compte : la traduction du DOM doit observer la page avant la typographie
 
 ## Points faibles connus (prochaines étapes)
 
-1. **Traduction par texte exact.** Le code est écrit en français, puis traduit en cherchant chaque texte affiché dans `en.json` et `ko.json`. Une virgule différente suffit à laisser un texte en français. Prochaine étape : des clés `t('cle')`.
+1. **Traduction par texte exact.** Le code est écrit en français, puis traduit en cherchant chaque texte affiché dans `en.json` et `ko.json`. Une virgule différente suffit à laisser un texte en français. Le test `i18n_leaks` parcourt tous les écrans en anglais et en coréen et échoue sur un texte resté en français (v31.1 : il ignorait toute la page à cause de l'attribut `lang` de `<html>`, les textes des chapitres et des quêtes de la v29 étaient passés au travers). Prochaine étape : des clés `t('cle')`.
 2. **Un type d'exercice est réparti sur plusieurs fichiers** (génération, affichage, audio, coach, tests). Prochaine étape : un dossier par type avec `make`, `render` et `solve` réunis.
 3. **Rendu par chaînes HTML et état global.** Simple et rapide, mais sans composants. À garder tant que l'app reste de cette taille.
 
@@ -81,6 +81,7 @@ L'ordre compte : la traduction du DOM doit observer la page avant la typographie
 - Chapitres (v29) : `chapters()`, `curChapter()`, `setChapter()` et `renderChapters()` dans `screens/path.js` ; chapitre choisi dans `S.chap[cours]`, adresse `#chapitres`. Les fonctions de repli des unités restent mais ne sont plus affichées.
 - Quêtes (v29) : `screens/quests.js` (adresse `#quetes`), quête du mois `S.qm` (`questMonth`, `QM_STEPS` dans `features/quests.js`).
 - Scènes de Horang le long du parcours : `ui/scenes.ts` (`horangScene`).
+- IA (v31.1) : la clé se règle dans Paramètres › Mon Claude (`#reglages/claude`), tous les messages y renvoient ; la création d'unité (`genUnit`) envoie aussi `titles`, les titres des unités plus anciennes que les 14 dernières, pour éviter un thème déjà traité.
 - IA (v29) : `weakRuleIds()` / `weakRules()` dans `services/ai.js` envoient les règles de grammaire les moins réussies (`weak`) au prompt (`generate.php` et prompt direct) et ajoutent 3 phrases générées par gabarits à chaque séance IA ou locale. Les QCM générés peuvent porter un indice (5ᵉ champ) qui permet l'exercice `fill`.
 - Entraînement : `TMAP` (titre de carte → rubrique, icône, couleur) dans `screens/training.js`.
 

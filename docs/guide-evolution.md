@@ -57,7 +57,8 @@ Insérer une unité au milieu est possible : la progression des profils est reca
 3. Une partie variable s'écrit `¤` dans la clé.
    - Exemple : `"Bravo ¤ !": "Well done ¤!"`.
    - `¤1`, `¤2`… changent l'ordre des parties.
-4. Vérifier avec `node tests/run.mjs i18n_cards` et `node tests/run.mjs i18n_leaks ko`.
+4. Vérifier avec `node tests/run.mjs i18n_cards`, `node tests/run.mjs i18n_leaks en` et `node tests/run.mjs i18n_leaks ko` : ce dernier test échoue si un texte d'interface reste en français sur un écran.
+5. Nouvel écran ou nouvelle fenêtre : l'ajouter à la liste parcourue par `tests/i18n_leaks.py`.
 
 ## Une carte d'entraînement
 

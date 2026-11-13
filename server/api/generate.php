@@ -118,6 +118,8 @@ if ($mode === 'write') {
 // ---- Mode « unité » : création de l'unité suivante ----
 if ($mode === 'unit') {
   $done = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 140); }, (array)($in['done'] ?? [])), 0, 14);
+  // v31.1 : titres des unités plus anciennes, pour que l'IA ne reprenne pas un thème déjà traité
+  $titles = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 60); }, (array)($in['titles'] ?? [])), 0, 60);
   $num = max(1, min(999, (int)($in['num'] ?? 1)));
   $ko = $lang === 'ko-KR';
   $schema = $kind === 'volt'
@@ -125,6 +127,7 @@ if ($mode === 'unit') {
     : '{"t":"titre court","d":"notions de l\'unité, séparées par des virgules","tip":"astuce de cours en 2 phrases","p":[["phrase en français","traduction ' . $L . '",' . ($ko ? '"romanisation révisée",' : '') . '"variante acceptée"]],"v":[["mot français","traduction ' . $L . '"]],"c":[["phrase en ' . $L . ' avec ___",["bonne réponse","distracteur","distracteur","distracteur"],0,"explication en français"]]'
       . ($kind === 'toeic' ? ',"l":[["question orale",["meilleure réponse","piège","piège"],0]],"cv":[{"d":[["M","réplique"],["W","réplique"]],"q":[["question",["bonne réponse","distracteur","distracteur","distracteur"],0,"explication"]]}],"rd":[{"x":"document","q":[["question",["bonne réponse","distracteur","distracteur","distracteur"],0,"explication"]]}]' : '') . '}';
   $prompt = "Tu conçois la suite d'un parcours d'apprentissage façon Duolingo pour un élève francophone.\nCours : $course (langue : $L). Unités déjà terminées (titre : notions) :\n- " . implode("\n- ", $done)
+    . ($titles ? "\nThèmes déjà traités plus tôt dans le parcours (ne les reprends pas) : " . implode(' ; ', $titles) . '.' : '')
     . "\n\nCrée l'unité numéro $num : un thème NOUVEAU et des notions NOUVELLES qui prolongent logiquement le parcours, niveau $level (un peu plus difficile que la dernière unité). Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n$schema\n"
     . ($kind === 'volt' ? 'Donne 12 éléments dans "c" et 4 dans "d2".' : 'Donne 10 éléments dans "p" (1 à 3 variantes correctes chacun), 6 dans "v", 6 dans "c"' . ($kind === 'toeic' ? ', 4 dans "l", 2 dans "cv" (3 questions chacun), 2 dans "rd" (2 questions chacun)' : '') . '.')
     . "\nLangue naturelle et 100 % correcte, une seule bonne réponse par question.";
