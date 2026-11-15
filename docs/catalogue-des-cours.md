@@ -1,6 +1,6 @@
-# Catalogue des cours et des unités (v32)
+# Catalogue des cours et des unités (v34)
 
-Généré à partir des données de l'application (`src/content/courses/*.json`) : 142 unités dans 6 cours. Chaque unité compte 18 étapes (la dernière est le bilan) et une version extrême. La colonne « Chapitre » est le niveau de l'unité (1 = les bases… 4 = expert) : le parcours affiche un chapitre à la fois. La colonne « Images » compte les mots illustrés de l'unité (exercices en images et guide).
+Généré à partir des données de l'application (`src/content/courses/*.json`) : 142 unités dans 6 cours. Chaque unité du catalogue est un thème de 18 étapes (la dernière est le bilan), avec une version extrême ; depuis la v34, le parcours affiche chaque thème comme 3 unités de 6 étapes (426 unités affichées). La colonne « Chapitre » est le niveau de l'unité (1 = les bases… 4 = expert) : le parcours affiche un chapitre à la fois. La colonne « Images » compte les mots illustrés de l'unité (exercices en images et guide).
 
 ## Quotidien — `en-daily` (en-US, 24 unités)
 
