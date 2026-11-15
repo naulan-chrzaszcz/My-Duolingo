@@ -1292,7 +1292,9 @@
   "🎯 Réviser un thème": "🎯 주제 복습하기",
   "Réviser un thème": "주제 복습하기",
   "Par thème": "주제별",
-  "Nouveau thème, nouvelles notions : 3 unités de 6 étapes.": "새 주제, 새 개념: 6단계 단원 3개."
+  "Nouveau thème, nouvelles notions : 3 unités de 6 étapes.": "새 주제, 새 개념: 6단계 단원 3개.",
+  "Comme au vrai TOEIC, les affirmations ne sont qu'audio : touche 🔊 pour les écouter.": "실제 TOEIC처럼 보기 문장은 음성으로만 나와요. 🔊를 눌러 들어 보세요.",
+  "Affirmation ¤": "보기 ¤"
  },
  "content": {
   "Quotidien": "일상",
@@ -4687,7 +4689,7 @@
   "campagne": "시골",
   "heureusement": "다행히",
   "rire": "웃다",
-  "tout à coup": "갑자기",
+  "tout à coup": "별안간",
   "Action antérieure à une autre action passée : past perfect (had + participe passé).": "다른 과거 일보다 먼저 일어난 일은 과거완료(had + 과거분사)를 써요.",
   "Événement ponctuel dans un récit : prétérit.": "이야기 속 한순간의 사건은 과거형을 써요.",
   "Finalement, au bout du compte : in the end.": "결국: in the end.",
@@ -5657,9 +5659,6 @@
   "ses = les siennes (possession) ; ces = celles-là (démonstratif).": "ses = 그의(소유), ces = 이/저(지시).",
   "c'est = cela est ; s'est appartient à un verbe pronominal (il s'est trompé).": "c'est = cela est, s'est는 대명동사에 쓰여요(il s'est trompé).",
   "sa = la sienne (possession) ; ça = cela.": "sa = 그의(소유), ça = cela(그것).",
-  "a / à et est / et": "a / à, est / et 구별하기",
-  "ces / ses et c'est / s'est": "ces / ses, c'est / s'est 구별하기",
-  "ou / où et ça / sa": "ou / où, ça / sa 구별하기",
   "Sept noms en -ou prennent un x au pluriel : bijou, caillou, chou, genou, hibou, joujou, pou.": "-ou로 끝나는 명사 중 일곱 개는 복수형에 x를 붙여요: bijou, caillou, chou, genou, hibou, joujou, pou.",
   "Un nom employé comme couleur reste invariable : des rideaux orange (sauf rose, mauve, fauve, pourpre).": "색을 나타내는 명사는 변하지 않아요: des rideaux orange(rose, mauve, fauve, pourpre는 예외).",
   "-et devient -ète pour discret, complet, inquiet et secret.": "discret, complet, inquiet, secret는 -et가 -ète로 바뀌어요.",
@@ -5749,6 +5748,9 @@
   "Paronymes du quotidien": "일상 속 유사어",
   "Après que, avant que et dont": "après que, avant que, dont",
   "Quelque, tout et même": "quelque, tout, même",
-  "Pléonasmes à éviter": "피해야 할 중복 표현"
+  "Pléonasmes à éviter": "피해야 할 중복 표현",
+  "a / à, est / et": "a / à, est / et 구별하기",
+  "ces / ses, c'est / s'est": "ces / ses, c'est / s'est 구별하기",
+  "ou / où, ça / sa": "ou / où, ça / sa 구별하기"
  }
 }

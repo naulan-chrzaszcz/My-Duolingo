@@ -8,7 +8,8 @@ SECS={'en':[('fr','fr-fle'),('fr','fr-volt'),('ko','ko')],'ko':[('en','en-daily'
 JS=r"""()=>{const out=new Set();const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;
 const FR=/\b(le|la|les|des|une|un|et|ou|pour|avec|dans|sur|tes|ton|ta|tu|est|sont|à|ça|mot|mots|phrase|écoute|leçon|unité|réponds|lis|choisis|chapitre|unités|jours?|histoires|erreurs|gagne)\b|[éèêàùçâîô]/i;
 // contenu des cours dans la langue enseignée (titres d'unités et d'histoires) : ce n'est pas de l'interface
-const OK=new Set();for(const c in COURSES)COURSES[c].units.forEach(U=>{OK.add(U.t);OK.add(U.d)});for(const k in STORIES)STORIES[k].forEach(st=>OK.add(st.t));
+// les titres des unités affichées citent souvent les mots étudiés (« a / à », « café ») ; leur traduction est vérifiée par unit_parts
+const OK=new Set();for(const c in COURSES)COURSES[c].units.forEach(U=>{OK.add(U.t);OK.add(U.d);(U.parts||[]).forEach(P=>OK.add(P.t))});for(const k in STORIES)STORIES[k].forEach(st=>OK.add(st.t));
 while((n=w.nextNode())){const t=n.nodeValue.trim();if(t.length<4)continue;const p=n.parentElement;if(!p||p.closest('[lang]:not(html),.notr,script,style,.tile,.opt,.sline,.ftxt .ans,.prompt,.bubble,.wd,.spotw,.sq'))continue;
  const r=p.getBoundingClientRect();if(!r.width||OK.has(t))continue;if(FR.test(t)&&!/[가-힣]/.test(t))out.add(t.slice(0,90))}return [...out]}"""
 async def main():

@@ -27,7 +27,7 @@ npm test        # tests rapides ; npm run test:all avant de livrer
    - section `content` de `src/i18n/en.json`, pour Voltaire et coréen vus depuis l'interface anglaise.
 5. Lancer `node tests/run.mjs data_integrity` puis `node tests/run.mjs play_lessons fr <cours>`.
 
-Unités à sujet propre (v35) : ajouter au thème un champ `parts` de trois objets `{ t, p, v, c }` — `t` est le titre-objectif de l'unité affichée (« Commande une boisson »), `p`, `v` et `c` les index des phrases, mots et QCM du thème qui lui reviennent. Chaque élément du thème doit appartenir à une unité ; viser au moins 5 phrases, 3 mots et 3 QCM par unité. Traduire les titres dans la section `content` de `ko.json` (et de `en.json` pour Voltaire et le coréen). Sans `parts`, le thème garde l'affichage par phases.
+Unités à sujet propre (v35) : tout thème porte un champ `parts` de trois objets `{ t, p, v, c }` — `t` est le titre-objectif de l'unité affichée (« Commande une boisson »), `p`, `v` et `c` les index des phrases, mots et QCM du thème qui lui reviennent. Les autres listes peuvent être découpées de la même façon (`dd` pour Voltaire, `hj`, `sy`, `mp` pour le hangul, `ph`, `l`, `cv`, `rd` pour le TOEIC) ; une liste absente d'une partie reste commune au thème. Chaque élément d'une liste découpée doit appartenir à une seule unité ; viser au moins 4 phrases, 3 mots et 2 QCM par unité (3 QCM et 1 dictée pour Voltaire, 2 lettres pour le hangul). Traduire les titres dans la section `content` de `ko.json` (et de `en.json` pour Voltaire et le coréen). `node tests/run.mjs unit_parts` vérifie tout cela. Un thème sans `parts` s'affiche avec le titre et la description du thème sur ses trois unités.
 
 Insérer une unité au milieu est possible : la progression des profils est recalée par titre d'unité au chargement (`relayout` dans `core/progress.js`, liste `S.lay`). Garder les unités triées par niveau (`lv` croissant) et ne jamais renommer le titre d'une unité existante (sa progression serait perdue).
 
@@ -95,7 +95,7 @@ Insérer une unité au milieu est possible : la progression des profils est reca
 4. Phrase à traduire : `s` (phrase source par langue d'interface : `fr`, `en`, `ko`), `t` (traductions acceptées, la première sert aux étiquettes), `x` (au moins 3 traductions fausses : elles servent de mauvaises réponses et d'étiquettes en trop).
 5. Pour mêler la règle aux leçons d'une unité : ajouter son `id` dans `units` > cours > titre exact de l'unité.
 6. Traduire titre, mémo et règles : section `content` de `ko.json` (anglais et FLE) ou de `en.json` (coréen).
-7. Lancer `node tests/run.mjs grammar_drills` (chaque gabarit est tiré 40 fois) puis `node tests/run.mjs data_integrity`.
+7. Lancer `node tests/run.mjs grammar_drills` (chaque gabarit est tiré 40 fois), `node tests/run.mjs unit_parts` puis `node tests/run.mjs data_integrity`.
 
 ## Un écran
 

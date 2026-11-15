@@ -152,7 +152,7 @@
    "orig": 1,
    "parts": [
     {
-     "t": "a / à et est / et",
+     "t": "a / à, est / et",
      "c": [
       0,
       1,
@@ -164,7 +164,7 @@
      ]
     },
     {
-     "t": "ces / ses et c'est / s'est",
+     "t": "ces / ses, c'est / s'est",
      "c": [
       3,
       4,
@@ -176,7 +176,7 @@
      ]
     },
     {
-     "t": "ou / où et ça / sa",
+     "t": "ou / où, ça / sa",
      "c": [
       5,
       6,

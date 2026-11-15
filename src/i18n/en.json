@@ -1254,7 +1254,9 @@
   "🎯 Réviser un thème": "🎯 Review a theme",
   "Réviser un thème": "Review a theme",
   "Par thème": "By theme",
-  "Nouveau thème, nouvelles notions : 3 unités de 6 étapes.": "New theme, new topics: 3 units of 6 steps."
+  "Nouveau thème, nouvelles notions : 3 unités de 6 étapes.": "New theme, new topics: 3 units of 6 steps.",
+  "Comme au vrai TOEIC, les affirmations ne sont qu'audio : touche 🔊 pour les écouter.": "As in the real TOEIC, the statements are audio only: tap 🔊 to hear them.",
+  "Affirmation ¤": "Statement ¤"
  },
  "content": {
   "Hangul 1 : les voyelles": "Hangul 1: vowels",
@@ -3318,9 +3320,6 @@
   "ses = les siennes (possession) ; ces = celles-là (démonstratif).": "ses = his or her (possession); ces = these or those (demonstrative).",
   "c'est = cela est ; s'est appartient à un verbe pronominal (il s'est trompé).": "c'est = cela est; s'est belongs to a reflexive verb (il s'est trompé).",
   "sa = la sienne (possession) ; ça = cela.": "sa = her or his (possession); ça = cela (that).",
-  "a / à et est / et": "a / à and est / et",
-  "ces / ses et c'est / s'est": "ces / ses and c'est / s'est",
-  "ou / où et ça / sa": "ou / où and ça / sa",
   "Sept noms en -ou prennent un x au pluriel : bijou, caillou, chou, genou, hibou, joujou, pou.": "Seven nouns in -ou take an x in the plural: bijou, caillou, chou, genou, hibou, joujou, pou.",
   "Un nom employé comme couleur reste invariable : des rideaux orange (sauf rose, mauve, fauve, pourpre).": "A noun used as a colour stays invariable: des rideaux orange (except rose, mauve, fauve, pourpre).",
   "-et devient -ète pour discret, complet, inquiet et secret.": "-et becomes -ète for discret, complet, inquiet and secret.",
@@ -3410,6 +3409,9 @@
   "Paronymes du quotidien": "Everyday paronyms",
   "Après que, avant que et dont": "Après que, avant que and dont",
   "Quelque, tout et même": "Quelque, tout and même",
-  "Pléonasmes à éviter": "Pleonasms to avoid"
+  "Pléonasmes à éviter": "Pleonasms to avoid",
+  "a / à, est / et": "a / à, est / et",
+  "ces / ses, c'est / s'est": "ces / ses, c'est / s'est",
+  "ou / où, ça / sa": "ou / où, ça / sa"
  }
 }

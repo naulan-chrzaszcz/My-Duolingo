@@ -143,7 +143,8 @@ if ($mode === 'unit') {
   $prompt = "Tu conçois la suite d'un parcours d'apprentissage façon Duolingo pour un élève francophone.\nCours : $course (langue : $L). Unités déjà terminées (titre : notions) :\n- " . implode("\n- ", $done)
     . ($titles ? "\nThèmes déjà traités plus tôt dans le parcours (ne les reprends pas) : " . implode(' ; ', $titles) . '.' : '')
     . "\n\nCrée l'unité numéro $num : un thème NOUVEAU et des notions NOUVELLES qui prolongent logiquement le parcours, niveau $level (un peu plus difficile que la dernière unité). Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n$schema\n"
-    . ($kind === 'volt' ? 'Donne 12 éléments dans "c" et 4 dans "d2".' : 'Donne 10 éléments dans "p" (1 à 3 variantes correctes chacun), 6 dans "v", 6 dans "c"' . ($kind === 'toeic' ? ', 4 dans "l", 2 dans "cv" (3 questions chacun), 2 dans "rd" (2 questions chacun)' : '') . '.')
+    . ($kind === 'volt' ? 'Donne 12 éléments dans "c" et 3 dans "d2".' : 'Donne 10 éléments dans "p" (1 à 3 variantes correctes chacun), 6 dans "v", 6 dans "c"' . ($kind === 'toeic' ? ', 4 dans "l", 2 dans "cv" (3 questions chacun), 2 dans "rd" (2 questions chacun)' : '') . '.')
+    . "\nLe thème est découpé en 3 unités courtes façon Duolingo : ajoute \"parts\" avec 3 titres-objectifs courts à l'impératif, chacun avec son propre sujet (ex. « Commande une boisson », « Réserve une table », « Demande l'addition »), et range les éléments dans cet ordre : le premier tiers de chaque liste pour la 1re unité, le deuxième tiers pour la 2e, le dernier tiers pour la 3e. Forme : \"parts\":[\"titre 1\",\"titre 2\",\"titre 3\"]."
     . "\nLangue naturelle et 100 % correcte, une seule bonne réponse par question.";
 }
 

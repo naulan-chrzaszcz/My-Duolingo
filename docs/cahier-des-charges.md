@@ -35,7 +35,7 @@ Speakeasy est une application web d'apprentissage des langues inspirée de Duoli
 | Coréen (hangul, vie quotidienne, 맞춤법) | ko | coréen (ko-KR) | 30 | fr, en |
 | Apprendre le français (FLE) | fr-fle | français (fr-FR) | 20 | en, ko |
 
-Chaque thème du catalogue contient 18 étapes ; depuis la v34, le parcours le présente comme 3 unités de 6 étapes (Découvrir, Construire, Maîtriser), soit 426 unités affichées pour 142 thèmes. La dernière étape du thème est un bilan. Chaque étape existe aussi en version extrême, qui rapporte une couronne. Le détail des 142 unités est dans `catalogue-des-cours.md`.
+Chaque thème du catalogue contient 18 étapes ; depuis la v34, le parcours le présente comme 3 unités de 6 étapes, soit 426 unités affichées pour 142 thèmes ; depuis la v35, chaque unité affichée a son titre-objectif et son propre contenu. La dernière étape du thème est un bilan. Chaque étape existe aussi en version extrême, qui rapporte une couronne. Le détail des 142 unités est dans `catalogue-des-cours.md`.
 
 ### Hors périmètre
 
@@ -49,8 +49,8 @@ L'application doit couvrir les douze fonctions ci-dessous ; toutes sont en place
 
 ### 2.1 Parcours
 
-- Unités à sujet propre (v35, pilote sur le chapitre 1 d'anglais quotidien) : chaque unité affichée a son titre-objectif et son contenu ; le parcours montre la bannière de l'unité en cours et annonce les suivantes par un intertitre. À étendre aux autres chapitres et cours.
-- Unités courtes façon Duolingo (v34) : chaque thème est affiché comme trois unités de 6 étapes, chacune avec sa bannière « Chapitre N, unité M · phase », sa barre de progression et un bonus de 10 gemmes à la fin. Les compteurs (barre du haut, chapitres) comptent ces unités. La progression enregistrée ne change pas : aucune migration.
+- Unités à sujet propre (v35, tous les cours) : chaque unité affichée a son titre-objectif (« Commande une boisson », « Lis ㅏ, ㅓ et ㅗ », « a / à et est / et ») et son propre contenu ; le parcours montre la bannière de l'unité en cours et annonce les suivantes par un intertitre. Les anciens intertitres de phases (Découvrir, Comprendre…) sont retirés. Le bilan du thème et la version extrême portent sur tout le thème.
+- Unités courtes façon Duolingo (v34) : chaque thème est affiché comme trois unités de 6 étapes, chacune avec sa bannière « Chapitre N, unité M », sa barre de progression et un bonus de 10 gemmes à la fin. Les compteurs (barre du haut, chapitres) comptent ces unités. La progression enregistrée ne change pas : aucune migration.
 - Un parcours par cours, découpé en chapitres puis en unités, du plus facile au plus difficile (A1 à C1). Un chapitre correspond à un niveau du cours ; le parcours affiche un chapitre à la fois, un écran liste les chapitres et un bouton « Continuer » mène au suivant. C'est le design retenu (v29, confirmé en v31.1).
 - Parcours hybride : l'ordre est recommandé mais toute unité peut être commencée à tout moment.
 - Bannière d'unité « Chapitre N, unité M », guide de l'unité (astuce, phrases clés, mots utiles, mots en images, règles) et étape conseillée. Les unités repliables d'avant la v29 ont été remplacées par les chapitres.
@@ -100,7 +100,7 @@ L'application doit couvrir les douze fonctions ci-dessous ; toutes sont en place
 - XP (10 par bonne réponse ; une leçon compte 11 exercices depuis la v33, soit 110 à 135 XP) et objectif quotidien réglable à 100, 200, 400 ou 600 XP, soit environ 1, 2, 4 ou 5 leçons (v34.2 ; les objectifs des versions précédentes sont convertis au palier équivalent). Série de jours avec gel de série et paliers récompensés (7, 14, 30 et 50 jours), badges, combo.
 - Onglet Quêtes : 3 quêtes du jour tirées chaque matin parmi 14 (une de volume, deux parmi précision, écoute et oral, découverte, révision), avec coffres ; quête du mois de 60 points, paliers à 10, 25, 40 et 60 points (+20, +30, +50 et +100 gemmes) (v32).
 - Séances courtes façon Duolingo (v33) : 10 exercices et 1 révision par leçon (12 et 2 pour le bilan d'unité, 12 en version extrême), au lieu de 14 et 2 ; les types d'exercice les plus répétés sont retirés en premier.
-- Repères de thème le long de chaque unité (v33) : Découvrir, Comprendre, Construire, Maîtriser, Bilan, avec ce qu'on y travaille (libellés propres au TOEIC, à Voltaire et au hangul).
+- Repères de thème le long de chaque unité (v33) : Découvrir, Comprendre, Construire, Maîtriser, Bilan. Retirés en v35 : chaque unité affichée porte désormais son propre sujet.
 - « À savoir » après chaque réponse, juste ou fausse (v33) : la règle de l'exercice, sinon les repères de grammaire reconnus dans la phrase (temps, auxiliaires, particules coréennes, négation…), les mots clés de la phrase et, à défaut, l'astuce de l'unité. Avec une IA configurée, le bouton « Explique ma réponse » demande une explication de la phrase et de sa construction (mode `explain`).
 - « Trouve l'erreur » (v33) : une fois sur deux, 2 ou 3 phrases à la suite avec de 0 à 3 fautes à toucher ; l'examen blanc Voltaire reste à une phrase.
 - Leçon bilan (v33) : carte d'entraînement qui couvre tout ce qui a été vu (unités où l'on se trompe le plus, échantillon du reste du parcours, erreurs à ancrer, mots à revoir), par IA ou en mélange local.
