@@ -28,6 +28,9 @@ export { LEVELS, SECTIONS, COURSES, STORIES, UNIT_REMAP, REAL_PH, PH_IMG, HANGUL
       U.t = T(U.t);
       U.d = T(U.d);
       U.tip = T(U.tip);
+      (U.parts || []).forEach(P => {
+        P.t = T(P.t);
+      });
       (U.hj || []).forEach(h => {
         h[1] = T(h[1]);
       });

@@ -2031,6 +2031,43 @@
      "The train was cancelled because of the strike.",
      "The train has been canceled because of the strike.",
      "The train has been cancelled because of the strike."
+    ],
+    [
+     "C'est loin d'ici ?",
+     "Is it far from here?"
+    ],
+    [
+     "Allez tout droit jusqu'au pont.",
+     "Go straight ahead to the bridge.",
+     "Go straight on to the bridge.",
+     "Go straight to the bridge."
+    ],
+    [
+     "Un aller-retour pour Londres, s'il vous plaît.",
+     "A return ticket to London, please.",
+     "A round-trip ticket to London, please.",
+     "A round trip to London, please."
+    ],
+    [
+     "De quel quai part le train ?",
+     "Which platform does the train leave from?",
+     "What platform does the train leave from?"
+    ],
+    [
+     "Le prochain bus passe dans dix minutes.",
+     "The next bus comes in ten minutes.",
+     "The next bus is in ten minutes.",
+     "The next bus comes in 10 minutes."
+    ],
+    [
+     "Où sont les cabines d'essayage ?",
+     "Where are the fitting rooms?",
+     "Where are the changing rooms?"
+    ],
+    [
+     "Je vais le prendre.",
+     "I'll take it.",
+     "I will take it."
     ]
    ],
    "v": [
@@ -2057,6 +2094,30 @@
     [
      "carrefour",
      "intersection"
+    ],
+    [
+     "pont",
+     "bridge"
+    ],
+    [
+     "coin de la rue",
+     "corner"
+    ],
+    [
+     "horaires",
+     "timetable"
+    ],
+    [
+     "correspondance",
+     "connection"
+    ],
+    [
+     "taille",
+     "size"
+    ],
+    [
+     "cabine d'essayage",
+     "fitting room"
     ]
    ],
    "orig": 1,
@@ -2104,6 +2165,50 @@
      ],
      0,
      "between A and B = entre deux éléments."
+    ],
+    [
+     "Turn right ___ the traffic lights.",
+     [
+      "at",
+      "in",
+      "on",
+      "to"
+     ],
+     0,
+     "Pour un point précis du trajet, on dit at : at the traffic lights."
+    ],
+    [
+     "The train ___ at 6:15.",
+     [
+      "leaves",
+      "leave",
+      "is leave",
+      "leaving"
+     ],
+     0,
+     "Horaire fixe : présent simple ; 3e personne → leaves."
+    ],
+    [
+     "Which platform does the train leave ___?",
+     [
+      "from",
+      "to",
+      "at",
+      "of"
+     ],
+     0,
+     "Partir de : leave from."
+    ],
+    [
+     "Do you have this shirt in a ___ size?",
+     [
+      "smaller",
+      "small",
+      "more small",
+      "smallest"
+     ],
+     0,
+     "Comparatif d'un adjectif court : -er (smaller)."
     ]
    ],
    "pk": [
@@ -2131,6 +2236,70 @@
     "socks",
     "hat",
     "scarf"
+   ],
+   "parts": [
+    {
+     "t": "Demande ton chemin",
+     "p": [
+      0,
+      1,
+      2,
+      8,
+      9
+     ],
+     "v": [
+      5,
+      6,
+      7
+     ],
+     "c": [
+      0,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Prends le train et le bus",
+     "p": [
+      3,
+      7,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      2,
+      3,
+      8,
+      9
+     ],
+     "c": [
+      5,
+      6
+     ]
+    },
+    {
+     "t": "Achète des vêtements",
+     "p": [
+      4,
+      5,
+      6,
+      13,
+      14
+     ],
+     "v": [
+      0,
+      1,
+      4,
+      10,
+      11
+     ],
+     "c": [
+      1,
+      2,
+      7
+     ]
+    }
    ]
   },
   {
@@ -2184,6 +2353,47 @@
      "I caught a cold.",
      "I've caught a cold.",
      "I have caught a cold."
+    ],
+    [
+     "J'ai mal au dos.",
+     "My back hurts.",
+     "I have back pain.",
+     "I have a backache.",
+     "I've got back pain."
+    ],
+    [
+     "Je tousse depuis trois jours.",
+     "I've been coughing for three days.",
+     "I have been coughing for three days."
+    ],
+    [
+     "J'ai mal à la gorge.",
+     "I have a sore throat.",
+     "I've got a sore throat."
+    ],
+    [
+     "Prenez un comprimé après chaque repas.",
+     "Take one tablet after each meal.",
+     "Take a tablet after each meal.",
+     "Take one pill after each meal.",
+     "Take a pill after each meal."
+    ],
+    [
+     "Avez-vous une ordonnance ?",
+     "Do you have a prescription?",
+     "Have you got a prescription?"
+    ],
+    [
+     "Je dors huit heures par nuit.",
+     "I sleep eight hours a night.",
+     "I sleep for eight hours a night.",
+     "I sleep 8 hours a night."
+    ],
+    [
+     "Bois beaucoup d'eau.",
+     "Drink a lot of water.",
+     "Drink lots of water.",
+     "Drink plenty of water."
     ]
    ],
    "v": [
@@ -2210,6 +2420,30 @@
     [
      "se rétablir",
      "recover"
+    ],
+    [
+     "comprimé",
+     "tablet"
+    ],
+    [
+     "pharmacien",
+     "pharmacist"
+    ],
+    [
+     "sommeil",
+     "sleep"
+    ],
+    [
+     "en forme",
+     "fit"
+    ],
+    [
+     "s'étirer",
+     "stretch"
+    ],
+    [
+     "dos",
+     "back"
     ]
    ],
    "c": [
@@ -2278,6 +2512,28 @@
      ],
      0,
      "Après if (condition réelle), le présent : if you get… you'll feel…"
+    ],
+    [
+     "You should drink ___ water.",
+     [
+      "more",
+      "many",
+      "few",
+      "a"
+     ],
+     0,
+     "water est indénombrable : more water (et non many)."
+    ],
+    [
+     "I go jogging ___ morning.",
+     [
+      "every",
+      "all",
+      "each of",
+      "some of"
+     ],
+     0,
+     "Pour une habitude : every + nom singulier (every morning)."
     ]
    ],
    "pk": [
@@ -2295,6 +2551,70 @@
     "nose",
     "mouth",
     "foot"
+   ],
+   "parts": [
+    {
+     "t": "Dis où tu as mal",
+     "p": [
+      0,
+      7,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      1,
+      2,
+      3,
+      11
+     ],
+     "c": [
+      0,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Va chez le médecin",
+     "p": [
+      1,
+      2,
+      6,
+      11,
+      12
+     ],
+     "v": [
+      0,
+      4,
+      6,
+      7
+     ],
+     "c": [
+      1,
+      2
+     ]
+    },
+    {
+     "t": "Prends soin de toi",
+     "p": [
+      3,
+      4,
+      5,
+      13,
+      14
+     ],
+     "v": [
+      5,
+      8,
+      9,
+      10
+     ],
+     "c": [
+      5,
+      6,
+      7
+     ]
+    }
    ]
   },
   {
@@ -2352,6 +2672,46 @@
      "The landlord is going to fix the leak.",
      "The landlord will fix the leak.",
      "The landlord is going to repair the leak."
+    ],
+    [
+     "Il y a une fuite dans la salle de bains.",
+     "There's a leak in the bathroom.",
+     "There is a leak in the bathroom."
+    ],
+    [
+     "La machine à laver est en panne.",
+     "The washing machine is broken.",
+     "The washing machine isn't working.",
+     "The washing machine doesn't work."
+    ],
+    [
+     "Pouvez-vous envoyer un plombier ?",
+     "Can you send a plumber?",
+     "Could you send a plumber?"
+    ],
+    [
+     "Je viens d'emménager à côté.",
+     "I've just moved in next door.",
+     "I just moved in next door.",
+     "I have just moved in next door."
+    ],
+    [
+     "Pourriez-vous baisser la musique ?",
+     "Could you turn the music down?",
+     "Could you turn down the music?",
+     "Can you turn the music down?",
+     "Can you turn down the music?"
+    ],
+    [
+     "Ma voisine arrose mes plantes quand je pars.",
+     "My neighbor waters my plants when I'm away.",
+     "My neighbour waters my plants when I'm away.",
+     "My neighbor waters my plants when I am away."
+    ],
+    [
+     "On se dit bonjour dans l'escalier.",
+     "We say hello on the stairs.",
+     "We say hi on the stairs."
     ]
    ],
    "v": [
@@ -2378,6 +2738,30 @@
     [
      "fuite",
      "leak"
+    ],
+    [
+     "plombier",
+     "plumber"
+    ],
+    [
+     "chauffage",
+     "heating"
+    ],
+    [
+     "réparer",
+     "fix"
+    ],
+    [
+     "voisin du dessus",
+     "upstairs neighbor"
+    ],
+    [
+     "bruit",
+     "noise"
+    ],
+    [
+     "escalier",
+     "stairs"
     ]
    ],
    "c": [
@@ -2424,6 +2808,50 @@
      ],
      0,
      "at night = la nuit."
+    ],
+    [
+     "When can I move ___?",
+     [
+      "in",
+      "on",
+      "at",
+      "to"
+     ],
+     0,
+     "Emménager : move in ; déménager : move out."
+    ],
+    [
+     "The sink is ___. Can you fix it?",
+     [
+      "leaking",
+      "leak",
+      "to leak",
+      "leaks"
+     ],
+     0,
+     "Une action en cours : be + -ing (is leaking)."
+    ],
+    [
+     "I'll ___ the landlord about the heating.",
+     [
+      "call",
+      "say",
+      "speak",
+      "tell to"
+     ],
+     0,
+     "Appeler quelqu'un : call + personne, sans préposition."
+    ],
+    [
+     "Could you turn the music ___, please?",
+     [
+      "down",
+      "low",
+      "under",
+      "below"
+     ],
+     0,
+     "Baisser le son : turn down ; l'éteindre : turn off."
     ]
    ],
    "pk": [
@@ -2442,6 +2870,70 @@
     "plant",
     "building",
     "box"
+   ],
+   "parts": [
+    {
+     "t": "Cherche un appartement",
+     "p": [
+      0,
+      1,
+      2,
+      5,
+      6
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "c": [
+      1,
+      2,
+      4
+     ]
+    },
+    {
+     "t": "Signale un problème",
+     "p": [
+      3,
+      7,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      5,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      0,
+      5,
+      6
+     ]
+    },
+    {
+     "t": "Parle à tes voisins",
+     "p": [
+      4,
+      11,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      4,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      3,
+      7
+     ]
+    }
    ]
   },
   {
@@ -2493,6 +2985,46 @@
     [
      "Il y a un vol direct pour Tokyo ?",
      "Is there a direct flight to Tokyo?"
+    ],
+    [
+     "Je voudrais un siège côté hublot.",
+     "I'd like a window seat.",
+     "I would like a window seat."
+    ],
+    [
+     "L'embarquement commence à dix heures.",
+     "Boarding starts at ten o'clock.",
+     "Boarding starts at ten.",
+     "Boarding begins at ten."
+    ],
+    [
+     "J'ai une réservation au nom de Martin.",
+     "I have a reservation under the name Martin.",
+     "I have a booking under the name Martin.",
+     "I have a reservation in the name of Martin."
+    ],
+    [
+     "La chambre donne sur la mer.",
+     "The room has a sea view.",
+     "The room overlooks the sea."
+    ],
+    [
+     "À quelle heure faut-il libérer la chambre ?",
+     "What time is check-out?",
+     "What time do we have to check out?",
+     "What time do I have to check out?"
+    ],
+    [
+     "Il a fait beau toute la semaine.",
+     "The weather was nice all week.",
+     "It was sunny all week.",
+     "The weather was good all week."
+    ],
+    [
+     "On a goûté la cuisine locale.",
+     "We tried the local food.",
+     "We tasted the local food.",
+     "We tried the local cuisine."
     ]
    ],
    "v": [
@@ -2519,6 +3051,30 @@
     [
      "plage",
      "beach"
+    ],
+    [
+     "réception",
+     "front desk"
+    ],
+    [
+     "clé",
+     "key"
+    ],
+    [
+     "chambre double",
+     "double room"
+    ],
+    [
+     "souvenir (objet)",
+     "souvenir"
+    ],
+    [
+     "coucher de soleil",
+     "sunset"
+    ],
+    [
+     "visite guidée",
+     "guided tour"
     ]
    ],
    "c": [
@@ -2587,6 +3143,28 @@
      ],
      0,
      "Look forward to + -ing : to est ici une préposition."
+    ],
+    [
+     "Your flight ___ delayed by an hour.",
+     [
+      "has been",
+      "have been",
+      "is been",
+      "was be"
+     ],
+     0,
+     "Passif au present perfect : has been + participe passé."
+    ],
+    [
+     "Could I have an ___ seat, please?",
+     [
+      "aisle",
+      "alley",
+      "isle",
+      "ail"
+     ],
+     0,
+     "Une place côté couloir se dit an aisle seat (le s ne se prononce pas)."
     ]
    ],
    "pk": [
@@ -2603,6 +3181,70 @@
     "umbrella",
     "hat",
     "glasses"
+   ],
+   "parts": [
+    {
+     "t": "Prends l'avion",
+     "p": [
+      1,
+      2,
+      7,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "c": [
+      2,
+      6,
+      7
+     ]
+    },
+    {
+     "t": "Séjourne à l'hôtel",
+     "p": [
+      0,
+      3,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      4,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      1,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Raconte tes vacances",
+     "p": [
+      4,
+      5,
+      6,
+      13,
+      14
+     ],
+     "v": [
+      5,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      0,
+      5
+     ]
+    }
    ]
   },
   {
@@ -2661,6 +3303,51 @@
      "Sorry, I've got the wrong number.",
      "Sorry, wrong number.",
      "Sorry, I have the wrong number."
+    ],
+    [
+     "Je vous entends mal.",
+     "I can't hear you very well.",
+     "I can't hear you well.",
+     "I can hardly hear you."
+    ],
+    [
+     "Il n'est pas là pour le moment.",
+     "He's not here at the moment.",
+     "He isn't here at the moment.",
+     "He is not here at the moment.",
+     "He's not in at the moment."
+    ],
+    [
+     "Pouvez-vous lui dire de me rappeler ?",
+     "Can you tell him to call me back?",
+     "Could you tell him to call me back?",
+     "Could you ask him to call me back?",
+     "Can you ask him to call me back?"
+    ],
+    [
+     "Je rappellerai plus tard.",
+     "I'll call back later.",
+     "I will call back later.",
+     "I'll call again later."
+    ],
+    [
+     "Je dois annuler mon rendez-vous.",
+     "I need to cancel my appointment.",
+     "I have to cancel my appointment."
+    ],
+    [
+     "On peut le reporter à jeudi ?",
+     "Can we move it to Thursday?",
+     "Could we move it to Thursday?",
+     "Can we postpone it to Thursday?",
+     "Can we postpone it until Thursday?"
+    ],
+    [
+     "À jeudi, alors !",
+     "See you on Thursday, then!",
+     "See you Thursday, then!",
+     "See you on Thursday!",
+     "See you Thursday!"
     ]
    ],
    "v": [
@@ -2687,6 +3374,30 @@
     [
      "annuler",
      "cancel"
+    ],
+    [
+     "sonner",
+     "ring"
+    ],
+    [
+     "numéro",
+     "number"
+    ],
+    [
+     "joindre (quelqu'un)",
+     "reach"
+    ],
+    [
+     "disponible",
+     "available"
+    ],
+    [
+     "reporter (un rendez-vous)",
+     "reschedule"
+    ],
+    [
+     "créneau",
+     "time slot"
     ]
    ],
    "c": [
@@ -2733,7 +3444,115 @@
      ],
      0,
      "Does it work for you? = ça te convient ?"
+    ],
+    [
+     "Can I take a ___?",
+     [
+      "message",
+      "note",
+      "letter",
+      "word"
+     ],
+     0,
+     "Prendre un message : take a message."
+    ],
+    [
+     "I'm sorry, she's ___ a meeting.",
+     [
+      "in",
+      "on",
+      "at",
+      "into"
+     ],
+     0,
+     "Être en réunion : be in a meeting."
+    ],
+    [
+     "Can we ___ the meeting to Monday?",
+     [
+      "move",
+      "go",
+      "put on",
+      "make"
+     ],
+     0,
+     "Déplacer un rendez-vous : move it to + jour (ou reschedule)."
+    ],
+    [
+     "I'm free ___ Wednesday afternoon.",
+     [
+      "on",
+      "in",
+      "at",
+      "by"
+     ],
+     0,
+     "Devant un jour, même suivi de afternoon, la préposition est on."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Passe un coup de fil",
+     "p": [
+      0,
+      1,
+      2,
+      7,
+      8
+     ],
+     "v": [
+      1,
+      4,
+      6,
+      7
+     ],
+     "c": [
+      0,
+      2
+     ]
+    },
+    {
+     "t": "Laisse un message",
+     "p": [
+      3,
+      6,
+      9,
+      10,
+      11
+     ],
+     "v": [
+      0,
+      3,
+      8
+     ],
+     "c": [
+      1,
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Prends rendez-vous",
+     "p": [
+      4,
+      5,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      2,
+      5,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      3,
+      6,
+      7
+     ]
+    }
    ]
   },
   {
@@ -2791,6 +3610,48 @@
      "Can I bring a friend?",
      "May I bring a friend?",
      "Can I come with a friend?"
+    ],
+    [
+     "Tu es libre vendredi soir ?",
+     "Are you free on Friday evening?",
+     "Are you free Friday evening?",
+     "Are you free on Friday night?",
+     "Are you free Friday night?"
+    ],
+    [
+     "J'organise une fête pour mon anniversaire.",
+     "I'm having a party for my birthday.",
+     "I'm throwing a party for my birthday.",
+     "I'm organizing a party for my birthday."
+    ],
+    [
+     "Ça te dirait de venir ?",
+     "Would you like to come?",
+     "Do you want to come?"
+    ],
+    [
+     "Super, je viendrai !",
+     "Great, I'll be there!",
+     "Great, I will be there!",
+     "Great, I'll come!"
+    ],
+    [
+     "J'apporterai le dessert.",
+     "I'll bring dessert.",
+     "I will bring dessert.",
+     "I'll bring the dessert."
+    ],
+    [
+     "Désolé, j'ai déjà quelque chose de prévu.",
+     "Sorry, I already have plans.",
+     "Sorry, I've already got plans.",
+     "I'm sorry, I already have plans."
+    ],
+    [
+     "Ce n'est pas possible pour moi cette semaine.",
+     "I can't make it this week.",
+     "This week doesn't work for me.",
+     "It's not possible for me this week."
     ]
    ],
    "v": [
@@ -2817,6 +3678,30 @@
     [
      "occupé",
      "busy"
+    ],
+    [
+     "anniversaire",
+     "birthday"
+    ],
+    [
+     "invité",
+     "guest"
+    ],
+    [
+     "apporter",
+     "bring"
+    ],
+    [
+     "génial",
+     "great"
+    ],
+    [
+     "projets (prévus)",
+     "plans"
+    ],
+    [
+     "une autre fois",
+     "another time"
     ]
    ],
    "c": [
@@ -2863,7 +3748,115 @@
      ],
      0,
      "turn down = refuser."
+    ],
+    [
+     "I'd love ___!",
+     [
+      "to",
+      "it",
+      "that",
+      "so"
+     ],
+     0,
+     "On reprend l'infinitif sans le verbe : I'd love to."
+    ],
+    [
+     "Thanks ___ inviting me.",
+     [
+      "for",
+      "to",
+      "of",
+      "about"
+     ],
+     0,
+     "Remercier pour : thanks for + -ing."
+    ],
+    [
+     "What time should I ___?",
+     [
+      "come",
+      "coming",
+      "to come",
+      "came"
+     ],
+     0,
+     "Après should, la base verbale."
+    ],
+    [
+     "Sorry, I can't ___ it on Saturday.",
+     [
+      "make",
+      "do",
+      "take",
+      "have"
+     ],
+     0,
+     "Pouvoir venir : make it."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Invite quelqu'un",
+     "p": [
+      0,
+      3,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      0,
+      3,
+      4,
+      6
+     ],
+     "c": [
+      0,
+      1
+     ]
+    },
+    {
+     "t": "Accepte avec plaisir",
+     "p": [
+      1,
+      6,
+      7,
+      11,
+      12
+     ],
+     "v": [
+      1,
+      7,
+      8,
+      9
+     ],
+     "c": [
+      4,
+      5,
+      6
+     ]
+    },
+    {
+     "t": "Refuse poliment",
+     "p": [
+      2,
+      4,
+      5,
+      13,
+      14
+     ],
+     "v": [
+      2,
+      5,
+      10,
+      11
+     ],
+     "c": [
+      2,
+      3,
+      7
+     ]
+    }
    ]
   },
   {
@@ -2917,6 +3910,44 @@
      "Est-ce que tu as un chargeur ?",
      "Do you have a charger?",
      "Have you got a charger?"
+    ],
+    [
+     "Le wifi ne marche pas.",
+     "The wifi isn't working.",
+     "The wifi doesn't work.",
+     "The Wi-Fi isn't working."
+    ],
+    [
+     "Mon compte est bloqué.",
+     "My account is locked.",
+     "My account has been locked."
+    ],
+    [
+     "Essaie de redémarrer ton ordinateur.",
+     "Try restarting your computer.",
+     "Try to restart your computer."
+    ],
+    [
+     "Je t'envoie les photos par e-mail.",
+     "I'll send you the photos by email.",
+     "I'll email you the photos.",
+     "I'm sending you the photos by email.",
+     "I'll send you the pictures by email."
+    ],
+    [
+     "Tu peux partager ton écran ?",
+     "Can you share your screen?",
+     "Could you share your screen?"
+    ],
+    [
+     "Le fichier est trop lourd.",
+     "The file is too big.",
+     "The file is too large."
+    ],
+    [
+     "Ajoute-moi au groupe.",
+     "Add me to the group.",
+     "Can you add me to the group?"
     ]
    ],
    "v": [
@@ -2943,6 +3974,30 @@
     [
      "écran",
      "screen"
+    ],
+    [
+     "mot de passe",
+     "password"
+    ],
+    [
+     "réseau",
+     "network"
+    ],
+    [
+     "compte",
+     "account"
+    ],
+    [
+     "redémarrer",
+     "restart"
+    ],
+    [
+     "allumer",
+     "turn on"
+    ],
+    [
+     "pièce jointe",
+     "attachment"
     ]
    ],
    "c": [
@@ -2989,6 +4044,50 @@
      ],
      0,
      "link = lien."
+    ],
+    [
+     "I forgot ___ password.",
+     [
+      "my",
+      "mine",
+      "me",
+      "I"
+     ],
+     0,
+     "Devant un nom : adjectif possessif my (mine s'emploie seul)."
+    ],
+    [
+     "Turn the router off and ___ again.",
+     [
+      "on",
+      "in",
+      "up",
+      "out"
+     ],
+     0,
+     "Allumer : turn on ; éteindre : turn off."
+    ],
+    [
+     "Can you send me the file ___ email?",
+     [
+      "by",
+      "with",
+      "on",
+      "per"
+     ],
+     0,
+     "Le moyen d'envoi : by email, by post."
+    ],
+    [
+     "I'll ___ you the photos tonight.",
+     [
+      "send",
+      "sent",
+      "sending",
+      "to send"
+     ],
+     0,
+     "Après will, la base verbale."
     ]
    ],
    "pk": [
@@ -3000,6 +4099,70 @@
     "printer",
     "camera",
     "tv"
+   ],
+   "parts": [
+    {
+     "t": "Connecte-toi",
+     "p": [
+      1,
+      4,
+      6,
+      8,
+      9
+     ],
+     "v": [
+      3,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      1,
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Répare un appareil",
+     "p": [
+      0,
+      2,
+      3,
+      7,
+      10
+     ],
+     "v": [
+      0,
+      2,
+      9,
+      10
+     ],
+     "c": [
+      0,
+      2
+     ]
+    },
+    {
+     "t": "Partage des fichiers",
+     "p": [
+      5,
+      11,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      1,
+      4,
+      5,
+      11
+     ],
+     "c": [
+      3,
+      6,
+      7
+     ]
+    }
    ]
   },
   {
@@ -3053,6 +4216,48 @@
      "As soon as I arrive, I'll call you.",
      "As soon as I arrive, I will call you.",
      "I'll call you as soon as I arrive."
+    ],
+    [
+     "Je vais apprendre à conduire.",
+     "I'm going to learn to drive.",
+     "I am going to learn to drive.",
+     "I'm going to learn how to drive."
+    ],
+    [
+     "Nous allons acheter une maison.",
+     "We're going to buy a house.",
+     "We are going to buy a house."
+    ],
+    [
+     "Je pense qu'il fera beau demain.",
+     "I think it will be sunny tomorrow.",
+     "I think the weather will be nice tomorrow.",
+     "I think it'll be sunny tomorrow."
+    ],
+    [
+     "Je prendrai la soupe.",
+     "I'll have the soup.",
+     "I will have the soup."
+    ],
+    [
+     "Je pars en vacances samedi.",
+     "I'm going on vacation on Saturday.",
+     "I'm going on holiday on Saturday.",
+     "I'm going on vacation Saturday.",
+     "I'm leaving on vacation on Saturday."
+    ],
+    [
+     "Le film commence à vingt heures.",
+     "The movie starts at eight p.m.",
+     "The film starts at eight p.m.",
+     "The movie starts at 8 p.m.",
+     "The film starts at 8 p.m.",
+     "The movie starts at eight."
+    ],
+    [
+     "Qu'est-ce que tu fais ce soir ?",
+     "What are you doing tonight?",
+     "What are you doing this evening?"
     ]
    ],
    "v": [
@@ -3079,6 +4284,30 @@
     [
      "obtenir son diplôme",
      "graduate"
+    ],
+    [
+     "promettre",
+     "promise"
+    ],
+    [
+     "probablement",
+     "probably"
+    ],
+    [
+     "décider",
+     "decide"
+    ],
+    [
+     "rendez-vous (pro)",
+     "meeting"
+    ],
+    [
+     "ce soir",
+     "tonight"
+    ],
+    [
+     "demain matin",
+     "tomorrow morning"
     ]
    ],
    "c": [
@@ -3125,7 +4354,115 @@
      ],
      0,
      "Rendez-vous fixé : présent progressif."
+    ],
+    [
+     "We're ___ to buy a new car.",
+     [
+      "going",
+      "go",
+      "will",
+      "gonna"
+     ],
+     0,
+     "Projet décidé : be going to + base verbale."
+    ],
+    [
+     "What ___ you going to study?",
+     [
+      "are",
+      "do",
+      "will",
+      "is"
+     ],
+     0,
+     "Dans be going to, l'auxiliaire est be : are you…?"
+    ],
+    [
+     "The concert ___ at 9 p.m.",
+     [
+      "starts",
+      "will starting",
+      "is start",
+      "start"
+     ],
+     0,
+     "Horaire officiel : présent simple (starts)."
+    ],
+    [
+     "I ___ dinner with Ana tonight.",
+     [
+      "am having",
+      "have had",
+      "having",
+      "am have"
+     ],
+     0,
+     "Rendez-vous déjà fixé : présent en be + -ing."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Annonce tes projets",
+     "p": [
+      0,
+      3,
+      5,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      4,
+      5
+     ],
+     "c": [
+      0,
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Décide sur le moment",
+     "p": [
+      1,
+      4,
+      7,
+      10,
+      11
+     ],
+     "v": [
+      3,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      1,
+      2
+     ]
+    },
+    {
+     "t": "Organise ton agenda",
+     "p": [
+      2,
+      6,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      9,
+      10,
+      11
+     ],
+     "c": [
+      3,
+      6,
+      7
+     ]
+    }
    ]
   },
   {
@@ -3185,6 +4522,51 @@
      "Let's keep in touch!",
      "Let's stay in touch!",
      "Keep in touch!"
+    ],
+    [
+     "Quoi de neuf ?",
+     "What's new?",
+     "What's up?"
+    ],
+    [
+     "Comment va ta famille ?",
+     "How's your family?",
+     "How is your family?",
+     "How's your family doing?"
+    ],
+    [
+     "À mon avis, c'est une bonne idée.",
+     "In my opinion, it's a good idea.",
+     "In my opinion, it is a good idea.",
+     "I think it's a good idea."
+    ],
+    [
+     "Je suis entièrement d'accord.",
+     "I totally agree.",
+     "I completely agree.",
+     "I fully agree.",
+     "I couldn't agree more."
+    ],
+    [
+     "J'aimerais apprendre la guitare.",
+     "I'd like to learn the guitar.",
+     "I would like to learn the guitar.",
+     "I'd like to learn guitar.",
+     "I would like to learn to play the guitar."
+    ],
+    [
+     "J'ai hâte de voir le film.",
+     "I can't wait to see the movie.",
+     "I can't wait to see the film.",
+     "I'm looking forward to seeing the movie.",
+     "I'm looking forward to seeing the film."
+    ],
+    [
+     "Je me suis mise à la course à pied.",
+     "I've started running.",
+     "I took up running.",
+     "I've taken up running.",
+     "I have started running."
     ]
    ],
    "v": [
@@ -3211,6 +4593,30 @@
     [
      "annuler",
      "call off"
+    ],
+    [
+     "nouvelles",
+     "news"
+    ],
+    [
+     "se raconter les nouvelles",
+     "catch up"
+    ],
+    [
+     "avis",
+     "opinion"
+    ],
+    [
+     "être d'accord",
+     "agree"
+    ],
+    [
+     "selon",
+     "according to"
+    ],
+    [
+     "en revanche",
+     "on the other hand"
     ]
    ],
    "c": [
@@ -3246,6 +4652,61 @@
      ],
      0,
      "since + point de départ ; for + durée."
+    ],
+    [
+     "How ___ you been?",
+     [
+      "have",
+      "are",
+      "did",
+      "do"
+     ],
+     0,
+     "How have you been? : present perfect, pour « depuis la dernière fois »."
+    ],
+    [
+     "What have you been ___ lately?",
+     [
+      "up to",
+      "up for",
+      "on to",
+      "out to"
+     ],
+     0,
+     "Be up to something : faire quelque chose, s'occuper."
+    ],
+    [
+     "I don't agree ___ you.",
+     [
+      "with",
+      "to",
+      "at",
+      "for"
+     ],
+     0,
+     "Être d'accord avec : agree with."
+    ],
+    [
+     "It depends ___ the weather.",
+     [
+      "on",
+      "of",
+      "from",
+      "at"
+     ],
+     0,
+     "Dépendre de : depend on."
+    ],
+    [
+     "I can't wait ___ you!",
+     [
+      "to see",
+      "seeing",
+      "see",
+      "for see"
+     ],
+     0,
+     "can't wait + to + base verbale."
     ]
    ],
    "orig": 1,
@@ -3258,6 +4719,70 @@
     "umbrella",
     "coat",
     "scarf"
+   ],
+   "parts": [
+    {
+     "t": "Prends des nouvelles",
+     "p": [
+      0,
+      1,
+      7,
+      8,
+      9
+     ],
+     "v": [
+      3,
+      5,
+      6,
+      7
+     ],
+     "c": [
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Donne ton avis",
+     "p": [
+      2,
+      3,
+      5,
+      10,
+      11
+     ],
+     "v": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      1,
+      5,
+      6
+     ]
+    },
+    {
+     "t": "Parle de tes envies",
+     "p": [
+      4,
+      6,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "c": [
+      0,
+      7
+     ]
+    }
    ]
   },
   {
@@ -3309,6 +4834,47 @@
      "Tu ne devineras jamais ce qui s'est passé !",
      "You'll never guess what happened!",
      "You will never guess what happened!"
+    ],
+    [
+     "Il faisait nuit et il pleuvait.",
+     "It was dark and it was raining.",
+     "It was dark and raining.",
+     "It was night and it was raining."
+    ],
+    [
+     "C'était un dimanche matin.",
+     "It was a Sunday morning."
+    ],
+    [
+     "Tout à coup, la lumière s'est éteinte.",
+     "Suddenly, the lights went out.",
+     "All of a sudden, the lights went out.",
+     "Suddenly, the light went out."
+    ],
+    [
+     "Ensuite, nous avons appelé la police.",
+     "Then we called the police.",
+     "After that, we called the police.",
+     "Next, we called the police."
+    ],
+    [
+     "Finalement, nous avons bien ri.",
+     "In the end, we had a good laugh.",
+     "In the end, we laughed a lot.",
+     "Finally, we had a good laugh."
+    ],
+    [
+     "Je m'en souviendrai toute ma vie.",
+     "I'll remember it all my life.",
+     "I will remember it all my life.",
+     "I'll remember it for the rest of my life."
+    ],
+    [
+     "Heureusement, personne n'a été blessé.",
+     "Fortunately, nobody was hurt.",
+     "Luckily, no one was hurt.",
+     "Fortunately, no one was hurt.",
+     "Luckily, nobody was hurt."
     ]
    ],
    "v": [
@@ -3335,6 +4901,30 @@
     [
      "enfance",
      "childhood"
+    ],
+    [
+     "à l'époque",
+     "at the time"
+    ],
+    [
+     "il était une fois",
+     "once upon a time"
+    ],
+    [
+     "campagne",
+     "countryside"
+    ],
+    [
+     "heureusement",
+     "fortunately"
+    ],
+    [
+     "rire",
+     "laugh"
+    ],
+    [
+     "tout à coup",
+     "all of a sudden"
     ]
    ],
    "c": [
@@ -3370,7 +4960,126 @@
      ],
      0,
      "Antériorité dans le passé : past perfect."
+    ],
+    [
+     "I ___ my keys, so I couldn't get in.",
+     [
+      "had lost",
+      "have lost",
+      "lose",
+      "was losing"
+     ],
+     0,
+     "Action antérieure à une autre action passée : past perfect (had + participe passé)."
+    ],
+    [
+     "Suddenly, someone ___ on the door.",
+     [
+      "knocked",
+      "knocks",
+      "was knock",
+      "has knocked"
+     ],
+     0,
+     "Événement ponctuel dans un récit : prétérit."
+    ],
+    [
+     "In the ___, we found the hotel.",
+     [
+      "end",
+      "final",
+      "finish",
+      "last"
+     ],
+     0,
+     "Finalement, au bout du compte : in the end."
+    ],
+    [
+     "Fortunately, nobody ___ hurt.",
+     [
+      "was",
+      "were",
+      "has",
+      "did"
+     ],
+     0,
+     "nobody est singulier : nobody was."
+    ],
+    [
+     "We laughed ___ much that we cried.",
+     [
+      "so",
+      "such",
+      "too",
+      "very"
+     ],
+     0,
+     "so + adverbe ou adjectif + that : tellement… que."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Plante le décor",
+     "p": [
+      0,
+      2,
+      4,
+      8,
+      9
+     ],
+     "v": [
+      5,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      0,
+      1
+     ]
+    },
+    {
+     "t": "Raconte ce qui s'est passé",
+     "p": [
+      1,
+      5,
+      7,
+      10,
+      11
+     ],
+     "v": [
+      0,
+      2,
+      3,
+      11
+     ],
+     "c": [
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Conclus ton histoire",
+     "p": [
+      3,
+      6,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      1,
+      4,
+      9,
+      10
+     ],
+     "c": [
+      5,
+      6,
+      7
+     ]
+    }
    ]
   },
   {
@@ -3423,6 +5132,44 @@
      "Restons-en là.",
      "Let's leave it at that.",
      "Let's agree to disagree."
+    ],
+    [
+     "Je suis convaincu que c'est la bonne solution.",
+     "I'm convinced it's the right solution.",
+     "I am convinced that it's the right solution.",
+     "I'm convinced that it's the right solution."
+    ],
+    [
+     "Ça ne tient pas debout.",
+     "That doesn't make sense.",
+     "That makes no sense.",
+     "It doesn't make sense."
+    ],
+    [
+     "Pour moi, la sécurité passe avant tout.",
+     "For me, safety comes first.",
+     "To me, safety comes first."
+    ],
+    [
+     "Ça dépend du point de vue.",
+     "It depends on your point of view.",
+     "It depends on the point of view.",
+     "It depends on how you look at it."
+    ],
+    [
+     "Trouvons un compromis.",
+     "Let's find a compromise.",
+     "Let's reach a compromise."
+    ],
+    [
+     "On est d'accord sur l'essentiel.",
+     "We agree on the main points.",
+     "We agree on the essentials."
+    ],
+    [
+     "Coupons la poire en deux.",
+     "Let's meet halfway.",
+     "Let's split the difference."
     ]
    ],
    "v": [
@@ -3449,6 +5196,30 @@
     [
      "preuve",
      "evidence"
+    ],
+    [
+     "cependant",
+     "however"
+    ],
+    [
+     "en fait",
+     "actually"
+    ],
+    [
+     "compromis (accord)",
+     "compromise"
+    ],
+    [
+     "terrain d'entente",
+     "common ground"
+    ],
+    [
+     "céder",
+     "give in"
+    ],
+    [
+     "accord",
+     "deal"
     ]
    ],
    "c": [
@@ -3517,7 +5288,93 @@
      ],
      0,
      "On the one hand… on the other hand… = d'un côté… de l'autre…"
+    ],
+    [
+     "I'm not ___ that it will work.",
+     [
+      "convinced",
+      "convincing",
+      "convince",
+      "conviction"
+     ],
+     0,
+     "Être convaincu : be convinced (participe passé)."
+    ],
+    [
+     "Let's meet ___.",
+     [
+      "halfway",
+      "half",
+      "middle",
+      "in half"
+     ],
+     0,
+     "Faire chacun un pas vers l'autre : meet halfway."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Défends ton point de vue",
+     "p": [
+      0,
+      5,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      0,
+      1,
+      4,
+      5
+     ],
+     "c": [
+      0,
+      6
+     ]
+    },
+    {
+     "t": "Nuance ton propos",
+     "p": [
+      1,
+      2,
+      3,
+      6,
+      11
+     ],
+     "v": [
+      2,
+      3,
+      6,
+      7
+     ],
+     "c": [
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Trouve un terrain d'entente",
+     "p": [
+      4,
+      7,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      1,
+      7
+     ]
+    }
    ]
   },
   {
@@ -3571,6 +5428,46 @@
      "I haven't finished yet.",
      "I have not finished yet.",
      "I haven't finished it yet."
+    ],
+    [
+     "Tu es déjà monté à cheval ?",
+     "Have you ever ridden a horse?",
+     "Have you ever been horse riding?"
+    ],
+    [
+     "J'ai déjà vu ce film deux fois.",
+     "I've already seen this movie twice.",
+     "I have already seen this movie twice.",
+     "I've already seen this film twice.",
+     "I have already seen this film twice."
+    ],
+    [
+     "J'apprends l'anglais depuis six mois.",
+     "I've been learning English for six months.",
+     "I have been learning English for six months."
+    ],
+    [
+     "Ça fait longtemps que tu travailles ici ?",
+     "Have you been working here long?",
+     "Have you worked here long?",
+     "Have you been working here for a long time?",
+     "Have you worked here for a long time?"
+    ],
+    [
+     "Je la connais depuis l'école.",
+     "I've known her since school.",
+     "I have known her since school."
+    ],
+    [
+     "Hier, j'ai perdu mes clés.",
+     "Yesterday, I lost my keys.",
+     "I lost my keys yesterday."
+    ],
+    [
+     "Elle vient d'arriver.",
+     "She has just arrived.",
+     "She's just arrived.",
+     "She just arrived."
     ]
    ],
    "v": [
@@ -3597,6 +5494,30 @@
     [
      "depuis (point de départ)",
      "since"
+    ],
+    [
+     "goûter",
+     "taste"
+    ],
+    [
+     "depuis longtemps",
+     "for a long time"
+    ],
+    [
+     "toute ma vie",
+     "all my life"
+    ],
+    [
+     "récemment",
+     "recently"
+    ],
+    [
+     "hier",
+     "yesterday"
+    ],
+    [
+     "la semaine dernière",
+     "last week"
     ]
    ],
    "c": [
@@ -3654,7 +5575,104 @@
      ],
      0,
      "yet en fin de question : déjà ?"
+    ],
+    [
+     "Have you ___ been to Korea?",
+     [
+      "ever",
+      "never",
+      "yet",
+      "already"
+     ],
+     0,
+     "Dans une question sur l'expérience : ever (déjà, un jour)."
+    ],
+    [
+     "I've never ___ such a beautiful place.",
+     [
+      "seen",
+      "saw",
+      "see",
+      "seeing"
+     ],
+     0,
+     "Present perfect : have + participe passé (seen)."
+    ],
+    [
+     "She ___ the email an hour ago.",
+     [
+      "sent",
+      "has sent",
+      "sends",
+      "has send"
+     ],
+     0,
+     "Avec ago (moment passé précis), on emploie le prétérit."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Parle de tes expériences",
+     "p": [
+      0,
+      1,
+      2,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      6
+     ],
+     "c": [
+      0,
+      5,
+      6
+     ]
+    },
+    {
+     "t": "Dis depuis quand",
+     "p": [
+      3,
+      4,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      5,
+      7,
+      8,
+      9
+     ],
+     "c": [
+      2,
+      3
+     ]
+    },
+    {
+     "t": "Situe un fait dans le passé",
+     "p": [
+      5,
+      6,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      3,
+      4,
+      10,
+      11
+     ],
+     "c": [
+      1,
+      4,
+      7
+     ]
+    }
    ]
   },
   {
@@ -3712,6 +5730,44 @@
      "Where do I sign?",
      "Where should I sign?",
      "Where do I need to sign?"
+    ],
+    [
+     "Je voudrais consulter mon solde.",
+     "I'd like to check my balance.",
+     "I would like to check my balance."
+    ],
+    [
+     "Combien coûte la carte bancaire ?",
+     "How much does the bank card cost?",
+     "How much is the bank card?"
+    ],
+    [
+     "Le distributeur est hors service.",
+     "The ATM is out of order.",
+     "The cash machine is out of order."
+    ],
+    [
+     "Je voudrais faire un virement.",
+     "I'd like to make a transfer.",
+     "I would like to make a transfer.",
+     "I'd like to make a bank transfer."
+    ],
+    [
+     "J'ai besoin de petite monnaie.",
+     "I need some change.",
+     "I need some small change.",
+     "I need change."
+    ],
+    [
+     "Je dois renouveler mon passeport.",
+     "I need to renew my passport.",
+     "I have to renew my passport."
+    ],
+    [
+     "Quels documents faut-il apporter ?",
+     "Which documents do I need to bring?",
+     "What documents do I need to bring?",
+     "What documents should I bring?"
     ]
    ],
    "v": [
@@ -3738,6 +5794,30 @@
     [
      "justificatif de domicile",
      "proof of address"
+    ],
+    [
+     "épargne",
+     "savings"
+    ],
+    [
+     "taux",
+     "rate"
+    ],
+    [
+     "billet (de banque)",
+     "banknote"
+    ],
+    [
+     "virement",
+     "transfer"
+    ],
+    [
+     "carte d'identité",
+     "ID card"
+    ],
+    [
+     "renouveler",
+     "renew"
     ]
    ],
    "c": [
@@ -3784,6 +5864,50 @@
      ],
      0,
      "proof of address."
+    ],
+    [
+     "I'd like to open ___ account.",
+     [
+      "an",
+      "a",
+      "the",
+      "one"
+     ],
+     0,
+     "an devant un son voyelle : an account."
+    ],
+    [
+     "What's the interest ___?",
+     [
+      "rate",
+      "price",
+      "cost",
+      "level"
+     ],
+     0,
+     "Le taux d'intérêt : interest rate."
+    ],
+    [
+     "The ATM is out ___ order.",
+     [
+      "of",
+      "from",
+      "off",
+      "in"
+     ],
+     0,
+     "Hors service : out of order."
+    ],
+    [
+     "Can I pay ___ cash?",
+     [
+      "in",
+      "by",
+      "with the",
+      "on"
+     ],
+     0,
+     "Payer en espèces : pay in cash (mais pay by card)."
     ]
    ],
    "pk": [
@@ -3795,6 +5919,70 @@
     "receipt",
     "letter",
     "postoffice"
+   ],
+   "parts": [
+    {
+     "t": "Ouvre un compte",
+     "p": [
+      0,
+      2,
+      7,
+      8,
+      9
+     ],
+     "v": [
+      1,
+      4,
+      6,
+      7
+     ],
+     "c": [
+      2,
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Retire et envoie de l'argent",
+     "p": [
+      1,
+      5,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      0,
+      2,
+      8,
+      9
+     ],
+     "c": [
+      1,
+      6,
+      7
+     ]
+    },
+    {
+     "t": "Fais tes papiers",
+     "p": [
+      3,
+      4,
+      6,
+      13,
+      14
+     ],
+     "v": [
+      3,
+      5,
+      10,
+      11
+     ],
+     "c": [
+      0,
+      3
+     ]
+    }
    ]
   },
   {
@@ -3848,6 +6036,47 @@
      "Is everybody OK?",
      "Is everyone all right?",
      "Is everyone okay?"
+    ],
+    [
+     "On m'a volé mon sac.",
+     "My bag has been stolen.",
+     "My bag was stolen.",
+     "Someone stole my bag."
+    ],
+    [
+     "Je voudrais déclarer un vol.",
+     "I'd like to report a theft.",
+     "I would like to report a theft."
+    ],
+    [
+     "Il y a eu un accident.",
+     "There's been an accident.",
+     "There has been an accident.",
+     "There was an accident."
+    ],
+    [
+     "Elle ne respire plus !",
+     "She's not breathing!",
+     "She isn't breathing!",
+     "She is not breathing!"
+    ],
+    [
+     "J'ai un pneu crevé.",
+     "I have a flat tire.",
+     "I've got a flat tire.",
+     "I have a flat tyre.",
+     "I've got a flat tyre."
+    ],
+    [
+     "Je vais rater ma correspondance.",
+     "I'm going to miss my connection.",
+     "I'm going to miss my connecting flight.",
+     "I will miss my connection."
+    ],
+    [
+     "Pouvez-vous appeler une dépanneuse ?",
+     "Can you call a tow truck?",
+     "Could you call a tow truck?"
     ]
    ],
    "v": [
@@ -3874,6 +6103,30 @@
     [
      "déclaration (de vol)",
      "report"
+    ],
+    [
+     "pompiers",
+     "firefighters"
+    ],
+    [
+     "urgences (hôpital)",
+     "emergency room"
+    ],
+    [
+     "blessure",
+     "injury"
+    ],
+    [
+     "pneu",
+     "tire"
+    ],
+    [
+     "dépanneuse",
+     "tow truck"
+    ],
+    [
+     "retard",
+     "delay"
     ]
    ],
    "c": [
@@ -3920,6 +6173,50 @@
      ],
      0,
      "miss a flight / a train = rater."
+    ],
+    [
+     "Is anyone ___?",
+     [
+      "hurt",
+      "hurting",
+      "hurts",
+      "to hurt"
+     ],
+     0,
+     "Être blessé : be hurt (participe passé)."
+    ],
+    [
+     "He fell and broke ___ arm.",
+     [
+      "his",
+      "her",
+      "the",
+      "its"
+     ],
+     0,
+     "Pour une partie du corps, l'anglais emploie le possessif : his arm."
+    ],
+    [
+     "I can't find my passport ___.",
+     [
+      "anywhere",
+      "nowhere",
+      "somewhere",
+      "everywhere"
+     ],
+     0,
+     "Dans une phrase négative : anywhere."
+    ],
+    [
+     "We've got a flat ___.",
+     [
+      "tire",
+      "wheel",
+      "car",
+      "road"
+     ],
+     0,
+     "Un pneu crevé : a flat tire (flat tyre en anglais britannique)."
     ]
    ],
    "pk": [
@@ -3930,6 +6227,70 @@
     "hospital",
     "bag",
     "key"
+   ],
+   "parts": [
+    {
+     "t": "Signale une perte ou un vol",
+     "p": [
+      0,
+      1,
+      5,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      1,
+      4,
+      5
+     ],
+     "c": [
+      1,
+      2,
+      6
+     ]
+    },
+    {
+     "t": "Appelle les secours",
+     "p": [
+      2,
+      3,
+      7,
+      10,
+      11
+     ],
+     "v": [
+      3,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Gère une panne",
+     "p": [
+      4,
+      6,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      2,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      0,
+      3,
+      7
+     ]
+    }
    ]
   },
   {
@@ -3979,6 +6340,43 @@
      "On y va, d'accord ?",
      "Let's go, shall we?",
      "Let's go, OK?"
+    ],
+    [
+     "Il fait beau, n'est-ce pas ?",
+     "It's a nice day, isn't it?",
+     "It's nice weather, isn't it?",
+     "The weather is nice, isn't it?"
+    ],
+    [
+     "Tu n'es pas fatigué, si ?",
+     "You're not tired, are you?",
+     "You aren't tired, are you?"
+    ],
+    [
+     "Elle parle coréen, non ?",
+     "She speaks Korean, doesn't she?"
+    ],
+    [
+     "Tu sais où est la gare ?",
+     "Do you know where the station is?",
+     "Do you know where the train station is?"
+    ],
+    [
+     "Il m'a dit qu'il viendrait.",
+     "He told me he would come.",
+     "He told me that he would come.",
+     "He said he would come.",
+     "He said that he would come."
+    ],
+    [
+     "Elle m'a demandé si j'avais faim.",
+     "She asked me if I was hungry.",
+     "She asked me whether I was hungry."
+    ],
+    [
+     "Ils ont dit qu'ils étaient en retard.",
+     "They said they were late.",
+     "They said that they were late."
     ]
    ],
    "v": [
@@ -4005,6 +6403,30 @@
     [
      "chuchoter",
      "whisper"
+    ],
+    [
+     "confirmer",
+     "confirm"
+    ],
+    [
+     "vérifier",
+     "check"
+    ],
+    [
+     "d'accord ? (fin de phrase)",
+     "right?"
+    ],
+    [
+     "renseignement",
+     "information"
+    ],
+    [
+     "répéter",
+     "repeat"
+    ],
+    [
+     "affirmer",
+     "claim"
     ]
    ],
    "c": [
@@ -4107,6 +6529,71 @@
      0,
      "whether… or not = si… ou non."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Ajoute un question tag",
+     "p": [
+      0,
+      7,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      6,
+      7,
+      8
+     ],
+     "c": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "t": "Pose la bonne question",
+     "p": [
+      1,
+      4,
+      5,
+      6,
+      11
+     ],
+     "v": [
+      2,
+      4,
+      9,
+      10
+     ],
+     "c": [
+      3,
+      6,
+      7,
+      8
+     ]
+    },
+    {
+     "t": "Rapporte ce qu'on a dit",
+     "p": [
+      2,
+      3,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      0,
+      1,
+      3,
+      5,
+      11
+     ],
+     "c": [
+      4,
+      5
+     ]
+    }
    ]
   },
   {
@@ -4162,6 +6649,43 @@
      "It's raining cats and dogs.",
      "It is pouring.",
      "It's pouring rain."
+    ],
+    [
+     "Je n'ai pas une minute à moi.",
+     "I don't have a minute to myself.",
+     "I haven't got a minute to myself."
+    ],
+    [
+     "Je suis à bout.",
+     "I'm exhausted.",
+     "I'm worn out.",
+     "I am exhausted."
+    ],
+    [
+     "On fait une pause ?",
+     "Shall we take a break?",
+     "Should we take a break?",
+     "Let's take a break?"
+    ],
+    [
+     "Ce n'est pas la fin du monde.",
+     "It's not the end of the world.",
+     "It isn't the end of the world."
+    ],
+    [
+     "J'aurais dû t'écouter.",
+     "I should have listened to you.",
+     "I should've listened to you."
+    ],
+    [
+     "Je n'aurais pas dû dire ça.",
+     "I shouldn't have said that.",
+     "I should not have said that."
+    ],
+    [
+     "Si seulement j'avais su !",
+     "If only I had known!",
+     "If only I'd known!"
     ]
    ],
    "v": [
@@ -4188,6 +6712,30 @@
     [
      "retardé",
      "delayed"
+    ],
+    [
+     "pause",
+     "break"
+    ],
+    [
+     "épuisé",
+     "exhausted"
+    ],
+    [
+     "regretter",
+     "regret"
+    ],
+    [
+     "erreur",
+     "mistake"
+    ],
+    [
+     "oublier",
+     "forget"
+    ],
+    [
+     "s'excuser",
+     "apologize"
     ]
    ],
    "c": [
@@ -4223,9 +6771,128 @@
      ],
      0,
      "be used to + -ing = être habitué à."
+    ],
+    [
+     "I'm so busy I can't keep ___ with my emails.",
+     [
+      "up",
+      "on",
+      "in",
+      "out"
+     ],
+     0,
+     "Suivre le rythme : keep up with."
+    ],
+    [
+     "I've got ___ much work to do.",
+     [
+      "too",
+      "so many",
+      "very",
+      "enough of"
+     ],
+     0,
+     "work est indénombrable : too much work (trop de travail)."
+    ],
+    [
+     "Don't worry, it's no big ___.",
+     [
+      "deal",
+      "thing",
+      "problem",
+      "matter"
+     ],
+     0,
+     "Ce n'est pas grave : it's no big deal (expression figée)."
+    ],
+    [
+     "Our flight has been ___.",
+     [
+      "cancelled",
+      "cancel",
+      "cancelling",
+      "cancels"
+     ],
+     0,
+     "Passif : has been + participe passé."
+    ],
+    [
+     "I wish I ___ more careful.",
+     [
+      "had been",
+      "was being",
+      "have been",
+      "would be"
+     ],
+     0,
+     "Regret sur le passé : I wish + past perfect."
     ]
    ],
-   "orig": 1
+   "orig": 1,
+   "parts": [
+    {
+     "t": "Dis que tu es débordé",
+     "p": [
+      0,
+      5,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      0,
+      2,
+      6,
+      7
+     ],
+     "c": [
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Réagis à un imprévu",
+     "p": [
+      1,
+      3,
+      6,
+      7,
+      11
+     ],
+     "v": [
+      1,
+      3,
+      4,
+      5
+     ],
+     "c": [
+      5,
+      6
+     ]
+    },
+    {
+     "t": "Exprime un regret",
+     "p": [
+      2,
+      4,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      0,
+      1,
+      7
+     ]
+    }
+   ]
   },
   {
    "t": "Phrasal verbs du quotidien",
@@ -4281,6 +6948,49 @@
      "Don't put it off until tomorrow.",
      "Don't put it off till tomorrow.",
      "Don't put that off until tomorrow."
+    ],
+    [
+     "Il faut s'occuper de ça.",
+     "We need to deal with this.",
+     "We have to deal with this.",
+     "We need to take care of this."
+    ],
+    [
+     "Je me suis débrouillé tout seul.",
+     "I worked it out on my own.",
+     "I figured it out on my own.",
+     "I worked it out by myself."
+    ],
+    [
+     "Je te tiens au courant.",
+     "I'll keep you posted.",
+     "I'll keep you updated.",
+     "I will keep you posted."
+    ],
+    [
+     "Je suis passé voir mes parents.",
+     "I dropped by my parents' place.",
+     "I stopped by my parents' place.",
+     "I dropped by my parents' house.",
+     "I dropped in on my parents."
+    ],
+    [
+     "Note-le pour ne pas oublier.",
+     "Write it down so you don't forget.",
+     "Write it down so that you don't forget."
+    ],
+    [
+     "Rangeons la cuisine.",
+     "Let's tidy up the kitchen.",
+     "Let's clean up the kitchen."
+    ],
+    [
+     "La réunion a été annulée.",
+     "The meeting was called off.",
+     "The meeting has been called off.",
+     "The meeting was cancelled.",
+     "The meeting has been cancelled.",
+     "The meeting was canceled."
     ]
    ],
    "v": [
@@ -4307,6 +7017,30 @@
     [
      "remettre à plus tard",
      "put off"
+    ],
+    [
+     "passer chez (quelqu'un)",
+     "drop by"
+    ],
+    [
+     "se brouiller",
+     "fall out"
+    ],
+    [
+     "rattraper (le retard)",
+     "catch up"
+    ],
+    [
+     "noter",
+     "write down"
+    ],
+    [
+     "ranger",
+     "tidy up"
+    ],
+    [
+     "s'occuper de",
+     "deal with"
     ]
    ],
    "c": [
@@ -4342,7 +7076,126 @@
      ],
      0,
      "come up with = trouver (une idée)."
+    ],
+    [
+     "I'll look ___ the problem tomorrow.",
+     [
+      "into",
+      "after",
+      "up",
+      "for"
+     ],
+     0,
+     "Examiner, étudier : look into."
+    ],
+    [
+     "She finally figured ___ the answer.",
+     [
+      "out",
+      "up",
+      "in",
+      "off"
+     ],
+     0,
+     "Comprendre, trouver : figure out."
+    ],
+    [
+     "We fell ___ last year, but we're friends again now.",
+     [
+      "out",
+      "off",
+      "down",
+      "away"
+     ],
+     0,
+     "Se brouiller : fall out."
+    ],
+    [
+     "I'll pick you ___ at the station.",
+     [
+      "up",
+      "on",
+      "out",
+      "in"
+     ],
+     0,
+     "Passer prendre quelqu'un : pick up."
+    ],
+    [
+     "Let's catch ___ over coffee.",
+     [
+      "up",
+      "on",
+      "out",
+      "in"
+     ],
+     0,
+     "Se raconter les nouvelles : catch up."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Règle un problème",
+     "p": [
+      0,
+      2,
+      3,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      2,
+      3,
+      11
+     ],
+     "c": [
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Garde le contact",
+     "p": [
+      1,
+      4,
+      6,
+      10,
+      11
+     ],
+     "v": [
+      1,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      5,
+      6,
+      7
+     ]
+    },
+    {
+     "t": "Organise-toi",
+     "p": [
+      5,
+      7,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      4,
+      5,
+      9,
+      10
+     ],
+     "c": [
+      0,
+      1
+     ]
+    }
    ]
   },
   {
@@ -4394,6 +7247,47 @@
      "Unless there's traffic, I'll be on time.",
      "Unless there is traffic, I will be on time.",
      "I'll be on time unless there's traffic."
+    ],
+    [
+     "Si tu chauffes la glace, elle fond.",
+     "If you heat ice, it melts."
+    ],
+    [
+     "Prends un parapluie au cas où il pleuvrait.",
+     "Take an umbrella in case it rains."
+    ],
+    [
+     "Si j'ai le temps, je passerai te voir.",
+     "If I have time, I'll drop by.",
+     "If I have time, I'll come and see you.",
+     "If I have time, I will come and see you.",
+     "If I have time, I'll stop by."
+    ],
+    [
+     "Si j'étais riche, j'achèterais une île.",
+     "If I were rich, I would buy an island.",
+     "If I was rich, I would buy an island.",
+     "If I were rich, I'd buy an island.",
+     "If I was rich, I'd buy an island."
+    ],
+    [
+     "Si j'étais parti plus tôt, j'aurais eu le train.",
+     "If I had left earlier, I would have caught the train.",
+     "If I'd left earlier, I'd have caught the train.",
+     "If I had left earlier, I would have made the train."
+    ],
+    [
+     "J'aurais aimé le savoir avant.",
+     "I wish I had known before.",
+     "I wish I'd known before.",
+     "I wish I had known earlier.",
+     "I wish I'd known earlier."
+    ],
+    [
+     "Que ferais-tu à ma place ?",
+     "What would you do in my place?",
+     "What would you do if you were me?",
+     "What would you do in my shoes?"
     ]
    ],
    "v": [
@@ -4420,6 +7314,30 @@
     [
      "au cas où",
      "in case"
+    ],
+    [
+     "fondre",
+     "melt"
+    ],
+    [
+     "à condition que",
+     "provided that"
+    ],
+    [
+     "loterie",
+     "lottery"
+    ],
+    [
+     "rêver",
+     "dream"
+    ],
+    [
+     "autrement",
+     "otherwise"
+    ],
+    [
+     "dommage",
+     "shame"
     ]
    ],
    "c": [
@@ -4477,7 +7395,104 @@
      ],
      0,
      "in case = au cas où."
+    ],
+    [
+     "What would you do if you ___ the lottery?",
+     [
+      "won",
+      "win",
+      "would win",
+      "had win"
+     ],
+     0,
+     "Hypothèse sur le présent : if + prétérit, puis would."
+    ],
+    [
+     "If I had known, I ___ have come.",
+     [
+      "would",
+      "will",
+      "had",
+      "did"
+     ],
+     0,
+     "Regret sur le passé : would have + participe passé."
+    ],
+    [
+     "If you heat water, it ___.",
+     [
+      "boils",
+      "would boil",
+      "boiled",
+      "will boiling"
+     ],
+     0,
+     "Vérité générale : if + présent, présent."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Fais une hypothèse",
+     "p": [
+      2,
+      7,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      3,
+      5,
+      6,
+      7
+     ],
+     "c": [
+      2,
+      4,
+      7
+     ]
+    },
+    {
+     "t": "Imagine une autre vie",
+     "p": [
+      0,
+      3,
+      6,
+      11,
+      14
+     ],
+     "v": [
+      2,
+      4,
+      8,
+      9
+     ],
+     "c": [
+      0,
+      3,
+      5
+     ]
+    },
+    {
+     "t": "Refais le passé",
+     "p": [
+      1,
+      4,
+      5,
+      12,
+      13
+     ],
+     "v": [
+      0,
+      1,
+      10,
+      11
+     ],
+     "c": [
+      1,
+      6
+     ]
+    }
    ]
   }
  ]

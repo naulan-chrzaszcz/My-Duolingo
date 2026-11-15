@@ -75,38 +75,6 @@ export function stepKind(n, st, U) {
   if (NODE[n] === "w") return "pencil";
   return ["star", "phones", "doc", "mic"][stepTier(U, n)] || "star";
 }
-/** v33 : repères de thème le long d'une unité, façon Duolingo — étape où commence chaque phase, puis [titre, ce qu'on y travaille]. */
-export const STAGE_AT = { 0: 0, 2: 1, 6: 2, 12: 3, [NPU - 1]: 4 };
-const STAGES = {
-  trans: [
-    ["Découvrir", "Mots et premières phrases"],
-    ["Comprendre", "Écoute et traduction guidée"],
-    ["Construire", "Écrire les phrases"],
-    ["Maîtriser", "Écrire, écouter et parler sans aide"],
-  ],
-  toeic: [
-    ["Découvrir", "Vocabulaire et formats des questions"],
-    ["Comprendre", "Questions plus rapides, pièges courants"],
-    ["Approfondir", "Conversations et documents plus longs"],
-    ["Maîtriser", "Rythme et difficulté de l'examen"],
-  ],
-  volt: [
-    ["Découvrir", "La règle et ses cas simples"],
-    ["S'entraîner", "Repérer la faute dans la phrase"],
-    ["Approfondir", "Pièges et exceptions"],
-    ["Maîtriser", "Dictées et phrases sans aide"],
-  ],
-  hg: [
-    ["Découvrir", "Reconnaître les lettres"],
-    ["Comprendre", "Lire les syllabes"],
-    ["Construire", "Composer les blocs"],
-    ["Maîtriser", "Lire et écrire sans aide"],
-  ],
-};
-export function stageLabel(kind, U, i) {
-  if (i === 4) return ["Bilan", "Tout ce que l'unité a couvert"];
-  return (STAGES[U && U.hg ? "hg" : kind] || STAGES.trans)[i];
-}
 /** Nom court d'une étape (bulle et lecteur d'écran). */
 export function stepName(n) {
   if (n === NPU - 1) return "Bilan de l'unité";
@@ -248,17 +216,13 @@ export function renderPath(v) {
           : stepOpen(cid, u, n)
             ? "open"
             : "lock";
-      if (STAGE_AT[n] != null && !(U.parts && n < NPU - 1)) {
-        const [a, b] = stageLabel(C.kind, U, STAGE_AT[n]);
-        nodes += `<div class="pstage"><i></i><span><b>${a}</b><small>${b}</small></span><i></i></div>`;
-      }
       const off = Math.round(Math.sin(gi * 0.85) * 72);
       const k = stepKind(n, st, U);
       const [c, d] = NODE[n] === "ai" ? ["#B07BFF", "#7B4DD6"] : NODE[n] === "w" ? ["#13A8A8", "#0C7F7F"] : [col, dk];
       const crown = (S.ext[cid] || []).includes(idx);
       nodes += `<div class="nodewrap${st === "cur" || (st === "open" && n === 0) ? " bub" : ""}" style="transform:translateX(${off}px);--c:${c};--d:${d}">${st === "cur" ? `<div class="ring"></div><button class="startbub" data-u="${u}" data-n="${n}">${idx === 0 ? "Commencer" : "Go !"}</button>` : st === "open" && n === 0 ? `<button class="startbub soft" data-u="${u}" data-n="${n}">Ouvrir</button>` : ""}<button class="node coin ${st} ${n === NPU - 1 ? "chest" : ""} ${NODE[n] === "ai" ? "ainode" : NODE[n] === "w" ? "wnode" : ""}" data-u="${u}" data-n="${n}" aria-label="${stepName(n)}">${st === "done" || st === "cur" ? '<span class="gloss"></span>' : ""}${ic(k, k === "star" ? 38 : 34, "", 2.6)}${crown ? `<span class="crown">${ic("crown", 14, "", 2.2, "currentColor")}</span>` : ""}</button></div>`;
       if (n === 2 || n === 11)
-        nodes += `<div class="pathmascot" style="${off > 0 ? "left" : "right"}:3%;top:${ln * 94 + 50 + (U.parts ? 0 : n === 2 ? 2 : 1) * 68}px">${horangScene(u * 2 + (n > 2 ? 1 : 0))}</div>`;
+        nodes += `<div class="pathmascot" style="${off > 0 ? "left" : "right"}:3%;top:${ln * 94 + 50}px">${horangScene(u * 2 + (n > 2 ? 1 : 0))}</div>`;
       partNodes[part] += nodes;
     }
     const locked = !unitOpen(cid, u);
@@ -268,11 +232,10 @@ export function renderPath(v) {
         uc = us === PSZ;
       const fd = false;
       const pc = Math.round((us / PSZ) * 100);
-      const sg = stageLabel(C.kind, U, [0, 2, 3][part]);
       const col = UCOLORS[colOf(part)],
         dk = UDARK[colOf(part)];
       const own = U.parts && U.parts[part];
-      units += `<section class="unit ${fd ? "folded" : ""}" id="unit${u}${part ? "p" + part : ""}"><div class="ubanner" style="--c:${locked ? "#8F89AD" : deep(col)};--d:${locked ? "#6E6890" : dk}"><div class="ut"><small><span>Chapitre ${ci + 1}, unité ${k}</span>${own ? "" : ` · <span>${sg[0]}</span>`}${uc ? ` <span class="udone">${ic("check", 14, "", 3.4)}</span>` : ""}</small><h2>${esc(own ? own.t : U.t)}</h2><p>${own ? esc(U.t) : part ? `<span>${sg[1]}</span>` : esc(U.d)}</p><div class="umini"><i style="width:${pc}%"></i></div></div><div class="ubtns">${part === 0 && locked && !U.hg && u === C.units.findIndex(x => !x.hg) ? `<button class="guide" data-j="${u}">⏩ Tester mon hangul</button>` : ""}<button class="guide" data-g="${u}" aria-label="Guide de l'unité">${ic("guide", 26, "", 2.4)}<span>Guide</span></button></div></div><div class="nodes">${partNodes[part]}</div></section>`;
+      units += `<section class="unit ${fd ? "folded" : ""}" id="unit${u}${part ? "p" + part : ""}"><div class="ubanner" style="--c:${locked ? "#8F89AD" : deep(col)};--d:${locked ? "#6E6890" : dk}"><div class="ut"><small><span>Chapitre ${ci + 1}, unité ${k}</span>${uc ? ` <span class="udone">${ic("check", 14, "", 3.4)}</span>` : ""}</small><h2>${esc(own ? own.t : U.t)}</h2><p>${esc(own ? U.t : U.d)}</p><div class="umini"><i style="width:${pc}%"></i></div></div><div class="ubtns">${part === 0 && locked && !U.hg && u === C.units.findIndex(x => !x.hg) ? `<button class="guide" data-j="${u}">⏩ Tester mon hangul</button>` : ""}<button class="guide" data-g="${u}" aria-label="Guide de l'unité">${ic("guide", 26, "", 2.4)}<span>Guide</span></button></div></div><div class="nodes">${partNodes[part]}</div></section>`;
     }
   });
   const nx = chs[ci + 1];

@@ -53,11 +53,12 @@ export function unitPrompt(r) {
     schema +
     "\n" +
     (r.kind === "volt"
-      ? 'Donne 12 éléments dans "c" et 4 dans "d2".'
+      ? 'Donne 12 éléments dans "c" et 3 dans "d2".'
       : 'Donne 10 éléments dans "p" (1 à 3 variantes correctes chacun), 6 dans "v", 6 dans "c"' +
         (r.kind === "toeic" ? ', 4 dans "l", 2 dans "cv" (3 questions chacun), 2 dans "rd" (2 questions chacun)' : "") +
         ".") +
-    "\nLangue naturelle et 100 % correcte, une seule bonne réponse par question."
+    "\nLangue naturelle et 100 % correcte, une seule bonne réponse par question." +
+    ' Le thème est découpé en 3 unités courtes façon Duolingo : ajoute "parts" avec 3 titres-objectifs courts à l\'impératif, chacun avec son propre sujet (ex. « Commande une boisson », « Réserve une table », « Demande l\'addition »), et range les éléments dans cet ordre : le premier tiers de chaque liste pour la 1re unité, le deuxième tiers pour la 2e, le dernier tiers pour la 3e. Forme : "parts":["titre 1","titre 2","titre 3"].'
   );
 }
 export async function genUnit(cid) {
@@ -109,6 +110,20 @@ export async function genUnit(cid) {
     cv: G.cv,
     rd: G.rd,
   };
+  // v35 : trois unités à sujet propre, chacune avec un tiers des éléments
+  if (Array.isArray(raw.parts) && raw.parts.length === 3) {
+    const third = (arr, i) => {
+      const n = (arr || []).length,
+        a = Math.round((i * n) / 3),
+        b = Math.round(((i + 1) * n) / 3);
+      return Array.from({ length: b - a }, (_, k) => a + k);
+    };
+    U.parts = raw.parts.map((t, i) => {
+      const P = { t: String(t || U.t).slice(0, 60) };
+      (C.kind === "volt" ? ["c", "dd"] : ["p", "v", "c"]).forEach(k => (P[k] = third(U[k], i)));
+      return P;
+    });
+  }
   S.genU[cid] = S.genU[cid] || [];
   S.genU[cid].push(U);
   save();

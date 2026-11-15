@@ -54,8 +54,12 @@ export function stepTier(U, n) {
 export function partUnit(U, part) {
   const P = U.parts && U.parts[part];
   if (!P) return U;
-  const pick = (k, ix) => (ix || []).map(i => (U[k] || [])[i]).filter(Boolean);
-  return Object.assign({}, U, { t: P.t, p: pick("p", P.p), v: pick("v", P.v), c: pick("c", P.c) });
+  // chaque liste nommée dans la partie (p, v, c, dd, hj, sy, mp, ph, l…) est restreinte à ses index ; les autres restent communes au thème
+  const o = Object.assign({}, U, { t: P.t });
+  Object.keys(P).forEach(k => {
+    if (k !== "t" && Array.isArray(P[k]) && Array.isArray(U[k])) o[k] = P[k].map(i => U[k][i]).filter(x => x != null);
+  });
+  return o;
 }
 export function buildLesson(cid, u, n, ext) {
   if (ext) {
@@ -76,9 +80,9 @@ export function buildLesson(cid, u, n, ext) {
   const C = COURSES[cid],
     U = C.units[u];
   if (U.hg) {
-    const ctx = ctxFor(cid, [U]);
+    const ctx = ctxFor(cid, [U.parts && n < NPU - 1 ? partUnit(U, Math.floor(n / PSZ)) : U]);
     ctx.allHj = C.units.slice(0, u + 1).flatMap(x => x.hj || []);
-    return shorten(HG_T[Math.max(0, TIER[n])], n >= NPU - 1 ? 12 : 10)
+    return shorten(HG_T[Math.max(0, stepTier(U, n))], n >= NPU - 1 ? 12 : 10)
       .map(t => make(t, ctx))
       .filter(Boolean)
       .concat(dueReviews(cid, 1));
@@ -106,9 +110,9 @@ export function buildLesson(cid, u, n, ext) {
     if (u >= 2) T = T.map(t => (t === "tiles" && Math.random() < 0.4 ? "type" : t));
     if (u >= 3) T = T.map(t => (t === "mc" ? "tiles" : t === "listenTiles" ? "listen" : t));
   }
-  if (U.cv)
+  if (UU.cv && UU.cv.length)
     T = T.map((t, i) => (t === "choice" || t === "part2" || t === "read" ? (i % 3 === 2 ? "part2" : "conv") : t));
-  if (U.rd)
+  if (UU.rd && UU.rd.length)
     T = T.map((t, i) => (t === "choice" || t === "part2" || t === "conv" ? (i % 4 === 3 ? "choice" : "read") : t));
   const exs = shorten(T, n >= NPU - 1 ? 12 : 10)
     .map(t => make(t, ctx))
