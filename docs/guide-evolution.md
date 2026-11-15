@@ -58,7 +58,7 @@ Insérer une unité au milieu est possible : la progression des profils est reca
    - Exemple : `"Bravo ¤ !": "Well done ¤!"`.
    - `¤1`, `¤2`… changent l'ordre des parties.
 4. Vérifier avec `node tests/run.mjs i18n_cards`, `node tests/run.mjs i18n_leaks en` et `node tests/run.mjs i18n_leaks ko` : ce dernier test échoue si un texte d'interface reste en français sur un écran.
-5. Nouvel écran ou nouvelle fenêtre : l'ajouter à la liste parcourue par `tests/i18n_leaks.py`.
+5. Nouvel écran ou nouvelle fenêtre : l'ajouter à la liste parcourue par `tests/i18n_leaks.py` ; un texte qui n'apparaît que dans un déroulé (fin de séance, quête, fenêtre) va dans `tests/i18n_flows.py`.
 
 ## Une carte d'entraînement
 
@@ -110,7 +110,7 @@ Insérer une unité au milieu est possible : la progression des profils est reca
 
 ## Une quête
 
-- Quête du jour : tableau `QUESTS` de `src/features/quests.js` (`id`, `t`, `cur`, `max`, `g`). Chaque quête accomplie donne 1 point à la quête du mois (`QM_GOAL`, paliers `QM_STEPS`).
+- Quête du jour : tableau `QUEST_POOL` de `src/features/quests.js` (`id`, famille `k`, `t`, `cur`, `max`, `g`) ; trois sont tirées chaque jour. Un nouveau compteur se range dans `S.q` et s'incrémente dans `finish()`. Le titre doit être traduit en anglais et en coréen. Chaque quête accomplie donne 1 point à la quête du mois (`QM_GOAL`, paliers `QM_STEPS`).
 
 ## Une icône
 

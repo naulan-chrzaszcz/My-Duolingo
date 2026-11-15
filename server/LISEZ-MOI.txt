@@ -43,7 +43,10 @@ Contenu du dossier
    Sans clé, tout fonctionne quand même : le coach et les révisions utilisent un mélange local du parcours.
 
 4) Rappels quotidiens (facultatif) :
-   - Ouvre api/remind.php et mets ton adresse e-mail dans $VAPID_SUBJECT (exigé par Apple).
+   - L'installateur (EMAIL=...) range ton adresse dans api/data/config.php ('vapid_subject'), un fichier que
+     les mises à jour n'écrasent pas. Sans installateur : crée ce fichier à la main, par exemple
+       <?php return ['vapid_subject' => 'mailto:ton@email.fr', 'cron_key' => '', 'api_key' => ''];
+     (à défaut, l'adresse écrite dans $VAPID_SUBJECT de api/remind.php est utilisée, mais chaque mise à jour l'efface).
    - Lance api/remind.php toutes les heures : tâche cron « php /chemin/api/remind.php »,
      ou un service gratuit comme cron-job.org qui appelle https://ton-site/api/remind.php?key=TA_CLE
      (choisis TA_CLE dans $CRON_KEY en haut du fichier).

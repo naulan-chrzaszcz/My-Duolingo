@@ -1,4 +1,4 @@
-# Catalogue des cours et des unités (v31.1)
+# Catalogue des cours et des unités (v32)
 
 Généré à partir des données de l'application (`src/content/courses/*.json`) : 142 unités dans 6 cours. Chaque unité compte 18 étapes (la dernière est le bilan) et une version extrême. La colonne « Chapitre » est le niveau de l'unité (1 = les bases… 4 = expert) : le parcours affiche un chapitre à la fois. La colonne « Images » compte les mots illustrés de l'unité (exercices en images et guide).
 
@@ -124,11 +124,11 @@ Généré à partir des données de l'application (`src/content/courses/*.json`)
 | 4 | Hangul 4 : diphtongues & batchim | 1 | ㅑ ㅕ ㅛ ㅠ ㅘ ㅝ ㅢ · consonnes finales | 6 | 8 |  |
 | 5 | Les bases | 1 | Saluer, remercier, se présenter | 6 | 8 | 8 |
 | 6 | Les nombres & l'heure | 1 | Nombres natifs et sino-coréens | 6 | 7 | 4 |
-| 7 | Au café (카페) | 1 | Commander une boisson, sur place ou à emporter | 6 | 8 | 8 |
-| 8 | Au restaurant (식당) | 1 | Appeler le serveur, commander, payer | 6 | 8 | 10 |
-| 9 | À la supérette (편의점) | 1 | Trouver un produit, payer, faire réchauffer | 6 | 8 | 10 |
-| 10 | Météo & saisons (날씨) | 1 | Parler du temps qu'il fait et des saisons | 6 | 8 | 10 |
-| 11 | Conversation quotidienne | 2 | Commander, demander, comprendre | 6 | 8 | 7 |
+| 7 | Conversation quotidienne | 1 | Commander, demander, comprendre | 6 | 8 | 7 |
+| 8 | Au café (카페) | 1 | Commander une boisson, sur place ou à emporter | 6 | 8 | 8 |
+| 9 | Au restaurant (식당) | 1 | Appeler le serveur, commander, payer | 6 | 8 | 10 |
+| 10 | À la supérette (편의점) | 1 | Trouver un produit, payer, faire réchauffer | 6 | 8 | 10 |
+| 11 | Météo & saisons (날씨) | 1 | Parler du temps qu'il fait et des saisons | 6 | 8 | 10 |
 | 12 | Au travail (회사) | 2 | Bureau, réunions, collègues | 6 | 8 | 6 |
 | 13 | Shopping & transports | 2 | Métro, bus, magasins | 6 | 8 | 11 |
 | 14 | Métro & bus (지하철, 버스) | 2 | Trouver sa ligne, changer, descendre au bon arrêt | 6 | 8 | 7 |

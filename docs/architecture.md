@@ -1,4 +1,4 @@
-# Architecture du code (v31.1)
+# Architecture du code (v32)
 
 La v26 reprend exactement le comportement de la v25 dans un projet découpé en modules.
 
@@ -79,7 +79,9 @@ L'ordre compte : la traduction du DOM doit observer la page avant la typographie
 - Série : `screens/streak.js` (`openStreak`, paliers `MILESTONES`, `streakMilestone`, `streakReset`). Historique : `S.week` garde ~13 mois, `S.frz` les jours protégés par un gel, `S.smil` les paliers déjà payés pour la série en cours.
 - Paramètres (v28.1) : `screens/settings.js`, ouvert par la roue dentée du profil. Adresses `#reglages` (menu) et `#reglages/<page>` (`preferences`, `compte`, `notifications`, `claude`, liste `SETTINGS_PAGES`). Les réglages gardent leurs identifiants ; `bindSettings()` ignore ceux qui ne sont pas sur la sous-page affichée.
 - Chapitres (v29) : `chapters()`, `curChapter()`, `setChapter()` et `renderChapters()` dans `screens/path.js` ; chapitre choisi dans `S.chap[cours]`, adresse `#chapitres`. Les fonctions de repli des unités restent mais ne sont plus affichées.
-- Quêtes (v29) : `screens/quests.js` (adresse `#quetes`), quête du mois `S.qm` (`questMonth`, `QM_STEPS` dans `features/quests.js`).
+- Quêtes (v29, variées en v32) : `screens/quests.js` (adresse `#quetes`) ; `QUEST_POOL` et `todayQuests()` dans `features/quests.js` (3 quêtes tirées par jour, gardées dans `S.q.ids` ; compteurs `S.q.l/c/s/ok/sec/p/a/st/t/m` remis à zéro chaque jour) ; quête du mois `S.qm` (`questMonth`, `QM_GOAL`, `QM_STEPS`). `checkQuests(true)` renvoie ce qui vient d'être gagné sans afficher de bulle : la fin de séance (`finish()` de `lesson/engine.js`) l'affiche elle-même, avec les badges (`BADGE_MEDAL`).
+- Réglages du serveur (v32) : `api/data/config.php` (`vapid_subject`, `cron_key`, `api_key`), écrit par l'installateur et lu par `remind.php` et `generate.php` ; il survit aux mises à jour par unzip.
+- XP (v32) : `S.xpv = 2` marque le nouveau barème ; `hydrate()` convertit l'ancien objectif et valide les chapitres passés au test de niveau (`placeValidate`).
 - Scènes de Horang le long du parcours : `ui/scenes.ts` (`horangScene`).
 - IA (v31.1) : la clé se règle dans Paramètres › Mon Claude (`#reglages/claude`), tous les messages y renvoient ; la création d'unité (`genUnit`) envoie aussi `titles`, les titres des unités plus anciennes que les 14 dernières, pour éviter un thème déjà traité.
 - IA (v29) : `weakRuleIds()` / `weakRules()` dans `services/ai.js` envoient les règles de grammaire les moins réussies (`weak`) au prompt (`generate.php` et prompt direct) et ajoutent 3 phrases générées par gabarits à chaque séance IA ou locale. Les QCM générés peuvent porter un indice (5ᵉ champ) qui permet l'exercice `fill`.

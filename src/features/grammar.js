@@ -142,7 +142,7 @@ export function startDrills(cid, pick) {
   if (!set) return;
   const course = drillCid(set);
   const exs = drillExercises(cid, pick);
-  openSession({ mode: "train", cid: course, exs });
+  openSession({ mode: "train", cid: course, exs, keepDup: true }); // une règle se travaille en répétant : on garde les reprises
 }
 /** Le cours d'une section a-t-il des notions de grammaire ? */
 export const hasNotions = cid => !!drillSetFor(cid) && !!COURSES[drillCid(drillSetFor(cid))];

@@ -1,8 +1,8 @@
 # Speakeasy — Cahier des charges et dossier technique
 
-Version de référence : v31.1 · 13 novembre 2026 · Naulan
+Version de référence : v32 · 15 novembre 2026 · Naulan
 
-Les sections 1 et 2 décrivent l'application telle qu'elle est en v31.1. Le détail de chaque version est dans `historique-et-decisions.md`.
+Les sections 1 et 2 décrivent l'application telle qu'elle est en v32. Le détail de chaque version est dans `historique-et-decisions.md`.
 
 Version vivante et commentable : https://claude.ai/artifact/ShUL8ouoWpa4PSS2iN3yFu
 
@@ -52,7 +52,7 @@ L'application doit couvrir les douze fonctions ci-dessous ; toutes sont en place
 - Un parcours par cours, découpé en chapitres puis en unités, du plus facile au plus difficile (A1 à C1). Un chapitre correspond à un niveau du cours ; le parcours affiche un chapitre à la fois, un écran liste les chapitres et un bouton « Continuer » mène au suivant. C'est le design retenu (v29, confirmé en v31.1).
 - Parcours hybride : l'ordre est recommandé mais toute unité peut être commencée à tout moment.
 - Bannière d'unité « Chapitre N, unité M », guide de l'unité (astuce, phrases clés, mots utiles, mots en images, règles) et étape conseillée. Les unités repliables d'avant la v29 ont été remplacées par les chapitres.
-- Test de niveau à l'entrée (24 questions) qui place l'apprenant dans le parcours.
+- Test de niveau à l'entrée : 4 paliers de 12 questions (9 bonnes réponses pour passer au suivant), environ 10 minutes. Les chapitres validés au test sont comptés comme terminés dans la progression (v32) et restent rejouables.
 - Version extrême de chaque étape, récompensée par une couronne.
 - Pas de système de vies : usage illimité.
 
@@ -95,15 +95,17 @@ L'application doit couvrir les douze fonctions ci-dessous ; toutes sont en place
 
 ### 2.5 Motivation
 
-- XP, objectif quotidien réglable, série de jours avec gel de série et paliers récompensés (7, 14, 30 et 50 jours), badges, combo.
-- Onglet Quêtes : quêtes du jour avec coffres et quête du mois (30 points, paliers à +20, +30 et +50 gemmes).
+- XP (10 par bonne réponse, soit 150 à 190 par leçon) et objectif quotidien réglable à 50, 100, 200 ou 400 XP (v32 ; les anciens objectifs 10/20/30/50 sont convertis). Série de jours avec gel de série et paliers récompensés (7, 14, 30 et 50 jours), badges, combo.
+- Onglet Quêtes : 3 quêtes du jour tirées chaque matin parmi 14 (une de volume, deux parmi précision, écoute et oral, découverte, révision), avec coffres ; quête du mois de 60 points, paliers à 10, 25, 40 et 60 points (+20, +30, +50 et +100 gemmes) (v32).
+- Fin de séance (v32) : un seul écran de bilan (encouragement, XP, précision, temps, toutes les récompenses gagnées sur la même page : badges, niveau, objectif, quête du mois), puis le rappel de la journée (objectif, quêtes, révisions à faire avec un bouton « Réviser ») ; l'écran de série suit, avec la flamme animée et les jours cochés un à un.
+- Barre du haut (v32) : sur téléphone, plus de logo ni d'avatar ; le changement de profil se fait dans l'onglet Profil.
 - Gemmes : +5 par leçon, +20 par bilan d'unité, +3 par entraînement, plus les quêtes.
 - Boutique : gel de série (50 gemmes, 2 au maximum), double XP 15 minutes (40 gemmes), tenues pour la mascotte Horang. Elle s'ouvre en touchant les gemmes de la barre du haut : son onglet a laissé la place à l'onglet Quêtes (v29, choix conservé).
 - Mascotte Horang (un tigre) qui réagit et porte les tenues achetées.
 
 ### 2.6 Ligues
 
-- Six ligues hebdomadaires selon l'XP de la semaine : Bronze (0), Argent (100), Or (300), Saphir (600), Rubis (1 000), Diamant (1 500).
+- Six ligues hebdomadaires selon l'XP de la semaine : Bronze (0), Argent (300), Or (800), Saphir (1 500), Rubis (2 500), Diamant (4 000) (seuils relevés en v32). Le classement de la semaine liste tous les comptes en ligne : ceux qui n'ont pas encore joué sont à 0 XP, en bas.
 - Classement de tous les membres du site stocké sur le serveur : cette semaine et depuis toujours.
 - Podium de la semaine passée affiché une fois, avec 50, 30 et 20 gemmes pour les trois premiers.
 - Profils locaux du même appareil classés entre eux.
@@ -325,7 +327,7 @@ Un seul script, installer-fedora.sh, installe ou met à jour le serveur ; il se 
 1. `npm run check`, puis `npm run test:all` : tous les tests doivent réussir.
 2. `npm run zip` : le nom du cache du service worker change tout seul, les téléphones récupèrent la nouvelle version.
 3. Remplacer les fichiers dans /var/www/html/speakeasy/ sans toucher à api/data/.
-4. Relancer `sudo EMAIL=<adresse> bash /var/www/html/speakeasy/installer-fedora.sh` si la configuration serveur a changé.
+4. Relancer `sudo EMAIL=<adresse> bash /var/www/html/speakeasy/installer-fedora.sh` une fois après le passage à la v32 : l'adresse des rappels est alors rangée dans `api/data/config.php`, que les mises à jour suivantes n'écrasent plus. Ensuite, seulement si la configuration serveur a changé.
 5. Sur le téléphone : fermer puis rouvrir l'app.
 
 ### 6.4 Exploitation
@@ -336,7 +338,7 @@ Un seul script, installer-fedora.sh, installe ou met à jour le serveur ; il se 
 
 ## 7. Qualité, règles et pièges connus
 
-Chaque version passe une batterie de tests automatiques avec Playwright (Chromium) et un serveur PHP local, lancée par `npm test` (rapide) ou `npm run test:all` (complète). La v31.1 les passe tous. Le HTML de la v26 était identique à celui de la v25 sur 430 écrans et leçons comparés.
+Chaque version passe une batterie de tests automatiques avec Playwright (Chromium) et un serveur PHP local, lancée par `npm test` (rapide) ou `npm run test:all` (complète). La v32 les passe tous. Le HTML de la v26 était identique à celui de la v25 sur 430 écrans et leçons comparés.
 
 ### 7.1 Tests automatiques
 
@@ -352,7 +354,7 @@ Chaque version passe une batterie de tests automatiques avec Playwright (Chromiu
 | Audio et micro | Pause micro ou son, bouton « Plus tard », micro absent ou muet, retour sur la dictée du clavier |
 | Rappels | Passage en ligne, abonnement, exécution de remind.php |
 | Bouton retour | Navigation, fermeture des leçons et modales sans quitter le site |
-| Textes non traduits | Parcourt tous les écrans en anglais et en coréen et échoue si un texte d'interface est resté en français (réparé en v31.1 : il ne voyait plus rien) |
+| Textes non traduits | Parcourt tous les écrans en anglais et en coréen et échoue si un texte d'interface est resté en français (réparé en v31.1 : il ne voyait plus rien). Depuis la v32, `i18n_flows` contrôle aussi les 14 quêtes, les écrans de fin de séance, « Mes mots », l'accueil et le test de niveau |
 
 ### 7.2 Règles de validation des réponses
 
