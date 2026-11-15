@@ -97,6 +97,50 @@
      ],
      0,
      "« où » indique le lieu."
+    ],
+    [
+     "Il pleut ___ il fait froid.",
+     [
+      "et",
+      "est",
+      "ai",
+      "es"
+     ],
+     0,
+     "et relie deux éléments (on peut dire « et puis ») ; est est le verbe être (on peut dire « était »)."
+    ],
+    [
+     "Il a oublié ___ clés au bureau.",
+     [
+      "ses",
+      "ces",
+      "c'est",
+      "s'est"
+     ],
+     0,
+     "ses = les siennes (possession) ; ces = celles-là (démonstratif)."
+    ],
+    [
+     "___ une excellente idée.",
+     [
+      "C'est",
+      "S'est",
+      "Ces",
+      "Ses"
+     ],
+     0,
+     "c'est = cela est ; s'est appartient à un verbe pronominal (il s'est trompé)."
+    ],
+    [
+     "Elle a perdu ___ valise à l'aéroport.",
+     [
+      "sa",
+      "ça",
+      "çà",
+      "ç'a"
+     ],
+     0,
+     "sa = la sienne (possession) ; ça = cela."
     ]
    ],
    "dd": [
@@ -105,7 +149,46 @@
     "Où as-tu mis les clés ?",
     "Ça m'étonnerait qu'il ait oublié."
    ],
-   "orig": 1
+   "orig": 1,
+   "parts": [
+    {
+     "t": "a / à et est / et",
+     "c": [
+      0,
+      1,
+      2,
+      8
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "ces / ses et c'est / s'est",
+     "c": [
+      3,
+      4,
+      9,
+      10
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "ou / où et ça / sa",
+     "c": [
+      5,
+      6,
+      7,
+      11
+     ],
+     "dd": [
+      2,
+      3
+     ]
+    }
+   ]
   },
   {
    "t": "Pluriels & féminins",
@@ -200,12 +283,94 @@
      ],
      0,
      "Nom + nom : les deux s'accordent."
+    ],
+    [
+     "Il a ramassé les ___ tombés par terre.",
+     [
+      "cailloux",
+      "caillous",
+      "caillou",
+      "caillouxs"
+     ],
+     0,
+     "Sept noms en -ou prennent un x au pluriel : bijou, caillou, chou, genou, hibou, joujou, pou."
+    ],
+    [
+     "Elle a acheté des rideaux ___.",
+     [
+      "orange",
+      "oranges",
+      "orangés",
+      "orangent"
+     ],
+     0,
+     "Un nom employé comme couleur reste invariable : des rideaux orange (sauf rose, mauve, fauve, pourpre)."
+    ],
+    [
+     "C'est une femme très ___.",
+     [
+      "discrète",
+      "discrette",
+      "discrèt",
+      "discréte"
+     ],
+     0,
+     "-et devient -ète pour discret, complet, inquiet et secret."
+    ],
+    [
+     "Notre ___ a validé le budget.",
+     [
+      "présidente",
+      "présidante",
+      "présidentte",
+      "présidenté"
+     ],
+     0,
+     "président → présidente : on ajoute simplement un e."
     ]
    ],
    "dd": [
     "Il s'est mis à genoux pour ramasser les cailloux.",
     "Nos grands-mères adorent les festivals d'été.",
     "Ma voisine est une directrice très active."
+   ],
+   "parts": [
+    {
+     "t": "Pluriels en -s, -x et -aux",
+     "c": [
+      0,
+      1,
+      3,
+      8
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "Pluriel des noms composés et des couleurs",
+     "c": [
+      2,
+      5,
+      7,
+      9
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "Le féminin des noms et des adjectifs",
+     "c": [
+      4,
+      6,
+      10,
+      11
+     ],
+     "dd": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -337,6 +502,44 @@
     "Il faut envoyer les documents signés avant de quitter le bureau.",
     "Demain, je terminerai le rapport que vous m'avez demandé.",
     "Veuillez agréer, Madame, l'expression de mes salutations distinguées."
+   ],
+   "parts": [
+    {
+     "t": "Infinitif en -er ou participe en -é",
+     "c": [
+      0,
+      1,
+      3,
+      9
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "-ez, -er et formules de courrier",
+     "c": [
+      2,
+      4,
+      5,
+      10,
+      11
+     ],
+     "dd": [
+      2
+     ]
+    },
+    {
+     "t": "Futur, conditionnel et imparfait : -ai ou -ais",
+     "c": [
+      6,
+      7,
+      8
+     ],
+     "dd": [
+      1
+     ]
+    }
    ]
   },
   {
@@ -432,6 +635,50 @@
      ],
      0,
      "Verbe essentiellement pronominal (s'apercevoir) : accord avec le sujet."
+    ],
+    [
+     "Mes sœurs sont ___ en vacances.",
+     [
+      "allées",
+      "allés",
+      "allé",
+      "allée"
+     ],
+     0,
+     "Avec être, le participe s'accorde avec le sujet (mes sœurs → allées)."
+    ],
+    [
+     "La lettre est ___ ce matin.",
+     [
+      "arrivée",
+      "arrivé",
+      "arrivés",
+      "arriver"
+     ],
+     0,
+     "Avec être, accord avec le sujet féminin singulier (la lettre → arrivée)."
+    ],
+    [
+     "Les invités sont ___ très tard.",
+     [
+      "repartis",
+      "reparti",
+      "reparties",
+      "repartit"
+     ],
+     0,
+     "Avec être, accord avec le sujet masculin pluriel (les invités → repartis)."
+    ],
+    [
+     "Elles se sont ___ dans le miroir.",
+     [
+      "regardées",
+      "regardé",
+      "regardés",
+      "regarder"
+     ],
+     0,
+     "se est un COD placé avant (elles ont regardé qui ? elles-mêmes) : accord, regardées."
     ]
    ],
    "dd": [
@@ -439,7 +686,45 @@
     "Elles se sont souvenues de cette journée.",
     "Nous sommes arrivés en retard à la réunion."
    ],
-   "orig": 1
+   "orig": 1,
+   "parts": [
+    {
+     "t": "Avec l'auxiliaire être",
+     "c": [
+      1,
+      8,
+      9,
+      10
+     ],
+     "dd": [
+      2
+     ]
+    },
+    {
+     "t": "Avec l'auxiliaire avoir",
+     "c": [
+      0,
+      2,
+      4,
+      6
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "Les verbes pronominaux",
+     "c": [
+      3,
+      5,
+      7,
+      11
+     ],
+     "dd": [
+      1
+     ]
+    }
+   ]
   },
   {
    "t": "Accents & signes",
@@ -534,12 +819,94 @@
      ],
      0,
      "a (avoir) + participe passé."
+    ],
+    [
+     "Ce n'est pas ___ : il est peut-être malade.",
+     [
+      "sûr",
+      "sur",
+      "sûre",
+      "sùr"
+     ],
+     0,
+     "sûr (certain) prend un accent circonflexe ; sur (dessus) n'en a pas."
+    ],
+    [
+     "Il habite ___ Lyon depuis deux ans.",
+     [
+      "à",
+      "a",
+      "â",
+      "as"
+     ],
+     0,
+     "à est une préposition (on ne peut pas dire « avait ») ; a est le verbe avoir."
+    ],
+    [
+     "Celui-___ est le mien.",
+     [
+      "là",
+      "la",
+      "lá",
+      "l'a"
+     ],
+     0,
+     "là (adverbe de lieu) prend un accent grave, y compris dans celui-là."
+    ],
+    [
+     "Elle a ___ la porte à clé.",
+     [
+      "fermé",
+      "ferme",
+      "fermè",
+      "fêrmé"
+     ],
+     0,
+     "Participe passé des verbes en -er : -é avec un accent aigu."
     ]
    ],
    "dd": [
     "Il a dû résoudre ce problème tout seul.",
     "Quel gâchis, il a manqué son train !",
     "Je crois qu'elle s'est égarée dans la forêt."
+   ],
+   "parts": [
+    {
+     "t": "L'accent circonflexe",
+     "c": [
+      0,
+      3,
+      6,
+      8
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "L'accent grave : là, à, où",
+     "c": [
+      1,
+      7,
+      9,
+      10
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "L'accent aigu et les mots sans accent",
+     "c": [
+      2,
+      4,
+      5,
+      11
+     ],
+     "dd": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -712,6 +1079,49 @@
     "Quant à leurs dossiers, ils ont dit qu'on les leur rendrait plus tôt que prévu.",
     "Elle s'est demandé si ce projet était prêt ; c'est pourquoi elle est partie sans attendre.",
     "Ses collègues sont arrivés tôt, mais on n'avait pas encore ouvert la salle."
+   ],
+   "parts": [
+    {
+     "t": "on / ont, son / sont, peu / peut",
+     "c": [
+      0,
+      1,
+      2,
+      11,
+      12
+     ],
+     "dd": [
+      2
+     ]
+    },
+    {
+     "t": "se / ce, leur / leurs, s'en",
+     "c": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      10
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "quant, sans, plutôt, prêt, ni",
+     "c": [
+      8,
+      9,
+      13,
+      14,
+      15,
+      16
+     ],
+     "dd": [
+      0
+     ]
+    }
    ]
   },
   {
@@ -842,6 +1252,45 @@
     "C'est moi qui ai envoyé les documents que m'a demandés la directrice.",
     "La plupart des employés sont venus, mais plus d'un a oublié son badge.",
     "Mon collègue et moi sommes prêts ; c'est toi qui as la clé."
+   ],
+   "parts": [
+    {
+     "t": "Après « qui » et avec un sujet inversé",
+     "c": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      12
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "Plusieurs sujets et « tout le monde »",
+     "c": [
+      6,
+      7,
+      11
+     ],
+     "dd": [
+      2
+     ]
+    },
+    {
+     "t": "La plupart, plus d'un, chacun",
+     "c": [
+      3,
+      8,
+      9,
+      10
+     ],
+     "dd": [
+      1
+     ]
+    }
    ]
   },
   {
@@ -976,6 +1425,45 @@
     "Parmi les courriers reçus aujourd'hui, l'envoi de l'acompte a fait l'objet d'un bon accueil.",
     "Le développement de la connexion pose un dilemme à chaque occurrence.",
     "Il ne s'en est pas aperçu, mais elle l'a fait exprès."
+   ],
+   "parts": [
+    {
+     "t": "Lettres doubles ou simples",
+     "c": [
+      0,
+      1,
+      3,
+      5,
+      12
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "Les mots du courrier",
+     "c": [
+      2,
+      4,
+      7,
+      8,
+      11
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "Mots pièges du quotidien",
+     "c": [
+      6,
+      9,
+      10
+     ],
+     "dd": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -1071,14 +1559,98 @@
      ],
      0,
      "Vouloir : je veux, tu veux, il veut."
+    ],
+    [
+     "Je doute qu'il ___ raison.",
+     [
+      "ait",
+      "a",
+      "aie",
+      "est"
+     ],
+     0,
+     "douter que + subjonctif : qu'il ait."
+    ],
+    [
+     "Il faut que vous ___ ce formulaire.",
+     [
+      "remplissiez",
+      "remplissez",
+      "remplirez",
+      "remplissiiez"
+     ],
+     0,
+     "il faut que + subjonctif : que vous remplissiez."
+    ],
+    [
+     "Si tu ___ plus tôt, tu aurais eu ton train.",
+     [
+      "étais parti",
+      "serais parti",
+      "es parti",
+      "partirais"
+     ],
+     0,
+     "Si + plus-que-parfait, puis conditionnel passé (jamais de conditionnel après si)."
+    ],
+    [
+     "Nous ___ toujours la vérité.",
+     [
+      "disons",
+      "dison",
+      "disont",
+      "dites"
+     ],
+     0,
+     "dire : nous disons, vous dites."
     ]
    ],
    "dd": [
     "Il faut que nous soyons prêts avant midi.",
     "Si tu avais travaillé, tu aurais réussi.",
-    "Bien qu'elle soit fatiguée, elle continue."
+    "Bien qu'elle soit fatiguée, elle continue.",
+    "Vous dites ce que vous voulez, mais il a rompu sa promesse."
    ],
-   "orig": 1
+   "orig": 1,
+   "parts": [
+    {
+     "t": "Le subjonctif",
+     "c": [
+      0,
+      3,
+      8,
+      9
+     ],
+     "dd": [
+      0,
+      2
+     ]
+    },
+    {
+     "t": "Si, quand et les temps",
+     "c": [
+      1,
+      2,
+      5,
+      10
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "Présents irréguliers",
+     "c": [
+      4,
+      6,
+      7,
+      11
+     ],
+     "dd": [
+      3
+     ]
+    }
+   ]
   },
   {
    "t": "Adverbes & mots invariables",
@@ -1173,12 +1745,94 @@
      ],
      0,
      "Verbe pouvoir + être (= il pourrait être) : sans trait d'union."
+    ],
+    [
+     "Il répond toujours très ___.",
+     [
+      "prudemment",
+      "prudament",
+      "prudamment",
+      "prudemmant"
+     ],
+     0,
+     "prudent → prudemment : -ent donne -emment."
+    ],
+    [
+     "Elle travaille ___ sur ce dossier.",
+     [
+      "constamment",
+      "constemment",
+      "constament",
+      "constammant"
+     ],
+     0,
+     "constant → constamment : -ant donne -amment."
+    ],
+    [
+     "Il n'est pas ___ arrivé.",
+     [
+      "encore",
+      "encor",
+      "ancore",
+      "en core"
+     ],
+     0,
+     "encore s'écrit avec un e final (encor est une graphie poétique ancienne)."
+    ],
+    [
+     "Elle est arrivée ___ après moi.",
+     [
+      "aussitôt",
+      "aussi tôt",
+      "aussitot",
+      "ausitôt"
+     ],
+     0,
+     "aussitôt (immédiatement) s'écrit en un mot ; aussi tôt (aussi tôt que) en deux."
     ]
    ],
    "dd": [
     "Elle parle couramment trois langues, évidemment.",
     "Quoi que tu dises, il viendra peut-être.",
     "Ils sont déjà partis aussitôt après la réunion."
+   ],
+   "parts": [
+    {
+     "t": "Adverbes en -amment et -emment",
+     "c": [
+      0,
+      1,
+      8,
+      9
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "Quoique / quoi que, peut-être / peut être",
+     "c": [
+      3,
+      4,
+      6,
+      7
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "Adverbes de temps : déjà, aussitôt",
+     "c": [
+      2,
+      5,
+      10,
+      11
+     ],
+     "dd": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -1323,6 +1977,46 @@
     "Ci-joint les documents : la réunion durera une demi-heure et commencera à midi et demi.",
     "Passé neuf heures, les portes restent grandes ouvertes pendant une heure et demie.",
     "Les factures ci-jointes concernent les accords franco-allemands signés hier."
+   ],
+   "parts": [
+    {
+     "t": "Nu, demi et ci-joint",
+     "c": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "Excepté, vu, passé et possible",
+     "c": [
+      7,
+      8,
+      9,
+      10
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "Adjectifs composés",
+     "c": [
+      11,
+      12,
+      13
+     ],
+     "dd": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -1445,6 +2139,44 @@
     "Quatre-vingts personnes et deux cent trois salariés ont assisté à la réunion.",
     "Mes grands-parents ont réuni deux millions d'euros en vendant des tire-bouchons.",
     "Relisez les comptes rendus de la page quatre-vingt : il y manque deux cents mots."
+   ],
+   "parts": [
+    {
+     "t": "Quatre-vingts et deux cents : le s",
+     "c": [
+      0,
+      1,
+      2,
+      6
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "Cent, mille et million",
+     "c": [
+      3,
+      4,
+      5
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "Pluriel des noms composés",
+     "c": [
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "dd": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -1585,6 +2317,46 @@
     "Nous commençons la réunion : appelle-moi et envoie le dossier, vas-y sans attendre.",
     "Il peint le soir et résout ses problèmes ; nous mangeons ensuite et vous faites la vaisselle.",
     "Soudain, j'entendis un bruit : quand j'étais enfant, j'allais souvent dans cette maison."
+   ],
+   "parts": [
+    {
+     "t": "L'impératif",
+     "c": [
+      0,
+      1,
+      2
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "Les présents pièges",
+     "c": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "Futur, passé simple et subjonctif",
+     "c": [
+      8,
+      11,
+      12,
+      13
+     ],
+     "dd": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -1718,6 +2490,45 @@
     "Peut-être viendra-t-il demain ; dis-le-moi lorsqu'il arrivera.",
     "On n'a que deux jours : reportez-vous au tableau ci-dessous, c'est-à-dire au résumé.",
     "Quelqu'un est-il là-bas ? Va-t'en si tu n'as rien à faire."
+   ],
+   "parts": [
+    {
+     "t": "Le trait d'union avec les verbes",
+     "c": [
+      0,
+      1,
+      2,
+      3,
+      11
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "L'élision et la négation",
+     "c": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "Les composés en ci-, là-, au-",
+     "c": [
+      8,
+      9,
+      10,
+      12
+     ],
+     "dd": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -1858,6 +2669,46 @@
     "Ses arguments convaincants ont rassuré les clients le mois précédent.",
     "Il est censé terminer cette tâche urgente, voire la présenter demain.",
     "Je pense qu'elle travaille davantage que ses collègues."
+   ],
+   "parts": [
+    {
+     "t": "Participe présent ou adjectif verbal",
+     "c": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "censé / sensé, voire / voir, tâche / tache",
+     "c": [
+      6,
+      7,
+      8,
+      9,
+      13
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "davantage, qu'elle / quelle",
+     "c": [
+      10,
+      11,
+      12
+     ],
+     "dd": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -1953,6 +2804,50 @@
      ],
      0,
      "Quelques + nom pluriel = un certain nombre de."
+    ],
+    [
+     "___ que soit la météo, nous partirons.",
+     [
+      "Quelle",
+      "Quel",
+      "Quelles",
+      "Quelque"
+     ],
+     0,
+     "quel que + être : quel s'accorde avec le sujet (la météo → quelle que)."
+    ],
+    [
+     "Il reste ___ places dans la salle.",
+     [
+      "quelques",
+      "quelque",
+      "quels que",
+      "quelles que"
+     ],
+     0,
+     "quelques (plusieurs) s'accorde devant un nom pluriel."
+    ],
+    [
+     "Elles sont ___ heureuses de leur succès.",
+     [
+      "tout",
+      "toutes",
+      "tous",
+      "toute"
+     ],
+     0,
+     "Devant un adjectif féminin commençant par une voyelle ou un h muet, tout reste invariable : tout heureuses."
+    ],
+    [
+     "Il a fait preuve d'un grand ___.",
+     [
+      "sang-froid",
+      "sang froid",
+      "sans-froid",
+      "cent-froid"
+     ],
+     0,
+     "sang-froid (maîtrise de soi) s'écrit avec un trait d'union."
     ]
    ],
    "dd": [
@@ -1960,7 +2855,45 @@
     "Elles étaient tout étonnées de le voir ici.",
     "Nous avons eu un différend avec notre fournisseur."
    ],
-   "orig": 1
+   "orig": 1,
+   "parts": [
+    {
+     "t": "Quel que et quelque",
+     "c": [
+      0,
+      7,
+      8,
+      9
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "Tout et les couleurs",
+     "c": [
+      1,
+      3,
+      10
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "Les mots pièges",
+     "c": [
+      2,
+      4,
+      5,
+      6,
+      11
+     ],
+     "dd": [
+      2
+     ]
+    }
+   ]
   },
   {
    "t": "Accords complexes",
@@ -2055,12 +2988,94 @@
      ],
      0,
      "dû suivi d'un infinitif : invariable."
+    ],
+    [
+     "Elles se sont ___ des messages toute la soirée.",
+     [
+      "envoyé",
+      "envoyées",
+      "envoyés",
+      "envoyer"
+     ],
+     0,
+     "se est un COI (envoyer à l'autre) et le COD (des messages) est après : pas d'accord."
+    ],
+    [
+     "La robe qu'elle a ___ est magnifique.",
+     [
+      "choisie",
+      "choisi",
+      "choisis",
+      "choisies"
+     ],
+     0,
+     "Le COD (que, la robe) est placé avant avoir : accord, choisie."
+    ],
+    [
+     "Ces photos, je les ai ___ hier.",
+     [
+      "prises",
+      "pris",
+      "prise",
+      "prit"
+     ],
+     0,
+     "les (ces photos) est un COD placé avant : accord au féminin pluriel."
+    ],
+    [
+     "Elle s'est ___ les cheveux.",
+     [
+      "coupé",
+      "coupée",
+      "coupés",
+      "coupées"
+     ],
+     0,
+     "Le COD (les cheveux) est après le verbe : pas d'accord."
     ]
    ],
    "dd": [
     "Les cadeaux qu'ils se sont offerts étaient magnifiques.",
     "Les vingt minutes qu'il a couru lui ont paru longues.",
     "Elle s'est permis de partir sans prévenir."
+   ],
+   "parts": [
+    {
+     "t": "Pronominaux avec un complément indirect",
+     "c": [
+      0,
+      1,
+      6,
+      8,
+      11
+     ],
+     "dd": [
+      2
+     ]
+    },
+    {
+     "t": "Le complément d'objet placé avant",
+     "c": [
+      2,
+      9,
+      10
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "Verbes impersonnels et compléments de mesure",
+     "c": [
+      3,
+      4,
+      5,
+      7
+     ],
+     "dd": [
+      1
+     ]
+    }
    ]
   },
   {
@@ -2178,12 +3193,72 @@
      ],
      0,
      "Dans une formule d'appel ou de politesse : Madame, avec majuscule et en toutes lettres."
+    ],
+    [
+     "La réunion a lieu ___.",
+     [
+      "le 15 avril",
+      "le 15 Avril",
+      "le Quinze avril",
+      "le 15-avril"
+     ],
+     0,
+     "Les noms de mois s'écrivent en minuscules : le 15 avril."
+    ],
+    [
+     "Le magasin ouvre à ___.",
+     [
+      "9 h",
+      "9h",
+      "9 H",
+      "9:00h"
+     ],
+     0,
+     "Heures : une espace avant et après h, en minuscule (9 h, 8 h 30)."
     ]
    ],
    "dd": [
     "À 8 h 30, la réunion du lundi 3 mars commencera au 2e étage.",
     "Le XXIe siècle a commencé le 1er janvier 2001.",
     "Le projet coûte 1 000 euros, voir l'article n° 10."
+   ],
+   "parts": [
+    {
+     "t": "Heures et dates",
+     "c": [
+      0,
+      7,
+      10,
+      11
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "Ordinaux et siècles",
+     "c": [
+      3,
+      4,
+      5,
+      8
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "Nombres, abréviations et majuscules",
+     "c": [
+      1,
+      2,
+      6,
+      9
+     ],
+     "dd": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -2314,6 +3389,45 @@
     "Elle s'est fait couper les cheveux par la coiffeuse que j'ai vue travailler hier.",
     "Les présidents qui se sont succédé ont tous pris les décisions qu'il a fallu.",
     "Des erreurs, j'en ai commis ; mais les deux associées se sont plu et se sont souri dès le début."
+   ],
+   "parts": [
+    {
+     "t": "Participe suivi d'un infinitif",
+     "c": [
+      0,
+      1,
+      2,
+      11
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "Pronominaux sans accord",
+     "c": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      12
+     ],
+     "dd": [
+      2
+     ]
+    },
+    {
+     "t": "En et les verbes impersonnels",
+     "c": [
+      3,
+      9,
+      10
+     ],
+     "dd": [
+      1
+     ]
+    }
    ]
   },
   {
@@ -2445,6 +3559,45 @@
     "Bien qu'il ait plu, nous avons pallié le retard ; au temps pour moi, j'avais mal compris.",
     "Dans cette conjoncture, l'acceptation du devis semble imminente.",
     "Je me rappelle cette collision : un éminent chirurgien était présent."
+   ],
+   "parts": [
+    {
+     "t": "Expressions fautives",
+     "c": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "Paronymes du monde du travail",
+     "c": [
+      5,
+      6,
+      9,
+      10
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "Paronymes du quotidien",
+     "c": [
+      7,
+      8,
+      11,
+      12
+     ],
+     "dd": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -2589,6 +3742,46 @@
     "Après qu'il est parti, nous avons fermé le dossier dont je t'ai parlé.",
     "Il y avait quelque deux cents personnes, toutes étonnées par la nouvelle.",
     "Cela prendra deux heures, voire trois, avant qu'il ne parte."
+   ],
+   "parts": [
+    {
+     "t": "Après que, avant que et dont",
+     "c": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "dd": [
+      0
+     ]
+    },
+    {
+     "t": "Quelque, tout et même",
+     "c": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "dd": [
+      1
+     ]
+    },
+    {
+     "t": "Pléonasmes à éviter",
+     "c": [
+      11,
+      12,
+      13
+     ],
+     "dd": [
+      2
+     ]
+    }
    ]
   }
  ]
