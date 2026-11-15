@@ -1,8 +1,8 @@
 # Speakeasy — Cahier des charges et dossier technique
 
-Version de référence : v32 · 15 novembre 2026 · Naulan
+Version de référence : v33 · 15 novembre 2026 · Naulan
 
-Les sections 1 et 2 décrivent l'application telle qu'elle est en v32. Le détail de chaque version est dans `historique-et-decisions.md`.
+Les sections 1 et 2 décrivent l'application telle qu'elle est en v33. Le détail de chaque version est dans `historique-et-decisions.md`.
 
 Version vivante et commentable : https://claude.ai/artifact/ShUL8ouoWpa4PSS2iN3yFu
 
@@ -95,8 +95,13 @@ L'application doit couvrir les douze fonctions ci-dessous ; toutes sont en place
 
 ### 2.5 Motivation
 
-- XP (10 par bonne réponse, soit 150 à 190 par leçon) et objectif quotidien réglable à 50, 100, 200 ou 400 XP (v32 ; les anciens objectifs 10/20/30/50 sont convertis). Série de jours avec gel de série et paliers récompensés (7, 14, 30 et 50 jours), badges, combo.
+- XP (10 par bonne réponse ; une leçon compte 11 exercices depuis la v33, soit 110 à 135 XP) et objectif quotidien réglable à 50, 100, 200 ou 400 XP (v32 ; les anciens objectifs 10/20/30/50 sont convertis). Série de jours avec gel de série et paliers récompensés (7, 14, 30 et 50 jours), badges, combo.
 - Onglet Quêtes : 3 quêtes du jour tirées chaque matin parmi 14 (une de volume, deux parmi précision, écoute et oral, découverte, révision), avec coffres ; quête du mois de 60 points, paliers à 10, 25, 40 et 60 points (+20, +30, +50 et +100 gemmes) (v32).
+- Séances courtes façon Duolingo (v33) : 10 exercices et 1 révision par leçon (12 et 2 pour le bilan d'unité, 12 en version extrême), au lieu de 14 et 2 ; les types d'exercice les plus répétés sont retirés en premier.
+- Repères de thème le long de chaque unité (v33) : Découvrir, Comprendre, Construire, Maîtriser, Bilan, avec ce qu'on y travaille (libellés propres au TOEIC, à Voltaire et au hangul).
+- « À savoir » après chaque réponse, juste ou fausse (v33) : la règle de l'exercice, sinon les repères de grammaire reconnus dans la phrase (temps, auxiliaires, particules coréennes, négation…), les mots clés de la phrase et, à défaut, l'astuce de l'unité. Avec une IA configurée, le bouton « Explique ma réponse » demande une explication de la phrase et de sa construction (mode `explain`).
+- « Trouve l'erreur » (v33) : une fois sur deux, 2 ou 3 phrases à la suite avec de 0 à 3 fautes à toucher ; l'examen blanc Voltaire reste à une phrase.
+- Leçon bilan (v33) : carte d'entraînement qui couvre tout ce qui a été vu (unités où l'on se trompe le plus, échantillon du reste du parcours, erreurs à ancrer, mots à revoir), par IA ou en mélange local.
 - Fin de séance (v32) : un seul écran de bilan (encouragement, XP, précision, temps, toutes les récompenses gagnées sur la même page : badges, niveau, objectif, quête du mois), puis le rappel de la journée (objectif, quêtes, révisions à faire avec un bouton « Réviser ») ; l'écran de série suit, avec la flamme animée et les jours cochés un à un.
 - Barre du haut (v32) : sur téléphone, plus de logo ni d'avatar ; le changement de profil se fait dans l'onglet Profil.
 - Gemmes : +5 par leçon, +20 par bilan d'unité, +3 par entraînement, plus les quêtes.
@@ -294,7 +299,7 @@ Les clés VAPID des notifications sont créées automatiquement dans `api/data/v
 | POST account.php?a=board | Classement : semaine, depuis toujours, podium passé, rang de l'utilisateur | Jeton |
 | POST account.php?a=logout, delete | Déconnexion, suppression du compte | Jeton (et mot de passe pour supprimer) |
 | GET generate.php | Indique si une clé commune existe | Aucune |
-| POST generate.php | Génération IA ; mode parmi exercise, word, write, unit, story ; tout autre mode refusé (400) | Clé du profil en en-tête X-User-Key, ou clé commune ; 30 par heure et par IP |
+| POST generate.php | Génération IA ; mode parmi exercise, word, write, unit, story, explain ; tout autre mode refusé (400) | Clé du profil en en-tête X-User-Key, ou clé commune ; 30 par heure et par IP |
 | GET push.php?a=key | Clé publique VAPID | Aucune |
 | POST push.php?a=subscribe, unsubscribe | Abonnement au rappel (heure, fuseau) | Jeton |
 | php remind.php (cron) | Envoie les rappels de l'heure à ceux qui n'ont pas encore joué | Ligne de commande uniquement |
@@ -338,7 +343,7 @@ Un seul script, installer-fedora.sh, installe ou met à jour le serveur ; il se 
 
 ## 7. Qualité, règles et pièges connus
 
-Chaque version passe une batterie de tests automatiques avec Playwright (Chromium) et un serveur PHP local, lancée par `npm test` (rapide) ou `npm run test:all` (complète). La v32 les passe tous. Le HTML de la v26 était identique à celui de la v25 sur 430 écrans et leçons comparés.
+Chaque version passe une batterie de tests automatiques avec Playwright (Chromium) et un serveur PHP local, lancée par `npm test` (rapide) ou `npm run test:all` (complète). La v33 les passe tous. Le HTML de la v26 était identique à celui de la v25 sur 430 écrans et leçons comparés.
 
 ### 7.1 Tests automatiques
 

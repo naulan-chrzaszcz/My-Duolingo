@@ -79,6 +79,7 @@ Insérer une unité au milieu est possible : la progression des profils est reca
 4. Si c'est un exercice d'écoute ou de micro : l'ajouter dans `isAudioEx` et `pauseAudio` (`src/lesson/engine.js`).
 5. Libellé du type pour le coach : `TYPE_FR` dans `src/features/coach.js`.
 6. Tests : ajouter la bonne réponse automatique dans `tests/solver.py`.
+   - Explication après la réponse : renvoyer `exp` (ou `exps`) dans le résultat de `grade`, sinon `features/explain.js` cherche un repère de grammaire dans la phrase ; pour un nouveau repère, ajouter une ligne `[expression régulière, texte]` dans `EN`, `FR`, `KO_END` ou `KO_PART` et traduire le texte.
 7. Traduire les nouveaux textes (voir « Un texte d'interface »).
 
 ## Une notion de grammaire, une règle ou un gabarit de phrase
