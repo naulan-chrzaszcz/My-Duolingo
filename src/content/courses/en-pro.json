@@ -60,6 +60,48 @@
      "Je suis absent du bureau jusqu'à lundi.",
      "I am out of the office until Monday.",
      "I'm out of the office until Monday."
+    ],
+    [
+     "Bonjour Madame Dupont,",
+     "Dear Ms. Dupont,",
+     "Dear Ms Dupont,",
+     "Dear Mrs. Dupont,"
+    ],
+    [
+     "J'espère que vous allez bien.",
+     "I hope you are well.",
+     "I hope you're well.",
+     "I hope this email finds you well."
+    ],
+    [
+     "Je vous contacte au sujet de la facture.",
+     "I'm contacting you about the invoice.",
+     "I am contacting you about the invoice.",
+     "I'm reaching out about the invoice.",
+     "I am writing about the invoice."
+    ],
+    [
+     "Je me permets de vous relancer.",
+     "I'm following up on my previous email.",
+     "I am following up on my previous email.",
+     "I'm just following up."
+    ],
+    [
+     "Vous trouverez le contrat en pièce jointe.",
+     "Please find the contract attached.",
+     "Please find attached the contract.",
+     "The contract is attached."
+    ],
+    [
+     "Avez-vous bien reçu mon dernier message ?",
+     "Did you receive my last message?",
+     "Did you get my last message?",
+     "Have you received my last message?"
+    ],
+    [
+     "Merci d'avance pour votre aide.",
+     "Thank you in advance for your help.",
+     "Thanks in advance for your help."
     ]
    ],
    "v": [
@@ -86,6 +128,30 @@
     [
      "mettre en copie",
      "cc"
+    ],
+    [
+     "formule d'appel",
+     "greeting"
+    ],
+    [
+     "cordialement",
+     "kind regards"
+    ],
+    [
+     "réponse",
+     "reply"
+    ],
+    [
+     "absent du bureau",
+     "out of office"
+    ],
+    [
+     "contrat",
+     "contract"
+    ],
+    [
+     "facture",
+     "invoice"
     ]
    ],
    "orig": 1,
@@ -133,7 +199,115 @@
      ],
      0,
      "Best regards = cordialement."
+    ],
+    [
+     "I hope this email finds you ___.",
+     [
+      "well",
+      "good",
+      "fine",
+      "nice"
+     ],
+     0,
+     "Formule figée : I hope this email finds you well."
+    ],
+    [
+     "Dear Mr. Smith, I am writing ___ ask about your services.",
+     [
+      "to",
+      "for",
+      "about",
+      "in"
+     ],
+     0,
+     "Le but : to + base verbale (I am writing to ask)."
+    ],
+    [
+     "Just a quick reminder ___ the deadline is Friday.",
+     [
+      "that",
+      "what",
+      "which",
+      "who"
+     ],
+     0,
+     "Une proposition qui complète un nom : that."
+    ],
+    [
+     "I'm following ___ on my email from last week.",
+     [
+      "up",
+      "out",
+      "on",
+      "in"
+     ],
+     0,
+     "Relancer : follow up (on)."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Ouvre un e-mail",
+     "p": [
+      0,
+      2,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      1,
+      2,
+      5,
+      6,
+      11
+     ],
+     "c": [
+      2,
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Joins un fichier et relance",
+     "p": [
+      1,
+      6,
+      11,
+      12,
+      13
+     ],
+     "v": [
+      0,
+      3,
+      4,
+      10
+     ],
+     "c": [
+      0,
+      6,
+      7
+     ]
+    },
+    {
+     "t": "Conclus un e-mail",
+     "p": [
+      3,
+      4,
+      5,
+      7,
+      14
+     ],
+     "v": [
+      7,
+      8,
+      9
+     ],
+     "c": [
+      1,
+      3
+     ]
+    }
    ]
   },
   {
@@ -187,6 +361,45 @@
      "My job involves a lot of travel.",
      "My position involves a lot of travel.",
      "My job involves a lot of traveling."
+    ],
+    [
+     "Je suis développeuse web.",
+     "I'm a web developer.",
+     "I am a web developer."
+    ],
+    [
+     "Mon rôle est de gérer le budget.",
+     "My role is to manage the budget.",
+     "My job is to manage the budget."
+    ],
+    [
+     "Notre siège est à Lyon.",
+     "Our headquarters are in Lyon.",
+     "Our headquarters is in Lyon.",
+     "Our head office is in Lyon."
+    ],
+    [
+     "L'entreprise compte deux cents salariés.",
+     "The company has two hundred employees.",
+     "The company has 200 employees."
+    ],
+    [
+     "Je commence ma journée par mes e-mails.",
+     "I start my day with my emails.",
+     "I start my day by checking my emails.",
+     "I start my day with emails."
+    ],
+    [
+     "J'ai beaucoup de réunions le lundi.",
+     "I have a lot of meetings on Mondays.",
+     "I have lots of meetings on Mondays."
+    ],
+    [
+     "Ce que je préfère, c'est travailler en équipe.",
+     "What I like most is teamwork.",
+     "What I like best is working in a team.",
+     "What I like most is working in a team.",
+     "My favorite part is teamwork."
     ]
    ],
    "v": [
@@ -213,6 +426,30 @@
     [
      "missions",
      "duties"
+    ],
+    [
+     "service (département)",
+     "department"
+    ],
+    [
+     "salarié",
+     "employee"
+    ],
+    [
+     "déplacement professionnel",
+     "business trip"
+    ],
+    [
+     "charge de travail",
+     "workload"
+    ],
+    [
+     "horaires de travail",
+     "working hours"
+    ],
+    [
+     "siège social",
+     "headquarters"
     ]
    ],
    "c": [
@@ -259,7 +496,115 @@
      ],
      0,
      "work as + métier."
+    ],
+    [
+     "I work ___ home twice a week.",
+     [
+      "from",
+      "at",
+      "in",
+      "to"
+     ],
+     0,
+     "Télétravailler : work from home."
+    ],
+    [
+     "I'm ___ to working long hours.",
+     [
+      "used",
+      "use",
+      "using",
+      "usual"
+     ],
+     0,
+     "Être habitué à : be used to + -ing."
+    ],
+    [
+     "I've been working here ___ 2021.",
+     [
+      "since",
+      "for",
+      "from",
+      "during"
+     ],
+     0,
+     "since + point de départ ; for + durée."
+    ],
+    [
+     "Our company ___ 200 employees.",
+     [
+      "has",
+      "have",
+      "is",
+      "does"
+     ],
+     0,
+     "company est singulier : the company has."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Dis quel est ton poste",
+     "p": [
+      0,
+      1,
+      2,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      4,
+      5
+     ],
+     "c": [
+      0,
+      3,
+      6
+     ]
+    },
+    {
+     "t": "Présente ton équipe",
+     "p": [
+      3,
+      4,
+      5,
+      10,
+      11
+     ],
+     "v": [
+      1,
+      2,
+      6,
+      7,
+      11
+     ],
+     "c": [
+      1,
+      2,
+      7
+     ]
+    },
+    {
+     "t": "Décris ton quotidien au travail",
+     "p": [
+      6,
+      7,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      3,
+      8,
+      9,
+      10
+     ],
+     "c": [
+      4,
+      5
+     ]
+    }
    ]
   },
   {
@@ -316,6 +661,46 @@
      "Could we move the meeting to Thursday?",
      "Can we reschedule the meeting to Thursday?",
      "Could we reschedule the meeting to Thursday?"
+    ],
+    [
+     "Merci à tous d'être là.",
+     "Thank you all for being here.",
+     "Thanks everyone for being here.",
+     "Thank you all for joining."
+    ],
+    [
+     "Est-ce que tout le monde m'entend ?",
+     "Can everyone hear me?",
+     "Can everybody hear me?"
+    ],
+    [
+     "Commençons par l'ordre du jour.",
+     "Let's start with the agenda.",
+     "Let's begin with the agenda."
+    ],
+    [
+     "Je peux ajouter quelque chose ?",
+     "Can I add something?",
+     "May I add something?",
+     "Could I add something?"
+    ],
+    [
+     "Pardon de vous interrompre.",
+     "Sorry to interrupt.",
+     "Sorry for interrupting.",
+     "Sorry to interrupt you."
+    ],
+    [
+     "Récapitulons les décisions.",
+     "Let's recap the decisions.",
+     "Let's sum up the decisions.",
+     "Let's go over the decisions."
+    ],
+    [
+     "On refait le point la semaine prochaine.",
+     "Let's touch base next week.",
+     "We'll touch base next week.",
+     "Let's check in next week."
     ]
    ],
    "v": [
@@ -342,6 +727,30 @@
     [
      "visio",
      "video call"
+    ],
+    [
+     "interrompre",
+     "interrupt"
+    ],
+    [
+     "prendre la parole",
+     "speak up"
+    ],
+    [
+     "point (de l'ordre du jour)",
+     "item"
+    ],
+    [
+     "rejoindre (un appel)",
+     "join"
+    ],
+    [
+     "action à mener",
+     "action item"
+    ],
+    [
+     "récapituler",
+     "recap"
     ]
    ],
    "orig": 1,
@@ -389,7 +798,115 @@
      ],
      0,
      "move on to = passer à."
+    ],
+    [
+     "Thank you all for ___.",
+     [
+      "coming",
+      "come",
+      "to coming",
+      "came"
+     ],
+     0,
+     "Thank you for + -ing."
+    ],
+    [
+     "Can everyone ___ me?",
+     [
+      "hear",
+      "listen",
+      "listen to",
+      "hearing"
+     ],
+     0,
+     "Percevoir un son : hear (listen = écouter attentivement)."
+    ],
+    [
+     "I'll send you the ___ after the meeting.",
+     [
+      "minutes",
+      "minute",
+      "notes of",
+      "resume"
+     ],
+     0,
+     "Le compte rendu de réunion : the minutes (toujours au pluriel)."
+    ],
+    [
+     "Let's ___ base next week.",
+     [
+      "touch",
+      "take",
+      "make",
+      "hold"
+     ],
+     0,
+     "Faire un point rapide : touch base."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Ouvre la réunion",
+     "p": [
+      0,
+      1,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      0,
+      3,
+      5,
+      9
+     ],
+     "c": [
+      0,
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Prends la parole",
+     "p": [
+      2,
+      3,
+      4,
+      11,
+      12
+     ],
+     "v": [
+      6,
+      7,
+      8
+     ],
+     "c": [
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "t": "Clôture la réunion",
+     "p": [
+      5,
+      6,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      1,
+      2,
+      4,
+      10,
+      11
+     ],
+     "c": [
+      6,
+      7
+     ]
+    }
    ]
   },
   {
@@ -449,6 +966,45 @@
      "We exceeded the budget by ten percent.",
      "We went over budget by ten percent.",
      "We are ten percent over budget."
+    ],
+    [
+     "On a terminé la première phase.",
+     "We've finished the first phase.",
+     "We have finished the first phase.",
+     "We've completed the first phase."
+    ],
+    [
+     "On a pris du retard.",
+     "We're behind schedule.",
+     "We are behind schedule.",
+     "We've fallen behind schedule."
+    ],
+    [
+     "Il nous faut deux jours de plus.",
+     "We need two more days.",
+     "We need two extra days."
+    ],
+    [
+     "La livraison est prévue pour vendredi.",
+     "The delivery is scheduled for Friday.",
+     "Delivery is scheduled for Friday.",
+     "The delivery is planned for Friday."
+    ],
+    [
+     "C'est la tâche la plus urgente.",
+     "This is the most urgent task.",
+     "It's the most urgent task."
+    ],
+    [
+     "Ça peut attendre la semaine prochaine.",
+     "It can wait until next week.",
+     "This can wait until next week."
+    ],
+    [
+     "Je m'en occupe en priorité.",
+     "I'll make it a priority.",
+     "I'll deal with it first.",
+     "I'll prioritize it."
     ]
    ],
    "v": [
@@ -475,6 +1031,30 @@
     [
      "mise à jour",
      "update"
+    ],
+    [
+     "liste de tâches",
+     "to-do list"
+    ],
+    [
+     "déléguer",
+     "delegate"
+    ],
+    [
+     "dans les temps",
+     "on time"
+    ],
+    [
+     "dépasser le budget",
+     "go over budget"
+    ],
+    [
+     "avancement",
+     "progress"
+    ],
+    [
+     "faire passer en premier",
+     "prioritize"
     ]
    ],
    "c": [
@@ -543,7 +1123,93 @@
      ],
      0,
      "Après let's, la base verbale : prioritize."
+    ],
+    [
+     "This task can wait ___ next week.",
+     [
+      "until",
+      "by",
+      "to",
+      "for"
+     ],
+     0,
+     "Jusqu'à (une durée qui continue) : until ; avant une échéance : by."
+    ],
+    [
+     "Could you ___ this task to Tom?",
+     [
+      "delegate",
+      "delete",
+      "devote",
+      "deliver"
+     ],
+     0,
+     "Confier une tâche à quelqu'un : delegate a task to someone."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Fais le point sur le projet",
+     "p": [
+      0,
+      1,
+      3,
+      6,
+      8
+     ],
+     "v": [
+      0,
+      2,
+      5,
+      10
+     ],
+     "c": [
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Gère les délais",
+     "p": [
+      2,
+      7,
+      9,
+      10,
+      11
+     ],
+     "v": [
+      1,
+      4,
+      8,
+      9
+     ],
+     "c": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "t": "Fixe les priorités",
+     "p": [
+      4,
+      5,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      3,
+      6,
+      7,
+      11
+     ],
+     "c": [
+      5,
+      6,
+      7
+     ]
+    }
    ]
   },
   {
@@ -600,6 +1266,47 @@
      "My connection is unstable.",
      "My connection is unreliable.",
      "My internet connection is unstable."
+    ],
+    [
+     "Je te réponds dans le fil.",
+     "I'll reply in the thread.",
+     "I'll answer in the thread."
+    ],
+    [
+     "Je te mets en copie.",
+     "I'll loop you in.",
+     "I'll copy you in.",
+     "I'll cc you."
+    ],
+    [
+     "Je suis en congé la semaine prochaine.",
+     "I'm on leave next week.",
+     "I'm off next week.",
+     "I'll be on vacation next week."
+    ],
+    [
+     "Je suis dispo après quinze heures.",
+     "I'm free after 3 p.m.",
+     "I'm available after 3 p.m.",
+     "I'm free after three."
+    ],
+    [
+     "Je travaille de chez moi aujourd'hui.",
+     "I'm working from home today.",
+     "I'm working remotely today."
+    ],
+    [
+     "Je n'ai pas de son.",
+     "I can't hear anything.",
+     "I have no sound.",
+     "I don't have any sound."
+    ],
+    [
+     "Tu peux couper ta caméra ?",
+     "Can you turn off your camera?",
+     "Could you turn off your camera?",
+     "Can you turn your camera off?",
+     "Could you turn your camera off?"
     ]
    ],
    "v": [
@@ -626,6 +1333,30 @@
     [
      "fil de discussion",
      "thread"
+    ],
+    [
+     "jour de congé",
+     "day off"
+    ],
+    [
+     "fuseau horaire",
+     "time zone"
+    ],
+    [
+     "lien de la réunion",
+     "meeting link"
+    ],
+    [
+     "partage d'écran",
+     "screen sharing"
+    ],
+    [
+     "son (d'un appel)",
+     "audio"
+    ],
+    [
+     "message privé",
+     "direct message"
     ]
    ],
    "c": [
@@ -694,11 +1425,97 @@
      ],
      0,
      "out of office (OOO) = absent."
+    ],
+    [
+     "Can you turn ___ your camera?",
+     [
+      "on",
+      "in",
+      "up",
+      "at"
+     ],
+     0,
+     "Allumer un appareil : turn on."
+    ],
+    [
+     "Your connection is ___; try turning off your video.",
+     [
+      "unstable",
+      "instable",
+      "unsteadied",
+      "disstable"
+     ],
+     0,
+     "Le contraire de stable : unstable (et non instable)."
     ]
    ],
    "wt": [
     "Écris 3 messages Slack : une question rapide à un collègue, un « heads-up » sur ton absence vendredi, une relance polie sans urgence.",
     "Rédige un message (60 à 120 mots) pour proposer un créneau de visio à une autre équipe : objectif, durée, ordre du jour."
+   ],
+   "parts": [
+    {
+     "t": "Écris sur la messagerie",
+     "p": [
+      0,
+      2,
+      4,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      4,
+      5,
+      11
+     ],
+     "c": [
+      0,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Indique tes disponibilités",
+     "p": [
+      1,
+      3,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      1,
+      2,
+      6,
+      7
+     ],
+     "c": [
+      1,
+      5
+     ]
+    },
+    {
+     "t": "Anime une visio",
+     "p": [
+      5,
+      6,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      3,
+      8,
+      9,
+      10
+     ],
+     "c": [
+      2,
+      6,
+      7
+     ]
+    }
    ]
   },
   {
@@ -755,6 +1572,44 @@
      "Shall we discuss it after the stand-up?",
      "Can we talk about it after the stand-up?",
      "Can we discuss it after the stand-up?"
+    ],
+    [
+     "Rien ne me bloque.",
+     "Nothing is blocking me.",
+     "I'm not blocked.",
+     "No blockers for me."
+    ],
+    [
+     "J'ai besoin d'aide sur ce point.",
+     "I need help with this.",
+     "I need some help with this."
+    ],
+    [
+     "J'attends la réponse de l'équipe back-end.",
+     "I'm waiting for a reply from the back-end team.",
+     "I'm waiting for the back-end team to reply.",
+     "I'm waiting on the back-end team."
+    ],
+    [
+     "On peut en parler en tête-à-tête ?",
+     "Can we talk about it one-on-one?",
+     "Can we discuss it one-on-one?"
+    ],
+    [
+     "Le bouton ne réagit pas.",
+     "The button doesn't respond.",
+     "The button isn't responding.",
+     "The button does not respond."
+    ],
+    [
+     "Étapes pour reproduire : ouvrir l'appli.",
+     "Steps to reproduce: open the app."
+    ],
+    [
+     "J'ai ajouté une capture d'écran.",
+     "I've added a screenshot.",
+     "I added a screenshot.",
+     "I have added a screenshot."
     ]
    ],
    "v": [
@@ -781,6 +1636,30 @@
     [
      "comportement",
      "behavior"
+    ],
+    [
+     "terminé",
+     "done"
+    ],
+    [
+     "prochaine étape",
+     "next step"
+    ],
+    [
+     "point bloquant",
+     "blocker"
+    ],
+    [
+     "relire (du code)",
+     "review"
+    ],
+    [
+     "aide",
+     "help"
+    ],
+    [
+     "capture d'écran",
+     "screenshot"
     ]
    ],
    "c": [
@@ -849,11 +1728,97 @@
      ],
      0,
      "low priority = priorité basse."
+    ],
+    [
+     "Today I'm going ___ on the search page.",
+     [
+      "to work",
+      "working",
+      "work",
+      "to working"
+     ],
+     0,
+     "be going to + base verbale."
+    ],
+    [
+     "I ___ the tests yesterday.",
+     [
+      "finished",
+      "finish",
+      "have finished",
+      "finishing"
+     ],
+     0,
+     "Avec yesterday : prétérit."
     ]
    ],
    "wt": [
     "Fais ton stand-up en 3 phrases : ce que tu as fait hier, ce que tu fais aujourd'hui, ce qui te bloque.",
     "Rédige un rapport de bug (60 à 120 mots) : titre, étapes pour reproduire, comportement attendu, comportement observé, environnement."
+   ],
+   "parts": [
+    {
+     "t": "Fais ton point au stand-up",
+     "p": [
+      0,
+      1,
+      6,
+      7,
+      8
+     ],
+     "v": [
+      0,
+      3,
+      6,
+      7
+     ],
+     "c": [
+      2,
+      6,
+      7
+     ]
+    },
+    {
+     "t": "Signale un blocage",
+     "p": [
+      2,
+      5,
+      9,
+      10,
+      11
+     ],
+     "v": [
+      2,
+      8,
+      9,
+      10
+     ],
+     "c": [
+      0,
+      4
+     ]
+    },
+    {
+     "t": "Rédige un ticket",
+     "p": [
+      3,
+      4,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      1,
+      4,
+      5,
+      11
+     ],
+     "c": [
+      1,
+      3,
+      5
+     ]
+    }
    ]
   },
   {
@@ -912,6 +1877,45 @@
      "Pourquoi voulez-vous quitter votre poste actuel ?",
      "Why do you want to leave your current job?",
      "Why do you want to leave your current position?"
+    ],
+    [
+     "J'ai fait un master en informatique.",
+     "I did a master's in computer science.",
+     "I have a master's degree in computer science.",
+     "I did a master's degree in computer science."
+    ],
+    [
+     "J'ai commencé ma carrière dans une start-up.",
+     "I started my career at a start-up.",
+     "I started my career at a startup.",
+     "I began my career at a start-up."
+    ],
+    [
+     "Je sais travailler sous pression.",
+     "I can work under pressure.",
+     "I'm able to work under pressure.",
+     "I know how to work under pressure."
+    ],
+    [
+     "Mon point faible, c'est le perfectionnisme.",
+     "My weakness is perfectionism.",
+     "My main weakness is perfectionism."
+    ],
+    [
+     "Comment se passe une journée type ?",
+     "What does a typical day look like?",
+     "What is a typical day like?"
+    ],
+    [
+     "Quel est le salaire proposé ?",
+     "What salary are you offering?",
+     "What is the salary for this position?"
+    ],
+    [
+     "Quand aurai-je une réponse ?",
+     "When will I hear back?",
+     "When will I get an answer?",
+     "When can I expect an answer?"
     ]
    ],
    "v": [
@@ -938,6 +1942,30 @@
     [
      "recruteur",
      "recruiter"
+    ],
+    [
+     "diplôme",
+     "degree"
+    ],
+    [
+     "expérience professionnelle",
+     "work experience"
+    ],
+    [
+     "stage",
+     "internship"
+    ],
+    [
+     "compétence",
+     "skill"
+    ],
+    [
+     "motivé",
+     "motivated"
+    ],
+    [
+     "avantages (salariaux)",
+     "benefits"
     ]
    ],
    "c": [
@@ -1006,7 +2034,93 @@
      ],
      0,
      "from + date de début (since regarde vers le passé)."
+    ],
+    [
+     "I'm good ___ solving problems.",
+     [
+      "at",
+      "in",
+      "for",
+      "on"
+     ],
+     0,
+     "Être doué pour : be good at + -ing."
+    ],
+    [
+     "I work well ___ pressure.",
+     [
+      "under",
+      "in",
+      "on",
+      "with"
+     ],
+     0,
+     "Sous pression : under pressure."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Présente ton parcours",
+     "p": [
+      0,
+      1,
+      4,
+      8,
+      9
+     ],
+     "v": [
+      6,
+      7,
+      8
+     ],
+     "c": [
+      0,
+      1,
+      4
+     ]
+    },
+    {
+     "t": "Mets en avant tes atouts",
+     "p": [
+      2,
+      3,
+      7,
+      10,
+      11
+     ],
+     "v": [
+      0,
+      1,
+      9,
+      10
+     ],
+     "c": [
+      2,
+      6,
+      7
+     ]
+    },
+    {
+     "t": "Pose tes questions",
+     "p": [
+      5,
+      6,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      2,
+      3,
+      4,
+      5,
+      11
+     ],
+     "c": [
+      3,
+      5
+     ]
+    }
    ]
   },
   {
@@ -1064,6 +2178,44 @@
      "I'll put you in touch with the product team.",
      "I'll connect you with the product team.",
      "I will put you in touch with the product team."
+    ],
+    [
+     "Où se trouve la documentation ?",
+     "Where can I find the documentation?",
+     "Where is the documentation?"
+    ],
+    [
+     "Je n'ai pas encore les accès.",
+     "I don't have access yet.",
+     "I don't have the permissions yet.",
+     "I haven't got access yet."
+    ],
+    [
+     "Quels sont tes objectifs ?",
+     "What are your goals?",
+     "What are your objectives?"
+    ],
+    [
+     "Comment puis-je progresser ?",
+     "How can I improve?",
+     "How can I grow?",
+     "How can I progress?"
+    ],
+    [
+     "J'aimerais un retour sur mon travail.",
+     "I'd like some feedback on my work.",
+     "I would like some feedback on my work."
+    ],
+    [
+     "Je vais te montrer notre façon de travailler.",
+     "I'll show you how we work.",
+     "I will show you how we work."
+    ],
+    [
+     "N'hésite pas si tu bloques.",
+     "Let me know if you get stuck.",
+     "Don't hesitate if you get stuck.",
+     "Just ask if you get stuck."
     ]
    ],
    "v": [
@@ -1090,6 +2242,30 @@
     [
      "environnement de dev",
      "dev environment"
+    ],
+    [
+     "objectif",
+     "goal"
+    ],
+    [
+     "progresser",
+     "grow"
+    ],
+    [
+     "évaluation annuelle",
+     "performance review"
+    ],
+    [
+     "programmer en binôme",
+     "pair programming"
+    ],
+    [
+     "bloqué",
+     "stuck"
+    ],
+    [
+     "conseil",
+     "advice"
     ]
    ],
    "c": [
@@ -1147,11 +2323,108 @@
      ],
      0,
      "set up a meeting = organiser une réunion."
+    ],
+    [
+     "Let me know if you get ___.",
+     [
+      "stuck",
+      "stick",
+      "sticked",
+      "sticking"
+     ],
+     0,
+     "Être bloqué : get stuck (participe passé de stick)."
+    ],
+    [
+     "I'll show you ___ we deploy.",
+     [
+      "how",
+      "what",
+      "which",
+      "that"
+     ],
+     0,
+     "Montrer comment : show + how + sujet + verbe."
+    ],
+    [
+     "What would you like to focus ___ this quarter?",
+     [
+      "on",
+      "at",
+      "in",
+      "to"
+     ],
+     0,
+     "Se concentrer sur : focus on."
     ]
    ],
    "wt": [
     "Écris 3 à 5 phrases pour te présenter à ta nouvelle équipe sur Slack : ton rôle, ton parcours, une chose que tu as hâte d'apprendre.",
     "Rédige un message (60 à 120 mots) à ton manager pour préparer votre 1:1 : une réussite, une difficulté, ce que tu aimerais apprendre ce trimestre."
+   ],
+   "parts": [
+    {
+     "t": "Prends tes marques",
+     "p": [
+      0,
+      1,
+      6,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      1,
+      4,
+      5
+     ],
+     "c": [
+      0,
+      1
+     ]
+    },
+    {
+     "t": "Fais ton point individuel",
+     "p": [
+      4,
+      5,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      2,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      3,
+      4,
+      7
+     ]
+    },
+    {
+     "t": "Accompagne un collègue",
+     "p": [
+      2,
+      3,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      3,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      2,
+      5,
+      6
+     ]
+    }
    ]
   },
   {
@@ -1213,6 +2486,45 @@
      "I've attached my resume.",
      "I have attached my CV.",
      "I've attached my CV."
+    ],
+    [
+     "Je ne cherche pas activement en ce moment.",
+     "I'm not actively looking at the moment.",
+     "I'm not actively looking right now."
+    ],
+    [
+     "Quelle est la taille de l'équipe ?",
+     "How big is the team?",
+     "What is the size of the team?",
+     "How large is the team?"
+    ],
+    [
+     "Le poste est-il en CDI ?",
+     "Is it a permanent position?",
+     "Is this a permanent position?",
+     "Is it a permanent role?"
+    ],
+    [
+     "Combien d'entretiens y a-t-il ?",
+     "How many interviews are there?",
+     "How many rounds of interviews are there?"
+    ],
+    [
+     "Je serais ravi d'échanger avec vous.",
+     "I'd be happy to chat with you.",
+     "I would be happy to chat with you.",
+     "I'd love to chat with you."
+    ],
+    [
+     "Pouvez-vous me recommander ?",
+     "Could you refer me?",
+     "Can you refer me?",
+     "Could you recommend me?"
+    ],
+    [
+     "Je vous ajoute sur LinkedIn.",
+     "I'll add you on LinkedIn.",
+     "I'll connect with you on LinkedIn."
     ]
    ],
    "v": [
@@ -1239,6 +2551,30 @@
     [
      "cooptation",
      "referral"
+    ],
+    [
+     "contact (professionnel)",
+     "connection"
+    ],
+    [
+     "recommandation",
+     "recommendation"
+    ],
+    [
+     "événement",
+     "event"
+    ],
+    [
+     "CDI",
+     "permanent contract"
+    ],
+    [
+     "télétravail complet",
+     "fully remote"
+    ],
+    [
+     "processus de recrutement",
+     "hiring process"
     ]
    ],
    "c": [
@@ -1296,11 +2632,108 @@
      ],
      0,
      "It was great meeting you / great to meet you."
+    ],
+    [
+     "Let's keep ___ touch!",
+     [
+      "in",
+      "on",
+      "at",
+      "with"
+     ],
+     0,
+     "Rester en contact : keep in touch."
+    ],
+    [
+     "Could you ___ me to your manager?",
+     [
+      "introduce",
+      "present to",
+      "meet",
+      "know"
+     ],
+     0,
+     "Présenter quelqu'un à quelqu'un : introduce someone to someone."
+    ],
+    [
+     "Is the position ___ or on-site?",
+     [
+      "remote",
+      "distance",
+      "far",
+      "away"
+     ],
+     0,
+     "En télétravail : remote."
     ]
    ],
    "wt": [
     "Écris ton résumé LinkedIn « About » en 3 à 5 phrases : qui tu es, ce que tu fais, ce que tu cherches.",
     "Réponds à un recruteur (60 à 120 mots) : remercie-le, montre ton intérêt et pose deux questions (salaire, télétravail ou équipe)."
+   ],
+   "parts": [
+    {
+     "t": "Réponds à un recruteur",
+     "p": [
+      0,
+      1,
+      2,
+      7,
+      8
+     ],
+     "v": [
+      0,
+      1,
+      3
+     ],
+     "c": [
+      0,
+      1
+     ]
+    },
+    {
+     "t": "Renseigne-toi sur le poste",
+     "p": [
+      3,
+      4,
+      9,
+      10,
+      11
+     ],
+     "v": [
+      2,
+      4,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      2,
+      3,
+      7
+     ]
+    },
+    {
+     "t": "Développe ton réseau",
+     "p": [
+      5,
+      6,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      5,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      4,
+      5,
+      6
+     ]
+    }
    ]
   },
   {
@@ -1358,6 +2791,46 @@
      "Merci de votre compréhension.",
      "Thank you for your understanding.",
      "Thanks for your understanding."
+    ],
+    [
+     "Avez-vous eu le temps de regarder mon devis ?",
+     "Have you had a chance to look at my quote?",
+     "Have you had time to look at my quote?",
+     "Did you have a chance to look at my quote?"
+    ],
+    [
+     "Je reviens vers vous concernant notre échange.",
+     "I'm getting back to you regarding our discussion.",
+     "I'm getting back to you about our conversation."
+    ],
+    [
+     "Malheureusement, nous ne pouvons pas accepter.",
+     "Unfortunately, we can't accept.",
+     "Unfortunately, we cannot accept.",
+     "Unfortunately, we are unable to accept."
+    ],
+    [
+     "Je crains de ne pas être disponible.",
+     "I'm afraid I'm not available.",
+     "I'm afraid I won't be available."
+    ],
+    [
+     "Nous préférerions une autre date.",
+     "We would prefer another date.",
+     "We'd prefer another date.",
+     "We would prefer a different date."
+    ],
+    [
+     "Veuillez nous excuser pour ce retard.",
+     "Please accept our apologies for the delay.",
+     "We apologize for the delay.",
+     "Please excuse the delay."
+    ],
+    [
+     "C'était une erreur de notre part.",
+     "It was a mistake on our part.",
+     "That was a mistake on our part.",
+     "It was our mistake."
     ]
    ],
    "v": [
@@ -1384,6 +2857,30 @@
     [
      "à votre convenance",
      "at your convenience"
+    ],
+    [
+     "décliner",
+     "decline"
+    ],
+    [
+     "malheureusement",
+     "unfortunately"
+    ],
+    [
+     "excuses",
+     "apologies"
+    ],
+    [
+     "oubli",
+     "oversight"
+    ],
+    [
+     "suggérer",
+     "suggest"
+    ],
+    [
+     "rappel",
+     "reminder"
     ]
    ],
    "c": [
@@ -1419,9 +2916,128 @@
      ],
      0,
      "Formule polie : I would appreciate it if you could…"
+    ],
+    [
+     "We apologize ___ any inconvenience.",
+     [
+      "for",
+      "of",
+      "about",
+      "to"
+     ],
+     0,
+     "S'excuser de : apologize for."
+    ],
+    [
+     "There seems ___ a misunderstanding.",
+     [
+      "to be",
+      "being",
+      "be",
+      "is"
+     ],
+     0,
+     "seem + to + base verbale : there seems to be."
+    ],
+    [
+     "Unfortunately, we are ___ to accept your offer.",
+     [
+      "unable",
+      "not able of",
+      "disable",
+      "inable"
+     ],
+     0,
+     "Ne pas pouvoir (formel) : be unable to."
+    ],
+    [
+     "Would it be ___ to move the call?",
+     [
+      "possible",
+      "possibly",
+      "possibility",
+      "able"
+     ],
+     0,
+     "Demande polie : Would it be possible to…?"
+    ],
+    [
+     "Have you had a ___ to look at my proposal?",
+     [
+      "chance",
+      "luck",
+      "way",
+      "time of"
+     ],
+     0,
+     "Avoir l'occasion de : have a chance to."
     ]
    ],
-   "orig": 1
+   "orig": 1,
+   "parts": [
+    {
+     "t": "Relance avec tact",
+     "p": [
+      0,
+      5,
+      6,
+      8,
+      9
+     ],
+     "v": [
+      3,
+      4,
+      5,
+      11
+     ],
+     "c": [
+      1,
+      2,
+      7
+     ]
+    },
+    {
+     "t": "Dis non poliment",
+     "p": [
+      2,
+      4,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      2,
+      6,
+      7,
+      10
+     ],
+     "c": [
+      0,
+      5,
+      6
+     ]
+    },
+    {
+     "t": "Présente des excuses",
+     "p": [
+      1,
+      3,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      0,
+      1,
+      8,
+      9
+     ],
+     "c": [
+      3,
+      4
+     ]
+    }
+   ]
   },
   {
    "t": "Présentations orales",
@@ -1476,6 +3092,46 @@
      "That's a very good question.",
      "That is a very good question.",
      "That's a great question."
+    ],
+    [
+     "Je m'appelle Sarah et je dirige l'équipe data.",
+     "My name is Sarah and I lead the data team.",
+     "I'm Sarah and I lead the data team.",
+     "My name is Sarah and I manage the data team."
+    ],
+    [
+     "Ma présentation dure vingt minutes.",
+     "My presentation will take twenty minutes.",
+     "My presentation lasts twenty minutes.",
+     "My talk will last twenty minutes."
+    ],
+    [
+     "Elle se divise en trois parties.",
+     "It is divided into three parts.",
+     "It's divided into three parts.",
+     "It has three parts."
+    ],
+    [
+     "Les ventes ont fortement augmenté en mars.",
+     "Sales rose sharply in March.",
+     "Sales increased sharply in March.",
+     "Sales went up sharply in March."
+    ],
+    [
+     "Ce graphique montre l'évolution des coûts.",
+     "This chart shows how costs have changed.",
+     "This graph shows the trend in costs.",
+     "This chart shows the evolution of costs."
+    ],
+    [
+     "Merci pour votre attention.",
+     "Thank you for your attention.",
+     "Thanks for your attention."
+    ],
+    [
+     "Je vous enverrai les diapositives.",
+     "I'll send you the slides.",
+     "I will send you the slides."
     ]
    ],
    "v": [
@@ -1502,6 +3158,30 @@
     [
      "conclure",
      "wrap up"
+    ],
+    [
+     "plan (d'une présentation)",
+     "outline"
+    ],
+    [
+     "augmenter fortement",
+     "rise sharply"
+    ],
+    [
+     "chiffre",
+     "figure"
+    ],
+    [
+     "baisse",
+     "drop"
+    ],
+    [
+     "questions-réponses",
+     "Q&A"
+    ],
+    [
+     "point clé à retenir",
+     "key takeaway"
     ]
    ],
    "c": [
@@ -1570,7 +3250,93 @@
      ],
      0,
      "This brings me to… = formule de transition vers le point suivant."
+    ],
+    [
+     "Today I'm going to talk ___ our results.",
+     [
+      "about",
+      "of",
+      "on to",
+      "over"
+     ],
+     0,
+     "Parler de : talk about."
+    ],
+    [
+     "My presentation is divided ___ three parts.",
+     [
+      "into",
+      "in",
+      "on",
+      "by"
+     ],
+     0,
+     "Divisé en : divided into."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Ouvre ta présentation",
+     "p": [
+      0,
+      1,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      0,
+      2,
+      3,
+      6
+     ],
+     "c": [
+      2,
+      6,
+      7
+     ]
+    },
+    {
+     "t": "Commente un graphique",
+     "p": [
+      2,
+      3,
+      5,
+      11,
+      12
+     ],
+     "v": [
+      1,
+      4,
+      7,
+      8,
+      9
+     ],
+     "c": [
+      0,
+      1,
+      5
+     ]
+    },
+    {
+     "t": "Conclus et réponds aux questions",
+     "p": [
+      4,
+      6,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      5,
+      10,
+      11
+     ],
+     "c": [
+      3,
+      4
+     ]
+    }
    ]
   },
   {
@@ -1627,6 +3393,43 @@
      "Looks good to me, I'm approving.",
      "Looks good to me, approved.",
      "LGTM, approving."
+    ],
+    [
+     "Cette PR dépend de la #87.",
+     "This PR depends on #87."
+    ],
+    [
+     "Elle ne change pas l'API.",
+     "It doesn't change the API.",
+     "It does not change the API."
+    ],
+    [
+     "Que penses-tu de renommer cette variable ?",
+     "What do you think about renaming this variable?",
+     "What about renaming this variable?",
+     "How about renaming this variable?"
+    ],
+    [
+     "Petite suggestion : on pourrait ajouter un test.",
+     "Small suggestion: we could add a test.",
+     "Just a suggestion: we could add a test."
+    ],
+    [
+     "Ce n'est pas bloquant.",
+     "It's not blocking.",
+     "This isn't a blocker.",
+     "It's not a blocker."
+    ],
+    [
+     "Bien vu, je corrige.",
+     "Good point, I'll fix it.",
+     "Good point, I'll fix that."
+    ],
+    [
+     "J'ai poussé un nouveau commit.",
+     "I've pushed a new commit.",
+     "I pushed a new commit.",
+     "I have pushed a new commit."
     ]
    ],
    "v": [
@@ -1653,6 +3456,30 @@
     [
      "cas limite",
      "edge case"
+    ],
+    [
+     "branche",
+     "branch"
+    ],
+    [
+     "changement incompatible",
+     "breaking change"
+    ],
+    [
+     "lisibilité",
+     "readability"
+    ],
+    [
+     "détail mineur",
+     "nit"
+    ],
+    [
+     "pousser (du code)",
+     "push"
+    ],
+    [
+     "relancer les tests",
+     "rerun the tests"
     ]
    ],
    "c": [
@@ -1748,6 +3575,70 @@
    "wt": [
     "Rédige la description d'une pull request (un titre + 3 à 5 phrases) qui corrige un bug de connexion : ce qui change, pourquoi, comment tester.",
     "Écris 3 commentaires de code review polis et constructifs sur le code d'un collègue : une question, une suggestion, un « nit »."
+   ],
+   "parts": [
+    {
+     "t": "Décris ta pull request",
+     "p": [
+      0,
+      1,
+      2,
+      8,
+      9
+     ],
+     "v": [
+      4,
+      6,
+      7
+     ],
+     "c": [
+      4,
+      6
+     ]
+    },
+    {
+     "t": "Commente avec tact",
+     "p": [
+      3,
+      4,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      0,
+      5,
+      8,
+      9
+     ],
+     "c": [
+      2,
+      5
+     ]
+    },
+    {
+     "t": "Réponds aux retours",
+     "p": [
+      5,
+      6,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      1,
+      2,
+      3,
+      10,
+      11
+     ],
+     "c": [
+      0,
+      1,
+      3,
+      7
+     ]
+    }
    ]
   },
   {
@@ -1798,6 +3689,40 @@
      "Refactor the payment module for readability.",
      "Refactor the payment module to make it more readable.",
      "Refactor payment module for readability."
+    ],
+    [
+     "Supprimer le code mort.",
+     "Remove dead code."
+    ],
+    [
+     "Mettre à jour la version de Node.",
+     "Update the Node version.",
+     "Update Node version."
+    ],
+    [
+     "Ce paramètre est facultatif.",
+     "This parameter is optional."
+    ],
+    [
+     "La fonction lève une erreur si la liste est vide.",
+     "The function throws an error if the list is empty.",
+     "This function throws an error if the list is empty."
+    ],
+    [
+     "Renvoie vrai si l'utilisateur est connecté.",
+     "Returns true if the user is logged in.",
+     "Returns true if the user is signed in."
+    ],
+    [
+     "Lancez le projet avec npm start.",
+     "Start the project with npm start.",
+     "Run the project with npm start."
+    ],
+    [
+     "Voir la licence pour plus de détails.",
+     "See the license for more details.",
+     "See the licence for more details.",
+     "See the license for details."
     ]
    ],
    "v": [
@@ -1824,6 +3749,30 @@
     [
      "fichier de configuration",
      "config file"
+    ],
+    [
+     "message de commit",
+     "commit message"
+    ],
+    [
+     "supprimer",
+     "remove"
+    ],
+    [
+     "paramètre",
+     "parameter"
+    ],
+    [
+     "valeur de retour",
+     "return value"
+    ],
+    [
+     "licence",
+     "license"
+    ],
+    [
+     "prérequis",
+     "prerequisites"
     ]
    ],
    "c": [
@@ -1892,11 +3841,97 @@
      ],
      0,
      "refer to = se reporter à."
+    ],
+    [
+     "Commit messages are usually written in the ___ mood: « Fix bug ».",
+     [
+      "imperative",
+      "imperfect",
+      "past",
+      "passive"
+     ],
+     0,
+     "Un message de commit s'écrit à l'impératif : Fix, Add, Update."
+    ],
+    [
+     "This commit ___ unused imports.",
+     [
+      "removes",
+      "remove",
+      "removing",
+      "is remove"
+     ],
+     0,
+     "Description au présent, 3e personne du singulier : removes."
     ]
    ],
    "wt": [
     "Écris 4 messages de commit à l'impératif (ex. « Fix login redirect ») : une correction de bug, une nouvelle fonctionnalité, une mise à jour de dépendance, une refacto.",
     "Rédige la section « Getting started » d'un README (60 à 120 mots) : prérequis, installation, lancement, tests."
+   ],
+   "parts": [
+    {
+     "t": "Écris un message de commit",
+     "p": [
+      0,
+      1,
+      7,
+      8,
+      9
+     ],
+     "v": [
+      2,
+      3,
+      6,
+      7
+     ],
+     "c": [
+      0,
+      6,
+      7
+     ]
+    },
+    {
+     "t": "Documente une fonction",
+     "p": [
+      2,
+      4,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      0,
+      4,
+      8,
+      9
+     ],
+     "c": [
+      1,
+      2,
+      4
+     ]
+    },
+    {
+     "t": "Rédige un README",
+     "p": [
+      3,
+      5,
+      6,
+      13,
+      14
+     ],
+     "v": [
+      1,
+      5,
+      10,
+      11
+     ],
+     "c": [
+      3,
+      5
+     ]
+    }
    ]
   },
   {
@@ -1950,6 +3985,48 @@
      "Merci de votre patience.",
      "Thank you for your patience.",
      "Thanks for your patience."
+    ],
+    [
+     "Que puis-je faire pour vous ?",
+     "How can I help you?",
+     "What can I do for you?",
+     "How may I help you?"
+    ],
+    [
+     "Nous allons vous rembourser intégralement.",
+     "We will give you a full refund.",
+     "We'll give you a full refund.",
+     "We will refund you in full."
+    ],
+    [
+     "Nous vous offrons la livraison.",
+     "We're offering you free delivery.",
+     "We will offer you free delivery.",
+     "We'll give you free delivery."
+    ],
+    [
+     "Votre problème est-il résolu ?",
+     "Has your problem been solved?",
+     "Is your problem solved?",
+     "Has your issue been resolved?"
+    ],
+    [
+     "Je clôture votre demande.",
+     "I'm closing your request.",
+     "I'll close your request.",
+     "I am closing your ticket."
+    ],
+    [
+     "Merci d'avoir contacté notre service client.",
+     "Thank you for contacting customer service.",
+     "Thank you for contacting our customer service.",
+     "Thanks for contacting customer service."
+    ],
+    [
+     "Bonne fin de journée !",
+     "Have a nice day!",
+     "Have a good day!",
+     "Have a nice rest of your day!"
     ]
    ],
    "v": [
@@ -1976,6 +4053,30 @@
     [
      "fidéliser",
      "retain"
+    ],
+    [
+     "client",
+     "customer"
+    ],
+    [
+     "mécontent",
+     "dissatisfied"
+    ],
+    [
+     "résoudre",
+     "resolve"
+    ],
+    [
+     "avis client",
+     "customer review"
+    ],
+    [
+     "numéro de commande",
+     "order number"
+    ],
+    [
+     "enquête de satisfaction",
+     "survey"
     ]
    ],
    "c": [
@@ -2044,7 +4145,93 @@
      ],
      0,
      "Après « your » : un nom."
+    ],
+    [
+     "Has your issue been ___?",
+     [
+      "resolved",
+      "resolve",
+      "resolving",
+      "resolution"
+     ],
+     0,
+     "Passif au present perfect : has been + participe passé."
+    ],
+    [
+     "Thank you for ___ us.",
+     [
+      "contacting",
+      "contact",
+      "to contact",
+      "contacted"
+     ],
+     0,
+     "Thank you for + -ing."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Accueille un client mécontent",
+     "p": [
+      0,
+      1,
+      3,
+      7,
+      8
+     ],
+     "v": [
+      3,
+      6,
+      7,
+      10
+     ],
+     "c": [
+      1,
+      2,
+      5
+     ]
+    },
+    {
+     "t": "Propose une solution",
+     "p": [
+      2,
+      4,
+      5,
+      9,
+      10
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "c": [
+      0,
+      3
+     ]
+    },
+    {
+     "t": "Clôture la demande",
+     "p": [
+      6,
+      11,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      5,
+      8,
+      9,
+      11
+     ],
+     "c": [
+      4,
+      6,
+      7
+     ]
+    }
    ]
   },
   {
@@ -2098,6 +4285,42 @@
      "We'll roll out the feature gradually.",
      "We'll roll the feature out gradually.",
      "We will roll the feature out gradually."
+    ],
+    [
+     "L'objectif est de réduire les coûts.",
+     "The goal is to reduce costs.",
+     "The aim is to reduce costs.",
+     "The objective is to reduce costs."
+    ],
+    [
+     "Aujourd'hui, les notifications arrivent en retard.",
+     "Today, notifications arrive late.",
+     "Currently, notifications arrive late.",
+     "Right now, notifications are delayed."
+    ],
+    [
+     "L'option A est plus simple mais plus lente.",
+     "Option A is simpler but slower."
+    ],
+    [
+     "Nous recommandons l'option B.",
+     "We recommend option B."
+    ],
+    [
+     "Le principal compromis est la complexité.",
+     "The main trade-off is complexity."
+    ],
+    [
+     "Nous lancerons d'abord une version bêta.",
+     "We'll launch a beta version first.",
+     "We will launch a beta first.",
+     "We'll release a beta first."
+    ],
+    [
+     "Le déploiement se fera en trois étapes.",
+     "The rollout will happen in three stages.",
+     "The rollout will be done in three phases.",
+     "We will roll it out in three stages."
     ]
    ],
    "v": [
@@ -2124,6 +4347,30 @@
     [
      "parties prenantes",
      "stakeholders"
+    ],
+    [
+     "inconvénient",
+     "downside"
+    ],
+    [
+     "avantage",
+     "upside"
+    ],
+    [
+     "coût",
+     "cost"
+    ],
+    [
+     "étape",
+     "stage"
+    ],
+    [
+     "version bêta",
+     "beta release"
+    ],
+    [
+     "hypothèse (de départ)",
+     "assumption"
     ]
    ],
    "c": [
@@ -2181,11 +4428,108 @@
      ],
      0,
      "by = au plus tard (date limite) ; until = jusqu'à (durée continue)."
+    ],
+    [
+     "The goal of this document is ___ a new design.",
+     [
+      "to propose",
+      "proposing",
+      "propose",
+      "for proposing"
+     ],
+     0,
+     "Le but est de : the goal is to + base verbale."
+    ],
+    [
+     "This change is ___ to save costs.",
+     [
+      "expected",
+      "expecting",
+      "expect",
+      "expectation"
+     ],
+     0,
+     "Être prévu pour : be expected to."
+    ],
+    [
+     "Option A is ___ than option B.",
+     [
+      "cheaper",
+      "more cheap",
+      "cheapest",
+      "cheap"
+     ],
+     0,
+     "Comparatif d'un adjectif court : -er + than."
     ]
    ],
    "wt": [
     "Écris les sections « Goals » et « Non-goals » d'une spec (3 à 5 phrases) pour une nouvelle barre de recherche.",
     "Rédige le résumé d'une RFC (60 à 120 mots) : le problème, ta proposition, une alternative écartée et une question ouverte."
+   ],
+   "parts": [
+    {
+     "t": "Pose le contexte",
+     "p": [
+      0,
+      1,
+      6,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      2,
+      5,
+      11
+     ],
+     "c": [
+      1,
+      5,
+      6
+     ]
+    },
+    {
+     "t": "Compare les options",
+     "p": [
+      2,
+      3,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      1,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      0,
+      2,
+      7
+     ]
+    },
+    {
+     "t": "Planifie le déploiement",
+     "p": [
+      4,
+      5,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      3,
+      4,
+      9,
+      10
+     ],
+     "c": [
+      3,
+      4
+     ]
+    }
    ]
   },
   {
@@ -2234,6 +4578,46 @@
     [
      "Quelles sont les prochaines étapes ?",
      "What are the next steps?"
+    ],
+    [
+     "Aujourd'hui, les équipes perdent du temps.",
+     "Today, teams waste time.",
+     "Today, teams are wasting time.",
+     "Teams waste time today."
+    ],
+    [
+     "Nous avons parlé à cinquante clients.",
+     "We talked to fifty customers.",
+     "We spoke to fifty customers.",
+     "We've talked to fifty customers."
+    ],
+    [
+     "Notre outil automatise les rapports.",
+     "Our tool automates reports.",
+     "Our tool automates reporting."
+    ],
+    [
+     "Je clique ici pour créer un projet.",
+     "I click here to create a project.",
+     "I'll click here to create a project."
+    ],
+    [
+     "Et voilà, c'est prêt.",
+     "And there you go, it's ready.",
+     "And that's it, it's ready.",
+     "There you go, it's ready."
+    ],
+    [
+     "Quel est le prix par utilisateur ?",
+     "What is the price per user?",
+     "What's the price per user?",
+     "How much is it per user?"
+    ],
+    [
+     "Nous pouvons organiser un essai gratuit.",
+     "We can set up a free trial.",
+     "We can organize a free trial.",
+     "We can arrange a free trial."
     ]
    ],
    "v": [
@@ -2260,6 +4644,30 @@
     [
      "démo en direct",
      "live demo"
+    ],
+    [
+     "gain de temps",
+     "time saving"
+    ],
+    [
+     "concurrent",
+     "competitor"
+    ],
+    [
+     "besoin",
+     "need"
+    ],
+    [
+     "essai gratuit",
+     "free trial"
+    ],
+    [
+     "abonnement",
+     "subscription"
+    ],
+    [
+     "tarifs",
+     "pricing"
     ]
    ],
    "c": [
@@ -2317,11 +4725,108 @@
      ],
      0,
      "still = encore (la situation continue)."
+    ],
+    [
+     "Teams spend too much time ___ reports.",
+     [
+      "writing",
+      "to write",
+      "write",
+      "written"
+     ],
+     0,
+     "spend time + -ing."
+    ],
+    [
+     "Our tool helps teams ___ time.",
+     [
+      "save",
+      "saving",
+      "to saving",
+      "saved"
+     ],
+     0,
+     "help + quelqu'un + base verbale (to facultatif)."
+    ],
+    [
+     "Let me ___ you how it works.",
+     [
+      "show",
+      "showing",
+      "to show",
+      "shows"
+     ],
+     0,
+     "let + quelqu'un + base verbale."
     ]
    ],
    "wt": [
     "Écris le pitch d'une application en 3 à 5 phrases : le problème, ta solution et un bénéfice chiffré.",
     "Rédige un e-mail de suivi après une démo client (60 à 120 mots) : remerciements, récapitulatif de ce qui a plu, prochaines étapes."
+   ],
+   "parts": [
+    {
+     "t": "Présente le problème",
+     "p": [
+      2,
+      3,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      3,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      0,
+      5,
+      6
+     ]
+    },
+    {
+     "t": "Fais une démo",
+     "p": [
+      0,
+      1,
+      6,
+      11,
+      12
+     ],
+     "v": [
+      0,
+      1,
+      5
+     ],
+     "c": [
+      1,
+      4,
+      7
+     ]
+    },
+    {
+     "t": "Réponds au client",
+     "p": [
+      4,
+      5,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      2,
+      4,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      2,
+      3
+     ]
+    }
    ]
   },
   {
@@ -2380,6 +4885,43 @@
      "This exceeds our budget.",
      "That's over our budget.",
      "That is over our budget."
+    ],
+    [
+     "Le chiffre d'affaires a baissé de cinq pour cent.",
+     "Revenue fell by five percent.",
+     "Revenue dropped by five percent.",
+     "Revenue decreased by five percent.",
+     "Revenue fell by 5%."
+    ],
+    [
+     "Pouvez-vous faire un effort sur le prix ?",
+     "Could you lower the price a bit?",
+     "Can you do a bit better on the price?",
+     "Could you do better on the price?"
+    ],
+    [
+     "Quel est votre meilleur prix ?",
+     "What is your best price?",
+     "What's your best price?"
+    ],
+    [
+     "Nous pourrions accepter si vous livrez plus vite.",
+     "We could accept if you deliver faster.",
+     "We could agree if you deliver faster."
+    ],
+    [
+     "Marché conclu.",
+     "It's a deal.",
+     "Deal."
+    ],
+    [
+     "Signons le contrat la semaine prochaine.",
+     "Let's sign the contract next week."
+    ],
+    [
+     "Nous sommes d'accord sur les conditions.",
+     "We agree on the terms.",
+     "We are in agreement on the terms."
     ]
    ],
    "v": [
@@ -2406,6 +4948,30 @@
     [
      "chiffre d'affaires",
      "revenue"
+    ],
+    [
+     "remise",
+     "discount"
+    ],
+    [
+     "marge",
+     "margin"
+    ],
+    [
+     "conditions (d'un contrat)",
+     "terms"
+    ],
+    [
+     "signer",
+     "sign"
+    ],
+    [
+     "accord",
+     "agreement"
+    ],
+    [
+     "en contrepartie",
+     "in return"
     ]
    ],
    "c": [
@@ -2441,9 +5007,128 @@
      ],
      0,
      "« over the past five years » = au cours des cinq dernières années."
+    ],
+    [
+     "We could offer a 10% ___ on this order.",
+     [
+      "discount",
+      "reduce",
+      "discounting",
+      "sale off"
+     ],
+     0,
+     "Une remise : a discount (nom)."
+    ],
+    [
+     "That's ___ our budget.",
+     [
+      "above",
+      "over of",
+      "upper",
+      "more"
+     ],
+     0,
+     "Au-dessus de : above (ou over) our budget."
+    ],
+    [
+     "We are willing ___ a compromise.",
+     [
+      "to make",
+      "making",
+      "make",
+      "to making"
+     ],
+     0,
+     "Être prêt à : be willing to + base verbale."
+    ],
+    [
+     "We'll sign the contract ___ you lower the price.",
+     [
+      "if",
+      "unless",
+      "although",
+      "despite"
+     ],
+     0,
+     "Condition : if + présent."
+    ],
+    [
+     "Sales increased ___ 15%.",
+     [
+      "by",
+      "of",
+      "to the",
+      "with"
+     ],
+     0,
+     "Une variation chiffrée : increase by + pourcentage."
     ]
    ],
-   "orig": 1
+   "orig": 1,
+   "parts": [
+    {
+     "t": "Présente des résultats",
+     "p": [
+      0,
+      4,
+      5,
+      6,
+      8
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      4,
+      5
+     ],
+     "c": [
+      0,
+      2,
+      7
+     ]
+    },
+    {
+     "t": "Négocie un prix",
+     "p": [
+      1,
+      2,
+      7,
+      9,
+      10
+     ],
+     "v": [
+      3,
+      6,
+      7
+     ],
+     "c": [
+      1,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Conclus un accord",
+     "p": [
+      3,
+      11,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      5,
+      6
+     ]
+    }
+   ]
   },
   {
    "t": "Feedback & conflits",
@@ -2498,6 +5183,41 @@
      "Thanks for raising this point.",
      "Thank you for bringing this up.",
      "Thanks for bringing this up."
+    ],
+    [
+     "Ton rapport était très clair.",
+     "Your report was very clear."
+    ],
+    [
+     "La prochaine fois, essaie d'être plus concis.",
+     "Next time, try to be more concise.",
+     "Next time, try to be more succinct."
+    ],
+    [
+     "Je comprends que tu sois contrarié.",
+     "I understand that you're upset.",
+     "I understand you're upset.",
+     "I understand that you are upset."
+    ],
+    [
+     "Je ne voulais pas te vexer.",
+     "I didn't mean to offend you.",
+     "I did not mean to offend you."
+    ],
+    [
+     "Qu'est-ce qui t'aiderait ?",
+     "What would help you?"
+    ],
+    [
+     "Mettons-nous d'accord sur la suite.",
+     "Let's agree on the next steps.",
+     "Let's agree on what to do next."
+    ],
+    [
+     "Faisons un point dans un mois.",
+     "Let's review this in a month.",
+     "Let's check in again in a month.",
+     "Let's follow up in a month."
     ]
    ],
    "v": [
@@ -2524,6 +5244,30 @@
     [
      "apaiser",
      "calm down"
+    ],
+    [
+     "constructif",
+     "constructive"
+    ],
+    [
+     "amélioration",
+     "improvement"
+    ],
+    [
+     "contrarié",
+     "upset"
+    ],
+    [
+     "s'entendre (avec quelqu'un)",
+     "get along"
+    ],
+    [
+     "plan d'action",
+     "action plan"
+    ],
+    [
+     "repartir à zéro",
+     "fresh start"
     ]
    ],
    "c": [
@@ -2592,7 +5336,93 @@
      ],
      0,
      "Common ground = un terrain d'entente."
+    ],
+    [
+     "There's ___ for improvement.",
+     [
+      "room",
+      "place",
+      "space of",
+      "area"
+     ],
+     0,
+     "Il y a une marge de progression : there's room for improvement."
+    ],
+    [
+     "Let's agree ___ the next steps.",
+     [
+      "on",
+      "to",
+      "with",
+      "at"
+     ],
+     0,
+     "Se mettre d'accord sur quelque chose : agree on."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Donne un retour constructif",
+     "p": [
+      0,
+      1,
+      7,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      3,
+      6,
+      7
+     ],
+     "c": [
+      1,
+      3,
+      6
+     ]
+    },
+    {
+     "t": "Désamorce un conflit",
+     "p": [
+      2,
+      4,
+      5,
+      10,
+      11
+     ],
+     "v": [
+      1,
+      4,
+      5,
+      8
+     ],
+     "c": [
+      0,
+      4
+     ]
+    },
+    {
+     "t": "Trouve une solution ensemble",
+     "p": [
+      3,
+      6,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      2,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      2,
+      5,
+      7
+     ]
+    }
    ]
   },
   {
@@ -2648,6 +5478,43 @@
      "To prevent this from happening again, we will add alerts.",
      "To prevent this from happening again, we'll add alerts.",
      "To prevent it from happening again, we will add alerts."
+    ],
+    [
+     "Les paiements échouent en ce moment.",
+     "Payments are failing right now.",
+     "Payments are currently failing.",
+     "Payments are not working right now."
+    ],
+    [
+     "Nous enquêtons sur le problème.",
+     "We're investigating the issue.",
+     "We are investigating the issue.",
+     "We're looking into the issue."
+    ],
+    [
+     "Le service est de nouveau disponible.",
+     "The service is back up.",
+     "The service is available again.",
+     "The service is back online."
+    ],
+    [
+     "Prochaine mise à jour dans trente minutes.",
+     "Next update in thirty minutes.",
+     "Next update in 30 minutes."
+    ],
+    [
+     "Le certificat avait expiré.",
+     "The certificate had expired."
+    ],
+    [
+     "Nous ajouterons des tests automatiques.",
+     "We will add automated tests.",
+     "We'll add automated tests."
+    ],
+    [
+     "Personne n'est à blâmer.",
+     "No one is to blame.",
+     "Nobody is to blame."
     ]
    ],
    "v": [
@@ -2674,6 +5541,30 @@
     [
      "touché, impacté",
      "affected"
+    ],
+    [
+     "enquêter",
+     "investigate"
+    ],
+    [
+     "alerte",
+     "alert"
+    ],
+    [
+     "correctif urgent",
+     "hotfix"
+    ],
+    [
+     "leçon tirée",
+     "lesson learned"
+    ],
+    [
+     "action corrective",
+     "corrective action"
+    ],
+    [
+     "sans reproche",
+     "blameless"
     ]
    ],
    "c": [
@@ -2753,11 +5644,86 @@
      ],
      0,
      "Passif : was caused by."
+    ],
+    [
+     "To prevent this from ___ again, we'll add alerts.",
+     [
+      "happening",
+      "happen",
+      "to happen",
+      "happened"
+     ],
+     0,
+     "prevent + quelque chose + from + -ing."
     ]
    ],
    "wt": [
     "Écris un message Slack de 3 à 5 phrases pour prévenir l'équipe d'une panne en cours : ce qui se passe, l'impact, la prochaine mise à jour.",
     "Rédige un mini post-mortem (60 à 120 mots) : résumé, impact, cause racine, actions pour éviter que ça se reproduise."
+   ],
+   "parts": [
+    {
+     "t": "Signale un incident",
+     "p": [
+      0,
+      2,
+      6,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      5,
+      6,
+      7
+     ],
+     "c": [
+      0,
+      3
+     ]
+    },
+    {
+     "t": "Gère la crise",
+     "p": [
+      1,
+      4,
+      5,
+      10,
+      11
+     ],
+     "v": [
+      2,
+      3,
+      4,
+      8
+     ],
+     "c": [
+      1,
+      2,
+      4
+     ]
+    },
+    {
+     "t": "Rédige le post-mortem",
+     "p": [
+      3,
+      7,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      1,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      5,
+      6,
+      7
+     ]
+    }
    ]
   },
   {
@@ -2810,6 +5776,43 @@
      "I'm not sure, but this is how I would approach it.",
      "I'm not sure, but this is how I'd approach it.",
      "I'm not sure, but here's how I'd approach it."
+    ],
+    [
+     "J'ai migré notre base de données vers PostgreSQL.",
+     "I migrated our database to PostgreSQL.",
+     "I moved our database to PostgreSQL."
+    ],
+    [
+     "J'ai travaillé sur une application de paiement.",
+     "I worked on a payment app.",
+     "I worked on a payments app.",
+     "I have worked on a payment application."
+    ],
+    [
+     "Mon rôle était de concevoir l'API.",
+     "My role was to design the API.",
+     "My job was to design the API."
+    ],
+    [
+     "J'ajouterais une file d'attente de messages.",
+     "I would add a message queue.",
+     "I'd add a message queue."
+    ],
+    [
+     "C'est plus rapide mais plus cher.",
+     "It's faster but more expensive.",
+     "It is faster but more expensive."
+    ],
+    [
+     "Je privilégierais la simplicité.",
+     "I would favor simplicity.",
+     "I'd prioritize simplicity.",
+     "I would go for simplicity."
+    ],
+    [
+     "Pouvez-vous préciser les contraintes ?",
+     "Could you clarify the constraints?",
+     "Can you clarify the constraints?"
     ]
    ],
    "v": [
@@ -2836,6 +5839,30 @@
     [
      "exigence",
      "requirement"
+    ],
+    [
+     "migrer",
+     "migrate"
+    ],
+    [
+     "concevoir",
+     "design"
+    ],
+    [
+     "file d'attente",
+     "queue"
+    ],
+    [
+     "mise en cache",
+     "caching"
+    ],
+    [
+     "répartiteur de charge",
+     "load balancer"
+    ],
+    [
+     "contrainte",
+     "constraint"
     ]
    ],
    "c": [
@@ -2904,11 +5931,97 @@
      ],
      0,
      "would + base verbale pour une hypothèse."
+    ],
+    [
+     "I ___ on a payment app for two years before joining this team.",
+     [
+      "worked",
+      "have work",
+      "working",
+      "work"
+     ],
+     0,
+     "Expérience passée terminée : prétérit."
+    ],
+    [
+     "The database is the main ___.",
+     [
+      "bottleneck",
+      "bottle",
+      "neck",
+      "blocking"
+     ],
+     0,
+     "Le goulot d'étranglement : the bottleneck."
     ]
    ],
    "wt": [
     "Explique en 3 à 5 phrases un compromis technique que tu as dû faire (rapidité ou qualité, coût ou performance).",
     "Décris l'architecture d'une application que tu connais (60 à 120 mots) : composants, données, et comment elle tient la charge."
+   ],
+   "parts": [
+    {
+     "t": "Raconte un projet technique",
+     "p": [
+      4,
+      5,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      3,
+      6,
+      7
+     ],
+     "c": [
+      0,
+      2,
+      6
+     ]
+    },
+    {
+     "t": "Propose une architecture",
+     "p": [
+      0,
+      3,
+      6,
+      11
+     ],
+     "v": [
+      1,
+      2,
+      8,
+      9,
+      10
+     ],
+     "c": [
+      4,
+      5,
+      7
+     ]
+    },
+    {
+     "t": "Discute des compromis",
+     "p": [
+      1,
+      2,
+      7,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      0,
+      4,
+      5,
+      11
+     ],
+     "c": [
+      1,
+      3
+     ]
+    }
    ]
   }
  ]
