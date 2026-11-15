@@ -58,7 +58,7 @@ function pageHtml(sub) {
     );
   if (sub === "compte")
     return (
-      ` <div class="card"><h3>👤 Compte</h3>
+      ` <div class="card"><h3 class="hi">${ic("user", 22, "", 2.4)}Compte</h3>
   <div class="setrow"><span style="display:flex;align-items:center;gap:10px">${avatar(curAcc(), 40)}<span>${esc((curAcc() || {}).name || "")}<br><small style="color:var(--muted)">${(curAcc() || {}).srv ? "☁️ Compte en ligne · synchronisé" : (curAcc() || {}).pin ? "🔒 Protégé par code PIN" : "Sans code PIN"}</small></span></span><button class="btn ghost" id="aEdit" style="padding:8px 14px">Modifier</button></div>
   <div class="setrow"><span>Changer de compte (${ACC.list.length})</span><button class="btn ghost" id="aSwitch" style="padding:8px 14px">Changer</button></div>
   <div class="setrow"><span>Transférer ma progression sur un autre appareil</span><button class="btn ghost" id="aExp" style="padding:8px 14px">Exporter</button></div>
@@ -80,7 +80,7 @@ function pageHtml(sub) {
   `,
     );
   if (sub === "claude")
-    return ` <div class="card" id="aiCard"><h3>🤖 Mon Claude</h3><p class="secsub" style="margin:0 0 10px">L'IA crée tes exercices toujours différents, le coach d'erreurs, les thèmes, les rédactions corrigées, les unités et les histoires inédites. Chaque profil utilise <b>sa propre clé</b> : elle reste sur cet appareil et n'est jamais envoyée à notre serveur de comptes.</p>
+    return ` <div class="card" id="aiCard"><h3 class="hi">${ic("spark", 22, "", 2.4)}Mon Claude</h3><p class="secsub" style="margin:0 0 10px">L'IA crée tes exercices toujours différents, le coach d'erreurs, les thèmes, les rédactions corrigées, les unités et les histoires inédites. Chaque profil utilise <b>sa propre clé</b> : elle reste sur cet appareil et n'est jamais envoyée à notre serveur de comptes.</p>
   <div class="setrow"><span>État</span><span id="aiStat" style="color:var(--muted);font-size:14px;text-align:right">…</span></div>
   <label class="flabel">Clé API Claude</label><div class="keyrow"><input class="finput" id="aiKey" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="sk-ant-api03-…" value="${esc(aiKey())}"><button class="iconbtn" id="aiEye" aria-label="Afficher la clé">👁️</button></div>
   <label class="flabel">Modèle</label><select id="aiModel" class="finput">${Object.entries(AI_MODELS)

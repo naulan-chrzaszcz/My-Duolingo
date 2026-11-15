@@ -71,6 +71,38 @@ export function stepKind(n, st) {
   if (NODE[n] === "w") return "pencil";
   return ["star", "phones", "doc", "mic"][TIER[n]] || "star";
 }
+/** v33 : repères de thème le long d'une unité, façon Duolingo — étape où commence chaque phase, puis [titre, ce qu'on y travaille]. */
+export const STAGE_AT = { 0: 0, 2: 1, 6: 2, 11: 3, [NPU - 1]: 4 };
+const STAGES = {
+  trans: [
+    ["Découvrir", "Mots et premières phrases"],
+    ["Comprendre", "Écoute et traduction guidée"],
+    ["Construire", "Écrire les phrases"],
+    ["Maîtriser", "Écrire, écouter et parler sans aide"],
+  ],
+  toeic: [
+    ["Découvrir", "Vocabulaire et formats des questions"],
+    ["Comprendre", "Questions plus rapides, pièges courants"],
+    ["Approfondir", "Conversations et documents plus longs"],
+    ["Maîtriser", "Rythme et difficulté de l'examen"],
+  ],
+  volt: [
+    ["Découvrir", "La règle et ses cas simples"],
+    ["S'entraîner", "Repérer la faute dans la phrase"],
+    ["Approfondir", "Pièges et exceptions"],
+    ["Maîtriser", "Dictées et phrases sans aide"],
+  ],
+  hg: [
+    ["Découvrir", "Reconnaître les lettres"],
+    ["Comprendre", "Lire les syllabes"],
+    ["Construire", "Composer les blocs"],
+    ["Maîtriser", "Lire et écrire sans aide"],
+  ],
+};
+export function stageLabel(kind, U, i) {
+  if (i === 4) return ["Bilan", "Tout ce que l'unité a couvert"];
+  return (STAGES[U && U.hg ? "hg" : kind] || STAGES.trans)[i];
+}
 /** Nom court d'une étape (bulle et lecteur d'écran). */
 export function stepName(n) {
   if (n === NPU - 1) return "Bilan de l'unité";
@@ -184,13 +216,17 @@ export function renderPath(v) {
           : stepOpen(cid, u, n)
             ? "open"
             : "lock";
+      if (STAGE_AT[n] != null) {
+        const [a, b] = stageLabel(C.kind, U, STAGE_AT[n]);
+        nodes += `<div class="pstage"><i></i><span><b>${a}</b><small>${b}</small></span><i></i></div>`;
+      }
       const off = Math.round(Math.sin(gi * 0.85) * 72);
       const k = stepKind(n, st);
       const [c, d] = NODE[n] === "ai" ? ["#B07BFF", "#7B4DD6"] : NODE[n] === "w" ? ["#13A8A8", "#0C7F7F"] : [col, dk];
       const crown = (S.ext[cid] || []).includes(idx);
       nodes += `<div class="nodewrap${st === "cur" || (st === "open" && n === 0) ? " bub" : ""}" style="transform:translateX(${off}px);--c:${c};--d:${d}">${st === "cur" ? `<div class="ring"></div><button class="startbub" data-u="${u}" data-n="${n}">${idx === 0 ? "Commencer" : "Go !"}</button>` : st === "open" && n === 0 ? `<button class="startbub soft" data-u="${u}" data-n="${n}">Ouvrir</button>` : ""}<button class="node coin ${st} ${n === NPU - 1 ? "chest" : ""} ${NODE[n] === "ai" ? "ainode" : NODE[n] === "w" ? "wnode" : ""}" data-u="${u}" data-n="${n}" aria-label="${stepName(n)}">${st === "done" || st === "cur" ? '<span class="gloss"></span>' : ""}${ic(k, k === "star" ? 38 : 34, "", 2.6)}${crown ? `<span class="crown">${ic("crown", 14, "", 2.2, "currentColor")}</span>` : ""}</button></div>`;
       if (n === 2 || n === 11)
-        nodes += `<div class="pathmascot" style="${off > 0 ? "left" : "right"}:3%;top:${n * 94 + 50}px">${horangScene(u * 2 + (n > 2 ? 1 : 0))}</div>`;
+        nodes += `<div class="pathmascot" style="${off > 0 ? "left" : "right"}:3%;top:${n * 94 + 50 + (n > 2 ? 4 : 2) * 68}px">${horangScene(u * 2 + (n > 2 ? 1 : 0))}</div>`;
     }
     const locked = !unitOpen(cid, u);
     const us = unitSteps(cid, u),
@@ -213,7 +249,7 @@ export function renderPath(v) {
     gp = Math.min(100, Math.round((gx / S.goal) * 100));
   const side = `<div class="side"><div class="card"><div class="goalrow">${mascot(gp >= 100 ? "happy" : "calm", "jump")}<div style="flex:1"><h3 style="margin-bottom:6px">Objectif du jour</h3><div class="bar"><i style="width:${gp}%"></i><span>${gx} / ${S.goal} XP</span></div></div></div></div>
   <a class="card sidequest" href="#quetes"><span>${ic("chest", 26, "", 2.4)}</span><b>Quêtes du jour</b><em>${todayQuests().filter(q => S.q.claimed.includes(q.id)).length} / 3</em>${ic("chevr", 20, "", 2.8)}</a>
-  <div class="card"><h3>📈 Progression ${C.name}</h3><div class="bar ok"><i style="width:${Math.round((done / (C.units.length * NPU)) * 100)}%"></i><span>${done} / ${C.units.length * NPU} étapes</span></div><p class="secsub" style="margin:10px 0 0">🧭 Parcours libre : ${cid === "ko" && !hgDone(cid) ? "termine les 4 unités de hangul, puis" : ""} commence n'importe quelle unité avec « Ouvrir ». L'étape 👉 conseillée suit l'ordre du parcours.</p>${ns ? `<button class="btn ghost" id="goNext" style="margin-top:10px">👉 Aller à l'étape conseillée</button>` : ""}<button class="btn ghost" id="placeGo2" style="margin-top:8px">🎯 ${(S.place || {})[cid] != null ? "Refaire le test de niveau" : "Test de niveau"}</button>${(S.place || {})[cid] != null ? `<p class="secsub" style="margin:8px 0 0">${esc(placeEstimate(cid, S.place[cid]))}</p>` : ""}</div></div>`;
+  <div class="card"><h3 class="hi">${ic("chart", 22, "", 2.4)}Progression ${C.name}</h3><div class="bar ok"><i style="width:${Math.round((done / (C.units.length * NPU)) * 100)}%"></i><span>${done} / ${C.units.length * NPU} étapes</span></div><p class="secsub" style="margin:10px 0 0">🧭 Parcours libre : ${cid === "ko" && !hgDone(cid) ? "termine les 4 unités de hangul, puis" : ""} commence n'importe quelle unité avec « Ouvrir ». L'étape 👉 conseillée suit l'ordre du parcours.</p>${ns ? `<button class="btn ghost" id="goNext" style="margin-top:10px">👉 Aller à l'étape conseillée</button>` : ""}<button class="btn ghost" id="placeGo2" style="margin-top:8px">🎯 ${(S.place || {})[cid] != null ? "Refaire le test de niveau" : "Test de niveau"}</button>${(S.place || {})[cid] != null ? `<p class="secsub" style="margin:8px 0 0">${esc(placeEstimate(cid, S.place[cid]))}</p>` : ""}</div></div>`;
   const inst =
     ANDROID && !STANDALONE && !S.set.hideInstall
       ? `<div class="install"><span class="iic">📲</span><div><b>Installe Speakeasy sur ton téléphone</b><br>${INSTALL.ev ? "Une vraie app sur ton écran d'accueil : plein écran, rappels quotidiens et accès hors ligne." : "Dans Chrome, touche le menu <b>⋮</b> puis <b>« Ajouter à l'écran d'accueil »</b> (ou « Installer l'application ») : plein écran, rappels quotidiens et accès hors ligne."}${INSTALL.ev ? `<br><button class="btn" id="instgo" style="margin-top:8px;width:auto;padding:10px 18px">📲 Installer</button>` : ""}</div><button class="iconbtn" id="instx" aria-label="Fermer">✕</button></div>`
@@ -465,7 +501,7 @@ export function guide(cid, u) {
     })
     .join("");
   const m = modal(
-    `<h2>📖 ${esc(U.t)}</h2><p>${LEVELS[U.lv]} · ${esc(U.d)}</p>${U.tip ? `<div class="tipbox">💡 ${esc(U.tip)}</div>` : ""}${ph ? `<h3 style="margin-top:14px">Phrases clés</h3><div class="vlist">${ph}</div>` : ""}${vo ? `<h3>Mots utiles</h3><div class="vlist">${vo}</div>` : ""}${pk ? `<h3>Mots en images</h3><div class="picwords">${pk}</div>` : ""}${ch ? `<h3>Règles en exemples</h3><div class="vlist">${ch}</div>` : ""}<button class="btn" onclick="closeModal()">Fermer</button>`,
+    `<h2 class="hi">${ic("book", 22, "", 2.4)}${esc(U.t)}</h2><p>${LEVELS[U.lv]} · ${esc(U.d)}</p>${U.tip ? `<div class="tipbox">💡 ${esc(U.tip)}</div>` : ""}${ph ? `<h3 style="margin-top:14px">Phrases clés</h3><div class="vlist">${ph}</div>` : ""}${vo ? `<h3>Mots utiles</h3><div class="vlist">${vo}</div>` : ""}${pk ? `<h3>Mots en images</h3><div class="picwords">${pk}</div>` : ""}${ch ? `<h3>Règles en exemples</h3><div class="vlist">${ch}</div>` : ""}<button class="btn" onclick="closeModal()">Fermer</button>`,
   );
   m.querySelectorAll("[data-say]").forEach(b => (b.onclick = () => say(b.dataset.say, lang)));
 }

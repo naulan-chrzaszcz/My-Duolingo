@@ -182,7 +182,7 @@ export async function storyGenPicker(sec) {
     ),
   );
   const m =
-    modal(`<h2>✨ Nouvelle histoire</h2><p>Horang écrit une histoire inédite, avec ses questions, à ton niveau.</p><label class="flabel">Niveau</label><div class="chips pick" id="slv">${STORY_LV.map((l, i) => `<button data-lv="${i}" class="${i === lvDef ? "on" : ""}">${l}</button>`).join("")}</div>
+    modal(`<h2 class="hi">${ic("spark", 22, "", 2.4)}Nouvelle histoire</h2><p>Horang écrit une histoire inédite, avec ses questions, à ton niveau.</p><label class="flabel">Niveau</label><div class="chips pick" id="slv">${STORY_LV.map((l, i) => `<button data-lv="${i}" class="${i === lvDef ? "on" : ""}">${l}</button>`).join("")}</div>
   <label class="flabel">Thème (facultatif)</label><input class="finput" id="sth" maxlength="80" placeholder="${sec === "ko" ? "Ex. : au café à Séoul, un rendez-vous K-pop…" : sec === "fr" ? "Ex. : un mail à un client, une réunion…" : "Ex. : a job interview, a lost suitcase, a code review…"}">
   <button class="btn" id="sgo">Écrire mon histoire</button><button class="btn ghost" onclick="closeModal()">Annuler</button>`);
   let lv = lvDef;
@@ -196,7 +196,7 @@ export async function storyGenPicker(sec) {
   m.querySelector("#sgo").onclick = async () => {
     const theme = m.querySelector("#sth").value.trim().slice(0, 80);
     modal(
-      `<div class="mcenter">${mascot("wow", "dance")}<h2>✍️ Horang écrit ton histoire…</h2><p>${STORY_LV[lv]}${theme ? " · " + esc(theme) : ""}</p><div class="aiload"><i></i><i></i><i></i></div></div>`,
+      `<div class="mcenter">${mascot("wow", "dance")}<h2>Horang écrit ton histoire…</h2><p>${STORY_LV[lv]}${theme ? " · " + esc(theme) : ""}</p><div class="aiload"><i></i><i></i><i></i></div></div>`,
       "",
       true,
     );

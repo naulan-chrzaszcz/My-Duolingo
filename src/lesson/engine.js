@@ -8,6 +8,7 @@ import { distract } from "../exercises/generate.js";
 import { drillLabel, drillRecord } from "../exercises/drills.js";
 import { R } from "../exercises/render.js";
 import { words } from "../exercises/validate.js";
+import { bindExplain, explainHtml } from "../features/explain.js";
 import { placeStage } from "../features/placement.js";
 import { UI } from "../i18n/locale.js";
 import { BADGE_MEDAL, checkBadges, checkQuests, todayQuests } from "../features/quests.js";
@@ -267,6 +268,7 @@ export function check(giveUp) {
 }
 export function result(res) {
   const ex = L.ex;
+  const given = res.given !== undefined ? res.given : readGiven();
   L.state = "feedback";
   if (L.mock) {
     const k = ex.sec === "L" ? "lc" : "rc";
@@ -302,7 +304,7 @@ export function result(res) {
     L.combo = 0;
     beep("bad");
     $("#lbody").classList.add("shake");
-    logError(ex, res.given !== undefined ? res.given : readGiven());
+    logError(ex, given);
     if (ex._bank && L.bankRes) L.bankRes[ex._bank] = false;
     if (L.mode === "jump" || L.ext) L.jh--;
     if (L.mode !== "place") addMistake(ex);
@@ -345,7 +347,8 @@ export function result(res) {
       : res.title || rnd(PRAISE)
     : res.title || "Réponse correcte :";
   const sol = res.solHtml || (res.sol ? esc(res.sol) : "");
-  f.innerHTML = `<div class="fin"><div class="fhead"><div class="fic">${res.ok ? "✓" : "✕"}</div><div class="ftxt"><h3>${title}</h3>${sol ? `<div class="fsol">${res.ok && !res.typo && !res.solHtml ? "🔊 " : ""}${sol}</div>` : ""}${res.rom ? `<div class="rom">${esc(res.rom)}</div>` : ""}${res.diff || ""}${res.exp ? `<div class="fexp">💡 ${esc(res.exp)}</div>` : ""}</div>${res.speak ? `<div class="faud"><button class="iconbtn" id="fa1" aria-label="Écouter">🔊</button><button class="iconbtn" id="fa2" aria-label="Écouter lentement">🐢</button></div>` : ""}</div><button class="btn ${res.ok ? "okb" : "badb"}" id="cont">Continuer</button></div>`;
+  f.innerHTML = `<div class="fin"><div class="fhead"><div class="fic">${res.ok ? "✓" : "✕"}</div><div class="ftxt"><h3>${title}</h3>${sol ? `<div class="fsol">${res.ok && !res.typo && !res.solHtml ? "🔊 " : ""}${sol}</div>` : ""}${res.rom ? `<div class="rom">${esc(res.rom)}</div>` : ""}${res.diff || ""}</div>${res.speak ? `<div class="faud"><button class="iconbtn" id="fa1" aria-label="Écouter">🔊</button><button class="iconbtn" id="fa2" aria-label="Écouter lentement">🐢</button></div>` : ""}</div>${explainHtml(ex, res, L)}<button class="btn ${res.ok ? "okb" : "badb"}" id="cont">Continuer</button></div>`;
+  bindExplain(ex, res, given, L);
   if (res.ok) okFx();
   if (res.speak) {
     $("#fa1").onclick = autoSpeak;
@@ -396,14 +399,16 @@ export function exAsk(e) {
   return e.t === "tilesRev"
     ? e.tgtText
     : e.t === "spot"
-      ? e.before + "___" + e.after
+      ? e.parts
+        ? e.parts.map(p => p.before + "___" + p.after).join(" / ")
+        : e.before + "___" + e.after
       : e.prompt || e.q || e.text || e.audio || (e.pairs ? "association de mots" : "");
 }
 export function readGiven() {
   const t = $("#tin");
   if (t) return t.value;
-  const sp = document.querySelector("#lbody .spotw.sel");
-  if (sp) return sp.dataset.v === "none" ? "(il n'y a pas de faute)" : sp.textContent;
+  const sp = [...document.querySelectorAll("#lbody .spotw.sel")];
+  if (sp.length) return sp[0].dataset.v === "none" ? "(il n'y a pas de faute)" : sp.map(x => x.textContent).join(", ");
   const o = document.querySelector("#lbody .opt.sel span:nth-child(2)");
   if (o) return o.textContent;
   const a = document.querySelector("#ans");
@@ -412,6 +417,11 @@ export function readGiven() {
   if (h) return h.textContent.slice(0, 120);
   return "";
 }
+/** Correction d'un exercice « trouve l'erreur » (une ou plusieurs phrases), pour le journal des erreurs. */
+function spotFix(ex) {
+  const bad = (ex.parts || [ex]).filter(p => p.faulty);
+  return bad.length ? bad.map(p => p.chunk + " → " + p.right).join(" ; ") : "(pas de faute)";
+}
 export function logError(ex, given) {
   const c = ex._cid || (L && L.cid);
   if (!c || ex.t === "match" || ex.t === "write") return;
@@ -419,10 +429,7 @@ export function logError(ex, given) {
   a.push({
     t: ex.t,
     q: String(exAsk(ex)).slice(0, 160),
-    a: String(ex.t === "spot" ? (ex.faulty ? ex.chunk + " → " + ex.right : "(pas de faute)") : ex.answer || "").slice(
-      0,
-      120,
-    ),
+    a: String(ex.t === "spot" ? spotFix(ex) : ex.answer || "").slice(0, 120),
     g: String(given || "").slice(0, 120),
     u: (L && L.unitT) || "",
     e: ex.e || "",

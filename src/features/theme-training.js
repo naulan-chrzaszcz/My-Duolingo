@@ -1,4 +1,5 @@
 // Entraînement à thème
+import { ic } from "../ui/icons.js";
 import { COURSES } from "../content/index.js";
 import { esc } from "../core/util.js";
 import { unlockedUnits } from "../lesson/build.js";
@@ -69,7 +70,7 @@ export function themePicker() {
   const cid = curCid();
   const THM = cid === "fr-fle" ? THEMES_FLE : THEMES[s.id];
   const m =
-    modal(`<h2>🎨 Entraînement à thème</h2><p>Choisis un thème ou écris le tien : les exercices seront générés sur ce sujet, à ton niveau (${COURSES[cid].icon} ${COURSES[cid].name}).</p>
+    modal(`<h2 class="hi">${ic("palette", 22, "", 2.4)}Entraînement à thème</h2><p>Choisis un thème ou écris le tien : les exercices seront générés sur ce sujet, à ton niveau (${COURSES[cid].icon} ${COURSES[cid].name}).</p>
   ${s.tracks.length > 1 ? `<div class="tracks">${s.tracks.map(t => `<button data-tt="${t}" class="${t === cid ? "on" : ""}">${COURSES[t].icon} ${COURSES[t].name}</button>`).join("")}</div>` : ""}
   <div class="chips pick">${THM.map(t => `<button data-th="${esc(t)}">${esc(t)}</button>`).join("")}</div>
   <label class="flabel">Ou ton propre thème</label><input class="finput" id="thIn" maxlength="80" placeholder="Ex. : réserver un hôtel, parler de mes hobbies, négocier un salaire…">

@@ -70,7 +70,7 @@ export async function genUnit(cid) {
     return;
   }
   modal(
-    `<div class="mcenter">${mascot("wow", "dance")}<h2>✨ Horang crée ta prochaine unité…</h2><p>Nouveau thème, nouvelles notions, ${NPU} étapes.</p><div class="aiload"><i></i><i></i><i></i></div></div>`,
+    `<div class="mcenter">${mascot("wow", "dance")}<h2>Horang crée ta prochaine unité…</h2><p>Nouveau thème, nouvelles notions, ${NPU} étapes.</p><div class="aiload"><i></i><i></i><i></i></div></div>`,
     "",
     true,
   );

@@ -288,7 +288,7 @@ export async function loginEntry(forced) {
     const here = new Set(ACC.list.map(a => a.id));
     const avail = (list || []).filter(x => !here.has(x.acc));
     const m = modal(
-      `<div class="mcenter">${mascot("happy", "jump")}<h2>🔑 Retrouver mon profil</h2><p>${list === null ? "Impossible de lire ton espace Claude pour le moment (connexion ou autorisation). Réessaie dans un instant." : avail.length ? "Ces profils sont enregistrés avec ton compte Claude. Touche le tien pour le retrouver ici, avec toute ta progression." : list.length ? "Tous tes profils enregistrés sont déjà sur cet appareil." : "Aucun profil enregistré avec ton compte Claude pour l'instant. Un profil y est sauvegardé automatiquement dès qu'il a été utilisé sur la page Claude."}</p></div>
+      `<div class="mcenter">${mascot("happy", "jump")}<h2>Retrouver mon profil</h2><p>${list === null ? "Impossible de lire ton espace Claude pour le moment (connexion ou autorisation). Réessaie dans un instant." : avail.length ? "Ces profils sont enregistrés avec ton compte Claude. Touche le tien pour le retrouver ici, avec toute ta progression." : list.length ? "Tous tes profils enregistrés sont déjà sur cet appareil." : "Aucun profil enregistré avec ton compte Claude pour l'instant. Un profil y est sauvegardé automatiquement dès qu'il a été utilisé sur la page Claude."}</p></div>
    ${avail.length ? `<div class="accgrid">${avail.map((x, i) => `<button class="acc" data-c="${i}">${avatar({ emoji: x.v.emoji || "🐯", color: x.v.color || "#7C4DFF" }, 64)}<b>${esc(x.v.name || "Profil")}</b><small>${+x.v.xp || 0} XP</small></button>`).join("")}</div>` : ""}
    <p class="secsub" style="font-size:13px">Sur ton propre serveur, les comptes ont un pseudo et un mot de passe, et se synchronisent sur tous les appareils.</p><button class="btn ghost" id="limp">📥 Importer une progression exportée</button><button class="btn ghost" id="lback">Retour</button>`,
       "",
@@ -333,7 +333,7 @@ export async function loginEntry(forced) {
     return;
   }
   const m = modal(
-    `<div class="mcenter">${mascot("calm")}<h2>🔑 Retrouver ma progression</h2><p>Ce fichier est ouvert directement depuis l'appareil : pas de compte en ligne possible ici. Installe le site sur ton serveur pour avoir des comptes synchronisés, ou importe une progression exportée depuis un autre appareil.</p></div><button class="btn" id="limp">📥 Importer une progression</button><button class="btn ghost" id="lback">Retour</button>`,
+    `<div class="mcenter">${mascot("calm")}<h2>Retrouver ma progression</h2><p>Ce fichier est ouvert directement depuis l'appareil : pas de compte en ligne possible ici. Installe le site sur ton serveur pour avoir des comptes synchronisés, ou importe une progression exportée depuis un autre appareil.</p></div><button class="btn" id="limp">📥 Importer une progression</button><button class="btn ghost" id="lback">Retour</button>`,
     "",
     !!forced,
   );
@@ -346,7 +346,7 @@ export async function loginEntry(forced) {
 }
 export function loginForm(prefill, forced) {
   const m = modal(
-    `<div class="mcenter">${mascot("happy", "jump")}<h2>🔑 Se connecter</h2><p>Retrouve ta progression sur cet appareil.</p></div>
+    `<div class="mcenter">${mascot("happy", "jump")}<h2>Se connecter</h2><p>Retrouve ta progression sur cet appareil.</p></div>
   <label class="flabel">Pseudo</label><input class="finput" id="ln" maxlength="20" value="${esc(prefill || "")}" autocomplete="username">
   <label class="flabel">Mot de passe</label><input class="finput" id="lp" type="password" autocomplete="current-password">
   <div id="lerr" style="color:var(--bad);min-height:20px;margin-top:6px"></div><button class="btn" id="lok">Se connecter</button><button class="btn ghost" id="lback">Retour</button>`,

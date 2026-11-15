@@ -98,7 +98,7 @@ export function renderLeague(v) {
   if (SRV.ok) {
     const box = document.createElement("div");
     box.className = "card lgcard";
-    box.innerHTML = '<h3>🌍 Classement de tous les membres</h3><div class="empty">Chargement…</div>';
+    box.innerHTML = `<h3 class="hi">${ic("trophy", 22, "", 2.4)}Classement de tous les membres</h3><div class="empty">Chargement…</div>`;
     v.insertBefore(box, v.querySelector(".lloc"));
     srvBoard().then(B => {
       if (VIEW !== "ligue" || !box.isConnected) return;
@@ -155,7 +155,7 @@ export function renderBoard(box, B, myWxp) {
     const pod = active >= 3 ? [rows[1], rows[0], rows[2]] : null;
     const rest = pod ? rows.slice(3) : rows;
     const rank = B.me ? (all ? B.me.arank : B.me.wrank) : 0;
-    box.innerHTML = `<h3>🌍 Classement de tous les membres <span class="lgcount notr">👥 ${B.members}</span></h3>
+    box.innerHTML = `<h3 class="hi">${ic("trophy", 22, "", 2.4)}Classement de tous les membres <span class="lgcount notr">👥 ${B.members}</span></h3>
   <div class="lgtabs"><button class="${all ? "" : "on"}" data-t="w">Cette semaine</button><button class="${all ? "on" : ""}" data-t="a">Depuis toujours</button></div>
   ${active ? "" : `<div class="empty">${all ? "Aucun membre pour l'instant." : "Personne n'a encore gagné d'XP cette semaine. Sois la première !"}</div>`}
   ${
@@ -196,7 +196,7 @@ export function leagueResult(B) {
   save();
   renderTop();
   const md = modal(
-    `<div class="mcenter">${mascot(m.lrank <= 3 ? "wow" : "happy", "jump")}<h2>🏁 Semaine terminée !</h2><p style="font-size:44px;margin:6px 0">${["🥇", "🥈", "🥉"][m.lrank - 1] || "🏅"}</p><p>Tu as fini n° ${m.lrank} sur ${m.lcount} avec ${m.lwxp} XP.</p>${prize ? `<p><b>Tu montes sur le podium : +${prize} 💎</b></p>` : ""}<p class="secsub">Nouvelle semaine, nouveau classement : à toi de jouer !</p><button class="btn" id="lgok">C'est parti !</button></div>`,
+    `<div class="mcenter">${mascot(m.lrank <= 3 ? "wow" : "happy", "jump")}<h2>Semaine terminée !</h2><p style="font-size:44px;margin:6px 0">${["🥇", "🥈", "🥉"][m.lrank - 1] || "🏅"}</p><p>Tu as fini n° ${m.lrank} sur ${m.lcount} avec ${m.lwxp} XP.</p>${prize ? `<p><b>Tu montes sur le podium : +${prize} 💎</b></p>` : ""}<p class="secsub">Nouvelle semaine, nouveau classement : à toi de jouer !</p><button class="btn" id="lgok">C'est parti !</button></div>`,
   );
   if (prize) {
     try {

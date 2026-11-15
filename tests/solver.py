@@ -26,8 +26,15 @@ async def solve(p):
         order=await p.evaluate("(()=>{const used=[];return L.ex.parts.map(x=>{for(let i=0;i<L.ex.tiles.length;i++){if(!used.includes(i)&&L.ex.tiles[i]===x){used.push(i);return i}}})})()")
         for i in order: await p.click(f'#bank .tile[data-i="{i}"]')
     elif t=='spot':
-        f=await p.evaluate("L.ex.faulty")
-        await p.click('.spotw[data-k="B"]' if f else '.spotw.nofault')
+        parts=await p.evaluate("L.ex.parts?L.ex.parts.map(x=>x.faulty):null")
+        if parts:  # v33 : plusieurs phrases, de 0 à 3 fautes
+            if any(parts):
+                for i,f in enumerate(parts):
+                    if f: await p.click(f'.spotw[data-k="{i}:B"]')
+            else: await p.click('.spotw.nofault')
+        else:
+            f=await p.evaluate("L.ex.faulty")
+            await p.click('.spotw[data-k="B"]' if f else '.spotw.nofault')
     elif t in('mc','choice','part2','conv','read','photo','hg','pic','picw'):
         idx=await p.evaluate("L.ex.options.indexOf(L.ex.answer)")
         await p.click(f'.opt[data-i="{idx}"]')

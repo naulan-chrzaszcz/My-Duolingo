@@ -30,6 +30,17 @@ export function extremize(T, kind, hg) {
     return EXT_MAP[t] || t;
   }).concat(kind === "volt" ? ["dictee", "spot"] : hg ? ["build", "hear"] : ["speak", "listen"]);
 }
+/** v33 : séances plus courtes, façon Duolingo — on retire d'abord les types d'exercice les plus répétés. */
+export function shorten(T, keep) {
+  T = T.slice();
+  while (T.length > keep) {
+    const c = {};
+    T.forEach(t => (c[t] = (c[t] || 0) + 1));
+    const top = Object.keys(c).sort((a, b) => c[b] - c[a])[0];
+    T.splice(T.lastIndexOf(top), 1);
+  }
+  return T;
+}
 export function buildLesson(cid, u, n, ext) {
   if (ext) {
     const C = COURSES[cid],
@@ -41,7 +52,8 @@ export function buildLesson(cid, u, n, ext) {
       C.kind,
       !!U.hg,
     );
-    return T.map(t => make(t, ctx))
+    return shorten(T, 12)
+      .map(t => make(t, ctx))
       .filter(Boolean)
       .map(e => Object.assign(e, { hidden: true }));
   }
@@ -50,10 +62,10 @@ export function buildLesson(cid, u, n, ext) {
   if (U.hg) {
     const ctx = ctxFor(cid, [U]);
     ctx.allHj = C.units.slice(0, u + 1).flatMap(x => x.hj || []);
-    return HG_T[Math.max(0, TIER[n])]
+    return shorten(HG_T[Math.max(0, TIER[n])], n >= NPU - 1 ? 12 : 10)
       .map(t => make(t, ctx))
       .filter(Boolean)
-      .concat(dueReviews(cid, 2));
+      .concat(dueReviews(cid, 1));
   }
   const prevP = C.units.slice(0, u).flatMap(x => x.p || []);
   const ctx = ctxFor(cid, [U], { dis: Math.min(6, 2 + u), hideP2: u >= 2 });
@@ -74,8 +86,10 @@ export function buildLesson(cid, u, n, ext) {
     T = T.map((t, i) => (t === "choice" || t === "part2" || t === "read" ? (i % 3 === 2 ? "part2" : "conv") : t));
   if (U.rd)
     T = T.map((t, i) => (t === "choice" || t === "part2" || t === "conv" ? (i % 4 === 3 ? "choice" : "read") : t));
-  const exs = T.map(t => make(t, ctx)).filter(Boolean);
-  return exs.concat(dueReviews(cid, n >= NPU - 1 ? 3 : 2));
+  const exs = shorten(T, n >= NPU - 1 ? 12 : 10)
+    .map(t => make(t, ctx))
+    .filter(Boolean);
+  return exs.concat(dueReviews(cid, n >= NPU - 1 ? 2 : 1));
 }
 export function unlockedUnits(cid) {
   const C = COURSES[cid];

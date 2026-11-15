@@ -1,4 +1,5 @@
 // Choix, création, export et suppression des profils
+import { ic } from "../ui/icons.js";
 import { ACC, AV_EMOJI, MEM, S, curAcc, loadState, save, saveAcc, set_S, uid } from "../core/accounts.js";
 import { hydrate } from "../core/progress.js";
 import { KEY } from "../core/state.js";
@@ -201,7 +202,7 @@ export function exportAcc() {
   save();
   const code = "SPK1." + b64e(JSON.stringify({ name: a.name, emoji: a.emoji, color: a.color, state: S }));
   const m = modal(
-    `<h2>📤 Exporter ma progression</h2><p>Copie ce code, puis colle-le dans « Importer » sur l'autre appareil (ou garde-le comme sauvegarde).</p><textarea class="finput" id="ecode" readonly style="height:120px;font-size:12px;word-break:break-all">${code}</textarea><button class="btn" id="ecopy">Copier le code</button><button class="btn ghost" onclick="closeModal()">Fermer</button>`,
+    `<h2 class="hi">${ic("share", 22, "", 2.4)}Exporter ma progression</h2><p>Copie ce code, puis colle-le dans « Importer » sur l'autre appareil (ou garde-le comme sauvegarde).</p><textarea class="finput" id="ecode" readonly style="height:120px;font-size:12px;word-break:break-all">${code}</textarea><button class="btn" id="ecopy">Copier le code</button><button class="btn ghost" onclick="closeModal()">Fermer</button>`,
   );
   const ta = m.querySelector("#ecode");
   ta.onclick = () => ta.select();
@@ -217,7 +218,7 @@ export function exportAcc() {
 }
 export function importAcc() {
   const m = modal(
-    `<h2>📥 Importer une progression</h2><p>Colle le code exporté. Il sera ajouté comme un nouveau compte sur cet appareil.</p><textarea class="finput" id="icode" style="height:120px;font-size:12px" placeholder="SPK1.…"></textarea><div id="ierr" style="color:var(--bad);min-height:20px;margin-top:6px"></div><button class="btn" id="iok">Importer</button><button class="btn ghost" onclick="closeModal()">Annuler</button>`,
+    `<h2 class="hi">${ic("down", 22, "", 2.4)}Importer une progression</h2><p>Colle le code exporté. Il sera ajouté comme un nouveau compte sur cet appareil.</p><textarea class="finput" id="icode" style="height:120px;font-size:12px" placeholder="SPK1.…"></textarea><div id="ierr" style="color:var(--bad);min-height:20px;margin-top:6px"></div><button class="btn" id="iok">Importer</button><button class="btn ghost" onclick="closeModal()">Annuler</button>`,
   );
   m.querySelector("#iok").onclick = () => {
     const raw = m.querySelector("#icode").value.trim();

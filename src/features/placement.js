@@ -98,7 +98,7 @@ export function placeIntro(cid) {
   const C = COURSES[cid];
   const prev = S.place && S.place[cid] != null && S.placeTs && S.placeTs[cid];
   const m = modal(
-    `<div class="mcenter">${mascot("wow", "jump")}<h2>🎯 Test de niveau · ${C.icon} ${esc(C.name)}</h2><p>4 paliers de ${PLACE_N} questions, du niveau Facile au niveau Expert. Avec ${PLACE_OK} bonnes réponses sur ${PLACE_N}, tu passes au palier suivant ; sinon le test s'arrête. Environ 10 minutes, sans pénalité.</p><p style="font-size:14px">Ensuite, ton étape conseillée démarre à ton niveau. Les chapitres validés au test sont comptés comme terminés ; tu peux quand même les revoir.${prev ? "<br>Dernier résultat : " + esc(placeEstimate(cid, S.place[cid])) : ""}</p><button class="btn big" id="pgo">Commencer le test</button><button class="btn ghost" onclick="closeModal()">Plus tard</button></div>`,
+    `<div class="mcenter">${mascot("wow", "jump")}<h2>Test de niveau · ${C.icon} ${esc(C.name)}</h2><p>4 paliers de ${PLACE_N} questions, du niveau Facile au niveau Expert. Avec ${PLACE_OK} bonnes réponses sur ${PLACE_N}, tu passes au palier suivant ; sinon le test s'arrête. Environ 10 minutes, sans pénalité.</p><p style="font-size:14px">Ensuite, ton étape conseillée démarre à ton niveau. Les chapitres validés au test sont comptés comme terminés ; tu peux quand même les revoir.${prev ? "<br>Dernier résultat : " + esc(placeEstimate(cid, S.place[cid])) : ""}</p><button class="btn big" id="pgo">Commencer le test</button><button class="btn ghost" onclick="closeModal()">Plus tard</button></div>`,
   );
   m.querySelector("#pgo").onclick = () => {
     closeModal();

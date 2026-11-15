@@ -1172,3 +1172,27 @@ body:has(.langdrop) #secBtn{border-color:#3D8BFF;background:#EAF2FF}
 .endwrap .btn.eshare{display:inline-flex;align-items:center;justify-content:center;gap:8px;max-width:420px}
 @media(prefers-reduced-motion:reduce){.endwrap *,.eflame,.espark{animation:none!important}}
 .lrow.idle{opacity:.62}.lrow.idle .lx{color:var(--muted)}
+/* v33 : « trouve les erreurs » sur plusieurs phrases */
+.spotline.multi{display:grid;gap:6px;line-height:1.9;font-size:19px}
+.spotp{padding:2px 0}
+.spotp+.spotp{border-top:2px dashed var(--line);padding-top:8px}
+.fsol>div+div{margin-top:8px}
+/* v33 : « À savoir » après chaque réponse */
+.fexp.fx{flex:1 1 100%;width:100%;margin-top:0;padding:10px 12px;background:var(--card);border:2px solid var(--line);color:var(--ink)}
+.fxh{display:flex;align-items:center;gap:6px;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2)}
+.fxh .ic{color:#FF9F1C;flex:none}
+.fx ul{margin:6px 0 0;padding:0 0 0 18px;display:grid;gap:5px;font-size:14px;line-height:1.4}
+.fx li{overflow-wrap:anywhere}
+.fxai{margin-top:8px;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--line);border-radius:12px;background:var(--card);color:#7C4DFF;font:inherit;font-size:13.5px;font-weight:900;padding:8px 12px;min-height:40px;cursor:pointer}
+.fxai.load{opacity:.6}
+.fxout ul{margin-top:8px}
+.fxw{margin:8px 0 0;font-size:13.5px;color:var(--ink2);font-weight:700}
+/* v33 : repères de thème entre les étapes d'une unité */
+.pstage{width:100%;max-width:420px;height:44px;display:flex;align-items:center;gap:12px;padding:0 18px;color:var(--ink2)}
+.pstage i{flex:1;height:2px;border-radius:2px;background:var(--line)}
+.pstage span{display:flex;flex-direction:column;align-items:center;text-align:center;line-height:1.2;max-width:74%}
+.pstage b{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.pstage small{font-size:12.5px;font-weight:700;color:var(--muted)}
+.lfoot.ok,.lfoot.bad{max-height:66dvh;overflow-y:auto;-webkit-overflow-scrolling:touch}
+/* v33 : icône dessinée en tête de titre (à la place des emojis) */
+.hi>.ic{display:inline-block;vertical-align:-4px;margin-right:8px;color:#7C4DFF}

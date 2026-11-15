@@ -5,7 +5,7 @@ import { unitOpen } from "../core/progress.js";
 import { $, esc, shuffle } from "../core/util.js";
 import { TEMPL, ctxFor, make } from "../exercises/generate.js";
 import { HG_T } from "../exercises/hangul.js";
-import { errStats, startCoach } from "../features/coach.js";
+import { errStats, startBilan, startCoach } from "../features/coach.js";
 import { notionPicker } from "../features/grammar.js";
 import { placeEstimate, placeIntro } from "../features/placement.js";
 import { themePicker } from "../features/theme-training.js";
@@ -72,6 +72,7 @@ const TMAP = {
   "Examen blanc coréen": ["Examens", "clip", VI],
   "Test de niveau": ["Examens", "gauge", GO],
   "Sprint 60 secondes": ["Défis & IA", "timer", OR],
+  "Leçon bilan": ["Défis & IA", "target", OR],
   "Révision IA illimitée": ["Défis & IA", "spark", VI],
   "Entraînement à thème": ["Défis & IA", "palette", PK],
 };
@@ -265,6 +266,13 @@ export function renderTrain(v) {
     () => themePicker(),
   );
   add(
+    "🧭",
+    "Leçon bilan",
+    "Une séance sur tout ce que tu as vu : les unités où tu te trompes, tes erreurs à ancrer et tes mots à revoir.",
+    "IA",
+    () => startBilan(curCid()),
+  );
+  add(
     "✨",
     "Révision IA illimitée",
     `Des exercices nouveaux à chaque séance, générés à partir de tout ce que tu as vu (${COURSES[curCid()].name}).`,
@@ -456,6 +464,7 @@ export function trainVoltMock() {
   S.listenOff = 0;
   const C = COURSES["fr-volt"];
   const ctx = ctxFor("fr-volt", C.units);
+  ctx.spot1 = true; // examen blanc : une phrase à la fois, comme au certificat
   const exs = Array.from({ length: 30 }, (_, i) => make(i % 6 === 5 ? "choice" : "spot", ctx)).filter(Boolean);
   const m = modal(
     `<div class="mcenter">${mascot("wow", "jump")}<h2>Examen blanc Voltaire</h2><p>30 phrases sur toutes les règles du parcours, dans le style du Certificat Voltaire : trouve la faute ou valide qu'il n'y en a pas. Pas de seconde chance. Score estimé sur 1000 à la fin.</p><button class="btn big" id="vgo">Commencer</button></div>`,
@@ -503,7 +512,7 @@ export function hangulChart() {
   const sec = (t, arr) =>
     `<h3 style="margin-top:14px">${t}</h3><div class="hgchart">${arr.map(j => `<button data-s="${esc(j[2])}"><b>${esc(j[0])}</b><small>${esc(j[1])}</small></button>`).join("")}</div>`;
   const m = modal(
-    `<h2>📋 Tableau du hangul</h2><p>Touche une lettre pour l'entendre dans une syllabe.</p>${hg.map(u => sec(u.t.replace(/^Hangul \d : /, ""), u.hj)).join("")}<div class="tipbox" style="margin-top:14px">💡 ${esc(hg[3].tip)}</div><button class="btn" onclick="closeModal()">Fermer</button>`,
+    `<h2 class="hi">${ic("grid", 22, "", 2.4)}Tableau du hangul</h2><p>Touche une lettre pour l'entendre dans une syllabe.</p>${hg.map(u => sec(u.t.replace(/^Hangul \d : /, ""), u.hj)).join("")}<div class="tipbox" style="margin-top:14px">💡 ${esc(hg[3].tip)}</div><button class="btn" onclick="closeModal()">Fermer</button>`,
   );
   m.querySelectorAll("[data-s]").forEach(b => (b.onclick = () => say(b.dataset.s, "ko-KR")));
 }
@@ -527,7 +536,7 @@ export function unitPicker(cid) {
   const C = COURSES[cid];
   const ul = unlockedUnits(cid);
   const m =
-    modal(`<h2>🎯 Réviser une unité</h2><p>Les unités que tu as commencées, avec ton taux de réussite. Les plus fragiles sont en rouge.</p>${s.tracks.length > 1 ? `<div class="tracks">${s.tracks.map(t => `<button data-tt="${t}" class="${t === cid ? "on" : ""}">${COURSES[t].icon} ${COURSES[t].name}</button>`).join("")}</div>` : ""}
+    modal(`<h2 class="hi">${ic("target", 22, "", 2.4)}Réviser une unité</h2><p>Les unités que tu as commencées, avec ton taux de réussite. Les plus fragiles sont en rouge.</p>${s.tracks.length > 1 ? `<div class="tracks">${s.tracks.map(t => `<button data-tt="${t}" class="${t === cid ? "on" : ""}">${COURSES[t].icon} ${COURSES[t].name}</button>`).join("")}</div>` : ""}
   <div class="ulist">${ul
     .map(U => {
       const u = C.units.indexOf(U);
@@ -595,7 +604,7 @@ export function rulesSheet(cid) {
   const ul = new Set(C.units.filter((U, u) => unitOpen(cid, u)));
   const volt = C.kind === "volt";
   const m = modal(
-    `<h2>📚 ${volt ? "Règles du Certificat Voltaire" : "Fiches de cours · " + C.icon + " " + esc(C.name)}</h2><p>${C.units.length} ${volt ? "familles de règles, du niveau Technique au niveau Expert" : "unités, chacune avec son astuce de cours"}. Touche une fiche pour t'entraîner dessus ; le pourcentage est ton taux de réussite.</p><div class="ulist">${C.units
+    `<h2 class="hi">${ic("book", 22, "", 2.4)}${volt ? "Règles du Certificat Voltaire" : "Fiches de cours · " + C.icon + " " + esc(C.name)}</h2><p>${C.units.length} ${volt ? "familles de règles, du niveau Technique au niveau Expert" : "unités, chacune avec son astuce de cours"}. Touche une fiche pour t'entraîner dessus ; le pourcentage est ton taux de réussite.</p><div class="ulist">${C.units
       .map((U, u) => {
         const r = unitRate(cid, u),
           ok = ul.has(U);

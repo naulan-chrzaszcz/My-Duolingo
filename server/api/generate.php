@@ -66,14 +66,15 @@ $kind  = in_array($in['kind'] ?? '', ['trans', 'toeic', 'volt'], true) ? $in['ki
 $lang  = in_array($in['lang'] ?? '', ['en-US', 'fr-FR', 'ko-KR'], true) ? $in['lang'] : 'en-US';
 $course = $clean($in['course'] ?? '', 40);
 $level  = $clean($in['level'] ?? '', 40);
-$units  = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 80); }, (array)($in['units'] ?? [])), 0, 6);
-$seen   = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 160); }, (array)($in['seen'] ?? [])), 0, 40);
+$units  = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 80); }, (array)($in['units'] ?? [])), 0, 10);
+$seen   = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 160); }, (array)($in['seen'] ?? [])), 0, 44);
+$bilan  = !empty($in['bilan']);   // v33 : leçon bilan sur tout ce qui a été vu
 $errors = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 300); }, (array)($in['errors'] ?? [])), 0, 25);
 $coach  = count($errors) > 0;
 $theme  = $clean($in['theme'] ?? '', 80);
 $mode = (string)($in['mode'] ?? '');
 // Seuls les types de génération de l'application sont acceptés (pas de prompt libre)
-if (!in_array($mode, ['', 'exercise', 'word', 'write', 'unit', 'story'], true)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_mode']); exit; }
+if (!in_array($mode, ['', 'exercise', 'word', 'write', 'unit', 'story', 'explain'], true)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_mode']); exit; }
 $wordMode = $mode === 'word';
 // règles de grammaire les moins réussies (notions v27), envoyées par l'application
 $weak   = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 120); }, (array)($in['weak'] ?? [])), 0, 5);
@@ -97,6 +98,7 @@ $prompt = "Tu es le coach d'une application d'apprentissage façon Duolingo. L'�
   . "Cours : $course (langue étudiée : $L). Niveau : $level. Unités étudiées : " . implode(', ', $units) . ".\n"
   . "Éléments déjà vus par l'élève (réutilise ce vocabulaire et ces structures dans des phrases NOUVELLES, jamais identiques) :\n- "
   . implode("\n- ", $seen) . "\n\n"
+  . ($bilan ? "Séance BILAN : couvre l'ensemble des unités listées (pas seulement la dernière), en donnant plus de place aux erreurs récurrentes et aux mots que l'élève doit revoir, placés en tête de la liste ci-dessus.\n\n" : '')
   . ($theme !== '' ? "Thème imposé par l'élève : « $theme ». TOUS les exercices doivent porter sur ce thème (vocabulaire, situations, phrases), au niveau indiqué, en réutilisant si possible les structures déjà vues.\n\n" : '')
   . ($coach ? "Erreurs récentes de l'élève (exercice | réponse attendue | réponse donnée) :\n- " . implode("\n- ", $errors)
       . "\n\nAnalyse ces erreurs et repère les erreurs RÉCURRENTES : mots ou vocabulaire, construction des phrases, temps et conjugaison, accords, prépositions, orthographe, écoute. Dans \"diag\", écris un diagnostic bienveillant en français (2 à 3 phrases, tutoiement). Dans \"focus\", liste 2 à 4 points faibles courts. Au moins 70 % des exercices doivent cibler ces points faibles, sous des formes variées.\n\n" : '')
@@ -116,6 +118,16 @@ if ($wordMode) {
 if ($mode === 'write') {
   $task = $clean($in['task'] ?? '', 500); $text = mb_substr(str_replace("\r", '', (string)($in['text'] ?? '')), 0, 2000); $lvl = $clean($in['level'] ?? '', 40);
   $prompt = "Tu es professeur de $L et tu corriges la rédaction d'un élève francophone. Niveau visé : $lvl.\nConsigne : $task\n\nTexte de l'élève :\n\"\"\"\n$text\n\"\"\"\n\nCorrige toutes les fautes (orthographe, grammaire, conjugaison, vocabulaire, tournures peu naturelles) et vérifie que la consigne est respectée. Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n{\"score\":0,\"corrige\":\"texte entièrement corrigé\",\"erreurs\":[[\"extrait fautif\",\"correction\",\"notion courte (ex. accord du participe passé, present perfect, préposition, honorifique)\",\"explication courte en français\"]],\"bilan\":\"2 phrases bienveillantes en français avec un conseil précis\"}\nscore est une note sur 100 (respect de la consigne, correction de la langue, richesse). Si le texte est parfait, erreurs est une liste vide.";
+}
+// ---- Mode « explication » (v33) : pourquoi cette phrase se construit ainsi, après une réponse ----
+if ($mode === 'explain') {
+  $sent = $clean($in['sentence'] ?? '', 300); $src = $clean($in['source'] ?? '', 300); $given = $clean($in['given'] ?? '', 200); $okAns = !empty($in['ok']);
+  if ($sent === '') { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_request']); exit; }
+  $prompt = "Tu es professeur de $L dans une application façon Duolingo. L'élève est francophone. Cours : $course.\n"
+    . "Phrase correcte : « $sent »" . ($src !== '' ? "\nÉnoncé de l'exercice : « $src »" : '') . "\n"
+    . "Réponse de l'élève : « " . ($given !== '' ? $given : '—') . " » (" . ($okAns ? 'juste' : 'fausse') . ").\n"
+    . "Explique en 2 à 4 points très courts, en français et en tutoyant : le sens de la phrase, sa construction (ordre des mots, temps, accords, particules ou prépositions selon la langue)" . ($okAns ? '' : ", et pourquoi la réponse de l'élève est fausse") . ". Termine par une astuce pour s'en souvenir si elle est utile. Pas de félicitations ni de reproche.\n"
+    . "Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour : {\"exp\":[\"point 1\",\"point 2\"]}";
 }
 // ---- Mode « unité » : création de l'unité suivante ----
 if ($mode === 'unit') {

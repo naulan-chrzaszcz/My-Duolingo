@@ -1,5 +1,5 @@
 // Coach : statistiques d'erreurs et révisions ciblées
-import { COURSES } from "../content/index.js";
+import { COURSES, SECTIONS } from "../content/index.js";
 import { S } from "../core/accounts.js";
 import { level } from "../core/xp.js";
 import { unlockedUnits } from "../lesson/build.js";
@@ -57,6 +57,32 @@ export function startCoach(cid) {
   const ul = unlockedUnits(cid);
   if (units.length < 2) units = ul.slice(-3);
   startAI(cid, units, { mode: "train", coach: true });
+}
+/** v33 : leçon bilan — tout ce qui a été vu, avec plus de place pour les unités où l'on se trompe, les erreurs à ancrer et les mots à revoir. */
+export function startBilan(cid) {
+  const seen = unlockedUnits(cid);
+  const errs = S.elog[cid] || [];
+  const w = {};
+  errs.forEach(e => e.u && (w[e.u] = (w[e.u] || 0) + 1));
+  const hard = seen
+    .filter(u => w[u.t])
+    .sort((a, b) => w[b.t] - w[a.t])
+    .slice(0, 5);
+  const rest = seen.filter(u => !hard.includes(u));
+  // les unités difficiles d'abord, puis un échantillon régulier de tout le reste (début, milieu, fin du parcours)
+  const n = Math.max(0, 10 - hard.length);
+  const spread =
+    rest.length <= n
+      ? rest
+      : Array.from({ length: n }, (_, i) => rest[Math.round((i * (rest.length - 1)) / Math.max(1, n - 1))]);
+  const units = [...new Set([...spread, ...hard])];
+  const sec = SECTIONS.find(x => x.tracks.includes(cid));
+  const now = Date.now();
+  const words = ((sec && S.bank[sec.id]) || [])
+    .filter(x => (x.due || 0) <= now)
+    .slice(0, 10)
+    .map(x => (x.w + (x.tr ? " = " + x.tr : "")).slice(0, 120));
+  startAI(cid, units, { mode: "train", coach: errs.length >= 3, bilan: true, words });
 }
 export async function shareProgress() {
   const txt = `🔥 ${S.streak} jour${S.streak > 1 ? "s" : ""} de série sur Speakeasy · ${S.xp} XP · niveau ${level(S.xp)} 🐯`;

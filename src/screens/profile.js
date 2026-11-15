@@ -120,7 +120,7 @@ export function myWords() {
       html += `<h3 style="margin-top:12px">${C.icon} ${C.name} · ${items.length}</h3><div class="vlist">${items.map(x => `<div class="vitem"><button class="spk" data-say="${esc(x[0])}" data-l="${C.lang}">🔊</button><div class="tg">${esc(x[0])}${x[2] ? `<div class="rom">${esc(x[2])}</div>` : ""}<div class="fr">${esc(x[1])}</div></div></div>`).join("")}</div>`;
   });
   const m = modal(
-    `<h2>📒 Mes mots ${s.flag}</h2><p>Tout ce que tu as débloqué dans le parcours. Touche 🔊 pour écouter.</p>${html || '<div class="empty">Rien pour l\'instant</div>'}<button class="btn" onclick="closeModal()">Fermer</button>`,
+    `<h2 class="hi">${ic("bookmark", 22, "", 2.4)}Mes mots ${s.flag}</h2><p>Tout ce que tu as débloqué dans le parcours. Touche 🔊 pour écouter.</p>${html || '<div class="empty">Rien pour l\'instant</div>'}<button class="btn" onclick="closeModal()">Fermer</button>`,
   );
   m.querySelectorAll("[data-say]").forEach(b => (b.onclick = () => say(b.dataset.say, b.dataset.l)));
 }

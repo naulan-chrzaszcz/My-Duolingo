@@ -245,33 +245,54 @@ export function make0(t, ctx) {
     return { t, lang, d: it.d, x: it.x, g: it.g, q: qq[0], answer: qq[1][qq[2]], options: shuffle(qq[1]), e: qq[3] };
   }
   if (t === "spot") {
-    const c = take(ctx, "cs");
-    const right = c[1][c[2]];
-    const others = c[1].filter((_, i) => i !== c[2]);
-    const faulty = Math.random() < 0.65 && others.length > 0;
-    const wrong = faulty ? rnd(others) : right;
-    let q = c[0],
-      hint = "";
-    const m = q.match(/\s*\(([^)]*)\)\s*$/);
-    if (m) {
-      hint = m[1];
-      q = q.slice(0, m.index);
-    }
-    const [before, after] = q.split("___");
-    return {
-      t,
-      lang,
-      before,
-      after: after || "",
-      chunk: wrong,
-      right,
-      faulty,
-      e: c[3],
-      hint,
-      q: c[0],
-      answer: right,
-      kind: C.kind,
+    // une phrase à trou devient une phrase à vérifier : la bonne forme ou une forme fausse à la place du trou
+    const part = (c, faulty) => {
+      const right = c[1][c[2]];
+      const others = c[1].filter((_, i) => i !== c[2]);
+      faulty = faulty && others.length > 0;
+      let q = c[0],
+        hint = "";
+      const m = q.match(/\s*\(([^)]*)\)\s*$/);
+      if (m) {
+        hint = m[1];
+        q = q.slice(0, m.index);
+      }
+      const [before, after] = q.split("___");
+      return { before, after: after || "", chunk: faulty ? rnd(others) : right, right, faulty, e: c[3], hint, q: c[0] };
     };
+    const first = take(ctx, "cs");
+    // v33 : une fois sur deux, 2 ou 3 phrases à la suite, avec de 0 à 3 fautes à trouver
+    const n = !ctx.spot1 && (ctx.cs || []).length >= 3 && Math.random() < 0.5 ? (Math.random() < 0.7 ? 2 : 3) : 1;
+    if (n > 1) {
+      const cs = [first];
+      for (let i = 1; i < n; i++) {
+        const c = take(ctx, "cs");
+        if (c && !cs.some(x => x[0] === c[0])) cs.push(c);
+      }
+      if (cs.length > 1) {
+        const k = Math.random() < 0.12 ? 0 : 1 + Math.floor(Math.random() * cs.length);
+        const bad = new Set(shuffle(cs.map((_, i) => i)).slice(0, k));
+        const parts = cs.map((c, i) => part(c, bad.has(i)));
+        const f = parts.find(x => x.faulty) || parts[0];
+        return {
+          t,
+          lang,
+          parts,
+          before: f.before,
+          after: f.after,
+          chunk: f.chunk,
+          right: f.right,
+          faulty: parts.some(x => x.faulty),
+          e: f.e,
+          hint: "",
+          q: parts.map(x => x.q).join(" / "),
+          answer: parts.map(x => x.right).join(" / "),
+          kind: C.kind,
+        };
+      }
+    }
+    const one = part(first, Math.random() < 0.65);
+    return Object.assign({ t, lang, answer: one.right, kind: C.kind }, one);
   }
   if (t === "jamo" || t === "jamoRev") {
     const j = take(ctx, "hj");

@@ -1,4 +1,5 @@
 // Notions de grammaire : choix d'une notion ou d'une règle, mémo, séance de phrases générées
+import { ic } from "../ui/icons.js";
 import { COURSES } from "../content/index.js";
 import { esc, shuffle } from "../core/util.js";
 import { ctxFor, make } from "../exercises/generate.js";
@@ -15,7 +16,7 @@ export function notionPicker(cid) {
   const set = drillSetFor(cid);
   if (!set) return;
   const m = modal(
-    `<h2>🧩 Notions de grammaire</h2><p>Les phrases changent à chaque séance : impossible de deviner la réponse par cœur. Touche une notion pour t'entraîner sur toutes ses règles, ou une règle pour lire son mémo.</p>
+    `<h2 class="hi">${ic("layers", 22, "", 2.4)}Notions de grammaire</h2><p>Les phrases changent à chaque séance : impossible de deviner la réponse par cœur. Touche une notion pour t'entraîner sur toutes ses règles, ou une règle pour lire son mémo.</p>
   <div class="ulist nlist">${set.notions
     .map(n => {
       const r = drillRate(n.subs.map(s => s.id));
@@ -61,7 +62,7 @@ export function ruleCard(cid, subId) {
   const ex = it ? esc(it[0]).replace("___", `<b class="dans">${esc(it[1][0])}</b>`) : "";
   const r = drillRate([sub.id]);
   const m = modal(
-    `<h2>💡 ${esc(dtx(sub.t))}</h2><p>${esc(dtx(sub.memo))}</p>
+    `<h2 class="hi">${ic("bulb", 22, "", 2.4)}${esc(dtx(sub.t))}</h2><p>${esc(dtx(sub.memo))}</p>
   <ul class="drules">${sub.r.map(t => `<li>${esc(dtx(t))}</li>`).join("")}</ul>
   ${ex ? `<div class="tipbox dex" lang="${set.lang}">${ex}</div>` : ""}
   <p class="micnote" style="text-align:left;margin:4px 0 0">${r === null ? "Pas encore travaillée." : `Ta réussite sur cette règle : ${r} %`}</p>

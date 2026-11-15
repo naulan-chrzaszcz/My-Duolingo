@@ -213,7 +213,8 @@ export function weakRules(cid) {
     `${drillLabel(id)} (${Math.round((d[id][1] / d[id][0]) * 100)} % d'erreurs)`.slice(0, 120),
   );
 }
-export function aiRequest(cid, units, errors, theme) {
+export function aiRequest(cid, units, errors, theme, opt) {
+  opt = opt || {};
   const C = COURSES[cid];
   const seen = [];
   units.forEach(U => {
@@ -230,9 +231,11 @@ export function aiRequest(cid, units, errors, theme) {
     lang: C.lang,
     course: C.name,
     level: secName(cid, Math.max(...units.map(u => u.lv))),
-    units: units.map(u => u.t).slice(-6),
+    units: units.map(u => u.t).slice(opt.bilan ? -10 : -6),
     weak: weakRules(cid),
-    seen: shuffle(seen).slice(0, 36),
+    // leçon bilan (v33) : les mots à revoir de l'élève passent en tête des éléments vus
+    seen: (opt.words || []).concat(shuffle(seen)).slice(0, opt.bilan ? 44 : 36),
+    bilan: !!opt.bilan,
     errors: errs,
     theme: (theme || "").slice(0, 80),
   };
@@ -289,6 +292,9 @@ export function aiPrompt(r) {
     "Éléments déjà vus par l'élève (réutilise ce vocabulaire et ces structures dans des phrases NOUVELLES, jamais identiques) :\n- " +
     r.seen.join("\n- ") +
     "\n\n" +
+    (r.bilan
+      ? "Séance BILAN : couvre l'ensemble des unités listées (pas seulement la dernière), en donnant plus de place aux erreurs récurrentes et aux mots que l'élève doit revoir, placés en tête de la liste ci-dessus.\n\n"
+      : "") +
     (r.theme
       ? "Thème imposé par l'élève : « " +
         r.theme +
@@ -437,8 +443,8 @@ export function validateGen(raw, C) {
   if (Array.isArray(raw.focus)) out.focus = raw.focus.filter(str).slice(0, 5);
   return out.p.length + out.c.length + out.dd.length >= 5 ? out : null;
 }
-export async function aiGenerate(cid, units, errors, theme) {
-  const req = aiRequest(cid, units, errors, theme);
+export async function aiGenerate(cid, units, errors, theme, opt) {
+  const req = aiRequest(cid, units, errors, theme, opt);
   const raw = await aiAsk(aiPrompt(req), req, { tier: "quick", ms: 70000 });
   return validateGen(raw, COURSES[cid]);
 }
@@ -537,14 +543,20 @@ export async function startAI(cid, units, cfg) {
   const theme = cfg.theme || "";
   const errs = theme ? [] : (S.elog[cid] || []).slice(-25);
   modal(
-    `<div class="mcenter">${mascot("wow", "dance")}<h2>${coach ? "🧠 Horang analyse tes erreurs…" : theme ? "🎨 Thème : " + esc(theme) : "✨ Horang prépare tes exercices…"}</h2><p>${coach ? "Recherche de tes erreurs récurrentes et création d'exercices ciblés." : "Création d'exercices inédits à partir de ce que tu as appris."}</p><div class="aiload"><i></i><i></i><i></i></div></div>`,
+    `<div class="mcenter">${mascot("wow", "dance")}<h2>${cfg.bilan ? "Horang prépare ta leçon bilan…" : coach ? "🧠 Horang analyse tes erreurs…" : theme ? "🎨 Thème : " + esc(theme) : "✨ Horang prépare tes exercices…"}</h2><p>${coach ? "Recherche de tes erreurs récurrentes et création d'exercices ciblés." : "Création d'exercices inédits à partir de ce que tu as appris."}</p><div class="aiload"><i></i><i></i><i></i></div></div>`,
     "",
     true,
   );
   let G = null,
     src = "mix";
   try {
-    G = await aiGenerate(cid, units, errs.length ? errs : null, theme);
+    G = await aiGenerate(
+      cid,
+      units,
+      errs.length ? errs : null,
+      theme,
+      cfg.bilan ? { bilan: true, words: cfg.words } : null,
+    );
     if (G) src = "ia";
   } catch (e) {}
   if (!G) G = localRemix(cid, units);
@@ -556,7 +568,7 @@ export async function startAI(cid, units, cfg) {
     const extra = drillExercises(cid, rnd(wk), 3);
     exs = exs.concat(extra);
   }
-  const rv = dueReviews(cid, coach ? 6 : 3);
+  const rv = dueReviews(cid, coach || cfg.bilan ? 6 : 3);
   exs = coach ? shuffle(rv.concat(exs)) : exs.concat(rv);
   if (src === "mix" && AI.mode === "local")
     toast(
@@ -570,7 +582,7 @@ export async function startAI(cid, units, cfg) {
     S.coach[cid] = { diag: d, focus: f, ts: Date.now(), src };
     save();
     const m = modal(
-      `<div class="mcenter">${mascot("calm", "jump")}<h2>🧠 Ton diagnostic</h2><p style="color:var(--ink)">${esc(d)}</p>${f.length ? `<div class="chips">${f.map(x => `<span>${esc(x)}</span>`).join("")}</div>` : ""}<p>${exs.length} exercices ${src === "ia" ? "créés par l'IA pour toi" : "choisis dans tes erreurs et le parcours"}.</p><button class="btn big" id="cgo">C'est parti !</button></div>`,
+      `<div class="mcenter">${mascot("calm", "jump")}<h2>Ton diagnostic</h2><p style="color:var(--ink)">${esc(d)}</p>${f.length ? `<div class="chips">${f.map(x => `<span>${esc(x)}</span>`).join("")}</div>` : ""}<p>${exs.length} exercices ${src === "ia" ? "créés par l'IA pour toi" : "choisis dans tes erreurs et le parcours"}.</p><button class="btn big" id="cgo">C'est parti !</button></div>`,
       "",
       true,
     );

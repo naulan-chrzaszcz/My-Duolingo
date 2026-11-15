@@ -433,38 +433,76 @@ R.read = (ex, b) => {
 };
 R.spot = (ex, b) => {
   const toks = s => s.split(/\s+/).filter(Boolean);
-  const bt = toks(ex.before),
-    at = toks(ex.after);
-  const w = (x, i, blank) => `<button class="spotw" data-k="${blank ? "B" : i}">${esc(x)}</button>`;
-  b.innerHTML = `<h2 class="ltitle">${ex.lang.startsWith("fr") ? "Clique sur la faute" : "Trouve l'erreur"}</h2><p class="micnote" style="text-align:left;margin:-8px 0 16px">Touche le mot fautif… ou « Il n'y a pas de faute ».</p>
-  <div class="spotline">${bt.map((x, i) => w(x, "b" + i)).join(" ")} ${w(ex.chunk, 0, true)} ${at.map((x, i) => w(x, "a" + i)).join(" ")}</div>${ex.hint ? `<p class="micnote" style="text-align:left">(${esc(ex.hint)})</p>` : ""}
+  // v33 : une ou plusieurs phrases ; chaque phrase a un seul endroit qui peut être fautif (le « trou » d'origine)
+  const parts = ex.parts || [ex];
+  const multi = parts.length > 1;
+  const key = (pi, k) => (multi ? pi + ":" + k : k);
+  const w = (x, k) => `<button class="spotw" data-k="${k}">${esc(x)}</button>`;
+  const line = (p, pi) =>
+    `${toks(p.before)
+      .map((x, i) => w(x, key(pi, "b" + i)))
+      .join(" ")} ${w(p.chunk, key(pi, "B"))} ${toks(p.after)
+      .map((x, i) => w(x, key(pi, "a" + i)))
+      .join(" ")}`;
+  const hints = parts.map(p => p.hint).filter(Boolean);
+  b.innerHTML = `<h2 class="ltitle">${multi ? "Trouve les erreurs" : ex.lang.startsWith("fr") ? "Clique sur la faute" : "Trouve l'erreur"}</h2><p class="micnote" style="text-align:left;margin:-8px 0 16px">${multi ? "Touche chaque mot fautif : il peut y en avoir plusieurs… ou aucun." : "Touche le mot fautif… ou « Il n'y a pas de faute »."}</p>
+  <div class="spotline${multi ? " multi" : ""}">${multi ? parts.map((p, pi) => `<div class="spotp">${line(p, pi)}</div>`).join("") : line(parts[0], 0)}</div>${hints.length ? `<p class="micnote" style="text-align:left">(${esc(hints.join(" · "))})</p>` : ""}
   <button class="spotw nofault" data-v="none">✓ Il n'y a pas de faute</button>`;
-  let pick = null;
+  const picks = new Set();
   const all = b.querySelectorAll(".spotw");
   all.forEach(
     x =>
       (x.onclick = () => {
         if (L.state !== "answer") return;
-        pick = x.dataset.v === "none" ? "none" : x.dataset.k;
-        all.forEach(y => y.classList.toggle("sel", y === x));
+        const k = x.dataset.v === "none" ? "none" : x.dataset.k;
+        if (!multi || k === "none") {
+          const was = picks.has(k);
+          picks.clear();
+          if (!was || !multi) picks.add(k);
+        } else {
+          picks.delete("none");
+          // un seul mot choisi par phrase
+          const pre = k.split(":")[0] + ":";
+          const was = picks.has(k);
+          [...picks].forEach(y => y.startsWith(pre) && picks.delete(y));
+          if (!was) picks.add(k);
+        }
+        all.forEach(y => y.classList.toggle("sel", picks.has(y.dataset.v === "none" ? "none" : y.dataset.k)));
         beep("tap");
-        setReady(true);
+        setReady(picks.size > 0);
       }),
   );
   return {
     grade: give => {
-      const ok = !give && ((ex.faulty && pick === "B") || (!ex.faulty && pick === "none"));
-      const bl = b.querySelector('[data-k="B"]');
-      if (bl) bl.classList.add(ex.faulty ? "bad" : "good");
-      const full = (ex.before + ex.right + ex.after).replace(/\s+/g, " ").trim();
+      const want = parts.map((p, pi) => (p.faulty ? key(pi, "B") : null)).filter(Boolean);
+      const ok =
+        !give && (want.length ? picks.size === want.length && want.every(k => picks.has(k)) : picks.has("none"));
+      parts.forEach((p, pi) => {
+        const bl = b.querySelector(`[data-k="${key(pi, "B")}"]`);
+        if (bl) bl.classList.add(p.faulty ? "bad" : "good");
+      });
+      const full = p => (p.before + p.right + p.after).replace(/\s+/g, " ").trim();
+      const bad = parts.filter(p => p.faulty);
       return {
         ok,
-        title: ok ? undefined : ex.faulty ? "La faute était ici :" : "Il n'y avait pas de faute :",
-        solHtml: ex.faulty
-          ? `<s>${esc(ex.chunk)}</s> → <b>${esc(ex.right)}</b><div class="rom" style="font-style:normal">${esc(full)}</div>`
-          : esc(full),
-        exp: ex.e,
-        speak: full,
+        title: ok
+          ? undefined
+          : !bad.length
+            ? "Il n'y avait pas de faute :"
+            : bad.length > 1
+              ? "Les fautes étaient ici :"
+              : "La faute était ici :",
+        solHtml: bad.length
+          ? bad
+              .map(
+                p =>
+                  `<div><s>${esc(p.chunk)}</s> → <b>${esc(p.right)}</b><div class="rom" style="font-style:normal">${esc(full(p))}</div></div>`,
+              )
+              .join("")
+          : esc(parts.map(full).join(" ")),
+        exp: (bad.length ? bad : parts)[0].e,
+        exps: (bad.length ? bad : parts).map(p => p.e).filter(Boolean),
+        speak: parts.map(full).join(" "),
         lang: ex.lang,
       };
     },

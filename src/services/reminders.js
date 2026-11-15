@@ -1,4 +1,5 @@
 // Rappels quotidiens (Web Push)
+import { ic } from "../ui/icons.js";
 import { S, curAcc, save, saveAcc } from "../core/accounts.js";
 import { esc } from "../core/util.js";
 import { srv, srvPush } from "./cloud.js";
@@ -19,7 +20,7 @@ export function goOnline() {
   const a = curAcc();
   if (!a || a.srv) return;
   const m =
-    modal(`<h2>☁️ Passer en ligne</h2><p class="secsub">Ton profil « ${esc(a.name)} » et toute sa progression sont enregistrés sur le serveur : rappels quotidiens, ligues, et connexion depuis tes autres appareils.</p>
+    modal(`<h2 class="hi">${ic("useradd", 22, "", 2.4)}Passer en ligne</h2><p class="secsub">Ton profil « ${esc(a.name)} » et toute sa progression sont enregistrés sur le serveur : rappels quotidiens, ligues, et connexion depuis tes autres appareils.</p>
  <label class="flabel">Pseudo</label><input class="finput" id="on" value="${esc(a.name)}" maxlength="20" autocomplete="username">
  <label class="flabel">Mot de passe (6 caractères minimum)</label><input class="finput" id="op" type="password" autocomplete="new-password">
  <div id="oerr" style="color:var(--bad);min-height:20px;margin-top:6px"></div><button class="btn" id="ook">Enregistrer en ligne</button><button class="btn ghost" id="ocancel">Annuler</button>`);
