@@ -174,6 +174,11 @@ export function hydrate(o) {
     });
     s.pv = 4;
   }
+  // v32 : XP rééquilibré, les anciens objectifs (10/20/30/50) deviennent 50/100/200/400
+  if (!s.xpv) {
+    if (o && o.goal) s.goal = { 10: 50, 20: 100, 30: 200, 50: 400 }[o.goal] || 100;
+    s.xpv = 2;
+  }
   let fromOld = false;
   if (s.pv === 4) {
     dnFromOld(s);
@@ -193,6 +198,17 @@ export function hydrate(o) {
       });
     }
     relayout(s);
+    // v32 : les chapitres validés au test de niveau comptent comme terminés (profils d'avant la v32 compris)
+    Object.keys(s.place || {}).forEach(cid => {
+      const p = s.place[cid] || 0,
+        C = COURSES[cid];
+      if (!p || !C) return;
+      s.dn = s.dn || {};
+      s.dn[cid] = s.dn[cid] || {};
+      C.units.forEach((U, u) => {
+        if (!U.gen && (U.lv || 0) < p) s.dn[cid][u] = FULL;
+      });
+    });
   }
   try {
     const keep = S;

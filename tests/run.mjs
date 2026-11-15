@@ -3,6 +3,7 @@
 //   node tests/run.mjs all          toute la batterie (~40 min)
 //   node tests/run.mjs server       tests du serveur PHP (comptes, ligue, rappels, sécurité)
 //   node tests/run.mjs <nom> [args] un seul test, ex. : node tests/run.mjs play_lessons fr en-daily
+//   RESUME=1 node tests/run.mjs all reprend une série interrompue : les tests déjà réussis (tests/out/*.ok) ne sont pas rejoués
 // Prérequis : Python 3 + Playwright (pip install playwright && playwright install chromium), PHP 8 avec SQLite.
 import { spawn, spawnSync } from 'child_process';
 import fs from 'fs';
@@ -21,7 +22,7 @@ const QUICK = [
   ['play_lessons', 'fr', 'en-daily'], ['play_lessons', 'ko', 'en-toeic'], ['play_lessons', 'en', 'fr-fle'],
 ];
 const ALL = [
-  ['data_integrity'], ['grammar_drills'], ['answer_check'], ['distractors'], ['i18n_cards'], ['i18n_leaks', 'en'], ['i18n_leaks', 'ko'],
+  ['data_integrity'], ['grammar_drills'], ['answer_check'], ['distractors'], ['i18n_cards'], ['i18n_leaks', 'en'], ['i18n_leaks', 'ko'], ['i18n_flows', 'en'], ['i18n_flows', 'ko'],
   ...['en-daily', 'en-pro', 'en-toeic', 'fr-volt', 'ko'].map(c => ['play_lessons', 'fr', c]),
   ['play_lessons', 'en', 'fr-fle'], ['play_lessons', 'en', 'ko'], ['play_lessons', 'ko', 'fr-fle'], ['play_lessons', 'ko', 'en-pro'],
   ['play_mobile', 'fr', 'en-daily', 'iosapp'], ['play_mobile', 'en', 'fr-fle', 'iossafari'], ['play_mobile', 'ko', 'en-toeic', 'android'],
@@ -36,10 +37,14 @@ const FAIL = /Traceback|^!!|NOT OK|PROBLEMES : \[[^\]]|erreurs JS :? ?\[[^\]]|^e
 
 const arg = process.argv.slice(2);
 const SERVER = [['server_sync'], ['server_security'], ['league_server'], ['league_ui'], ['reminders']];
-const list = arg[0] === 'all' ? ALL : arg[0] === 'server' ? SERVER : arg[0] === 'quick' || !arg.length ? QUICK : [arg];
+let list = arg[0] === 'all' ? ALL : arg[0] === 'server' ? SERVER : arg[0] === 'quick' || !arg.length ? QUICK : [arg];
+const okFile = t => path.join(OUT, t.join('_') + '.ok');
 const jobs = Number(process.env.JOBS || 4);
 
 fs.mkdirSync(OUT, { recursive: true });
+let skipped = 0;
+if (process.env.RESUME) { const n = list.length; list = list.filter(t => !fs.existsSync(okFile(t))); skipped = n - list.length; if (skipped) console.log(`(reprise : ${skipped} tests déjà réussis)`); }
+else for (const f of fs.readdirSync(OUT)) if (f.endsWith('.ok')) fs.rmSync(path.join(OUT, f));
 if (!process.env.NO_BUILD) {
   // on teste ce qui sera livré : le build minifié de production
   const b = spawnSync('node', [path.join(ROOT, 'scripts/build.mjs'), '--minify'], { stdio: 'inherit' });
@@ -67,6 +72,7 @@ const runOne = t => new Promise(res => {
     const ok = code === 0 && !FAIL.test(out) && !/TIMEOUT$/.test(out);
     const s = ((Date.now() - t0) / 1000).toFixed(0);
     console.log(`${ok ? '✔' : '✘'} ${label}  (${s} s)${ok ? '' : '  → ' + path.relative(ROOT, log)}`);
+    if (ok) fs.writeFileSync(okFile(t), ''); else fs.rmSync(okFile(t), { force: true });
     results.push({ label, ok }); res();
   });
 });
@@ -79,5 +85,5 @@ await Promise.all(Array.from({ length: Math.min(jobs, queue.length) }, async () 
 for (const t of serial) { freshDb(); await runOne(t); }
 php.kill();
 const bad = results.filter(r => !r.ok);
-console.log(`\n${results.length - bad.length}/${results.length} tests réussis`);
+console.log(`\n${results.length - bad.length + skipped}/${results.length + skipped} tests réussis`);
 process.exit(bad.length ? 1 : 0);

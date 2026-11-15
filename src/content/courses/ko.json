@@ -1038,6 +1038,145 @@
    ]
   },
   {
+   "t": "Conversation quotidienne",
+   "lv": 0,
+   "d": "Commander, demander, comprendre",
+   "tip": "주세요 (s'il vous plaît, donnez-moi) est la formule magique pour commander.",
+   "p": [
+    [
+     "Où sont les toilettes ?",
+     "화장실이 어디예요?",
+     "hwajangsiri eodiyeyo",
+     "화장실 어디예요?",
+     "화장실이 어디에 있어요?"
+    ],
+    [
+     "Combien ça coûte ?",
+     "이거 얼마예요?",
+     "igeo eolmayeyo",
+     "얼마예요?"
+    ],
+    [
+     "Un americano glacé, s'il vous plaît.",
+     "아이스 아메리카노 주세요.",
+     "aiseu amerikano juseyo",
+     "아이스 아메리카노 한 잔 주세요."
+    ],
+    [
+     "Qu'est-ce que tu fais ce week-end ?",
+     "이번 주말에 뭐 해요?",
+     "ibeon jumare mwo haeyo",
+     "주말에 뭐 해요?",
+     "이번 주말에 뭐 할 거예요?"
+    ],
+    [
+     "Je ne comprends pas bien.",
+     "잘 모르겠어요.",
+     "jal moreugesseoyo",
+     "잘 이해가 안 돼요."
+    ],
+    [
+     "Pouvez-vous parler plus lentement ?",
+     "천천히 말해 주세요.",
+     "cheoncheonhi malhae juseyo",
+     "좀 천천히 말해 주세요.",
+     "천천히 말씀해 주세요."
+    ],
+    [
+     "J'ai faim.",
+     "배고파요.",
+     "baegopayo",
+     "배가 고파요."
+    ],
+    [
+     "À demain !",
+     "내일 봐요!",
+     "naeil bwayo",
+     "내일 만나요!"
+    ]
+   ],
+   "v": [
+    [
+     "aujourd'hui",
+     "오늘"
+    ],
+    [
+     "demain",
+     "내일"
+    ],
+    [
+     "café",
+     "커피"
+    ],
+    [
+     "métro",
+     "지하철"
+    ],
+    [
+     "argent",
+     "돈"
+    ],
+    [
+     "météo",
+     "날씨"
+    ]
+   ],
+   "orig": 1,
+   "c": [
+    [
+     "« Un café, s'il vous plaît » : 커피 한 잔 ___",
+     [
+      "주세요",
+      "있어요",
+      "해요",
+      "가요"
+     ],
+     0,
+     "N + 주세요 = donnez-moi N, s'il vous plaît."
+    ],
+    [
+     "« Où sont les toilettes ? » : 화장실이 ___?",
+     [
+      "어디예요",
+      "뭐예요",
+      "언제예요",
+      "누구예요"
+     ],
+     0,
+     "어디 = où."
+    ],
+    [
+     "« Ça ne marche pas » : 안 ___",
+     [
+      "돼요",
+      "되요"
+     ],
+     0,
+     "되 + 어요 = 돼요."
+    ],
+    [
+     "« C'est délicieux » : 맛___",
+     [
+      "있어요",
+      "없어요",
+      "이에요",
+      "해요"
+     ],
+     0,
+     "맛있어요 = c'est bon ; 맛없어요 = ce n'est pas bon."
+    ]
+   ],
+   "pk": [
+    "coffee",
+    "subway",
+    "money",
+    "sun",
+    "rain",
+    "umbrella",
+    "phone"
+   ]
+  },
+  {
    "t": "Au café (카페)",
    "lv": 0,
    "d": "Commander une boisson, sur place ou à emporter",
@@ -1620,145 +1759,6 @@
     "scarf",
     "flower",
     "leaf"
-   ]
-  },
-  {
-   "t": "Conversation quotidienne",
-   "lv": 1,
-   "d": "Commander, demander, comprendre",
-   "tip": "주세요 (s'il vous plaît, donnez-moi) est la formule magique pour commander.",
-   "p": [
-    [
-     "Où sont les toilettes ?",
-     "화장실이 어디예요?",
-     "hwajangsiri eodiyeyo",
-     "화장실 어디예요?",
-     "화장실이 어디에 있어요?"
-    ],
-    [
-     "Combien ça coûte ?",
-     "이거 얼마예요?",
-     "igeo eolmayeyo",
-     "얼마예요?"
-    ],
-    [
-     "Un americano glacé, s'il vous plaît.",
-     "아이스 아메리카노 주세요.",
-     "aiseu amerikano juseyo",
-     "아이스 아메리카노 한 잔 주세요."
-    ],
-    [
-     "Qu'est-ce que tu fais ce week-end ?",
-     "이번 주말에 뭐 해요?",
-     "ibeon jumare mwo haeyo",
-     "주말에 뭐 해요?",
-     "이번 주말에 뭐 할 거예요?"
-    ],
-    [
-     "Je ne comprends pas bien.",
-     "잘 모르겠어요.",
-     "jal moreugesseoyo",
-     "잘 이해가 안 돼요."
-    ],
-    [
-     "Pouvez-vous parler plus lentement ?",
-     "천천히 말해 주세요.",
-     "cheoncheonhi malhae juseyo",
-     "좀 천천히 말해 주세요.",
-     "천천히 말씀해 주세요."
-    ],
-    [
-     "J'ai faim.",
-     "배고파요.",
-     "baegopayo",
-     "배가 고파요."
-    ],
-    [
-     "À demain !",
-     "내일 봐요!",
-     "naeil bwayo",
-     "내일 만나요!"
-    ]
-   ],
-   "v": [
-    [
-     "aujourd'hui",
-     "오늘"
-    ],
-    [
-     "demain",
-     "내일"
-    ],
-    [
-     "café",
-     "커피"
-    ],
-    [
-     "métro",
-     "지하철"
-    ],
-    [
-     "argent",
-     "돈"
-    ],
-    [
-     "météo",
-     "날씨"
-    ]
-   ],
-   "orig": 1,
-   "c": [
-    [
-     "« Un café, s'il vous plaît » : 커피 한 잔 ___",
-     [
-      "주세요",
-      "있어요",
-      "해요",
-      "가요"
-     ],
-     0,
-     "N + 주세요 = donnez-moi N, s'il vous plaît."
-    ],
-    [
-     "« Où sont les toilettes ? » : 화장실이 ___?",
-     [
-      "어디예요",
-      "뭐예요",
-      "언제예요",
-      "누구예요"
-     ],
-     0,
-     "어디 = où."
-    ],
-    [
-     "« Ça ne marche pas » : 안 ___",
-     [
-      "돼요",
-      "되요"
-     ],
-     0,
-     "되 + 어요 = 돼요."
-    ],
-    [
-     "« C'est délicieux » : 맛___",
-     [
-      "있어요",
-      "없어요",
-      "이에요",
-      "해요"
-     ],
-     0,
-     "맛있어요 = c'est bon ; 맛없어요 = ce n'est pas bon."
-    ]
-   ],
-   "pk": [
-    "coffee",
-    "subway",
-    "money",
-    "sun",
-    "rain",
-    "umbrella",
-    "phone"
    ]
   },
   {

@@ -9,12 +9,14 @@ import { drillLabel, drillRecord } from "../exercises/drills.js";
 import { R } from "../exercises/render.js";
 import { words } from "../exercises/validate.js";
 import { placeStage } from "../features/placement.js";
-import { checkBadges, checkQuests } from "../features/quests.js";
-import { bankApply } from "../features/word-bank.js";
+import { UI } from "../i18n/locale.js";
+import { BADGE_MEDAL, checkBadges, checkQuests, todayQuests } from "../features/quests.js";
+import { bankApply, bankDue } from "../features/word-bank.js";
 import { beep, say } from "../services/speech.js";
-import { streakMilestone, streakReset } from "../screens/streak.js";
+import { FLAME, streakMilestone, streakReset } from "../screens/streak.js";
+import { ic } from "../ui/icons.js";
 import { mascot } from "../ui/mascot.js";
-import { VIEW, renderAll, renderTop } from "../ui/router.js";
+import { VIEW, curSec, renderAll, renderTop } from "../ui/router.js";
 import { burst, closeModal, confetti, countUp, modal, toast } from "../ui/ui.js";
 
 // ===================== MOTEUR DE LEÇON =====================
@@ -51,6 +53,24 @@ export function openSession(cfg) {
   }
 
   if (cfg.u != null && !cfg.unitT) cfg.unitT = COURSES[cfg.cid].units[cfg.u].t;
+  // v32 : pas deux fois le même exercice dans une séance d'entraînement ou de révision IA (le sprint peut répéter)
+  if ((cfg.mode === "train" || cfg.ai) && !cfg.keepDup) {
+    const seen = new Set();
+    cfg.exs = cfg.exs.filter(e => {
+      const k =
+        e.t +
+        "|" +
+        (e.t === "match"
+          ? e.pairs
+              .map(p => p[1])
+              .sort()
+              .join(",")
+          : e.q || e.prompt || e.text || e.audio || e.answer || e.id || Math.random());
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
+  }
   L = Object.assign(
     {
       q: cfg.exs.slice(),
@@ -367,6 +387,7 @@ export function anchorOk(e) {
   const k = exKey(e);
   const m = S.mist[c].find(x => exKey(x) === k);
   if (!m) return;
+  S.q.m = (S.q.m || 0) + 1; // quête « Corrige 3 erreurs passées »
   m.box = (m.box || 0) + 1;
   if (m.box >= 4) S.mist[c] = S.mist[c].filter(x => x !== m);
   else m.due = Date.now() + [1, 3, 7][m.box - 1] * DAY;
@@ -568,7 +589,7 @@ export function finish() {
     S.perfect++;
   }
   if (L.mode === "sprint") {
-    L.xp = L.correct * 2;
+    L.xp = L.correct * 4;
     S.sprint = Math.max(S.sprint, L.correct);
   }
   bankApply();
@@ -593,6 +614,13 @@ export function finish() {
   S.q.c = Math.max(S.q.c, L.maxCombo);
   S.bestCombo = Math.max(S.bestCombo, L.maxCombo);
   S.q.s += L.listenOk;
+  // v32 : compteurs des quêtes variées
+  S.q.ok = (S.q.ok || 0) + L.correct;
+  S.q.sec = (S.q.sec || 0) + Math.min(secs, 1800);
+  if (L.correct + L.wrong >= 5 && L.wrong === 0) S.q.p = (S.q.p || 0) + 1;
+  if (L.correct + L.wrong >= 5 && acc >= 90) S.q.a = (S.q.a || 0) + 1;
+  if (L.mode === "story") S.q.st = (S.q.st || 0) + 1;
+  if (L.mode === "train") S.q.t = (S.q.t || 0) + 1;
   S.spoke += L.spokeOk;
   let streakUp = false,
     milGems = 0;
@@ -621,18 +649,101 @@ export function finish() {
   } else {
     S.gems += 3;
   }
-  checkQuests();
+  const qWon = checkQuests(true);
   const nb = checkBadges();
   save();
   const scr = [];
   const mode = L.mode;
+  // v32 : un seul écran de bilan (résultat, encouragement, récompenses, suite de la journée)
+  const title =
+    mode === "sprint"
+      ? "Temps écoulé !"
+      : mode === "story"
+        ? "Histoire terminée !"
+        : mode === "jump"
+          ? "Hangul validé !"
+          : mode === "lesson"
+            ? chest
+              ? "Unité terminée !"
+              : "Leçon terminée !"
+            : "Entraînement terminé !";
+  const cheers =
+    L.wrong === 0
+      ? ["Sans faute : c'est du solide !", "Aucune erreur. Horang est fier de toi !"]
+      : acc >= 85
+        ? ["Très belle séance, tu progresses vite !", "Presque parfait : continue comme ça !"]
+        : acc >= 60
+          ? [
+              "Bien joué ! Chaque erreur corrigée te fait avancer.",
+              "Tu avances : ce qui a coincé reviendra en révision.",
+            ]
+          : [
+              "Séance difficile, mais terminée : c'est ce qui compte.",
+              "Courage ! Ces notions reviendront jusqu'à être acquises.",
+            ];
+  const notes = [];
+  if (L.ext)
+    notes.push([
+      "flame",
+      extNew ? "Version extrême réussie : XP ×2 et une couronne (+10 gemmes)" : "Version extrême réussie : XP ×2",
+    ]);
+  else if (boost > 1) notes.push(["bolt", "Bonus XP ×2 actif"]);
+  if (mode === "sprint") notes.push(["timer", `${L.correct} bonne(s) réponse(s) — record : ${S.sprint}`]);
+  else if (bonus) notes.push(["hundred", "Leçon parfaite : +10 XP bonus"]);
+  const csec = curSec(),
+    due = dueCount(csec.tracks),
+    bdue = bankDue(csec.id),
+    tx = todayXp(),
+    goalNow = tx >= S.goal,
+    tq = todayQuests(),
+    qDone = tq.filter(q => S.q.claimed.includes(q.id)).length,
+    lvNow = level(S.xp);
+  const rewards = [];
+  if (lvNow > lvBefore)
+    rewards.push(
+      `<div class="erw lv"><span class="bmed" style="--bc:#FFC83D;--bd:#C98B00">${ic("star", 30, "", 2.6)}<span class="shine"></span></span><b>Niveau ${lvNow}</b><small>Tu montes en puissance.</small></div>`,
+    );
+  if (!goalBefore && goalNow)
+    rewards.push(
+      `<div class="erw"><span class="bmed" style="--bc:#7C4DFF;--bd:#5A30D8">${ic("target", 30, "", 2.6)}<span class="shine"></span></span><b>Objectif du jour</b><small>${tx} XP aujourd'hui</small></div>`,
+    );
+  qWon
+    .filter(x => x.month)
+    .forEach(x =>
+      rewards.push(
+        `<div class="erw"><span class="bmed" style="--bc:#7C4DFF;--bd:#5A30D8">${ic("chest", 30, "", 2.4)}<span class="shine"></span></span><b>Quête du mois</b><small>${x.month} points : +${x.g} gemmes</small></div>`,
+      ),
+    );
+  const qGems = qWon.filter(x => !x.month).reduce((a, x) => a + x.g, 0);
+  nb.forEach(b => {
+    const [k, c, d] = BADGE_MEDAL[b.id] || ["star", "#7C4DFF", "#5A30D8"];
+    rewards.push(
+      `<div class="erw"><span class="bmed" style="--bc:${c};--bd:${d}">${ic(k, 30, "", 2.6)}<span class="shine"></span></span><b>${b.n}</b><small>${b.d}</small></div>`,
+    );
+  });
+  const revTxt = [
+    due ? `<span>${due} erreur${due > 1 ? "s" : ""} à ancrer</span>` : "",
+    bdue ? `<span>${bdue} mot${bdue > 1 ? "s" : ""} à revoir</span>` : "",
+  ].filter(Boolean);
+  const next = `<div class="enext">
+  <div class="erow ${goalNow ? "done" : ""}"><span class="eri g">${ic(goalNow ? "check" : "bolt", 22, "", goalNow ? 3.2 : 2.4)}</span><div class="ert"><b>${goalNow ? "Objectif du jour atteint !" : "Objectif du jour"}</b><span class="ebar"><i style="width:${Math.min(100, Math.round((tx / Math.max(1, S.goal)) * 100))}%"></i></span></div><small class="notr">${tx} / ${S.goal} XP</small></div>
+  <div class="erow ${qDone >= tq.length ? "done" : ""}"><span class="eri q">${ic("chest", 22, "", 2.4)}</span><div class="ert"><b>Quêtes du jour</b><span class="edots">${tq.map(q => `<i class="${S.q.claimed.includes(q.id) ? "on" : ""}"></i>`).join("")}</span></div>${qGems ? `<span class="egem">+${qGems} ${ic("gem", 16, "", 2.2)}</span>` : ""}<small class="notr">${qDone} / ${tq.length}</small></div>
+  <div class="erow ${revTxt.length ? "todo" : "done"}"><span class="eri r">${ic("repeat", 22, "", 2.6)}</span><div class="ert"><b>${revTxt.length ? "À réviser" : "Révisions à jour"}</b><span class="erv">${revTxt.length ? revTxt.join(" · ") : "<span>Rien à revoir pour l'instant.</span>"}</span></div>${revTxt.length ? `<button class="ergo" id="endRev">Réviser</button>` : ""}</div></div>`;
   scr.push({
-    html: `${mascot("happy", "dance")}<h1 class="gold">${mode === "sprint" ? "Temps écoulé !" : mode === "story" ? "Histoire terminée ! 📖" : mode === "jump" ? "Hangul validé ! ⏩" : mode === "lesson" ? (chest ? "Unité terminée ! 🎁" : "Leçon terminée !") : "Entraînement terminé !"}</h1><p>${L.ext ? "🔥 Version extrême réussie : XP ×2" + (extNew ? " et couronne 👑 (+10 💎) " : " ") : boost > 1 ? "⚡ Bonus XP x2 actif ! " : ""}${mode === "sprint" ? `${L.correct} bonne(s) réponse(s) — record : ${S.sprint}` : bonus ? "Leçon parfaite : +10 XP bonus 💯" : acc >= 80 ? "Très beau travail, continue comme ça !" : "Chaque erreur t'aide à progresser 💪"}</p>
-  <div class="ecards"><div class="ecard g"><small>XP gagnés</small><b data-c="${gained}">0</b></div><div class="ecard a"><small>Précision</small><b data-c="${acc}" data-s="%">0</b></div><div class="ecard ${mode === "sprint" ? "c" : "t"}"><small>${mode === "sprint" ? "Score" : "Temps"}</small><b>${mode === "sprint" ? L.correct : Math.floor(secs / 60) + ":" + String(secs % 60).padStart(2, "0")}</b></div></div>`,
+    html: `<div class="ehero">${mascot("happy", "dance")}</div><h1 class="gold">${title}</h1><p class="echeer">${cheers[(S.lessons + L.correct) % cheers.length]}</p>${notes.map(([k, t]) => `<p class="enote">${ic(k, 18, "", 2.6)}<span>${t}</span></p>`).join("")}
+  <div class="ecards"><div class="ecard g"><small>XP gagnés</small><b data-c="${gained}">0</b></div><div class="ecard a"><small>Précision</small><b data-c="${acc}" data-s="%">0</b></div><div class="ecard ${mode === "sprint" ? "c" : "t"}"><small>${mode === "sprint" ? "Score" : "Temps"}</small><b>${mode === "sprint" ? L.correct : Math.floor(secs / 60) + ":" + String(secs % 60).padStart(2, "0")}</b></div></div>
+  ${rewards.length ? `<div class="erews"><h3>${rewards.length > 1 ? "Récompenses" : "Récompense"}</h3><div class="erewl">${rewards.join("")}</div></div>` : ""}${next}`,
+    cls: "endsum",
     after: () => {
       beep("win");
-      confetti();
+      confetti(rewards.length ? 160 : 110);
       document.querySelectorAll("[data-c]").forEach(e => countUp(e, +e.dataset.c, 900, e.dataset.s || ""));
+      const r = $("#endRev");
+      if (r)
+        r.onclick = () => {
+          closeLesson();
+          location.hash = "entrainement";
+        };
     },
   });
   if (L.voltMock) {
@@ -687,44 +798,30 @@ export function finish() {
     for (let i = 6; i >= 0; i--) {
       const d = new Date();
       d.setDate(d.getDate() - i);
-      ds.push({ l: "DLMMJVS"[d.getDay()], on: i < S.streak });
+      ds.push({
+        l: (UI === "en" ? "SMTWTFS" : UI === "ko" ? "일월화수목금토" : "DLMMJVS")[d.getDay()],
+        on: i < S.streak,
+        now: i === 0,
+      });
     }
     scr.push({
-      html: `<div class="bigflame">🔥</div><div class="bignum" data-c="${S.streak}">0</div><h1 class="org">jour${S.streak > 1 ? "s" : ""} de série !</h1><p>${S.streak === 1 ? "C'est le début d'une belle série. Reviens demain pour la prolonger !" : "Ne casse pas la chaîne : reviens demain !"}</p>${milGems ? `<p class="milgem"><b>Palier de ${S.streak} jours atteint : +${milGems} 💎</b></p>` : ""}<button class="btn ghost" style="max-width:420px" onclick="shareProgress()">📤 Partager ma série</button><div class="wdots">${ds.map(d => `<div><i class="${d.on ? "on" : ""}">${d.on ? "✓" : ""}</i>${d.l}</div>`).join("")}</div>`,
+      html: `<div class="eflame">${FLAME}<span class="espark s1"></span><span class="espark s2"></span><span class="espark s3"></span></div><div class="bignum" data-c="${S.streak}">0</div><h1 class="org">jour${S.streak > 1 ? "s" : ""} de série !</h1><div class="wdots">${ds.map((d, k) => `<div class="${d.now ? "now" : ""}"><i class="${d.on ? "on" : ""}" style="animation-delay:${(0.25 + k * 0.09).toFixed(2)}s">${d.on ? ic("check", 16, "", 3.6) : ""}</i><span class="notr">${d.l}</span></div>`).join("")}</div><p>${S.streak === 1 ? "C'est le début d'une belle série. Reviens demain pour la prolonger !" : "Ne casse pas la chaîne : reviens demain !"}</p>${milGems ? `<p class="milgem">${ic("gem", 20, "", 2.2)}<b>Palier de ${S.streak} jours atteint : +${milGems} gemmes</b></p>` : ""}<button class="btn ghost eshare" onclick="shareProgress()">${ic("share", 20, "", 2.4)}<span>Partager ma série</span></button>`,
+      cls: "endstreak",
       after: () => {
         beep("combo");
         document.querySelectorAll("[data-c]").forEach(e => countUp(e, +e.dataset.c, 700));
       },
     });
   }
-  if (!goalBefore && todayXp() >= S.goal)
-    scr.push({
-      html: `${mascot("happy", "jump")}<h1 class="pri">Objectif du jour atteint ! 🎯</h1><p>${todayXp()} XP aujourd'hui. Tu as aussi rempli une quête (+10 💎).</p>`,
-      after: () => confetti(80),
-    });
-  if (level(S.xp) > lvBefore)
-    scr.push({
-      html: `<div class="bigflame">⭐</div><h1 class="gold">Niveau ${level(S.xp)} !</h1><p>Tu montes en puissance.</p>`,
-      after: () => {
-        beep("win");
-        confetti(100);
-      },
-    });
-  nb.forEach(b =>
-    scr.push({
-      html: `<div class="bigflame">${b.ic}</div><h1 class="pri">Nouveau badge !</h1><p><b style="color:var(--ink)">${b.n}</b> — ${b.d}</p>`,
-      after: () => {
-        beep("win");
-        confetti(60);
-      },
-    }),
-  );
   let i = 0;
   const el = $("#lesson");
   const show = () => {
     if (i >= scr.length) return closeLesson(true);
     const s = scr[i++];
-    el.innerHTML = `<div class="endwrap">${s.html}<button class="btn big" id="endc">Continuer</button></div>`;
+    el.innerHTML =
+      s.cls === "endsum"
+        ? `<div class="endwrap endsum"><div class="endin">${s.html}</div><button class="btn big" id="endc">Continuer</button></div>`
+        : `<div class="endwrap ${s.cls || ""}">${s.html}<button class="btn big" id="endc">Continuer</button></div>`;
     s.after && s.after();
     const b = $("#endc");
     b.onclick = show;

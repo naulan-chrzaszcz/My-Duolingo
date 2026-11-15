@@ -245,7 +245,7 @@ export function renderTrain(v) {
   add(
     "🎯",
     "Test de niveau",
-    `Situe-toi en 5 minutes sur ${COURSES[ccid].name}${(S.place || {})[ccid] != null ? " · dernier résultat : " + placeEstimate(ccid, S.place[ccid]).replace(/^[^:]*: /, "") : ""}.`,
+    `Situe-toi en 10 minutes sur ${COURSES[ccid].name}${(S.place || {})[ccid] != null ? " · dernier résultat : " + placeEstimate(ccid, S.place[ccid]).replace(/^[^:]*: /, "") : ""}.`,
     "Niveau",
     () => placeIntro(ccid),
   );
@@ -371,10 +371,24 @@ export function trainListen(cids) {
   cids.forEach((cid, i) => {
     const ctx = ctxFor(cid, unlockedUnits(cid), { hideP2: true });
     if (cid === "en-toeic") ctx.ph = shuffle(REAL_PH.concat(ctx.ph || []));
+    // v32 : hors TOEIC (coréen, FLE), la carte Écoute ne contient que de l'écoute (plus de QCM de grammaire)
     const T =
-      i === 0
-        ? ["photo", "part2", "conv", "part2", "conv", "photo", "listen", "part2"]
-        : ["listenTiles", "listen", "listen"];
+      COURSES[cid].kind !== "toeic" && cids.length === 1
+        ? [
+            "listenTiles",
+            "listen",
+            "listenTiles",
+            "listen",
+            "listenTiles",
+            "listen",
+            "listen",
+            "listenTiles",
+            "listen",
+            "listen",
+          ]
+        : i === 0
+          ? ["photo", "part2", "conv", "part2", "conv", "photo", "listen", "part2"]
+          : ["listenTiles", "listen", "listen"];
     T.forEach(t => {
       const e = make(t, ctx);
       e && exs.push(e);
@@ -388,7 +402,7 @@ export function trainSpeak(cids) {
   const exs = [];
   cids.forEach(cid => {
     const ctx = ctxFor(cid, unlockedUnits(cid));
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < (cids.length === 1 ? 8 : 5); i++) {
       const e = make("speak", ctx);
       e && exs.push(e);
     }

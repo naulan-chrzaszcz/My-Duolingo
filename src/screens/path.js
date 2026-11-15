@@ -17,7 +17,7 @@ import { todayXp } from "../core/xp.js";
 import { pairOf } from "../exercises/generate.js";
 import { genUnit } from "../features/ai-units.js";
 import { placeEstimate, placeIntro } from "../features/placement.js";
-import { QUESTS } from "../features/quests.js";
+import { todayQuests } from "../features/quests.js";
 import { buildLesson } from "../lesson/build.js";
 import { openSession } from "../lesson/engine.js";
 import { writeTasks } from "../lesson/writing.js";
@@ -212,7 +212,7 @@ export function renderPath(v) {
   const gx = todayXp(),
     gp = Math.min(100, Math.round((gx / S.goal) * 100));
   const side = `<div class="side"><div class="card"><div class="goalrow">${mascot(gp >= 100 ? "happy" : "calm", "jump")}<div style="flex:1"><h3 style="margin-bottom:6px">Objectif du jour</h3><div class="bar"><i style="width:${gp}%"></i><span>${gx} / ${S.goal} XP</span></div></div></div></div>
-  <a class="card sidequest" href="#quetes"><span>${ic("chest", 26, "", 2.4)}</span><b>Quêtes du jour</b><em>${S.q.claimed.length} / ${QUESTS.length}</em>${ic("chevr", 20, "", 2.8)}</a>
+  <a class="card sidequest" href="#quetes"><span>${ic("chest", 26, "", 2.4)}</span><b>Quêtes du jour</b><em>${todayQuests().filter(q => S.q.claimed.includes(q.id)).length} / 3</em>${ic("chevr", 20, "", 2.8)}</a>
   <div class="card"><h3>📈 Progression ${C.name}</h3><div class="bar ok"><i style="width:${Math.round((done / (C.units.length * NPU)) * 100)}%"></i><span>${done} / ${C.units.length * NPU} étapes</span></div><p class="secsub" style="margin:10px 0 0">🧭 Parcours libre : ${cid === "ko" && !hgDone(cid) ? "termine les 4 unités de hangul, puis" : ""} commence n'importe quelle unité avec « Ouvrir ». L'étape 👉 conseillée suit l'ordre du parcours.</p>${ns ? `<button class="btn ghost" id="goNext" style="margin-top:10px">👉 Aller à l'étape conseillée</button>` : ""}<button class="btn ghost" id="placeGo2" style="margin-top:8px">🎯 ${(S.place || {})[cid] != null ? "Refaire le test de niveau" : "Test de niveau"}</button>${(S.place || {})[cid] != null ? `<p class="secsub" style="margin:8px 0 0">${esc(placeEstimate(cid, S.place[cid]))}</p>` : ""}</div></div>`;
   const inst =
     ANDROID && !STANDALONE && !S.set.hideInstall
@@ -222,7 +222,7 @@ export function renderPath(v) {
         : "";
   const placeBan =
     !doneCount(cid) && (S.place || {})[cid] == null
-      ? `<div class="placeban"><span>🎯</span><div><b>Tu as déjà des bases en ${esc(C.name)} ?</b><br>Passe le test de niveau (5 min) : ton parcours démarrera au bon endroit.</div><button class="btn goldb" id="placeGo">Faire le test</button></div>`
+      ? `<div class="placeban"><span>🎯</span><div><b>Tu as déjà des bases en ${esc(C.name)} ?</b><br>Passe le test de niveau (10 min) : ton parcours démarrera au bon endroit.</div><button class="btn goldb" id="placeGo">Faire le test</button></div>`
       : "";
   const cu = C.units.filter(U => U.lv === ch),
     cd = cu.filter(U => unitComplete(cid, C.units.indexOf(U))).length;

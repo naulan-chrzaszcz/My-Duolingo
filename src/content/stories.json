@@ -594,6 +594,275 @@
    ]
   },
   {
+   "id": "e35",
+   "t": "À l'hôtel",
+   "ic": "🏨",
+   "lv": 0,
+   "cast": {
+    "Receptionist": [
+     "M",
+     "🧑‍💼"
+    ],
+    "Lina": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Receptionist",
+     "t": "Good evening! Welcome to the Park Hotel.",
+     "fr": "Bonsoir ! Bienvenue au Park Hotel."
+    },
+    {
+     "s": "Lina",
+     "t": "Hi, I have a reservation for two nights.",
+     "fr": "Bonjour, j'ai une réservation pour deux nuits."
+    },
+    {
+     "s": "Receptionist",
+     "t": "Can I see your passport, please?",
+     "fr": "Je peux voir votre passeport, s'il vous plaît ?"
+    },
+    {
+     "q": "How long is Lina staying?",
+     "o": [
+      "Two nights",
+      "One week",
+      "One night"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Lina",
+     "t": "Here you are. Is breakfast included?",
+     "fr": "Tenez. Le petit-déjeuner est compris ?"
+    },
+    {
+     "s": "Receptionist",
+     "t": "Yes, it's served from seven to ten.",
+     "fr": "Oui, il est servi de sept heures à dix heures."
+    },
+    {
+     "s": "Receptionist",
+     "t": "Your room is on the third floor. Here is your key.",
+     "fr": "Votre chambre est au troisième étage. Voici votre clé."
+    },
+    {
+     "q": "When is breakfast served?",
+     "o": [
+      "From seven to ten",
+      "From six to nine",
+      "All day"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Lina",
+     "t": "Great, thank you. Good night!",
+     "fr": "Parfait, merci. Bonne nuit !"
+    }
+   ]
+  },
+  {
+   "id": "e36",
+   "t": "Demander son chemin",
+   "ic": "🧭",
+   "lv": 0,
+   "cast": {
+    "Tom": [
+     "M",
+     "👨"
+    ],
+    "Woman": [
+     "W",
+     "👩‍🦰"
+    ]
+   },
+   "items": [
+    {
+     "s": "Tom",
+     "t": "Excuse me, where is the train station?",
+     "fr": "Excusez-moi, où est la gare ?"
+    },
+    {
+     "s": "Woman",
+     "t": "Go straight, then turn left at the bank.",
+     "fr": "Allez tout droit, puis tournez à gauche à la banque."
+    },
+    {
+     "s": "Tom",
+     "t": "Is it far from here?",
+     "fr": "C'est loin d'ici ?"
+    },
+    {
+     "s": "Woman",
+     "t": "No, it's about five minutes on foot.",
+     "fr": "Non, c'est à cinq minutes à pied environ."
+    },
+    {
+     "q": "Where does Tom want to go?",
+     "o": [
+      "To the train station",
+      "To the bank",
+      "To the airport"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Tom",
+     "t": "Thank you! My train leaves at nine.",
+     "fr": "Merci ! Mon train part à neuf heures."
+    },
+    {
+     "s": "Woman",
+     "t": "Then you have plenty of time. Have a nice trip!",
+     "fr": "Alors vous avez largement le temps. Bon voyage !"
+    },
+    {
+     "q": "How far is the station?",
+     "o": [
+      "About five minutes on foot",
+      "Twenty minutes by bus",
+      "One hour by car"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e37",
+   "t": "Au supermarché",
+   "ic": "🛒",
+   "lv": 0,
+   "cast": {
+    "Cashier": [
+     "W",
+     "👩‍💼"
+    ],
+    "Ben": [
+     "M",
+     "👦"
+    ]
+   },
+   "items": [
+    {
+     "s": "Cashier",
+     "t": "Hello! Do you have a loyalty card?",
+     "fr": "Bonjour ! Vous avez une carte de fidélité ?"
+    },
+    {
+     "s": "Ben",
+     "t": "No, I don't. How much is it?",
+     "fr": "Non. Ça fait combien ?"
+    },
+    {
+     "s": "Cashier",
+     "t": "That's twelve dollars and thirty cents.",
+     "fr": "Ça fait douze dollars trente."
+    },
+    {
+     "s": "Ben",
+     "t": "Can I pay by card?",
+     "fr": "Je peux payer par carte ?"
+    },
+    {
+     "q": "How much does Ben pay?",
+     "o": [
+      "$12.30",
+      "$20.13",
+      "$2.30"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Cashier",
+     "t": "Of course. Do you need a bag?",
+     "fr": "Bien sûr. Il vous faut un sac ?"
+    },
+    {
+     "s": "Ben",
+     "t": "No, thanks. I brought my own.",
+     "fr": "Non merci. J'ai apporté le mien."
+    },
+    {
+     "q": "Why doesn't Ben need a bag?",
+     "o": [
+      "He brought his own",
+      "He bought nothing",
+      "He has a car"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e38",
+   "t": "Dans le bus",
+   "ic": "🚌",
+   "lv": 0,
+   "cast": {
+    "Driver": [
+     "M",
+     "🧑‍✈️"
+    ],
+    "Mia": [
+     "W",
+     "👧"
+    ]
+   },
+   "items": [
+    {
+     "s": "Mia",
+     "t": "Hi! Does this bus go to the city center?",
+     "fr": "Bonjour ! Ce bus va au centre-ville ?"
+    },
+    {
+     "s": "Driver",
+     "t": "Yes, it does. It's the fourth stop.",
+     "fr": "Oui. C'est le quatrième arrêt."
+    },
+    {
+     "s": "Mia",
+     "t": "How much is a ticket?",
+     "fr": "Combien coûte un ticket ?"
+    },
+    {
+     "s": "Driver",
+     "t": "Two dollars. You can pay with your phone.",
+     "fr": "Deux dollars. Vous pouvez payer avec votre téléphone."
+    },
+    {
+     "q": "Which stop is the city center?",
+     "o": [
+      "The fourth stop",
+      "The first stop",
+      "The last stop"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Mia",
+     "t": "Perfect. Can you tell me when we get there?",
+     "fr": "Parfait. Vous pouvez me dire quand on arrive ?"
+    },
+    {
+     "s": "Driver",
+     "t": "Sure. Take a seat!",
+     "fr": "Bien sûr. Asseyez-vous !"
+    },
+    {
+     "q": "How can Mia pay?",
+     "o": [
+      "With her phone",
+      "Only with coins",
+      "With a check"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
    "id": "en2",
    "t": "Le premier jour",
    "ic": "🏢",
@@ -1182,6 +1451,204 @@
    ]
   },
   {
+   "id": "e39",
+   "t": "À la pharmacie",
+   "ic": "💊",
+   "lv": 1,
+   "cast": {
+    "Pharmacist": [
+     "W",
+     "👩‍⚕️"
+    ],
+    "Jake": [
+     "M",
+     "👨"
+    ]
+   },
+   "items": [
+    {
+     "s": "Jake",
+     "t": "Hi, I have a sore throat and a cough.",
+     "fr": "Bonjour, j'ai mal à la gorge et je tousse."
+    },
+    {
+     "s": "Pharmacist",
+     "t": "How long have you had these symptoms?",
+     "fr": "Depuis combien de temps avez-vous ces symptômes ?"
+    },
+    {
+     "s": "Jake",
+     "t": "Since Monday. I don't have a fever, though.",
+     "fr": "Depuis lundi. Mais je n'ai pas de fièvre."
+    },
+    {
+     "q": "What is wrong with Jake?",
+     "o": [
+      "He has a sore throat and a cough",
+      "He broke his arm",
+      "He has a high fever"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Pharmacist",
+     "t": "Take this syrup three times a day, after meals.",
+     "fr": "Prenez ce sirop trois fois par jour, après les repas."
+    },
+    {
+     "s": "Jake",
+     "t": "Should I see a doctor?",
+     "fr": "Est-ce que je dois voir un médecin ?"
+    },
+    {
+     "s": "Pharmacist",
+     "t": "Only if it doesn't get better in three days.",
+     "fr": "Seulement si ça ne va pas mieux dans trois jours."
+    },
+    {
+     "q": "When should Jake see a doctor?",
+     "o": [
+      "If he isn't better in three days",
+      "Right now",
+      "Never"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e40",
+   "t": "À la banque",
+   "ic": "🏦",
+   "lv": 1,
+   "cast": {
+    "Clerk": [
+     "M",
+     "🧑‍💼"
+    ],
+    "Sofia": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Sofia",
+     "t": "Good morning. I'd like to open a bank account.",
+     "fr": "Bonjour. Je voudrais ouvrir un compte bancaire."
+    },
+    {
+     "s": "Clerk",
+     "t": "Certainly. Do you have an ID and proof of address?",
+     "fr": "Bien sûr. Vous avez une pièce d'identité et un justificatif de domicile ?"
+    },
+    {
+     "s": "Sofia",
+     "t": "I have my passport, but I just moved here.",
+     "fr": "J'ai mon passeport, mais je viens d'emménager."
+    },
+    {
+     "s": "Clerk",
+     "t": "A rental contract is fine.",
+     "fr": "Un contrat de location suffit."
+    },
+    {
+     "q": "What does Sofia want to do?",
+     "o": [
+      "Open a bank account",
+      "Withdraw some cash",
+      "Change some money"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Sofia",
+     "t": "Great, I have it with me. Are there any fees?",
+     "fr": "Parfait, je l'ai sur moi. Il y a des frais ?"
+    },
+    {
+     "s": "Clerk",
+     "t": "No, the account is free for the first year.",
+     "fr": "Non, le compte est gratuit la première année."
+    },
+    {
+     "q": "Which document is accepted as proof of address?",
+     "o": [
+      "A rental contract",
+      "A plane ticket",
+      "A business card"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e41",
+   "t": "Le colis en retard",
+   "ic": "📦",
+   "lv": 1,
+   "cast": {
+    "Agent": [
+     "W",
+     "👩‍💼"
+    ],
+    "Omar": [
+     "M",
+     "👨"
+    ]
+   },
+   "items": [
+    {
+     "s": "Omar",
+     "t": "Hello, my parcel was supposed to arrive yesterday.",
+     "fr": "Bonjour, mon colis devait arriver hier."
+    },
+    {
+     "s": "Agent",
+     "t": "I'm sorry about that. Do you have the tracking number?",
+     "fr": "J'en suis désolée. Vous avez le numéro de suivi ?"
+    },
+    {
+     "s": "Omar",
+     "t": "Yes, I'll read it to you.",
+     "fr": "Oui, je vous le lis."
+    },
+    {
+     "s": "Agent",
+     "t": "It says the driver couldn't find your address.",
+     "fr": "Il est indiqué que le livreur n'a pas trouvé votre adresse."
+    },
+    {
+     "q": "Why was the parcel not delivered?",
+     "o": [
+      "The driver couldn't find the address",
+      "It was lost at the airport",
+      "Omar wasn't at home"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Omar",
+     "t": "That's strange. Can you deliver it tomorrow morning?",
+     "fr": "C'est bizarre. Vous pouvez le livrer demain matin ?"
+    },
+    {
+     "s": "Agent",
+     "t": "Yes, between nine and noon. I'll add a note for the driver.",
+     "fr": "Oui, entre neuf heures et midi. J'ajoute une note pour le livreur."
+    },
+    {
+     "q": "When will the parcel be delivered?",
+     "o": [
+      "Tomorrow between nine and noon",
+      "Tonight",
+      "Next week"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
    "id": "en3",
    "t": "Le client mécontent",
    "ic": "📦",
@@ -1745,6 +2212,204 @@
    ]
   },
   {
+   "id": "e42",
+   "t": "Le remboursement",
+   "ic": "🧾",
+   "lv": 2,
+   "cast": {
+    "Assistant": [
+     "M",
+     "🧑‍💼"
+    ],
+    "Clara": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Clara",
+     "t": "Hi, I bought these headphones last week, but the left side doesn't work.",
+     "fr": "Bonjour, j'ai acheté ce casque la semaine dernière, mais le côté gauche ne marche pas."
+    },
+    {
+     "s": "Assistant",
+     "t": "I'm sorry to hear that. Do you have the receipt?",
+     "fr": "Je suis désolé. Vous avez le ticket de caisse ?"
+    },
+    {
+     "s": "Clara",
+     "t": "Yes, here it is. I'd like a refund, please.",
+     "fr": "Oui, le voici. Je voudrais être remboursée, s'il vous plaît."
+    },
+    {
+     "s": "Assistant",
+     "t": "We can offer a replacement or store credit right away.",
+     "fr": "Nous pouvons vous proposer un échange ou un avoir tout de suite."
+    },
+    {
+     "q": "What is the problem with the headphones?",
+     "o": [
+      "The left side doesn't work",
+      "They are the wrong color",
+      "They are too expensive"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Clara",
+     "t": "I'd rather have my money back, if that's possible.",
+     "fr": "Je préférerais récupérer mon argent, si c'est possible."
+    },
+    {
+     "s": "Assistant",
+     "t": "No problem. The refund will appear on your card within five days.",
+     "fr": "Pas de problème. Le remboursement apparaîtra sur votre carte sous cinq jours."
+    },
+    {
+     "q": "What does Clara finally get?",
+     "o": [
+      "A refund on her card",
+      "A new pair of headphones",
+      "Store credit"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e43",
+   "t": "La réunion du matin",
+   "ic": "💻",
+   "lv": 2,
+   "cast": {
+    "Priya": [
+     "W",
+     "👩‍💻"
+    ],
+    "Liam": [
+     "M",
+     "👨‍💻"
+    ]
+   },
+   "items": [
+    {
+     "s": "Priya",
+     "t": "Morning, everyone. Liam, what's the status of the login bug?",
+     "fr": "Bonjour à tous. Liam, où en est le bug de connexion ?"
+    },
+    {
+     "s": "Liam",
+     "t": "I've found the root cause. The fix is ready for review.",
+     "fr": "J'ai trouvé la cause racine. Le correctif est prêt à être relu."
+    },
+    {
+     "s": "Priya",
+     "t": "Good. Is anything blocking you?",
+     "fr": "Très bien. Quelque chose te bloque ?"
+    },
+    {
+     "s": "Liam",
+     "t": "I still need access to the staging server.",
+     "fr": "J'ai encore besoin d'un accès au serveur de préproduction."
+    },
+    {
+     "q": "What has Liam done?",
+     "o": [
+      "He found the root cause of the bug",
+      "He deployed to production",
+      "He deleted the login page"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Priya",
+     "t": "I'll sort that out right after the meeting.",
+     "fr": "Je règle ça juste après la réunion."
+    },
+    {
+     "s": "Liam",
+     "t": "Thanks. Then we can ship it by Thursday.",
+     "fr": "Merci. Alors on pourra le livrer d'ici jeudi."
+    },
+    {
+     "q": "What is blocking Liam?",
+     "o": [
+      "He needs access to the staging server",
+      "He is waiting for a new laptop",
+      "He doesn't understand the bug"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e44",
+   "t": "À la douane",
+   "ic": "🛂",
+   "lv": 2,
+   "cast": {
+    "Officer": [
+     "M",
+     "👮"
+    ],
+    "Hana": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Officer",
+     "t": "Good afternoon. What's the purpose of your visit?",
+     "fr": "Bonjour. Quel est le motif de votre séjour ?"
+    },
+    {
+     "s": "Hana",
+     "t": "I'm here for a conference, and then a few days of sightseeing.",
+     "fr": "Je viens pour une conférence, puis quelques jours de tourisme."
+    },
+    {
+     "s": "Officer",
+     "t": "How long are you planning to stay?",
+     "fr": "Combien de temps comptez-vous rester ?"
+    },
+    {
+     "s": "Hana",
+     "t": "Ten days in total. I'm flying back on the twentieth.",
+     "fr": "Dix jours en tout. Je repars le vingt."
+    },
+    {
+     "q": "Why is Hana visiting?",
+     "o": [
+      "For a conference and some sightseeing",
+      "To look for a job",
+      "To visit her family"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Officer",
+     "t": "Do you have anything to declare?",
+     "fr": "Vous avez quelque chose à déclarer ?"
+    },
+    {
+     "s": "Hana",
+     "t": "No, just clothes and my laptop.",
+     "fr": "Non, seulement des vêtements et mon ordinateur portable."
+    },
+    {
+     "q": "How long will Hana stay?",
+     "o": [
+      "Ten days",
+      "Twenty days",
+      "Two days"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
    "id": "en4",
    "t": "L'entretien d'embauche",
    "ic": "🤝",
@@ -2198,6 +2863,143 @@
      "a": 0
     }
    ]
+  },
+  {
+   "id": "e45",
+   "t": "La revue de code",
+   "ic": "🔍",
+   "lv": 3,
+   "cast": {
+    "Nora": [
+     "W",
+     "👩‍💻"
+    ],
+    "Sam": [
+     "M",
+     "👨‍💻"
+    ]
+   },
+   "items": [
+    {
+     "s": "Nora",
+     "t": "I've gone through your pull request. Overall it looks solid.",
+     "fr": "J'ai parcouru ta pull request. Dans l'ensemble, c'est solide."
+    },
+    {
+     "s": "Sam",
+     "t": "Thanks. I wasn't sure about the caching part, to be honest.",
+     "fr": "Merci. Pour être honnête, je n'étais pas sûr de la partie cache."
+    },
+    {
+     "s": "Nora",
+     "t": "That's my one concern: what happens if the cache is stale?",
+     "fr": "C'est ma seule réserve : que se passe-t-il si le cache est périmé ?"
+    },
+    {
+     "s": "Sam",
+     "t": "Good point. I could add an expiry time and a fallback.",
+     "fr": "Bien vu. Je pourrais ajouter une durée d'expiration et une solution de repli."
+    },
+    {
+     "q": "What is Nora's concern?",
+     "o": [
+      "What happens when the cache is stale",
+      "The code has no tests at all",
+      "The pull request is too long"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Nora",
+     "t": "That would do it. It would also be worth adding a test for that edge case.",
+     "fr": "Ça ferait l'affaire. Ça vaudrait aussi la peine d'ajouter un test pour ce cas limite."
+    },
+    {
+     "s": "Sam",
+     "t": "Agreed. I'll push the changes this afternoon.",
+     "fr": "D'accord. Je pousse les modifications cet après-midi."
+    },
+    {
+     "q": "What will Sam add?",
+     "o": [
+      "An expiry time, a fallback and a test",
+      "A new database",
+      "Nothing, the code is merged as it is"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e46",
+   "t": "Demander une augmentation",
+   "ic": "📈",
+   "lv": 3,
+   "cast": {
+    "Manager": [
+     "W",
+     "👩‍💼"
+    ],
+    "Alex": [
+     "M",
+     "👨"
+    ]
+   },
+   "items": [
+    {
+     "s": "Alex",
+     "t": "Thanks for making time. I'd like to talk about my salary.",
+     "fr": "Merci de m'accorder du temps. J'aimerais parler de mon salaire."
+    },
+    {
+     "s": "Manager",
+     "t": "Of course. What do you have in mind?",
+     "fr": "Bien sûr. À quoi pensez-vous ?"
+    },
+    {
+     "s": "Alex",
+     "t": "Over the past year, I've taken on two major projects and trained three new hires.",
+     "fr": "Depuis un an, j'ai pris en charge deux gros projets et formé trois nouvelles recrues."
+    },
+    {
+     "s": "Alex",
+     "t": "Given that, I'd like to ask for a ten percent raise.",
+     "fr": "Compte tenu de cela, j'aimerais demander une augmentation de dix pour cent."
+    },
+    {
+     "q": "What does Alex ask for?",
+     "o": [
+      "A ten percent raise",
+      "A new job title",
+      "More days off"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Manager",
+     "t": "Your results speak for themselves. I can't promise ten, but I'll make the case for it.",
+     "fr": "Vos résultats parlent d'eux-mêmes. Je ne peux pas promettre dix, mais je défendrai votre demande."
+    },
+    {
+     "s": "Alex",
+     "t": "I appreciate that. When could I expect an answer?",
+     "fr": "Je vous en remercie. Quand puis-je espérer une réponse ?"
+    },
+    {
+     "s": "Manager",
+     "t": "By the end of the month, after the budget review.",
+     "fr": "D'ici la fin du mois, après la revue budgétaire."
+    },
+    {
+     "q": "When will Alex get an answer?",
+     "o": [
+      "By the end of the month",
+      "Tomorrow morning",
+      "Next year"
+     ],
+     "a": 0
+    }
+   ]
   }
  ],
  "fr": [
@@ -2575,6 +3377,140 @@
       "There is none today",
       "It's too expensive",
       "He forgot his money"
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  },
+  {
+   "id": "fl11",
+   "t": "À la boulangerie",
+   "ic": "🥖",
+   "lv": 0,
+   "cast": {
+    "Boulangère": [
+     "W",
+     "👩‍🍳"
+    ],
+    "Tom": [
+     "M",
+     "👨"
+    ]
+   },
+   "items": [
+    {
+     "s": "Boulangère",
+     "t": "Bonjour monsieur ! Qu'est-ce que je vous sers ?",
+     "fr": "Hello sir! What can I get you?"
+    },
+    {
+     "s": "Tom",
+     "t": "Bonjour ! Une baguette et deux croissants, s'il vous plaît.",
+     "fr": "Hello! A baguette and two croissants, please."
+    },
+    {
+     "s": "Boulangère",
+     "t": "Et avec ceci ?",
+     "fr": "Anything else?"
+    },
+    {
+     "s": "Tom",
+     "t": "C'est tout, merci. Ça fait combien ?",
+     "fr": "That's all, thank you. How much is it?"
+    },
+    {
+     "q": "What does Tom buy?",
+     "o": [
+      "A baguette and two croissants",
+      "Two baguettes and a cake",
+      "A sandwich"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Boulangère",
+     "t": "Trois euros quatre-vingts, s'il vous plaît.",
+     "fr": "Three euros eighty, please."
+    },
+    {
+     "s": "Tom",
+     "t": "Voilà. Bonne journée !",
+     "fr": "Here you are. Have a nice day!"
+    },
+    {
+     "q": "How much does Tom pay?",
+     "o": [
+      "€3.80",
+      "€4.20",
+      "€8.30"
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  },
+  {
+   "id": "fl12",
+   "t": "Dans le métro",
+   "ic": "🚇",
+   "lv": 0,
+   "cast": {
+    "Julie": [
+     "W",
+     "👩"
+    ],
+    "Passant": [
+     "M",
+     "👨"
+    ]
+   },
+   "items": [
+    {
+     "s": "Julie",
+     "t": "Excusez-moi, pour aller à la tour Eiffel, s'il vous plaît ?",
+     "fr": "Excuse me, how do I get to the Eiffel Tower, please?"
+    },
+    {
+     "s": "Passant",
+     "t": "Prenez la ligne 6 et descendez à Bir-Hakeim.",
+     "fr": "Take line 6 and get off at Bir-Hakeim."
+    },
+    {
+     "s": "Julie",
+     "t": "C'est direct ?",
+     "fr": "Is it direct?"
+    },
+    {
+     "s": "Passant",
+     "t": "Oui, c'est direct. Il y a cinq stations.",
+     "fr": "Yes, it's direct. There are five stops."
+    },
+    {
+     "q": "Which line should Julie take?",
+     "o": [
+      "Line 6",
+      "Line 1",
+      "Line 9"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Julie",
+     "t": "Merci beaucoup ! Où est-ce que j'achète un ticket ?",
+     "fr": "Thank you very much! Where do I buy a ticket?"
+    },
+    {
+     "s": "Passant",
+     "t": "Au guichet, juste là, à gauche.",
+     "fr": "At the ticket office, right there on the left."
+    },
+    {
+     "q": "Where can Julie buy a ticket?",
+     "o": [
+      "At the ticket office on the left",
+      "On the train",
+      "At the bakery"
      ],
      "a": 0
     }
@@ -3011,6 +3947,140 @@
    "fle": 1
   },
   {
+   "id": "fl13",
+   "t": "À la pharmacie",
+   "ic": "💊",
+   "lv": 1,
+   "cast": {
+    "Pharmacien": [
+     "M",
+     "👨‍⚕️"
+    ],
+    "Anna": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Anna",
+     "t": "Bonjour, j'ai mal à la tête depuis ce matin.",
+     "fr": "Hello, I've had a headache since this morning."
+    },
+    {
+     "s": "Pharmacien",
+     "t": "Vous avez de la fièvre ?",
+     "fr": "Do you have a fever?"
+    },
+    {
+     "s": "Anna",
+     "t": "Non, mais je suis très fatiguée.",
+     "fr": "No, but I'm very tired."
+    },
+    {
+     "s": "Pharmacien",
+     "t": "Prenez un comprimé maintenant, et un autre ce soir si nécessaire.",
+     "fr": "Take one tablet now, and another this evening if necessary."
+    },
+    {
+     "q": "What is wrong with Anna?",
+     "o": [
+      "She has a headache",
+      "She has a fever",
+      "She hurt her leg"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Anna",
+     "t": "D'accord. Je dois le prendre en mangeant ?",
+     "fr": "All right. Should I take it with food?"
+    },
+    {
+     "s": "Pharmacien",
+     "t": "Oui, c'est mieux. Et buvez beaucoup d'eau.",
+     "fr": "Yes, that's better. And drink plenty of water."
+    },
+    {
+     "q": "What else should Anna do?",
+     "o": [
+      "Drink plenty of water",
+      "Go running",
+      "Stop eating"
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  },
+  {
+   "id": "fl14",
+   "t": "Prendre rendez-vous",
+   "ic": "📞",
+   "lv": 1,
+   "cast": {
+    "Secrétaire": [
+     "W",
+     "👩‍💼"
+    ],
+    "Paul": [
+     "M",
+     "👨"
+    ]
+   },
+   "items": [
+    {
+     "s": "Secrétaire",
+     "t": "Cabinet du docteur Martin, bonjour.",
+     "fr": "Doctor Martin's office, hello."
+    },
+    {
+     "s": "Paul",
+     "t": "Bonjour, je voudrais prendre rendez-vous, s'il vous plaît.",
+     "fr": "Hello, I'd like to make an appointment, please."
+    },
+    {
+     "s": "Secrétaire",
+     "t": "Bien sûr. Jeudi à quinze heures, ça vous convient ?",
+     "fr": "Of course. Does Thursday at 3 p.m. suit you?"
+    },
+    {
+     "s": "Paul",
+     "t": "Je travaille jeudi. Vous avez quelque chose vendredi ?",
+     "fr": "I work on Thursday. Do you have anything on Friday?"
+    },
+    {
+     "q": "Why can't Paul come on Thursday?",
+     "o": [
+      "He works on Thursday",
+      "He is on holiday",
+      "He is ill"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Secrétaire",
+     "t": "Vendredi à dix heures et demie, c'est possible.",
+     "fr": "Friday at half past ten is possible."
+    },
+    {
+     "s": "Paul",
+     "t": "Parfait. C'est au nom de Paul Durand.",
+     "fr": "Perfect. It's under the name Paul Durand."
+    },
+    {
+     "q": "When is Paul's appointment?",
+     "o": [
+      "Friday at half past ten",
+      "Thursday at 3 p.m.",
+      "Monday morning"
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  },
+  {
    "id": "fr7",
    "t": "La lettre de réclamation",
    "ic": "✉️",
@@ -3313,6 +4383,73 @@
    "fle": 1
   },
   {
+   "id": "fl15",
+   "t": "Le train en retard",
+   "ic": "🚆",
+   "lv": 2,
+   "cast": {
+    "Agent": [
+     "M",
+     "🧑‍✈️"
+    ],
+    "Léa": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Léa",
+     "t": "Excusez-moi, le train pour Lyon est annoncé avec combien de retard ?",
+     "fr": "Excuse me, how late is the train to Lyon expected to be?"
+    },
+    {
+     "s": "Agent",
+     "t": "Quarante minutes environ. Il y a eu un problème technique.",
+     "fr": "About forty minutes. There was a technical problem."
+    },
+    {
+     "s": "Léa",
+     "t": "J'avais une correspondance à Lyon. Je vais la rater.",
+     "fr": "I had a connection in Lyon. I'm going to miss it."
+    },
+    {
+     "s": "Agent",
+     "t": "Ne vous inquiétez pas, votre billet sera valable dans le train suivant.",
+     "fr": "Don't worry, your ticket will be valid on the next train."
+    },
+    {
+     "q": "Why is the train late?",
+     "o": [
+      "There was a technical problem",
+      "There is a strike",
+      "It is snowing"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Léa",
+     "t": "Tant mieux. Est-ce que je peux être remboursée ?",
+     "fr": "That's good. Can I get a refund?"
+    },
+    {
+     "s": "Agent",
+     "t": "Oui, si le retard dépasse trente minutes, vous pouvez faire une demande en ligne.",
+     "fr": "Yes, if the delay is more than thirty minutes, you can apply online."
+    },
+    {
+     "q": "What can Léa do about her connection?",
+     "o": [
+      "Take the next train with the same ticket",
+      "Buy a new ticket",
+      "Go home"
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  },
+  {
    "id": "fr2",
    "t": "La lettre de motivation",
    "ic": "✉️",
@@ -3551,6 +4688,73 @@
       "Next month",
       "Immediately",
       "Next year"
+     ],
+     "a": 0
+    }
+   ],
+   "fle": 1
+  },
+  {
+   "id": "fl16",
+   "t": "Le débat",
+   "ic": "🗣️",
+   "lv": 3,
+   "cast": {
+    "Inès": [
+     "W",
+     "👩"
+    ],
+    "Hugo": [
+     "M",
+     "👨"
+    ]
+   },
+   "items": [
+    {
+     "s": "Inès",
+     "t": "À mon avis, il faudrait que les entreprises généralisent la semaine de quatre jours.",
+     "fr": "In my opinion, companies should adopt the four-day week more widely."
+    },
+    {
+     "s": "Hugo",
+     "t": "Je ne suis pas convaincu. Je crains que la charge de travail reste la même.",
+     "fr": "I'm not convinced. I'm afraid the workload would stay the same."
+    },
+    {
+     "s": "Inès",
+     "t": "Pourtant, plusieurs études montrent que la productivité ne baisse pas.",
+     "fr": "And yet several studies show that productivity doesn't drop."
+    },
+    {
+     "s": "Hugo",
+     "t": "Peut-être, mais ce n'est pas applicable partout, à l'hôpital par exemple.",
+     "fr": "Perhaps, but it can't be applied everywhere, in hospitals for example."
+    },
+    {
+     "q": "What is Hugo afraid of?",
+     "o": [
+      "That the workload would stay the same",
+      "That salaries would double",
+      "That offices would close"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Inès",
+     "t": "C'est vrai. Bien que l'idée soit séduisante, il faudrait l'adapter à chaque secteur.",
+     "fr": "That's true. Although the idea is appealing, it would have to be adapted to each sector."
+    },
+    {
+     "s": "Hugo",
+     "t": "Là-dessus, nous sommes d'accord.",
+     "fr": "On that point, we agree."
+    },
+    {
+     "q": "What do Inès and Hugo finally agree on?",
+     "o": [
+      "The idea must be adapted to each sector",
+      "The four-day week is impossible",
+      "Hospitals should close on Fridays"
      ],
      "a": 0
     }
@@ -3874,6 +5078,209 @@
    ]
   },
   {
+   "id": "ko15",
+   "t": "À la supérette",
+   "ic": "🏪",
+   "lv": 0,
+   "cast": {
+    "직원": [
+     "M",
+     "🧑‍💼"
+    ],
+    "수아": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "직원",
+     "t": "어서 오세요!",
+     "fr": "Bienvenue !"
+    },
+    {
+     "s": "수아",
+     "t": "이 삼각김밥 하나하고 물 한 병 주세요.",
+     "fr": "Un kimbap triangle et une bouteille d'eau, s'il vous plaît."
+    },
+    {
+     "s": "직원",
+     "t": "데워 드릴까요?",
+     "fr": "Je vous le réchauffe ?"
+    },
+    {
+     "s": "수아",
+     "t": "네, 데워 주세요.",
+     "fr": "Oui, réchauffez-le, s'il vous plaît."
+    },
+    {
+     "q": "Qu'est-ce que Sua achète ?",
+     "o": [
+      "Un kimbap triangle et de l'eau",
+      "Des nouilles et un café",
+      "Du lait et du pain"
+     ],
+     "a": 0
+    },
+    {
+     "s": "직원",
+     "t": "봉투 필요하세요?",
+     "fr": "Il vous faut un sac ?"
+    },
+    {
+     "s": "수아",
+     "t": "아니요, 괜찮아요. 얼마예요?",
+     "fr": "Non, ça va. C'est combien ?"
+    },
+    {
+     "s": "직원",
+     "t": "모두 이천오백 원입니다.",
+     "fr": "Ça fait 2 500 wons en tout."
+    },
+    {
+     "q": "Combien Sua paie-t-elle ?",
+     "o": [
+      "2 500 wons",
+      "5 200 wons",
+      "25 000 wons"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko16",
+   "t": "Dans le métro",
+   "ic": "🚇",
+   "lv": 0,
+   "cast": {
+    "지호": [
+     "M",
+     "👨"
+    ],
+    "아주머니": [
+     "W",
+     "👩‍🦱"
+    ]
+   },
+   "items": [
+    {
+     "s": "지호",
+     "t": "실례합니다. 명동역에 어떻게 가요?",
+     "fr": "Excusez-moi. Comment aller à la station Myeongdong ?"
+    },
+    {
+     "s": "아주머니",
+     "t": "4호선을 타세요.",
+     "fr": "Prenez la ligne 4."
+    },
+    {
+     "s": "지호",
+     "t": "여기서 몇 정거장이에요?",
+     "fr": "C'est à combien de stations d'ici ?"
+    },
+    {
+     "s": "아주머니",
+     "t": "세 정거장이에요. 십 분쯤 걸려요.",
+     "fr": "Trois stations. Ça prend environ dix minutes."
+    },
+    {
+     "q": "Quelle ligne Jiho doit-il prendre ?",
+     "o": [
+      "La ligne 4",
+      "La ligne 2",
+      "La ligne 9"
+     ],
+     "a": 0
+    },
+    {
+     "s": "지호",
+     "t": "감사합니다! 한국어를 조금 할 수 있어요.",
+     "fr": "Merci ! Je parle un peu coréen."
+    },
+    {
+     "s": "아주머니",
+     "t": "아주 잘하네요!",
+     "fr": "Vous parlez très bien !"
+    },
+    {
+     "q": "Combien de temps dure le trajet ?",
+     "o": [
+      "Environ dix minutes",
+      "Une heure",
+      "Trois minutes"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko17",
+   "t": "Sous la pluie",
+   "ic": "☔",
+   "lv": 0,
+   "cast": {
+    "민수": [
+     "M",
+     "👦"
+    ],
+    "유나": [
+     "W",
+     "👧"
+    ]
+   },
+   "items": [
+    {
+     "s": "유나",
+     "t": "오늘 날씨가 어때요?",
+     "fr": "Quel temps fait-il aujourd'hui ?"
+    },
+    {
+     "s": "민수",
+     "t": "비가 와요. 우산 있어요?",
+     "fr": "Il pleut. Tu as un parapluie ?"
+    },
+    {
+     "s": "유나",
+     "t": "아니요, 없어요.",
+     "fr": "Non, je n'en ai pas."
+    },
+    {
+     "s": "민수",
+     "t": "그럼 같이 써요.",
+     "fr": "Alors partageons le mien."
+    },
+    {
+     "q": "Quel temps fait-il aujourd'hui ?",
+     "o": [
+      "Il pleut",
+      "Il neige",
+      "Il fait beau"
+     ],
+     "a": 0
+    },
+    {
+     "s": "유나",
+     "t": "고마워요! 내일도 비가 올까요?",
+     "fr": "Merci ! Il va pleuvoir demain aussi ?"
+    },
+    {
+     "s": "민수",
+     "t": "아니요, 내일은 맑을 거예요.",
+     "fr": "Non, demain il fera beau."
+    },
+    {
+     "q": "Quel temps fera-t-il demain ?",
+     "o": [
+      "Il fera beau",
+      "Il pleuvra",
+      "Il neigera"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
    "id": "ko7",
    "t": "Rendez-vous entre amis",
    "ic": "☕",
@@ -4108,6 +5515,275 @@
    ]
   },
   {
+   "id": "ko18",
+   "t": "Un compte en banque",
+   "ic": "🏦",
+   "lv": 1,
+   "cast": {
+    "은행원": [
+     "W",
+     "👩‍💼"
+    ],
+    "마크": [
+     "M",
+     "👨"
+    ]
+   },
+   "items": [
+    {
+     "s": "마크",
+     "t": "안녕하세요. 계좌를 만들고 싶어요.",
+     "fr": "Bonjour. Je voudrais ouvrir un compte."
+    },
+    {
+     "s": "은행원",
+     "t": "신분증 있으세요?",
+     "fr": "Vous avez une pièce d'identité ?"
+    },
+    {
+     "s": "마크",
+     "t": "네, 여권하고 외국인등록증이 있어요.",
+     "fr": "Oui, j'ai mon passeport et ma carte de résident étranger."
+    },
+    {
+     "s": "은행원",
+     "t": "이 서류를 작성해 주세요.",
+     "fr": "Remplissez ce formulaire, s'il vous plaît."
+    },
+    {
+     "q": "Que veut faire Mark ?",
+     "o": [
+      "Ouvrir un compte",
+      "Changer de l'argent",
+      "Payer une facture"
+     ],
+     "a": 0
+    },
+    {
+     "s": "마크",
+     "t": "체크카드도 만들 수 있어요?",
+     "fr": "Je peux aussi avoir une carte de débit ?"
+    },
+    {
+     "s": "은행원",
+     "t": "네, 오늘 바로 받으실 수 있어요.",
+     "fr": "Oui, vous pouvez l'avoir aujourd'hui même."
+    },
+    {
+     "q": "Quand Mark aura-t-il sa carte ?",
+     "o": [
+      "Aujourd'hui même",
+      "Dans une semaine",
+      "Le mois prochain"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko19",
+   "t": "Un message à transmettre",
+   "ic": "📞",
+   "lv": 1,
+   "cast": {
+    "서연": [
+     "W",
+     "👩"
+    ],
+    "동생": [
+     "M",
+     "👦"
+    ]
+   },
+   "items": [
+    {
+     "s": "서연",
+     "t": "여보세요? 지훈 씨 휴대폰이죠?",
+     "fr": "Allô ? C'est bien le portable de Jihun ?"
+    },
+    {
+     "s": "동생",
+     "t": "네, 그런데 형은 지금 샤워하고 있어요.",
+     "fr": "Oui, mais mon grand frère est sous la douche."
+    },
+    {
+     "s": "서연",
+     "t": "아, 그래요? 저는 서연이라고 해요.",
+     "fr": "Ah bon ? Je m'appelle Seoyeon."
+    },
+    {
+     "s": "동생",
+     "t": "메시지를 전해 드릴까요?",
+     "fr": "Je lui transmets un message ?"
+    },
+    {
+     "q": "Pourquoi Jihun ne répond-il pas ?",
+     "o": [
+      "Il est sous la douche",
+      "Il dort",
+      "Il est au travail"
+     ],
+     "a": 0
+    },
+    {
+     "s": "서연",
+     "t": "네, 내일 약속 시간이 일곱 시로 바뀌었다고 전해 주세요.",
+     "fr": "Oui, dites-lui que le rendez-vous de demain est déplacé à sept heures."
+    },
+    {
+     "s": "동생",
+     "t": "알겠어요. 꼭 전할게요.",
+     "fr": "D'accord. Je lui dirai sans faute."
+    },
+    {
+     "q": "À quelle heure est le rendez-vous de demain ?",
+     "o": [
+      "À sept heures",
+      "À six heures",
+      "À midi"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko20",
+   "t": "Une soirée au cinéma",
+   "ic": "🎬",
+   "lv": 1,
+   "cast": {
+    "하준": [
+     "M",
+     "👨"
+    ],
+    "지아": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "하준",
+     "t": "이번 주말에 영화 볼래요?",
+     "fr": "On va voir un film ce week-end ?"
+    },
+    {
+     "s": "지아",
+     "t": "좋아요! 무슨 영화를 볼까요?",
+     "fr": "Bonne idée ! On regarde quel film ?"
+    },
+    {
+     "s": "하준",
+     "t": "새로 나온 코미디 영화가 재미있대요.",
+     "fr": "Il paraît que la nouvelle comédie est drôle."
+    },
+    {
+     "s": "지아",
+     "t": "저는 무서운 영화만 아니면 다 좋아요.",
+     "fr": "Tout me va, sauf les films d'horreur."
+    },
+    {
+     "q": "Quel genre de film Jia n'aime-t-elle pas ?",
+     "o": [
+      "Les films d'horreur",
+      "Les comédies",
+      "Les films d'amour"
+     ],
+     "a": 0
+    },
+    {
+     "s": "하준",
+     "t": "그럼 토요일 저녁 여섯 시 표를 예매할게요.",
+     "fr": "Alors je réserve des places pour samedi soir, six heures."
+    },
+    {
+     "s": "지아",
+     "t": "고마워요. 팝콘은 제가 살게요!",
+     "fr": "Merci. C'est moi qui paie le pop-corn !"
+    },
+    {
+     "q": "Que va acheter Jia ?",
+     "o": [
+      "Le pop-corn",
+      "Les billets",
+      "Le dîner"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko21",
+   "t": "Chez le médecin",
+   "ic": "🩺",
+   "lv": 1,
+   "cast": {
+    "의사": [
+     "M",
+     "👨‍⚕️"
+    ],
+    "소피": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "의사",
+     "t": "어디가 아프세요?",
+     "fr": "Où avez-vous mal ?"
+    },
+    {
+     "s": "소피",
+     "t": "어제부터 머리가 아프고 열이 나요.",
+     "fr": "Depuis hier, j'ai mal à la tête et de la fièvre."
+    },
+    {
+     "s": "의사",
+     "t": "기침도 하세요?",
+     "fr": "Vous toussez aussi ?"
+    },
+    {
+     "s": "소피",
+     "t": "네, 조금 해요. 목도 아파요.",
+     "fr": "Oui, un peu. J'ai aussi mal à la gorge."
+    },
+    {
+     "q": "Depuis quand Sophie est-elle malade ?",
+     "o": [
+      "Depuis hier",
+      "Depuis une semaine",
+      "Depuis ce matin"
+     ],
+     "a": 0
+    },
+    {
+     "s": "의사",
+     "t": "감기네요. 약을 드시고 푹 쉬세요.",
+     "fr": "C'est un rhume. Prenez vos médicaments et reposez-vous bien."
+    },
+    {
+     "s": "소피",
+     "t": "약은 어떻게 먹어요?",
+     "fr": "Comment dois-je prendre les médicaments ?"
+    },
+    {
+     "s": "의사",
+     "t": "하루에 세 번, 식후에 드세요.",
+     "fr": "Trois fois par jour, après les repas."
+    },
+    {
+     "q": "Qu'a Sophie ?",
+     "o": [
+      "Un rhume",
+      "Une jambe cassée",
+      "Une allergie"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
    "id": "ko2",
    "t": "Chez la grand-mère",
    "ic": "🍲",
@@ -4290,6 +5966,209 @@
    ]
   },
   {
+   "id": "ko22",
+   "t": "Visiter un studio",
+   "ic": "🏠",
+   "lv": 2,
+   "cast": {
+    "중개인": [
+     "M",
+     "🧑‍💼"
+    ],
+    "엠마": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "중개인",
+     "t": "이 원룸은 지하철역에서 걸어서 오 분 거리예요.",
+     "fr": "Ce studio est à cinq minutes à pied du métro."
+    },
+    {
+     "s": "엠마",
+     "t": "방이 밝고 깨끗하네요. 월세가 얼마예요?",
+     "fr": "La pièce est claire et propre. Le loyer est de combien ?"
+    },
+    {
+     "s": "중개인",
+     "t": "보증금 오백만 원에 월세 오십만 원이에요.",
+     "fr": "Cinq millions de wons de caution et 500 000 wons de loyer."
+    },
+    {
+     "s": "엠마",
+     "t": "관리비는 포함돼 있어요?",
+     "fr": "Les charges sont comprises ?"
+    },
+    {
+     "q": "Où se trouve le studio ?",
+     "o": [
+      "À cinq minutes à pied du métro",
+      "Loin du centre-ville",
+      "À côté de l'aéroport"
+     ],
+     "a": 0
+    },
+    {
+     "s": "중개인",
+     "t": "아니요, 관리비는 한 달에 오만 원 따로 내셔야 해요.",
+     "fr": "Non, les charges sont de 50 000 wons par mois, en plus."
+    },
+    {
+     "s": "엠마",
+     "t": "생각해 보고 내일까지 연락드릴게요.",
+     "fr": "Je réfléchis et je vous recontacte d'ici demain."
+    },
+    {
+     "q": "Les charges sont-elles comprises dans le loyer ?",
+     "o": [
+      "Non, 50 000 wons en plus",
+      "Oui, tout est compris",
+      "Il n'y a pas de charges"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko23",
+   "t": "Un colis pour la France",
+   "ic": "📮",
+   "lv": 2,
+   "cast": {
+    "직원": [
+     "W",
+     "👩‍💼"
+    ],
+    "루카": [
+     "M",
+     "👨"
+    ]
+   },
+   "items": [
+    {
+     "s": "루카",
+     "t": "이 소포를 프랑스로 보내고 싶은데요.",
+     "fr": "Je voudrais envoyer ce colis en France."
+    },
+    {
+     "s": "직원",
+     "t": "안에 뭐가 들어 있어요?",
+     "fr": "Qu'est-ce qu'il y a dedans ?"
+    },
+    {
+     "s": "루카",
+     "t": "책하고 과자가 들어 있어요.",
+     "fr": "Il y a des livres et des gâteaux."
+    },
+    {
+     "s": "직원",
+     "t": "항공편으로 보내시면 일주일쯤 걸려요.",
+     "fr": "Par avion, ça prend environ une semaine."
+    },
+    {
+     "q": "Que contient le colis ?",
+     "o": [
+      "Des livres et des gâteaux",
+      "Des vêtements",
+      "Un ordinateur"
+     ],
+     "a": 0
+    },
+    {
+     "s": "루카",
+     "t": "배편은 더 싸요?",
+     "fr": "Par bateau, c'est moins cher ?"
+    },
+    {
+     "s": "직원",
+     "t": "네, 하지만 두 달이나 걸려요.",
+     "fr": "Oui, mais ça prend bien deux mois."
+    },
+    {
+     "s": "루카",
+     "t": "그럼 항공편으로 보낼게요.",
+     "fr": "Alors je l'envoie par avion."
+    },
+    {
+     "q": "Comment Luca envoie-t-il son colis ?",
+     "o": [
+      "Par avion",
+      "Par bateau",
+      "Par train"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko24",
+   "t": "Le Nouvel An chez grand-mère",
+   "ic": "🎎",
+   "lv": 2,
+   "cast": {
+    "할머니": [
+     "W",
+     "👵"
+    ],
+    "준": [
+     "M",
+     "👦"
+    ]
+   },
+   "items": [
+    {
+     "s": "준",
+     "t": "할머니, 새해 복 많이 받으세요!",
+     "fr": "Grand-mère, bonne année !"
+    },
+    {
+     "s": "할머니",
+     "t": "그래, 우리 준이도 새해 복 많이 받아라.",
+     "fr": "Oui, bonne année à toi aussi, mon petit Jun."
+    },
+    {
+     "s": "준",
+     "t": "세배 드릴게요.",
+     "fr": "Je vais vous faire la révérence du Nouvel An."
+    },
+    {
+     "s": "할머니",
+     "t": "아이고, 많이 컸구나. 여기 세뱃돈이다.",
+     "fr": "Oh là là, comme tu as grandi. Tiens, voici tes étrennes."
+    },
+    {
+     "q": "Que fait Jun pour sa grand-mère ?",
+     "o": [
+      "La révérence du Nouvel An",
+      "Un gâteau",
+      "Une chanson"
+     ],
+     "a": 0
+    },
+    {
+     "s": "준",
+     "t": "감사합니다! 떡국 냄새가 정말 좋아요.",
+     "fr": "Merci ! Le tteokguk sent vraiment bon."
+    },
+    {
+     "s": "할머니",
+     "t": "떡국을 먹어야 한 살 더 먹는 거야. 많이 먹어라.",
+     "fr": "C'est en mangeant du tteokguk qu'on prend un an de plus. Mange bien."
+    },
+    {
+     "q": "Que mange-t-on pour prendre un an de plus ?",
+     "o": [
+      "Du tteokguk",
+      "Des songpyeon",
+      "Du kimchi"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
    "id": "ko13",
    "t": "L'entretien d'embauche",
    "ic": "🤝",
@@ -4396,6 +6275,72 @@
       "Par modestie (formule d'humilité)",
       "Elle est vraiment incompétente",
       "Elle est fâchée"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "ko25",
+   "t": "Le rapport en retard",
+   "ic": "📑",
+   "lv": 3,
+   "cast": {
+    "부장님": [
+     "M",
+     "👨‍💼"
+    ],
+    "김 대리": [
+     "W",
+     "👩‍💼"
+    ]
+   },
+   "items": [
+    {
+     "s": "부장님",
+     "t": "김 대리, 분기 보고서는 어떻게 되어 가고 있습니까?",
+     "fr": "Madame Kim, où en est le rapport trimestriel ?"
+    },
+    {
+     "s": "김 대리",
+     "t": "죄송합니다, 부장님. 자료 취합이 늦어져서 아직 마무리하지 못했습니다.",
+     "fr": "Je suis désolée, monsieur le directeur. La collecte des données a pris du retard et je n'ai pas encore terminé."
+    },
+    {
+     "s": "부장님",
+     "t": "언제까지 제출할 수 있겠습니까?",
+     "fr": "Pour quand pouvez-vous le remettre ?"
+    },
+    {
+     "s": "김 대리",
+     "t": "내일 오전까지 반드시 제출하도록 하겠습니다.",
+     "fr": "Je le remettrai sans faute demain matin."
+    },
+    {
+     "q": "Pourquoi le rapport est-il en retard ?",
+     "o": [
+      "La collecte des données a pris du retard",
+      "Mme Kim était en congé",
+      "L'ordinateur est tombé en panne"
+     ],
+     "a": 0
+    },
+    {
+     "s": "부장님",
+     "t": "알겠습니다. 혹시 도움이 필요하면 미리 말씀하세요.",
+     "fr": "Entendu. Si vous avez besoin d'aide, dites-le à l'avance."
+    },
+    {
+     "s": "김 대리",
+     "t": "네, 감사합니다. 다음부터는 일정을 더 꼼꼼히 챙기겠습니다.",
+     "fr": "Oui, merci. À l'avenir, je suivrai le planning de plus près."
+    },
+    {
+     "q": "Quand le rapport sera-t-il remis ?",
+     "o": [
+      "Demain matin",
+      "Ce soir",
+      "La semaine prochaine"
      ],
      "a": 0
     }

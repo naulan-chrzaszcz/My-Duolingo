@@ -191,6 +191,9 @@ SSL
   fi
   systemctl enable -q --now certbot-renew.timer 2>/dev/null && ok "Renouvellement automatique du certificat activé"
   sed -i "s#^\$VAPID_SUBJECT = .*#\$VAPID_SUBJECT = 'mailto:$EMAIL';  // adresse exigée par Apple / Google#" "$DIR/api/remind.php"
+  # v32 : l'adresse est aussi rangée dans api/data/config.php, que les mises à jour (unzip) n'écrasent pas
+  php -r '$f=$argv[1]; $c=is_file($f)?(include $f):[]; if(!is_array($c))$c=[]; $c["vapid_subject"]="mailto:".$argv[2]; file_put_contents($f,"<?php\n// Réglages du serveur, conservés lors des mises à jour : vapid_subject, cron_key, api_key.\nreturn ".var_export($c,true).";\n");' "$DIR/api/data/config.php" "$EMAIL" \
+    && chown apache:apache "$DIR/api/data/config.php" && chmod 640 "$DIR/api/data/config.php" && ok "Adresse des rappels enregistrée dans api/data/config.php (conservée aux prochaines mises à jour)"
   if [ "$HTTPS_OK" = 1 ]; then
     c=$(curl -s -o /dev/null -w '%{http_code}' "https://$MAIN$URLPATH/api/account.php?a=ping"); [ "$c" = 200 ] && ok "https://$MAIN$URLPATH/ répond ($c)" || warn "https://$MAIN$URLPATH/ répond $c"
   fi

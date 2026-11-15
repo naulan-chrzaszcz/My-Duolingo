@@ -31,10 +31,10 @@ export function onboarding(who) {
   const step2 = () => {
     const m = modal(
       `<div class="mcenter">${mascot("wow", "jump")}<h2>Ton objectif quotidien ?</h2><p>Tu pourras le changer dans les paramètres.</p></div><div class="choices">${[
-        [10, "Tranquille", "5 min / jour", "🌱"],
-        [20, "Normal", "10 min / jour", "🙂"],
-        [30, "Sérieux", "15 min / jour", "💪"],
-        [50, "Intense", "20+ min / jour", "🚀"],
+        [50, "Tranquille", "2 min / jour", "🌱"],
+        [100, "Normal", "5 min / jour", "🙂"],
+        [200, "Sérieux", "10 min / jour", "💪"],
+        [400, "Intense", "20+ min / jour", "🚀"],
       ]
         .map(
           ([x, l, d, e]) =>
@@ -62,7 +62,7 @@ export function onboarding(who) {
     const cid = curCid();
     const C = COURSES[cid];
     const m = modal(
-      `<div class="mcenter">${mascot("happy", "jump")}<h2>Tu pars de zéro ?</h2><p>${C.icon} ${esc(C.name)}${SECTIONS.find(x => x.id === sec).tracks.length > 1 ? " (tu pourras tester aussi les autres parcours)" : ""}</p></div><div class="choices"><button data-p="0"><span class="e">🌱</span><span>Je débute<small>Commencer au tout début du parcours</small></span></button><button data-p="1"><span class="e">🎯</span><span>J'ai déjà des bases<small>Test de niveau de 5 minutes pour démarrer au bon endroit</small></span></button></div>`,
+      `<div class="mcenter">${mascot("happy", "jump")}<h2>Tu pars de zéro ?</h2><p>${C.icon} ${esc(C.name)}${SECTIONS.find(x => x.id === sec).tracks.length > 1 ? " (tu pourras tester aussi les autres parcours)" : ""}</p></div><div class="choices"><button data-p="0"><span class="e">🌱</span><span>Je débute<small>Commencer au tout début du parcours</small></span></button><button data-p="1"><span class="e">🎯</span><span>J'ai déjà des bases<small>Test de niveau de 10 minutes pour démarrer au bon endroit</small></span></button></div>`,
       "",
       true,
     );

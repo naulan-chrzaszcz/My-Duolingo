@@ -12,12 +12,26 @@ import { renderAll } from "../ui/router.js";
 import { closeModal, confetti, modal, toast } from "../ui/ui.js";
 
 // ===================== TEST DE NIVEAU (adaptatif, 4 paliers) =====================
-export const PLACE_N = 6,
-  PLACE_OK = 4;
+// v32 : 12 questions par palier (au lieu de 6), 9 bonnes réponses pour passer (75 %)
+export const PLACE_N = 12,
+  PLACE_OK = 9;
 export const PLACE_T = {
-  trans: ["mc", "choice", "listen", "type", "tilesRev", "mcw"],
-  toeic: ["photo", "part2", "choice", "conv", "read", "choice"],
-  volt: ["spot", "choice", "spot", "dictee", "choice", "spot"],
+  trans: [
+    "mc",
+    "choice",
+    "listen",
+    "type",
+    "tilesRev",
+    "mcw",
+    "choice",
+    "type",
+    "listenTiles",
+    "spot",
+    "choice",
+    "tiles",
+  ],
+  toeic: ["photo", "part2", "choice", "conv", "read", "choice", "part2", "choice", "conv", "read", "spot", "choice"],
+  volt: ["spot", "choice", "spot", "dictee", "choice", "spot", "choice", "spot", "dictee", "choice", "spot", "choice"],
 };
 export function placeEstimate(cid, p) {
   const k = COURSES[cid].kind;
@@ -47,6 +61,17 @@ export function placeEstimate(cid, p) {
     ][p];
   return "Niveau estimé (CECRL) : " + ["A1 · débutant", "A2", "B1", "B2", "C1 ou plus"][p];
 }
+/** v32 : un chapitre validé au test compte comme terminé (toutes les étapes de ses unités sont cochées). */
+export function placeValidate(s, cid) {
+  const p = (s.place || {})[cid] || 0,
+    C = COURSES[cid];
+  if (!p || !C) return;
+  s.dn = s.dn || {};
+  s.dn[cid] = s.dn[cid] || {};
+  C.units.forEach((U, u) => {
+    if (!U.gen && (U.lv || 0) < p) s.dn[cid][u] = FULL;
+  });
+}
 export function placeStageExs(cid, k) {
   const C = COURSES[cid];
   const base = C.units.filter(U => !U.gen && U.lv === k);
@@ -57,9 +82,9 @@ export function placeStageExs(cid, k) {
     const ch = ctxFor(cid, hg);
     ch.allHj = hg.flatMap(x => x.hj || []);
     const cr = ctxFor(cid, rest.length ? rest : hg);
-    return ["readw", "hear", "readw"]
+    return ["readw", "hear", "readw", "hear", "readw", "hear"]
       .map(t => make(t, ch))
-      .concat(["mc", "listen", "choice"].map(t => make(t, cr)))
+      .concat(["mc", "listen", "choice", "mcw", "tilesRev", "choice"].map(t => make(t, cr)))
       .filter(Boolean);
   }
   const ctx = ctxFor(cid, cid === "ko" ? base.filter(U => !U.hg) : base, { hideP2: true });
@@ -73,7 +98,7 @@ export function placeIntro(cid) {
   const C = COURSES[cid];
   const prev = S.place && S.place[cid] != null && S.placeTs && S.placeTs[cid];
   const m = modal(
-    `<div class="mcenter">${mascot("wow", "jump")}<h2>🎯 Test de niveau · ${C.icon} ${esc(C.name)}</h2><p>4 paliers de ${PLACE_N} questions, du niveau Facile au niveau Expert. Avec ${PLACE_OK} bonnes réponses sur ${PLACE_N}, tu passes au palier suivant ; sinon le test s'arrête. Environ 5 minutes, sans pénalité.</p><p style="font-size:14px">Ensuite, ton étape conseillée démarre à ton niveau. Les unités en dessous restent ouvertes si tu veux les revoir.${prev ? "<br>Dernier résultat : " + esc(placeEstimate(cid, S.place[cid])) : ""}</p><button class="btn big" id="pgo">Commencer le test</button><button class="btn ghost" onclick="closeModal()">Plus tard</button></div>`,
+    `<div class="mcenter">${mascot("wow", "jump")}<h2>🎯 Test de niveau · ${C.icon} ${esc(C.name)}</h2><p>4 paliers de ${PLACE_N} questions, du niveau Facile au niveau Expert. Avec ${PLACE_OK} bonnes réponses sur ${PLACE_N}, tu passes au palier suivant ; sinon le test s'arrête. Environ 10 minutes, sans pénalité.</p><p style="font-size:14px">Ensuite, ton étape conseillée démarre à ton niveau. Les chapitres validés au test sont comptés comme terminés ; tu peux quand même les revoir.${prev ? "<br>Dernier résultat : " + esc(placeEstimate(cid, S.place[cid])) : ""}</p><button class="btn big" id="pgo">Commencer le test</button><button class="btn ghost" onclick="closeModal()">Plus tard</button></div>`,
   );
   m.querySelector("#pgo").onclick = () => {
     closeModal();
@@ -122,11 +147,12 @@ export function placeDone(cid, p, hist) {
       S.dn.ko[i] = FULL;
     });
   }
+  placeValidate(S, cid);
   syncProg(cid);
   const tot = hist.reduce((a, h) => a + h[0], 0),
     q = hist.reduce((a, h) => a + h[1], 0);
-  S.xp += 10;
-  addToday(10);
+  S.xp += 50;
+  addToday(50);
   save();
   const ns = nextStep(cid);
   const start = ns

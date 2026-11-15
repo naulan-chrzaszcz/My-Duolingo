@@ -378,7 +378,7 @@ export function playStory(sec, st) {
     if (!L) return;
     document.querySelectorAll(".wpop").forEach(x => x.remove());
     if (i >= st.items.length) {
-      L.xp = 15 + (L.wrong ? 0 : 5);
+      L.xp = 60 + (L.wrong ? 0 : 20); // v32 : 60 à 80 XP
       L.done = L.total;
       if (L.saved)
         toast(`📌 ${L.saved} mot${L.saved > 1 ? "s" : ""} ajouté${L.saved > 1 ? "s" : ""} à « Mes mots à retenir »`);

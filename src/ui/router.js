@@ -118,7 +118,7 @@ export function renderTop() {
   const st = $("#stats");
   const streakToday = S.lastDay === dkey();
   const tx = todayXp(),
-    goal = S.goal || 20;
+    goal = S.goal || 100;
   st.innerHTML = `<button class="stat streak ${streakToday ? "" : "off"}" id="tStreak" title="Série">${ic("flame", 24, "", 2.4, "currentColor")}<span>${S.streak}</span></button><button class="stat gem" id="tGem" title="Gemmes">${ic("gem", 24, "", 2.2, "currentColor")}<span>${S.gems}</span></button><button class="stat xpg ${tx >= goal ? "met" : ""}" id="tXp" title="Objectif du jour">${ic("bolt", 24, "", 2.2, "currentColor")}<span>${tx}</span></button>`;
   $("#tGem").onclick = () => {
     location.hash = "boutique";

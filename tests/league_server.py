@@ -26,6 +26,11 @@ for n,x in [('민지',120),('Ana',80),('Chloé',300)]: call('save',{'token':tok[
 call('save',{'token':tok['Ana'],'state':st,'ts':4,'wxp':450,'week':W(1),'xp':2080,'streak':12})
 j=call('board',{'week':W(0),'prev':W(1),'token':tok['Ana']})
 print('cette semaine :',[(r['name'],r['wxp'],r['m']) for r in j['rows']])
+# v32 : tous les comptes sont listés, les inactifs à 0 XP en bas ; un inactif a quand même un rang
+names=[r['name'] for r in j['rows']]; xs=[r['wxp'] for r in j['rows']]
+if len(names)!=j['members'] or xs!=sorted(xs,reverse=True) or 'Ben' not in names or 'Dan' not in names or xs[names.index('Ben')]!=0: print('NOT OK : classement de la semaine incomplet',names,xs)
+ben=call('board',{'week':W(0),'prev':W(1),'token':tok['Ben']})['me']
+if ben.get('wrank')!=names.index('Ben')+1: print('NOT OK : rang du compte inactif',ben,names)
 print('depuis toujours :',[(r['name'],r['xp'],r['streak']) for r in j['all']][:6])
 print('podium semaine dernière :',[(r['name'],r['wxp']) for r in j['last']])
 print('moi (Ana) :',j['me'],'| membres',j['members'])

@@ -112,6 +112,8 @@ export interface State {
   streak: number;
   lastDay: string | null;
   goal: number;
+  /** Version du barème d'XP (2 = v32). */
+  xpv?: number;
   week: Record<string, number>;
   freeze: number;
   boostUntil: number;

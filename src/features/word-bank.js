@@ -10,6 +10,7 @@ import { NONFR } from "../i18n/locale.js";
 import { L, openSession } from "../lesson/engine.js";
 import { AI, aiEnrich } from "../services/ai.js";
 import { SR, beep, micBroken, say } from "../services/speech.js";
+import { ic } from "../ui/icons.js";
 import { curSec } from "../ui/router.js";
 import { closeModal, modal, toast } from "../ui/ui.js";
 
@@ -29,7 +30,7 @@ export function bankView() {
       ? '<span class="due">à revoir</span>'
       : `<span class="later">dans ${Math.max(1, Math.round((w.due - now) / 864e5))} j</span>`;
   const m =
-    modal(`<h2>📌 Mes mots à retenir ${s.flag}</h2><div class="bankbar"><button class="btn goldb" id="btrain" ${list.length ? "" : "disabled"}>S'entraîner · ${bankDue(s.id) || list.length} mot(s)</button></div><p>Ajoute un mot ou une expression vu aujourd'hui. Tu t'entraînes dessus tout de suite, puis il revient après 1, 3, 7, 14 et 30 jours tant que tu ne le maîtrises pas.</p>
+    modal(`<h2 class="hic">${ic("pin", 24, "", 2.4)}<span>Mes mots à retenir</span></h2><div class="bankbar"><button class="btn goldb" id="btrain" ${list.length ? "" : "disabled"}>S'entraîner · ${bankDue(s.id) || list.length} mot(s)</button></div><p>Ajoute un mot ou une expression vu aujourd'hui. Tu t'entraînes dessus tout de suite, puis il revient après 1, 3, 7, 14 et 30 jours tant que tu ne le maîtrises pas.</p>
   <div class="bankadd"><input class="finput" id="bw" maxlength="60" placeholder="${s.id === "ko" ? "Ex. : 감사합니다" : s.id === "fr" ? "Ex. : quoique" : "Ex. : to look forward to"}" lang="${lang}"><input class="finput" id="bt" maxlength="80" placeholder="${s.id === "fr" ? "Définition (facultatif)" : "Traduction (facultatif)"}"><button class="btn" id="badd">Ajouter</button></div>
   <p class="micnote" style="text-align:left;margin:6px 0 0">${AI.mode === "local" ? "Sans IA configurée, pense à écrire la traduction." : "Laisse la traduction vide : l'IA la complète avec un exemple."}</p>
   <div class="vlist" id="blist">${
@@ -39,7 +40,7 @@ export function bankView() {
           .reverse()
           .map(
             w =>
-              `<div class="vitem bitem" data-id="${w.id}"><button class="spk" data-a="n" aria-label="Écouter">🔊</button><button class="spk" data-a="s" style="background:#8FB9FF" aria-label="Lentement">🐢</button><button class="spk" data-a="m" style="background:var(--ok)" aria-label="Prononcer">🎙️</button><div class="tg">${esc(w.w)}${w.rom ? `<div class="rom">${esc(w.rom)}</div>` : ""}<div class="fr">${w.tr ? esc(w.tr) : w.pending ? "⏳ traduction en cours…" : "(sans traduction)"}${w.ex ? `<br><i>${esc(w.ex)}</i>${w.exTr ? ` — ${esc(w.exTr)}` : ""}` : ""}</div><div class="micres"></div></div>${st(w)}<button class="iconbtn" data-a="x" aria-label="Supprimer">🗑️</button></div>`,
+              `<div class="vitem bitem" data-id="${w.id}"><div class="tg"><b class="bw">${esc(w.w)}</b>${w.rom ? `<div class="rom">${esc(w.rom)}</div>` : ""}<div class="fr">${w.tr ? esc(w.tr) : w.pending ? "⏳ traduction en cours…" : "(sans traduction)"}</div>${w.ex ? `<div class="bex"><i>${esc(w.ex)}</i>${w.exTr ? `<small>${esc(w.exTr)}</small>` : ""}</div>` : ""}<div class="micres"></div></div><div class="bacts"><button class="spk" data-a="n" aria-label="Écouter">${ic("volume", 18, "", 2.4)}</button><button class="spk slow" data-a="s" aria-label="Lentement">${ic("turtle", 18, "", 2.4)}</button><button class="spk say" data-a="m" aria-label="Prononcer">${ic("mic", 18, "", 2.4)}</button>${st(w)}<button class="iconbtn bdel" data-a="x" aria-label="Supprimer">${ic("trash", 20, "", 2.2)}</button></div></div>`,
           )
           .join("")
       : '<div class="empty">Aucun mot pour l\'instant.</div>'

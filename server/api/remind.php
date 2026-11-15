@@ -15,6 +15,12 @@ $CRON_KEY = '';                                  // ex. 'une-longue-cle-secrete'
 $VAPID_SUBJECT = 'mailto:ton-email@exemple.fr';  // ton adresse e-mail (exigée par Apple / Google)
 $DB_PATH = __DIR__ . '/data/speakeasy.sqlite';
 $VAPID_FILE = __DIR__ . '/data/vapid.json';
+// v32 : réglages gardés dans api/data/config.php (écrit par l'installateur), pour qu'une mise à jour du site ne les efface plus
+$CFG = is_file(__DIR__ . '/data/config.php') ? (include __DIR__ . '/data/config.php') : [];
+if (is_array($CFG)) {
+  if (!empty($CFG['vapid_subject'])) $VAPID_SUBJECT = (string)$CFG['vapid_subject'];
+  if (!empty($CFG['cron_key'])) $CRON_KEY = (string)$CFG['cron_key'];
+}
 
 if (PHP_SAPI !== 'cli') {
   header('Content-Type: text/plain; charset=utf-8');

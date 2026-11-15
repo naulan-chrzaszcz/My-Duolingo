@@ -22,6 +22,8 @@
  */
 
 $API_KEY      = getenv('ANTHROPIC_API_KEY') ?: '';   // FACULTATIF : clé commune (ou 'sk-ant-...')
+// v32 : la clé commune peut aussi être rangée dans api/data/config.php ('api_key'), que les mises à jour n'écrasent pas
+if ($API_KEY === '' && is_file(__DIR__ . '/data/config.php')) { $CFG = include __DIR__ . '/data/config.php'; if (is_array($CFG) && !empty($CFG['api_key'])) $API_KEY = (string)$CFG['api_key']; }
 $MODEL        = 'claude-haiku-5-5';                   // modèle de la clé commune : rapide et économique
 $USER_MODELS  = ['claude-haiku-5-5', 'claude-sonnet-5-5', 'claude-opus-5-5'];
 $MAX_PER_HOUR = 30;                                   // générations max par heure et par adresse IP

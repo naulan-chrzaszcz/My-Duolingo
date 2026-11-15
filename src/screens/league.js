@@ -30,12 +30,13 @@ export function weekXp(st, off = 0) {
   return x;
 }
 export const TIERS = [
+  // v32 : seuils relevés (une leçon rapporte 150 à 190 XP) : Or ≈ 5 leçons, Diamant ≈ 3 à 4 leçons par jour
   [0, "Bronze", "🥉", "#C27A3A"],
-  [100, "Argent", "🥈", "#8E9BB0"],
-  [300, "Or", "🥇", "#DFA300"],
-  [600, "Saphir", "💎", "#3D8BFF"],
-  [1000, "Rubis", "♦️", "#E0457B"],
-  [1500, "Diamant", "💠", "#13A8A8"],
+  [300, "Argent", "🥈", "#8E9BB0"],
+  [800, "Or", "🥇", "#DFA300"],
+  [1500, "Saphir", "💎", "#3D8BFF"],
+  [2500, "Rubis", "♦️", "#E0457B"],
+  [4000, "Diamant", "💠", "#13A8A8"],
 ];
 /** Couleurs des coupes de ligue (face, contour), dans l'ordre de TIERS. */
 export const TROPHY = [
@@ -149,12 +150,14 @@ export function renderBoard(box, B, myWxp) {
   const draw = () => {
     const all = LG_TAB === "a",
       rows = all ? al : wk;
-    const pod = rows.length >= 3 ? [rows[1], rows[0], rows[2]] : null;
+    // v32 : le podium ne montre que des membres qui ont gagné de l'XP ; les autres restent dans la liste, à 0 XP
+    const active = all ? rows.length : rows.filter(r => r.wxp > 0).length;
+    const pod = active >= 3 ? [rows[1], rows[0], rows[2]] : null;
     const rest = pod ? rows.slice(3) : rows;
     const rank = B.me ? (all ? B.me.arank : B.me.wrank) : 0;
     box.innerHTML = `<h3>🌍 Classement de tous les membres <span class="lgcount notr">👥 ${B.members}</span></h3>
   <div class="lgtabs"><button class="${all ? "" : "on"}" data-t="w">Cette semaine</button><button class="${all ? "on" : ""}" data-t="a">Depuis toujours</button></div>
-  ${rows.length ? "" : `<div class="empty">${all ? "Aucun membre pour l'instant." : "Personne n'a encore gagné d'XP cette semaine. Sois la première !"}</div>`}
+  ${active ? "" : `<div class="empty">${all ? "Aucun membre pour l'instant." : "Personne n'a encore gagné d'XP cette semaine. Sois la première !"}</div>`}
   ${
     pod
       ? `<div class="podium">${pod
@@ -165,7 +168,7 @@ export function renderBoard(box, B, myWxp) {
           .join("")}</div>`
       : ""
   }
-  ${rest.map((r, i) => `<div class="lrow ${r.name === me ? "me" : ""}"><span class="lrank">${rankMark(pod ? i + 4 : i + 1)}</span>${avatar(r, 40)}<div class="lname"><b class="notr">${esc(r.name)}</b>${sub(r, all)}</div><span class="lx notr">${val(r, all)}</span></div>`).join("")}
+  ${rest.map((r, i) => `<div class="lrow ${r.name === me ? "me" : ""} ${!all && !r.wxp ? "idle" : ""}"><span class="lrank">${rankMark(pod ? i + 4 : i + 1)}</span>${avatar(r, 40)}<div class="lname"><b class="notr">${esc(r.name)}</b>${sub(r, all)}</div><span class="lx notr">${val(r, all)}</span></div>`).join("")}
   ${rank > 50 ? `<div class="lrow me"><span class="lrank">${rank}</span>${avatar(acc, 40)}<div class="lname"><b class="notr">${esc(me)}</b></div><span class="lx notr">${val({ xp: S.xp, wxp: myWxp }, all)}</span></div>` : ""}
   ${online ? "" : '<p class="secsub" style="margin:10px 0 0">Crée un compte en ligne pour apparaître dans ce classement.</p>'}
   <div class="lprize"><span>Fin de semaine :</span> <b>+50</b>, <b>+30</b> <span>et</span> <b>+20 💎</b> <span>pour le podium.</span></div>

@@ -30,7 +30,13 @@ export function ctxFor(cid, units, o = {}) {
       mp: shuffle(g("mp")),
       allHj: C.units.flatMap(u => u.hj || []),
       ph: shuffle(g("ph")),
-      pk: shuffle(g("pk").filter(hasPic)),
+      // v32 : exercices en images seulement aux chapitres 1 et 2 (trop faciles ensuite) ; le guide garde les images
+      pk: shuffle(
+        units
+          .filter(u => (u.lv || 0) <= 1)
+          .flatMap(u => u.pk || [])
+          .filter(hasPic),
+      ),
       c: shuffle(g("c")),
       l: shuffle(g("l")),
       d: shuffle(g("dd")),

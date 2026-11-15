@@ -7,7 +7,7 @@ import { $, dkey, esc, yest } from "../core/util.js";
 import { level, lvlXp } from "../core/xp.js";
 import { pairOf } from "../exercises/generate.js";
 import { shareProgress } from "../features/coach.js";
-import { BADGES } from "../features/quests.js";
+import { BADGES, BADGE_MEDAL } from "../features/quests.js";
 import { KO_READY, UI } from "../i18n/locale.js";
 import { unlockedUnits } from "../lesson/build.js";
 import { accountForm, accountPicker, deleteAcc, exportAcc, importAcc, openAccount } from "./accounts.js";
@@ -59,25 +59,7 @@ export function renderProfile(v) {
       return `<button class="pacc ${a.id === ACC.current ? "cur" : ""}" data-acc="${a.id}" aria-label="${esc(a.name)}"><span class="pav">${avatar(a, 62)}${sk ? `<i>${ic("flame", 13, "", 2.4, "#FFE1BF")}${sk}</i>` : ""}</span><span class="notr">${esc(a.name)}</span></button>`;
     })
     .join("");
-  const BM = {
-    first: ["egg", "#22B573", "#178A57", "1"],
-    l10: ["book", "#3D8BFF", "#1D5FC2", "10"],
-    l50: ["cap", "#7C4DFF", "#5A30D8", "50"],
-    s3: ["flame", "#FF9F1C", "#C2410C", "3"],
-    s7: ["flame", "#FF7A3C", "#C2410C", "7"],
-    s30: ["flame", "#E8434F", "#A8203F", "30"],
-    x500: ["bolt", "#FFB020", "#B45309", "500"],
-    x2000: ["star", "#FFC83D", "#C98B00", "2000"],
-    perf: ["hundred", "#22B573", "#178A57", "1"],
-    perf10: ["crown", "#FFB020", "#B45309", "10"],
-    combo15: ["target", "#E0457B", "#A8203F", "15"],
-    speak10: ["mic", "#13A8A8", "#0C7F7F", "10"],
-    toeic: ["brief", "#7C4DFF", "#5A30D8", ""],
-    volt: ["feather", "#3D8BFF", "#1D5FC2", ""],
-    ko: ["tiger", "#FF9F1C", "#C2410C", ""],
-    sprint: ["timer", "#E0457B", "#A8203F", "15"],
-    story: ["open", "#13A8A8", "#0C7F7F", ""],
-  };
+  const BM = BADGE_MEDAL;
   const badges = BADGES.map((x, i) => {
     const on = S.badges.includes(x.id);
     const [k, c, d, num] = BM[x.id] || ["star", "#7C4DFF", "#5A30D8", ""];

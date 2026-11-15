@@ -1,6 +1,6 @@
 // Onglet Quêtes (v29) : quête du mois et quêtes du jour, façon Duolingo
 import { S } from "../core/accounts.js";
-import { QUESTS, QM_GOAL, QM_STEPS, questMonth } from "../features/quests.js";
+import { QM_GOAL, QM_STEPS, questMonth, todayQuests } from "../features/quests.js";
 import { UI } from "../i18n/locale.js";
 import { ic } from "../ui/icons.ts";
 import { mascot } from "../ui/mascot.js";
@@ -33,13 +33,15 @@ export function renderQuests(v) {
     ([n, g]) =>
       `<span class="qmk ${qm.pts >= n ? "on" : ""}" style="left:${(n / QM_GOAL) * 100}%"><b>${n}</b><small>+${g} 💎</small></span>`,
   ).join("");
-  const rows = QUESTS.map((q, i) => {
-    const c = Math.min(q.cur(), q.max()),
-      done = S.q.claimed.includes(q.id);
-    const [col, dk] = CHEST[i % CHEST.length];
-    return `<div class="qrow ${done ? "done" : ""}" style="animation-delay:${(i * 0.06).toFixed(2)}s"><div class="qtx"><b>${q.t()}</b><span class="qbar"><i style="width:${(c / q.max()) * 100}%"></i><em>${c} / ${q.max()}</em></span><small>+${q.g} 💎</small></div>${chestSvg(col, dk, done)}</div>`;
-  }).join("");
+  const rows = todayQuests()
+    .map((q, i) => {
+      const c = Math.min(q.cur(), q.max()),
+        done = S.q.claimed.includes(q.id);
+      const [col, dk] = CHEST[i % CHEST.length];
+      return `<div class="qrow ${done ? "done" : ""}" style="animation-delay:${(i * 0.06).toFixed(2)}s"><div class="qtx"><b>${q.t()}</b><span class="qbar"><i style="width:${(c / q.max()) * 100}%"></i><em>${c} / ${q.max()}</em></span><small>+${q.g} 💎</small></div>${chestSvg(col, dk, done)}</div>`;
+    })
+    .join("");
   v.innerHTML = `<header class="qhero"><div class="qht"><h1>Quête de ${month}</h1><div class="qleft">${ic("clock", 20, "", 2.6)}<span>${days} jours</span></div></div><div class="qmasc">${mascot("happy")}</div>
 <div class="qmcard"><div class="qmt"><b>Gagne ${QM_GOAL} points de quête</b><span>${qm.pts} / ${QM_GOAL}</span></div><div class="qmbar"><i style="width:${pct}%"></i>${marks}</div><p>Chaque quête du jour accomplie rapporte 1 point.</p></div></header>
-<div class="qdhead"><h2>Quêtes du jour</h2><span>${ic("clock", 18, "", 2.6)}<span>${hrs} h</span></span></div><div class="qlist">${rows}</div>`;
+<div class="qdhead"><h2>Quêtes du jour</h2><span>${ic("clock", 18, "", 2.6)}<span class="qhrs"><b class="notr">${hrs}</b> <span>h</span></span></span></div><div class="qlist">${rows}</div>`;
 }

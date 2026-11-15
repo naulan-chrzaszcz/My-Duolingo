@@ -151,7 +151,8 @@ switch ($a) {
     if (!week_ok($week)) out(['ok' => false, 'error' => 'week'], 400);
     try { settle($db, $now); } catch (Exception $e) {}
     $med = medals($db);
-    $s = $db->prepare('SELECT id, name, emoji, color, wxp, xp, streak FROM users WHERE week = ? AND wxp > 0 ORDER BY wxp DESC, id LIMIT 50'); $s->execute([$week]);
+    // v32 : tous les comptes sont classés ; ceux qui n'ont pas joué cette semaine sont à 0 XP, en bas (par XP total)
+    $s = $db->prepare("SELECT * FROM (SELECT id, name, emoji, color, (CASE WHEN COALESCE(week, '') = ? AND wxp > 0 THEN wxp ELSE 0 END) AS wxp, xp, streak FROM users) ORDER BY wxp DESC, (CASE WHEN wxp > 0 THEN 0 ELSE xp END) DESC, id LIMIT 50"); $s->execute([$week]);
     $rows = array_map(function ($r) use ($med) { return pub($r, $med); }, $s->fetchAll(PDO::FETCH_ASSOC));
     $all = array_map(function ($r) use ($med) { return pub($r, $med); }, $db->query('SELECT id, name, emoji, color, 0 AS wxp, xp, streak FROM users WHERE xp > 0 ORDER BY xp DESC, id LIMIT 50')->fetchAll(PDO::FETCH_ASSOC));
     $res = ['ok' => true, 'rows' => $rows, 'all' => $all, 'members' => (int)$db->query('SELECT COUNT(*) FROM users')->fetchColumn(), 'last' => []];
@@ -166,6 +167,7 @@ switch ($a) {
       if ($me = $s->fetch(PDO::FETCH_ASSOC)) {
         $m = ['name' => $me['name']];
         if ($me['week'] === $week && (int)$me['wxp'] > 0) { $s = $db->prepare('SELECT COUNT(*) FROM users WHERE week = ? AND (wxp > ? OR (wxp = ? AND id < ?))'); $s->execute([$week, $me['wxp'], $me['wxp'], $me['id']]); $m['wrank'] = 1 + (int)$s->fetchColumn(); }
+        else { $s = $db->prepare("SELECT (SELECT COUNT(*) FROM users WHERE week = :w AND wxp > 0) + (SELECT COUNT(*) FROM users WHERE NOT (COALESCE(week, '') = :w AND wxp > 0) AND (xp > :x OR (xp = :x AND id < :i)))"); $s->execute([':w' => $week, ':x' => $me['xp'], ':i' => $me['id']]); $m['wrank'] = 1 + (int)$s->fetchColumn(); }
         $s = $db->prepare('SELECT COUNT(*) FROM users WHERE xp > ? OR (xp = ? AND id < ?)'); $s->execute([$me['xp'], $me['xp'], $me['id']]); $m['arank'] = 1 + (int)$s->fetchColumn();
         if (week_ok($prev) && $prev < $week) {
           $s = $db->prepare('SELECT wxp FROM ' . week_sql() . ' WHERE uid = :u'); $s->execute([':w' => $prev, ':u' => $me['id']]);
