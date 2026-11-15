@@ -54,6 +54,48 @@
      "À plus tard !",
      "See you later!",
      "See you!"
+    ],
+    [
+     "Bonsoir, tout le monde.",
+     "Good evening, everyone.",
+     "Good evening, everybody."
+    ],
+    [
+     "D'où viens-tu ?",
+     "Where are you from?",
+     "Where do you come from?"
+    ],
+    [
+     "Je viens de France.",
+     "I'm from France.",
+     "I am from France.",
+     "I come from France."
+    ],
+    [
+     "Tu parles anglais ?",
+     "Do you speak English?"
+    ],
+    [
+     "J'habite près du centre-ville.",
+     "I live near the city center.",
+     "I live near the city centre.",
+     "I live near downtown."
+    ],
+    [
+     "Je suis ingénieure.",
+     "I'm an engineer.",
+     "I am an engineer."
+    ],
+    [
+     "Je travaille dans un hôpital.",
+     "I work in a hospital.",
+     "I work at a hospital."
+    ],
+    [
+     "J'aime beaucoup mon travail.",
+     "I really like my job.",
+     "I like my job a lot.",
+     "I like my job very much."
     ]
    ],
    "v": [
@@ -80,6 +122,30 @@
     [
      "voisin",
      "neighbor"
+    ],
+    [
+     "au revoir",
+     "goodbye"
+    ],
+    [
+     "s'il vous plaît",
+     "please"
+    ],
+    [
+     "pays",
+     "country"
+    ],
+    [
+     "langue",
+     "language"
+    ],
+    [
+     "collègue",
+     "colleague"
+    ],
+    [
+     "bureau",
+     "office"
     ]
    ],
    "orig": 1,
@@ -127,6 +193,61 @@
      ],
      0,
      "Nice to meet you = enchanté(e)."
+    ],
+    [
+     "How ___ you today?",
+     [
+      "are",
+      "is",
+      "do",
+      "be"
+     ],
+     0,
+     "Avec you, le verbe be se conjugue are : How are you?"
+    ],
+    [
+     "Where ___ you from?",
+     [
+      "are",
+      "do",
+      "is",
+      "does"
+     ],
+     0,
+     "Pour l'origine, on dit be from : Where are you from?"
+    ],
+    [
+     "She ___ in Madrid.",
+     [
+      "lives",
+      "live",
+      "living",
+      "is live"
+     ],
+     0,
+     "À la 3e personne du singulier du présent, le verbe prend -s : she lives."
+    ],
+    [
+     "I'm ___ engineer.",
+     [
+      "an",
+      "a",
+      "the",
+      "some"
+     ],
+     0,
+     "Devant un nom de métier, on met a ou an ; an devant un son voyelle : an engineer."
+    ],
+    [
+     "He ___ in a bank.",
+     [
+      "works",
+      "work",
+      "working",
+      "is work"
+     ],
+     0,
+     "3e personne du singulier au présent : he works."
     ]
    ],
    "pk": [
@@ -138,6 +259,72 @@
     "phone",
     "tree",
     "flower"
+   ],
+   "parts": [
+    {
+     "t": "Salue quelqu'un",
+     "p": [
+      0,
+      1,
+      2,
+      3,
+      7,
+      8
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      6,
+      7
+     ],
+     "c": [
+      0,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Dis d'où tu viens",
+     "p": [
+      6,
+      9,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      4,
+      5,
+      8,
+      9
+     ],
+     "c": [
+      1,
+      5,
+      6
+     ]
+    },
+    {
+     "t": "Parle de ton métier",
+     "p": [
+      4,
+      5,
+      13,
+      14,
+      15
+     ],
+     "v": [
+      3,
+      10,
+      11
+     ],
+     "c": [
+      2,
+      7,
+      8
+     ]
+    }
    ]
   },
   {
@@ -192,6 +379,45 @@
      "I will have the same thing.",
      "I'll have the same.",
      "I will have the same."
+    ],
+    [
+     "Un thé sans sucre, s'il vous plaît.",
+     "A tea with no sugar, please.",
+     "A tea without sugar, please."
+    ],
+    [
+     "Je peux avoir un verre d'eau ?",
+     "Can I have a glass of water?",
+     "Could I have a glass of water?",
+     "May I have a glass of water?"
+    ],
+    [
+     "C'est combien ?",
+     "How much is it?",
+     "How much is that?"
+    ],
+    [
+     "Je voudrais réserver une table pour ce soir.",
+     "I'd like to book a table for tonight.",
+     "I would like to book a table for tonight.",
+     "I'd like to reserve a table for tonight."
+    ],
+    [
+     "À quelle heure fermez-vous ?",
+     "What time do you close?"
+    ],
+    [
+     "Nous sommes quatre.",
+     "There are four of us."
+    ],
+    [
+     "Je peux payer par carte ?",
+     "Can I pay by card?",
+     "Could I pay by card?"
+    ],
+    [
+     "Gardez la monnaie.",
+     "Keep the change."
     ]
    ],
    "v": [
@@ -218,6 +444,30 @@
     [
      "réservation",
      "booking"
+    ],
+    [
+     "verre",
+     "glass"
+    ],
+    [
+     "sucre",
+     "sugar"
+    ],
+    [
+     "entrée",
+     "starter"
+    ],
+    [
+     "plat du jour",
+     "daily special"
+    ],
+    [
+     "espèces",
+     "cash"
+    ],
+    [
+     "reçu",
+     "receipt"
     ]
    ],
    "orig": 1,
@@ -265,6 +515,61 @@
      ],
      0,
      "Is service included? = le service est compris ?"
+    ],
+    [
+     "I'd like ___ orange juice.",
+     [
+      "an",
+      "a",
+      "any",
+      "much"
+     ],
+     0,
+     "an devant un son voyelle : an orange juice."
+    ],
+    [
+     "Can I have a glass ___ water?",
+     [
+      "of",
+      "with",
+      "from",
+      "in"
+     ],
+     0,
+     "Un contenant + of + contenu : a glass of water."
+    ],
+    [
+     "I'd like to ___ a table for two.",
+     [
+      "book",
+      "order",
+      "keep",
+      "ask"
+     ],
+     0,
+     "Réserver une table se dit book (ou reserve) a table."
+    ],
+    [
+     "What time ___ you open?",
+     [
+      "do",
+      "are",
+      "does",
+      "is"
+     ],
+     0,
+     "Question au présent avec you : do + sujet + base verbale."
+    ],
+    [
+     "Can I pay ___ card?",
+     [
+      "by",
+      "with the",
+      "in",
+      "at"
+     ],
+     0,
+     "Le moyen de paiement : pay by card, mais pay in cash."
     ]
    ],
    "pk": [
@@ -286,6 +591,72 @@
     "bottle",
     "restaurant",
     "icecream"
+   ],
+   "parts": [
+    {
+     "t": "Commande une boisson",
+     "p": [
+      0,
+      1,
+      7,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      1,
+      2,
+      6,
+      7
+     ],
+     "c": [
+      1,
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Réserve une table",
+     "p": [
+      3,
+      6,
+      11,
+      12,
+      13
+     ],
+     "v": [
+      4,
+      5,
+      8,
+      9
+     ],
+     "c": [
+      2,
+      6,
+      7
+     ]
+    },
+    {
+     "t": "Demande l'addition",
+     "p": [
+      2,
+      4,
+      5,
+      14,
+      15
+     ],
+     "v": [
+      0,
+      3,
+      10,
+      11
+     ],
+     "c": [
+      0,
+      3,
+      8
+     ]
+    }
    ]
   },
   {
@@ -343,6 +714,43 @@
      "Je suis fille unique.",
      "I'm an only child.",
      "I am an only child."
+    ],
+    [
+     "Voici mes parents.",
+     "These are my parents.",
+     "Here are my parents."
+    ],
+    [
+     "Mon frère est plus grand que moi.",
+     "My brother is taller than me.",
+     "My brother is taller than I am."
+    ],
+    [
+     "Ma sœur a les cheveux longs.",
+     "My sister has long hair."
+    ],
+    [
+     "Quel âge a ta fille ?",
+     "How old is your daughter?"
+    ],
+    [
+     "Mes grands-parents sont à la retraite.",
+     "My grandparents are retired."
+    ],
+    [
+     "On se connaît depuis dix ans.",
+     "We have known each other for ten years.",
+     "We've known each other for ten years."
+    ],
+    [
+     "Elle est ma meilleure amie.",
+     "She is my best friend.",
+     "She's my best friend."
+    ],
+    [
+     "Je vois mes amis le samedi.",
+     "I see my friends on Saturdays.",
+     "I see my friends on Saturday."
     ]
    ],
    "v": [
@@ -369,6 +777,30 @@
     [
      "neveu",
      "nephew"
+    ],
+    [
+     "tante",
+     "aunt"
+    ],
+    [
+     "fille",
+     "daughter"
+    ],
+    [
+     "fils",
+     "son"
+    ],
+    [
+     "ami d'enfance",
+     "childhood friend"
+    ],
+    [
+     "colocataire",
+     "roommate"
+    ],
+    [
+     "fête",
+     "party"
     ]
    ],
    "c": [
@@ -437,6 +869,39 @@
      ],
      0,
      "Sujet pluriel (my parents) : have. Has va avec he / she / it."
+    ],
+    [
+     "My sister ___ long hair.",
+     [
+      "has",
+      "have",
+      "is",
+      "are"
+     ],
+     0,
+     "Pour décrire les cheveux ou les yeux, on emploie have ; 3e personne : has."
+    ],
+    [
+     "We ___ dinner together on Sundays.",
+     [
+      "have",
+      "has",
+      "are",
+      "do"
+     ],
+     0,
+     "Prendre un repas : have dinner. Avec we, pas de -s."
+    ],
+    [
+     "I see my friends ___ Saturdays.",
+     [
+      "on",
+      "in",
+      "at",
+      "to"
+     ],
+     0,
+     "Devant un jour de la semaine, la préposition est on."
     ]
    ],
    "pk": [
@@ -448,6 +913,72 @@
     "house",
     "gift",
     "cake"
+   ],
+   "parts": [
+    {
+     "t": "Présente ta famille",
+     "p": [
+      0,
+      1,
+      5,
+      6,
+      7,
+      8
+     ],
+     "v": [
+      0,
+      1,
+      4,
+      6
+     ],
+     "c": [
+      0,
+      3,
+      5
+     ]
+    },
+    {
+     "t": "Décris tes proches",
+     "p": [
+      3,
+      9,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      2,
+      3,
+      7,
+      8
+     ],
+     "c": [
+      1,
+      2,
+      6
+     ]
+    },
+    {
+     "t": "Parle de tes amis",
+     "p": [
+      2,
+      4,
+      13,
+      14,
+      15
+     ],
+     "v": [
+      5,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      4,
+      7,
+      8
+     ]
+    }
    ]
   },
   {
@@ -505,6 +1036,55 @@
      "Je suis toujours en retard le lundi.",
      "I'm always late on Mondays.",
      "I am always late on Mondays."
+    ],
+    [
+     "Il est neuf heures et quart.",
+     "It's a quarter past nine.",
+     "It is a quarter past nine.",
+     "It's nine fifteen.",
+     "It's quarter past nine."
+    ],
+    [
+     "Il est midi.",
+     "It's noon.",
+     "It is noon.",
+     "It's midday."
+    ],
+    [
+     "Le train part à six heures.",
+     "The train leaves at six o'clock.",
+     "The train leaves at six."
+    ],
+    [
+     "Je prends une douche avant le petit-déjeuner.",
+     "I take a shower before breakfast.",
+     "I have a shower before breakfast."
+    ],
+    [
+     "Je commence le travail à neuf heures.",
+     "I start work at nine o'clock.",
+     "I start work at nine.",
+     "I start working at nine."
+    ],
+    [
+     "Je rentre à la maison vers dix-huit heures.",
+     "I get home around six p.m.",
+     "I get home at around six p.m.",
+     "I come home around six p.m.",
+     "I get home around 6 p.m."
+    ],
+    [
+     "Je prépare le dîner tous les soirs.",
+     "I make dinner every evening.",
+     "I cook dinner every evening.",
+     "I make dinner every night."
+    ],
+    [
+     "Je lis avant de dormir.",
+     "I read before going to sleep.",
+     "I read before sleeping.",
+     "I read before bed.",
+     "I read before I go to sleep."
     ]
    ],
    "v": [
@@ -531,6 +1111,30 @@
     [
      "tôt",
      "early"
+    ],
+    [
+     "heure",
+     "hour"
+    ],
+    [
+     "demi-heure",
+     "half an hour"
+    ],
+    [
+     "minuit",
+     "midnight"
+    ],
+    [
+     "petit-déjeuner",
+     "breakfast"
+    ],
+    [
+     "dîner",
+     "dinner"
+    ],
+    [
+     "tard",
+     "late"
     ]
    ],
    "c": [
@@ -599,6 +1203,39 @@
      ],
      0,
      "Early = tôt. Quick est un adjectif, il ne convient pas ici."
+    ],
+    [
+     "It's half ___ three.",
+     [
+      "past",
+      "after",
+      "over",
+      "to the"
+     ],
+     0,
+     "Pour « et demie », on dit half past + heure."
+    ],
+    [
+     "See you ___ noon.",
+     [
+      "at",
+      "in",
+      "on",
+      "by the"
+     ],
+     0,
+     "Devant une heure précise (noon, midnight, 9 a.m.), la préposition est at."
+    ],
+    [
+     "I usually ___ dinner at eight.",
+     [
+      "have",
+      "has",
+      "having",
+      "am have"
+     ],
+     0,
+     "Habitude au présent simple avec I : base verbale, have dinner."
     ]
    ],
    "pk": [
@@ -611,6 +1248,72 @@
     "shower",
     "towel",
     "coffee"
+   ],
+   "parts": [
+    {
+     "t": "Dis l'heure",
+     "p": [
+      1,
+      2,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      1,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      1,
+      6,
+      7
+     ]
+    },
+    {
+     "t": "Décris ta matinée",
+     "p": [
+      0,
+      3,
+      4,
+      11,
+      12
+     ],
+     "v": [
+      0,
+      3,
+      5,
+      9
+     ],
+     "c": [
+      0,
+      2,
+      4
+     ]
+    },
+    {
+     "t": "Raconte ta soirée",
+     "p": [
+      5,
+      6,
+      7,
+      13,
+      14,
+      15
+     ],
+     "v": [
+      2,
+      4,
+      10,
+      11
+     ],
+     "c": [
+      3,
+      5,
+      8
+     ]
+    }
    ]
   },
   {
@@ -665,6 +1368,49 @@
      "Mon passe-temps préféré, c'est la cuisine.",
      "My favorite hobby is cooking.",
      "My favourite hobby is cooking."
+    ],
+    [
+     "J'adore la musique.",
+     "I love music."
+    ],
+    [
+     "Je déteste courir.",
+     "I hate running.",
+     "I hate to run."
+    ],
+    [
+     "Tu aimes danser ?",
+     "Do you like dancing?",
+     "Do you like to dance?"
+    ],
+    [
+     "Je nage tous les dimanches.",
+     "I swim every Sunday.",
+     "I go swimming every Sunday."
+    ],
+    [
+     "Il joue au foot une fois par semaine.",
+     "He plays soccer once a week.",
+     "He plays football once a week."
+    ],
+    [
+     "Ça te dit d'aller au cinéma ?",
+     "Would you like to go to the movies?",
+     "Would you like to go to the cinema?",
+     "Do you want to go to the movies?",
+     "Do you want to go to the cinema?"
+    ],
+    [
+     "Désolé, je ne peux pas samedi.",
+     "Sorry, I can't on Saturday.",
+     "I'm sorry, I can't on Saturday.",
+     "Sorry, I can't make it on Saturday."
+    ],
+    [
+     "On se retrouve à quelle heure ?",
+     "What time shall we meet?",
+     "What time should we meet?",
+     "What time are we meeting?"
     ]
    ],
    "v": [
@@ -691,6 +1437,30 @@
     [
      "se détendre",
      "relax"
+    ],
+    [
+     "lecture",
+     "reading"
+    ],
+    [
+     "souvent",
+     "often"
+    ],
+    [
+     "jamais",
+     "never"
+    ],
+    [
+     "parfois",
+     "sometimes"
+    ],
+    [
+     "sortie",
+     "outing"
+    ],
+    [
+     "billet",
+     "ticket"
     ]
    ],
    "c": [
@@ -737,6 +1507,61 @@
      ],
      0,
      "Avec « be », l'adverbe se place après le verbe : I'm always tired."
+    ],
+    [
+     "Do you like ___?",
+     [
+      "swimming",
+      "swim",
+      "to swimming",
+      "swims"
+     ],
+     0,
+     "Après like, love, enjoy, hate : verbe en -ing."
+    ],
+    [
+     "She ___ cooking.",
+     [
+      "loves",
+      "love",
+      "is love",
+      "loving"
+     ],
+     0,
+     "3e personne du singulier au présent : she loves."
+    ],
+    [
+     "___ we go hiking on Sunday?",
+     [
+      "Shall",
+      "Do",
+      "Are",
+      "Have"
+     ],
+     0,
+     "Shall we + base verbale sert à proposer une activité."
+    ],
+    [
+     "Would you like ___ to the movies?",
+     [
+      "to go",
+      "go",
+      "going",
+      "goes"
+     ],
+     0,
+     "Après would like, on met to + base verbale."
+    ],
+    [
+     "What are you ___ this weekend?",
+     [
+      "doing",
+      "do",
+      "does",
+      "to do"
+     ],
+     0,
+     "Projet proche : présent en be + -ing, What are you doing?"
     ]
    ],
    "pk": [
@@ -751,6 +1576,72 @@
     "drum",
     "sea",
     "park"
+   ],
+   "parts": [
+    {
+     "t": "Dis ce que tu aimes",
+     "p": [
+      0,
+      7,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      0,
+      4,
+      5,
+      6
+     ],
+     "c": [
+      0,
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Parle de tes habitudes",
+     "p": [
+      1,
+      3,
+      4,
+      5,
+      11,
+      12
+     ],
+     "v": [
+      3,
+      7,
+      8,
+      9
+     ],
+     "c": [
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "t": "Propose une sortie",
+     "p": [
+      2,
+      6,
+      13,
+      14,
+      15
+     ],
+     "v": [
+      1,
+      2,
+      10,
+      11
+     ],
+     "c": [
+      6,
+      7,
+      8
+     ]
+    }
    ]
   },
   {
@@ -803,6 +1694,44 @@
      "I am a vegetarian.",
      "I'm vegetarian.",
      "I am vegetarian."
+    ],
+    [
+     "Où sont les légumes ?",
+     "Where are the vegetables?"
+    ],
+    [
+     "Je cherche du riz.",
+     "I'm looking for rice.",
+     "I am looking for rice.",
+     "I'm looking for some rice."
+    ],
+    [
+     "Un kilo de tomates, s'il vous plaît.",
+     "A kilo of tomatoes, please.",
+     "One kilo of tomatoes, please."
+    ],
+    [
+     "Il reste un peu de fromage.",
+     "There is a little cheese left.",
+     "There's a little cheese left."
+    ],
+    [
+     "Nous avons trop de pain.",
+     "We have too much bread."
+    ],
+    [
+     "Il n'y a pas assez d'œufs.",
+     "There aren't enough eggs.",
+     "There are not enough eggs."
+    ],
+    [
+     "Mélange le beurre et le sucre.",
+     "Mix the butter and the sugar.",
+     "Mix the butter and sugar."
+    ],
+    [
+     "Fais bouillir l'eau.",
+     "Boil the water."
     ]
    ],
    "v": [
@@ -829,6 +1758,30 @@
     [
      "panier",
      "basket"
+    ],
+    [
+     "légumes",
+     "vegetables"
+    ],
+    [
+     "caisse",
+     "checkout"
+    ],
+    [
+     "bouteille",
+     "bottle"
+    ],
+    [
+     "tranche",
+     "slice"
+    ],
+    [
+     "recette",
+     "recipe"
+    ],
+    [
+     "bouillir",
+     "boil"
     ]
    ],
    "c": [
@@ -875,6 +1828,61 @@
      ],
      0,
      "water est indénombrable : some water."
+    ],
+    [
+     "Where ___ the eggs?",
+     [
+      "are",
+      "is",
+      "do",
+      "be"
+     ],
+     0,
+     "eggs est au pluriel : Where are…?"
+    ],
+    [
+     "There isn't ___ milk left.",
+     [
+      "much",
+      "many",
+      "few",
+      "a lot"
+     ],
+     0,
+     "milk est indénombrable : much (many pour ce qui se compte)."
+    ],
+    [
+     "Cook ___ twenty minutes.",
+     [
+      "for",
+      "during",
+      "since",
+      "in"
+     ],
+     0,
+     "Une durée s'exprime avec for : for twenty minutes."
+    ],
+    [
+     "Cut the onions ___ small pieces.",
+     [
+      "into",
+      "at",
+      "on",
+      "to the"
+     ],
+     0,
+     "Couper en morceaux : cut into pieces."
+    ],
+    [
+     "___ a pinch of salt.",
+     [
+      "Add",
+      "Adds",
+      "Adding",
+      "To add"
+     ],
+     0,
+     "Une consigne de recette est à l'impératif : la base verbale seule."
     ]
    ],
    "pk": [
@@ -899,6 +1907,72 @@
     "lemon",
     "strawberry",
     "grapes"
+   ],
+   "parts": [
+    {
+     "t": "Fais les courses",
+     "p": [
+      0,
+      2,
+      6,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      5,
+      6,
+      7
+     ],
+     "c": [
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Demande une quantité",
+     "p": [
+      1,
+      10,
+      11,
+      12,
+      13
+     ],
+     "v": [
+      4,
+      8,
+      9
+     ],
+     "c": [
+      0,
+      1,
+      5
+     ]
+    },
+    {
+     "t": "Suis une recette",
+     "p": [
+      3,
+      4,
+      5,
+      7,
+      14,
+      15
+     ],
+     "v": [
+      1,
+      2,
+      3,
+      10,
+      11
+     ],
+     "c": [
+      6,
+      7,
+      8
+     ]
+    }
    ]
   },
   {

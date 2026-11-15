@@ -1,4 +1,4 @@
-# Architecture du code (v34)
+# Architecture du code (v35)
 
 La v26 reprend exactement le comportement de la v25 dans un projet découpé en modules.
 
@@ -87,6 +87,7 @@ L'ordre compte : la traduction du DOM doit observer la page avant la typographie
 - Séances (v33) : `shorten(T, n)` dans `lesson/build.js` ramène un modèle de leçon à 10 exercices. Repères de thème : `STAGE_AT` et `stageLabel()` dans `screens/path.js`.
 - Leçon bilan (v33) : `startBilan()` dans `features/coach.js` choisit les unités et lance `startAI(..., { bilan: true, words })`.
 - Unités affichées (v34) : `PARTS = 3`, `PSZ = 6`, `partSteps(cours, u, partie)` et `partsDone(cours, u)` dans `core/progress.js`. Une « unité » du contenu (`C.units[u]`, 18 étapes, masque `S.dn`) reste l'unité d'enregistrement ; le parcours (`screens/path.js`) en fait trois sections `#unit<u>`, `#unit<u>p1`, `#unit<u>p2`. Verrouillage, guide, couronnes et `relayout` restent au niveau du thème.
+- Unités à sujet propre (v35) : champ `parts` d'un thème (`types.ts`). `partUnit(U, partie)` et `stepTier(U, n)` dans `lesson/build.js` donnent le contenu et le palier d'une étape ; `bannerSync()` dans `screens/path.js` pose la classe `stuck` sur l'unité en haut de l'écran (bannière pleine), les autres bannières sont dessinées en intertitres par le CSS.
 - Scènes de Horang le long du parcours : `ui/scenes.ts` (`horangScene`).
 - IA (v31.1) : la clé se règle dans Paramètres › Mon Claude (`#reglages/claude`), tous les messages y renvoient ; la création d'unité (`genUnit`) envoie aussi `titles`, les titres des unités plus anciennes que les 14 dernières, pour éviter un thème déjà traité.
 - IA (v29) : `weakRuleIds()` / `weakRules()` dans `services/ai.js` envoient les règles de grammaire les moins réussies (`weak`) au prompt (`generate.php` et prompt direct) et ajoutent 3 phrases générées par gabarits à chaque séance IA ou locale. Les QCM générés peuvent porter un indice (5ᵉ champ) qui permet l'exercice `fill`.

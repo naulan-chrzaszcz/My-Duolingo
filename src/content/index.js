@@ -83,6 +83,9 @@ export function KO_APPLY() {
       U.t = T(U.t0 || U.t);
       U.d = T(U.d);
       U.tip = T(U.tip);
+      (U.parts || []).forEach(P => {
+        P.t = T(P.t);
+      });
       (U.p || []).forEach(p => {
         p[0] = T(p[0]);
       });

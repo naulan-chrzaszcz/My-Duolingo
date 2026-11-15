@@ -1196,3 +1196,10 @@ body:has(.langdrop) #secBtn{border-color:#3D8BFF;background:#EAF2FF}
 .lfoot.ok,.lfoot.bad{max-height:66dvh;overflow-y:auto;-webkit-overflow-scrolling:touch}
 /* v33 : icône dessinée en tête de titre (à la place des emojis) */
 .hi>.ic{display:inline-block;vertical-align:-4px;margin-right:8px;color:#7C4DFF}
+/* v35 : seule l'unité en haut de l'écran garde sa bannière ; les autres s'annoncent par un intertitre, comme dans Duolingo */
+.unit:not(.stuck) .ubanner{position:relative;top:auto;background:transparent;box-shadow:none;text-shadow:none;color:var(--muted);justify-content:center;align-items:center;gap:14px;padding:6px 18px;border-radius:0;overflow:visible}
+.unit:not(.stuck) .ubanner::before,.unit:not(.stuck) .ubanner::after{content:"";flex:1;height:2px;border-radius:2px;background:var(--line)}
+.unit:not(.stuck) .ubanner .ut{flex:0 1 auto;padding:0;text-align:center;max-width:76%}
+.unit:not(.stuck) .ubanner h2{font-size:18px;color:var(--ink2)}
+.unit:not(.stuck) .ubanner small,.unit:not(.stuck) .ubanner p,.unit:not(.stuck) .ubanner .umini,.unit:not(.stuck) .ubanner .ubtns{display:none}
+.unit{margin-bottom:10px}

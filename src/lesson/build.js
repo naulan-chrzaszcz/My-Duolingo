@@ -2,7 +2,8 @@
 import { COURSES } from "../content/index.js";
 import { S } from "../core/accounts.js";
 import { nextStep, unitOpen, unitSteps } from "../core/progress.js";
-import { NPU, TIER, shuffle } from "../core/util.js";
+import { PSZ } from "../core/progress.js";
+import { NODE, NPU, TIER, shuffle } from "../core/util.js";
 import { TEMPL, ctxFor, make } from "../exercises/generate.js";
 import { HG_T } from "../exercises/hangul.js";
 import { dueReviews } from "./engine.js";
@@ -41,6 +42,21 @@ export function shorten(T, keep) {
   }
   return T;
 }
+/** v35 : palier de difficulté d'une étape. Un thème découpé en unités à sujet propre repart du plus facile dans chaque unité. */
+export function stepTier(U, n) {
+  if (!U || !U.parts || NODE[n] !== "L") return TIER[n];
+  const a = Math.floor(n / PSZ) * PSZ;
+  const i = NODE.slice(a, n).filter(x => x === "L").length;
+  const total = NODE.slice(a, a + PSZ).filter(x => x === "L").length;
+  return total >= 5 ? [0, 0, 1, 2, 3][i] : total === 4 ? [0, 1, 2, 3][i] : [0, 1, 3][i];
+}
+/** v35 : le contenu d'une unité affichée (sa part des phrases, mots et QCM du thème). */
+export function partUnit(U, part) {
+  const P = U.parts && U.parts[part];
+  if (!P) return U;
+  const pick = (k, ix) => (ix || []).map(i => (U[k] || [])[i]).filter(Boolean);
+  return Object.assign({}, U, { t: P.t, p: pick("p", P.p), v: pick("v", P.v), c: pick("c", P.c) });
+}
 export function buildLesson(cid, u, n, ext) {
   if (ext) {
     const C = COURSES[cid],
@@ -67,17 +83,25 @@ export function buildLesson(cid, u, n, ext) {
       .filter(Boolean)
       .concat(dueReviews(cid, 1));
   }
-  const prevP = C.units.slice(0, u).flatMap(x => x.p || []);
-  const ctx = ctxFor(cid, [U], { dis: Math.min(6, 2 + u), hideP2: u >= 2 });
-  if (prevP.length && ctx.p.length) ctx.p = shuffle([...ctx.p, ...shuffle(prevP).slice(0, 3)]);
-  if (TIER[n] === 0 && ctx.p.length) ctx.p.sort((a, b) => a[1].length - b[1].length); // crescendo : phrases courtes d'abord
-  let T = TEMPL[C.kind][Math.max(0, TIER[n])].slice();
+  let prevP = C.units.slice(0, u).flatMap(x => x.p || []);
+  // v35 : une unité à sujet propre travaille sa part du thème ; les unités précédentes du thème reviennent en révision
+  const part = Math.floor(n / PSZ);
+  const own = U.parts && n < NPU - 1;
+  const UU = own ? partUnit(U, part) : U;
+  if (own) prevP = prevP.concat(U.parts.slice(0, part).flatMap((P, i) => partUnit(U, i).p));
+  const TIERN = stepTier(U, n);
+  const ctx = ctxFor(cid, [UU], { dis: Math.min(6, 2 + u), hideP2: u >= 2 });
+  // une unité à sujet propre a peu de phrases : une seule phrase de révision, et aucune pendant la découverte
+  const nPrev = own ? (TIERN >= 1 ? 1 : 0) : 3;
+  if (prevP.length && ctx.p.length && nPrev) ctx.p = shuffle([...ctx.p, ...shuffle(prevP).slice(0, nPrev)]);
+  if (TIERN === 0 && ctx.p.length) ctx.p.sort((a, b) => a[1].length - b[1].length); // crescendo : phrases courtes d'abord
+  let T = TEMPL[C.kind][Math.max(0, TIERN)].slice();
   if (C.kind === "trans") {
-    if (U.c && U.c.length && n < NPU - 1) {
+    if (UU.c && UU.c.length && n < NPU - 1) {
       T[4] = "choice";
       T[8] = "choice";
       T[12] = "choice";
-      if (TIER[n] >= 2) T[10] = "spot";
+      if (TIERN >= 2) T[10] = "spot";
     }
     if (u >= 2) T = T.map(t => (t === "tiles" && Math.random() < 0.4 ? "type" : t));
     if (u >= 3) T = T.map(t => (t === "mc" ? "tiles" : t === "listenTiles" ? "listen" : t));

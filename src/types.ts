@@ -24,6 +24,8 @@ export interface Unit {
   t: string;
   /** Titre d'origine, clé stable (renseigné au chargement). */
   t0?: string;
+  /** v35 : les 3 unités affichées du thème, chacune avec son sujet (titre-objectif) et sa part du contenu (index dans p, v, c). */
+  parts?: { t: string; p: number[]; v: number[]; c: number[] }[];
   /** Niveau : 0 facile, 1 intermédiaire, 2 avancé, 3 expert. */
   lv: number;
   /** Description courte. */

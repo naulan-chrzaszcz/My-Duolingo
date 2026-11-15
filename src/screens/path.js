@@ -22,7 +22,7 @@ import { pairOf } from "../exercises/generate.js";
 import { genUnit } from "../features/ai-units.js";
 import { placeEstimate, placeIntro } from "../features/placement.js";
 import { todayQuests } from "../features/quests.js";
-import { buildLesson } from "../lesson/build.js";
+import { stepTier, buildLesson } from "../lesson/build.js";
 import { openSession } from "../lesson/engine.js";
 import { writeTasks } from "../lesson/writing.js";
 import { AI, startAI } from "../services/ai.js";
@@ -68,12 +68,12 @@ export function toggleFold(cid, u, force) {
   haptic(1);
 }
 /** Icône d'une étape du parcours (pièce 3D). */
-export function stepKind(n, st) {
+export function stepKind(n, st, U) {
   if (n === NPU - 1) return st === "done" ? "trophy" : "chest";
   if (st === "lock") return "lock";
   if (NODE[n] === "ai") return "spark";
   if (NODE[n] === "w") return "pencil";
-  return ["star", "phones", "doc", "mic"][TIER[n]] || "star";
+  return ["star", "phones", "doc", "mic"][stepTier(U, n)] || "star";
 }
 /** v33 : repères de thème le long d'une unité, façon Duolingo — étape où commence chaque phase, puis [titre, ce qu'on y travaille]. */
 export const STAGE_AT = { 0: 0, 2: 1, 6: 2, 12: 3, [NPU - 1]: 4 };
@@ -163,6 +163,27 @@ export function renderChapters(v) {
   $("#chapClose").onclick = () => (location.hash = "parcours");
   v.querySelectorAll("[data-ch]").forEach(b => (b.onclick = () => setChapter(cid, +b.dataset.ch)));
 }
+/** v35 : comme dans Duolingo, seule l'unité en haut de l'écran garde sa bannière pleine ; les suivantes s'annoncent par un simple intertitre. */
+let bannerOff = null;
+function bannerSync(v) {
+  if (bannerOff) removeEventListener("scroll", bannerOff);
+  const secs = [...v.querySelectorAll("section.unit")];
+  let raf = 0;
+  const run = () => {
+    raf = 0;
+    const top = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--toph")) || 60) + 14;
+    let cur = 0;
+    secs.forEach((s, i) => {
+      if (s.getBoundingClientRect().top <= top) cur = i;
+    });
+    secs.forEach((s, i) => s.classList.toggle("stuck", i === cur));
+  };
+  bannerOff = () => {
+    if (!raf) raf = requestAnimationFrame(run);
+  };
+  addEventListener("scroll", bannerOff, { passive: true });
+  run();
+}
 let curObs = null;
 /** Bouton flottant « revenir à l'étape conseillée », visible quand elle sort de l'écran. */
 function curFab(v, cid, ns) {
@@ -210,14 +231,16 @@ export function renderPath(v) {
   let k = 0;
   C.units.forEach((U, u) => {
     if (U.lv !== ch) return;
-    const col = UCOLORS[u % 6],
-      dk = UDARK[u % 6];
+    // v35 : une couleur par unité affichée quand le thème est découpé en unités à sujet propre
+    const colOf = part => (U.parts ? (u * PARTS + part) % 6 : u % 6);
     const partNodes = ["", "", ""];
     for (let n = 0; n < NPU; n++, gi++) {
       let nodes = "";
       const part = Math.floor(n / PSZ),
         ln = n % PSZ;
       const idx = u * NPU + n;
+      const col = UCOLORS[colOf(part)],
+        dk = UDARK[colOf(part)];
       const st = isDone(cid, u, n)
         ? "done"
         : ns && ns.u === u && ns.n === n
@@ -225,17 +248,17 @@ export function renderPath(v) {
           : stepOpen(cid, u, n)
             ? "open"
             : "lock";
-      if (STAGE_AT[n] != null) {
+      if (STAGE_AT[n] != null && !(U.parts && n < NPU - 1)) {
         const [a, b] = stageLabel(C.kind, U, STAGE_AT[n]);
         nodes += `<div class="pstage"><i></i><span><b>${a}</b><small>${b}</small></span><i></i></div>`;
       }
       const off = Math.round(Math.sin(gi * 0.85) * 72);
-      const k = stepKind(n, st);
+      const k = stepKind(n, st, U);
       const [c, d] = NODE[n] === "ai" ? ["#B07BFF", "#7B4DD6"] : NODE[n] === "w" ? ["#13A8A8", "#0C7F7F"] : [col, dk];
       const crown = (S.ext[cid] || []).includes(idx);
       nodes += `<div class="nodewrap${st === "cur" || (st === "open" && n === 0) ? " bub" : ""}" style="transform:translateX(${off}px);--c:${c};--d:${d}">${st === "cur" ? `<div class="ring"></div><button class="startbub" data-u="${u}" data-n="${n}">${idx === 0 ? "Commencer" : "Go !"}</button>` : st === "open" && n === 0 ? `<button class="startbub soft" data-u="${u}" data-n="${n}">Ouvrir</button>` : ""}<button class="node coin ${st} ${n === NPU - 1 ? "chest" : ""} ${NODE[n] === "ai" ? "ainode" : NODE[n] === "w" ? "wnode" : ""}" data-u="${u}" data-n="${n}" aria-label="${stepName(n)}">${st === "done" || st === "cur" ? '<span class="gloss"></span>' : ""}${ic(k, k === "star" ? 38 : 34, "", 2.6)}${crown ? `<span class="crown">${ic("crown", 14, "", 2.2, "currentColor")}</span>` : ""}</button></div>`;
       if (n === 2 || n === 11)
-        nodes += `<div class="pathmascot" style="${off > 0 ? "left" : "right"}:3%;top:${ln * 94 + 50 + (n === 2 ? 2 : 1) * 68}px">${horangScene(u * 2 + (n > 2 ? 1 : 0))}</div>`;
+        nodes += `<div class="pathmascot" style="${off > 0 ? "left" : "right"}:3%;top:${ln * 94 + 50 + (U.parts ? 0 : n === 2 ? 2 : 1) * 68}px">${horangScene(u * 2 + (n > 2 ? 1 : 0))}</div>`;
       partNodes[part] += nodes;
     }
     const locked = !unitOpen(cid, u);
@@ -246,7 +269,10 @@ export function renderPath(v) {
       const fd = false;
       const pc = Math.round((us / PSZ) * 100);
       const sg = stageLabel(C.kind, U, [0, 2, 3][part]);
-      units += `<section class="unit ${fd ? "folded" : ""}" id="unit${u}${part ? "p" + part : ""}"><div class="ubanner" style="--c:${locked ? "#8F89AD" : deep(col)};--d:${locked ? "#6E6890" : dk}"><div class="ut"><small><span>Chapitre ${ci + 1}, unité ${k}</span> · <span>${sg[0]}</span>${uc ? ` <span class="udone">${ic("check", 14, "", 3.4)}</span>` : ""}</small><h2>${esc(U.t)}</h2><p>${part ? `<span>${sg[1]}</span>` : esc(U.d)}</p><div class="umini"><i style="width:${pc}%"></i></div></div><div class="ubtns">${part === 0 && locked && !U.hg && u === C.units.findIndex(x => !x.hg) ? `<button class="guide" data-j="${u}">⏩ Tester mon hangul</button>` : ""}<button class="guide" data-g="${u}" aria-label="Guide de l'unité">${ic("guide", 26, "", 2.4)}<span>Guide</span></button></div></div><div class="nodes">${partNodes[part]}</div></section>`;
+      const col = UCOLORS[colOf(part)],
+        dk = UDARK[colOf(part)];
+      const own = U.parts && U.parts[part];
+      units += `<section class="unit ${fd ? "folded" : ""}" id="unit${u}${part ? "p" + part : ""}"><div class="ubanner" style="--c:${locked ? "#8F89AD" : deep(col)};--d:${locked ? "#6E6890" : dk}"><div class="ut"><small><span>Chapitre ${ci + 1}, unité ${k}</span>${own ? "" : ` · <span>${sg[0]}</span>`}${uc ? ` <span class="udone">${ic("check", 14, "", 3.4)}</span>` : ""}</small><h2>${esc(own ? own.t : U.t)}</h2><p>${own ? esc(U.t) : part ? `<span>${sg[1]}</span>` : esc(U.d)}</p><div class="umini"><i style="width:${pc}%"></i></div></div><div class="ubtns">${part === 0 && locked && !U.hg && u === C.units.findIndex(x => !x.hg) ? `<button class="guide" data-j="${u}">⏩ Tester mon hangul</button>` : ""}<button class="guide" data-g="${u}" aria-label="Guide de l'unité">${ic("guide", 26, "", 2.4)}<span>Guide</span></button></div></div><div class="nodes">${partNodes[part]}</div></section>`;
     }
   });
   const nx = chs[ci + 1];
@@ -325,6 +351,7 @@ export function renderPath(v) {
     };
   v.querySelectorAll("[data-g]").forEach(b => (b.onclick = () => guide(cid, +b.dataset.g)));
   curFab(v, cid, ns);
+  bannerSync(v);
 }
 export function nodeSheet(cid, u, n, force) {
   const C = COURSES[cid],
@@ -365,9 +392,11 @@ export function nodeSheet(cid, u, n, force) {
     return;
   }
   const done = isDone(cid, u, n) ? Infinity : -1;
-  const pc = UCOLORS[u % 6],
-    pd = UDARK[u % 6];
-  const head = `<div class="npk"><span>${stepName(n)}</span> · <span>Étape ${(n % PSZ) + 1} sur ${PSZ}</span></div><h2>${esc(U.t)}</h2>`;
+  const own = U.parts && U.parts[Math.floor(n / PSZ)];
+  const ci6 = own ? (u * PARTS + Math.floor(n / PSZ)) % 6 : u % 6;
+  const pc = UCOLORS[ci6],
+    pd = UDARK[ci6];
+  const head = `<div class="npk"><span>${stepName(n)}</span> · <span>Étape ${(n % PSZ) + 1} sur ${PSZ}</span></div><h2>${esc(own && n < NPU - 1 ? own.t : U.t)}</h2>`;
   if (NODE[n] === "w") {
     const m = modal(
       `<div class="mcenter npc">${head}<button class="btn big" id="go">${idx < done ? "Nouvelle rédaction (+XP)" : "Commencer"}</button></div>`,

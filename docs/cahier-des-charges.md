@@ -1,8 +1,8 @@
 # Speakeasy — Cahier des charges et dossier technique
 
-Version de référence : v34 · 15 novembre 2026 · Naulan
+Version de référence : v35 · 15 novembre 2026 · Naulan
 
-Les sections 1 et 2 décrivent l'application telle qu'elle est en v34. Le détail de chaque version est dans `historique-et-decisions.md`.
+Les sections 1 et 2 décrivent l'application telle qu'elle est en v35. Le détail de chaque version est dans `historique-et-decisions.md`.
 
 Version vivante et commentable : https://claude.ai/artifact/ShUL8ouoWpa4PSS2iN3yFu
 
@@ -49,6 +49,7 @@ L'application doit couvrir les douze fonctions ci-dessous ; toutes sont en place
 
 ### 2.1 Parcours
 
+- Unités à sujet propre (v35, pilote sur le chapitre 1 d'anglais quotidien) : chaque unité affichée a son titre-objectif et son contenu ; le parcours montre la bannière de l'unité en cours et annonce les suivantes par un intertitre. À étendre aux autres chapitres et cours.
 - Unités courtes façon Duolingo (v34) : chaque thème est affiché comme trois unités de 6 étapes, chacune avec sa bannière « Chapitre N, unité M · phase », sa barre de progression et un bonus de 10 gemmes à la fin. Les compteurs (barre du haut, chapitres) comptent ces unités. La progression enregistrée ne change pas : aucune migration.
 - Un parcours par cours, découpé en chapitres puis en unités, du plus facile au plus difficile (A1 à C1). Un chapitre correspond à un niveau du cours ; le parcours affiche un chapitre à la fois, un écran liste les chapitres et un bouton « Continuer » mène au suivant. C'est le design retenu (v29, confirmé en v31.1).
 - Parcours hybride : l'ordre est recommandé mais toute unité peut être commencée à tout moment.
@@ -344,7 +345,7 @@ Un seul script, installer-fedora.sh, installe ou met à jour le serveur ; il se 
 
 ## 7. Qualité, règles et pièges connus
 
-Chaque version passe une batterie de tests automatiques avec Playwright (Chromium) et un serveur PHP local, lancée par `npm test` (rapide) ou `npm run test:all` (complète). La v34 les passe tous. Le HTML de la v26 était identique à celui de la v25 sur 430 écrans et leçons comparés.
+Chaque version passe une batterie de tests automatiques avec Playwright (Chromium) et un serveur PHP local, lancée par `npm test` (rapide) ou `npm run test:all` (complète). La v35 les passe tous. Le HTML de la v26 était identique à celui de la v25 sur 430 écrans et leçons comparés.
 
 ### 7.1 Tests automatiques
 

@@ -27,6 +27,8 @@ npm test        # tests rapides ; npm run test:all avant de livrer
    - section `content` de `src/i18n/en.json`, pour Voltaire et coréen vus depuis l'interface anglaise.
 5. Lancer `node tests/run.mjs data_integrity` puis `node tests/run.mjs play_lessons fr <cours>`.
 
+Unités à sujet propre (v35) : ajouter au thème un champ `parts` de trois objets `{ t, p, v, c }` — `t` est le titre-objectif de l'unité affichée (« Commande une boisson »), `p`, `v` et `c` les index des phrases, mots et QCM du thème qui lui reviennent. Chaque élément du thème doit appartenir à une unité ; viser au moins 5 phrases, 3 mots et 3 QCM par unité. Traduire les titres dans la section `content` de `ko.json` (et de `en.json` pour Voltaire et le coréen). Sans `parts`, le thème garde l'affichage par phases.
+
 Insérer une unité au milieu est possible : la progression des profils est recalée par titre d'unité au chargement (`relayout` dans `core/progress.js`, liste `S.lay`). Garder les unités triées par niveau (`lv` croissant) et ne jamais renommer le titre d'une unité existante (sa progression serait perdue).
 
 ## Une image de vocabulaire (v30)
