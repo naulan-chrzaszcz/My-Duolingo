@@ -243,6 +243,74 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Passé et present perfect",
+     "c": [
+      0,
+      1,
+      5
+     ],
+     "v": [
+      0,
+      1
+     ],
+     "p": [
+      1,
+      3
+     ],
+     "ph": [
+      0,
+      1
+     ],
+     "l": [
+      2
+     ]
+    },
+    {
+     "t": "Futur, modaux et conditions",
+     "c": [
+      2,
+      6
+     ],
+     "v": [
+      2,
+      3
+     ],
+     "p": [
+      2
+     ],
+     "ph": [
+      2,
+      3
+     ],
+     "l": [
+      0,
+      3
+     ]
+    },
+    {
+     "t": "Passif et plus-que-parfait",
+     "c": [
+      3,
+      4,
+      7
+     ],
+     "v": [
+      4,
+      5
+     ],
+     "p": [
+      0
+     ],
+     "ph": [
+      4
+     ],
+     "l": [
+      1
+     ]
+    }
    ]
   },
   {
@@ -456,6 +524,71 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Décris le matériel de bureau",
+     "c": [
+      0,
+      3
+     ],
+     "v": [
+      0,
+      1,
+      5
+     ],
+     "p": [
+      0
+     ],
+     "ph": [
+      2,
+      4
+     ],
+     "l": [
+      0
+     ]
+    },
+    {
+     "t": "Décris les gens en réunion",
+     "c": [
+      1,
+      2
+     ],
+     "v": [
+      3
+     ],
+     "p": [
+      1
+     ],
+     "ph": [
+      0,
+      1
+     ],
+     "l": [
+      1
+     ]
+    },
+    {
+     "t": "Formulaires et candidatures",
+     "c": [
+      4,
+      5
+     ],
+     "v": [
+      2,
+      4
+     ],
+     "p": [
+      2,
+      3
+     ],
+     "ph": [
+      3
+     ],
+     "l": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -698,6 +831,74 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Choisis l'adverbe",
+     "c": [
+      0,
+      2,
+      7
+     ],
+     "v": [
+      0,
+      1
+     ],
+     "p": [
+      0
+     ],
+     "ph": [
+      0,
+      1
+     ],
+     "l": [
+      0
+     ]
+    },
+    {
+     "t": "Choisis le nom",
+     "c": [
+      1,
+      3,
+      5
+     ],
+     "v": [
+      2,
+      3
+     ],
+     "p": [
+      1,
+      3
+     ],
+     "ph": [
+      2,
+      3
+     ],
+     "l": [
+      1,
+      3
+     ]
+    },
+    {
+     "t": "Choisis l'adjectif",
+     "c": [
+      4,
+      6
+     ],
+     "v": [
+      4,
+      5
+     ],
+     "p": [
+      2
+     ],
+     "ph": [
+      4
+     ],
+     "l": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -925,6 +1126,70 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Pronoms personnels et réfléchis",
+     "c": [
+      0,
+      1,
+      5
+     ],
+     "v": [
+      0,
+      1
+     ],
+     "p": [
+      2
+     ],
+     "ph": [
+      0,
+      1
+     ],
+     "l": [
+      1
+     ]
+    },
+    {
+     "t": "Comparatifs et superlatifs",
+     "c": [
+      2,
+      3,
+      4
+     ],
+     "v": [
+      2,
+      3
+     ],
+     "p": [
+      0,
+      1
+     ],
+     "ph": [
+      2,
+      3
+     ],
+     "l": [
+      2
+     ]
+    },
+    {
+     "t": "Pronoms relatifs who, whom, whose",
+     "c": [
+      6,
+      7
+     ],
+     "v": [
+      4,
+      5
+     ],
+     "ph": [
+      4
+     ],
+     "l": [
+      0
+     ]
+    }
    ]
   },
   {
@@ -1180,6 +1445,71 @@
      0,
      "« Would you mind + -ing ? » = formule polie de demande."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Les questions en Wh- et How",
+     "c": [
+      0,
+      1,
+      2,
+      6
+     ],
+     "v": [
+      0,
+      1
+     ],
+     "p": [
+      0
+     ],
+     "l": [
+      0,
+      1,
+      2,
+      4,
+      7
+     ]
+    },
+    {
+     "t": "Question tags et questions négatives",
+     "c": [
+      3,
+      4
+     ],
+     "v": [
+      2,
+      3
+     ],
+     "p": [
+      1,
+      2
+     ],
+     "l": [
+      6,
+      8,
+      10,
+      11
+     ]
+    },
+    {
+     "t": "Questions indirectes et demandes polies",
+     "c": [
+      5,
+      7
+     ],
+     "v": [
+      4,
+      5
+     ],
+     "p": [
+      3
+     ],
+     "l": [
+      3,
+      5,
+      9
+     ]
+    }
    ]
   },
   {
@@ -1429,6 +1759,75 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Le passif de l'action terminée",
+     "c": [
+      0,
+      3
+     ],
+     "v": [
+      0,
+      1
+     ],
+     "p": [
+      0,
+      2
+     ],
+     "ph": [
+      0,
+      2,
+      4
+     ],
+     "l": [
+      0
+     ]
+    },
+    {
+     "t": "Les actions en cours",
+     "c": [
+      1,
+      4
+     ],
+     "v": [
+      4,
+      5
+     ],
+     "p": [
+      1
+     ],
+     "ph": [
+      1,
+      3,
+      5,
+      6
+     ],
+     "l": [
+      1,
+      3
+     ]
+    },
+    {
+     "t": "Positions et états",
+     "c": [
+      2,
+      5
+     ],
+     "v": [
+      2,
+      3
+     ],
+     "p": [
+      3
+     ],
+     "ph": [
+      7
+     ],
+     "l": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -1614,6 +2013,63 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Dépenses et factures",
+     "c": [
+      0,
+      4,
+      7
+     ],
+     "v": [
+      0,
+      1
+     ],
+     "p": [
+      1
+     ],
+     "l": [
+      1
+     ]
+    },
+    {
+     "t": "Stocks et livraisons",
+     "c": [
+      2,
+      6
+     ],
+     "v": [
+      2,
+      3
+     ],
+     "p": [
+      2
+     ],
+     "l": [
+      2
+     ]
+    },
+    {
+     "t": "Marketing et promotions",
+     "c": [
+      1,
+      3,
+      5
+     ],
+     "v": [
+      4,
+      5
+     ],
+     "p": [
+      0,
+      3
+     ],
+     "l": [
+      0,
+      3
+     ]
+    }
    ]
   },
   {
@@ -1843,6 +2299,65 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Prépositions après un adjectif",
+     "c": [
+      0,
+      3,
+      7
+     ],
+     "v": [
+      1
+     ],
+     "p": [
+      0
+     ],
+     "l": [
+      0,
+      3
+     ]
+    },
+    {
+     "t": "Prépositions après un nom",
+     "c": [
+      1,
+      6,
+      8,
+      10
+     ],
+     "p": [
+      1
+     ],
+     "l": [
+      2
+     ]
+    },
+    {
+     "t": "Prépositions après un verbe",
+     "c": [
+      2,
+      4,
+      5,
+      9,
+      11
+     ],
+     "v": [
+      0,
+      2,
+      3,
+      4,
+      5
+     ],
+     "p": [
+      2,
+      3
+     ],
+     "l": [
+      1
+     ]
+    }
    ]
   },
   {
@@ -1944,6 +2459,28 @@
      ],
      0,
      "above = au-dessus de."
+    ],
+    [
+     "A woman ___ plants near a window.",
+     [
+      "is watering",
+      "has been watered",
+      "waters at",
+      "watered by"
+     ],
+     0,
+     "Action en cours visible sur la photo : is + -ing."
+    ],
+    [
+     "Bicycles are lined up ___ the sidewalk.",
+     [
+      "along",
+      "among",
+      "into",
+      "onto"
+     ],
+     0,
+     "along = le long de (une rangée qui suit le trottoir)."
     ]
    ],
    "l": [
@@ -2216,6 +2753,86 @@
      0,
      "1768677675301-627aae4d9427"
     ]
+   ],
+   "parts": [
+    {
+     "t": "Objets rangés et disposés",
+     "c": [
+      0,
+      2
+     ],
+     "v": [
+      3,
+      5
+     ],
+     "p": [
+      0,
+      3
+     ],
+     "ph": [
+      1,
+      5,
+      14,
+      15
+     ],
+     "l": [
+      0
+     ]
+    },
+    {
+     "t": "Personnes en action",
+     "c": [
+      1,
+      4
+     ],
+     "v": [
+      0,
+      4
+     ],
+     "p": [
+      1
+     ],
+     "ph": [
+      0,
+      2,
+      6,
+      7,
+      8,
+      9,
+      12,
+      16,
+      17,
+      18
+     ],
+     "l": [
+      2
+     ]
+    },
+    {
+     "t": "Lieux et positions",
+     "c": [
+      3,
+      5
+     ],
+     "v": [
+      1,
+      2
+     ],
+     "p": [
+      2
+     ],
+     "ph": [
+      3,
+      4,
+      10,
+      11,
+      13,
+      19
+     ],
+     "l": [
+      1
+     ]
+    }
    ]
   },
   {
@@ -2396,7 +3013,59 @@
      "otherwise"
     ]
    ],
-   "orig": 1
+   "orig": 1,
+   "parts": [
+    {
+     "t": "Cause et opposition : due to, despite",
+     "c": [
+      0,
+      1
+     ],
+     "v": [
+      0
+     ],
+     "p": [
+      0,
+      2
+     ],
+     "l": [
+      2
+     ]
+    },
+    {
+     "t": "Prépositions de temps et de lieu",
+     "c": [
+      2,
+      3,
+      5
+     ],
+     "p": [
+      1
+     ],
+     "l": [
+      1,
+      3
+     ]
+    },
+    {
+     "t": "Connecteurs logiques",
+     "c": [
+      4,
+      6,
+      7
+     ],
+     "v": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "l": [
+      0
+     ]
+    }
+   ]
   },
   {
    "t": "Part 3 & 4 : conversations et annonces",
@@ -2691,7 +3360,84 @@
      ],
      0,
      "closed for renovation."
+    ],
+    [
+     "Could you ___ me the sales figures by noon?",
+     [
+      "send",
+      "sending",
+      "to send",
+      "sent"
+     ],
+     0,
+     "Could you + base verbale (demande polie)."
+    ],
+    [
+     "I'd like to ___ this jacket; it's too small.",
+     [
+      "exchange",
+      "exchanging",
+      "exchanged",
+      "exchanges"
+     ],
+     0,
+     "would like to + base verbale."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Conversations au travail",
+     "c": [
+      0,
+      4
+     ],
+     "v": [
+      2,
+      3,
+      5
+     ],
+     "p": [
+      1
+     ],
+     "cv": [
+      1,
+      3
+     ]
+    },
+    {
+     "t": "Annonces en voyage",
+     "c": [
+      1,
+      2
+     ],
+     "v": [
+      4
+     ],
+     "p": [
+      0
+     ],
+     "cv": [
+      2
+     ]
+    },
+    {
+     "t": "Clients et magasins",
+     "c": [
+      3,
+      5
+     ],
+     "v": [
+      0,
+      1
+     ],
+     "p": [
+      2
+     ],
+     "cv": [
+      0,
+      4
+     ]
+    }
    ]
   },
   {
@@ -2862,6 +3608,61 @@
      "planning",
      "schedule"
     ]
+   ],
+   "parts": [
+    {
+     "t": "Les mots de liaison",
+     "c": [
+      0,
+      1,
+      3
+     ],
+     "v": [
+      0
+     ],
+     "p": [
+      0
+     ],
+     "l": [
+      1
+     ]
+    },
+    {
+     "t": "Formules de courrier",
+     "c": [
+      4,
+      6,
+      7
+     ],
+     "v": [
+      1,
+      3,
+      4
+     ],
+     "p": [
+      1
+     ],
+     "l": [
+      0
+     ]
+    },
+    {
+     "t": "Le bon mot dans le texte",
+     "c": [
+      2,
+      5
+     ],
+     "v": [
+      2,
+      5
+     ],
+     "p": [
+      2
+     ],
+     "l": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -3091,6 +3892,67 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Verbes suivis de -ing",
+     "c": [
+      0,
+      2,
+      6,
+      8,
+      10
+     ],
+     "v": [
+      0,
+      1
+     ],
+     "p": [
+      0,
+      3
+     ],
+     "l": [
+      1,
+      2
+     ]
+    },
+    {
+     "t": "Verbes suivis de to",
+     "c": [
+      3,
+      5,
+      9,
+      11
+     ],
+     "v": [
+      2,
+      3
+     ],
+     "p": [
+      2
+     ],
+     "l": [
+      0
+     ]
+    },
+    {
+     "t": "Le subjonctif après suggest et insist",
+     "c": [
+      1,
+      4,
+      7
+     ],
+     "v": [
+      4,
+      5
+     ],
+     "p": [
+      1
+     ],
+     "l": [
+      3
+     ]
+    }
    ]
   },
   {
@@ -3332,6 +4194,66 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Concession et cause",
+     "c": [
+      0,
+      1,
+      2,
+      11,
+      12
+     ],
+     "v": [
+      0,
+      1,
+      4,
+      5
+     ],
+     "p": [
+      0,
+      1
+     ],
+     "l": [
+      0,
+      3
+     ]
+    },
+    {
+     "t": "Pronoms relatifs",
+     "c": [
+      3,
+      4,
+      5
+     ],
+     "p": [
+      3
+     ],
+     "l": [
+      2
+     ]
+    },
+    {
+     "t": "Quantifieurs et connecteurs",
+     "c": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      2,
+      3
+     ],
+     "p": [
+      2
+     ],
+     "l": [
+      1
+     ]
+    }
    ]
   },
   {
@@ -3652,6 +4574,28 @@
      ],
      0,
      "Thanks for + -ing."
+    ],
+    [
+     "I'd like a ___ for this coffee maker; it stopped working.",
+     [
+      "refund",
+      "refunding",
+      "refunded",
+      "refunds to"
+     ],
+     0,
+     "a + nom : a refund (un remboursement)."
+    ],
+    [
+     "The shipment is being held ___ customs.",
+     [
+      "at",
+      "on",
+      "by",
+      "to"
+     ],
+     0,
+     "be held at customs = être retenu à la douane."
     ]
    ],
    "l": [
@@ -3691,6 +4635,70 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Planning et délais",
+     "c": [
+      0,
+      1
+     ],
+     "v": [
+      0,
+      4
+     ],
+     "p": [
+      0
+     ],
+     "l": [
+      2
+     ],
+     "cv": [
+      0,
+      1
+     ]
+    },
+    {
+     "t": "Retours et réclamations",
+     "c": [
+      3,
+      4
+     ],
+     "v": [
+      1,
+      2
+     ],
+     "p": [
+      2
+     ],
+     "l": [
+      1
+     ],
+     "cv": [
+      2
+     ]
+    },
+    {
+     "t": "Livraisons et douane",
+     "c": [
+      2,
+      5
+     ],
+     "v": [
+      3,
+      5
+     ],
+     "p": [
+      1
+     ],
+     "l": [
+      0,
+      3
+     ],
+     "cv": [
+      3
+     ]
+    }
    ]
   },
   {
@@ -3963,6 +4971,28 @@
      ],
      0,
      "Après « your » : un nom (patience)."
+    ],
+    [
+     "Please call us back ___ 5 p.m. today.",
+     [
+      "before",
+      "since",
+      "during",
+      "while"
+     ],
+     0,
+     "before + heure = avant (une échéance)."
+    ],
+    [
+     "Visitors are not ___ to take photos inside the factory.",
+     [
+      "allowed",
+      "allowing",
+      "allow",
+      "allows"
+     ],
+     0,
+     "be allowed to = être autorisé à (passif)."
     ]
    ],
    "l": [
@@ -4002,6 +5032,70 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Annonces à l'aéroport",
+     "c": [
+      0,
+      1
+     ],
+     "v": [
+      0,
+      1
+     ],
+     "p": [
+      0
+     ],
+     "l": [
+      0
+     ],
+     "cv": [
+      0
+     ]
+    },
+    {
+     "t": "Messages téléphoniques",
+     "c": [
+      2,
+      4
+     ],
+     "v": [
+      2
+     ],
+     "p": [
+      1
+     ],
+     "l": [
+      1
+     ],
+     "cv": [
+      1
+     ]
+    },
+    {
+     "t": "Visites guidées et publicités",
+     "c": [
+      3,
+      5
+     ],
+     "v": [
+      3,
+      4,
+      5
+     ],
+     "p": [
+      2
+     ],
+     "l": [
+      2,
+      3
+     ],
+     "cv": [
+      2,
+      3
+     ]
+    }
    ]
   },
   {
@@ -4236,6 +5330,67 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Les modaux de déduction",
+     "c": [
+      0,
+      1,
+      11
+     ],
+     "v": [
+      0
+     ],
+     "p": [
+      0
+     ],
+     "l": [
+      2
+     ]
+    },
+    {
+     "t": "Obligation et conseil",
+     "c": [
+      2,
+      3,
+      10
+     ],
+     "v": [
+      3,
+      4,
+      5
+     ],
+     "p": [
+      3
+     ],
+     "l": [
+      1
+     ]
+    },
+    {
+     "t": "Discours et questions indirectes",
+     "c": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "v": [
+      1,
+      2
+     ],
+     "p": [
+      1,
+      2
+     ],
+     "l": [
+      0,
+      3
+     ]
+    }
    ]
   },
   {
@@ -4454,6 +5609,62 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "so, such, too et enough",
+     "c": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "v": [
+      5
+     ],
+     "p": [
+      0
+     ],
+     "l": [
+      0,
+      3
+     ]
+    },
+    {
+     "t": "used to et would rather",
+     "c": [
+      4,
+      5,
+      8
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "p": [
+      1,
+      2,
+      3
+     ],
+     "l": [
+      1,
+      2
+     ]
+    },
+    {
+     "t": "remember et les comparaisons",
+     "c": [
+      6,
+      7,
+      9,
+      10
+     ],
+     "v": [
+      4
+     ]
+    }
    ]
   },
   {
@@ -4664,6 +5875,61 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Hausse et baisse",
+     "c": [
+      0,
+      3,
+      4,
+      5,
+      6
+     ],
+     "v": [
+      0,
+      1
+     ],
+     "p": [
+      0,
+      3
+     ],
+     "l": [
+      0,
+      1
+     ]
+    },
+    {
+     "t": "Sommets et stabilité",
+     "c": [
+      1,
+      2,
+      8
+     ],
+     "v": [
+      2,
+      3
+     ],
+     "p": [
+      1,
+      2
+     ],
+     "l": [
+      2,
+      3
+     ]
+    },
+    {
+     "t": "Fluctuations et estimations",
+     "c": [
+      7,
+      9
+     ],
+     "v": [
+      4,
+      5
+     ]
+    }
    ]
   },
   {
@@ -4862,6 +6128,64 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Consignes de sécurité",
+     "c": [
+      0,
+      1,
+      7
+     ],
+     "v": [
+      0
+     ],
+     "p": [
+      0,
+      3
+     ],
+     "l": [
+      2
+     ]
+    },
+    {
+     "t": "Garanties et rappels de produits",
+     "c": [
+      2,
+      3
+     ],
+     "v": [
+      2,
+      3
+     ],
+     "p": [
+      1
+     ],
+     "l": [
+      1
+     ]
+    },
+    {
+     "t": "Production et maintenance",
+     "c": [
+      4,
+      5,
+      6,
+      8
+     ],
+     "v": [
+      1,
+      4,
+      5
+     ],
+     "p": [
+      2
+     ],
+     "l": [
+      0,
+      3
+     ]
+    }
    ]
   },
   {
@@ -5044,7 +6368,63 @@
      "shareholder"
     ]
    ],
-   "orig": 1
+   "orig": 1,
+   "parts": [
+    {
+     "t": "Contrats et règles",
+     "c": [
+      1,
+      2
+     ],
+     "v": [
+      1,
+      4
+     ],
+     "p": [
+      2
+     ],
+     "l": [
+      3
+     ]
+    },
+    {
+     "t": "Résultats et finances",
+     "c": [
+      3,
+      4
+     ],
+     "v": [
+      2,
+      3,
+      5
+     ],
+     "p": [
+      0
+     ],
+     "l": [
+      1
+     ]
+    },
+    {
+     "t": "Croissance et recrutement",
+     "c": [
+      0,
+      5,
+      6,
+      7
+     ],
+     "v": [
+      0
+     ],
+     "p": [
+      1
+     ],
+     "l": [
+      0,
+      2
+     ]
+    }
+   ]
   },
   {
    "t": "Part 7 : compréhension écrite",
@@ -5183,6 +6563,50 @@
      ],
      0,
      "« is a plus » = est un atout."
+    ],
+    [
+     "Employees should park ___ the back entrance during the work.",
+     [
+      "near",
+      "nearly",
+      "nearby",
+      "nearest"
+     ],
+     0,
+     "near + nom = près de (préposition) ; nearly = presque."
+    ],
+    [
+     "Applicants must ___ their résumé by May 31.",
+     [
+      "submit",
+      "submitting",
+      "submission",
+      "submitted"
+     ],
+     0,
+     "must + base verbale : must submit."
+    ],
+    [
+     "Children ___ 6 to 12 can join the program.",
+     [
+      "aged",
+      "age",
+      "aging",
+      "ages"
+     ],
+     0,
+     "aged 6 to 12 = âgés de 6 à 12 ans (participe passé)."
+    ],
+    [
+     "Can you pick him up ___ the airport?",
+     [
+      "at",
+      "in",
+      "on",
+      "to"
+     ],
+     0,
+     "pick someone up at + lieu précis (at the airport)."
     ]
    ],
    "v": [
@@ -5211,7 +6635,52 @@
      "duties"
     ]
    ],
-   "orig": 1
+   "orig": 1,
+   "parts": [
+    {
+     "t": "Lis une note de service",
+     "c": [
+      0,
+      2
+     ],
+     "v": [
+      4
+     ],
+     "rd": [
+      0
+     ]
+    },
+    {
+     "t": "Lis une offre d'emploi",
+     "c": [
+      1,
+      3
+     ],
+     "v": [
+      0,
+      1,
+      5
+     ],
+     "rd": [
+      1
+     ]
+    },
+    {
+     "t": "Lis annonces et messages",
+     "c": [
+      4,
+      5
+     ],
+     "v": [
+      2,
+      3
+     ],
+     "rd": [
+      2,
+      3
+     ]
+    }
+   ]
   },
   {
    "t": "Part 6 : insérer la bonne phrase",
@@ -5411,6 +6880,62 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Insère la phrase manquante",
+     "c": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "v": [
+      0,
+      2,
+      3
+     ],
+     "p": [
+      2
+     ],
+     "l": [
+      1,
+      2
+     ]
+    },
+    {
+     "t": "Connecteurs dans un texte",
+     "c": [
+      4,
+      5,
+      7
+     ],
+     "v": [
+      4
+     ],
+     "p": [
+      0,
+      1
+     ],
+     "l": [
+      0
+     ]
+    },
+    {
+     "t": "Référents et mots du texte",
+     "c": [
+      6,
+      8,
+      9
+     ],
+     "v": [
+      1,
+      5
+     ],
+     "l": [
+      3
+     ]
+    }
    ]
   },
   {
@@ -5662,6 +7187,28 @@
      ],
      0,
      "at least = au moins."
+    ],
+    [
+     "The client moved our call ___ 3 p.m.",
+     [
+      "to",
+      "at",
+      "for",
+      "since"
+     ],
+     0,
+     "Changer de créneau : move … to + nouvel horaire."
+    ],
+    [
+     "Can you send me your notes ___ noon?",
+     [
+      "before",
+      "until",
+      "since",
+      "during"
+     ],
+     0,
+     "before noon = avant midi (échéance)."
     ]
    ],
    "l": [
@@ -5692,6 +7239,65 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Lis une discussion en ligne",
+     "c": [
+      4,
+      5
+     ],
+     "p": [
+      0
+     ],
+     "rd": [
+      0
+     ]
+    },
+    {
+     "t": "Lis un avis et une offre d'emploi",
+     "c": [
+      1,
+      3
+     ],
+     "v": [
+      1,
+      2,
+      3,
+      5
+     ],
+     "p": [
+      1
+     ],
+     "l": [
+      0,
+      1
+     ],
+     "rd": [
+      1,
+      2
+     ]
+    },
+    {
+     "t": "Lis une lettre de remboursement",
+     "c": [
+      0,
+      2
+     ],
+     "v": [
+      0,
+      4
+     ],
+     "p": [
+      2
+     ],
+     "l": [
+      2
+     ],
+     "rd": [
+      3
+     ]
+    }
    ]
   },
   {
@@ -5921,6 +7527,65 @@
      ],
      0
     ]
+   ],
+   "parts": [
+    {
+     "t": "Le passif",
+     "c": [
+      0,
+      1,
+      10
+     ],
+     "v": [
+      0,
+      1,
+      4
+     ],
+     "p": [
+      0
+     ],
+     "l": [
+      0,
+      1
+     ]
+    },
+    {
+     "t": "Participes et faire faire",
+     "c": [
+      2,
+      3,
+      4,
+      5,
+      9
+     ],
+     "v": [
+      2,
+      3,
+      5
+     ],
+     "p": [
+      1,
+      3
+     ],
+     "l": [
+      3
+     ]
+    },
+    {
+     "t": "Les inversions",
+     "c": [
+      6,
+      7,
+      8,
+      11
+     ],
+     "p": [
+      2
+     ],
+     "l": [
+      2
+     ]
+    }
    ]
   },
   {
@@ -6015,6 +7680,28 @@
      ],
      0,
      "Passif : has been + participe."
+    ],
+    [
+     "The Basic plan is ___ than the Premium plan.",
+     [
+      "cheaper",
+      "cheapest",
+      "more cheap",
+      "most cheap"
+     ],
+     0,
+     "Adjectif court au comparatif : cheap → cheaper than."
+    ],
+    [
+     "The cafeteria is located ___ the third floor.",
+     [
+      "on",
+      "in",
+      "at",
+      "to"
+     ],
+     0,
+     "on the third floor = au troisième étage."
     ]
    ],
    "cv": [
@@ -6174,6 +7861,60 @@
       ]
      ]
     }
+   ],
+   "parts": [
+    {
+     "t": "Lis un programme",
+     "c": [
+      0,
+      1
+     ],
+     "v": [
+      0,
+      4
+     ],
+     "p": [
+      0
+     ],
+     "cv": [
+      0
+     ]
+    },
+    {
+     "t": "Compare des offres",
+     "c": [
+      2,
+      4
+     ],
+     "v": [
+      1
+     ],
+     "p": [
+      1
+     ],
+     "cv": [
+      1
+     ]
+    },
+    {
+     "t": "Plans et horaires de train",
+     "c": [
+      3,
+      5
+     ],
+     "v": [
+      2,
+      3,
+      5
+     ],
+     "p": [
+      2
+     ],
+     "cv": [
+      2,
+      3
+     ]
+    }
    ]
   },
   {
@@ -6245,6 +7986,50 @@
      ],
      0,
      "out of service = hors service."
+    ],
+    [
+     "Vegetarian meals are available ___ request.",
+     [
+      "upon",
+      "in",
+      "at",
+      "for"
+     ],
+     0,
+     "upon request = sur demande."
+    ],
+    [
+     "Deliveries must use the ___ elevator.",
+     [
+      "freight",
+      "freighted",
+      "freighting",
+      "freights"
+     ],
+     0,
+     "freight elevator = monte-charge (nom employé comme adjectif)."
+    ],
+    [
+     "Payment is due ___ 30 days of the invoice date.",
+     [
+      "within",
+      "among",
+      "between",
+      "along"
+     ],
+     0,
+     "within + durée = dans un délai de."
+    ],
+    [
+     "A 10% discount applies to orders ___ $500.",
+     [
+      "over",
+      "above of",
+      "more",
+      "upper"
+     ],
+     0,
+     "over + montant = de plus de."
     ]
    ],
    "l": [
@@ -6373,6 +8158,57 @@
        0,
        "« I'll be at the client's all day tomorrow »."
       ]
+     ]
+    }
+   ],
+   "parts": [
+    {
+     "t": "Commandes et traiteur",
+     "c": [
+      0,
+      2
+     ],
+     "v": [
+      3,
+      4
+     ],
+     "p": [
+      0,
+      2
+     ],
+     "l": [
+      2
+     ]
+    },
+    {
+     "t": "Avis aux occupants",
+     "c": [
+      1,
+      3
+     ],
+     "v": [
+      1,
+      2
+     ],
+     "p": [
+      1
+     ],
+     "l": [
+      1
+     ]
+    },
+    {
+     "t": "Factures et livraisons",
+     "c": [
+      4,
+      5
+     ],
+     "v": [
+      0,
+      5
+     ],
+     "l": [
+      0
      ]
     }
    ]
