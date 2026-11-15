@@ -40,10 +40,10 @@ function pageHtml(sub) {
   <div class="setrow"><span>🌓 Thème</span><select id="sTheme"><option value="auto" ${THEME() === "auto" ? "selected" : ""}>Automatique</option><option value="light" ${THEME() === "light" ? "selected" : ""}>Clair</option><option value="dark" ${THEME() === "dark" ? "selected" : ""}>Sombre</option></select></div>
   <div class="setrow"><span>🌐 Langue · Language${KO_READY ? " · 언어" : ""}</span><select id="sUi" class="notr"><option value="fr" ${UI === "fr" ? "selected" : ""}>Français</option><option value="en" ${UI === "en" ? "selected" : ""}>English</option>${KO_READY ? `<option value="ko" ${UI === "ko" ? "selected" : ""}>한국어</option>` : ""}</select></div>
   <div class="setrow"><span>Objectif quotidien</span><select id="sGoal">${[
-    [50, "Tranquille"],
-    [100, "Normal"],
-    [200, "Sérieux"],
-    [400, "Intense"],
+    [100, "Tranquille"],
+    [200, "Normal"],
+    [400, "Sérieux"],
+    [600, "Intense"],
   ]
     .map(([x, l]) => `<option value="${x}" ${S.goal === x ? "selected" : ""}>${l} · ${x} XP</option>`)
     .join("")}</select></div>

@@ -96,7 +96,7 @@ L'application doit couvrir les douze fonctions ci-dessous ; toutes sont en place
 
 ### 2.5 Motivation
 
-- XP (10 par bonne réponse ; une leçon compte 11 exercices depuis la v33, soit 110 à 135 XP) et objectif quotidien réglable à 50, 100, 200 ou 400 XP (v32 ; les anciens objectifs 10/20/30/50 sont convertis). Série de jours avec gel de série et paliers récompensés (7, 14, 30 et 50 jours), badges, combo.
+- XP (10 par bonne réponse ; une leçon compte 11 exercices depuis la v33, soit 110 à 135 XP) et objectif quotidien réglable à 100, 200, 400 ou 600 XP, soit environ 1, 2, 4 ou 5 leçons (v34.2 ; les objectifs des versions précédentes sont convertis au palier équivalent). Série de jours avec gel de série et paliers récompensés (7, 14, 30 et 50 jours), badges, combo.
 - Onglet Quêtes : 3 quêtes du jour tirées chaque matin parmi 14 (une de volume, deux parmi précision, écoute et oral, découverte, révision), avec coffres ; quête du mois de 60 points, paliers à 10, 25, 40 et 60 points (+20, +30, +50 et +100 gemmes) (v32).
 - Séances courtes façon Duolingo (v33) : 10 exercices et 1 révision par leçon (12 et 2 pour le bilan d'unité, 12 en version extrême), au lieu de 14 et 2 ; les types d'exercice les plus répétés sont retirés en premier.
 - Repères de thème le long de chaque unité (v33) : Découvrir, Comprendre, Construire, Maîtriser, Bilan, avec ce qu'on y travaille (libellés propres au TOEIC, à Voltaire et au hangul).

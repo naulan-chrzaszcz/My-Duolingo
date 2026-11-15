@@ -33,10 +33,10 @@ const WD = UI === "en" ? "MTWTFSS" : UI === "ko" ? "월화수목금토일" : "LM
 export const FLAME = `<svg class="sflame" width="132" height="150" viewBox="0 0 132 150" aria-hidden="true"><defs><linearGradient id="sfl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC83D"/><stop offset=".55" stop-color="#FF7A3C"/><stop offset="1" stop-color="#E8434F"/></linearGradient><radialGradient id="sglow" cx=".5" cy=".7" r=".5"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><ellipse cx="66" cy="140" rx="40" ry="8" fill="#FFE1D2" opacity=".7"/><path d="M66 8c10 22 52 40 52 82a52 52 0 0 1-104 0c0-20 9-34 20-44 0 14 6 24 16 26-2-24 4-46 16-64z" fill="url(#sfl)" stroke="#C2410C" stroke-width="6" stroke-linejoin="round"/><path d="M40 70c4-12 12-18 18-20-4 10-4 18 0 26" fill="none" stroke="#FFE7A8" stroke-width="7" stroke-linecap="round" opacity=".8"/><circle cx="66" cy="100" r="30" fill="url(#sglow)"/><path d="M66 78c6 9 15 14 15 25a15 15 0 0 1-30 0c0-11 9-16 15-25z" fill="#fff"/></svg>`;
 // v32 : objectifs alignés sur l'XP réel d'une leçon (150 à 190 XP)
 export const GOALS = [
-  [50, "Tranquille"],
-  [100, "Normal"],
-  [200, "Sérieux"],
-  [400, "Intense"],
+  [100, "Tranquille"],
+  [200, "Normal"],
+  [400, "Sérieux"],
+  [600, "Intense"],
 ];
 const day = d => dkey(d);
 const addDays = (d, n) => {

@@ -176,7 +176,7 @@ curl_setopt_array($ch, [
   ],
   CURLOPT_POSTFIELDS => json_encode([
     'model' => $MODEL,
-    'max_tokens' => 6000,
+    'max_tokens' => 16000, // large : la réflexion du modèle compte dans cette limite (à 6000, une réponse sur deux était coupée)
     'messages' => [['role' => 'user', 'content' => $prompt]],
   ]),
 ]);
@@ -186,5 +186,7 @@ curl_close($ch);
 
 if ($res === false || $code >= 400) { $e = json_decode((string)$res, true); http_response_code(502); echo json_encode(['ok' => false, 'error' => 'api', 'status' => $code, 'message' => mb_substr((string)($e['error']['message'] ?? ''), 0, 200)]); exit; }
 $j = json_decode($res, true);
-$text = $j['content'][0]['text'] ?? '';
+// la réponse peut commencer par un bloc de réflexion (« thinking ») : on assemble tous les blocs de texte
+$text = '';
+foreach ((array)($j['content'] ?? []) as $blk) if (($blk['type'] ?? '') === 'text') $text .= (string)($blk['text'] ?? '');
 echo json_encode(['ok' => $text !== '', 'text' => $text]);

@@ -31,10 +31,10 @@ export function onboarding(who) {
   const step2 = () => {
     const m = modal(
       `<div class="mcenter">${mascot("wow", "jump")}<h2>Ton objectif quotidien ?</h2><p>Tu pourras le changer dans les paramètres.</p></div><div class="choices">${[
-        [50, "Tranquille", "2 min / jour", "🌱"],
-        [100, "Normal", "5 min / jour", "🙂"],
-        [200, "Sérieux", "10 min / jour", "💪"],
-        [400, "Intense", "20+ min / jour", "🚀"],
+        [100, "Tranquille", "5 min / jour", "🌱"],
+        [200, "Normal", "10 min / jour", "🙂"],
+        [400, "Sérieux", "15 min / jour", "💪"],
+        [600, "Intense", "20+ min / jour", "🚀"],
       ]
         .map(
           ([x, l, d, e]) =>

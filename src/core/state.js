@@ -36,7 +36,7 @@ export const DEF = () => ({
   gems: 30,
   streak: 0,
   lastDay: null,
-  goal: 100,
+  goal: 200,
   week: {},
   prog: {},
   mist: {},

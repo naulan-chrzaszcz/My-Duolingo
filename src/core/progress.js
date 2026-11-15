@@ -186,10 +186,14 @@ export function hydrate(o) {
     });
     s.pv = 4;
   }
-  // v32 : XP rééquilibré, les anciens objectifs (10/20/30/50) deviennent 50/100/200/400
-  if (!s.xpv) {
-    if (o && o.goal) s.goal = { 10: 50, 20: 100, 30: 200, 50: 400 }[o.goal] || 100;
-    s.xpv = 2;
+  // XP rééquilibré : objectifs 10/20/30/50 (avant la v32), puis 50/100/200/400 (v32), puis 100/200/400/600 (v34.2 :
+  // une leçon rapporte 110 à 135 XP, le premier palier vaut donc une leçon)
+  if ((s.xpv || 0) < 3) {
+    if (o && o.goal)
+      s.goal =
+        (o.xpv === 2 ? { 50: 100, 100: 200, 200: 400, 400: 600 } : { 10: 100, 20: 200, 30: 400, 50: 600 })[o.goal] ||
+        200;
+    s.xpv = 3;
   }
   let fromOld = false;
   if (s.pv === 4) {

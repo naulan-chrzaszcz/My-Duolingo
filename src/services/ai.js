@@ -77,7 +77,7 @@ export async function aiDirect(prompt, req, tier, ms, maxTok) {
           "anthropic-version": "2023-06-01",
           "anthropic-dangerous-direct-browser-access": "true",
         },
-        body: JSON.stringify({ model, max_tokens: maxTok || 6000, messages: [{ role: "user", content: prompt }] }),
+        body: JSON.stringify({ model, max_tokens: maxTok || 16000, messages: [{ role: "user", content: prompt }] }),
       }),
       ms,
     );
