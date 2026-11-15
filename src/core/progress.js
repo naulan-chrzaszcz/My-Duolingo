@@ -133,8 +133,14 @@ export function unitOpen(cid, u) {
   }
   return hgDone(cid);
 }
+// v36 : parcours linéaire, comme Duolingo : seule l'étape conseillée (la première non faite, dans l'ordre) s'ouvre,
+// en plus des étapes déjà faites. Une unité commencée avec l'ancien parcours libre peut se poursuivre (rien n'est perdu).
 export function stepOpen(cid, u, n) {
-  return unitOpen(cid, u) && (n === 0 || isDone(cid, u, n - 1) || isDone(cid, u, n));
+  if (!unitOpen(cid, u)) return false;
+  if (isDone(cid, u, n)) return true;
+  if (n > 0 && isDone(cid, u, n - 1)) return true;
+  const ns = nextStep(cid);
+  return !!ns && ns.u === u && ns.n === n;
 }
 // Étape conseillée : la première unité ouverte, dans l'ordre du parcours, qui n'est pas terminée
 export function nextStep(cid) {

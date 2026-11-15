@@ -1,8 +1,8 @@
 # Speakeasy — Cahier des charges et dossier technique
 
-Version de référence : v35 · 15 novembre 2026 · Naulan
+Version de référence : v36 · 15 novembre 2026 · Naulan
 
-Les sections 1 et 2 décrivent l'application telle qu'elle est en v35. Le détail de chaque version est dans `historique-et-decisions.md`.
+Les sections 1 et 2 décrivent l'application telle qu'elle est en v36. Le détail de chaque version est dans `historique-et-decisions.md`.
 
 Version vivante et commentable : https://claude.ai/artifact/ShUL8ouoWpa4PSS2iN3yFu
 
@@ -49,10 +49,10 @@ L'application doit couvrir les douze fonctions ci-dessous ; toutes sont en place
 
 ### 2.1 Parcours
 
-- Unités à sujet propre (v35, tous les cours) : chaque unité affichée a son titre-objectif (« Commande une boisson », « Lis ㅏ, ㅓ et ㅗ », « a / à et est / et ») et son propre contenu ; le parcours montre la bannière de l'unité en cours et annonce les suivantes par un intertitre. Les anciens intertitres de phases (Découvrir, Comprendre…) sont retirés. Le bilan du thème et la version extrême portent sur tout le thème.
+- Unités à sujet propre (v35, tous les cours) : chaque unité affichée a son titre-objectif (« Commande une boisson », « Lis ㅏ, ㅓ et ㅗ », « a / à et est / et ») et son propre contenu ; le parcours montre une seule bannière collée en haut, qui prend le titre de l'unité en cours de lecture (v36), et annonce les suivantes par un intertitre. Les anciens intertitres de phases (Découvrir, Comprendre…) sont retirés. Le bilan du thème et la version extrême portent sur tout le thème.
 - Unités courtes façon Duolingo (v34) : chaque thème est affiché comme trois unités de 6 étapes, chacune avec sa bannière « Chapitre N, unité M », sa barre de progression et un bonus de 10 gemmes à la fin. Les compteurs (barre du haut, chapitres) comptent ces unités. La progression enregistrée ne change pas : aucune migration.
 - Un parcours par cours, découpé en chapitres puis en unités, du plus facile au plus difficile (A1 à C1). Un chapitre correspond à un niveau du cours ; le parcours affiche un chapitre à la fois, un écran liste les chapitres et un bouton « Continuer » mène au suivant. C'est le design retenu (v29, confirmé en v31.1).
-- Parcours hybride : l'ordre est recommandé mais toute unité peut être commencée à tout moment.
+- Parcours linéaire, comme Duolingo (v36) : seule l'étape conseillée s'ouvre, chaque étape réussie ouvre la suivante ; les étapes faites restent rejouables. Le test de niveau (et, en coréen, « Tester mon hangul ») permet d'avancer directement. Une unité déjà commencée avant la v36 peut se poursuivre. Jusqu'à la v35, le parcours était hybride (toute unité pouvait être commencée avec « Ouvrir »).
 - Bannière d'unité « Chapitre N, unité M », guide de l'unité (astuce, phrases clés, mots utiles, mots en images, règles) et étape conseillée. Les unités repliables d'avant la v29 ont été remplacées par les chapitres.
 - Test de niveau à l'entrée : 4 paliers de 12 questions (9 bonnes réponses pour passer au suivant), environ 10 minutes. Les chapitres validés au test sont comptés comme terminés dans la progression (v32) et restent rejouables.
 - Version extrême de chaque étape, récompensée par une couronne.

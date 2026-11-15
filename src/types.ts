@@ -25,7 +25,11 @@ export interface Unit {
   /** Titre d'origine, clé stable (renseigné au chargement). */
   t0?: string;
   /** v35 : les 3 unités affichées du thème, chacune avec son sujet (titre-objectif) et sa part du contenu (index dans p, v, c). */
-  parts?: { t: string; p: number[]; v: number[]; c: number[] }[];
+  /** v36 : en plus de p, v, c, une partie peut découper les autres listes (pk, dd, hj…) ;
+   * g = notions de grammaire générées propres à l'unité (ids de content/grammar/*.json, liste vide = aucune). */
+  parts?: { t: string; p: number[]; v: number[]; c: number[]; pk?: number[]; g?: string[]; [k: string]: unknown }[];
+  /** Notions de grammaire de l'unité affichée (renseigné par partUnit). */
+  g?: string[];
   /** Niveau : 0 facile, 1 intermédiaire, 2 avancé, 3 expert. */
   lv: number;
   /** Description courte. */

@@ -59,6 +59,8 @@ export function partUnit(U, part) {
   Object.keys(P).forEach(k => {
     if (k !== "t" && Array.isArray(P[k]) && Array.isArray(U[k])) o[k] = P[k].map(i => U[k][i]).filter(x => x != null);
   });
+  // v36 : notions de grammaire générées propres à l'unité (ids de grammar/*.json) ; liste vide = aucune
+  if (Array.isArray(P.g)) o.g = P.g;
   return o;
 }
 export function buildLesson(cid, u, n, ext) {

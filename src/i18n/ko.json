@@ -1294,7 +1294,9 @@
   "Par thème": "주제별",
   "Nouveau thème, nouvelles notions : 3 unités de 6 étapes.": "새 주제, 새 개념: 6단계 단원 3개.",
   "Comme au vrai TOEIC, les affirmations ne sont qu'audio : touche 🔊 pour les écouter.": "실제 TOEIC처럼 보기 문장은 음성으로만 나와요. 🔊를 눌러 들어 보세요.",
-  "Affirmation ¤": "보기 ¤"
+  "Affirmation ¤": "보기 ¤",
+  "Le parcours se fait dans l'ordre : chaque étape réussie ouvre la suivante. Termine d'abord l'étape conseillée, ou passe le test de niveau si tu as déjà des bases.": "과정은 순서대로 진행돼요. 단계를 통과하면 다음 단계가 열려요. 추천 단계부터 끝내거나, 기초가 있다면 레벨 테스트를 보세요.",
+  "🧭 Le parcours se fait dans l'ordre : chaque étape réussie ouvre la suivante. Si tu as déjà des bases, le test de niveau te fait avancer directement.": "🧭 과정은 순서대로 진행돼요. 단계를 통과하면 다음 단계가 열려요. 기초가 있다면 레벨 테스트로 바로 앞으로 갈 수 있어요."
  },
  "content": {
   "Quotidien": "일상",
@@ -5751,6 +5753,9 @@
   "Pléonasmes à éviter": "피해야 할 중복 표현",
   "a / à, est / et": "a / à, est / et 구별하기",
   "ces / ses, c'est / s'est": "ces / ses, c'est / s'est 구별하기",
-  "ou / où, ça / sa": "ou / où, ça / sa 구별하기"
+  "ou / où, ça / sa": "ou / où, ça / sa 구별하기",
+  "la demande de": "~에 대한 수요",
+  "une hausse de": "~의 증가",
+  "la raison de": "~의 이유"
  }
 }

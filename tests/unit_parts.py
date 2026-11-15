@@ -1,6 +1,7 @@
 # v35 : chaque thème est découpé en 3 unités à sujet propre (champ « parts »).
 # Vérifie : 3 unités, titres distincts et traduits, chaque élément d'une liste découpée dans une seule unité,
 # assez de matière par unité, et contenu traduit pour les interfaces qui affichent le cours.
+# v36 : images (pk) découpées comme les autres listes ; notions de grammaire (g) prises parmi celles du thème.
 import json, os, sys
 R = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'src')
 EN = json.load(open(os.path.join(R, 'i18n/en.json')))['content']
@@ -8,6 +9,9 @@ KO = json.load(open(os.path.join(R, 'i18n/ko.json')))['content']
 # dictionnaires où chaque texte français (ou anglais pour fr-fle) doit exister
 NEED = {'en-daily': [KO], 'en-pro': [KO], 'en-toeic': [KO], 'fr-fle': [KO], 'ko': [EN], 'fr-volt': [EN, KO]}
 MIN = {'trans': {'p': 4, 'v': 3, 'c': 2}, 'toeic': {'c': 2}, 'volt': {'c': 3, 'dd': 1}, 'hg': {'hj': 2}}
+GRAM = {}
+for L in ('en', 'fr', 'ko'):
+    GRAM.update(json.load(open(os.path.join(R, f'content/grammar/{L}.json')))['units'])
 prob = []
 nparts = 0
 for cid, dicts in NEED.items():
@@ -23,7 +27,11 @@ for cid, dicts in NEED.items():
         for t in ts:
             for d in dicts:
                 if t not in d: prob.append(f'{cid} « {T} » : titre non traduit « {t} »')
-        keys = set(k for x in P for k in x if k != 't')
+        # v36 : g = notions de grammaire générées propres à l'unité, à prendre parmi celles du thème (content/grammar/*.json)
+        for x in P:
+            if 'g' in x and not set(x['g']) <= set(GRAM.get(cid, {}).get(T, [])):
+                prob.append(f'{cid} « {x.get("t")} » : notions inconnues pour ce thème {x["g"]}')
+        keys = set(k for x in P for k in x if k not in ('t', 'g'))
         for k in keys:
             arr = U.get(k) or []
             used = sorted(i for x in P for i in x.get(k, []))

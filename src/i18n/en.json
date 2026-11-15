@@ -1256,7 +1256,9 @@
   "Par thème": "By theme",
   "Nouveau thème, nouvelles notions : 3 unités de 6 étapes.": "New theme, new topics: 3 units of 6 steps.",
   "Comme au vrai TOEIC, les affirmations ne sont qu'audio : touche 🔊 pour les écouter.": "As in the real TOEIC, the statements are audio only: tap 🔊 to hear them.",
-  "Affirmation ¤": "Statement ¤"
+  "Affirmation ¤": "Statement ¤",
+  "Le parcours se fait dans l'ordre : chaque étape réussie ouvre la suivante. Termine d'abord l'étape conseillée, ou passe le test de niveau si tu as déjà des bases.": "The path goes in order: each step you pass unlocks the next one. Finish the recommended step first, or take the placement test if you already know the basics.",
+  "🧭 Le parcours se fait dans l'ordre : chaque étape réussie ouvre la suivante. Si tu as déjà des bases, le test de niveau te fait avancer directement.": "🧭 The path goes in order: each step you pass unlocks the next one. If you already know the basics, the placement test moves you ahead right away."
  },
  "content": {
   "Hangul 1 : les voyelles": "Hangul 1: vowels",

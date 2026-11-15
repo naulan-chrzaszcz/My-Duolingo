@@ -147,7 +147,8 @@ export function mixDrills(ctx: any, units: any[]) {
     addP: GenPair[] = [];
   const seen = new Set<string>([...(ctx.c || []).map((c: any) => c[0]), ...(ctx.p || []).map((p: any) => p[1])]);
   for (const U of units) {
-    const ids = map[U.t0 || U.t];
+    // v36 : une unité à sujet propre ne travaille que ses notions (U.g, donné par partUnit) ; sinon celles du thème
+    const ids: string[] | undefined = Array.isArray(U.g) ? U.g : map[U.t0 || U.t];
     if (!ids) continue;
     const subs = ids.map(id => (SUBS.get(id) || ({} as any)).sub).filter(Boolean) as DrillSub[];
     if (!subs.length) continue;

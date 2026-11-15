@@ -4,7 +4,6 @@ import { ACC, S, save } from "../core/accounts.js";
 import {
   curLevel,
   doneCount,
-  hgDone,
   isDone,
   nextStep,
   stepOpen,
@@ -131,20 +130,33 @@ export function renderChapters(v) {
   $("#chapClose").onclick = () => (location.hash = "parcours");
   v.querySelectorAll("[data-ch]").forEach(b => (b.onclick = () => setChapter(cid, +b.dataset.ch)));
 }
-/** v35 : comme dans Duolingo, seule l'unité en haut de l'écran garde sa bannière pleine ; les suivantes s'annoncent par un simple intertitre. */
+/** v36 : comme dans Duolingo, une seule bannière reste en haut du parcours et montre l'unité en cours de lecture ;
+ * chaque unité s'annonce par un intertitre, qui passe sous la bannière quand on défile (la bannière change alors d'unité). */
 let bannerOff = null;
-function bannerSync(v) {
+function bannerSync(v, cid) {
   if (bannerOff) removeEventListener("scroll", bannerOff);
+  bannerOff = null;
+  const pb = v.querySelector("#pathban");
   const secs = [...v.querySelectorAll("section.unit")];
-  let raf = 0;
+  if (!pb || !secs.length) return;
+  let raf = 0,
+    shown = -1;
   const run = () => {
     raf = 0;
-    const top = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--toph")) || 60) + 14;
+    if (!pb.isConnected) return removeEventListener("scroll", bannerOff);
+    const lim = pb.getBoundingClientRect().bottom;
     let cur = 0;
     secs.forEach((s, i) => {
-      if (s.getBoundingClientRect().top <= top) cur = i;
+      if (s.getBoundingClientRect().top < lim - 6) cur = i;
     });
-    secs.forEach((s, i) => s.classList.toggle("stuck", i === cur));
+    if (cur === shown) return;
+    shown = cur;
+    const src = secs[cur].querySelector(".ubanner");
+    const b = pb.querySelector(".ubanner");
+    b.style.cssText = src.style.cssText;
+    b.innerHTML = src.innerHTML;
+    b.querySelectorAll("[data-g]").forEach(x => (x.onclick = () => guide(cid, +x.dataset.g)));
+    b.querySelectorAll("[data-j]").forEach(x => (x.onclick = () => jumpAsk(cid, +x.dataset.j)));
   };
   bannerOff = () => {
     if (!raf) raf = requestAnimationFrame(run);
@@ -220,9 +232,12 @@ export function renderPath(v) {
       const k = stepKind(n, st, U);
       const [c, d] = NODE[n] === "ai" ? ["#B07BFF", "#7B4DD6"] : NODE[n] === "w" ? ["#13A8A8", "#0C7F7F"] : [col, dk];
       const crown = (S.ext[cid] || []).includes(idx);
-      nodes += `<div class="nodewrap${st === "cur" || (st === "open" && n === 0) ? " bub" : ""}" style="transform:translateX(${off}px);--c:${c};--d:${d}">${st === "cur" ? `<div class="ring"></div><button class="startbub" data-u="${u}" data-n="${n}">${idx === 0 ? "Commencer" : "Go !"}</button>` : st === "open" && n === 0 ? `<button class="startbub soft" data-u="${u}" data-n="${n}">Ouvrir</button>` : ""}<button class="node coin ${st} ${n === NPU - 1 ? "chest" : ""} ${NODE[n] === "ai" ? "ainode" : NODE[n] === "w" ? "wnode" : ""}" data-u="${u}" data-n="${n}" aria-label="${stepName(n)}">${st === "done" || st === "cur" ? '<span class="gloss"></span>' : ""}${ic(k, k === "star" ? 38 : 34, "", 2.6)}${crown ? `<span class="crown">${ic("crown", 14, "", 2.2, "currentColor")}</span>` : ""}</button></div>`;
-      if (n === 2 || n === 11)
-        nodes += `<div class="pathmascot" style="${off > 0 ? "left" : "right"}:3%;top:${ln * 94 + 50}px">${horangScene(u * 2 + (n > 2 ? 1 : 0))}</div>`;
+      nodes += `<div class="nodewrap${st === "cur" ? " bub" : ""}" style="transform:translateX(${off}px);--c:${c};--d:${d}">${st === "cur" ? `<div class="ring"></div><button class="startbub" data-u="${u}" data-n="${n}">${idx === 0 ? "Commencer" : "Go !"}</button>` : ""}<button class="node coin ${st} ${n === NPU - 1 ? "chest" : ""} ${NODE[n] === "ai" ? "ainode" : NODE[n] === "w" ? "wnode" : ""}" data-u="${u}" data-n="${n}" aria-label="${stepName(n)}">${st === "done" || st === "cur" ? '<span class="gloss"></span>' : ""}${ic(k, k === "star" ? 38 : 34, "", 2.6)}${crown ? `<span class="crown">${ic("crown", 14, "", 2.2, "currentColor")}</span>` : ""}</button></div>`;
+      if (ln === 2) {
+        let side = 0;
+        for (let j = -1; j <= 2; j++) side += Math.sin((gi + j) * 0.85);
+        nodes += `<div class="pathmascot" style="${side > 0 ? "left" : "right"}:3%;top:${ln * 92 + 40}px">${horangScene(u * PARTS + part)}</div>`;
+      }
       partNodes[part] += nodes;
     }
     const locked = !unitOpen(cid, u);
@@ -235,7 +250,7 @@ export function renderPath(v) {
       const col = UCOLORS[colOf(part)],
         dk = UDARK[colOf(part)];
       const own = U.parts && U.parts[part];
-      units += `<section class="unit ${fd ? "folded" : ""}" id="unit${u}${part ? "p" + part : ""}"><div class="ubanner" style="--c:${locked ? "#8F89AD" : deep(col)};--d:${locked ? "#6E6890" : dk}"><div class="ut"><small><span>Chapitre ${ci + 1}, unité ${k}</span>${uc ? ` <span class="udone">${ic("check", 14, "", 3.4)}</span>` : ""}</small><h2>${esc(own ? own.t : U.t)}</h2><p>${esc(own ? U.t : U.d)}</p><div class="umini"><i style="width:${pc}%"></i></div></div><div class="ubtns">${part === 0 && locked && !U.hg && u === C.units.findIndex(x => !x.hg) ? `<button class="guide" data-j="${u}">⏩ Tester mon hangul</button>` : ""}<button class="guide" data-g="${u}" aria-label="Guide de l'unité">${ic("guide", 26, "", 2.4)}<span>Guide</span></button></div></div><div class="nodes">${partNodes[part]}</div></section>`;
+      units += `<section class="unit ${fd ? "folded" : ""}${k === 1 ? " first" : ""}" id="unit${u}${part ? "p" + part : ""}"><div class="ubanner" style="--c:${locked ? "#8F89AD" : deep(col)};--d:${locked ? "#6E6890" : dk}"><div class="ut"><small><span>Chapitre ${ci + 1}, unité ${k}</span>${uc ? ` <span class="udone">${ic("check", 14, "", 3.4)}</span>` : ""}</small><h2>${esc(own ? own.t : U.t)}</h2><p>${esc(own ? U.t : U.d)}</p><div class="umini"><i style="width:${pc}%"></i></div></div><div class="ubtns">${part === 0 && locked && !U.hg && u === C.units.findIndex(x => !x.hg) ? `<button class="guide" data-j="${u}">⏩ Tester mon hangul</button>` : ""}<button class="guide" data-g="${u}" aria-label="Guide de l'unité">${ic("guide", 26, "", 2.4)}<span>Guide</span></button></div></div><div class="nodes">${partNodes[part]}</div></section>`;
     }
   });
   const nx = chs[ci + 1];
@@ -252,7 +267,7 @@ export function renderPath(v) {
     gp = Math.min(100, Math.round((gx / S.goal) * 100));
   const side = `<div class="side"><div class="card"><div class="goalrow">${mascot(gp >= 100 ? "happy" : "calm", "jump")}<div style="flex:1"><h3 style="margin-bottom:6px">Objectif du jour</h3><div class="bar"><i style="width:${gp}%"></i><span>${gx} / ${S.goal} XP</span></div></div></div></div>
   <a class="card sidequest" href="#quetes"><span>${ic("chest", 26, "", 2.4)}</span><b>Quêtes du jour</b><em>${todayQuests().filter(q => S.q.claimed.includes(q.id)).length} / 3</em>${ic("chevr", 20, "", 2.8)}</a>
-  <div class="card"><h3 class="hi">${ic("chart", 22, "", 2.4)}Progression ${C.name}</h3><div class="bar ok"><i style="width:${Math.round((done / (C.units.length * NPU)) * 100)}%"></i><span>${done} / ${C.units.length * NPU} étapes</span></div><p class="secsub" style="margin:10px 0 0">🧭 Parcours libre : ${cid === "ko" && !hgDone(cid) ? "termine les unités de hangul, puis" : ""} commence n'importe quelle unité avec « Ouvrir ». L'étape 👉 conseillée suit l'ordre du parcours.</p>${ns ? `<button class="btn ghost" id="goNext" style="margin-top:10px">👉 Aller à l'étape conseillée</button>` : ""}<button class="btn ghost" id="placeGo2" style="margin-top:8px">🎯 ${(S.place || {})[cid] != null ? "Refaire le test de niveau" : "Test de niveau"}</button>${(S.place || {})[cid] != null ? `<p class="secsub" style="margin:8px 0 0">${esc(placeEstimate(cid, S.place[cid]))}</p>` : ""}</div></div>`;
+  <div class="card"><h3 class="hi">${ic("chart", 22, "", 2.4)}Progression ${C.name}</h3><div class="bar ok"><i style="width:${Math.round((done / (C.units.length * NPU)) * 100)}%"></i><span>${done} / ${C.units.length * NPU} étapes</span></div><p class="secsub" style="margin:10px 0 0">🧭 Le parcours se fait dans l'ordre : chaque étape réussie ouvre la suivante. Si tu as déjà des bases, le test de niveau te fait avancer directement.</p>${ns ? `<button class="btn ghost" id="goNext" style="margin-top:10px">👉 Aller à l'étape conseillée</button>` : ""}<button class="btn ghost" id="placeGo2" style="margin-top:8px">🎯 ${(S.place || {})[cid] != null ? "Refaire le test de niveau" : "Test de niveau"}</button>${(S.place || {})[cid] != null ? `<p class="secsub" style="margin:8px 0 0">${esc(placeEstimate(cid, S.place[cid]))}</p>` : ""}</div></div>`;
   const inst =
     ANDROID && !STANDALONE && !S.set.hideInstall
       ? `<div class="install"><span class="iic">📲</span><div><b>Installe Speakeasy sur ton téléphone</b><br>${INSTALL.ev ? "Une vraie app sur ton écran d'accueil : plein écran, rappels quotidiens et accès hors ligne." : "Dans Chrome, touche le menu <b>⋮</b> puis <b>« Ajouter à l'écran d'accueil »</b> (ou « Installer l'application ») : plein écran, rappels quotidiens et accès hors ligne."}${INSTALL.ev ? `<br><button class="btn" id="instgo" style="margin-top:8px;width:auto;padding:10px 18px">📲 Installer</button>` : ""}</div><button class="iconbtn" id="instx" aria-label="Fermer">✕</button></div>`
@@ -266,7 +281,7 @@ export function renderPath(v) {
   const cu = C.units.filter(U => U.lv === ch),
     cd = cu.reduce((x, U) => x + partsDone(cid, C.units.indexOf(U)), 0);
   const chead = `<button class="chaphead" id="chapGo"><span class="chk">Chapitre ${ci + 1}</span><b>${secName(cid, ch)}</b><span class="chbar"><i style="width:${Math.round((cd / Math.max(1, cu.length * PARTS)) * 100)}%"></i></span><span class="chn">${cd} / ${cu.length * PARTS}</span>${ic("chevr", 22, "", 2.8)}</button>`;
-  v.innerHTML = `${inst}<div class="pathgrid"><div>${placeBan}${chead}${units}</div>${side}</div>`;
+  v.innerHTML = `${inst}<div class="pathgrid"><div>${placeBan}${chead}<div class="pathban" id="pathban"><div class="ubanner"></div></div>${units}</div>${side}</div>`;
   const ix = $("#instx");
   if (ix)
     ix.onclick = () => {
@@ -314,7 +329,7 @@ export function renderPath(v) {
     };
   v.querySelectorAll("[data-g]").forEach(b => (b.onclick = () => guide(cid, +b.dataset.g)));
   curFab(v, cid, ns);
-  bannerSync(v);
+  bannerSync(v, cid);
 }
 export function nodeSheet(cid, u, n, force) {
   const C = COURSES[cid],
@@ -328,12 +343,19 @@ export function nodeSheet(cid, u, n, force) {
     return;
   }
   if (!stepOpen(cid, u, n)) {
-    modal(
-      `<div class="mcenter">${mascot("calm")}<h2>Étape verrouillée 🔒</h2><p>Dans une unité, les étapes se font dans l'ordre : la difficulté monte progressivement. Commence par l'étape ${(() => {
-        for (let k = 0; k < NPU; k++) if (!isDone(cid, u, k)) return k + 1;
-        return 1;
-      })()} de « ${esc(U.t)} ».</p><button class="btn" onclick="closeModal()">Compris</button></div>`,
+    const ns = nextStep(cid);
+    const m = modal(
+      `<div class="mcenter">${mascot("calm")}<h2>Étape verrouillée 🔒</h2><p>Le parcours se fait dans l'ordre : chaque étape réussie ouvre la suivante. Termine d'abord l'étape conseillée, ou passe le test de niveau si tu as déjà des bases.</p>${ns ? `<button class="btn" id="lknext">👉 Aller à l'étape conseillée</button>` : ""}<button class="btn ghost" onclick="closeModal()">Compris</button></div>`,
     );
+    const lk = m.querySelector("#lknext");
+    if (lk)
+      lk.onclick = () => {
+        closeModal();
+        if (COURSES[cid].units[ns.u].lv !== curChapter(cid, ns))
+          return setChapter(cid, COURSES[cid].units[ns.u].lv, true);
+        const el = document.querySelector(`.node[data-u="${ns.u}"][data-n="${ns.n}"]`);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+      };
     return;
   }
   const lv0 = curLevel(cid);
@@ -425,7 +447,7 @@ export function placePop(m, u, n, col, dk) {
   const nav = document.querySelector("#bottomnav");
   const nr = nav ? nav.getBoundingClientRect() : null;
   const bottom = nr && nr.top > innerHeight / 2 ? nr.top - 10 : innerHeight - 10;
-  const ban = el.closest(".unit")?.querySelector(".ubanner");
+  const ban = document.querySelector("#pathban");
   const minTop =
     (document.querySelector("#topbar") || { offsetHeight: 60 }).offsetHeight + (ban ? ban.offsetHeight + 24 : 20);
   const h = m.offsetHeight;
