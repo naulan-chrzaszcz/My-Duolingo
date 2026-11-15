@@ -1,7 +1,7 @@
 // Moteur de leçon : déroulé, vérification, résultats, erreurs
 import { COURSES } from "../content/index.js";
 import { S, save } from "../core/accounts.js";
-import { FULL, hgIdx, isDone, setDone, syncProg } from "../core/progress.js";
+import { FULL, PSZ, hgIdx, isDone, partSteps, setDone, syncProg } from "../core/progress.js";
 import { $, NPU, PRAISE, dkey, esc, rnd, shuffle, yest } from "../core/util.js";
 import { addToday, level, todayXp } from "../core/xp.js";
 import { distract } from "../exercises/generate.js";
@@ -646,13 +646,19 @@ export function finish() {
     });
     syncProg(L.cid);
   }
-  let chest = false;
+  let chest = false,
+    partEnd = false;
   if (L.mode === "lesson") {
     const idx = L.u * NPU + L.n;
     const first = !isDone(L.cid, L.u, L.n);
     setDone(L.cid, L.u, L.n);
     S.gems += L.n === NPU - 1 ? 20 : 5;
     chest = L.n === NPU - 1;
+    // v34 : fin d'une unité affichée (6 étapes) : petit bonus, la première fois
+    if (first && !chest && L.n % PSZ === PSZ - 1 && partSteps(L.cid, L.u, Math.floor(L.n / PSZ)) === PSZ) {
+      partEnd = true;
+      S.gems += 10;
+    }
   } else {
     S.gems += 3;
   }
@@ -670,7 +676,7 @@ export function finish() {
         : mode === "jump"
           ? "Hangul validé !"
           : mode === "lesson"
-            ? chest
+            ? chest || partEnd
               ? "Unité terminée !"
               : "Leçon terminée !"
             : "Entraînement terminé !";
@@ -695,6 +701,7 @@ export function finish() {
       extNew ? "Version extrême réussie : XP ×2 et une couronne (+10 gemmes)" : "Version extrême réussie : XP ×2",
     ]);
   else if (boost > 1) notes.push(["bolt", "Bonus XP ×2 actif"]);
+  if (partEnd) notes.push(["chest", "Unité terminée : +10 gemmes"]);
   if (mode === "sprint") notes.push(["timer", `${L.correct} bonne(s) réponse(s) — record : ${S.sprint}`]);
   else if (bonus) notes.push(["hundred", "Leçon parfaite : +10 XP bonus"]);
   const csec = curSec(),

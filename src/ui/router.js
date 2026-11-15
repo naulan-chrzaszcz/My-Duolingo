@@ -1,7 +1,7 @@
 // Navigation par hash et rendu des écrans
 import { COURSES, SECTIONS } from "../content/index.js";
 import { ACC, S, curAcc, save } from "../core/accounts.js";
-import { nextStep, unitComplete } from "../core/progress.js";
+import { PARTS, nextStep, partsDone } from "../core/progress.js";
 import { todayXp } from "../core/xp.js";
 import { placeIntro } from "../features/placement.js";
 import { $, dkey, esc } from "../core/util.js";
@@ -99,9 +99,9 @@ export function secUnits(sec) {
   for (const c of sec.tracks) {
     const C = COURSES[c];
     if (!C) continue;
-    t += C.units.length;
+    t += C.units.length * PARTS;
     C.units.forEach((u, i) => {
-      if (unitComplete(c, i)) d++;
+      d += partsDone(c, i);
     });
   }
   return { d, t };

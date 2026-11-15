@@ -8,6 +8,10 @@ import {
   isDone,
   nextStep,
   stepOpen,
+  PARTS,
+  PSZ,
+  partSteps,
+  partsDone,
   unitComplete,
   unitOpen,
   unitSteps,
@@ -72,7 +76,7 @@ export function stepKind(n, st) {
   return ["star", "phones", "doc", "mic"][TIER[n]] || "star";
 }
 /** v33 : repères de thème le long d'une unité, façon Duolingo — étape où commence chaque phase, puis [titre, ce qu'on y travaille]. */
-export const STAGE_AT = { 0: 0, 2: 1, 6: 2, 11: 3, [NPU - 1]: 4 };
+export const STAGE_AT = { 0: 0, 2: 1, 6: 2, 12: 3, [NPU - 1]: 4 };
 const STAGES = {
   trans: [
     ["Découvrir", "Mots et premières phrases"],
@@ -108,7 +112,10 @@ export function stepName(n) {
   if (n === NPU - 1) return "Bilan de l'unité";
   if (NODE[n] === "ai") return "Révision IA";
   if (NODE[n] === "w") return "Rédaction";
-  return "Leçon " + lessonNo(n) + " sur 12";
+  // v34 : numéro de la leçon dans son unité affichée (6 étapes)
+  const a = Math.floor(n / PSZ) * PSZ;
+  const les = k => NODE.slice(a, k).filter(x => x === "L").length;
+  return "Leçon " + les(n + 1) + " sur " + les(a + PSZ);
 }
 /** Chapitres d'un cours : ses niveaux, dans l'ordre (0 = les bases… 3 = expert). */
 export function chapters(cid) {
@@ -145,11 +152,11 @@ export function renderChapters(v) {
   const cards = chapters(cid)
     .map((lv, i) => {
       const us = C.units.map((U, u) => [U, u]).filter(([U]) => U.lv === lv);
-      const d = us.filter(([U, u]) => unitComplete(cid, u)).length;
+      const d = us.reduce((x, [U, u]) => x + partsDone(cid, u), 0);
       const a = first,
-        b = first + us.length - 1;
+        b = first + us.length * PARTS - 1;
       first = b + 1;
-      return `<button class="chapcard ${lv === cur ? "on" : ""}" data-ch="${lv}" style="animation-delay:${(i * 0.05).toFixed(2)}s"><span class="cct"><b>Chapitre ${i + 1}</b><span class="ccr">${flagSvg(curSec().id, 26, 17, 4)}<span>Unités ${a} à ${b}</span></span></span><small>${secName(cid, lv)}</small><span class="ccbar"><i style="width:${Math.round((d / Math.max(1, us.length)) * 100)}%"></i></span><span class="ccn">${d} / ${us.length}</span></button>`;
+      return `<button class="chapcard ${lv === cur ? "on" : ""}" data-ch="${lv}" style="animation-delay:${(i * 0.05).toFixed(2)}s"><span class="cct"><b>Chapitre ${i + 1}</b><span class="ccr">${flagSvg(curSec().id, 26, 17, 4)}<span>Unités ${a} à ${b}</span></span></span><small>${secName(cid, lv)}</small><span class="ccbar"><i style="width:${Math.round((d / Math.max(1, us.length * PARTS)) * 100)}%"></i></span><span class="ccn">${d} / ${us.length * PARTS}</span></button>`;
     })
     .join("");
   v.innerHTML = `<div class="sethead"><button class="setx" id="chapClose" aria-label="Fermer">${ic("x", 28, "", 3)}</button><h1>${esc(C.name)}</h1><span></span></div><div class="chaplist">${cards}</div>`;
@@ -203,11 +210,13 @@ export function renderPath(v) {
   let k = 0;
   C.units.forEach((U, u) => {
     if (U.lv !== ch) return;
-    k++;
     const col = UCOLORS[u % 6],
       dk = UDARK[u % 6];
-    let nodes = "";
+    const partNodes = ["", "", ""];
     for (let n = 0; n < NPU; n++, gi++) {
+      let nodes = "";
+      const part = Math.floor(n / PSZ),
+        ln = n % PSZ;
       const idx = u * NPU + n;
       const st = isDone(cid, u, n)
         ? "done"
@@ -226,19 +235,24 @@ export function renderPath(v) {
       const crown = (S.ext[cid] || []).includes(idx);
       nodes += `<div class="nodewrap${st === "cur" || (st === "open" && n === 0) ? " bub" : ""}" style="transform:translateX(${off}px);--c:${c};--d:${d}">${st === "cur" ? `<div class="ring"></div><button class="startbub" data-u="${u}" data-n="${n}">${idx === 0 ? "Commencer" : "Go !"}</button>` : st === "open" && n === 0 ? `<button class="startbub soft" data-u="${u}" data-n="${n}">Ouvrir</button>` : ""}<button class="node coin ${st} ${n === NPU - 1 ? "chest" : ""} ${NODE[n] === "ai" ? "ainode" : NODE[n] === "w" ? "wnode" : ""}" data-u="${u}" data-n="${n}" aria-label="${stepName(n)}">${st === "done" || st === "cur" ? '<span class="gloss"></span>' : ""}${ic(k, k === "star" ? 38 : 34, "", 2.6)}${crown ? `<span class="crown">${ic("crown", 14, "", 2.2, "currentColor")}</span>` : ""}</button></div>`;
       if (n === 2 || n === 11)
-        nodes += `<div class="pathmascot" style="${off > 0 ? "left" : "right"}:3%;top:${n * 94 + 50 + (n > 2 ? 4 : 2) * 68}px">${horangScene(u * 2 + (n > 2 ? 1 : 0))}</div>`;
+        nodes += `<div class="pathmascot" style="${off > 0 ? "left" : "right"}:3%;top:${ln * 94 + 50 + (n === 2 ? 2 : 1) * 68}px">${horangScene(u * 2 + (n > 2 ? 1 : 0))}</div>`;
+      partNodes[part] += nodes;
     }
     const locked = !unitOpen(cid, u);
-    const us = unitSteps(cid, u),
-      uc = unitComplete(cid, u);
-    const fd = false;
-    const pc = Math.round((us / NPU) * 100);
-    units += `<section class="unit ${fd ? "folded" : ""}" id="unit${u}"><div class="ubanner" style="--c:${locked ? "#8F89AD" : deep(col)};--d:${locked ? "#6E6890" : dk}"><div class="ut"><small><span>Chapitre ${ci + 1}, unité ${k}</span>${uc ? ` <span class="udone">${ic("check", 14, "", 3.4)}</span>` : ""}</small><h2>${esc(U.t)}</h2><p>${esc(U.d)}</p><div class="umini"><i style="width:${pc}%"></i></div></div><div class="ubtns">${locked && !U.hg && u === C.units.findIndex(x => !x.hg) ? `<button class="guide" data-j="${u}">⏩ Tester mon hangul</button>` : ""}<button class="guide" data-g="${u}" aria-label="Guide de l'unité">${ic("guide", 26, "", 2.4)}<span>Guide</span></button></div></div><div class="nodes">${nodes}</div></section>`;
+    for (let part = 0; part < PARTS; part++) {
+      k++;
+      const us = partSteps(cid, u, part),
+        uc = us === PSZ;
+      const fd = false;
+      const pc = Math.round((us / PSZ) * 100);
+      const sg = stageLabel(C.kind, U, [0, 2, 3][part]);
+      units += `<section class="unit ${fd ? "folded" : ""}" id="unit${u}${part ? "p" + part : ""}"><div class="ubanner" style="--c:${locked ? "#8F89AD" : deep(col)};--d:${locked ? "#6E6890" : dk}"><div class="ut"><small><span>Chapitre ${ci + 1}, unité ${k}</span> · <span>${sg[0]}</span>${uc ? ` <span class="udone">${ic("check", 14, "", 3.4)}</span>` : ""}</small><h2>${esc(U.t)}</h2><p>${part ? `<span>${sg[1]}</span>` : esc(U.d)}</p><div class="umini"><i style="width:${pc}%"></i></div></div><div class="ubtns">${part === 0 && locked && !U.hg && u === C.units.findIndex(x => !x.hg) ? `<button class="guide" data-j="${u}">⏩ Tester mon hangul</button>` : ""}<button class="guide" data-g="${u}" aria-label="Guide de l'unité">${ic("guide", 26, "", 2.4)}<span>Guide</span></button></div></div><div class="nodes">${partNodes[part]}</div></section>`;
+    }
   });
   const nx = chs[ci + 1];
   if (nx !== undefined) {
     const nu = C.units.filter(U => U.lv === nx).length;
-    units += `<div class="chapnext"><span class="chnk">Chapitre ${ci + 2}</span><b>${secName(cid, nx)}</b><small>${nu} unités</small><button class="btn" id="chapNext">Continuer</button></div>`;
+    units += `<div class="chapnext"><span class="chnk">Chapitre ${ci + 2}</span><b>${secName(cid, nx)}</b><small>${nu * PARTS} unités</small><button class="btn" id="chapNext">Continuer</button></div>`;
   }
   const nGen = (S.genU[cid] || []).length;
   const lastDone = unitSteps(cid, C.units.length - 1) > 0 || C.units.every((U, u) => unitComplete(cid, u));
@@ -261,8 +275,8 @@ export function renderPath(v) {
       ? `<div class="placeban"><span>🎯</span><div><b>Tu as déjà des bases en ${esc(C.name)} ?</b><br>Passe le test de niveau (10 min) : ton parcours démarrera au bon endroit.</div><button class="btn goldb" id="placeGo">Faire le test</button></div>`
       : "";
   const cu = C.units.filter(U => U.lv === ch),
-    cd = cu.filter(U => unitComplete(cid, C.units.indexOf(U))).length;
-  const chead = `<button class="chaphead" id="chapGo"><span class="chk">Chapitre ${ci + 1}</span><b>${secName(cid, ch)}</b><span class="chbar"><i style="width:${Math.round((cd / Math.max(1, cu.length)) * 100)}%"></i></span><span class="chn">${cd} / ${cu.length}</span>${ic("chevr", 22, "", 2.8)}</button>`;
+    cd = cu.reduce((x, U) => x + partsDone(cid, C.units.indexOf(U)), 0);
+  const chead = `<button class="chaphead" id="chapGo"><span class="chk">Chapitre ${ci + 1}</span><b>${secName(cid, ch)}</b><span class="chbar"><i style="width:${Math.round((cd / Math.max(1, cu.length * PARTS)) * 100)}%"></i></span><span class="chn">${cd} / ${cu.length * PARTS}</span>${ic("chevr", 22, "", 2.8)}</button>`;
   v.innerHTML = `${inst}<div class="pathgrid"><div>${placeBan}${chead}${units}</div>${side}</div>`;
   const ix = $("#instx");
   if (ix)
@@ -353,7 +367,7 @@ export function nodeSheet(cid, u, n, force) {
   const done = isDone(cid, u, n) ? Infinity : -1;
   const pc = UCOLORS[u % 6],
     pd = UDARK[u % 6];
-  const head = `<div class="npk"><span>${stepName(n)}</span> · <span>Étape ${n + 1} sur ${NPU}</span></div><h2>${esc(U.t)}</h2>`;
+  const head = `<div class="npk"><span>${stepName(n)}</span> · <span>Étape ${(n % PSZ) + 1} sur ${PSZ}</span></div><h2>${esc(U.t)}</h2>`;
   if (NODE[n] === "w") {
     const m = modal(
       `<div class="mcenter npc">${head}<button class="btn big" id="go">${idx < done ? "Nouvelle rédaction (+XP)" : "Commencer"}</button></div>`,

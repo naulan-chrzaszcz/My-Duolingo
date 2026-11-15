@@ -95,6 +95,18 @@ export const unitSteps = (cid, u) => {
   return c;
 };
 export const unitComplete = (cid, u) => isDone(cid, u, NPU - 1);
+// v34 : unités affichées, façon Duolingo — chaque thème (18 étapes enregistrées ensemble) est montré comme 3 unités de 6 étapes.
+// La progression enregistrée ne change pas : aucune migration.
+export const PARTS = 3;
+export const PSZ = NPU / PARTS;
+/** Étapes faites dans une unité affichée (0 à 6). */
+export const partSteps = (cid, u, part) => {
+  let c = 0;
+  for (let n = part * PSZ; n < (part + 1) * PSZ; n++) if (isDone(cid, u, n)) c++;
+  return c;
+};
+/** Nombre d'unités affichées terminées dans un thème (0 à 3). */
+export const partsDone = (cid, u) => [0, 1, 2].filter(p => partSteps(cid, u, p) === PSZ).length;
 export function setDone(cid, u, n) {
   S.dn[cid] = S.dn[cid] || {};
   S.dn[cid][u] = (S.dn[cid][u] || 0) | (1 << n);

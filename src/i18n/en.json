@@ -1243,7 +1243,9 @@
   "을/를 marque le complément d'objet du verbe.": "을/를 marks the object of the verb.",
   "에 indique le lieu où l'on va, ou le moment.": "에 marks the destination, or the time.",
   "이/가 marque le sujet du verbe.": "이/가 marks the subject of the verb.",
-  "En coréen, le verbe se place à la fin de la phrase.": "In Korean, the verb comes at the end of the sentence."
+  "En coréen, le verbe se place à la fin de la phrase.": "In Korean, the verb comes at the end of the sentence.",
+  "Unité terminée : +10 gemmes": "Unit finished: +10 gems",
+  "Étape ¤ sur ¤": "Step ¤ of ¤"
  },
  "content": {
   "Hangul 1 : les voyelles": "Hangul 1: vowels",

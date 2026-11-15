@@ -21,7 +21,7 @@ npm test        # tests rapides ; npm run test:all avant de livrer
    - TOEIC : `l` (Part 2), `ph` (Part 1), `cv` et `rd` (Parts 3, 4 et 7). Voltaire : `dd` (dictées).
    - `pk` : mots illustrés de l'unité (identifiants de `src/content/pics.json`) pour les exercices en images et le guide.
    - Le détail est dans `src/types.ts` (interface `Unit`).
-3. Viser au moins 8 phrases et 6 mots : les 18 étapes de l'unité sont générées à partir de ces données.
+3. Viser au moins 8 phrases et 6 mots : les 18 étapes du thème (affichées comme 3 unités de 6 étapes depuis la v34) sont générées à partir de ces données.
 4. Traduire le titre, la description, l'astuce et les phrases françaises :
    - section `content` de `src/i18n/ko.json`, pour les cours anglais et FLE vus depuis l'interface coréenne ;
    - section `content` de `src/i18n/en.json`, pour Voltaire et coréen vus depuis l'interface anglaise.
