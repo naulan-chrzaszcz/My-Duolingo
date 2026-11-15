@@ -32,17 +32,22 @@ for cid, dicts in NEED.items():
         for k, m in MIN.get(kind, {}).items():
             if not U.get(k): continue
             for x in P:
-                if len(x.get(k, [])) < m: prob.append(f'{cid} « {x.get("t")} » : {len(x.get(k, []))} « {k} » (minimum {m})')
+                # une liste absente de la partie reste commune au thème
+                n = len(x.get(k, U[k]))
+                if n < m: prob.append(f'{cid} « {x.get("t")} » : {n} « {k} » (minimum {m})')
         # tout le contenu affiché doit être traduit pour les autres interfaces
         if cid != 'fr-volt':
             for d in dicts:
                 for p in U.get('p', []):
                     if p[0] not in d: prob.append(f'{cid} « {T} » : phrase non traduite « {p[0]} »')
-                for v in U.get('v', []):
+                # en hangul, v[0] est une romanisation : rien à traduire
+                for v in ([] if kind == 'hg' else U.get('v', [])):
                     if v[0] not in d: prob.append(f'{cid} « {T} » : mot non traduit « {v[0]} »')
         for d in dicts:
             for c in U.get('c', []):
                 if len(c) > 3 and c[3] and c[3] not in d: prob.append(f'{cid} « {T} » : explication non traduite « {c[3][:60]} »')
+                # en coréen, la consigne en français est traduite pour l'interface anglaise
+                if cid == 'ko' and c[0] not in d: prob.append(f'{cid} « {T} » : consigne non traduite « {c[0][:60]} »')
 print(f'{nparts} unités affichées vérifiées')
 for x in prob[:80]: print(' -', x)
 print('PROBLEMES :', len(prob))

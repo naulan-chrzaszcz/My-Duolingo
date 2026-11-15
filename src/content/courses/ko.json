@@ -103,6 +103,14 @@
     [
      "이",
      "으"
+    ],
+    [
+     "애",
+     "에"
+    ],
+    [
+     "아",
+     "애"
     ]
    ],
    "v": [
@@ -129,6 +137,14 @@
     [
      "i",
      "ㅣ"
+    ],
+    [
+     "ae (è)",
+     "ㅐ"
+    ],
+    [
+     "e (é/è)",
+     "ㅔ"
     ]
    ],
    "p": [
@@ -151,7 +167,94 @@
      "cinq",
      "오",
      "o"
+    ],
+    [
+     "enfant (familier)",
+     "애",
+     "ae"
+    ],
+    [
+     "la lettre A",
+     "에이",
+     "ei"
     ]
+   ],
+   "parts": [
+    {
+     "t": "Lis ㅏ, ㅓ et ㅗ",
+     "hj": [
+      0,
+      1,
+      2
+     ],
+     "sy": [
+      0,
+      1,
+      2
+     ],
+     "v": [
+      0,
+      1,
+      2
+     ],
+     "mp": [
+      0,
+      2
+     ],
+     "p": [
+      3
+     ]
+    },
+    {
+     "t": "Lis ㅜ, ㅡ et ㅣ",
+     "hj": [
+      3,
+      4,
+      5
+     ],
+     "sy": [
+      3,
+      4,
+      5
+     ],
+     "v": [
+      3,
+      4,
+      5
+     ],
+     "mp": [
+      1,
+      3
+     ],
+     "p": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "t": "Lis ㅐ et ㅔ",
+     "hj": [
+      6,
+      7
+     ],
+     "sy": [
+      6,
+      7
+     ],
+     "v": [
+      6,
+      7
+     ],
+     "mp": [
+      4,
+      5
+     ],
+     "p": [
+      4,
+      5
+     ]
+    }
    ]
   },
   {
@@ -298,6 +401,14 @@
     [
      "고",
      "구"
+    ],
+    [
+     "자",
+     "차"
+    ],
+    [
+     "하",
+     "아"
     ]
    ],
    "v": [
@@ -332,6 +443,14 @@
     [
      "h",
      "ㅎ"
+    ],
+    [
+     "j",
+     "ㅈ"
+    ],
+    [
+     "muet (ng en finale)",
+     "ㅇ"
     ]
    ],
    "p": [
@@ -375,6 +494,98 @@
      "가구",
      "gagu"
     ]
+   ],
+   "parts": [
+    {
+     "t": "Lis ㄱ, ㄴ, ㄷ et ㄹ",
+     "hj": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "sy": [
+      0,
+      1,
+      2,
+      3,
+      9,
+      10,
+      15
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "mp": [
+      0,
+      1,
+      4
+     ],
+     "p": [
+      4,
+      5,
+      6,
+      7
+     ]
+    },
+    {
+     "t": "Lis ㅁ, ㅂ et ㅅ",
+     "hj": [
+      4,
+      5,
+      6
+     ],
+     "sy": [
+      4,
+      5,
+      6,
+      11,
+      12
+     ],
+     "v": [
+      4,
+      5,
+      6
+     ],
+     "mp": [
+      2
+     ],
+     "p": [
+      0,
+      1
+     ]
+    },
+    {
+     "t": "Lis ㅈ, ㅎ et ㅇ",
+     "hj": [
+      7,
+      8,
+      9
+     ],
+     "sy": [
+      7,
+      8,
+      13,
+      14
+     ],
+     "v": [
+      7,
+      8,
+      9
+     ],
+     "mp": [
+      3,
+      5,
+      6
+     ],
+     "p": [
+      2,
+      3
+     ]
+    }
    ]
   },
   {
@@ -520,6 +731,18 @@
     [
      "사",
      "싸"
+    ],
+    [
+     "가",
+     "카"
+    ],
+    [
+     "다",
+     "타"
+    ],
+    [
+     "바",
+     "파"
     ]
    ],
    "v": [
@@ -546,6 +769,18 @@
     [
      "pp",
      "ㅃ"
+    ],
+    [
+     "tt",
+     "ㄸ"
+    ],
+    [
+     "ss",
+     "ㅆ"
+    ],
+    [
+     "jj",
+     "ㅉ"
     ]
    ],
    "p": [
@@ -589,6 +824,97 @@
      "비싸다",
      "bissada"
     ]
+   ],
+   "parts": [
+    {
+     "t": "Lis les consonnes aspirées",
+     "hj": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "sy": [
+      0,
+      1,
+      2,
+      3,
+      9,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "mp": [
+      5,
+      6,
+      7
+     ],
+     "p": [
+      0,
+      1,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Lis ㄲ et ㄸ",
+     "hj": [
+      4,
+      5
+     ],
+     "sy": [
+      4,
+      5,
+      13,
+      14
+     ],
+     "v": [
+      4,
+      6
+     ],
+     "mp": [
+      0,
+      1
+     ],
+     "p": [
+      5
+     ]
+    },
+    {
+     "t": "Lis ㅃ, ㅆ et ㅉ",
+     "hj": [
+      6,
+      7,
+      8
+     ],
+     "sy": [
+      6,
+      7,
+      8,
+      15
+     ],
+     "v": [
+      5,
+      7,
+      8
+     ],
+     "mp": [
+      2,
+      3,
+      4
+     ],
+     "p": [
+      2,
+      6,
+      7
+     ]
+    }
    ]
   },
   {
@@ -687,6 +1013,38 @@
     [
      "봄",
      "bom"
+    ],
+    [
+     "야",
+     "ya"
+    ],
+    [
+     "여",
+     "yeo"
+    ],
+    [
+     "요",
+     "yo"
+    ],
+    [
+     "유",
+     "yu"
+    ],
+    [
+     "와",
+     "wa"
+    ],
+    [
+     "워",
+     "wo"
+    ],
+    [
+     "의",
+     "ui"
+    ],
+    [
+     "외",
+     "oe"
     ]
    ],
    "mp": [
@@ -709,6 +1067,18 @@
     [
      "야",
      "여"
+    ],
+    [
+     "와",
+     "워"
+    ],
+    [
+     "의",
+     "이"
+    ],
+    [
+     "요",
+     "유"
     ]
    ],
    "v": [
@@ -735,6 +1105,14 @@
     [
      "wo",
      "ㅝ"
+    ],
+    [
+     "ui",
+     "ㅢ"
+    ],
+    [
+     "oe (wé)",
+     "ㅚ"
     ]
    ],
    "p": [
@@ -777,7 +1155,120 @@
      "printemps",
      "봄",
      "bom"
+    ],
+    [
+     "pomme",
+     "사과",
+     "sagwa"
+    ],
+    [
+     "quoi",
+     "뭐",
+     "mwo"
+    ],
+    [
+     "médecin",
+     "의사",
+     "uisa"
+    ],
+    [
+     "entreprise",
+     "회사",
+     "hoesa"
     ]
+   ],
+   "parts": [
+    {
+     "t": "Lis ㅑ, ㅕ, ㅛ et ㅠ",
+     "hj": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "sy": [
+      12,
+      13,
+      14,
+      15
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "mp": [
+      4,
+      7
+     ],
+     "p": [
+      6
+     ]
+    },
+    {
+     "t": "Lis ㅘ, ㅝ, ㅢ et ㅚ",
+     "hj": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "sy": [
+      16,
+      17,
+      18,
+      19
+     ],
+     "v": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "mp": [
+      5,
+      6
+     ],
+     "p": [
+      8,
+      9,
+      10,
+      11
+     ]
+    },
+    {
+     "t": "Lis les consonnes finales (batchim)",
+     "sy": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "mp": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "p": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+     ]
+    }
    ]
   },
   {
@@ -837,6 +1328,42 @@
      "masisseoyo",
      "맛있습니다.",
      "정말 맛있어요."
+    ],
+    [
+     "Au revoir (à quelqu'un qui part).",
+     "안녕히 가세요.",
+     "annyeonghi gaseyo"
+    ],
+    [
+     "Salut !",
+     "안녕!",
+     "annyeong"
+    ],
+    [
+     "Bonne nuit.",
+     "안녕히 주무세요.",
+     "annyeonghi jumuseyo"
+    ],
+    [
+     "Je suis française.",
+     "저는 프랑스 사람이에요.",
+     "jeoneun peurangseu saramieyo"
+    ],
+    [
+     "J'habite à Paris.",
+     "저는 파리에 살아요.",
+     "jeoneun parie sarayo"
+    ],
+    [
+     "De rien.",
+     "천만에요.",
+     "cheonmaneyo",
+     "아니에요."
+    ],
+    [
+     "Ce n'est pas grave.",
+     "괜찮아요.",
+     "gwaenchanayo"
     ]
    ],
    "v": [
@@ -863,6 +1390,30 @@
     [
      "livre",
      "책"
+    ],
+    [
+     "salutation",
+     "인사"
+    ],
+    [
+     "professeur",
+     "선생님"
+    ],
+    [
+     "nom",
+     "이름"
+    ],
+    [
+     "pays",
+     "나라"
+    ],
+    [
+     "merci (familier)",
+     "고마워"
+    ],
+    [
+     "ça va, pas de souci",
+     "괜찮다"
     ]
    ],
    "orig": 1,
@@ -906,6 +1457,28 @@
      ],
      0,
      "Celui qui part dit 안녕히 계세요 (restez en paix) ; à celui qui part, on dit 안녕히 가세요."
+    ],
+    [
+     "« Au revoir » à quelqu'un qui part : 안녕히 ___.",
+     [
+      "가세요",
+      "계세요",
+      "오세요",
+      "주세요"
+     ],
+     0,
+     "À quelqu'un qui part : 안녕히 가세요 ; à quelqu'un qui reste : 안녕히 계세요."
+    ],
+    [
+     "« Ce n'est pas grave » : 괜찮___.",
+     [
+      "아요",
+      "어요",
+      "이에요",
+      "예요"
+     ],
+     0,
+     "괜찮다 + -아요 → 괜찮아요."
     ]
    ],
    "pk": [
@@ -917,6 +1490,68 @@
     "dog",
     "tree",
     "flower"
+   ],
+   "parts": [
+    {
+     "t": "Salue quelqu'un",
+     "p": [
+      0,
+      5,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      1,
+      6,
+      7
+     ],
+     "c": [
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Présente-toi",
+     "p": [
+      2,
+      3,
+      4,
+      11,
+      12
+     ],
+     "v": [
+      2,
+      3,
+      5,
+      8,
+      9
+     ],
+     "c": [
+      1,
+      2
+     ]
+    },
+    {
+     "t": "Remercie et rassure",
+     "p": [
+      1,
+      6,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      0,
+      4,
+      10,
+      11
+     ],
+     "c": [
+      0,
+      5
+     ]
+    }
    ]
   },
   {
@@ -967,6 +1602,48 @@
      "오늘은 월요일이에요.",
      "oneureun woryoirieyo",
      "오늘은 월요일입니다."
+    ],
+    [
+     "J'ai deux chats.",
+     "고양이가 두 마리 있어요.",
+     "goyangiga du mari isseoyo"
+    ],
+    [
+     "Trois bouteilles d'eau, s'il vous plaît.",
+     "물 세 병 주세요.",
+     "mul se byeong juseyo"
+    ],
+    [
+     "C'est dix mille wons.",
+     "만 원이에요.",
+     "man wonieyo"
+    ],
+    [
+     "J'habite au troisième étage.",
+     "저는 삼 층에 살아요.",
+     "jeoneun sam cheunge sarayo"
+    ],
+    [
+     "Aujourd'hui, c'est le 15 mars.",
+     "오늘은 삼월 십오 일이에요.",
+     "oneureun samwol sibo irieyo",
+     "오늘은 3월 15일이에요."
+    ],
+    [
+     "Ça coûte trois mille cinq cents wons.",
+     "삼천오백 원이에요.",
+     "samcheonobaek wonieyo"
+    ],
+    [
+     "Il est midi.",
+     "열두 시예요.",
+     "yeoldu siyeyo",
+     "정오예요."
+    ],
+    [
+     "Je me lève à sept heures.",
+     "저는 일곱 시에 일어나요.",
+     "jeoneun ilgop sie ireonayo"
     ]
    ],
    "v": [
@@ -993,6 +1670,30 @@
     [
      "dix mille",
      "만"
+    ],
+    [
+     "trois (natif)",
+     "셋"
+    ],
+    [
+     "(compteur des animaux)",
+     "마리"
+    ],
+    [
+     "un (sino-coréen)",
+     "일"
+    ],
+    [
+     "étage",
+     "층"
+    ],
+    [
+     "won",
+     "원"
+    ],
+    [
+     "demie (heure)",
+     "반"
     ]
    ],
    "c": [
@@ -1028,6 +1729,39 @@
      ],
      0,
      "명 compte les personnes, avec les nombres natifs (두)."
+    ],
+    [
+     "« Deux chats » : 고양이 ___ 마리",
+     [
+      "두",
+      "둘",
+      "이",
+      "둘째"
+     ],
+     0,
+     "Devant un compteur, 둘 devient 두 : 두 마리."
+    ],
+    [
+     "« 10 000 wons » : ___ 원",
+     [
+      "만",
+      "십천",
+      "일만천",
+      "천십"
+     ],
+     0,
+     "10 000 se dit 만 (et non 십천)."
+    ],
+    [
+     "« À sept heures » : 일곱 시___",
+     [
+      "에",
+      "에서",
+      "을",
+      "이"
+     ],
+     0,
+     "Pour un moment précis, on ajoute 에 : 일곱 시에."
     ]
    ],
    "pk": [
@@ -1035,6 +1769,68 @@
     "calendar",
     "coin",
     "money"
+   ],
+   "parts": [
+    {
+     "t": "Compte avec les nombres natifs",
+     "p": [
+      0,
+      2,
+      4,
+      7,
+      8
+     ],
+     "v": [
+      0,
+      1,
+      6,
+      7
+     ],
+     "c": [
+      2,
+      3
+     ]
+    },
+    {
+     "t": "Compte avec les nombres sino-coréens",
+     "p": [
+      3,
+      9,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      5,
+      8,
+      9,
+      10
+     ],
+     "c": [
+      1,
+      4
+     ]
+    },
+    {
+     "t": "Dis l'heure et la date",
+     "p": [
+      1,
+      5,
+      6,
+      13,
+      14
+     ],
+     "v": [
+      2,
+      3,
+      4,
+      11
+     ],
+     "c": [
+      0,
+      5
+     ]
+    }
    ]
   },
   {
@@ -1093,6 +1889,41 @@
      "내일 봐요!",
      "naeil bwayo",
      "내일 만나요!"
+    ],
+    [
+     "De l'eau, s'il vous plaît.",
+     "물 좀 주세요.",
+     "mul jom juseyo"
+    ],
+    [
+     "Pouvez-vous répéter ?",
+     "다시 한번 말해 주세요.",
+     "dasi hanbeon malhae juseyo"
+    ],
+    [
+     "Je ne parle pas bien coréen.",
+     "저는 한국어를 잘 못해요.",
+     "jeoneun hangugeoreul jal motaeyo"
+    ],
+    [
+     "Qu'est-ce que ça veut dire ?",
+     "이게 무슨 뜻이에요?",
+     "ige museun tteusieyo"
+    ],
+    [
+     "On va voir un film ensemble ?",
+     "같이 영화 볼래요?",
+     "gachi yeonghwa bollaeyo"
+    ],
+    [
+     "Je suis libre samedi.",
+     "토요일에 시간 있어요.",
+     "toyoire sigan isseoyo"
+    ],
+    [
+     "À tout à l'heure !",
+     "이따 봐요!",
+     "itta bwayo"
     ]
    ],
    "v": [
@@ -1119,6 +1950,30 @@
     [
      "météo",
      "날씨"
+    ],
+    [
+     "sens, signification",
+     "뜻"
+    ],
+    [
+     "coréen (langue)",
+     "한국어"
+    ],
+    [
+     "lentement",
+     "천천히"
+    ],
+    [
+     "toilettes",
+     "화장실"
+    ],
+    [
+     "week-end",
+     "주말"
+    ],
+    [
+     "temps (libre)",
+     "시간"
     ]
    ],
    "orig": 1,
@@ -1164,6 +2019,39 @@
      ],
      0,
      "맛있어요 = c'est bon ; 맛없어요 = ce n'est pas bon."
+    ],
+    [
+     "« On va voir un film ensemble ? » : 같이 영화 ___?",
+     [
+      "볼래요",
+      "봤어요",
+      "보세요",
+      "봐서"
+     ],
+     0,
+     "-(으)ㄹ래요 ? sert à proposer : 볼래요 ?"
+    ],
+    [
+     "« À demain ! » : 내일 ___!",
+     [
+      "봐요",
+      "봤어요",
+      "보다",
+      "봐서"
+     ],
+     0,
+     "봐요 : forme polie de 보다 pour se dire au revoir."
+    ],
+    [
+     "« Je ne parle pas bien coréen » : 한국어를 잘 ___.",
+     [
+      "못해요",
+      "몰라요",
+      "없어요",
+      "아니에요"
+     ],
+     0,
+     "잘 못하다 = ne pas bien savoir faire : 잘 못해요."
     ]
    ],
    "pk": [
@@ -1174,6 +2062,69 @@
     "rain",
     "umbrella",
     "phone"
+   ],
+   "parts": [
+    {
+     "t": "Demande ce qu'il te faut",
+     "p": [
+      0,
+      1,
+      2,
+      6,
+      8
+     ],
+     "v": [
+      2,
+      3,
+      4,
+      9
+     ],
+     "c": [
+      0,
+      1,
+      3
+     ]
+    },
+    {
+     "t": "Fais-toi comprendre",
+     "p": [
+      4,
+      5,
+      9,
+      10,
+      11
+     ],
+     "v": [
+      6,
+      7,
+      8
+     ],
+     "c": [
+      2,
+      6
+     ]
+    },
+    {
+     "t": "Fais des projets",
+     "p": [
+      3,
+      7,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      0,
+      1,
+      5,
+      10,
+      11
+     ],
+     "c": [
+      4,
+      5
+     ]
+    }
    ]
   },
   {
@@ -1237,6 +2188,41 @@
      "waipai bimilbeonhoga mwoyeyo",
      "와이파이 비밀번호 뭐예요?",
      "와이파이 비번이 뭐예요?"
+    ],
+    [
+     "Un thé glacé, s'il vous plaît.",
+     "아이스티 한 잔 주세요.",
+     "aiseuti han jan juseyo"
+    ],
+    [
+     "En grande taille, s'il vous plaît.",
+     "큰 사이즈로 주세요.",
+     "keun saijeuro juseyo"
+    ],
+    [
+     "C'est pour emporter.",
+     "가져갈게요.",
+     "gajyeogalgeyo"
+    ],
+    [
+     "Dans un gobelet jetable, s'il vous plaît.",
+     "일회용 컵에 주세요.",
+     "ilhoeyong keobe juseyo"
+    ],
+    [
+     "Où est la prise ?",
+     "콘센트 어디 있어요?",
+     "konsenteu eodi isseoyo"
+    ],
+    [
+     "Je peux m'asseoir ici ?",
+     "여기 앉아도 돼요?",
+     "yeogi anjado dwaeyo"
+    ],
+    [
+     "Vous fermez à quelle heure ?",
+     "몇 시에 문 닫아요?",
+     "myeot sie mun dadayo"
     ]
    ],
    "v": [
@@ -1263,6 +2249,30 @@
     [
      "gâteau",
      "케이크"
+    ],
+    [
+     "gobelet",
+     "컵"
+    ],
+    [
+     "emporter",
+     "가져가다"
+    ],
+    [
+     "s'asseoir",
+     "앉다"
+    ],
+    [
+     "prise électrique",
+     "콘센트"
+    ],
+    [
+     "taille",
+     "사이즈"
+    ],
+    [
+     "fermer",
+     "닫다"
     ]
    ],
    "c": [
@@ -1309,6 +2319,28 @@
      ],
      0,
      "여기서 = ici (lieu de l'action, 에서)."
+    ],
+    [
+     "« Je peux m'asseoir ici ? » : 여기 앉아___ 돼요?",
+     [
+      "도",
+      "서",
+      "야",
+      "고"
+     ],
+     0,
+     "Demander la permission : -아/어도 돼요 ?"
+    ],
+    [
+     "« Où est la prise ? » : 콘센트 어디 ___?",
+     [
+      "있어요",
+      "이에요",
+      "가요",
+      "해요"
+     ],
+     0,
+     "Pour l'endroit où se trouve un objet : 있어요."
     ]
    ],
    "pk": [
@@ -1320,6 +2352,68 @@
     "tea",
     "card",
     "receipt"
+   ],
+   "parts": [
+    {
+     "t": "Commande une boisson",
+     "p": [
+      0,
+      4,
+      5,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      1,
+      3,
+      10
+     ],
+     "c": [
+      0,
+      2
+     ]
+    },
+    {
+     "t": "Sur place ou à emporter",
+     "p": [
+      1,
+      2,
+      3,
+      10,
+      11
+     ],
+     "v": [
+      2,
+      6,
+      7
+     ],
+     "c": [
+      1,
+      3
+     ]
+    },
+    {
+     "t": "Installe-toi au café",
+     "p": [
+      6,
+      7,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      4,
+      5,
+      8,
+      9,
+      11
+     ],
+     "c": [
+      4,
+      5
+     ]
+    }
    ]
   },
   {
@@ -1381,6 +2475,42 @@
      "gyesanhae juseyo",
      "계산해주세요.",
      "계산할게요."
+    ],
+    [
+     "Il y a de la place ?",
+     "자리 있어요?",
+     "jari isseoyo"
+    ],
+    [
+     "On peut s'asseoir près de la fenêtre ?",
+     "창가 자리에 앉아도 돼요?",
+     "changga jarie anjado dwaeyo"
+    ],
+    [
+     "Qu'est-ce qui est bon ici ?",
+     "뭐가 맛있어요?",
+     "mwoga masisseoyo"
+    ],
+    [
+     "Deux portions de bulgogi, s'il vous plaît.",
+     "불고기 이 인분 주세요.",
+     "bulgogi i inbun juseyo",
+     "불고기 2인분 주세요."
+    ],
+    [
+     "On paie séparément.",
+     "따로 계산할게요.",
+     "ttaro gyesanhalgeyo"
+    ],
+    [
+     "On peut emporter les restes ?",
+     "남은 음식 포장돼요?",
+     "nameun eumsik pojangdwaeyo"
+    ],
+    [
+     "On paie tout ensemble.",
+     "같이 계산할게요.",
+     "gachi gyesanhalgeyo"
     ]
    ],
    "v": [
@@ -1407,6 +2537,30 @@
     [
      "plus, encore",
      "더"
+    ],
+    [
+     "place (assise)",
+     "자리"
+    ],
+    [
+     "côté fenêtre",
+     "창가"
+    ],
+    [
+     "portion",
+     "인분"
+    ],
+    [
+     "séparément",
+     "따로"
+    ],
+    [
+     "reçu",
+     "영수증"
+    ],
+    [
+     "serviette humide",
+     "물수건"
     ]
    ],
    "c": [
@@ -1453,6 +2607,28 @@
      ],
      0,
      "맵다 = épicé → 맵게 ; 덜 = moins."
+    ],
+    [
+     "« Deux portions de bulgogi » : 불고기 이 ___ 주세요.",
+     [
+      "인분",
+      "명",
+      "개",
+      "잔"
+     ],
+     0,
+     "인분 = portion (par personne)."
+    ],
+    [
+     "« On paie séparément » : ___ 계산할게요.",
+     [
+      "따로",
+      "같이",
+      "다시",
+      "먼저"
+     ],
+     0,
+     "따로 = séparément ; 같이 = ensemble."
     ]
    ],
    "pk": [
@@ -1466,6 +2642,68 @@
     "restaurant",
     "water",
     "tteokbokki"
+   ],
+   "parts": [
+    {
+     "t": "Prends une table",
+     "p": [
+      0,
+      1,
+      2,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      6,
+      7,
+      11
+     ],
+     "c": [
+      0,
+      1
+     ]
+    },
+    {
+     "t": "Commande ton plat",
+     "p": [
+      3,
+      4,
+      5,
+      10,
+      11
+     ],
+     "v": [
+      1,
+      2,
+      5,
+      8
+     ],
+     "c": [
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Mange et paie",
+     "p": [
+      6,
+      7,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      3,
+      4,
+      9,
+      10
+     ],
+     "c": [
+      2,
+      5
+     ]
+    }
    ]
   },
   {
@@ -1526,6 +2764,41 @@
      "영수증 주세요.",
      "yeongsujeung juseyo",
      "영수증 좀 주세요."
+    ],
+    [
+     "Où sont les boissons ?",
+     "음료수는 어디에 있어요?",
+     "eumnyosuneun eodie isseoyo"
+    ],
+    [
+     "Vous avez des piles ?",
+     "건전지 있어요?",
+     "geonjeonji isseoyo"
+    ],
+    [
+     "C'est au fond, à gauche.",
+     "안쪽 왼쪽에 있어요.",
+     "anjjok oenjjoge isseoyo"
+    ],
+    [
+     "Il n'y en a plus.",
+     "다 떨어졌어요.",
+     "da tteoreojyeosseoyo"
+    ],
+    [
+     "Je paie avec mon téléphone.",
+     "휴대폰으로 결제할게요.",
+     "hyudaeponeuro gyeoljehalgeyo"
+    ],
+    [
+     "C'est en promotion ?",
+     "이거 할인해요?",
+     "igeo harinhaeyo"
+    ],
+    [
+     "Vous avez des baguettes (pour manger) ?",
+     "젓가락 있어요?",
+     "jeotgarak isseoyo"
     ]
    ],
    "v": [
@@ -1552,6 +2825,30 @@
     [
      "acheter",
      "사다"
+    ],
+    [
+     "pile",
+     "건전지"
+    ],
+    [
+     "au fond",
+     "안쪽"
+    ],
+    [
+     "payer",
+     "결제하다"
+    ],
+    [
+     "espèces",
+     "현금"
+    ],
+    [
+     "réduction",
+     "할인"
+    ],
+    [
+     "baguettes (couverts)",
+     "젓가락"
     ]
    ],
    "c": [
@@ -1598,6 +2895,28 @@
      ],
      0,
      "데우다 → 데워 + 주세요."
+    ],
+    [
+     "« Il n'y en a plus » : 다 ___.",
+     [
+      "떨어졌어요",
+      "떨어져요",
+      "떨어질 거예요",
+      "떨어지다"
+     ],
+     0,
+     "다 떨어지다 = être épuisé ; au passé : 다 떨어졌어요."
+    ],
+    [
+     "« C'est en promotion ? » : 이거 ___해요?",
+     [
+      "할인",
+      "할부",
+      "환불",
+      "할머니"
+     ],
+     0,
+     "할인 = réduction ; 환불 = remboursement."
     ]
    ],
    "pk": [
@@ -1611,6 +2930,68 @@
     "convstore",
     "water",
     "candy"
+   ],
+   "parts": [
+    {
+     "t": "Trouve un produit",
+     "p": [
+      3,
+      8,
+      9,
+      10,
+      11
+     ],
+     "v": [
+      2,
+      4,
+      6,
+      7
+     ],
+     "c": [
+      2,
+      4
+     ]
+    },
+    {
+     "t": "Passe à la caisse",
+     "p": [
+      0,
+      1,
+      4,
+      7,
+      12
+     ],
+     "v": [
+      0,
+      3,
+      8,
+      9
+     ],
+     "c": [
+      0,
+      1
+     ]
+    },
+    {
+     "t": "Profite des offres",
+     "p": [
+      2,
+      5,
+      6,
+      13,
+      14
+     ],
+     "v": [
+      1,
+      5,
+      10,
+      11
+     ],
+     "c": [
+      3,
+      5
+     ]
+    }
    ]
   },
   {
@@ -1674,6 +3055,41 @@
      "seoul nalssiga eottaeyo",
      "서울은 날씨가 어때요?",
      "서울 날씨 어때요?"
+    ],
+    [
+     "En été, il fait chaud et humide.",
+     "여름에는 덥고 습해요.",
+     "yeoreumeneun deopgo seupaeyo"
+    ],
+    [
+     "En automne, les feuilles changent de couleur.",
+     "가을에는 단풍이 들어요.",
+     "gaeureneun danpungi deureoyo"
+    ],
+    [
+     "L'hiver coréen est très froid.",
+     "한국의 겨울은 아주 추워요.",
+     "hangugui gyeoureun aju chuwoyo"
+    ],
+    [
+     "Quelle saison préfères-tu ?",
+     "어느 계절을 좋아해요?",
+     "eoneu gyejeoreul joahaeyo"
+    ],
+    [
+     "Il va faire froid ce week-end.",
+     "이번 주말에 추울 거예요.",
+     "ibeon jumare chuul geoyeo"
+    ],
+    [
+     "Prends une veste.",
+     "재킷 가져가세요.",
+     "jaekit gajyeogaseyo"
+    ],
+    [
+     "Il fera beau demain.",
+     "내일은 날씨가 맑을 거예요.",
+     "naeireun nalssiga malgeul geoyeo"
     ]
    ],
    "v": [
@@ -1700,6 +3116,30 @@
     [
      "parapluie",
      "우산"
+    ],
+    [
+     "avoir chaud, faire chaud",
+     "덥다"
+    ],
+    [
+     "avoir froid, faire froid",
+     "춥다"
+    ],
+    [
+     "dégagé (ciel)",
+     "맑다"
+    ],
+    [
+     "prévisions météo",
+     "일기 예보"
+    ],
+    [
+     "veste",
+     "재킷"
+    ],
+    [
+     "feuilles d'automne",
+     "단풍"
     ]
    ],
    "c": [
@@ -1746,6 +3186,28 @@
      ],
      0,
      "좋아하다 prend l'objet en 을/를 ; 겨울 finit par une consonne → 을."
+    ],
+    [
+     "« En automne » : 가을___",
+     [
+      "에",
+      "에서",
+      "을",
+      "이"
+     ],
+     0,
+     "Une saison comme moment : 가을에 (en automne)."
+    ],
+    [
+     "« Il va faire froid » : 추울 ___.",
+     [
+      "거예요",
+      "게요",
+      "래요",
+      "지요"
+     ],
+     0,
+     "Futur, prévision : -(으)ㄹ 거예요 (춥다 → 추울 거예요)."
     ]
    ],
    "pk": [
@@ -1759,6 +3221,68 @@
     "scarf",
     "flower",
     "leaf"
+   ],
+   "parts": [
+    {
+     "t": "Dis le temps qu'il fait",
+     "p": [
+      0,
+      1,
+      2,
+      3,
+      7
+     ],
+     "v": [
+      4,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      0,
+      1
+     ]
+    },
+    {
+     "t": "Parle des saisons",
+     "p": [
+      5,
+      8,
+      9,
+      10,
+      11
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      3,
+      11
+     ],
+     "c": [
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Prévois la météo",
+     "p": [
+      4,
+      6,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      5,
+      9,
+      10
+     ],
+     "c": [
+      2,
+      5
+     ]
+    }
    ]
   },
   {
@@ -1816,6 +3340,41 @@
      "Je pars avant vous. (en quittant le bureau)",
      "먼저 들어가 보겠습니다.",
      "meonjeo deureoga bogetseumnida"
+    ],
+    [
+     "Je travaille au service marketing.",
+     "마케팅 부서에서 일해요.",
+     "maketing buseoeseo ilhaeyo"
+    ],
+    [
+     "Je finis à six heures.",
+     "여섯 시에 퇴근해요.",
+     "yeoseot sie toegeunhaeyo"
+    ],
+    [
+     "Je vous envoie le rapport.",
+     "보고서 보내 드릴게요.",
+     "bogoseo bonae deurilgeyo"
+    ],
+    [
+     "La réunion a été reportée.",
+     "회의가 미뤄졌어요.",
+     "hoeuiga mirwojyeosseoyo"
+    ],
+    [
+     "Bon courage pour le travail ! (en partant)",
+     "수고하세요.",
+     "sugohaseyo"
+    ],
+    [
+     "Allons déjeuner ensemble.",
+     "같이 점심 먹으러 가요.",
+     "gachi jeomsim meogeureo gayo"
+    ],
+    [
+     "Félicitations pour votre promotion !",
+     "승진 축하드려요!",
+     "seungjin chukhadeuryeoyo"
     ]
    ],
    "v": [
@@ -1842,6 +3401,30 @@
     [
      "collègue",
      "동료"
+    ],
+    [
+     "quitter le travail",
+     "퇴근하다"
+    ],
+    [
+     "aller au travail",
+     "출근하다"
+    ],
+    [
+     "rapport",
+     "보고서"
+    ],
+    [
+     "déjeuner",
+     "점심"
+    ],
+    [
+     "promotion",
+     "승진"
+    ],
+    [
+     "féliciter",
+     "축하하다"
     ]
    ],
    "c": [
@@ -1899,6 +3482,28 @@
      ],
      0,
      "까지 = d'ici, jusqu'à ; -겠습니다 = intention, registre formel. 부터 = à partir de ; 끝냈습니다 est au passé ; 끝내 est familier."
+    ],
+    [
+     "« Je finis à six heures » : 여섯 시에 ___.",
+     [
+      "퇴근해요",
+      "출근해요",
+      "야근해요",
+      "휴가예요"
+     ],
+     0,
+     "퇴근하다 = quitter le bureau ; 출근하다 = aller au bureau."
+    ],
+    [
+     "« Félicitations pour votre promotion ! » : 승진 ___!",
+     [
+      "축하드려요",
+      "감사드려요",
+      "죄송해요",
+      "부탁드려요"
+     ],
+     0,
+     "축하드려요 = félicitations (poli)."
     ]
    ],
    "pk": [
@@ -1908,6 +3513,69 @@
     "printer",
     "letter",
     "pen"
+   ],
+   "parts": [
+    {
+     "t": "Parle de ton travail",
+     "p": [
+      0,
+      2,
+      3,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      4,
+      6,
+      7
+     ],
+     "c": [
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Communique au bureau",
+     "p": [
+      1,
+      4,
+      5,
+      10,
+      11
+     ],
+     "v": [
+      1,
+      2,
+      3,
+      8
+     ],
+     "c": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "t": "Salue tes collègues",
+     "p": [
+      6,
+      7,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      5,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      3,
+      6
+     ]
+    }
    ]
   },
   {
@@ -1967,6 +3635,41 @@
      "kadeuro halgeyo",
      "카드로 계산할게요.",
      "카드로 결제할게요."
+    ],
+    [
+     "Où est l'arrêt de bus ?",
+     "버스 정류장이 어디예요?",
+     "beoseu jeongnyujangi eodiyeyo"
+    ],
+    [
+     "Je vais à Myeongdong.",
+     "명동에 가요.",
+     "myeongdonge gayo"
+    ],
+    [
+     "Vous avez une taille plus grande ?",
+     "더 큰 사이즈 있어요?",
+     "deo keun saijeu isseoyo"
+    ],
+    [
+     "Où est la cabine d'essayage ?",
+     "탈의실이 어디예요?",
+     "taruisiri eodiyeyo"
+    ],
+    [
+     "Ça me va bien ?",
+     "저한테 잘 어울려요?",
+     "jeohante jal eoullyeoyo"
+    ],
+    [
+     "C'est en solde ?",
+     "세일해요?",
+     "seilhaeyo"
+    ],
+    [
+     "Je peux l'échanger ?",
+     "교환할 수 있어요?",
+     "gyohwanhal su isseoyo"
     ]
    ],
    "v": [
@@ -1993,6 +3696,30 @@
     [
      "chaussures",
      "신발"
+    ],
+    [
+     "prendre (un transport)",
+     "타다"
+    ],
+    [
+     "cabine d'essayage",
+     "탈의실"
+    ],
+    [
+     "aller bien (vêtement)",
+     "어울리다"
+    ],
+    [
+     "soldes",
+     "세일"
+    ],
+    [
+     "échanger",
+     "교환하다"
+    ],
+    [
+     "baisser le prix",
+     "깎다"
     ]
    ],
    "c": [
@@ -2037,6 +3764,28 @@
      ],
      0,
      "내리다 = descendre (d'un véhicule) ; 타다 = monter."
+    ],
+    [
+     "« Je peux l'essayer ? » : 입어 ___ 돼요?",
+     [
+      "봐도",
+      "보고",
+      "봐서",
+      "보면"
+     ],
+     0,
+     "Essayer : -아/어 보다 ; permission : -아/어도 돼요 → 입어 봐도 돼요 ?"
+    ],
+    [
+     "« Ça me va bien ? » : 저한테 잘 ___?",
+     [
+      "어울려요",
+      "어울리어요",
+      "어울리요",
+      "어울러요"
+     ],
+     0,
+     "어울리다 + -어요 → 어울려요."
     ]
    ],
    "pk": [
@@ -2051,6 +3800,68 @@
     "hat",
     "card",
     "receipt"
+   ],
+   "parts": [
+    {
+     "t": "Prends les transports",
+     "p": [
+      0,
+      1,
+      2,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      1,
+      6
+     ],
+     "c": [
+      1,
+      3
+     ]
+    },
+    {
+     "t": "Essaie des vêtements",
+     "p": [
+      4,
+      6,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      4,
+      5,
+      7,
+      8
+     ],
+     "c": [
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Négocie et paie",
+     "p": [
+      3,
+      5,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      2,
+      3,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      0,
+      2
+     ]
+    }
    ]
   },
   {
@@ -2111,6 +3922,43 @@
      "isipbun jjeum geollyeoyo",
      "이십 분쯤 걸려요.",
      "20분 정도 걸려요."
+    ],
+    [
+     "Prenez la ligne 2.",
+     "2호선을 타세요.",
+     "ihoseoneul taseyo",
+     "이호선을 타세요."
+    ],
+    [
+     "C'est bien la direction de Gangnam ?",
+     "강남 방향이에요?",
+     "gangnam banghyangieyo"
+    ],
+    [
+     "Ce bus s'arrête à Hongdae ?",
+     "이 버스 홍대에서 서요?",
+     "i beoseu hongdaeeseo seoyo"
+    ],
+    [
+     "Appuyez sur le bouton pour descendre.",
+     "내리려면 벨을 누르세요.",
+     "naeriryeomyeon bereul nureuseyo"
+    ],
+    [
+     "Le prochain bus arrive dans cinq minutes.",
+     "다음 버스는 오 분 후에 와요.",
+     "daeum beoseuneun o bun hue wayo",
+     "다음 버스는 5분 후에 와요."
+    ],
+    [
+     "Où est-ce que je recharge ma carte ?",
+     "카드는 어디서 충전해요?",
+     "kadeuneun eodiseo chungjeonhaeyo"
+    ],
+    [
+     "C'est à trois arrêts d'ici.",
+     "여기서 세 정거장이에요.",
+     "yeogiseo se jeonggeojangieyo"
     ]
    ],
    "v": [
@@ -2137,6 +3985,30 @@
     [
      "carte de transport",
      "교통카드"
+    ],
+    [
+     "sonnette",
+     "벨"
+    ],
+    [
+     "prochain",
+     "다음"
+    ],
+    [
+     "s'arrêter",
+     "서다"
+    ],
+    [
+     "recharger",
+     "충전하다"
+    ],
+    [
+     "arrêt (de bus)",
+     "정거장"
+    ],
+    [
+     "prendre (du temps)",
+     "걸리다"
     ]
    ],
    "c": [
@@ -2183,6 +4055,28 @@
      ],
      0,
      "호선 = ligne de métro ; 층 = étage."
+    ],
+    [
+     "« Appuyez sur le bouton » : 벨을 ___.",
+     [
+      "누르세요",
+      "눌러세요",
+      "누르서요",
+      "눌르세요"
+     ],
+     0,
+     "누르다 + -세요 → 누르세요."
+    ],
+    [
+     "« À trois arrêts d'ici » : 여기서 ___ 정거장이에요.",
+     [
+      "세",
+      "셋",
+      "삼",
+      "셋째"
+     ],
+     0,
+     "Devant un compteur, 셋 devient 세 : 세 정거장."
     ]
    ],
    "pk": [
@@ -2193,6 +4087,68 @@
     "card",
     "map",
     "trafficlight"
+   ],
+   "parts": [
+    {
+     "t": "Trouve ta ligne",
+     "p": [
+      0,
+      1,
+      4,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "c": [
+      1,
+      3
+     ]
+    },
+    {
+     "t": "Prends le bus",
+     "p": [
+      2,
+      3,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      3,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      0,
+      4
+     ]
+    },
+    {
+     "t": "Prépare ton trajet",
+     "p": [
+      5,
+      6,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      5,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      2,
+      5
+     ]
+    }
    ]
   },
   {
@@ -2252,6 +4208,41 @@
      "잔돈은 괜찮아요.",
      "jandoneun gwaenchanayo",
      "거스름돈은 괜찮아요."
+    ],
+    [
+     "À cette adresse, s'il vous plaît.",
+     "이 주소로 가 주세요.",
+     "i jusoro ga juseyo"
+    ],
+    [
+     "À la gare de Séoul, s'il vous plaît.",
+     "서울역으로 가 주세요.",
+     "seoullyeogeuro ga juseyo"
+    ],
+    [
+     "Vous connaissez cet endroit ?",
+     "여기 아세요?",
+     "yeogi aseyo"
+    ],
+    [
+     "Vous pouvez allumer la climatisation ?",
+     "에어컨 좀 켜 주세요.",
+     "eeokeon jom kyeo juseyo"
+    ],
+    [
+     "Allez un peu plus vite, s'il vous plaît.",
+     "조금 빨리 가 주세요.",
+     "jogeum ppalli ga juseyo"
+    ],
+    [
+     "Ça fait combien ?",
+     "얼마 나왔어요?",
+     "eolma nawasseoyo"
+    ],
+    [
+     "Je peux avoir un reçu ?",
+     "영수증 받을 수 있어요?",
+     "yeongsujeung badeul su isseoyo"
     ]
    ],
    "v": [
@@ -2278,6 +4269,30 @@
     [
      "pressé",
      "급하다"
+    ],
+    [
+     "destination",
+     "목적지"
+    ],
+    [
+     "climatisation",
+     "에어컨"
+    ],
+    [
+     "vite",
+     "빨리"
+    ],
+    [
+     "tarif (de la course)",
+     "요금"
+    ],
+    [
+     "payer",
+     "내다"
+    ],
+    [
+     "chauffeur (poli)",
+     "기사님"
     ]
    ],
    "c": [
@@ -2324,6 +4339,28 @@
      ],
      0,
      "되다 = être possible : 카드 돼요? = on peut payer par carte ?"
+    ],
+    [
+     "« Un peu plus vite, s'il vous plaît » : 조금 ___ 가 주세요.",
+     [
+      "빨리",
+      "빠르",
+      "빠른",
+      "빨라"
+     ],
+     0,
+     "빨리 = vite (adverbe) ; 빠르다 = être rapide."
+    ],
+    [
+     "« Allumez la clim, s'il vous plaît » : 에어컨 좀 ___ 주세요.",
+     [
+      "켜",
+      "꺼",
+      "열어",
+      "닫아"
+     ],
+     0,
+     "켜다 = allumer ; 끄다 = éteindre."
     ]
    ],
    "pk": [
@@ -2334,6 +4371,68 @@
     "money",
     "card",
     "plane"
+   ],
+   "parts": [
+    {
+     "t": "Donne ta destination",
+     "p": [
+      0,
+      1,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      0,
+      2,
+      6
+     ],
+     "c": [
+      0,
+      2
+     ]
+    },
+    {
+     "t": "Pendant la course",
+     "p": [
+      3,
+      4,
+      5,
+      11,
+      12
+     ],
+     "v": [
+      3,
+      5,
+      7,
+      8,
+      11
+     ],
+     "c": [
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Descends et paie",
+     "p": [
+      2,
+      6,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      1,
+      4,
+      9,
+      10
+     ],
+     "c": [
+      1,
+      3
+     ]
+    }
    ]
   },
   {
@@ -2393,6 +4492,41 @@
      "jeil gakkaun byeongwoni eodiyeyo",
      "가장 가까운 병원이 어디예요?",
      "가까운 병원이 어디예요?"
+    ],
+    [
+     "J'ai mal à la gorge.",
+     "목이 아파요.",
+     "mogi apayo"
+    ],
+    [
+     "J'ai mal aux dents.",
+     "이가 아파요.",
+     "iga apayo"
+    ],
+    [
+     "J'ai mal au dos.",
+     "허리가 아파요.",
+     "heoriga apayo"
+    ],
+    [
+     "Je tousse beaucoup.",
+     "기침을 많이 해요.",
+     "gichimeul mani haeyo"
+    ],
+    [
+     "J'ai la nausée.",
+     "속이 안 좋아요.",
+     "sogi an joayo"
+    ],
+    [
+     "Des pansements, s'il vous plaît.",
+     "밴드 주세요.",
+     "baendeu juseyo"
+    ],
+    [
+     "Il faut une ordonnance ?",
+     "처방전이 필요해요?",
+     "cheobangjeoni piryohaeyo"
     ]
    ],
    "v": [
@@ -2419,6 +4553,30 @@
     [
      "ventre",
      "배"
+    ],
+    [
+     "gorge",
+     "목"
+    ],
+    [
+     "toux",
+     "기침"
+    ],
+    [
+     "nez qui coule",
+     "콧물"
+    ],
+    [
+     "ordonnance",
+     "처방전"
+    ],
+    [
+     "pharmacie",
+     "약국"
+    ],
+    [
+     "pansement",
+     "밴드"
     ]
    ],
    "c": [
@@ -2465,6 +4623,28 @@
      ],
      0,
      "번 compte les fois."
+    ],
+    [
+     "« J'ai mal à la gorge » : 목___ 아파요.",
+     [
+      "이",
+      "을",
+      "에",
+      "은요"
+     ],
+     0,
+     "La partie du corps qui fait mal est le sujet : 목이 아파요."
+    ],
+    [
+     "« Il faut une ordonnance ? » : 처방전이 ___?",
+     [
+      "필요해요",
+      "필요예요",
+      "필요있어요",
+      "필요하다요"
+     ],
+     0,
+     "필요하다 → 필요해요."
     ]
    ],
    "pk": [
@@ -2476,6 +4656,68 @@
     "hospital",
     "ambulance",
     "tooth"
+   ],
+   "parts": [
+    {
+     "t": "Dis où tu as mal",
+     "p": [
+      0,
+      2,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      0,
+      4,
+      5,
+      6
+     ],
+     "c": [
+      0,
+      4
+     ]
+    },
+    {
+     "t": "Décris tes symptômes",
+     "p": [
+      1,
+      3,
+      6,
+      11,
+      12
+     ],
+     "v": [
+      1,
+      2,
+      7,
+      8
+     ],
+     "c": [
+      1,
+      2
+     ]
+    },
+    {
+     "t": "Va à la pharmacie",
+     "p": [
+      4,
+      5,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      3,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      3,
+      5
+     ]
+    }
    ]
   },
   {
@@ -2538,6 +4780,42 @@
      "susuryoga isseoyo",
      "수수료 있어요?",
      "수수료가 있나요?"
+    ],
+    [
+     "Je voudrais une carte bancaire.",
+     "체크카드를 만들고 싶어요.",
+     "chekeukadeureul mandeulgo sipeoyo"
+    ],
+    [
+     "Où dois-je signer ?",
+     "어디에 서명해야 해요?",
+     "eodie seomyeonghaeya haeyo"
+    ],
+    [
+     "Je voudrais changer cent euros.",
+     "백 유로를 바꾸고 싶어요.",
+     "baek yuroreul bakkugo sipeoyo",
+     "100유로를 바꾸고 싶어요."
+    ],
+    [
+     "En billets de dix mille wons, s'il vous plaît.",
+     "만 원짜리로 주세요.",
+     "man wonjjariro juseyo"
+    ],
+    [
+     "Le taux est bon aujourd'hui.",
+     "오늘 환율이 좋아요.",
+     "oneul hwannyuri joayo"
+    ],
+    [
+     "Le distributeur a avalé ma carte.",
+     "현금인출기가 카드를 먹었어요.",
+     "hyeongeuminchulgiga kadeureul meogeosseoyo"
+    ],
+    [
+     "Je voudrais faire un virement.",
+     "송금하고 싶어요.",
+     "songgeumhago sipeoyo"
     ]
    ],
    "v": [
@@ -2564,6 +4842,30 @@
     [
      "passeport",
      "여권"
+    ],
+    [
+     "signer",
+     "서명하다"
+    ],
+    [
+     "carte de débit",
+     "체크카드"
+    ],
+    [
+     "billet (de banque)",
+     "지폐"
+    ],
+    [
+     "(d'une valeur de)",
+     "짜리"
+    ],
+    [
+     "virement",
+     "송금"
+    ],
+    [
+     "retirer (de l'argent)",
+     "출금하다"
     ]
    ],
    "c": [
@@ -2610,6 +4912,28 @@
      ],
      0,
      "Avec 있다, ce qui existe prend 이/가 ; 수수료 finit par une voyelle → 가."
+    ],
+    [
+     "« Où dois-je signer ? » : 어디에 서명해___ 해요?",
+     [
+      "야",
+      "서",
+      "도",
+      "고"
+     ],
+     0,
+     "Obligation : -아/어야 해요 (서명해야 해요)."
+    ],
+    [
+     "« En billets de 10 000 wons » : 만 원___로 주세요.",
+     [
+      "짜리",
+      "정도",
+      "마다",
+      "쯤"
+     ],
+     0,
+     "짜리 indique la valeur d'un billet ou d'un objet : 만 원짜리."
     ]
    ],
    "pk": [
@@ -2621,6 +4945,68 @@
     "passport",
     "wallet",
     "receipt"
+   ],
+   "parts": [
+    {
+     "t": "Ouvre un compte",
+     "p": [
+      0,
+      5,
+      6,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      5,
+      6,
+      7
+     ],
+     "c": [
+      0,
+      4
+     ]
+    },
+    {
+     "t": "Change de l'argent",
+     "p": [
+      1,
+      2,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      1,
+      2,
+      8,
+      9
+     ],
+     "c": [
+      1,
+      5
+     ]
+    },
+    {
+     "t": "Retire et envoie de l'argent",
+     "p": [
+      3,
+      4,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      3,
+      4,
+      10,
+      11
+     ],
+     "c": [
+      2,
+      3
+     ]
+    }
    ]
   },
   {
@@ -2682,6 +5068,41 @@
      "haendeupon baeteoriga eopseoyo",
      "휴대폰 배터리가 없어요.",
      "배터리가 다 됐어요."
+    ],
+    [
+     "C'est Minji à l'appareil.",
+     "저 민지예요.",
+     "jeo minjiyeyo"
+    ],
+    [
+     "Pouvez-vous lui dire de me rappeler ?",
+     "전화해 달라고 전해 주세요.",
+     "jeonhwahae dallago jeonhae juseyo"
+    ],
+    [
+     "Je laisse un message.",
+     "메시지 남길게요.",
+     "mesiji namgilgeyo"
+    ],
+    [
+     "Je t'envoie un SMS.",
+     "문자 보낼게.",
+     "munja bonaelge"
+    ],
+    [
+     "Je n'ai pas de réseau.",
+     "신호가 안 잡혀요.",
+     "sinhoga an japyeoyo"
+    ],
+    [
+     "Je peux recharger mon téléphone ?",
+     "핸드폰 좀 충전해도 돼요?",
+     "haendeupon jom chungjeonhaedo dwaeyo"
+    ],
+    [
+     "Mets ton téléphone en silencieux.",
+     "핸드폰을 무음으로 해 줘.",
+     "haendeuponeul mueumeuro hae jwo"
     ]
    ],
    "v": [
@@ -2708,6 +5129,30 @@
     [
      "batterie",
      "배터리"
+    ],
+    [
+     "téléphoner",
+     "전화하다"
+    ],
+    [
+     "par erreur",
+     "잘못"
+    ],
+    [
+     "laisser",
+     "남기다"
+    ],
+    [
+     "transmettre",
+     "전하다"
+    ],
+    [
+     "SMS",
+     "문자"
+    ],
+    [
+     "mode silencieux",
+     "무음"
     ]
    ],
    "c": [
@@ -2754,6 +5199,39 @@
      ],
      0,
      "나중에 = plus tard ; 어제 = hier, 아까 = tout à l'heure (passé)."
+    ],
+    [
+     "« C'est Minji » (au téléphone) : 저 민지___.",
+     [
+      "예요",
+      "이에요",
+      "입니까",
+      "이다"
+     ],
+     0,
+     "Après une voyelle : -예요 (민지예요)."
+    ],
+    [
+     "« Je t'envoie un SMS » : 문자 ___.",
+     [
+      "보낼게",
+      "보낼래요",
+      "보냈게",
+      "보내게"
+     ],
+     0,
+     "Promesse ou intention (familier) : -(으)ㄹ게 (보낼게)."
+    ],
+    [
+     "« Je n'ai pas de réseau » : 신호가 안 ___.",
+     [
+      "잡혀요",
+      "잡아요",
+      "잡혔요",
+      "잡혀서"
+     ],
+     0,
+     "신호가 잡히다 = capter le réseau (passif de 잡다)."
     ]
    ],
    "pk": [
@@ -2762,6 +5240,69 @@
     "letter",
     "clock",
     "headphones"
+   ],
+   "parts": [
+    {
+     "t": "Décroche et appelle",
+     "p": [
+      0,
+      1,
+      2,
+      6,
+      8
+     ],
+     "v": [
+      0,
+      2,
+      6,
+      7
+     ],
+     "c": [
+      0,
+      4
+     ]
+    },
+    {
+     "t": "Laisse un message",
+     "p": [
+      3,
+      4,
+      5,
+      9,
+      10
+     ],
+     "v": [
+      3,
+      4,
+      8,
+      9
+     ],
+     "c": [
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "t": "Utilise ton portable",
+     "p": [
+      7,
+      11,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      1,
+      5,
+      10,
+      11
+     ],
+     "c": [
+      5,
+      6
+     ]
+    }
    ]
   },
   {
@@ -2823,6 +5364,41 @@
      "daeum juro mirulkkayo",
      "다음 주로 미뤄도 돼요?",
      "다음 주로 미룰래요?"
+    ],
+    [
+     "Tu veux venir à ma fête ?",
+     "내 파티에 올래?",
+     "nae patie ollae"
+    ],
+    [
+     "Allons boire un café.",
+     "커피 마시러 가요.",
+     "keopi masireo gayo"
+    ],
+    [
+     "Je t'invite à dîner.",
+     "저녁 살게요.",
+     "jeonyeok salgeyo"
+    ],
+    [
+     "Avec plaisir, je viendrai !",
+     "좋아요, 갈게요!",
+     "joayo, galgeyo"
+    ],
+    [
+     "Une autre fois, peut-être.",
+     "다음에 같이 가요.",
+     "daeume gachi gayo"
+    ],
+    [
+     "Merci de m'avoir invité.",
+     "초대해 주셔서 감사해요.",
+     "chodaehae jusyeoseo gamsahaeyo"
+    ],
+    [
+     "Où est-ce qu'on se retrouve ?",
+     "어디서 만날까요?",
+     "eodiseo mannalkkayo"
     ]
    ],
    "v": [
@@ -2849,6 +5425,26 @@
     [
      "reporter",
      "미루다"
+    ],
+    [
+     "inviter",
+     "초대하다"
+    ],
+    [
+     "fête",
+     "파티"
+    ],
+    [
+     "la prochaine fois",
+     "다음에"
+    ],
+    [
+     "refuser",
+     "거절하다"
+    ],
+    [
+     "anniversaire",
+     "생일"
     ]
    ],
    "c": [
@@ -2895,6 +5491,39 @@
      ],
      0,
      "-(으)ㄹ 것 같아요 = je crois que…"
+    ],
+    [
+     "« Je viendrai ! » : 갈___!",
+     [
+      "게요",
+      "래요",
+      "까요",
+      "지요"
+     ],
+     0,
+     "Promesse : -(으)ㄹ게요 (갈게요)."
+    ],
+    [
+     "« Merci de m'avoir invité » : 초대해 ___ 감사해요.",
+     [
+      "주셔서",
+      "줘서요",
+      "주시고",
+      "주니까"
+     ],
+     0,
+     "Remercier pour un service rendu : -아/어 주셔서 감사해요."
+    ],
+    [
+     "« Tu veux venir ? » : 올___?",
+     [
+      "래",
+      "게",
+      "까요",
+      "지"
+     ],
+     0,
+     "-(으)ㄹ래 ? sert à inviter (familier)."
     ]
    ],
    "pk": [
@@ -2904,6 +5533,68 @@
     "restaurant",
     "gift",
     "coffee"
+   ],
+   "parts": [
+    {
+     "t": "Invite quelqu'un",
+     "p": [
+      0,
+      6,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      1,
+      6,
+      7,
+      10
+     ],
+     "c": [
+      2,
+      6
+     ]
+    },
+    {
+     "t": "Réponds à une invitation",
+     "p": [
+      1,
+      2,
+      11,
+      12,
+      13
+     ],
+     "v": [
+      0,
+      8,
+      9
+     ],
+     "c": [
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Fixe l'heure et le lieu",
+     "p": [
+      3,
+      4,
+      5,
+      7,
+      14
+     ],
+     "v": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "c": [
+      0,
+      1,
+      3
+     ]
+    }
    ]
   },
   {
@@ -2966,6 +5657,41 @@
      "gachi gallaeyo",
      "저랑 같이 갈래요?",
      "같이 가실래요?"
+    ],
+    [
+     "J'aime lire.",
+     "저는 책 읽는 걸 좋아해요.",
+     "jeoneun chaek ingneun geol joahaeyo"
+    ],
+    [
+     "Je fais du yoga le matin.",
+     "아침에 요가를 해요.",
+     "achime yogareul haeyo"
+    ],
+    [
+     "Je cours trois fois par semaine.",
+     "일주일에 세 번 달려요.",
+     "iljuire se beon dallyeoyo"
+    ],
+    [
+     "Tu fais du sport ?",
+     "운동해요?",
+     "undonghaeyo"
+    ],
+    [
+     "Samedi, j'ai fait la grasse matinée.",
+     "토요일에 늦잠을 잤어요.",
+     "toyoire neutjameul jasseoyo"
+    ],
+    [
+     "Je suis allé à un concert.",
+     "콘서트에 갔어요.",
+     "konseoteue gasseoyo"
+    ],
+    [
+     "C'était vraiment amusant.",
+     "정말 재미있었어요.",
+     "jeongmal jaemiisseosseoyo"
     ]
    ],
    "v": [
@@ -2992,6 +5718,30 @@
     [
      "photo",
      "사진"
+    ],
+    [
+     "sport",
+     "운동"
+    ],
+    [
+     "courir",
+     "달리다"
+    ],
+    [
+     "grasse matinée",
+     "늦잠"
+    ],
+    [
+     "concert",
+     "콘서트"
+    ],
+    [
+     "amusant",
+     "재미있다"
+    ],
+    [
+     "lire",
+     "읽다"
     ]
    ],
    "c": [
@@ -3038,6 +5788,28 @@
      ],
      0,
      "보다 → 봤어요 au passé."
+    ],
+    [
+     "« C'était amusant » : 재미있___.",
+     [
+      "었어요",
+      "어요",
+      "을 거예요",
+      "겠어요"
+     ],
+     0,
+     "Passé : -었어요 (재미있었어요)."
+    ],
+    [
+     "« J'aime lire » : 책 읽는 ___ 좋아해요.",
+     [
+      "걸",
+      "게",
+      "것이",
+      "거를요"
+     ],
+     0,
+     "Verbe + -는 걸 좋아해요 : aimer faire (걸 = 것을)."
     ]
    ],
    "pk": [
@@ -3051,6 +5823,68 @@
     "tent",
     "headphones",
     "drum"
+   ],
+   "parts": [
+    {
+     "t": "Parle de tes loisirs",
+     "p": [
+      0,
+      1,
+      2,
+      6,
+      8
+     ],
+     "v": [
+      0,
+      1,
+      5,
+      11
+     ],
+     "c": [
+      0,
+      5
+     ]
+    },
+    {
+     "t": "Fais du sport",
+     "p": [
+      4,
+      5,
+      9,
+      10,
+      11
+     ],
+     "v": [
+      3,
+      4,
+      6,
+      7
+     ],
+     "c": [
+      1,
+      2
+     ]
+    },
+    {
+     "t": "Raconte ton week-end",
+     "p": [
+      3,
+      7,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      2,
+      8,
+      9,
+      10
+     ],
+     "c": [
+      3,
+      4
+     ]
+    }
    ]
   },
   {
@@ -3104,6 +5938,41 @@
      "Comment vous appelez-vous ? (très poli)",
      "성함이 어떻게 되세요?",
      "seonghami eotteoke doeseyo"
+    ],
+    [
+     "Grand-mère, vous avez bien dormi ?",
+     "할머니, 안녕히 주무셨어요?",
+     "halmeoni, annyeonghi jumusyeosseoyo"
+    ],
+    [
+     "Mon père est à la maison.",
+     "아버지께서 댁에 계세요.",
+     "abeojikkeseo daege gyeseyo"
+    ],
+    [
+     "Mangez beaucoup.",
+     "많이 드세요.",
+     "mani deuseyo"
+    ],
+    [
+     "Grand-père, à table !",
+     "할아버지, 식사하세요.",
+     "harabeoji, siksahaseyo"
+    ],
+    [
+     "Vous en voulez encore un peu ?",
+     "좀 더 드실래요?",
+     "jom deo deusillaeyo"
+    ],
+    [
+     "Entrez, je vous en prie.",
+     "들어오세요.",
+     "deureooseyo"
+    ],
+    [
+     "Rentrez bien.",
+     "조심히 들어가세요.",
+     "josimhi deureogaseyo"
     ]
    ],
    "v": [
@@ -3130,6 +5999,26 @@
     [
      "nom (hon.)",
      "성함"
+    ],
+    [
+     "repas",
+     "식사"
+    ],
+    [
+     "repas (honorifique)",
+     "진지"
+    ],
+    [
+     "prudemment",
+     "조심히"
+    ],
+    [
+     "entrer",
+     "들어오다"
+    ],
+    [
+     "effort, peine",
+     "수고"
     ]
    ],
    "c": [
@@ -3187,9 +6076,93 @@
      ],
      0,
      "Humilité : 저/제 + -아/어 드리다."
+    ],
+    [
+     "« Mangez beaucoup » : 많이 ___.",
+     [
+      "드세요",
+      "드려요",
+      "주무세요",
+      "계세요"
+     ],
+     0,
+     "드시다 = manger (honorifique) → 드세요."
+    ],
+    [
+     "« Entrez, je vous en prie » : 들어___.",
+     [
+      "오세요",
+      "가세요",
+      "계세요",
+      "드세요"
+     ],
+     0,
+     "들어오다 = entrer (vers celui qui parle) → 들어오세요."
     ]
    ],
-   "orig": 1
+   "orig": 1,
+   "parts": [
+    {
+     "t": "Parle à un aîné",
+     "p": [
+      0,
+      4,
+      7,
+      8,
+      9
+     ],
+     "v": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "c": [
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "t": "Les formules à table",
+     "p": [
+      2,
+      6,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      0,
+      6,
+      7
+     ],
+     "c": [
+      0,
+      5
+     ]
+    },
+    {
+     "t": "Les formules du quotidien",
+     "p": [
+      1,
+      3,
+      5,
+      13,
+      14
+     ],
+     "v": [
+      8,
+      9,
+      10
+     ],
+     "c": [
+      4,
+      6
+     ]
+    }
+   ]
   },
   {
    "t": "Émotions & opinions",
@@ -3247,6 +6220,41 @@
      "다행이에요!",
      "dahaengieyo",
      "다행이네요!"
+    ],
+    [
+     "Je suis un peu triste aujourd'hui.",
+     "오늘은 좀 슬퍼요.",
+     "oneureun jom seulpeoyo"
+    ],
+    [
+     "À mon avis, c'est trop cher.",
+     "제 생각에는 너무 비싸요.",
+     "je saenggageneun neomu bissayo"
+    ],
+    [
+     "Je suis d'accord avec toi.",
+     "네 말에 동의해.",
+     "ne mare donguihae"
+    ],
+    [
+     "Vraiment ? Ce n'est pas possible !",
+     "정말요? 말도 안 돼요!",
+     "jeongmallyo? maldo an dwaeyo"
+    ],
+    [
+     "Quelle chance !",
+     "운이 좋네요!",
+     "uni jonneyo"
+    ],
+    [
+     "Je suis fier de toi.",
+     "네가 자랑스러워.",
+     "nega jarangseureowo"
+    ],
+    [
+     "Ça m'a fait peur.",
+     "무서웠어요.",
+     "museowosseoyo"
     ]
    ],
    "v": [
@@ -3273,6 +6281,30 @@
     [
      "fier",
      "자랑스럽다"
+    ],
+    [
+     "pensée, avis",
+     "생각"
+    ],
+    [
+     "être d'accord",
+     "동의하다"
+    ],
+    [
+     "opinion",
+     "의견"
+    ],
+    [
+     "avoir peur, faire peur",
+     "무섭다"
+    ],
+    [
+     "chance",
+     "운"
+    ],
+    [
+     "soulagement",
+     "다행"
     ]
    ],
    "c": [
@@ -3330,7 +6362,92 @@
      ],
      0,
      "어떻게 생각하세요? : la terminaison -세요 marque le respect."
+    ],
+    [
+     "« Quel soulagement ! » : 다행___!",
+     [
+      "이에요",
+      "예요",
+      "해요",
+      "이요"
+     ],
+     0,
+     "다행 se termine par une consonne : 다행이에요."
+    ],
+    [
+     "« Ce n'est pas possible ! » : 말도 안 ___!",
+     [
+      "돼요",
+      "되요",
+      "대요",
+      "돼여"
+     ],
+     0,
+     "되 + 어요 = 돼요 (말도 안 돼요)."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Exprime une émotion",
+     "p": [
+      0,
+      1,
+      5,
+      7,
+      8
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      11
+     ],
+     "c": [
+      3,
+      5
+     ]
+    },
+    {
+     "t": "Donne ton avis",
+     "p": [
+      2,
+      3,
+      6,
+      9,
+      10
+     ],
+     "v": [
+      6,
+      7,
+      8
+     ],
+     "c": [
+      0,
+      1,
+      4
+     ]
+    },
+    {
+     "t": "Réagis à une nouvelle",
+     "p": [
+      4,
+      11,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      3,
+      4,
+      5,
+      9,
+      10
+     ],
+     "c": [
+      2,
+      6
+     ]
+    }
    ]
   },
   {
@@ -3392,6 +6509,42 @@
      "witjibi neomu sikkeureowoyo",
      "위층이 너무 시끄러워요.",
      "윗집 사람들이 너무 시끄러워요."
+    ],
+    [
+     "Je voudrais une chambre lumineuse.",
+     "밝은 방을 원해요.",
+     "balgeun bangeul wonhaeyo"
+    ],
+    [
+     "C'est près du métro ?",
+     "지하철역에서 가까워요?",
+     "jihacheollyeogeseo gakkawoyo"
+    ],
+    [
+     "Il y a une machine à laver ?",
+     "세탁기 있어요?",
+     "setakgi isseoyo"
+    ],
+    [
+     "On peut baisser la caution ?",
+     "보증금을 좀 낮출 수 있어요?",
+     "bojeunggeumeul jom natchul su isseoyo"
+    ],
+    [
+     "Le bail est de deux ans.",
+     "계약은 2년이에요.",
+     "gyeyageun inyeonieyo",
+     "계약은 이 년이에요."
+    ],
+    [
+     "Où dois-je jeter les poubelles ?",
+     "쓰레기는 어디에 버려요?",
+     "sseuregineun eodie beoryeoyo"
+    ],
+    [
+     "Il n'y a pas d'eau chaude.",
+     "온수가 안 나와요.",
+     "onsuga an nawayo"
     ]
    ],
    "v": [
@@ -3418,6 +6571,30 @@
     [
      "bruyant",
      "시끄럽다"
+    ],
+    [
+     "lumineux",
+     "밝다"
+    ],
+    [
+     "machine à laver",
+     "세탁기"
+    ],
+    [
+     "proche",
+     "가깝다"
+    ],
+    [
+     "charges (d'entretien)",
+     "관리비"
+    ],
+    [
+     "propriétaire",
+     "집주인"
+    ],
+    [
+     "poubelle, déchets",
+     "쓰레기"
     ]
    ],
    "c": [
@@ -3464,6 +6641,28 @@
      ],
      0,
      "다음 달 = le mois prochain ; 지난달 = le mois dernier."
+    ],
+    [
+     "« Les charges sont comprises ? » : 관리비가 포함___?",
+     [
+      "돼요",
+      "해요",
+      "이에요",
+      "있어요"
+     ],
+     0,
+     "포함되다 = être inclus → 포함돼요 ?"
+    ],
+    [
+     "« Le bail est de deux ans » : 계약은 2___이에요.",
+     [
+      "년",
+      "월",
+      "살",
+      "번"
+     ],
+     0,
+     "년 = année (pour une durée ou une date)."
     ]
    ],
    "pk": [
@@ -3477,6 +6676,68 @@
     "fridge",
     "sofa",
     "box"
+   ],
+   "parts": [
+    {
+     "t": "Cherche un studio",
+     "p": [
+      0,
+      3,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      2,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      0,
+      1
+     ]
+    },
+    {
+     "t": "Parle du loyer",
+     "p": [
+      1,
+      2,
+      5,
+      11,
+      12
+     ],
+     "v": [
+      0,
+      1,
+      9,
+      10
+     ],
+     "c": [
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Vis dans ton logement",
+     "p": [
+      4,
+      6,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      3,
+      4,
+      5,
+      11
+     ],
+     "c": [
+      2,
+      3
+     ]
+    }
    ]
   },
   {
@@ -3539,6 +6800,41 @@
      "jeongmal maeume deureoyo",
      "마음에 들어요!",
      "너무 마음에 들어요!"
+    ],
+    [
+     "Je voudrais réserver pour samedi.",
+     "토요일로 예약하고 싶어요.",
+     "toyoillo yeyakago sipeoyo"
+    ],
+    [
+     "C'est possible tout de suite ?",
+     "지금 바로 돼요?",
+     "jigeum baro dwaeyo"
+    ],
+    [
+     "La coupe dure combien de temps ?",
+     "커트는 시간이 얼마나 걸려요?",
+     "keoteuneun sigani eolmana geollyeoyo"
+    ],
+    [
+     "Égalisez juste les pointes.",
+     "끝만 다듬어 주세요.",
+     "kkeunman dadeumeo juseyo"
+    ],
+    [
+     "Je voudrais une couleur châtain.",
+     "갈색으로 염색하고 싶어요.",
+     "galsaegeuro yeomsaekago sipeoyo"
+    ],
+    [
+     "Faites-moi une frange.",
+     "앞머리를 내 주세요.",
+     "ammeorireul nae juseyo"
+    ],
+    [
+     "Ça vous va très bien.",
+     "정말 잘 어울려요.",
+     "jeongmal jal eoullyeoyo"
     ]
    ],
    "v": [
@@ -3565,6 +6861,30 @@
     [
      "réservation",
      "예약"
+    ],
+    [
+     "tout de suite",
+     "바로"
+    ],
+    [
+     "égaliser",
+     "다듬다"
+    ],
+    [
+     "pointe (des cheveux)",
+     "끝"
+    ],
+    [
+     "coloration",
+     "염색"
+    ],
+    [
+     "frange",
+     "앞머리"
+    ],
+    [
+     "châtain, marron",
+     "갈색"
     ]
    ],
    "c": [
@@ -3611,6 +6931,28 @@
      ],
      0,
      "-아야/어야 돼요 = il faut."
+    ],
+    [
+     "« Ça prend une heure » : 한 시간 ___.",
+     [
+      "걸려요",
+      "걸어요",
+      "들어요",
+      "가요"
+     ],
+     0,
+     "걸리다 = prendre (du temps) → 걸려요."
+    ],
+    [
+     "« Je voudrais une coloration châtain » : 갈색으로 ___하고 싶어요.",
+     [
+      "염색",
+      "파마",
+      "커트",
+      "예약"
+     ],
+     0,
+     "염색 = coloration ; 파마 = permanente."
     ]
    ],
    "pk": [
@@ -3620,6 +6962,68 @@
     "towel",
     "phone",
     "calendar"
+   ],
+   "parts": [
+    {
+     "t": "Prends rendez-vous",
+     "p": [
+      5,
+      6,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      0,
+      5,
+      6
+     ],
+     "c": [
+      3,
+      4
+     ]
+    },
+    {
+     "t": "Explique la coupe",
+     "p": [
+      0,
+      1,
+      2,
+      3,
+      11
+     ],
+     "v": [
+      1,
+      2,
+      3,
+      7,
+      8
+     ],
+     "c": [
+      0,
+      1
+     ]
+    },
+    {
+     "t": "Change de style",
+     "p": [
+      4,
+      7,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      4,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      2,
+      5
+     ]
+    }
    ]
   },
   {
@@ -3682,6 +7086,41 @@
      "yeogie jusoreul sseo juseyo",
      "주소를 여기에 써 주세요.",
      "여기 주소를 써 주세요."
+    ],
+    [
+     "C'est fragile.",
+     "깨지기 쉬워요.",
+     "kkaejigi swiwoyo"
+    ],
+    [
+     "Ça pèse combien ?",
+     "무게가 얼마예요?",
+     "mugega eolmayeyo"
+    ],
+    [
+     "Je voudrais une enveloppe.",
+     "봉투 하나 주세요.",
+     "bongtu hana juseyo"
+    ],
+    [
+     "Écrivez le code postal ici.",
+     "우편번호를 여기에 써 주세요.",
+     "upyeonbeonhoreul yeogie sseo juseyo"
+    ],
+    [
+     "Il faut remplir ce formulaire.",
+     "이 양식을 작성해야 해요.",
+     "i yangsigeul jakseonghaeya haeyo"
+    ],
+    [
+     "Le livreur est passé ?",
+     "택배 기사님이 오셨어요?",
+     "taekbae gisanimi osyeosseoyo"
+    ],
+    [
+     "Je voudrais suivre mon colis.",
+     "택배를 조회하고 싶어요.",
+     "taekbaereul johoehago sipeoyo"
     ]
    ],
    "v": [
@@ -3708,6 +7147,30 @@
     [
      "arriver",
      "도착하다"
+    ],
+    [
+     "poids",
+     "무게"
+    ],
+    [
+     "se casser",
+     "깨지다"
+    ],
+    [
+     "code postal",
+     "우편번호"
+    ],
+    [
+     "formulaire",
+     "양식"
+    ],
+    [
+     "consulter, suivre",
+     "조회하다"
+    ],
+    [
+     "livraison",
+     "배달"
     ]
    ],
    "c": [
@@ -3754,6 +7217,28 @@
      ],
      0,
      "앞 = devant."
+    ],
+    [
+     "« C'est fragile » : 깨지기 ___.",
+     [
+      "쉬워요",
+      "쉽어요",
+      "쉬어요",
+      "쉬웠요"
+     ],
+     0,
+     "-기 쉽다 = être facile à… ; 쉽다 + -어요 → 쉬워요."
+    ],
+    [
+     "« Il faut remplir ce formulaire » : 이 양식을 작성해___ 해요.",
+     [
+      "야",
+      "도",
+      "서",
+      "고"
+     ],
+     0,
+     "Obligation : -아/어야 해요."
     ]
    ],
    "pk": [
@@ -3764,6 +7249,68 @@
     "house",
     "door",
     "pen"
+   ],
+   "parts": [
+    {
+     "t": "Envoie un colis",
+     "p": [
+      0,
+      2,
+      3,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      4,
+      6,
+      7
+     ],
+     "c": [
+      0,
+      4
+     ]
+    },
+    {
+     "t": "Remplis les formulaires",
+     "p": [
+      6,
+      7,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      2,
+      3,
+      8,
+      9
+     ],
+     "c": [
+      2,
+      5
+     ]
+    },
+    {
+     "t": "Suis ta livraison",
+     "p": [
+      1,
+      4,
+      5,
+      13,
+      14
+     ],
+     "v": [
+      1,
+      5,
+      10,
+      11
+     ],
+     "c": [
+      1,
+      3
+     ]
+    }
    ]
   },
   {
@@ -3826,6 +7373,41 @@
      "jeongmal joeun yeohaengieosseoyo",
      "아주 좋은 여행이었어요!",
      "최고의 여행이었어요!"
+    ],
+    [
+     "Je voudrais m'enregistrer.",
+     "체크인하고 싶어요.",
+     "chekeuinhago sipeoyo"
+    ],
+    [
+     "Je peux laisser mes bagages ?",
+     "짐을 맡겨도 돼요?",
+     "jimeul matgyeodo dwaeyo"
+    ],
+    [
+     "Il fait trop chaud dans la chambre.",
+     "방이 너무 더워요.",
+     "bangi neomu deowoyo"
+    ],
+    [
+     "C'est à combien de minutes à pied ?",
+     "걸어서 몇 분 걸려요?",
+     "georeoseo myeot bun geollyeoyo"
+    ],
+    [
+     "Tournez à droite au carrefour.",
+     "사거리에서 오른쪽으로 가세요.",
+     "sageorieseo oreunjjogeuro gaseyo"
+    ],
+    [
+     "À quelle heure ferme le palais ?",
+     "궁은 몇 시에 문을 닫아요?",
+     "gungeun myeot sie muneul dadayo"
+    ],
+    [
+     "Je voudrais acheter un souvenir.",
+     "기념품을 사고 싶어요.",
+     "ginyeompumeul sago sipeoyo"
     ]
    ],
    "v": [
@@ -3852,6 +7434,30 @@
     [
      "louer (emprunter)",
      "빌리다"
+    ],
+    [
+     "bagages",
+     "짐"
+    ],
+    [
+     "enregistrement (hôtel)",
+     "체크인"
+    ],
+    [
+     "confier",
+     "맡기다"
+    ],
+    [
+     "carrefour",
+     "사거리"
+    ],
+    [
+     "palais",
+     "궁"
+    ],
+    [
+     "souvenir (objet)",
+     "기념품"
     ]
    ],
    "c": [
@@ -3898,6 +7504,28 @@
      ],
      0,
      "사진을 찍다 = prendre une photo."
+    ],
+    [
+     "« Je peux laisser mes bagages ? » : 짐을 ___ 돼요?",
+     [
+      "맡겨도",
+      "맡아도",
+      "맡기도",
+      "맡겨서"
+     ],
+     0,
+     "맡기다 = confier ; permission : 맡겨도 돼요 ?"
+    ],
+    [
+     "« Je voudrais acheter un souvenir » : 기념품을 사고 ___.",
+     [
+      "싶어요",
+      "싶다요",
+      "싶었요",
+      "싶은"
+     ],
+     0,
+     "Vouloir faire : -고 싶어요."
     ]
    ],
    "pk": [
@@ -3910,6 +7538,68 @@
     "hanbok",
     "ticket",
     "train"
+   ],
+   "parts": [
+    {
+     "t": "Arrive à l'hôtel",
+     "p": [
+      0,
+      1,
+      8,
+      9,
+      10
+     ],
+     "v": [
+      1,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      2,
+      4
+     ]
+    },
+    {
+     "t": "Demande ton chemin",
+     "p": [
+      2,
+      3,
+      4,
+      11,
+      12
+     ],
+     "v": [
+      2,
+      3,
+      4,
+      9
+     ],
+     "c": [
+      0,
+      1
+     ]
+    },
+    {
+     "t": "Visite et achète des souvenirs",
+     "p": [
+      5,
+      6,
+      7,
+      13,
+      14
+     ],
+     "v": [
+      0,
+      5,
+      10,
+      11
+     ],
+     "c": [
+      3,
+      5
+     ]
+    }
    ]
   },
   {
@@ -3970,6 +7660,41 @@
      "giri mani makyeoyo",
      "차가 많이 막혀요.",
      "길이 너무 막혀요."
+    ],
+    [
+     "Les enfants reçoivent de l'argent du Nouvel An.",
+     "아이들이 세뱃돈을 받아요.",
+     "aideuri sebaetdoneul badayo"
+    ],
+    [
+     "En mangeant le tteokguk, on prend un an.",
+     "떡국을 먹으면 한 살 더 먹어요.",
+     "tteokgugeul meogeumyeon han sal deo meogeoyo"
+    ],
+    [
+     "On regarde la pleine lune.",
+     "보름달을 봐요.",
+     "boreumdareul bwayo"
+    ],
+    [
+     "On se rend sur la tombe des ancêtres.",
+     "성묘를 가요.",
+     "seongmyoreul gayo"
+    ],
+    [
+     "Toute la famille se réunit.",
+     "온 가족이 모여요.",
+     "on gajogi moyeoyo"
+    ],
+    [
+     "On prépare les plats de fête.",
+     "명절 음식을 준비해요.",
+     "myeongjeol eumsigeul junbihaeyo"
+    ],
+    [
+     "On joue au yut.",
+     "윷놀이를 해요.",
+     "yunnorireul haeyo"
     ]
    ],
    "v": [
@@ -3996,6 +7721,30 @@
     [
      "être embouteillé",
      "막히다"
+    ],
+    [
+     "argent du Nouvel An",
+     "세뱃돈"
+    ],
+    [
+     "soupe de gâteaux de riz",
+     "떡국"
+    ],
+    [
+     "pleine lune",
+     "보름달"
+    ],
+    [
+     "gâteau de riz de Chuseok",
+     "송편"
+    ],
+    [
+     "fête traditionnelle",
+     "명절"
+    ],
+    [
+     "se réunir",
+     "모이다"
     ]
    ],
    "c": [
@@ -4042,6 +7791,28 @@
      ],
      0,
      "막히다 = être bouché (circulation)."
+    ],
+    [
+     "« Les enfants reçoivent de l'argent » : 아이들이 세뱃돈을 ___.",
+     [
+      "받아요",
+      "줘요",
+      "받어요",
+      "바다요"
+     ],
+     0,
+     "받다 + -아요 → 받아요 (recevoir) ; 주다 = donner."
+    ],
+    [
+     "« On regarde la pleine lune » : 보름달___ 봐요.",
+     [
+      "을",
+      "를",
+      "이",
+      "에"
+     ],
+     0,
+     "Après une consonne, la particule d'objet est 을 : 보름달을."
     ]
    ],
    "pk": [
@@ -4052,6 +7823,68 @@
     "money",
     "train",
     "car"
+   ],
+   "parts": [
+    {
+     "t": "Fête le Nouvel An (설날)",
+     "p": [
+      0,
+      2,
+      5,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      6,
+      7
+     ],
+     "c": [
+      0,
+      4
+     ]
+    },
+    {
+     "t": "Fête Chuseok (추석)",
+     "p": [
+      1,
+      3,
+      6,
+      10,
+      11
+     ],
+     "v": [
+      1,
+      2,
+      8,
+      9
+     ],
+     "c": [
+      2,
+      5
+     ]
+    },
+    {
+     "t": "Vis les traditions",
+     "p": [
+      4,
+      7,
+      12,
+      13,
+      14
+     ],
+     "v": [
+      3,
+      4,
+      5,
+      10,
+      11
+     ],
+     "c": [
+      1,
+      3
+     ]
+    }
    ]
   },
   {
@@ -4176,6 +8009,51 @@
      "오늘 며칠이에요?",
      "oneul myeochirieyo",
      "오늘이 며칠이에요?"
+    ],
+    [
+     "Il est devenu médecin.",
+     "의사가 됐어요.",
+     "uisaga dwaesseoyo"
+    ],
+    [
+     "Tout est prêt.",
+     "다 됐어요.",
+     "da dwaesseoyo"
+    ],
+    [
+     "Je ne mange pas de viande.",
+     "저는 고기를 안 먹어요.",
+     "jeoneun gogireul an meogeoyo"
+    ],
+    [
+     "Ce n'est pas cher.",
+     "비싸지 않아요.",
+     "bissaji anayo"
+    ],
+    [
+     "Il ne fait pas froid.",
+     "춥지 않아요.",
+     "chupji anayo"
+    ],
+    [
+     "Sans savoir pourquoi, je suis de bonne humeur.",
+     "왠지 기분이 좋아요.",
+     "waenji gibuni joayo"
+    ],
+    [
+     "Qu'est-ce que c'est que ces fleurs ?",
+     "웬 꽃이에요?",
+     "wen kkochieyo"
+    ],
+    [
+     "Je me suis reposé quelques jours.",
+     "며칠 쉬었어요.",
+     "myeochil swieosseoyo"
+    ],
+    [
+     "Je n'ai pas encore mangé.",
+     "아직 안 먹었어요.",
+     "ajik an meogeosseoyo"
     ]
    ],
    "dd": [
@@ -4183,7 +8061,51 @@
     "내일 할게요.",
     "며칠 동안 쉬었어요."
    ],
-   "orig": 1
+   "orig": 1,
+   "parts": [
+    {
+     "t": "Écris 되 ou 돼",
+     "p": [
+      0,
+      1,
+      3,
+      4
+     ],
+     "c": [
+      0,
+      8
+     ]
+    },
+    {
+     "t": "Écris 안 ou 않",
+     "p": [
+      5,
+      6,
+      7,
+      11
+     ],
+     "c": [
+      1,
+      2
+     ]
+    },
+    {
+     "t": "Déjoue 웬, 왠, 로서 et 로써",
+     "p": [
+      2,
+      8,
+      9,
+      10
+     ],
+     "c": [
+      3,
+      4,
+      5,
+      6,
+      7
+     ]
+    }
+   ]
   },
   {
    "t": "Expressions & 속담",
@@ -4223,6 +8145,46 @@
      "Il faut battre le fer tant qu'il est chaud.",
      "쇠뿔도 단김에 빼라.",
      "soeppuldo dangime ppaera"
+    ],
+    [
+     "Bon courage !",
+     "힘내세요!",
+     "himnaeseyo"
+    ],
+    [
+     "Ce n'est rien.",
+     "별거 아니에요.",
+     "byeolgeo anieyo"
+    ],
+    [
+     "Il est très exigeant.",
+     "그는 눈이 높아요.",
+     "geuneun nuni nopayo"
+    ],
+    [
+     "Elle connaît beaucoup de monde.",
+     "그녀는 발이 넓어요.",
+     "geunyeoneun bari neolbeoyo"
+    ],
+    [
+     "Après la pluie, le beau temps.",
+     "고생 끝에 낙이 온다.",
+     "gosaeng kkeute nagi onda"
+    ],
+    [
+     "Les murs ont des oreilles.",
+     "낮말은 새가 듣고 밤말은 쥐가 듣는다.",
+     "natmareun saega deutgo bammareun jwiga deunneunda"
+    ],
+    [
+     "Les petits ruisseaux font les grandes rivières.",
+     "티끌 모아 태산.",
+     "tikkeul moa taesan"
+    ],
+    [
+     "Ma mère cuisine toujours en grande quantité.",
+     "우리 엄마는 손이 커요.",
+     "uri eommaneun soni keoyo"
     ]
    ],
    "v": [
@@ -4249,6 +8211,30 @@
     [
      "longtemps",
      "오랫동안"
+    ],
+    [
+     "haut",
+     "높다"
+    ],
+    [
+     "large",
+     "넓다"
+    ],
+    [
+     "main",
+     "손"
+    ],
+    [
+     "fin",
+     "끝"
+    ],
+    [
+     "souris",
+     "쥐"
+    ],
+    [
+     "prendre courage",
+     "힘내다"
     ]
    ],
    "orig": 1,
@@ -4296,10 +8282,105 @@
      ],
      0,
      "Connaître beaucoup de monde."
+    ],
+    [
+     "« Ça fait longtemps ! » : 오랜___이에요!",
+     [
+      "만",
+      "간",
+      "동안",
+      "전"
+     ],
+     0,
+     "오랜만 = après longtemps : 오랜만이에요 !"
+    ],
+    [
+     "« Bon courage ! » : 힘___!",
+     [
+      "내세요",
+      "드세요",
+      "주세요",
+      "나세요"
+     ],
+     0,
+     "힘내다 = prendre courage ; forme polie : 힘내세요."
+    ],
+    [
+     "« Les murs ont des oreilles » : 낮말은 새가 듣고 밤말은 ___가 듣는다.",
+     [
+      "쥐",
+      "새",
+      "개",
+      "소"
+     ],
+     0,
+     "Le proverbe dit : les oiseaux entendent le jour, les souris (쥐) la nuit."
     ]
    ],
    "pk": [
     "tiger"
+   ],
+   "parts": [
+    {
+     "t": "Utilise les expressions du quotidien",
+     "p": [
+      0,
+      1,
+      2,
+      6,
+      7
+     ],
+     "v": [
+      0,
+      4,
+      5,
+      11
+     ],
+     "c": [
+      4,
+      5
+     ]
+    },
+    {
+     "t": "Comprends les expressions imagées",
+     "p": [
+      3,
+      8,
+      9,
+      13
+     ],
+     "v": [
+      1,
+      6,
+      7,
+      8
+     ],
+     "c": [
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "t": "Apprends des proverbes",
+     "p": [
+      4,
+      5,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      2,
+      3,
+      9,
+      10
+     ],
+     "c": [
+      0,
+      6
+     ]
+    }
    ]
   },
   {
@@ -4344,6 +8425,41 @@
      "좋은 하루 보내세요.",
      "joeun haru bonaeseyo",
      "좋은 하루 되세요."
+    ],
+    [
+     "Je vous remercie de votre aide.",
+     "도와주셔서 감사합니다.",
+     "dowajusyeoseo gamsahamnida"
+    ],
+    [
+     "Veuillez trouver le contrat ci-joint.",
+     "계약서를 첨부했습니다.",
+     "gyeyakseoreul cheombuhaetseumnida"
+    ],
+    [
+     "Je vous envoie le fichier modifié.",
+     "수정한 파일을 보내 드립니다.",
+     "sujeonghan pareul bonae deurimnida"
+    ],
+    [
+     "Pourriez-vous vérifier ce document ?",
+     "이 서류를 확인해 주시겠습니까?",
+     "i seoryureul hwaginhae jusigetseumnikka"
+    ],
+    [
+     "Êtes-vous disponible mardi prochain ?",
+     "다음 주 화요일에 시간 괜찮으십니까?",
+     "daeum ju hwayoire sigan gwaenchaneusimnikka"
+    ],
+    [
+     "Que diriez-vous d'une réunion à 14 heures ?",
+     "오후 두 시에 회의를 하면 어떨까요?",
+     "ohu du sie hoeuireul hamyeon eotteolkkayo"
+    ],
+    [
+     "Le rendez-vous de demain est confirmé.",
+     "내일 약속이 확정되었습니다.",
+     "naeil yaksogi hwakjeongdoeeotseumnida"
     ]
    ],
    "v": [
@@ -4370,6 +8486,30 @@
     [
      "contrat",
      "계약"
+    ],
+    [
+     "remercier",
+     "감사하다"
+    ],
+    [
+     "être désolé",
+     "죄송하다"
+    ],
+    [
+     "être possible",
+     "가능하다"
+    ],
+    [
+     "confirmation",
+     "확정"
+    ],
+    [
+     "document",
+     "서류"
+    ],
+    [
+     "répondre (par écrit)",
+     "답장하다"
     ]
    ],
    "c": [
@@ -4405,7 +8545,100 @@
      ],
      0,
      "되 + 어요 = 돼요."
+    ],
+    [
+     "« Merci pour votre réponse » : 답변 ___ 감사합니다.",
+     [
+      "주셔서",
+      "줘서",
+      "주시고",
+      "주니까"
+     ],
+     0,
+     "Style formel : -아/어 주셔서 감사합니다."
+    ],
+    [
+     "« Veuillez vérifier » : 확인 ___.",
+     [
+      "부탁드립니다",
+      "부탁해",
+      "부탁하자",
+      "부탁했어"
+     ],
+     0,
+     "Style formel écrit : 부탁드립니다."
+    ],
+    [
+     "« Êtes-vous disponible ? » : 시간 괜찮___?",
+     [
+      "으십니까",
+      "아",
+      "니",
+      "냐"
+     ],
+     0,
+     "Question au style formel honorifique : -으십니까."
     ]
+   ],
+   "parts": [
+    {
+     "t": "Remercie et réponds",
+     "p": [
+      0,
+      3,
+      5,
+      6
+     ],
+     "v": [
+      1,
+      3,
+      6,
+      7,
+      11
+     ],
+     "c": [
+      0,
+      3
+     ]
+    },
+    {
+     "t": "Envoie des documents",
+     "p": [
+      1,
+      2,
+      7,
+      8,
+      9
+     ],
+     "v": [
+      0,
+      2,
+      5,
+      10
+     ],
+     "c": [
+      1,
+      4
+     ]
+    },
+    {
+     "t": "Fixe un rendez-vous par écrit",
+     "p": [
+      4,
+      10,
+      11,
+      12
+     ],
+     "v": [
+      4,
+      8,
+      9
+     ],
+     "c": [
+      2,
+      5
+     ]
+    }
    ]
   }
  ]
