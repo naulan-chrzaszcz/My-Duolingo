@@ -1283,7 +1283,16 @@
   "there is / there are : « il y a », accordé avec le nom qui suit.": "there is / there are: '~이/가 있다'. 뒤에 오는 명사의 수에 맞춰요.",
   "Au prétérit, les verbes réguliers prennent -ed ; les irréguliers s'apprennent par cœur.": "과거형에서 규칙 동사는 -ed를 붙이고, 불규칙 동사는 외워야 해요.",
   "Unité terminée : +10 gemmes": "단원 완료: 보석 +10",
-  "Étape ¤ sur ¤": "단계 ¤/¤"
+  "Étape ¤ sur ¤": "단계 ¤/¤",
+  "Chaque réponse est classée par thème, compétence et notion : tu vois exactement ce qui revient.": "모든 답이 주제, 능력, 개념별로 분류돼요. 무엇을 자꾸 틀리는지 정확히 보여요.",
+  "Les unités de coréen supposent de savoir lire le hangul. Termine les unités de hangul dans l'ordre (ou passe le test « Tester mon hangul ») et tout le parcours s'ouvrira.": "한국어 단원은 한글을 읽을 줄 알아야 해요. 한글 단원을 순서대로 끝내면(또는 «한글 테스트»를 통과하면) 과정 전체가 열려요.",
+  "Les thèmes que tu as commencés, avec ton taux de réussite. Les plus fragiles sont en rouge.": "시작한 주제와 정답률이에요. 약한 주제는 빨간색이에요.",
+  "Réviser un thème au choix": "원하는 주제 복습하기",
+  "termine les unités de hangul, puis": "한글 단원을 끝낸 다음",
+  "🎯 Réviser un thème": "🎯 주제 복습하기",
+  "Réviser un thème": "주제 복습하기",
+  "Par thème": "주제별",
+  "Nouveau thème, nouvelles notions : 3 unités de 6 étapes.": "새 주제, 새 개념: 6단계 단원 3개."
  },
  "content": {
   "Quotidien": "일상",

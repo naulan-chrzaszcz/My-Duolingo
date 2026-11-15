@@ -115,7 +115,7 @@ export function setDone(cid, u, n) {
 export function doneCount(cid) {
   return Object.keys(S.dn[cid] || {}).reduce((a, u) => a + unitSteps(cid, +u), 0);
 }
-// Coréen : les 4 unités de hangul se font dans l'ordre ; le reste s'ouvre une fois le hangul validé
+// Coréen : les unités de hangul se font dans l'ordre ; le reste s'ouvre une fois le hangul validé
 export function hgIdx(cid) {
   return cid === "ko" ? COURSES.ko.units.map((u, i) => (u.hg ? i : -1)).filter(i => i >= 0) : [];
 }

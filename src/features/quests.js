@@ -1,7 +1,7 @@
 // Quêtes du jour et badges
 import { COURSES } from "../content/index.js";
 import { S } from "../core/accounts.js";
-import { unitComplete } from "../core/progress.js";
+import { partsDone } from "../core/progress.js";
 import { todayXp } from "../core/xp.js";
 import { weekXp } from "../screens/league.js";
 import { toast } from "../ui/ui.js";
@@ -138,21 +138,21 @@ export const BADGES = [
     ic: "💼",
     n: "TOEIC Ready",
     d: "1 unité TOEIC",
-    ok: () => COURSES["en-toeic"].units.some((U, u) => unitComplete("en-toeic", u)),
+    ok: () => COURSES["en-toeic"].units.some((U, u) => partsDone("en-toeic", u) > 0),
   },
   {
     id: "volt",
     ic: "✒️",
     n: "Plume de Voltaire",
     d: "1 unité Voltaire",
-    ok: () => COURSES["fr-volt"].units.some((U, u) => unitComplete("fr-volt", u)),
+    ok: () => COURSES["fr-volt"].units.some((U, u) => partsDone("fr-volt", u) > 0),
   },
   {
     id: "ko",
     ic: "🐯",
     n: "호랑이",
     d: "1 unité de coréen",
-    ok: () => COURSES.ko.units.some((U, u) => !U.hg && unitComplete("ko", u)),
+    ok: () => COURSES.ko.units.some((U, u) => !U.hg && partsDone("ko", u) > 0),
   },
   { id: "sprint", ic: "⏱️", n: "Éclair", d: "15 au Sprint", ok: () => S.sprint >= 15 },
   { id: "story", ic: "📖", n: "Conteuse", d: "3 histoires lues", ok: () => S.stories.length >= 3 },

@@ -39,7 +39,7 @@ const TMAP = {
   "Mes erreurs (ancrage)": ["Révisions", "repeat", OR],
   "Mes mots à retenir": ["Révisions", "bookmark", PK],
   "Mes mots": ["Révisions", "book", BL],
-  "Réviser une unité au choix": ["Révisions", "layers", BL],
+  "Réviser un thème au choix": ["Révisions", "layers", BL],
   "Notions de grammaire": ["Grammaire", "grid", VI],
   "Grammaire en rafale": ["Grammaire", "bolt", GO],
   "Règles en rafale": ["Grammaire", "bolt", GO],
@@ -294,7 +294,7 @@ export function renderTrain(v) {
   add("📒", "Mes mots", "Tous les mots et phrases débloqués, à écouter et réviser.", "Lexique", () => myWords());
   add(
     "🎯",
-    "Réviser une unité au choix",
+    "Réviser un thème au choix",
     "Choisis une unité déjà vue (avec ton taux de réussite) et retravaille-la à fond.",
     "Ciblé",
     () => unitPicker(ccid),
@@ -536,7 +536,7 @@ export function unitPicker(cid) {
   const C = COURSES[cid];
   const ul = unlockedUnits(cid);
   const m =
-    modal(`<h2 class="hi">${ic("target", 22, "", 2.4)}Réviser une unité</h2><p>Les unités que tu as commencées, avec ton taux de réussite. Les plus fragiles sont en rouge.</p>${s.tracks.length > 1 ? `<div class="tracks">${s.tracks.map(t => `<button data-tt="${t}" class="${t === cid ? "on" : ""}">${COURSES[t].icon} ${COURSES[t].name}</button>`).join("")}</div>` : ""}
+    modal(`<h2 class="hi">${ic("target", 22, "", 2.4)}Réviser un thème</h2><p>Les thèmes que tu as commencés, avec ton taux de réussite. Les plus fragiles sont en rouge.</p>${s.tracks.length > 1 ? `<div class="tracks">${s.tracks.map(t => `<button data-tt="${t}" class="${t === cid ? "on" : ""}">${COURSES[t].icon} ${COURSES[t].name}</button>`).join("")}</div>` : ""}
   <div class="ulist">${ul
     .map(U => {
       const u = C.units.indexOf(U);

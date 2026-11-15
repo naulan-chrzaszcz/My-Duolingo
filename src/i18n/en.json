@@ -1245,7 +1245,16 @@
   "이/가 marque le sujet du verbe.": "이/가 marks the subject of the verb.",
   "En coréen, le verbe se place à la fin de la phrase.": "In Korean, the verb comes at the end of the sentence.",
   "Unité terminée : +10 gemmes": "Unit finished: +10 gems",
-  "Étape ¤ sur ¤": "Step ¤ of ¤"
+  "Étape ¤ sur ¤": "Step ¤ of ¤",
+  "Chaque réponse est classée par thème, compétence et notion : tu vois exactement ce qui revient.": "Every answer is sorted by theme, skill and topic: you see exactly what keeps coming back.",
+  "Les unités de coréen supposent de savoir lire le hangul. Termine les unités de hangul dans l'ordre (ou passe le test « Tester mon hangul ») et tout le parcours s'ouvrira.": "Korean units assume you can read hangul. Finish the hangul units in order (or take the « Test my hangul » quiz) and the whole course will open.",
+  "Les thèmes que tu as commencés, avec ton taux de réussite. Les plus fragiles sont en rouge.": "The themes you've started, with your success rate. The weakest ones are in red.",
+  "Réviser un thème au choix": "Review a theme of your choice",
+  "termine les unités de hangul, puis": "finish the hangul units, then",
+  "🎯 Réviser un thème": "🎯 Review a theme",
+  "Réviser un thème": "Review a theme",
+  "Par thème": "By theme",
+  "Nouveau thème, nouvelles notions : 3 unités de 6 étapes.": "New theme, new topics: 3 units of 6 steps."
  },
  "content": {
   "Hangul 1 : les voyelles": "Hangul 1: vowels",
