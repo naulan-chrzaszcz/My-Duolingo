@@ -53,6 +53,11 @@ La propriétaire écrit en français : réponds en français.
   - Les prompts IA sont construits côté serveur (`server/api/generate.php`, modes en liste blanche).
 - Aucun contenu protégé (TOEIC/ETS, GlobalExam) : exercices originaux seulement.
 - Validation des réponses tolérante, sauf dictées Voltaire et orthographe coréenne.
+- Base de données (`server/api/data/speakeasy.sqlite`) : toute nouvelle version doit garder les données existantes.
+  - Chaque changement de schéma est livré avec sa migration depuis la version précédente du serveur (tables et colonnes ajoutées avec `CREATE TABLE IF NOT EXISTS` / `ALTER TABLE`, données reprises, rien de supprimé).
+  - La migration est idempotente, s'applique toute seule au premier appel et commence par une copie de sauvegarde de la base.
+  - Le zip ne contient jamais de fichier dans `api/data/` qui écraserait la base ou `config.php`.
+  - Le bilan de livraison dit s'il y a une migration et ce qu'elle change.
 - Le nom du cache du service worker est calculé au build (version + empreinte) : rien à changer à la main.
 - Pas de système de vies (cœurs) : ne pas en réintroduire.
 - Parcours en chapitres (un chapitre = un niveau) et onglet Quêtes dans la barre du bas : design retenu, ne pas revenir aux unités repliables ni à l'onglet Boutique.
