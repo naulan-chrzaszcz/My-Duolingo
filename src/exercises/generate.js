@@ -311,7 +311,8 @@ export function make0(t, ctx) {
     // v33 : une fois sur deux, 2 ou 3 phrases à la suite, avec de 0 à 3 fautes à trouver
     let n = !ctx.spot1 && (ctx.cs || []).length >= 3 && Math.random() < 0.5 ? (Math.random() < 0.7 ? 2 : 3) : 1;
     // v37 : dans une leçon, on ne dépasse pas le nombre d'utilisations permis pour ses phrases
-    if (ctx.cap) n = Math.min(n, 1 + ctx.cap * ctx.cs.length - ((ctx.ptr.c || 0) + (ctx.ptr.cs || 0)));
+    // et au plus 2 phrases à la suite, s'il reste assez d'utilisations pour les exercices suivants
+    if (ctx.cap) n = Math.min(n, 2, Math.max(1, ctx.cap * ctx.cs.length - ((ctx.ptr.c || 0) + (ctx.ptr.cs || 0)) - 2));
     if (n > 1) {
       const cs = [first];
       for (let i = 1; i < n; i++) {

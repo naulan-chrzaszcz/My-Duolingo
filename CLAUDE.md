@@ -16,6 +16,7 @@ La propriétaire écrit en français : réponds en français.
 | `npm run zip` | Build minifié + `release/speakeasy-production.zip` à déployer |
 | `npm run serve` | Build + serveur local sur http://localhost:8000 |
 | `npm run format` | Met en forme le code (Prettier), à lancer avant de livrer |
+| Fusion sur `main` | GitHub Actions : tests, zip, envoi au VPS, `deploy-fedora.sh` (sauvegardes, migration de la base, vérification, retour arrière) |
 
 ## Où est quoi
 
@@ -58,6 +59,7 @@ La propriétaire écrit en français : réponds en français.
   - La migration est idempotente, s'applique toute seule au premier appel et commence par une copie de sauvegarde de la base.
   - Le zip ne contient jamais de fichier dans `api/data/` qui écraserait la base ou `config.php`.
   - Le bilan de livraison dit s'il y a une migration et ce qu'elle change.
+  - Les migrations sont des étapes ajoutées à la fin de `speakeasy_migrations()` (`server/api/migrate.php`), jamais modifiées une fois publiées.
 - Le nom du cache du service worker est calculé au build (version + empreinte) : rien à changer à la main.
 - Pas de système de vies (cœurs) : ne pas en réintroduire.
 - Parcours en chapitres (un chapitre = un niveau) et onglet Quêtes dans la barre du bas : design retenu, ne pas revenir aux unités repliables ni à l'onglet Boutique.
