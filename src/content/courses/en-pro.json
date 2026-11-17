@@ -3603,11 +3603,6 @@
      "I'll connect with you on LinkedIn."
     ],
     [
-     "Merci de m'avoir contacté.",
-     "Thanks for contacting me.",
-     "Thank you for contacting me."
-    ],
-    [
      "Le poste m'intéresse beaucoup.",
      "I'm very interested in the position.",
      "The position interests me a lot.",
@@ -3872,8 +3867,7 @@
       20,
       21,
       22,
-      23,
-      24
+      23
      ],
      "v": [
       0,
@@ -3893,13 +3887,13 @@
       9,
       10,
       11,
+      24,
       25,
       26,
       27,
       28,
       29,
-      30,
-      31
+      30
      ],
      "v": [
       2,
@@ -3922,10 +3916,10 @@
       12,
       13,
       14,
+      31,
       32,
       33,
-      34,
-      35
+      34
      ],
      "v": [
       5,

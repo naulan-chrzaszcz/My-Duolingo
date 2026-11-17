@@ -294,7 +294,18 @@ export function make0(t, ctx) {
         q = q.slice(0, m.index);
       }
       const [before, after] = q.split("___");
-      return { before, after: after || "", chunk: faulty ? rnd(others) : right, right, faulty, e: c[3], hint, q: c[0] };
+      const r = {
+        before,
+        after: after || "",
+        chunk: faulty ? rnd(others) : right,
+        right,
+        faulty,
+        e: c[3],
+        hint,
+        q: c[0],
+      };
+      if (c._sub) r._sub = c._sub; // phrase générée (notion de grammaire)
+      return r;
     };
     const first = take(ctx, "cs");
     // v33 : une fois sur deux, 2 ou 3 phrases à la suite, avec de 0 à 3 fautes à trouver

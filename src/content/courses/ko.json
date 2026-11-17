@@ -6809,9 +6809,9 @@
     ],
     [
      "Il y a une commission ?",
-     "수수료가 있어요?",
-     "susuryoga isseoyo",
-     "수수료 있어요?"
+     "환전 수수료가 있어요?",
+     "hwanjeon susuryoga isseoyo",
+     "환전 수수료 있어요?"
     ],
     [
      "Je voudrais changer trois cents euros.",
@@ -11814,6 +11814,9 @@
      "c": [
       0,
       8
+     ],
+     "dd": [
+      0
      ]
     },
     {
@@ -11835,6 +11838,9 @@
      "c": [
       1,
       2
+     ],
+     "dd": [
+      1
      ]
     },
     {
@@ -11856,6 +11862,9 @@
       5,
       6,
       7
+     ],
+     "dd": [
+      2
      ]
     }
    ]

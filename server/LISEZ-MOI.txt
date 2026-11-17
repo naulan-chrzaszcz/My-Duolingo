@@ -100,6 +100,8 @@ Tout est stocké sur le serveur, dans la base SQLite de api/account.php (aucune 
   premiers gagnent une médaille définitive, et chaque joueur voit son résultat à sa prochaine visite
   (+50 / +30 / +20 gemmes pour le podium).
 - La base existante est mise à jour toute seule au premier appel (nouvelles colonnes et tables).
+  Depuis la v37, une copie de sauvegarde est faite juste avant, dans api/data/
+  (speakeasy-avant-v<N>-depuis-v<M>-<date>.sqlite). Les données ne sont jamais supprimées.
 - Pour vérifier que le serveur de comptes répond : ouvre  .../speakeasy/api/account.php?a=ping
   dans un navigateur. La réponse doit être {"ok":true}. Sinon : PHP ou l'extension pdo_sqlite manque,
   ou le dossier api/data/ n'est pas accessible en écriture par le serveur web.

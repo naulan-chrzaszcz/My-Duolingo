@@ -18,21 +18,10 @@ header('Cache-Control: no-store');
 
 function out($a, $code = 200) { http_response_code($code); echo json_encode($a, JSON_UNESCAPED_UNICODE); exit; }
 
+// v37 : ouverture, création et migrations de la base dans migrate.php (sauvegarde avant toute migration)
+require_once __DIR__ . '/migrate.php';
 try {
-  if (!is_dir(dirname($DB_PATH))) @mkdir(dirname($DB_PATH), 0700, true);
-  $db = new PDO('sqlite:' . $DB_PATH);
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $db->exec('PRAGMA journal_mode=WAL');
-  $db->exec('CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT UNIQUE COLLATE NOCASE, pass TEXT, emoji TEXT, color TEXT, state TEXT DEFAULT "", ts INTEGER DEFAULT 0, wxp INTEGER DEFAULT 0, week TEXT DEFAULT "", xp INTEGER DEFAULT 0, created INTEGER)');
-  $db->exec('CREATE TABLE IF NOT EXISTS tokens(hash TEXT PRIMARY KEY, uid INTEGER, created INTEGER)');
-  $db->exec('CREATE TABLE IF NOT EXISTS attempts(ip TEXT, ts INTEGER)');
-  // Ligues : colonnes ajoutées aux bases existantes + historique des semaines et podiums
-  $cols = array_column($db->query('PRAGMA table_info(users)')->fetchAll(PDO::FETCH_ASSOC), 'name');
-  if (!in_array('streak', $cols)) $db->exec('ALTER TABLE users ADD COLUMN streak INTEGER DEFAULT 0');
-  if (!in_array('seen', $cols))   $db->exec('ALTER TABLE users ADD COLUMN seen INTEGER DEFAULT 0');
-  $db->exec('CREATE TABLE IF NOT EXISTS history(uid INTEGER, week TEXT, wxp INTEGER, PRIMARY KEY(uid, week))');
-  $db->exec('CREATE TABLE IF NOT EXISTS podiums(week TEXT, uid INTEGER, rank INTEGER, wxp INTEGER, PRIMARY KEY(week, uid))');
-  $db->exec('CREATE TABLE IF NOT EXISTS settled(week TEXT PRIMARY KEY)');
+  $db = speakeasy_db($DB_PATH);
 } catch (Exception $e) { out(['ok' => false, 'error' => 'db'], 500); }
 
 $a   = $_GET['a'] ?? '';
