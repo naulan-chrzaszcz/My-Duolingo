@@ -178,7 +178,9 @@ export function make0(t, ctx) {
   const ok = x => {
     const k = NEED[x],
       a = ctx[k];
-    return a && a.length && !(ctx.cap && x !== "match" && (ctx.ptr[k] || 0) >= ctx.cap * a.length);
+    // une conversation ou un texte sert une fois par question
+    const lim = k === "cv" || k === "rd" ? a.reduce((s, it) => s + ((it && it.q) || []).length, 0) : ctx.cap * a.length;
+    return a && a.length && !(ctx.cap && x !== "match" && (ctx.ptr[k] || 0) >= lim);
   };
   t = order.find(ok);
   if (!t) return null;
@@ -247,7 +249,11 @@ export function make0(t, ctx) {
   }
   if (t === "conv" || t === "read") {
     const it = take(ctx, t === "conv" ? "cv" : "rd");
-    const qq = rnd(it.q);
+    // v37 : dans une leçon, chaque passage d'un même texte pose une autre question
+    const qu = ctx.qUsed || (ctx.qUsed = new Map());
+    const j = qu.has(it) ? qu.get(it) : Math.floor(Math.random() * it.q.length);
+    qu.set(it, j + 1);
+    const qq = ctx.cap ? it.q[j % it.q.length] : rnd(it.q);
     return { t, lang, d: it.d, x: it.x, g: it.g, q: qq[0], answer: qq[1][qq[2]], options: shuffle(qq[1]), e: qq[3] };
   }
   if (t === "spot") {

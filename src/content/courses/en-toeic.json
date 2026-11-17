@@ -97,6 +97,193 @@
      ],
      0,
      "Être réservé : participe passé après is."
+    ],
+    [
+     "The company ___ three new stores since January.",
+     [
+      "has opened",
+      "opened",
+      "opens",
+      "is opening"
+     ],
+     0,
+     "« since » + durée jusqu'à maintenant → present perfect."
+    ],
+    [
+     "Ms. Rivera ___ the client in Chicago two days ago.",
+     [
+      "visited",
+      "has visited",
+      "visits",
+      "will visit"
+     ],
+     0,
+     "« ago » = moment passé précis → prétérit."
+    ],
+    [
+     "We ___ any complaints about the new service so far.",
+     [
+      "haven't received",
+      "didn't receive",
+      "don't receive",
+      "aren't receiving"
+     ],
+     0,
+     "« so far » = jusqu'ici → present perfect."
+    ],
+    [
+     "The board ___ the budget at last Friday's meeting.",
+     [
+      "approved",
+      "has approved",
+      "approves",
+      "approving"
+     ],
+     0,
+     "« last Friday » = passé terminé → prétérit."
+    ],
+    [
+     "Mr. Tanaka has ___ for the firm for over a decade.",
+     [
+      "worked",
+      "work",
+      "working",
+      "works"
+     ],
+     0,
+     "have + participe passé (worked)."
+    ],
+    [
+     "Sales ___ sharply when the new model was released.",
+     [
+      "increased",
+      "have increased",
+      "increase",
+      "increasing"
+     ],
+     0,
+     "Action passée datée par « when … was released » → prétérit."
+    ],
+    [
+     "I ___ just sent you the revised contract.",
+     [
+      "have",
+      "had",
+      "am",
+      "was"
+     ],
+     0,
+     "« just » avec le present perfect : have just sent."
+    ],
+    [
+     "The new branch ___ next spring, according to the CEO.",
+     [
+      "will open",
+      "opened",
+      "has opened",
+      "opening"
+     ],
+     0,
+     "« next spring » = futur → will + base verbale."
+    ],
+    [
+     "Visitors ___ wear a badge at all times in the building.",
+     [
+      "must",
+      "must to",
+      "musted",
+      "are must"
+     ],
+     0,
+     "must + base verbale, sans « to »."
+    ],
+    [
+     "If we ___ the order today, it will arrive on Monday.",
+     [
+      "place",
+      "will place",
+      "placed",
+      "placing"
+     ],
+     0,
+     "Condition réelle : if + présent, puis will."
+    ],
+    [
+     "We ___ to hire two more engineers next quarter.",
+     [
+      "are going",
+      "go",
+      "went",
+      "have gone"
+     ],
+     0,
+     "Projet décidé → be going to."
+    ],
+    [
+     "You ___ submit the form online; paper copies are also accepted.",
+     [
+      "don't have to",
+      "mustn't",
+      "can't",
+      "shouldn't to"
+     ],
+     0,
+     "« don't have to » = pas obligatoire (le papier est aussi accepté)."
+    ],
+    [
+     "Unless the weather ___, the outdoor event will go ahead.",
+     [
+      "changes",
+      "will change",
+      "changed",
+      "changing"
+     ],
+     0,
+     "unless + présent pour un futur."
+    ],
+    [
+     "The parcel ___ to the wrong address last week.",
+     [
+      "was sent",
+      "sent",
+      "has sent",
+      "was sending"
+     ],
+     0,
+     "Le colis subit l'action → passif au passé (was sent)."
+    ],
+    [
+     "By the time the manager called, the client ___ already ___.",
+     [
+      "had / left",
+      "has / left",
+      "was / leaving",
+      "did / leave"
+     ],
+     0,
+     "Action antérieure à une autre action passée → plus-que-parfait (had left)."
+    ],
+    [
+     "All invoices ___ by the accounting department.",
+     [
+      "are processed",
+      "process",
+      "are processing",
+      "processes"
+     ],
+     0,
+     "Les factures sont traitées → passif présent."
+    ],
+    [
+     "The meeting room ___ cleaned every evening.",
+     [
+      "is",
+      "has",
+      "does",
+      "are"
+     ],
+     0,
+     "Passif : be + participe passé (is cleaned)."
     ]
    ],
    "l": [
@@ -133,6 +320,78 @@
       "No thanks, I just had one.",
       "It's in the kitchen.",
       "I like it very much."
+     ],
+     0
+    ],
+    [
+     "Have you finished the quarterly report?",
+     [
+      "Almost, I'll send it this afternoon.",
+      "It was a quarter past ten.",
+      "Yes, the report card."
+     ],
+     0
+    ],
+    [
+     "When did Ms. Grant join the company?",
+     [
+      "About five years ago.",
+      "In the marketing department.",
+      "She's joining us for lunch."
+     ],
+     0
+    ],
+    [
+     "Who wrote this proposal?",
+     [
+      "Someone from the legal team.",
+      "Yes, I wrote it down.",
+      "By next Tuesday."
+     ],
+     0
+    ],
+    [
+     "Has the client signed the contract yet?",
+     [
+      "Not yet, he's still reviewing it.",
+      "A sign on the door.",
+      "He signed up for the gym."
+     ],
+     0
+    ],
+    [
+     "Will the new printer be delivered this week?",
+     [
+      "Yes, on Thursday morning.",
+      "It prints in color.",
+      "The weekly meeting."
+     ],
+     0
+    ],
+    [
+     "Could you cover my shift on Saturday?",
+     [
+      "Sure, what time does it start?",
+      "It's covered in dust.",
+      "On the shift key."
+     ],
+     0
+    ],
+    [
+     "Who repaired the copier?",
+     [
+      "A technician came this morning.",
+      "It's a copy of the file.",
+      "Yes, it's repaired."
+     ],
+     0
+    ],
+    [
+     "Had you met Mr. Owens before the interview?",
+     [
+      "No, it was the first time.",
+      "Meat for dinner.",
+      "Before ten o'clock."
      ],
      0
     ]
@@ -250,7 +509,14 @@
      "c": [
       0,
       1,
-      5
+      5,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
      ],
      "v": [
       0,
@@ -265,7 +531,11 @@
       1
      ],
      "l": [
-      2
+      2,
+      4,
+      5,
+      6,
+      7
      ],
      "g": [
       "en.t.past"
@@ -275,7 +545,13 @@
      "t": "Futur, modaux et conditions",
      "c": [
       2,
-      6
+      6,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
      ],
      "v": [
       2,
@@ -290,7 +566,9 @@
      ],
      "l": [
       0,
-      3
+      3,
+      8,
+      9
      ],
      "g": [
       "en.t.fut",
@@ -302,7 +580,11 @@
      "c": [
       3,
       4,
-      7
+      7,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       4,
@@ -315,7 +597,9 @@
       4
      ],
      "l": [
-      1
+      1,
+      10,
+      11
      ],
      "g": []
     }
@@ -392,6 +676,204 @@
      ],
      0,
      "apply for a job = postuler."
+    ],
+    [
+     "The file cabinet is ___ the window.",
+     [
+      "next to",
+      "next",
+      "nearby of",
+      "beside of"
+     ],
+     0,
+     "« next to » = à côté de."
+    ],
+    [
+     "A stapler has been left on the ___.",
+     [
+      "counter",
+      "count",
+      "countless",
+      "counting"
+     ],
+     0,
+     "On cherche un nom de lieu : counter (comptoir)."
+    ],
+    [
+     "Some folders are ___ on a shelf.",
+     [
+      "arranged",
+      "arranging",
+      "arrange",
+      "arrangement"
+     ],
+     0,
+     "Passif d'état : are arranged (sont rangés)."
+    ],
+    [
+     "The monitor has been ___ off.",
+     [
+      "turned",
+      "turning",
+      "turn",
+      "turns"
+     ],
+     0,
+     "has been + participe passé (turned off)."
+    ],
+    [
+     "Cables are ___ under the desk.",
+     [
+      "tangled",
+      "tangling",
+      "tangle",
+      "tangles"
+     ],
+     0,
+     "État visible sur la photo → passif d'état (are tangled)."
+    ],
+    [
+     "There is a ___ of paper beside the printer.",
+     [
+      "stack",
+      "stuck",
+      "stake",
+      "stock"
+     ],
+     0,
+     "« a stack of » = une pile de."
+    ],
+    [
+     "The drawers of the desk are ___.",
+     [
+      "open",
+      "opening",
+      "opens",
+      "opener"
+     ],
+     0,
+     "Adjectif d'état : open (ouvert)."
+    ],
+    [
+     "A lamp is ___ on the corner of the desk.",
+     [
+      "placed",
+      "placing",
+      "place",
+      "places"
+     ],
+     0,
+     "Objet disposé → passif : is placed."
+    ],
+    [
+     "Some people are ___ around a table.",
+     [
+      "seated",
+      "seating",
+      "seat",
+      "seats"
+     ],
+     0,
+     "État : are seated (sont assis)."
+    ],
+    [
+     "A man is ___ notes on a notepad.",
+     [
+      "taking",
+      "making up",
+      "getting",
+      "doing"
+     ],
+     0,
+     "Collocation : take notes."
+    ],
+    [
+     "The woman is pointing ___ a chart.",
+     [
+      "at",
+      "on",
+      "to at",
+      "for"
+     ],
+     0,
+     "point at = montrer du doigt."
+    ],
+    [
+     "Two colleagues are ___ hands.",
+     [
+      "shaking",
+      "shaken",
+      "shake",
+      "shook"
+     ],
+     0,
+     "Action en cours : are shaking hands."
+    ],
+    [
+     "A presenter is ___ to the audience.",
+     [
+      "speaking",
+      "spoken",
+      "speaks",
+      "speech"
+     ],
+     0,
+     "be + -ing pour une action en cours."
+    ],
+    [
+     "The participants are ___ at a screen.",
+     [
+      "looking",
+      "watching to",
+      "seeing",
+      "viewing at"
+     ],
+     0,
+     "look at = regarder."
+    ],
+    [
+     "Applicants must ___ a copy of their diploma.",
+     [
+      "attach",
+      "attack",
+      "attached",
+      "attaching"
+     ],
+     0,
+     "must + base verbale : attach (joindre)."
+    ],
+    [
+     "Please print your name in ___ letters.",
+     [
+      "capital",
+      "capitol",
+      "capitals",
+      "capitalize"
+     ],
+     0,
+     "« capital letters » = majuscules."
+    ],
+    [
+     "The ___ for submitting forms is March 1.",
+     [
+      "deadline",
+      "dead end",
+      "headline",
+      "line"
+     ],
+     0,
+     "deadline = date limite."
+    ],
+    [
+     "Incomplete applications will not be ___.",
+     [
+      "considered",
+      "consider",
+      "considerate",
+      "considering"
+     ],
+     0,
+     "Passif : will not be considered."
     ]
    ],
    "l": [
@@ -419,6 +901,87 @@
       "By Thursday afternoon.",
       "To the director.",
       "It's a good report."
+     ],
+     0
+    ],
+    [
+     "Where can I find more toner?",
+     [
+      "In the supply room downstairs.",
+      "She's a fine tenor.",
+      "More than ten."
+     ],
+     0
+    ],
+    [
+     "Is this your laptop?",
+     [
+      "No, it belongs to Ms. Park.",
+      "Yes, my lap hurts.",
+      "It's on top."
+     ],
+     0
+    ],
+    [
+     "Do we have any envelopes left?",
+     [
+      "There's a box in the top drawer.",
+      "He left early.",
+      "Yes, I love the envelope."
+     ],
+     0
+    ],
+    [
+     "Why is the printer making that noise?",
+     [
+      "I think the paper is jammed.",
+      "Because it's printed.",
+      "It's not my print."
+     ],
+     0
+    ],
+    [
+     "Who's giving the presentation today?",
+     [
+      "The new sales director.",
+      "It's a nice present.",
+      "Yes, today is fine."
+     ],
+     0
+    ],
+    [
+     "Where is the meeting being held?",
+     [
+      "In conference room 3.",
+      "Hold the door, please.",
+      "At two o'clock."
+     ],
+     0
+    ],
+    [
+     "How long will the meeting last?",
+     [
+      "About an hour.",
+      "The last one was good.",
+      "In the boardroom."
+     ],
+     0
+    ],
+    [
+     "Do I need to sign the form?",
+     [
+      "Yes, at the bottom of page two.",
+      "It's a good sign.",
+      "No, the platform."
+     ],
+     0
+    ],
+    [
+     "Where should I send my application?",
+     [
+      "To the human resources office.",
+      "I applied it on the wall.",
+      "Last Monday."
      ],
      0
     ]
@@ -538,7 +1101,15 @@
      "t": "Décris le matériel de bureau",
      "c": [
       0,
-      3
+      3,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
      ],
      "v": [
       0,
@@ -553,14 +1124,24 @@
       4
      ],
      "l": [
-      0
+      0,
+      3,
+      4,
+      5,
+      6
      ]
     },
     {
      "t": "Décris les gens en réunion",
      "c": [
       1,
-      2
+      2,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
      ],
      "v": [
       3
@@ -573,14 +1154,21 @@
       1
      ],
      "l": [
-      1
+      1,
+      7,
+      8,
+      9
      ]
     },
     {
      "t": "Formulaires et candidatures",
      "c": [
       4,
-      5
+      5,
+      20,
+      21,
+      22,
+      23
      ],
      "v": [
       2,
@@ -594,7 +1182,9 @@
       3
      ],
      "l": [
-      2
+      2,
+      10,
+      11
      ]
     }
    ]
@@ -692,6 +1282,182 @@
      ],
      0,
      "Adverbe de manière pour submit."
+    ],
+    [
+     "The team worked ___ to meet the deadline.",
+     [
+      "efficiently",
+      "efficient",
+      "efficiency",
+      "more efficient"
+     ],
+     0,
+     "Un adverbe modifie le verbe (worked)."
+    ],
+    [
+     "The price of fuel has risen ___ this year.",
+     [
+      "significantly",
+      "significant",
+      "signify",
+      "significance"
+     ],
+     0,
+     "Après le verbe → adverbe en -ly."
+    ],
+    [
+     "The store is ___ located near the station.",
+     [
+      "conveniently",
+      "convenient",
+      "convenience",
+      "convene"
+     ],
+     0,
+     "Un adverbe modifie le participe (located)."
+    ],
+    [
+     "Ms. Wu speaks ___ about the project.",
+     [
+      "confidently",
+      "confident",
+      "confidence",
+      "confide"
+     ],
+     0,
+     "Adverbe pour décrire la façon de parler."
+    ],
+    [
+     "The new policy will be ___ introduced next year.",
+     [
+      "gradually",
+      "gradual",
+      "graduate",
+      "gradualness"
+     ],
+     0,
+     "Entre « be » et le participe → adverbe."
+    ],
+    [
+     "The results were ___ better than expected.",
+     [
+      "considerably",
+      "considerable",
+      "consider",
+      "consideration"
+     ],
+     0,
+     "Un adverbe modifie un comparatif (better)."
+    ],
+    [
+     "He ___ forgets to lock the office door.",
+     [
+      "rarely",
+      "rare",
+      "rarity",
+      "rarer"
+     ],
+     0,
+     "Adverbe de fréquence avant le verbe."
+    ],
+    [
+     "We need your ___ before we can proceed.",
+     [
+      "approval",
+      "approve",
+      "approved",
+      "approving"
+     ],
+     0,
+     "Après « your » → nom (approval)."
+    ],
+    [
+     "The ___ of the new factory took two years.",
+     [
+      "construction",
+      "construct",
+      "constructive",
+      "constructed"
+     ],
+     0,
+     "Après « the » et avant « of » → nom."
+    ],
+    [
+     "Customer ___ is our top priority.",
+     [
+      "satisfaction",
+      "satisfy",
+      "satisfied",
+      "satisfying"
+     ],
+     0,
+     "Nom composé : customer satisfaction."
+    ],
+    [
+     "The company made a large ___ in new equipment.",
+     [
+      "investment",
+      "invest",
+      "invested",
+      "investor"
+     ],
+     0,
+     "Après « a large » → nom (investment)."
+    ],
+    [
+     "Please send your ___ by e-mail.",
+     [
+      "application",
+      "apply",
+      "applicable",
+      "applied"
+     ],
+     0,
+     "Après « your » → nom."
+    ],
+    [
+     "The training session was very ___.",
+     [
+      "informative",
+      "inform",
+      "information",
+      "informatively"
+     ],
+     0,
+     "Après « very » → adjectif."
+    ],
+    [
+     "This offer is ___ until the end of the month.",
+     [
+      "valid",
+      "validity",
+      "validate",
+      "validly"
+     ],
+     0,
+     "Après « is » → adjectif (valid)."
+    ],
+    [
+     "We are looking for a ___ candidate.",
+     [
+      "qualified",
+      "qualify",
+      "qualification",
+      "qualifying"
+     ],
+     0,
+     "Adjectif avant le nom (candidate)."
+    ],
+    [
+     "The hotel staff were extremely ___.",
+     [
+      "helpful",
+      "help",
+      "helpfully",
+      "helper"
+     ],
+     0,
+     "Après « extremely » → adjectif."
     ]
    ],
    "l": [
@@ -728,6 +1494,78 @@
       "I'll do it right away.",
       "Her voice is very clear.",
       "It's in the envelope."
+     ],
+     0
+    ],
+    [
+     "Did the training go smoothly?",
+     [
+      "Yes, everything went as planned.",
+      "It's very smooth fabric.",
+      "The train is late."
+     ],
+     0
+    ],
+    [
+     "How quickly can you fix this?",
+     [
+      "Within an hour, I think.",
+      "It's a quick fix kit.",
+      "Yes, I fixed it."
+     ],
+     0
+    ],
+    [
+     "Why is Mr. Hill working so late?",
+     [
+      "He has a deadline tomorrow.",
+      "Late in the afternoon.",
+      "He works in sales."
+     ],
+     0
+    ],
+    [
+     "Can you speak a bit more slowly?",
+     [
+      "Of course, sorry.",
+      "It's a slow process.",
+      "I'd like to speak to him."
+     ],
+     0
+    ],
+    [
+     "What's the main reason for the delay?",
+     [
+      "A shortage of parts.",
+      "The reason is on the table.",
+      "Yes, it's delayed."
+     ],
+     0
+    ],
+    [
+     "Who's in charge of the renovation?",
+     [
+      "The facilities manager.",
+      "It's free of charge.",
+      "In the new building."
+     ],
+     0
+    ],
+    [
+     "Is the new software easy to use?",
+     [
+      "Yes, it's quite intuitive.",
+      "It's used every day.",
+      "Easy come, easy go."
+     ],
+     0
+    ],
+    [
+     "Which hotel would you recommend?",
+     [
+      "The one near the convention center.",
+      "I recommend it to him.",
+      "Yes, I'd like that."
      ],
      0
     ]
@@ -846,7 +1684,14 @@
      "c": [
       0,
       2,
-      7
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
      ],
      "v": [
       0,
@@ -860,7 +1705,11 @@
       1
      ],
      "l": [
-      0
+      0,
+      4,
+      5,
+      6,
+      7
      ]
     },
     {
@@ -868,7 +1717,12 @@
      "c": [
       1,
       3,
-      5
+      5,
+      15,
+      16,
+      17,
+      18,
+      19
      ],
      "v": [
       2,
@@ -884,14 +1738,20 @@
      ],
      "l": [
       1,
-      3
+      3,
+      8,
+      9
      ]
     },
     {
      "t": "Choisis l'adjectif",
      "c": [
       4,
-      6
+      6,
+      20,
+      21,
+      22,
+      23
      ],
      "v": [
       4,
@@ -904,7 +1764,9 @@
       4
      ],
      "l": [
-      2
+      2,
+      10,
+      11
      ]
     }
    ]
@@ -1002,6 +1864,182 @@
      ],
      0,
      "whose = dont (possession)."
+    ],
+    [
+     "Ms. Ford prepared the slides ___.",
+     [
+      "herself",
+      "her",
+      "hers",
+      "she"
+     ],
+     0,
+     "Réfléchi d'insistance : elle-même."
+    ],
+    [
+     "The director thanked ___ for their hard work.",
+     [
+      "them",
+      "their",
+      "theirs",
+      "themselves"
+     ],
+     0,
+     "Complément d'objet → pronom objet (them)."
+    ],
+    [
+     "Is this umbrella yours or ___?",
+     [
+      "mine",
+      "my",
+      "me",
+      "myself"
+     ],
+     0,
+     "Pronom possessif seul : mine."
+    ],
+    [
+     "Mr. Diaz and ___ will attend the trade fair.",
+     [
+      "I",
+      "me",
+      "myself",
+      "mine"
+     ],
+     0,
+     "Sujet du verbe → I."
+    ],
+    [
+     "The employees organized the party by ___.",
+     [
+      "themselves",
+      "them",
+      "their",
+      "theirs"
+     ],
+     0,
+     "« by themselves » = tout seuls."
+    ],
+    [
+     "Every manager must submit ___ report by Friday.",
+     [
+      "his or her",
+      "their's",
+      "its own's",
+      "theirselves"
+     ],
+     0,
+     "Possessif avant le nom : his or her report."
+    ],
+    [
+     "The software updates ___ automatically.",
+     [
+      "itself",
+      "it",
+      "its",
+      "it's"
+     ],
+     0,
+     "Réfléchi : le logiciel se met à jour lui-même."
+    ],
+    [
+     "This printer is ___ than the old one.",
+     [
+      "faster",
+      "fastest",
+      "more fast",
+      "fast"
+     ],
+     0,
+     "Comparatif court : faster than."
+    ],
+    [
+     "Ms. Lin is the ___ experienced member of the team.",
+     [
+      "most",
+      "more",
+      "much",
+      "many"
+     ],
+     0,
+     "Superlatif : the most + adjectif long."
+    ],
+    [
+     "The second quarter was ___ than the first.",
+     [
+      "worse",
+      "worst",
+      "badder",
+      "more bad"
+     ],
+     0,
+     "Comparatif irrégulier de bad : worse."
+    ],
+    [
+     "This route is ___ convenient as the highway.",
+     [
+      "as",
+      "so",
+      "more",
+      "than"
+     ],
+     0,
+     "Égalité : as … as."
+    ],
+    [
+     "Our prices are the ___ in the region.",
+     [
+      "lowest",
+      "lower",
+      "most low",
+      "low"
+     ],
+     0,
+     "Superlatif : the lowest."
+    ],
+    [
+     "The engineer ___ designed the bridge won an award.",
+     [
+      "who",
+      "whose",
+      "whom",
+      "which"
+     ],
+     0,
+     "Sujet de « designed » et personne → who."
+    ],
+    [
+     "The report ___ you requested is on your desk.",
+     [
+      "that",
+      "who",
+      "whose",
+      "whom"
+     ],
+     0,
+     "Chose, complément → that (ou which)."
+    ],
+    [
+     "The man to ___ I spoke was very helpful.",
+     [
+      "whom",
+      "who",
+      "whose",
+      "which"
+     ],
+     0,
+     "Après une préposition, pour une personne → whom."
+    ],
+    [
+     "Employees ___ contracts end in June must renew them.",
+     [
+      "whose",
+      "who",
+      "whom",
+      "which"
+     ],
+     0,
+     "Possession (leurs contrats) → whose."
     ]
    ],
    "l": [
@@ -1029,6 +2067,78 @@
       "About twice a month.",
       "For two hours.",
       "It's a big factory."
+     ],
+     0
+    ],
+    [
+     "Whose jacket is this?",
+     [
+      "I think it's Mr. Lee's.",
+      "It's made of leather.",
+      "Yes, it's his job."
+     ],
+     0
+    ],
+    [
+     "Did you build this website yourself?",
+     [
+      "No, a designer helped me.",
+      "I built it in the city.",
+      "Yes, it's a website."
+     ],
+     0
+    ],
+    [
+     "Can I borrow your pen?",
+     [
+      "Sure, here you are.",
+      "It's a borrowed idea.",
+      "Yes, the pen is mightier."
+     ],
+     0
+    ],
+    [
+     "Are these your keys or Anna's?",
+     [
+      "They're mine, thanks.",
+      "Keys to success.",
+      "In the key cabinet."
+     ],
+     0
+    ],
+    [
+     "Which supplier is cheaper?",
+     [
+      "The one in Busan, by far.",
+      "Cheaper by the dozen.",
+      "Yes, it's cheap."
+     ],
+     0
+    ],
+    [
+     "Is the new office bigger than the old one?",
+     [
+      "Yes, almost twice as big.",
+      "It's an old office.",
+      "The big boss."
+     ],
+     0
+    ],
+    [
+     "Who's the woman talking to the CEO?",
+     [
+      "She's our new client from Paris.",
+      "She's talking about sales.",
+      "The CEO is on vacation."
+     ],
+     0
+    ],
+    [
+     "Do you know the person who left this message?",
+     [
+      "Yes, it's my colleague Ben.",
+      "I left it there.",
+      "The message is long."
      ],
      0
     ]
@@ -1141,7 +2251,14 @@
      "c": [
       0,
       1,
-      5
+      5,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
      ],
      "v": [
       0,
@@ -1155,7 +2272,11 @@
       1
      ],
      "l": [
-      1
+      1,
+      3,
+      4,
+      5,
+      6
      ]
     },
     {
@@ -1163,7 +2284,12 @@
      "c": [
       2,
       3,
-      4
+      4,
+      15,
+      16,
+      17,
+      18,
+      19
      ],
      "v": [
       2,
@@ -1178,14 +2304,20 @@
       3
      ],
      "l": [
-      2
+      2,
+      7,
+      8
      ]
     },
     {
      "t": "Pronoms relatifs who, whom, whose",
      "c": [
       6,
-      7
+      7,
+      20,
+      21,
+      22,
+      23
      ],
      "v": [
       4,
@@ -1195,7 +2327,9 @@
       4
      ],
      "l": [
-      0
+      0,
+      9,
+      10
      ],
      "p": []
     }
@@ -1453,6 +2587,182 @@
      ],
      0,
      "« Would you mind + -ing ? » = formule polie de demande."
+    ],
+    [
+     "___ is responsible for ordering supplies? — Mr. Kent.",
+     [
+      "Who",
+      "What",
+      "Where",
+      "When"
+     ],
+     0,
+     "Réponse = une personne → Who."
+    ],
+    [
+     "___ will the shipment arrive? — Next Tuesday.",
+     [
+      "When",
+      "Where",
+      "Who",
+      "Why"
+     ],
+     0,
+     "Réponse = un moment → When."
+    ],
+    [
+     "___ is the client unhappy? — The order was late.",
+     [
+      "Why",
+      "How",
+      "Which",
+      "Whose"
+     ],
+     0,
+     "Réponse = une raison → Why."
+    ],
+    [
+     "___ much does the subscription cost? — Twenty dollars a month.",
+     [
+      "How",
+      "What",
+      "Which",
+      "Why"
+     ],
+     0,
+     "Prix → How much."
+    ],
+    [
+     "___ room is the interview in? — Room 204.",
+     [
+      "Which",
+      "Who",
+      "Whose",
+      "Why"
+     ],
+     0,
+     "Choix parmi des salles → Which."
+    ],
+    [
+     "___ often does the bus run? — Every ten minutes.",
+     [
+      "How",
+      "What",
+      "When",
+      "Which"
+     ],
+     0,
+     "Fréquence → How often."
+    ],
+    [
+     "The meeting starts at nine, ___ it?",
+     [
+      "doesn't",
+      "isn't",
+      "won't",
+      "didn't"
+     ],
+     0,
+     "Présent simple affirmatif → tag « doesn't it »."
+    ],
+    [
+     "You haven't seen my glasses, ___ you?",
+     [
+      "have",
+      "haven't",
+      "did",
+      "do"
+     ],
+     0,
+     "Phrase négative → tag affirmatif (have you)."
+    ],
+    [
+     "Ms. Ito will call back, ___ she?",
+     [
+      "won't",
+      "will",
+      "doesn't",
+      "isn't"
+     ],
+     0,
+     "will → tag « won't »."
+    ],
+    [
+     "___ the report due tomorrow? — No, on Friday.",
+     [
+      "Isn't",
+      "Doesn't",
+      "Hasn't",
+      "Won't"
+     ],
+     0,
+     "Question négative avec « be » : Isn't."
+    ],
+    [
+     "They were at the conference, ___ they?",
+     [
+      "weren't",
+      "were",
+      "didn't",
+      "aren't"
+     ],
+     0,
+     "were → tag « weren't »."
+    ],
+    [
+     "___ you already paid the invoice? — Yes, yesterday.",
+     [
+      "Haven't",
+      "Didn't",
+      "Aren't",
+      "Don't"
+     ],
+     0,
+     "present perfect → Haven't you…?"
+    ],
+    [
+     "Could you tell me ___ the station is?",
+     [
+      "where",
+      "where is",
+      "is where",
+      "that"
+     ],
+     0,
+     "Question indirecte : ordre sujet + verbe (where the station is)."
+    ],
+    [
+     "Would you mind ___ me the file?",
+     [
+      "sending",
+      "to send",
+      "send",
+      "sent"
+     ],
+     0,
+     "mind + -ing."
+    ],
+    [
+     "I wonder ___ the store is open on Sundays.",
+     [
+      "if",
+      "that",
+      "what",
+      "which"
+     ],
+     0,
+     "Question fermée indirecte → if / whether."
+    ],
+    [
+     "Do you know what time ___?",
+     [
+      "the meeting starts",
+      "does the meeting start",
+      "starts the meeting",
+      "the meeting does start"
+     ],
+     0,
+     "Pas d'inversion dans une question indirecte."
     ]
    ],
    "parts": [
@@ -1462,7 +2772,13 @@
       0,
       1,
       2,
-      6
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
      ],
      "v": [
       0,
@@ -1483,7 +2799,13 @@
      "t": "Question tags et questions négatives",
      "c": [
       3,
-      4
+      4,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
      ],
      "v": [
       2,
@@ -1504,7 +2826,11 @@
      "t": "Questions indirectes et demandes polies",
      "c": [
       5,
-      7
+      7,
+      20,
+      21,
+      22,
+      23
      ],
      "v": [
       4,
@@ -1729,6 +3055,204 @@
      ],
      0,
      "« are tied up » : état (les bateaux sont amarrés)."
+    ],
+    [
+     "The tables ___ set for dinner.",
+     [
+      "have been",
+      "are being",
+      "has been",
+      "is"
+     ],
+     0,
+     "Action terminée, résultat visible → have been set."
+    ],
+    [
+     "The lights ___ turned off.",
+     [
+      "have been",
+      "are being",
+      "has",
+      "were being"
+     ],
+     0,
+     "Résultat visible sur la photo → passif parfait."
+    ],
+    [
+     "Some books have been ___ on a cart.",
+     [
+      "piled",
+      "piling",
+      "pile",
+      "piles"
+     ],
+     0,
+     "have been + participe passé."
+    ],
+    [
+     "The road has been ___ off.",
+     [
+      "blocked",
+      "blocking",
+      "block",
+      "blocks"
+     ],
+     0,
+     "have been + participe passé (blocked)."
+    ],
+    [
+     "Some cups ___ left on the counter.",
+     [
+      "have been",
+      "are being",
+      "has been",
+      "is being"
+     ],
+     0,
+     "Pluriel + résultat → have been left."
+    ],
+    [
+     "The windows ___ cleaned.",
+     [
+      "have been",
+      "are being",
+      "has been",
+      "is"
+     ],
+     0,
+     "Sans personne sur la photo, pas de « being »."
+    ],
+    [
+     "A bicycle has been ___ to a post.",
+     [
+      "locked",
+      "locking",
+      "lock",
+      "locks"
+     ],
+     0,
+     "have been + participe passé (locked)."
+    ],
+    [
+     "The shelves ___ stocked with products.",
+     [
+      "have been",
+      "are being",
+      "has",
+      "is being"
+     ],
+     0,
+     "Résultat visible → have been stocked."
+    ],
+    [
+     "A worker is ___ a ladder.",
+     [
+      "climbing",
+      "climbed",
+      "climbs",
+      "climb"
+     ],
+     0,
+     "Action en cours sur la photo → is + -ing."
+    ],
+    [
+     "Some people are ___ along the beach.",
+     [
+      "walking",
+      "walked",
+      "walk",
+      "walks"
+     ],
+     0,
+     "are + -ing."
+    ],
+    [
+     "A woman is ___ her bag on the shelf.",
+     [
+      "putting",
+      "put",
+      "puts",
+      "to put"
+     ],
+     0,
+     "is + -ing (putting)."
+    ],
+    [
+     "The chef is ___ vegetables.",
+     [
+      "chopping",
+      "chopped",
+      "chop",
+      "chops"
+     ],
+     0,
+     "Action visible : is chopping."
+    ],
+    [
+     "A man is ___ for the bus.",
+     [
+      "waiting",
+      "waited",
+      "wait",
+      "waits"
+     ],
+     0,
+     "wait for, à la forme en -ing."
+    ],
+    [
+     "A customer is ___ at a cashier.",
+     [
+      "paying",
+      "paid",
+      "pays",
+      "pay"
+     ],
+     0,
+     "Action en cours : is paying."
+    ],
+    [
+     "A painting is hanging ___ the fireplace.",
+     [
+      "above",
+      "over of",
+      "onto",
+      "up"
+     ],
+     0,
+     "above = au-dessus de."
+    ],
+    [
+     "Some cars are parked ___ to each other.",
+     [
+      "next",
+      "near of",
+      "beside to",
+      "nearby"
+     ],
+     0,
+     "next to each other = les unes à côté des autres."
+    ],
+    [
+     "The bottles are ___ in a row.",
+     [
+      "lined up",
+      "lining up",
+      "line",
+      "lines"
+     ],
+     0,
+     "Passif d'état : are lined up."
+    ],
+    [
+     "A rug is lying ___ the floor.",
+     [
+      "on",
+      "in",
+      "at",
+      "over of"
+     ],
+     0,
+     "on the floor = par terre."
     ]
    ],
    "l": [
@@ -1767,6 +3291,78 @@
       "Please close it."
      ],
      0
+    ],
+    [
+     "Have the boxes been delivered?",
+     [
+      "Yes, they're in the storage room.",
+      "I'll box them up.",
+      "The delivery man is tall."
+     ],
+     0
+    ],
+    [
+     "Who set up the chairs?",
+     [
+      "The event staff did it this morning.",
+      "Please have a seat.",
+      "Up the stairs."
+     ],
+     0
+    ],
+    [
+     "Why are the lights off in the lobby?",
+     [
+      "They're replacing the bulbs.",
+      "Light blue, I think.",
+      "In the lobby."
+     ],
+     0
+    ],
+    [
+     "Is the room ready for the training?",
+     [
+      "Almost, we're setting up the projector.",
+      "I'm ready to go.",
+      "The training was long."
+     ],
+     0
+    ],
+    [
+     "Who's painting the hallway?",
+     [
+      "A contractor from downtown.",
+      "It's a nice painting.",
+      "Down the hall."
+     ],
+     0
+    ],
+    [
+     "When will the repairs be finished?",
+     [
+      "By the end of the week.",
+      "Since last week.",
+      "A pair of shoes."
+     ],
+     0
+    ],
+    [
+     "Where did you leave the umbrella?",
+     [
+      "By the front door.",
+      "I'll leave at five.",
+      "Yes, it's raining."
+     ],
+     0
+    ],
+    [
+     "Is the shop on the left or the right?",
+     [
+      "On the right, after the bank.",
+      "I left it there.",
+      "Yes, it's right."
+     ],
+     0
     ]
    ],
    "parts": [
@@ -1774,7 +3370,15 @@
      "t": "Le passif de l'action terminée",
      "c": [
       0,
-      3
+      3,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
      ],
      "v": [
       0,
@@ -1790,14 +3394,24 @@
       4
      ],
      "l": [
-      0
+      0,
+      4,
+      5,
+      6,
+      7
      ]
     },
     {
      "t": "Les actions en cours",
      "c": [
       1,
-      4
+      4,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
      ],
      "v": [
       4,
@@ -1814,14 +3428,20 @@
      ],
      "l": [
       1,
-      3
+      3,
+      8,
+      9
      ]
     },
     {
      "t": "Positions et états",
      "c": [
       2,
-      5
+      5,
+      20,
+      21,
+      22,
+      23
      ],
      "v": [
       2,
@@ -1834,7 +3454,9 @@
       7
      ],
      "l": [
-      2
+      2,
+      10,
+      11
      ]
     }
    ]
@@ -1983,6 +3605,182 @@
      ],
      0,
      "receipt = reçu."
+    ],
+    [
+     "The hotel bill will be ___ by the company.",
+     [
+      "reimbursed",
+      "reimburse",
+      "reimbursing",
+      "reimbursement"
+     ],
+     0,
+     "Passif : will be reimbursed (remboursé)."
+    ],
+    [
+     "Please check the ___ before paying.",
+     [
+      "invoice",
+      "invoke",
+      "invite",
+      "invest"
+     ],
+     0,
+     "invoice = facture."
+    ],
+    [
+     "The total ___ of the trip was $1,200.",
+     [
+      "cost",
+      "costly",
+      "costed",
+      "costing"
+     ],
+     0,
+     "Nom après « total » : cost."
+    ],
+    [
+     "Employees can claim travel ___ on this form.",
+     [
+      "expenses",
+      "expensive",
+      "expend",
+      "expensively"
+     ],
+     0,
+     "Nom : travel expenses (frais de déplacement)."
+    ],
+    [
+     "Payment is ___ within thirty days.",
+     [
+      "due",
+      "dew",
+      "do",
+      "done"
+     ],
+     0,
+     "« due » = exigible, à payer."
+    ],
+    [
+     "The finance team found an ___ in the report.",
+     [
+      "error",
+      "err",
+      "erroneous",
+      "erring"
+     ],
+     0,
+     "Après « an » → nom (error)."
+    ],
+    [
+     "Our monthly ___ for office supplies is limited.",
+     [
+      "budget",
+      "budge",
+      "budgeted",
+      "budgetary"
+     ],
+     0,
+     "Nom : budget."
+    ],
+    [
+     "The items are currently out of ___.",
+     [
+      "stock",
+      "stuck",
+      "stack",
+      "store"
+     ],
+     0,
+     "out of stock = en rupture."
+    ],
+    [
+     "The ___ was signed for by the receptionist.",
+     [
+      "delivery",
+      "deliver",
+      "delivered",
+      "deliverable"
+     ],
+     0,
+     "Après « the » → nom (delivery)."
+    ],
+    [
+     "We will ___ the goods by truck.",
+     [
+      "ship",
+      "shipment",
+      "shipping",
+      "shipper"
+     ],
+     0,
+     "Après « will » → verbe (ship)."
+    ],
+    [
+     "The warehouse ___ more than 10,000 products.",
+     [
+      "stores",
+      "storage",
+      "storing",
+      "store's"
+     ],
+     0,
+     "Verbe conjugué : stores (stocke)."
+    ],
+    [
+     "Please ___ the number of boxes on the receipt.",
+     [
+      "confirm",
+      "confirmation",
+      "confirmed",
+      "confirming"
+     ],
+     0,
+     "Impératif → base verbale."
+    ],
+    [
+     "The order was ___ because of bad weather.",
+     [
+      "delayed",
+      "delay",
+      "delaying",
+      "delays"
+     ],
+     0,
+     "Passif : was delayed."
+    ],
+    [
+     "The ___ campaign increased sales by 20%.",
+     [
+      "advertising",
+      "advertise",
+      "advertised",
+      "advertisement's"
+     ],
+     0,
+     "Nom composé : advertising campaign."
+    ],
+    [
+     "The company is offering a ___ discount to new customers.",
+     [
+      "special",
+      "specially",
+      "specialty",
+      "specialize"
+     ],
+     0,
+     "Adjectif avant « discount »."
+    ],
+    [
+     "The new logo will be ___ next month.",
+     [
+      "unveiled",
+      "unveiling",
+      "unveil",
+      "unveils"
+     ],
+     0,
+     "Passif : will be unveiled (dévoilé)."
     ]
    ],
    "l": [
@@ -2021,6 +3819,78 @@
       "In the promotions catalog."
      ],
      0
+    ],
+    [
+     "Who approves expense reports?",
+     [
+      "The department manager.",
+      "It's very expensive.",
+      "By the report."
+     ],
+     0
+    ],
+    [
+     "Was the invoice paid on time?",
+     [
+      "Yes, last Friday.",
+      "Time is money.",
+      "Paid in cash."
+     ],
+     0
+    ],
+    [
+     "How much did the dinner cost?",
+     [
+      "About two hundred dollars.",
+      "It was delicious.",
+      "Yes, the costs went up."
+     ],
+     0
+    ],
+    [
+     "Can I pay this bill by credit card?",
+     [
+      "Of course, we accept all major cards.",
+      "The bill is on the table.",
+      "A credit report."
+     ],
+     0
+    ],
+    [
+     "When will the new stock arrive?",
+     [
+      "Early next week.",
+      "The stock market is up.",
+      "It arrived by plane."
+     ],
+     0
+    ],
+    [
+     "Where are the packages for the Lyon office?",
+     [
+      "On the loading dock.",
+      "Pack your bags.",
+      "In the past."
+     ],
+     0
+    ],
+    [
+     "Should we order more paper?",
+     [
+      "Yes, we're running low.",
+      "In alphabetical order.",
+      "The newspaper."
+     ],
+     0
+    ],
+    [
+     "Who designed the new brochure?",
+     [
+      "An agency in Seoul.",
+      "It's a brochure about hotels.",
+      "Yes, I signed it."
+     ],
+     0
     ]
    ],
    "parts": [
@@ -2029,7 +3899,14 @@
      "c": [
       0,
       4,
-      7
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
      ],
      "v": [
       0,
@@ -2039,14 +3916,24 @@
       1
      ],
      "l": [
-      1
+      1,
+      4,
+      5,
+      6,
+      7
      ]
     },
     {
      "t": "Stocks et livraisons",
      "c": [
       2,
-      6
+      6,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
      ],
      "v": [
       2,
@@ -2056,7 +3943,10 @@
       2
      ],
      "l": [
-      2
+      2,
+      8,
+      9,
+      10
      ]
     },
     {
@@ -2064,7 +3954,10 @@
      "c": [
       1,
       3,
-      5
+      5,
+      21,
+      22,
+      23
      ],
      "v": [
       4,
@@ -2076,7 +3969,8 @@
      ],
      "l": [
       0,
-      3
+      3,
+      11
      ]
     }
    ]
@@ -2281,6 +4175,149 @@
      ],
      0,
      "consist of = se composer de."
+    ],
+    [
+     "The manager is satisfied ___ the results.",
+     [
+      "with",
+      "of",
+      "at",
+      "on"
+     ],
+     0,
+     "satisfied with."
+    ],
+    [
+     "Mr. Ruiz is very good ___ negotiating.",
+     [
+      "at",
+      "in",
+      "on",
+      "for"
+     ],
+     0,
+     "good at + -ing."
+    ],
+    [
+     "The museum is famous ___ its modern art.",
+     [
+      "for",
+      "of",
+      "by",
+      "with"
+     ],
+     0,
+     "famous for."
+    ],
+    [
+     "She is interested ___ the marketing position.",
+     [
+      "in",
+      "on",
+      "at",
+      "for"
+     ],
+     0,
+     "interested in."
+    ],
+    [
+     "This parking area is reserved ___ visitors.",
+     [
+      "for",
+      "to",
+      "at",
+      "with"
+     ],
+     0,
+     "reserved for."
+    ],
+    [
+     "We are aware ___ the problem.",
+     [
+      "of",
+      "about of",
+      "with",
+      "on"
+     ],
+     0,
+     "aware of."
+    ],
+    [
+     "The store is close ___ the station.",
+     [
+      "to",
+      "of",
+      "from",
+      "at"
+     ],
+     0,
+     "close to."
+    ],
+    [
+     "There has been a decline ___ sales this month.",
+     [
+      "in",
+      "of",
+      "on",
+      "at"
+     ],
+     0,
+     "decline in (une baisse de)."
+    ],
+    [
+     "We need a solution ___ this problem.",
+     [
+      "to",
+      "for of",
+      "at",
+      "on"
+     ],
+     0,
+     "solution to."
+    ],
+    [
+     "Ms. Hart has a lot of experience ___ sales.",
+     [
+      "in",
+      "of",
+      "on",
+      "at"
+     ],
+     0,
+     "experience in."
+    ],
+    [
+     "The ___ for the new position is high.",
+     [
+      "demand",
+      "demanding",
+      "demanded",
+      "demands of"
+     ],
+     0,
+     "Nom : demand for."
+    ],
+    [
+     "You can count ___ us for support.",
+     [
+      "on",
+      "in",
+      "at",
+      "to"
+     ],
+     0,
+     "count on = compter sur."
+    ],
+    [
+     "The price of the ticket varies ___ season.",
+     [
+      "by",
+      "at",
+      "on",
+      "of"
+     ],
+     0,
+     "vary by = varier selon."
     ]
    ],
    "l": [
@@ -2319,6 +4356,78 @@
       "No, the family is away."
      ],
      0
+    ],
+    [
+     "Are you satisfied with the new supplier?",
+     [
+      "So far, yes.",
+      "Supplies are in the cabinet.",
+      "I'm full, thanks."
+     ],
+     0
+    ],
+    [
+     "Who's good at fixing computers?",
+     [
+      "Ask Tom in the IT department.",
+      "Fix the date, please.",
+      "It's a good computer."
+     ],
+     0
+    ],
+    [
+     "Is the hotel close to the airport?",
+     [
+      "About ten minutes by car.",
+      "Please close the door.",
+      "Yes, the airport is big."
+     ],
+     0
+    ],
+    [
+     "What's the reason for the price increase?",
+     [
+      "Higher shipping costs.",
+      "Yes, for a reason.",
+      "The price tag."
+     ],
+     0
+    ],
+    [
+     "Do you have any experience with this software?",
+     [
+      "I used it at my last job.",
+      "It's a great experience.",
+      "Soft music."
+     ],
+     0
+    ],
+    [
+     "Is there a solution to the network problem?",
+     [
+      "The technician is working on it.",
+      "Yes, it's a net.",
+      "The problem is new."
+     ],
+     0
+    ],
+    [
+     "Who do I report to?",
+     [
+      "Ms. Kang, the team leader.",
+      "Report the problem.",
+      "To the airport."
+     ],
+     0
+    ],
+    [
+     "What does the price depend on?",
+     [
+      "Mainly the number of guests.",
+      "It's on the price list.",
+      "Depend on me."
+     ],
+     0
     ]
    ],
    "parts": [
@@ -2327,7 +4436,14 @@
      "c": [
       0,
       3,
-      7
+      7,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
      ],
      "v": [
       1
@@ -2337,7 +4453,10 @@
      ],
      "l": [
       0,
-      3
+      3,
+      4,
+      5,
+      6
      ],
      "g": [
       "en.p.verb"
@@ -2349,13 +4468,20 @@
       1,
       6,
       8,
-      10
+      10,
+      19,
+      20,
+      21,
+      22
      ],
      "p": [
       1
      ],
      "l": [
-      2
+      2,
+      7,
+      8,
+      9
      ],
      "g": [],
      "v": [
@@ -2371,7 +4497,9 @@
       4,
       5,
       9,
-      11
+      11,
+      23,
+      24
      ],
      "v": [
       0,
@@ -2385,7 +4513,9 @@
       3
      ],
      "l": [
-      1
+      1,
+      10,
+      11
      ],
      "g": [
       "en.p.verb"
@@ -2514,6 +4644,204 @@
      ],
      0,
      "along = le long de (une rangée qui suit le trottoir)."
+    ],
+    [
+     "Suitcases ___ on a luggage cart.",
+     [
+      "have been loaded",
+      "are loading",
+      "is loaded",
+      "load"
+     ],
+     0,
+     "Résultat visible → have been loaded."
+    ],
+    [
+     "Plates are ___ on a shelf.",
+     [
+      "stacked",
+      "stacking",
+      "stack",
+      "stacks"
+     ],
+     0,
+     "Passif d'état : are stacked."
+    ],
+    [
+     "Several plants have been ___ along the path.",
+     [
+      "planted",
+      "planting",
+      "plant",
+      "plants"
+     ],
+     0,
+     "have been + participe passé."
+    ],
+    [
+     "Pictures are ___ on the wall.",
+     [
+      "hung",
+      "hanging up",
+      "hang",
+      "hangs"
+     ],
+     0,
+     "Passif d'état : are hung."
+    ],
+    [
+     "Products are ___ in a store window.",
+     [
+      "displayed",
+      "displaying",
+      "display",
+      "displays"
+     ],
+     0,
+     "Passif d'état : are displayed."
+    ],
+    [
+     "Some tools ___ on a workbench.",
+     [
+      "have been left",
+      "are leaving",
+      "is left",
+      "leave"
+     ],
+     0,
+     "Résultat visible → have been left."
+    ],
+    [
+     "Towels are ___ on a rack.",
+     [
+      "folded",
+      "folding",
+      "fold",
+      "folds"
+     ],
+     0,
+     "Passif d'état : are folded."
+    ],
+    [
+     "The chairs have been ___ upside down on the tables.",
+     [
+      "placed",
+      "placing",
+      "place",
+      "places"
+     ],
+     0,
+     "have been + participe passé."
+    ],
+    [
+     "A woman is ___ a shopping cart.",
+     [
+      "pushing",
+      "pushed",
+      "pushes",
+      "push"
+     ],
+     0,
+     "Action en cours : is pushing."
+    ],
+    [
+     "A man is ___ the floor.",
+     [
+      "sweeping",
+      "swept",
+      "sweeps",
+      "sweep"
+     ],
+     0,
+     "Action en cours : is sweeping."
+    ],
+    [
+     "Two people are ___ on a bench.",
+     [
+      "sitting",
+      "sat",
+      "sit",
+      "sits"
+     ],
+     0,
+     "are + -ing (sitting)."
+    ],
+    [
+     "A cyclist is ___ across a bridge.",
+     [
+      "riding",
+      "rode",
+      "rides",
+      "ridden"
+     ],
+     0,
+     "Action en cours : is riding."
+    ],
+    [
+     "A woman is ___ a book from a shelf.",
+     [
+      "taking",
+      "took",
+      "takes",
+      "taken"
+     ],
+     0,
+     "is + -ing (taking)."
+    ],
+    [
+     "A mechanic is ___ a tire.",
+     [
+      "changing",
+      "changed",
+      "changes",
+      "change"
+     ],
+     0,
+     "Action en cours : is changing."
+    ],
+    [
+     "A lamp is standing ___ the sofa.",
+     [
+      "beside",
+      "besides",
+      "between",
+      "among"
+     ],
+     0,
+     "beside = à côté de."
+    ],
+    [
+     "The boats are floating ___ the harbor.",
+     [
+      "in",
+      "on top",
+      "at over",
+      "inside of"
+     ],
+     0,
+     "in the harbor = dans le port."
+    ],
+    [
+     "A tree is growing ___ two buildings.",
+     [
+      "between",
+      "among",
+      "through",
+      "across"
+     ],
+     0,
+     "between (entre deux)."
+    ],
+    [
+     "A path leads ___ the forest.",
+     [
+      "through",
+      "between",
+      "among",
+      "onto"
+     ],
+     0,
+     "through = à travers."
     ]
    ],
    "l": [
@@ -2541,6 +4869,87 @@
       "He's on my flight to Rome.",
       "It departs at noon.",
       "The board meets on Monday."
+     ],
+     0
+    ],
+    [
+     "Where should we store the extra chairs?",
+     [
+      "In the basement.",
+      "The store is closed.",
+      "Extra cheese, please."
+     ],
+     0
+    ],
+    [
+     "Have the shelves been restocked?",
+     [
+      "Yes, early this morning.",
+      "Shelf life.",
+      "In stock."
+     ],
+     0
+    ],
+    [
+     "Who arranged these flowers?",
+     [
+      "The receptionist did.",
+      "Flour and sugar.",
+      "A range of flowers."
+     ],
+     0
+    ],
+    [
+     "Are the plates clean?",
+     [
+      "Yes, they just came out of the dishwasher.",
+      "A license plate.",
+      "Clean the room."
+     ],
+     0
+    ],
+    [
+     "Who's that woman at the counter?",
+     [
+      "She's our new receptionist.",
+      "Count the money.",
+      "At the front desk."
+     ],
+     0
+    ],
+    [
+     "Is someone fixing the elevator?",
+     [
+      "Yes, a technician is on the way.",
+      "Fix a time, please.",
+      "The elevator music."
+     ],
+     0
+    ],
+    [
+     "Why is that man waving?",
+     [
+      "I think he's calling a taxi.",
+      "He's waiting for a wave.",
+      "At the beach."
+     ],
+     0
+    ],
+    [
+     "Where's the nearest bus stop?",
+     [
+      "Just around the corner.",
+      "Stop the bus.",
+      "It's near the end."
+     ],
+     0
+    ],
+    [
+     "Is the café on the ground floor?",
+     [
+      "No, it's on the second floor.",
+      "The ground is wet.",
+      "Coffee or tea?"
      ],
      0
     ]
@@ -2792,7 +5201,15 @@
      "t": "Objets rangés et disposés",
      "c": [
       0,
-      2
+      2,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
      ],
      "v": [
       3,
@@ -2809,14 +5226,24 @@
       15
      ],
      "l": [
-      0
+      0,
+      3,
+      4,
+      5,
+      6
      ]
     },
     {
      "t": "Personnes en action",
      "c": [
       1,
-      4
+      4,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
      ],
      "v": [
       0,
@@ -2838,14 +5265,21 @@
       18
      ],
      "l": [
-      2
+      2,
+      7,
+      8,
+      9
      ]
     },
     {
      "t": "Lieux et positions",
      "c": [
       3,
-      5
+      5,
+      20,
+      21,
+      22,
+      23
      ],
      "v": [
       1,
@@ -2863,7 +5297,9 @@
       19
      ],
      "l": [
-      1
+      1,
+      10,
+      11
      ]
     }
    ]
@@ -2961,6 +5397,182 @@
      ],
      0,
      "neither … nor = ni … ni."
+    ],
+    [
+     "The flight was delayed ___ fog.",
+     [
+      "because of",
+      "because",
+      "although",
+      "despite of"
+     ],
+     0,
+     "Devant un nom (fog) → because of."
+    ],
+    [
+     "___ the price increase, sales remained strong.",
+     [
+      "Despite",
+      "Although",
+      "Because",
+      "Even"
+     ],
+     0,
+     "Devant un groupe nominal → Despite."
+    ],
+    [
+     "___ he was tired, he finished the report.",
+     [
+      "Although",
+      "Despite",
+      "In spite of",
+      "Due to"
+     ],
+     0,
+     "Devant une proposition (sujet + verbe) → Although."
+    ],
+    [
+     "The store closed early ___ a power outage.",
+     [
+      "owing to",
+      "even though",
+      "whereas",
+      "unless"
+     ],
+     0,
+     "owing to + nom = à cause de."
+    ],
+    [
+     "___ of the bad weather, the ferry was canceled.",
+     [
+      "Because",
+      "Due",
+      "Since",
+      "Despite"
+     ],
+     0,
+     "« Because of » + nom."
+    ],
+    [
+     "The project succeeded ___ the small budget.",
+     [
+      "in spite of",
+      "although",
+      "because",
+      "so that"
+     ],
+     0,
+     "in spite of + nom = malgré."
+    ],
+    [
+     "___ the road was closed, we took the train.",
+     [
+      "Since",
+      "Despite",
+      "Due to",
+      "In spite of"
+     ],
+     0,
+     "Since + proposition = puisque."
+    ],
+    [
+     "Prices rose, ___ demand stayed the same.",
+     [
+      "yet",
+      "because",
+      "due to",
+      "despite"
+     ],
+     0,
+     "Opposition entre deux propositions → yet."
+    ],
+    [
+     "The meeting will take place ___ Monday.",
+     [
+      "on",
+      "in",
+      "at",
+      "by"
+     ],
+     0,
+     "Jour → on."
+    ],
+    [
+     "The office is closed ___ noon to 1 p.m.",
+     [
+      "from",
+      "since",
+      "at",
+      "for"
+     ],
+     0,
+     "from … to."
+    ],
+    [
+     "Please return the keys ___ Friday at the latest.",
+     [
+      "by",
+      "until",
+      "since",
+      "for"
+     ],
+     0,
+     "Date limite → by."
+    ],
+    [
+     "The new mall is located ___ the city center.",
+     [
+      "in",
+      "on",
+      "at",
+      "to"
+     ],
+     0,
+     "Dans une zone → in."
+    ],
+    [
+     "The bank is open ___ 5 p.m.",
+     [
+      "until",
+      "by",
+      "since",
+      "for"
+     ],
+     0,
+     "Durée jusqu'à un moment → until."
+    ],
+    [
+     "The hotel is expensive; ___, it is very comfortable.",
+     [
+      "however",
+      "because",
+      "so",
+      "therefore"
+     ],
+     0,
+     "Opposition → however."
+    ],
+    [
+     "Sales fell; ___, the company cut costs.",
+     [
+      "therefore",
+      "however",
+      "although",
+      "despite"
+     ],
+     0,
+     "Conséquence → therefore."
+    ],
+    [
+     "Bring a jacket ___ it gets cold.",
+     [
+      "in case",
+      "despite",
+      "whereas",
+      "so"
+     ],
+     0,
+     "in case = au cas où."
     ]
    ],
    "l": [
@@ -2997,6 +5609,78 @@
       "Have you checked the top drawer?",
       "It's a remote location.",
       "The project is finished."
+     ],
+     0
+    ],
+    [
+     "Why was the concert canceled?",
+     [
+      "Because of the storm warning.",
+      "It was a great concert.",
+      "Cancel my order, please."
+     ],
+     0
+    ],
+    [
+     "Did the event go well despite the rain?",
+     [
+      "Yes, more people came than expected.",
+      "It rained all night.",
+      "The event planner."
+     ],
+     0
+    ],
+    [
+     "Why are you leaving so early?",
+     [
+      "I have a dentist appointment.",
+      "Yes, I'm leaving.",
+      "Early in the morning."
+     ],
+     0
+    ],
+    [
+     "How did you get here so fast?",
+     [
+      "I took a shortcut.",
+      "Fast food.",
+      "Here it is."
+     ],
+     0
+    ],
+    [
+     "When does the store open?",
+     [
+      "At nine on weekdays.",
+      "In the store.",
+      "Yes, it's open."
+     ],
+     0
+    ],
+    [
+     "Where's the training being held?",
+     [
+      "On the fifth floor.",
+      "It's held every year.",
+      "By Friday."
+     ],
+     0
+    ],
+    [
+     "Should we meet today or tomorrow?",
+     [
+      "Tomorrow works better for me.",
+      "Yes, we should.",
+      "Today's paper."
+     ],
+     0
+    ],
+    [
+     "Are you coming by car or by train?",
+     [
+      "By train, it's faster.",
+      "Yes, I'm coming.",
+      "The car is red."
      ],
      0
     ]
@@ -3052,7 +5736,15 @@
      "t": "Cause et opposition : due to, despite",
      "c": [
       0,
-      1
+      1,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
      ],
      "v": [
       0
@@ -3062,7 +5754,11 @@
       2
      ],
      "l": [
-      2
+      2,
+      4,
+      5,
+      6,
+      7
      ],
      "g": [
       "en.l.opp",
@@ -3074,14 +5770,21 @@
      "c": [
       2,
       3,
-      5
+      5,
+      16,
+      17,
+      18,
+      19,
+      20
      ],
      "p": [
       1
      ],
      "l": [
       1,
-      3
+      3,
+      8,
+      9
      ],
      "g": [
       "en.p.dur"
@@ -3093,7 +5796,10 @@
      "c": [
       4,
       6,
-      7
+      7,
+      21,
+      22,
+      23
      ],
      "v": [
       1,
@@ -3103,7 +5809,9 @@
       5
      ],
      "l": [
-      0
+      0,
+      10,
+      11
      ],
      "g": [],
      "p": []
@@ -3311,6 +6019,249 @@
        "« I can give you a full refund »."
       ]
      ]
+    },
+    {
+     "d": [
+      [
+       "W",
+       "Hi Daniel, the client just called. She wants to move tomorrow's meeting to Friday."
+      ],
+      [
+       "M",
+       "Friday morning is fine for me, but I have a training session in the afternoon."
+      ],
+      [
+       "W",
+       "Great, I'll suggest ten o'clock and book the small conference room."
+      ]
+     ],
+     "q": [
+      [
+       "What does the client want to do?",
+       [
+        "Change a meeting date",
+        "Cancel a contract",
+        "Visit the factory",
+        "Hire a consultant"
+       ],
+       0,
+       "« She wants to move tomorrow's meeting to Friday »."
+      ],
+      [
+       "Why is the man unavailable on Friday afternoon?",
+       [
+        "He has a training session",
+        "He is on vacation",
+        "He has a dentist appointment",
+        "He is meeting another client"
+       ],
+       0,
+       "« I have a training session in the afternoon »."
+      ],
+      [
+       "What will the woman do next?",
+       [
+        "Reserve a room",
+        "Call the man's manager",
+        "Send an invoice",
+        "Print the slides"
+       ],
+       0,
+       "« book the small conference room » = réserver une salle."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "M",
+       "Excuse me, Karen, do you know how to change the toner in this printer?"
+      ],
+      [
+       "W",
+       "Yes, but we're out of toner. I ordered some yesterday. It should arrive this afternoon."
+      ],
+      [
+       "M",
+       "OK, I'll use the printer on the third floor for now."
+      ]
+     ],
+     "q": [
+      [
+       "What problem does the man have?",
+       [
+        "A printer needs toner",
+        "His computer is broken",
+        "He lost a document",
+        "A meeting was canceled"
+       ],
+       0,
+       "Il veut changer le toner, et il n'y en a plus."
+      ],
+      [
+       "What did the woman do yesterday?",
+       [
+        "She placed an order",
+        "She repaired a printer",
+        "She moved offices",
+        "She met a client"
+       ],
+       0,
+       "« I ordered some yesterday »."
+      ],
+      [
+       "What will the man do?",
+       [
+        "Use another printer",
+        "Wait for a technician",
+        "Go home early",
+        "Call a supplier"
+       ],
+       0,
+       "« I'll use the printer on the third floor »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "N",
+       "Good afternoon, passengers. The 3:40 express train to Brighton will depart from platform 6 instead of platform 2. Please note that the café car is closed today, but drinks and snacks are available at the kiosk near the entrance."
+      ]
+     ],
+     "q": [
+      [
+       "What has changed?",
+       [
+        "The platform number",
+        "The departure time",
+        "The destination",
+        "The ticket price"
+       ],
+       0,
+       "« from platform 6 instead of platform 2 »."
+      ],
+      [
+       "What is mentioned about the café car?",
+       [
+        "It is closed",
+        "It offers free drinks",
+        "It has moved to the front",
+        "It only accepts cash"
+       ],
+       0,
+       "« the café car is closed today »."
+      ],
+      [
+       "Where can passengers buy snacks?",
+       [
+        "At a kiosk",
+        "On the train",
+        "At platform 2",
+        "At the ticket office"
+       ],
+       0,
+       "« available at the kiosk near the entrance »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "N",
+       "Welcome aboard Coastal Airlines Flight 115 to Lisbon. Our flight time today will be two hours and fifteen minutes. In a few minutes, we will begin our meal service. Passengers who pre-ordered a special meal should press the call button."
+      ]
+     ],
+     "q": [
+      [
+       "Where is the flight going?",
+       [
+        "To Lisbon",
+        "To London",
+        "To Madrid",
+        "To Lima"
+       ],
+       0,
+       "« Flight 115 to Lisbon »."
+      ],
+      [
+       "How long will the flight take?",
+       [
+        "Two hours and fifteen minutes",
+        "One hour and fifteen minutes",
+        "Two hours",
+        "Three hours"
+       ],
+       0,
+       "« two hours and fifteen minutes »."
+      ],
+      [
+       "What should some passengers do?",
+       [
+        "Press a button",
+        "Change seats",
+        "Show their tickets",
+        "Turn off their phones"
+       ],
+       0,
+       "« should press the call button »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "W",
+       "Hello, I bought this coffee maker last week, but it stopped working."
+      ],
+      [
+       "M",
+       "I'm sorry to hear that. Do you have your receipt?"
+      ],
+      [
+       "W",
+       "Yes, here it is. Can I exchange it for a new one?"
+      ],
+      [
+       "M",
+       "Of course. Let me get one from the stockroom."
+      ]
+     ],
+     "q": [
+      [
+       "Why is the woman at the store?",
+       [
+        "To return a faulty product",
+        "To buy a gift",
+        "To apply for a job",
+        "To pick up an order"
+       ],
+       0,
+       "La machine ne marche plus : elle veut l'échanger."
+      ],
+      [
+       "What does the man ask for?",
+       [
+        "A receipt",
+        "An ID card",
+        "A phone number",
+        "A credit card"
+       ],
+       0,
+       "« Do you have your receipt? »."
+      ],
+      [
+       "What will the man do next?",
+       [
+        "Get an item from the stockroom",
+        "Call a technician",
+        "Give a refund",
+        "Repair the machine"
+       ],
+       0,
+       "« Let me get one from the stockroom »."
+      ]
+     ]
     }
    ],
    "p": [
@@ -3425,6 +6376,204 @@
      ],
      0,
      "would like to + base verbale."
+    ],
+    [
+     "Can you ___ the meeting room for 3 p.m.?",
+     [
+      "book",
+      "booking",
+      "booked",
+      "books"
+     ],
+     0,
+     "can + base verbale (book = réserver)."
+    ],
+    [
+     "I'll ___ you the agenda this afternoon.",
+     [
+      "e-mail",
+      "e-mailing",
+      "e-mailed",
+      "e-mails"
+     ],
+     0,
+     "will + base verbale."
+    ],
+    [
+     "The client wants to ___ the delivery date.",
+     [
+      "change",
+      "changing",
+      "changed",
+      "changes"
+     ],
+     0,
+     "want to + base verbale."
+    ],
+    [
+     "Let's ___ this issue at the next meeting.",
+     [
+      "discuss",
+      "discussion",
+      "discussing",
+      "discusses"
+     ],
+     0,
+     "Let's + base verbale."
+    ],
+    [
+     "I'm afraid Ms. Patel is ___ today.",
+     [
+      "out of the office",
+      "out the office",
+      "outside office",
+      "off of office"
+     ],
+     0,
+     "Expression : out of the office."
+    ],
+    [
+     "Could you ___ the figures before noon?",
+     [
+      "double-check",
+      "double-checking",
+      "double-checked",
+      "double-checks"
+     ],
+     0,
+     "could + base verbale."
+    ],
+    [
+     "We need to ___ the budget for next year.",
+     [
+      "finalize",
+      "final",
+      "finally",
+      "finality"
+     ],
+     0,
+     "need to + verbe (finalize)."
+    ],
+    [
+     "The printer on this floor is ___ again.",
+     [
+      "out of order",
+      "out order",
+      "off order",
+      "in order out"
+     ],
+     0,
+     "out of order = en panne."
+    ],
+    [
+     "The train to Lyon is ___ to depart at 6:15.",
+     [
+      "scheduled",
+      "schedule",
+      "scheduling",
+      "schedules"
+     ],
+     0,
+     "be scheduled to = être prévu pour."
+    ],
+    [
+     "Please keep your bags with you ___ all times.",
+     [
+      "at",
+      "in",
+      "on",
+      "for"
+     ],
+     0,
+     "Expression : at all times."
+    ],
+    [
+     "Flight 302 has been ___ due to bad weather.",
+     [
+      "canceled",
+      "cancel",
+      "canceling",
+      "cancels"
+     ],
+     0,
+     "Passif : has been canceled."
+    ],
+    [
+     "Passengers should proceed ___ gate 8.",
+     [
+      "to",
+      "at",
+      "in",
+      "on"
+     ],
+     0,
+     "proceed to = se rendre à."
+    ],
+    [
+     "We will be ___ shortly at Central Station.",
+     [
+      "arriving",
+      "arrive",
+      "arrived",
+      "arrival"
+     ],
+     0,
+     "Futur progressif : will be arriving."
+    ],
+    [
+     "Smoking is not ___ on board.",
+     [
+      "permitted",
+      "permit",
+      "permitting",
+      "permission"
+     ],
+     0,
+     "Passif : is not permitted."
+    ],
+    [
+     "Could I get a ___ for this sweater?",
+     [
+      "refund",
+      "refunded",
+      "refunding",
+      "refunds"
+     ],
+     0,
+     "Après « a » → nom (refund)."
+    ],
+    [
+     "This item is ___ sale until Sunday.",
+     [
+      "on",
+      "in",
+      "at",
+      "for"
+     ],
+     0,
+     "on sale = en promotion."
+    ],
+    [
+     "Do you have this shirt in a ___ size?",
+     [
+      "larger",
+      "large",
+      "largest",
+      "largely"
+     ],
+     0,
+     "Comparatif : a larger size."
+    ],
+    [
+     "Please keep your ___ in case you need to return it.",
+     [
+      "receipt",
+      "receive",
+      "recipe",
+      "receiver"
+     ],
+     0,
+     "receipt = ticket de caisse."
     ]
    ],
    "parts": [
@@ -3432,7 +6581,15 @@
      "t": "Conversations au travail",
      "c": [
       0,
-      4
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
      ],
      "v": [
       2,
@@ -3444,14 +6601,29 @@
      ],
      "cv": [
       1,
-      3
+      3,
+      5,
+      6
+     ],
+     "l": [
+      0,
+      1,
+      2,
+      3,
+      4
      ]
     },
     {
      "t": "Annonces en voyage",
      "c": [
       1,
-      2
+      2,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
      ],
      "v": [
       4
@@ -3460,14 +6632,26 @@
       0
      ],
      "cv": [
-      2
+      2,
+      7,
+      8
+     ],
+     "l": [
+      5,
+      6,
+      7,
+      8
      ]
     },
     {
      "t": "Clients et magasins",
      "c": [
       3,
-      5
+      5,
+      20,
+      21,
+      22,
+      23
      ],
      "v": [
       0,
@@ -3478,9 +6662,125 @@
      ],
      "cv": [
       0,
-      4
+      4,
+      9
+     ],
+     "l": [
+      9,
+      10,
+      11
      ]
     }
+   ],
+   "l": [
+    [
+     "Who's taking notes at today's meeting?",
+     [
+      "I think it's Linda's turn.",
+      "Take a note of it.",
+      "At ten o'clock."
+     ],
+     0
+    ],
+    [
+     "Can we postpone the call to next week?",
+     [
+      "Sure, how about Tuesday?",
+      "It was a long call.",
+      "Post it, please."
+     ],
+     0
+    ],
+    [
+     "Did you reserve a room for the interview?",
+     [
+      "Yes, room 5B at two.",
+      "I reserved a table.",
+      "The interview went well."
+     ],
+     0
+    ],
+    [
+     "Why is the project behind schedule?",
+     [
+      "We're waiting for the client's feedback.",
+      "Behind the building.",
+      "The schedule is on the wall."
+     ],
+     0
+    ],
+    [
+     "Where did you put the contracts?",
+     [
+      "In the folder on your desk.",
+      "I put on a jacket.",
+      "Contracts are signed."
+     ],
+     0
+    ],
+    [
+     "Has the 7:30 train left yet?",
+     [
+      "No, it's running ten minutes late.",
+      "I left it on the train.",
+      "At half past seven."
+     ],
+     0
+    ],
+    [
+     "Where do I check in for Flight 46?",
+     [
+      "At counter D, over there.",
+      "Check your e-mail.",
+      "It's a long flight."
+     ],
+     0
+    ],
+    [
+     "Is there a later bus to the airport?",
+     [
+      "Yes, there's one at midnight.",
+      "The airport is large.",
+      "I'm later than usual."
+     ],
+     0
+    ],
+    [
+     "How long is the delay?",
+     [
+      "About forty minutes.",
+      "A long day.",
+      "Since yesterday."
+     ],
+     0
+    ],
+    [
+     "Do you accept returns without a receipt?",
+     [
+      "Only for store credit.",
+      "I received it yesterday.",
+      "Yes, return the call."
+     ],
+     0
+    ],
+    [
+     "Is this jacket available in blue?",
+     [
+      "Let me check in the back.",
+      "It's a blue sky.",
+      "Available on Monday."
+     ],
+     0
+    ],
+    [
+     "How much is the delivery fee?",
+     [
+      "It's free for orders over fifty dollars.",
+      "Delivered on time.",
+      "Feel free."
+     ],
+     0
+    ]
    ]
   },
   {
@@ -3576,6 +6876,182 @@
      ],
      0,
      "be required to = être tenu de."
+    ],
+    [
+     "The product is popular. ___, we have increased production.",
+     [
+      "As a result",
+      "However",
+      "Although",
+      "Instead"
+     ],
+     0,
+     "Conséquence → As a result."
+    ],
+    [
+     "We usually reply within a day. ___, during holidays it may take longer.",
+     [
+      "However",
+      "Therefore",
+      "For example",
+      "Similarly"
+     ],
+     0,
+     "Opposition → However."
+    ],
+    [
+     "Several items are available, ___ notebooks and pens.",
+     [
+      "such as",
+      "for instance of",
+      "like as",
+      "including of"
+     ],
+     0,
+     "such as = comme, par exemple."
+    ],
+    [
+     "___, we would like to thank all our volunteers.",
+     [
+      "Finally",
+      "Meanwhile",
+      "Otherwise",
+      "Instead"
+     ],
+     0,
+     "Pour conclure → Finally."
+    ],
+    [
+     "Please arrive early. ___, you may not get a seat.",
+     [
+      "Otherwise",
+      "Therefore",
+      "Moreover",
+      "Likewise"
+     ],
+     0,
+     "Otherwise = sinon."
+    ],
+    [
+     "The hotel has a pool. ___, it offers free parking.",
+     [
+      "In addition",
+      "However",
+      "Instead",
+      "Otherwise"
+     ],
+     0,
+     "Ajout → In addition."
+    ],
+    [
+     "The road is closed. ___, buses will take another route.",
+     [
+      "Consequently",
+      "Nevertheless",
+      "Similarly",
+      "In contrast"
+     ],
+     0,
+     "Conséquence → Consequently."
+    ],
+    [
+     "We are writing to ___ you of a change in our schedule.",
+     [
+      "inform",
+      "information",
+      "informative",
+      "informed"
+     ],
+     0,
+     "write to + verbe : inform (informer)."
+    ],
+    [
+     "Please do not hesitate ___ us.",
+     [
+      "to contact",
+      "contacting",
+      "contact",
+      "contacted"
+     ],
+     0,
+     "hesitate to + base verbale."
+    ],
+    [
+     "___ is a copy of the agreement.",
+     [
+      "Enclosed",
+      "Enclose",
+      "Enclosing",
+      "Encloses"
+     ],
+     0,
+     "« Enclosed is… » = Ci-joint…"
+    ],
+    [
+     "Thank you for your ___ in our company.",
+     [
+      "interest",
+      "interesting",
+      "interested",
+      "interests in"
+     ],
+     0,
+     "Après « your » → nom (interest)."
+    ],
+    [
+     "We apologize ___ any inconvenience.",
+     [
+      "for",
+      "of",
+      "about of",
+      "to"
+     ],
+     0,
+     "apologize for."
+    ],
+    [
+     "The library will be ___ closed for repairs.",
+     [
+      "temporarily",
+      "temporary",
+      "temporal",
+      "tempo"
+     ],
+     0,
+     "Adverbe avant le participe (closed)."
+    ],
+    [
+     "Participants will receive a certificate of ___.",
+     [
+      "completion",
+      "complete",
+      "completely",
+      "completed"
+     ],
+     0,
+     "Après « of » → nom."
+    ],
+    [
+     "The museum attracts thousands of visitors ___.",
+     [
+      "annually",
+      "annual",
+      "annuity",
+      "annualize"
+     ],
+     0,
+     "Fin de phrase, modifie le verbe → adverbe."
+    ],
+    [
+     "We appreciate your ___ during the renovation.",
+     [
+      "patience",
+      "patient",
+      "patiently",
+      "patients"
+     ],
+     0,
+     "Après « your » → nom (patience)."
     ]
    ],
    "l": [
@@ -3603,6 +7079,87 @@
       "The address was incorrect.",
       "By express mail.",
       "It was shipped yesterday."
+     ],
+     0
+    ],
+    [
+     "Did you read the memo about the new policy?",
+     [
+      "Yes, it starts next month.",
+      "I read a book.",
+      "The police arrived."
+     ],
+     0
+    ],
+    [
+     "Should I send the letter now or wait?",
+     [
+      "Send it now, please.",
+      "Wait a minute.",
+      "A long letter."
+     ],
+     0
+    ],
+    [
+     "Why was the newsletter late this month?",
+     [
+      "The printer broke down.",
+      "It's a monthly newsletter.",
+      "Late in the month."
+     ],
+     0
+    ],
+    [
+     "Who wrote the article in the company magazine?",
+     [
+      "Someone from the HR team.",
+      "I read the article.",
+      "A magazine rack."
+     ],
+     0
+    ],
+    [
+     "Has the welcome letter been sent to the new staff?",
+     [
+      "Yes, on Monday.",
+      "Welcome to the team.",
+      "A new staff room."
+     ],
+     0
+    ],
+    [
+     "Who should I address the letter to?",
+     [
+      "To the hiring manager.",
+      "My address is on the card.",
+      "Next to the letterbox."
+     ],
+     0
+    ],
+    [
+     "Can you proofread my e-mail?",
+     [
+      "Sure, send it over.",
+      "It's waterproof.",
+      "I read it yesterday."
+     ],
+     0
+    ],
+    [
+     "Will the library be open on Saturday?",
+     [
+      "Only in the morning.",
+      "I'm opening a book.",
+      "It's a public library."
+     ],
+     0
+    ],
+    [
+     "Why is the museum closed today?",
+     [
+      "It's closed every Monday.",
+      "Close to the museum.",
+      "Yes, it's a big museum."
      ],
      0
     ]
@@ -3658,7 +7215,14 @@
      "c": [
       0,
       1,
-      3
+      3,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
      ],
      "v": [
       0
@@ -3667,7 +7231,11 @@
       0
      ],
      "l": [
-      1
+      1,
+      3,
+      4,
+      5,
+      6
      ],
      "g": [
       "en.l.opp",
@@ -3680,7 +7248,12 @@
      "c": [
       4,
       6,
-      7
+      7,
+      15,
+      16,
+      17,
+      18,
+      19
      ],
      "v": [
       1,
@@ -3691,7 +7264,10 @@
       1
      ],
      "l": [
-      0
+      0,
+      7,
+      8,
+      9
      ],
      "g": []
     },
@@ -3699,7 +7275,11 @@
      "t": "Le bon mot dans le texte",
      "c": [
       2,
-      5
+      5,
+      20,
+      21,
+      22,
+      23
      ],
      "v": [
       2,
@@ -3709,7 +7289,9 @@
       2
      ],
      "l": [
-      2
+      2,
+      10,
+      11
      ],
      "g": []
     }
@@ -3903,6 +7485,116 @@
      ],
      0,
      "remember + to + verbe = penser à faire."
+    ],
+    [
+     "We should consider ___ another supplier.",
+     [
+      "using",
+      "to use",
+      "use",
+      "used"
+     ],
+     0,
+     "consider + -ing."
+    ],
+    [
+     "Mr. Ross finished ___ the contract this morning.",
+     [
+      "reviewing",
+      "to review",
+      "review",
+      "reviewed"
+     ],
+     0,
+     "finish + -ing."
+    ],
+    [
+     "Do you mind ___ the window?",
+     [
+      "opening",
+      "to open",
+      "open",
+      "opened"
+     ],
+     0,
+     "mind + -ing."
+    ],
+    [
+     "The company decided ___ its prices.",
+     [
+      "to lower",
+      "lowering",
+      "lower",
+      "lowered"
+     ],
+     0,
+     "decide + to + base verbale."
+    ],
+    [
+     "She hopes ___ the project by June.",
+     [
+      "to complete",
+      "completing",
+      "complete",
+      "completed"
+     ],
+     0,
+     "hope + to."
+    ],
+    [
+     "The manager refused ___ the request.",
+     [
+      "to approve",
+      "approving",
+      "approve",
+      "approved"
+     ],
+     0,
+     "refuse + to."
+    ],
+    [
+     "We expect ___ the results next week.",
+     [
+      "to receive",
+      "receiving",
+      "receive",
+      "received"
+     ],
+     0,
+     "expect + to."
+    ],
+    [
+     "The doctor recommended that he ___ more rest.",
+     [
+      "get",
+      "gets",
+      "got",
+      "getting"
+     ],
+     0,
+     "recommend that + base verbale (subjonctif)."
+    ],
+    [
+     "It is important that the report ___ accurate.",
+     [
+      "be",
+      "is",
+      "was",
+      "being"
+     ],
+     0,
+     "It is important that + be."
+    ],
+    [
+     "They requested that the meeting ___ postponed.",
+     [
+      "be",
+      "is",
+      "was",
+      "been"
+     ],
+     0,
+     "request that + be + participe."
     ]
    ],
    "l": [
@@ -3941,6 +7633,78 @@
       "At the consulting firm."
      ],
      0
+    ],
+    [
+     "Have you finished writing the report?",
+     [
+      "Almost, I just need to add the charts.",
+      "I write with a pen.",
+      "Yes, finish it."
+     ],
+     0
+    ],
+    [
+     "Would you mind closing the door?",
+     [
+      "Not at all.",
+      "It's closed on Sunday.",
+      "Mind the gap."
+     ],
+     0
+    ],
+    [
+     "Do you enjoy working from home?",
+     [
+      "Yes, but I miss my colleagues.",
+      "I work at home.",
+      "The home page."
+     ],
+     0
+    ],
+    [
+     "Did they agree to the new terms?",
+     [
+      "Yes, they signed this morning.",
+      "The terms are long.",
+      "I agree with you."
+     ],
+     0
+    ],
+    [
+     "What do you plan to do after the conference?",
+     [
+      "I'm going to visit the city.",
+      "It was a good plan.",
+      "After lunch."
+     ],
+     0
+    ],
+    [
+     "Do you want to join us for dinner?",
+     [
+      "I'd love to, thanks.",
+      "Join the two parts.",
+      "Dinner is at seven."
+     ],
+     0
+    ],
+    [
+     "What did the manager suggest?",
+     [
+      "That we hire a temporary assistant.",
+      "A suggestion box.",
+      "He suggested it yesterday."
+     ],
+     0
+    ],
+    [
+     "Is it necessary that everyone attend?",
+     [
+      "Only the team leaders.",
+      "Yes, it's attended.",
+      "Necessary documents."
+     ],
+     0
     ]
    ],
    "parts": [
@@ -3951,7 +7715,10 @@
       2,
       6,
       8,
-      10
+      10,
+      12,
+      13,
+      14
      ],
      "v": [
       0,
@@ -3963,7 +7730,10 @@
      ],
      "l": [
       1,
-      2
+      2,
+      4,
+      5,
+      6
      ],
      "g": [
       "en.p.verb"
@@ -3975,7 +7745,11 @@
       3,
       5,
       9,
-      11
+      11,
+      15,
+      16,
+      17,
+      18
      ],
      "v": [
       2,
@@ -3985,7 +7759,10 @@
       2
      ],
      "l": [
-      0
+      0,
+      7,
+      8,
+      9
      ],
      "g": []
     },
@@ -3994,7 +7771,10 @@
      "c": [
       1,
       4,
-      7
+      7,
+      19,
+      20,
+      21
      ],
      "v": [
       4,
@@ -4004,7 +7784,9 @@
       1
      ],
      "l": [
-      3
+      3,
+      10,
+      11
      ],
      "g": []
     }
@@ -4210,6 +7992,160 @@
      ],
      0,
      "unless = à moins que (sauf si)."
+    ],
+    [
+     "___ the office is small, it is very well organized.",
+     [
+      "Although",
+      "Despite",
+      "Because of",
+      "In spite"
+     ],
+     0,
+     "Proposition → Although."
+    ],
+    [
+     "The event was postponed ___ the speaker was ill.",
+     [
+      "because",
+      "because of",
+      "despite",
+      "although"
+     ],
+     0,
+     "Proposition (sujet + verbe) → because."
+    ],
+    [
+     "___ the delay, the shipment arrived in good condition.",
+     [
+      "Despite",
+      "Although",
+      "Because",
+      "Even though"
+     ],
+     0,
+     "Nom → Despite."
+    ],
+    [
+     "We will proceed ___ the client approves the plan.",
+     [
+      "once",
+      "despite",
+      "although",
+      "due to"
+     ],
+     0,
+     "once = dès que."
+    ],
+    [
+     "___ you need help, call the front desk.",
+     [
+      "If",
+      "Despite",
+      "Unless of",
+      "Although"
+     ],
+     0,
+     "Condition → If."
+    ],
+    [
+     "This is the hotel ___ we stayed last year.",
+     [
+      "where",
+      "which",
+      "who",
+      "whose"
+     ],
+     0,
+     "Lieu → where."
+    ],
+    [
+     "The day ___ the store opened, it was very busy.",
+     [
+      "when",
+      "which",
+      "where",
+      "who"
+     ],
+     0,
+     "Moment → when."
+    ],
+    [
+     "The laptop ___ I bought last week is already broken.",
+     [
+      "that",
+      "who",
+      "whose",
+      "where"
+     ],
+     0,
+     "Chose, complément → that."
+    ],
+    [
+     "Ms. Ota, ___ joined us in May, speaks four languages.",
+     [
+      "who",
+      "which",
+      "whose",
+      "whom"
+     ],
+     0,
+     "Personne, sujet → who."
+    ],
+    [
+     "___ of the participants received a gift.",
+     [
+      "Each",
+      "Every",
+      "Much",
+      "A little"
+     ],
+     0,
+     "Each of + pluriel."
+    ],
+    [
+     "There isn't ___ coffee left.",
+     [
+      "much",
+      "many",
+      "few",
+      "a few"
+     ],
+     0,
+     "Indénombrable en négation → much."
+    ],
+    [
+     "___ the sales team and the support team will attend.",
+     [
+      "Both",
+      "Either",
+      "Neither",
+      "Each"
+     ],
+     0,
+     "Both … and."
+    ],
+    [
+     "We received ___ applications for the position.",
+     [
+      "many",
+      "much",
+      "a little",
+      "little"
+     ],
+     0,
+     "Dénombrable pluriel → many."
+    ],
+    [
+     "You can choose ___ the morning or the afternoon session.",
+     [
+      "either",
+      "neither",
+      "both",
+      "each"
+     ],
+     0,
+     "either … or."
     ]
    ],
    "l": [
@@ -4248,6 +8184,87 @@
       "Yes, we finished."
      ],
      0
+    ],
+    [
+     "Why did the price go up?",
+     [
+      "Because shipping costs increased.",
+      "The price is up there.",
+      "It went up the stairs."
+     ],
+     0
+    ],
+    [
+     "Will the event take place even if it rains?",
+     [
+      "Yes, it's indoors.",
+      "It rained last week.",
+      "It's an event planner."
+     ],
+     0
+    ],
+    [
+     "Should we wait for Tom or start now?",
+     [
+      "Let's start, he'll catch up.",
+      "Wait here.",
+      "Tom is waiting."
+     ],
+     0
+    ],
+    [
+     "Which client called this morning?",
+     [
+      "The one from Madrid.",
+      "I called him back.",
+      "This morning at nine."
+     ],
+     0
+    ],
+    [
+     "Is that the restaurant where you had your interview lunch?",
+     [
+      "Yes, the food was excellent.",
+      "The interview is at noon.",
+      "I had a sandwich."
+     ],
+     0
+    ],
+    [
+     "Who's the person whose car is blocking the gate?",
+     [
+      "I think it belongs to a visitor.",
+      "The gate is open.",
+      "Car keys."
+     ],
+     0
+    ],
+    [
+     "Are there any chairs left?",
+     [
+      "Only a few.",
+      "I left the chairs.",
+      "The chair of the board."
+     ],
+     0
+    ],
+    [
+     "How many people signed up?",
+     [
+      "About thirty so far.",
+      "Sign here, please.",
+      "Many thanks."
+     ],
+     0
+    ],
+    [
+     "Can either of you work on Saturday?",
+     [
+      "I can, but only in the morning.",
+      "Neither of them.",
+      "Saturday is the weekend."
+     ],
+     0
     ]
    ],
    "parts": [
@@ -4258,7 +8275,12 @@
       1,
       2,
       11,
-      12
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
      ],
      "v": [
       0,
@@ -4272,7 +8294,10 @@
      ],
      "l": [
       0,
-      3
+      3,
+      4,
+      5,
+      6
      ],
      "g": [
       "en.l.opp",
@@ -4284,13 +8309,20 @@
      "c": [
       3,
       4,
-      5
+      5,
+      18,
+      19,
+      20,
+      21
      ],
      "p": [
       3
      ],
      "l": [
-      2
+      2,
+      7,
+      8,
+      9
      ],
      "g": [],
      "v": []
@@ -4302,7 +8334,12 @@
       7,
       8,
       9,
-      10
+      10,
+      22,
+      23,
+      24,
+      25,
+      26
      ],
      "v": [
       1,
@@ -4312,7 +8349,10 @@
       2
      ],
      "l": [
-      1
+      1,
+      10,
+      11,
+      12
      ],
      "g": []
     }
@@ -4543,6 +8583,226 @@
        "« should be released by Friday »."
       ]
      ]
+    },
+    {
+     "d": [
+      [
+       "M",
+       "Sarah, Lucas, do you have a minute? The client wants the website ready a week earlier."
+      ],
+      [
+       "W",
+       "A week earlier? We'd need another developer for that."
+      ],
+      [
+       "M",
+       "I know. Lucas, could you check if someone from the mobile team is free?"
+      ],
+      [
+       "M",
+       "Sure, I'll ask their manager right after this meeting."
+      ]
+     ],
+     "q": [
+      [
+       "What is the problem?",
+       [
+        "A deadline has been moved up",
+        "A client canceled an order",
+        "A website has crashed",
+        "A developer has quit"
+       ],
+       0,
+       "Le client veut le site une semaine plus tôt."
+      ],
+      [
+       "What does the woman say they need?",
+       [
+        "Another developer",
+        "A bigger budget",
+        "A new client",
+        "More time"
+       ],
+       0,
+       "« We'd need another developer »."
+      ],
+      [
+       "What will Lucas do after the meeting?",
+       [
+        "Talk to a manager",
+        "Call the client",
+        "Update the website",
+        "Write a report"
+       ],
+       0,
+       "« I'll ask their manager »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "W",
+       "Tom, the printer company called. The brochures won't be ready until Thursday."
+      ],
+      [
+       "M",
+       "But the trade fair starts on Wednesday!"
+      ],
+      [
+       "W",
+       "I know. They offered express delivery from another site, but it costs two hundred dollars more."
+      ],
+      [
+       "M",
+       "Let's pay for it. We can't go to the fair without brochures."
+      ]
+     ],
+     "q": [
+      [
+       "What are the speakers preparing for?",
+       [
+        "A trade fair",
+        "A job interview",
+        "A product launch party",
+        "A board meeting"
+       ],
+       0,
+       "« the trade fair starts on Wednesday »."
+      ],
+      [
+       "What is the problem?",
+       [
+        "Some brochures will be late",
+        "The fair has been canceled",
+        "A booth is too small",
+        "A printer is broken"
+       ],
+       0,
+       "Les brochures ne seront prêtes que jeudi."
+      ],
+      [
+       "What does the man decide to do?",
+       [
+        "Pay for faster delivery",
+        "Print the brochures himself",
+        "Skip the trade fair",
+        "Call another company"
+       ],
+       0,
+       "« Let's pay for it » (la livraison express)."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "M",
+       "Hello, I received my order today, but the lamp is broken."
+      ],
+      [
+       "W",
+       "I'm very sorry. Can you send us a photo of the damage?"
+      ],
+      [
+       "M",
+       "Sure. Will I have to send the lamp back?"
+      ],
+      [
+       "W",
+       "No, just keep it. We'll ship a new one as soon as we receive your photo."
+      ]
+     ],
+     "q": [
+      [
+       "Why is the man calling?",
+       [
+        "A product arrived broken",
+        "An order is late",
+        "He was charged twice",
+        "He wants to cancel"
+       ],
+       0,
+       "« the lamp is broken »."
+      ],
+      [
+       "What does the woman ask for?",
+       [
+        "A photo",
+        "A receipt",
+        "A tracking number",
+        "An address"
+       ],
+       0,
+       "« send us a photo of the damage »."
+      ],
+      [
+       "What will the company do?",
+       [
+        "Send a new lamp",
+        "Refund the shipping",
+        "Repair the lamp",
+        "Call a courier"
+       ],
+       0,
+       "« We'll ship a new one »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "W",
+       "Hi, I'm calling about shipment 4471. It was supposed to arrive on Monday."
+      ],
+      [
+       "M",
+       "Let me check. It's being held at customs because a form is missing."
+      ],
+      [
+       "W",
+       "Which form?"
+      ],
+      [
+       "M",
+       "The import declaration. If you e-mail it to us today, it should be delivered by Thursday."
+      ]
+     ],
+     "q": [
+      [
+       "Why is the shipment delayed?",
+       [
+        "A document is missing",
+        "The truck broke down",
+        "The address is wrong",
+        "It was sent to another city"
+       ],
+       0,
+       "« a form is missing »."
+      ],
+      [
+       "What should the woman do?",
+       [
+        "E-mail a form",
+        "Pay a fee",
+        "Call the driver",
+        "Visit the office"
+       ],
+       0,
+       "« If you e-mail it to us today… »."
+      ],
+      [
+       "When could the shipment be delivered?",
+       [
+        "By Thursday",
+        "On Monday",
+        "Today",
+        "Next week"
+       ],
+       0,
+       "« it should be delivered by Thursday »."
+      ]
+     ]
     }
    ],
    "p": [
@@ -4658,6 +8918,204 @@
      ],
      0,
      "be held at customs = être retenu à la douane."
+    ],
+    [
+     "We need to ___ the deadline by two days.",
+     [
+      "extend",
+      "extent",
+      "extensive",
+      "extension"
+     ],
+     0,
+     "need to + verbe (extend = prolonger)."
+    ],
+    [
+     "The design team is running ___ schedule.",
+     [
+      "behind",
+      "after",
+      "late",
+      "under"
+     ],
+     0,
+     "behind schedule = en retard."
+    ],
+    [
+     "Can we ___ up a call for Thursday?",
+     [
+      "set",
+      "put",
+      "take",
+      "make"
+     ],
+     0,
+     "set up a call = organiser un appel."
+    ],
+    [
+     "The launch has been pushed ___ to next month.",
+     [
+      "back",
+      "behind",
+      "after",
+      "off of"
+     ],
+     0,
+     "push back = repousser."
+    ],
+    [
+     "Let's ___ the tasks between the three of us.",
+     [
+      "divide",
+      "division",
+      "divided",
+      "dividing"
+     ],
+     0,
+     "Let's + base verbale."
+    ],
+    [
+     "I'll ___ you posted on the progress.",
+     [
+      "keep",
+      "let",
+      "hold",
+      "stay"
+     ],
+     0,
+     "keep someone posted = tenir informé."
+    ],
+    [
+     "We're ___ track to finish by Friday.",
+     [
+      "on",
+      "in",
+      "at",
+      "by"
+     ],
+     0,
+     "on track = dans les temps."
+    ],
+    [
+     "The client asked for the files ___ the end of the day.",
+     [
+      "by",
+      "until",
+      "since",
+      "for"
+     ],
+     0,
+     "Date limite → by."
+    ],
+    [
+     "I'm calling to ___ about my order.",
+     [
+      "complain",
+      "complaint",
+      "complaining",
+      "complained"
+     ],
+     0,
+     "call to + base verbale."
+    ],
+    [
+     "The item arrived ___.",
+     [
+      "damaged",
+      "damaging",
+      "damage",
+      "damages"
+     ],
+     0,
+     "Adjectif/participe : damaged (abîmé)."
+    ],
+    [
+     "We will send you a ___ free of charge.",
+     [
+      "replacement",
+      "replace",
+      "replaced",
+      "replaceable"
+     ],
+     0,
+     "Après « a » → nom."
+    ],
+    [
+     "Could you ___ me your order number?",
+     [
+      "give",
+      "giving",
+      "given",
+      "gave"
+     ],
+     0,
+     "could + base verbale."
+    ],
+    [
+     "The refund will be ___ to your credit card.",
+     [
+      "credited",
+      "credit",
+      "crediting",
+      "credits"
+     ],
+     0,
+     "Passif : will be credited."
+    ],
+    [
+     "I'm sorry for the ___ this has caused.",
+     [
+      "inconvenience",
+      "inconvenient",
+      "inconveniently",
+      "convenience"
+     ],
+     0,
+     "Après « the » → nom."
+    ],
+    [
+     "The package is ___ in customs.",
+     [
+      "held",
+      "holding",
+      "hold",
+      "holds"
+     ],
+     0,
+     "Passif : is held."
+    ],
+    [
+     "Please fill out the customs ___ form.",
+     [
+      "declaration",
+      "declare",
+      "declared",
+      "declaring"
+     ],
+     0,
+     "Nom composé : customs declaration form."
+    ],
+    [
+     "The goods will be shipped ___ sea.",
+     [
+      "by",
+      "with",
+      "on",
+      "through"
+     ],
+     0,
+     "by sea = par mer."
+    ],
+    [
+     "Delivery usually takes three to five ___ days.",
+     [
+      "business",
+      "busy",
+      "businesses",
+      "busily"
+     ],
+     0,
+     "business days = jours ouvrés."
     ]
    ],
    "l": [
@@ -4696,6 +9154,78 @@
       "At their office."
      ],
      0
+    ],
+    [
+     "Can we finish the slides by tomorrow?",
+     [
+      "Only if we work late tonight.",
+      "Slide the door.",
+      "Tomorrow is Friday."
+     ],
+     0
+    ],
+    [
+     "Who's going to tell the client about the delay?",
+     [
+      "I'll call her this afternoon.",
+      "Tell me later.",
+      "The client is happy."
+     ],
+     0
+    ],
+    [
+     "When is the project due?",
+     [
+      "At the end of the month.",
+      "Due to the weather.",
+      "It's a new project."
+     ],
+     0
+    ],
+    [
+     "Should we hire extra help?",
+     [
+      "Let's ask the manager first.",
+      "Help yourself.",
+      "Higher, please."
+     ],
+     0
+    ],
+    [
+     "What's wrong with the order?",
+     [
+      "Two items are missing.",
+      "It's in the right order.",
+      "Order a pizza."
+     ],
+     0
+    ],
+    [
+     "Would you prefer a refund or an exchange?",
+     [
+      "A refund, please.",
+      "Yes, I prefer it.",
+      "The exchange rate."
+     ],
+     0
+    ],
+    [
+     "When will I get my money back?",
+     [
+      "Within five business days.",
+      "Back in the office.",
+      "It's my money."
+     ],
+     0
+    ],
+    [
+     "Has the shipment cleared customs?",
+     [
+      "Yes, it'll arrive tomorrow.",
+      "Clear the table.",
+      "It's a custom."
+     ],
+     0
     ]
    ],
    "parts": [
@@ -4703,7 +9233,15 @@
      "t": "Planning et délais",
      "c": [
       0,
-      1
+      1,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
      ],
      "v": [
       0,
@@ -4713,18 +9251,30 @@
       0
      ],
      "l": [
-      2
+      2,
+      4,
+      5,
+      6,
+      7
      ],
      "cv": [
       0,
-      1
+      1,
+      4,
+      5
      ]
     },
     {
      "t": "Retours et réclamations",
      "c": [
       3,
-      4
+      4,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
      ],
      "v": [
       1,
@@ -4734,17 +9284,25 @@
       2
      ],
      "l": [
-      1
+      1,
+      8,
+      9,
+      10
      ],
      "cv": [
-      2
+      2,
+      6
      ]
     },
     {
      "t": "Livraisons et douane",
      "c": [
       2,
-      5
+      5,
+      20,
+      21,
+      22,
+      23
      ],
      "v": [
       3,
@@ -4755,10 +9313,12 @@
      ],
      "l": [
       0,
-      3
+      3,
+      11
      ],
      "cv": [
-      3
+      3,
+      7
      ]
     }
    ]
@@ -4940,6 +9500,167 @@
        "« get your first three months free »."
       ]
      ]
+    },
+    {
+     "d": [
+      [
+       "N",
+       "Attention, please. Passengers on Flight 640 to Berlin, please note that boarding will begin twenty minutes late due to the late arrival of the incoming aircraft. In the meantime, passengers who need assistance are invited to come to the desk now."
+      ]
+     ],
+     "q": [
+      [
+       "Why is boarding delayed?",
+       [
+        "The plane arrived late",
+        "Bad weather",
+        "A strike",
+        "A technical check"
+       ],
+       0,
+       "« due to the late arrival of the incoming aircraft »."
+      ],
+      [
+       "How long is the delay?",
+       [
+        "Twenty minutes",
+        "Forty minutes",
+        "One hour",
+        "Two hours"
+       ],
+       0,
+       "« twenty minutes late »."
+      ],
+      [
+       "Who is asked to come to the desk?",
+       [
+        "Passengers who need assistance",
+        "All passengers",
+        "Passengers with pets",
+        "First-class passengers"
+       ],
+       0,
+       "« passengers who need assistance »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "N",
+       "Good morning and welcome to Pine Airport. Please note that the parking lot at Terminal A is full. Drivers should use the long-term parking lot, where a free shuttle bus leaves every ten minutes."
+      ]
+     ],
+     "q": [
+      [
+       "What problem is mentioned?",
+       [
+        "A parking lot is full",
+        "A terminal is closed",
+        "A flight is canceled",
+        "A shuttle is broken"
+       ],
+       0,
+       "« the parking lot at Terminal A is full »."
+      ],
+      [
+       "How often does the shuttle leave?",
+       [
+        "Every ten minutes",
+        "Every five minutes",
+        "Every hour",
+        "Twice a day"
+       ],
+       0,
+       "« every ten minutes »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "N",
+       "Hi, this is Mia from Green Garden Supplies. I'm calling about your order of ten flower pots. Unfortunately, the blue ones are out of stock. We can send white ones instead, or you can wait two weeks. Please call me back at 555-0193."
+      ]
+     ],
+     "q": [
+      [
+       "Why is the speaker calling?",
+       [
+        "To report a problem with an order",
+        "To confirm a delivery time",
+        "To offer a discount",
+        "To ask for payment"
+       ],
+       0,
+       "Les pots bleus sont en rupture."
+      ],
+      [
+       "What does the speaker offer?",
+       [
+        "A different color",
+        "A refund",
+        "Free delivery",
+        "A larger size"
+       ],
+       0,
+       "« We can send white ones instead »."
+      ],
+      [
+       "How long would the listener have to wait?",
+       [
+        "Two weeks",
+        "Two days",
+        "One month",
+        "Ten days"
+       ],
+       0,
+       "« you can wait two weeks »."
+      ]
+     ]
+    },
+    {
+     "d": [
+      [
+       "N",
+       "Welcome to the Riverside Chocolate Factory. Our tour lasts about an hour. First, we'll see how cocoa beans are roasted. At the end, you'll be able to taste our chocolates in the gift shop. Please don't touch any of the machines."
+      ]
+     ],
+     "q": [
+      [
+       "Where is the tour taking place?",
+       [
+        "At a factory",
+        "At a museum",
+        "At a farm",
+        "At a hotel"
+       ],
+       0,
+       "« Riverside Chocolate Factory »."
+      ],
+      [
+       "What will happen at the end of the tour?",
+       [
+        "Visitors will taste products",
+        "Visitors will meet the owner",
+        "A film will be shown",
+        "Photos will be taken"
+       ],
+       0,
+       "« you'll be able to taste our chocolates »."
+      ],
+      [
+       "What are visitors asked not to do?",
+       [
+        "Touch the machines",
+        "Take photos",
+        "Eat in the shop",
+        "Leave the group"
+       ],
+       0,
+       "« Please don't touch any of the machines »."
+      ]
+     ]
     }
    ],
    "p": [
@@ -5055,6 +9776,193 @@
      ],
      0,
      "be allowed to = être autorisé à (passif)."
+    ],
+    [
+     "Passengers ___ for Flight 77 should go to gate 14.",
+     [
+      "traveling",
+      "travel",
+      "traveled",
+      "travels"
+     ],
+     0,
+     "Participe présent : passengers traveling (qui voyagent)."
+    ],
+    [
+     "Please have your boarding pass ___.",
+     [
+      "ready",
+      "readily",
+      "readiness",
+      "readied"
+     ],
+     0,
+     "have something ready = avoir prêt."
+    ],
+    [
+     "The flight to Rome is now ___.",
+     [
+      "boarding",
+      "board",
+      "boarded",
+      "boards"
+     ],
+     0,
+     "is now boarding = embarquement en cours."
+    ],
+    [
+     "Liquids must be placed in a ___ plastic bag.",
+     [
+      "clear",
+      "clearly",
+      "clearance",
+      "clearing"
+     ],
+     0,
+     "Adjectif : clear (transparent)."
+    ],
+    [
+     "All bags must be ___ at all times.",
+     [
+      "attended",
+      "attending",
+      "attend",
+      "attendance"
+     ],
+     0,
+     "Passif : be attended (surveillé)."
+    ],
+    [
+     "This is the ___ call for Flight 52.",
+     [
+      "final",
+      "finally",
+      "finalize",
+      "finality"
+     ],
+     0,
+     "Adjectif : final call (dernier appel)."
+    ],
+    [
+     "We are ___ a short delay.",
+     [
+      "experiencing",
+      "experience",
+      "experienced",
+      "experiences"
+     ],
+     0,
+     "Présent progressif : are experiencing."
+    ],
+    [
+     "Please remain ___ until the plane stops.",
+     [
+      "seated",
+      "seating",
+      "seat",
+      "seats"
+     ],
+     0,
+     "remain + adjectif/participe (seated)."
+    ],
+    [
+     "This message is ___ Ms. Grant.",
+     [
+      "for",
+      "to",
+      "at",
+      "on"
+     ],
+     0,
+     "a message for someone."
+    ],
+    [
+     "Please call me back at your earliest ___.",
+     [
+      "convenience",
+      "convenient",
+      "conveniently",
+      "convene"
+     ],
+     0,
+     "Expression : at your earliest convenience."
+    ],
+    [
+     "I'm calling to ___ your appointment for Tuesday.",
+     [
+      "confirm",
+      "confirmation",
+      "confirmed",
+      "confirming"
+     ],
+     0,
+     "call to + base verbale."
+    ],
+    [
+     "Our office is ___ closed.",
+     [
+      "currently",
+      "current",
+      "currency",
+      "currents"
+     ],
+     0,
+     "Adverbe : currently (actuellement)."
+    ],
+    [
+     "Please leave your name ___ a short message.",
+     [
+      "and",
+      "or",
+      "but",
+      "so"
+     ],
+     0,
+     "Ajout → and."
+    ],
+    [
+     "The tour will ___ at the main entrance.",
+     [
+      "begin",
+      "beginning",
+      "began",
+      "begun"
+     ],
+     0,
+     "will + base verbale."
+    ],
+    [
+     "Please stay ___ the group during the visit.",
+     [
+      "with",
+      "by",
+      "at",
+      "to"
+     ],
+     0,
+     "stay with = rester avec."
+    ],
+    [
+     "Our new store offers a wide ___ of products.",
+     [
+      "range",
+      "ranging",
+      "ranged",
+      "ranges"
+     ],
+     0,
+     "a wide range of = un large choix de."
+    ],
+    [
+     "Tickets can be ___ online.",
+     [
+      "purchased",
+      "purchase",
+      "purchasing",
+      "purchases"
+     ],
+     0,
+     "Passif : can be purchased."
     ]
    ],
    "l": [
@@ -5093,6 +10001,78 @@
       "Since last month."
      ],
      0
+    ],
+    [
+     "Where is the baggage claim?",
+     [
+      "Downstairs, past the exit.",
+      "I claimed it yesterday.",
+      "A heavy bag."
+     ],
+     0
+    ],
+    [
+     "Is Flight 90 on time?",
+     [
+      "No, it's been delayed an hour.",
+      "It's time to go.",
+      "Yes, ninety."
+     ],
+     0
+    ],
+    [
+     "Can I bring this bottle on the plane?",
+     [
+      "Only if it's under 100 milliliters.",
+      "Bring me a bottle.",
+      "The plane is full."
+     ],
+     0
+    ],
+    [
+     "How do I get to terminal 2?",
+     [
+      "Take the free shuttle train.",
+      "Two terminals.",
+      "It's terminal."
+     ],
+     0
+    ],
+    [
+     "Did anyone leave a message for me?",
+     [
+      "Yes, Mr. Ross called at ten.",
+      "Leave it on my desk.",
+      "A text message."
+     ],
+     0
+    ],
+    [
+     "Should I call the dentist back today?",
+     [
+      "Yes, before five o'clock.",
+      "Back to the dentist.",
+      "Call me Al."
+     ],
+     0
+    ],
+    [
+     "Who answered the phone?",
+     [
+      "The new receptionist.",
+      "The answer is yes.",
+      "By phone."
+     ],
+     0
+    ],
+    [
+     "How long does the tour take?",
+     [
+      "About ninety minutes.",
+      "It's a long tour.",
+      "Take the tour bus."
+     ],
+     0
     ]
    ],
    "parts": [
@@ -5100,7 +10080,15 @@
      "t": "Annonces à l'aéroport",
      "c": [
       0,
-      1
+      1,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
      ],
      "v": [
       0,
@@ -5110,17 +10098,28 @@
       0
      ],
      "l": [
-      0
+      0,
+      4,
+      5,
+      6,
+      7
      ],
      "cv": [
-      0
+      0,
+      4,
+      5
      ]
     },
     {
      "t": "Messages téléphoniques",
      "c": [
       2,
-      4
+      4,
+      14,
+      15,
+      16,
+      17,
+      18
      ],
      "v": [
       2
@@ -5129,17 +10128,25 @@
       1
      ],
      "l": [
-      1
+      1,
+      8,
+      9,
+      10
      ],
      "cv": [
-      1
+      1,
+      6
      ]
     },
     {
      "t": "Visites guidées et publicités",
      "c": [
       3,
-      5
+      5,
+      19,
+      20,
+      21,
+      22
      ],
      "v": [
       3,
@@ -5151,11 +10158,13 @@
      ],
      "l": [
       2,
-      3
+      3,
+      11
      ],
      "cv": [
       2,
-      3
+      3,
+      7
      ]
     }
    ]
@@ -5353,6 +10362,138 @@
      ],
      0,
      "should have + participe = reproche (tu aurais dû)."
+    ],
+    [
+     "She ___ be at lunch; her bag is gone.",
+     [
+      "must",
+      "can't",
+      "mustn't",
+      "shouldn't"
+     ],
+     0,
+     "Déduction quasi certaine → must."
+    ],
+    [
+     "He ___ be in the office; I just saw him at the airport.",
+     [
+      "can't",
+      "must",
+      "should",
+      "may"
+     ],
+     0,
+     "Impossible → can't."
+    ],
+    [
+     "The package ___ arrive today, but I'm not sure.",
+     [
+      "might",
+      "must",
+      "can't",
+      "has to"
+     ],
+     0,
+     "Possibilité incertaine → might."
+    ],
+    [
+     "They ___ have missed the train; they're not here yet.",
+     [
+      "may",
+      "must to",
+      "can",
+      "should to"
+     ],
+     0,
+     "Hypothèse sur le passé → may have + participe."
+    ],
+    [
+     "You ___ be tired after such a long flight.",
+     [
+      "must",
+      "can't",
+      "mustn't",
+      "won't to"
+     ],
+     0,
+     "Déduction logique → must."
+    ],
+    [
+     "The door is locked; everyone ___ have left.",
+     [
+      "must",
+      "can't",
+      "should",
+      "ought"
+     ],
+     0,
+     "Déduction sur le passé → must have left."
+    ],
+    [
+     "That ___ be the right address; the building doesn't exist.",
+     [
+      "can't",
+      "must",
+      "might",
+      "may"
+     ],
+     0,
+     "Impossible → can't."
+    ],
+    [
+     "You ___ wear a tie; the dress code is casual.",
+     [
+      "don't need to",
+      "mustn't",
+      "must",
+      "have to"
+     ],
+     0,
+     "Pas nécessaire → don't need to."
+    ],
+    [
+     "Employees ___ smoke inside the building.",
+     [
+      "must not",
+      "don't have to",
+      "need not to",
+      "should to"
+     ],
+     0,
+     "Interdiction → must not."
+    ],
+    [
+     "You ___ check the weather before you leave.",
+     [
+      "should",
+      "must to",
+      "ought",
+      "had to"
+     ],
+     0,
+     "Conseil → should."
+    ],
+    [
+     "We ___ to submit the report by Monday.",
+     [
+      "have",
+      "must",
+      "should",
+      "ought"
+     ],
+     0,
+     "Obligation → have to."
+    ],
+    [
+     "You'd ___ take an umbrella.",
+     [
+      "better",
+      "rather",
+      "best",
+      "good"
+     ],
+     0,
+     "had better = ferais mieux de."
     ]
    ],
    "l": [
@@ -5391,6 +10532,78 @@
       "He repairs printers."
      ],
      0
+    ],
+    [
+     "Where's Mr. Hale? His desk is empty.",
+     [
+      "He might be in a meeting.",
+      "His desk is new.",
+      "Yes, it's empty."
+     ],
+     0
+    ],
+    [
+     "Is the bank still open?",
+     [
+      "It should be, it closes at six.",
+      "Open the bank account.",
+      "Yes, I banked."
+     ],
+     0
+    ],
+    [
+     "Why isn't Julia answering her phone?",
+     [
+      "She must be on the plane.",
+      "Answer the phone.",
+      "Her phone is new."
+     ],
+     0
+    ],
+    [
+     "Did the package arrive?",
+     [
+      "It may come this afternoon.",
+      "It's a large package.",
+      "Yes, arrival hall."
+     ],
+     0
+    ],
+    [
+     "Do I have to bring my own laptop?",
+     [
+      "No, we'll provide one.",
+      "Yes, I brought it.",
+      "Have a laptop."
+     ],
+     0
+    ],
+    [
+     "Should I wear a suit to the interview?",
+     [
+      "Yes, it's a formal company.",
+      "It suits you.",
+      "The interview is tomorrow."
+     ],
+     0
+    ],
+    [
+     "Can I park here?",
+     [
+      "No, it's reserved for visitors.",
+      "Yes, the park is big.",
+      "Here you go."
+     ],
+     0
+    ],
+    [
+     "Did she say why she was late?",
+     [
+      "Her train was delayed.",
+      "She said hello.",
+      "It's late."
+     ],
+     0
     ]
    ],
    "parts": [
@@ -5399,7 +10612,14 @@
      "c": [
       0,
       1,
-      11
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
      ],
      "v": [
       0
@@ -5408,7 +10628,11 @@
       0
      ],
      "l": [
-      2
+      2,
+      4,
+      5,
+      6,
+      7
      ],
      "g": [
       "en.m.ded"
@@ -5419,7 +10643,12 @@
      "c": [
       2,
       3,
-      10
+      10,
+      19,
+      20,
+      21,
+      22,
+      23
      ],
      "v": [
       3,
@@ -5430,7 +10659,10 @@
       3
      ],
      "l": [
-      1
+      1,
+      8,
+      9,
+      10
      ],
      "g": [
       "en.m.obl"
@@ -5456,7 +10688,8 @@
      ],
      "l": [
       0,
-      3
+      3,
+      11
      ],
      "g": []
     }
@@ -5639,6 +10872,149 @@
      ],
      0,
      "twice as + adjectif + as."
+    ],
+    [
+     "It was ___ good food that we came back the next day.",
+     [
+      "such",
+      "so",
+      "too",
+      "enough"
+     ],
+     0,
+     "such + (adjectif) + nom indénombrable."
+    ],
+    [
+     "The instructions were ___ clear that everyone understood.",
+     [
+      "so",
+      "such",
+      "too",
+      "enough"
+     ],
+     0,
+     "so + adjectif + that."
+    ],
+    [
+     "He is ___ young to drive.",
+     [
+      "too",
+      "enough",
+      "so",
+      "such"
+     ],
+     0,
+     "too + adjectif + to = trop … pour."
+    ],
+    [
+     "We don't have ___ chairs for everyone.",
+     [
+      "enough",
+      "too",
+      "so",
+      "such"
+     ],
+     0,
+     "enough + nom."
+    ],
+    [
+     "The hotel was ___ expensive for our budget.",
+     [
+      "too",
+      "enough",
+      "such",
+      "so much"
+     ],
+     0,
+     "too + adjectif."
+    ],
+    [
+     "She speaks English well ___ to work abroad.",
+     [
+      "enough",
+      "too",
+      "so",
+      "such"
+     ],
+     0,
+     "adjectif/adverbe + enough."
+    ],
+    [
+     "There ___ be a bakery on this corner.",
+     [
+      "used to",
+      "use to",
+      "is used to",
+      "using to"
+     ],
+     0,
+     "Habitude/état passé → used to."
+    ],
+    [
+     "She is used to ___ in a noisy office.",
+     [
+      "working",
+      "work",
+      "worked",
+      "works"
+     ],
+     0,
+     "be used to + -ing (être habitué à)."
+    ],
+    [
+     "I'd rather ___ at home tonight.",
+     [
+      "stay",
+      "to stay",
+      "staying",
+      "stayed"
+     ],
+     0,
+     "would rather + base verbale."
+    ],
+    [
+     "Did you ___ to live in London?",
+     [
+      "use",
+      "used",
+      "using",
+      "uses"
+     ],
+     0,
+     "Question : Did you use to…?"
+    ],
+    [
+     "We would rather you ___ the meeting.",
+     [
+      "attended",
+      "attend",
+      "attending",
+      "to attend"
+     ],
+     0,
+     "would rather + sujet + prétérit."
+    ],
+    [
+     "Don't forget ___ the lights before you leave.",
+     [
+      "to turn off",
+      "turning off",
+      "turn off",
+      "turned off"
+     ],
+     0,
+     "forget + to = oublier de faire."
+    ],
+    [
+     "The bigger the order, ___ the discount.",
+     [
+      "the larger",
+      "larger",
+      "the largest",
+      "more large"
+     ],
+     0,
+     "The + comparatif …, the + comparatif."
     ]
    ],
    "l": [
@@ -5677,6 +11053,78 @@
       "At the convention center."
      ],
      0
+    ],
+    [
+     "Is the van big enough for all the boxes?",
+     [
+      "I think we'll need two trips.",
+      "Big boxes.",
+      "The van is white."
+     ],
+     0
+    ],
+    [
+     "Why didn't you buy the jacket?",
+     [
+      "It was too expensive.",
+      "I bought a jacket.",
+      "Yes, it's blue."
+     ],
+     0
+    ],
+    [
+     "Was the presentation too long?",
+     [
+      "A little, but it was interesting.",
+      "It's long-term.",
+      "Present it again."
+     ],
+     0
+    ],
+    [
+     "Would you rather take the train or drive?",
+     [
+      "The train, it's more relaxing.",
+      "I'd rather not say.",
+      "Drive safely."
+     ],
+     0
+    ],
+    [
+     "Didn't this building use to be a bank?",
+     [
+      "Yes, until about ten years ago.",
+      "I used the bank.",
+      "It's a tall building."
+     ],
+     0
+    ],
+    [
+     "Do you remember meeting Mr. Cole?",
+     [
+      "Yes, at the trade fair last year.",
+      "Remember to call him.",
+      "The meeting room."
+     ],
+     0
+    ],
+    [
+     "Is this phone better than the old one?",
+     [
+      "Yes, the battery lasts much longer.",
+      "Better late than never.",
+      "The old phone."
+     ],
+     0
+    ],
+    [
+     "Did you remember to lock the door?",
+     [
+      "Yes, I double-checked.",
+      "I remember the door.",
+      "Lock and key."
+     ],
+     0
     ]
    ],
    "parts": [
@@ -5686,7 +11134,13 @@
       0,
       1,
       2,
-      3
+      3,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
      ],
      "v": [
       5
@@ -5696,7 +11150,10 @@
      ],
      "l": [
       0,
-      3
+      3,
+      4,
+      5,
+      6
      ]
     },
     {
@@ -5704,7 +11161,12 @@
      "c": [
       4,
       5,
-      8
+      8,
+      17,
+      18,
+      19,
+      20,
+      21
      ],
      "v": [
       0,
@@ -5719,7 +11181,9 @@
      ],
      "l": [
       1,
-      2
+      2,
+      7,
+      8
      ]
     },
     {
@@ -5728,12 +11192,19 @@
       6,
       7,
       9,
-      10
+      10,
+      22,
+      23
      ],
      "v": [
       4
      ],
-     "p": []
+     "p": [],
+     "l": [
+      9,
+      10,
+      11
+     ]
     }
    ]
   },
@@ -5906,6 +11377,160 @@
      ],
      0,
      "Un adverbe modifie le participe estimated."
+    ],
+    [
+     "Profits ___ by 8% compared to last year.",
+     [
+      "grew",
+      "grown",
+      "growth",
+      "growing"
+     ],
+     0,
+     "Verbe conjugué au prétérit : grew."
+    ],
+    [
+     "There was a sharp ___ in the number of orders.",
+     [
+      "drop",
+      "dropped",
+      "dropping",
+      "drops"
+     ],
+     0,
+     "Après « a sharp » → nom (drop)."
+    ],
+    [
+     "Costs have increased ___ over the past five years.",
+     [
+      "steadily",
+      "steady",
+      "steadiness",
+      "steadied"
+     ],
+     0,
+     "Adverbe après le verbe."
+    ],
+    [
+     "The value of the shares ___ in March.",
+     [
+      "declined",
+      "decline",
+      "declining",
+      "declines of"
+     ],
+     0,
+     "Prétérit : declined."
+    ],
+    [
+     "Online sales now ___ for 40% of revenue.",
+     [
+      "account",
+      "count",
+      "amount",
+      "total"
+     ],
+     0,
+     "account for = représenter."
+    ],
+    [
+     "Sales hit a record ___ in July.",
+     [
+      "high",
+      "height",
+      "highly",
+      "higher"
+     ],
+     0,
+     "a record high = un niveau record."
+    ],
+    [
+     "Prices have remained ___ since spring.",
+     [
+      "stable",
+      "stability",
+      "stabilize",
+      "stably"
+     ],
+     0,
+     "remain + adjectif."
+    ],
+    [
+     "The number of users ___ at two million.",
+     [
+      "peaked",
+      "peak",
+      "peaking",
+      "peaks of"
+     ],
+     0,
+     "Prétérit : peaked (a atteint un pic)."
+    ],
+    [
+     "Demand is expected to level ___ next year.",
+     [
+      "off",
+      "up",
+      "down",
+      "in"
+     ],
+     0,
+     "level off = se stabiliser."
+    ],
+    [
+     "The figures show ___ change from last month.",
+     [
+      "little",
+      "few",
+      "a few",
+      "many"
+     ],
+     0,
+     "Indénombrable (change) → little."
+    ],
+    [
+     "Fuel prices ___ a lot from week to week.",
+     [
+      "vary",
+      "various",
+      "variety",
+      "variation"
+     ],
+     0,
+     "Verbe : vary (varier)."
+    ],
+    [
+     "The ___ cost of the project is $50,000.",
+     [
+      "estimated",
+      "estimate",
+      "estimating",
+      "estimation"
+     ],
+     0,
+     "Participe adjectif : estimated cost."
+    ],
+    [
+     "The figures are ___ to change.",
+     [
+      "subject",
+      "subjected",
+      "subjecting",
+      "subjects"
+     ],
+     0,
+     "be subject to = être susceptible de."
+    ],
+    [
+     "Sales went up and down ___ the year.",
+     [
+      "throughout",
+      "through out",
+      "among",
+      "along of"
+     ],
+     0,
+     "throughout = tout au long de."
     ]
    ],
    "l": [
@@ -5944,6 +11569,78 @@
       "About two million dollars."
      ],
      0
+    ],
+    [
+     "Did prices go up again this month?",
+     [
+      "Only slightly.",
+      "Go up the stairs.",
+      "This month is busy."
+     ],
+     0
+    ],
+    [
+     "What caused the drop in sales?",
+     [
+      "A new competitor opened nearby.",
+      "I dropped my phone.",
+      "Sales are on Monday."
+     ],
+     0
+    ],
+    [
+     "How much did revenue increase?",
+     [
+      "About twelve percent.",
+      "Increase the volume.",
+      "It was a lot of revenue."
+     ],
+     0
+    ],
+    [
+     "When did ticket sales peak?",
+     [
+      "Just before the holidays.",
+      "At the top of the mountain.",
+      "Peak hours."
+     ],
+     0
+    ],
+    [
+     "Are the numbers stable now?",
+     [
+      "Yes, for the past three months.",
+      "The stable is old.",
+      "Numbers are on the list."
+     ],
+     0
+    ],
+    [
+     "Are these the final figures?",
+     [
+      "No, they're just estimates.",
+      "Final exam.",
+      "The figures are small."
+     ],
+     0
+    ],
+    [
+     "Why do prices change so often?",
+     [
+      "It depends on the season.",
+      "Change is good.",
+      "Often in summer."
+     ],
+     0
+    ],
+    [
+     "How many visitors do you expect?",
+     [
+      "Around five hundred.",
+      "I expect so.",
+      "Visit the website."
+     ],
+     0
     ]
    ],
    "parts": [
@@ -5954,7 +11651,12 @@
       3,
       4,
       5,
-      6
+      6,
+      10,
+      11,
+      12,
+      13,
+      14
      ],
      "v": [
       0,
@@ -5966,7 +11668,10 @@
      ],
      "l": [
       0,
-      1
+      1,
+      4,
+      5,
+      6
      ]
     },
     {
@@ -5974,7 +11679,12 @@
      "c": [
       1,
       2,
-      8
+      8,
+      15,
+      16,
+      17,
+      18,
+      19
      ],
      "v": [
       2,
@@ -5986,20 +11696,31 @@
      ],
      "l": [
       2,
-      3
+      3,
+      7,
+      8
      ]
     },
     {
      "t": "Fluctuations et estimations",
      "c": [
       7,
-      9
+      9,
+      20,
+      21,
+      22,
+      23
      ],
      "v": [
       4,
       5
      ],
-     "p": []
+     "p": [],
+     "l": [
+      9,
+      10,
+      11
+     ]
     }
    ]
   },
@@ -6160,6 +11881,171 @@
      ],
      0,
      "a shortage of = une pénurie de."
+    ],
+    [
+     "Hard hats are ___ in this area.",
+     [
+      "mandatory",
+      "mandate",
+      "mandatorily",
+      "mandated by"
+     ],
+     0,
+     "Adjectif : mandatory (obligatoire)."
+    ],
+    [
+     "In case of fire, use the ___ exit.",
+     [
+      "emergency",
+      "emerge",
+      "emergent",
+      "emerging"
+     ],
+     0,
+     "Nom composé : emergency exit."
+    ],
+    [
+     "Please ___ any accidents to your supervisor.",
+     [
+      "report",
+      "reporter",
+      "reported",
+      "reporting"
+     ],
+     0,
+     "Impératif → base verbale."
+    ],
+    [
+     "Visitors must be ___ by a staff member.",
+     [
+      "accompanied",
+      "accompany",
+      "accompanying",
+      "accompanies"
+     ],
+     0,
+     "Passif : be accompanied."
+    ],
+    [
+     "Keep the area ___ of boxes.",
+     [
+      "clear",
+      "clearly",
+      "clearance",
+      "cleared up"
+     ],
+     0,
+     "keep + objet + adjectif (clear)."
+    ],
+    [
+     "Gloves should be worn when ___ chemicals.",
+     [
+      "handling",
+      "handle",
+      "handled",
+      "handles"
+     ],
+     0,
+     "when + -ing."
+    ],
+    [
+     "All staff must complete safety ___ every year.",
+     [
+      "training",
+      "train",
+      "trained",
+      "trainer"
+     ],
+     0,
+     "Nom : safety training."
+    ],
+    [
+     "The warranty ___ parts and labor.",
+     [
+      "covers",
+      "covered",
+      "covering",
+      "cover"
+     ],
+     0,
+     "Présent, 3e personne : covers."
+    ],
+    [
+     "The car maker has issued a ___ for 2,000 vehicles.",
+     [
+      "recall",
+      "recalled",
+      "recalling",
+      "recalls of"
+     ],
+     0,
+     "Après « a » → nom (recall)."
+    ],
+    [
+     "Please register your product ___ 30 days.",
+     [
+      "within",
+      "during",
+      "since",
+      "by"
+     ],
+     0,
+     "within = dans un délai de."
+    ],
+    [
+     "The warranty is ___ if the product is misused.",
+     [
+      "void",
+      "avoid",
+      "voided by",
+      "voiding"
+     ],
+     0,
+     "Adjectif : void (nul)."
+    ],
+    [
+     "Customers can return ___ items free of charge.",
+     [
+      "defective",
+      "defect",
+      "defectively",
+      "defection"
+     ],
+     0,
+     "Adjectif avant le nom : defective."
+    ],
+    [
+     "Keep your receipt as ___ of purchase.",
+     [
+      "proof",
+      "prove",
+      "proven",
+      "proofing"
+     ],
+     0,
+     "proof of purchase = preuve d'achat."
+    ],
+    [
+     "The factory runs ___ shifts a day.",
+     [
+      "three",
+      "third",
+      "thirds",
+      "thrice"
+     ],
+     0,
+     "Nombre cardinal devant un nom : three shifts."
+    ],
+    [
+     "The machine needs to be ___ every month.",
+     [
+      "serviced",
+      "service",
+      "servicing",
+      "services"
+     ],
+     0,
+     "Passif : be serviced."
     ]
    ],
    "l": [
@@ -6198,6 +12084,78 @@
       "In the production office."
      ],
      0
+    ],
+    [
+     "Where are the first-aid kits?",
+     [
+      "Next to each fire extinguisher.",
+      "First, aid them.",
+      "In the kitchen drawer of mine."
+     ],
+     0
+    ],
+    [
+     "Do visitors need safety glasses?",
+     [
+      "Yes, you can borrow a pair at the entrance.",
+      "A glass of water.",
+      "Visitors are welcome."
+     ],
+     0
+    ],
+    [
+     "Who's in charge of the fire drill?",
+     [
+      "The building manager.",
+      "It's free of charge.",
+      "A drill bit."
+     ],
+     0
+    ],
+    [
+     "Has the safety inspection been done?",
+     [
+      "It's scheduled for Friday.",
+      "Yes, it's safe.",
+      "An inspector called."
+     ],
+     0
+    ],
+    [
+     "How long is the warranty?",
+     [
+      "Two years from the date of purchase.",
+      "It's long.",
+      "Warranty card."
+     ],
+     0
+    ],
+    [
+     "Is my model affected by the recall?",
+     [
+      "Let me check your serial number.",
+      "Recall the name.",
+      "The model is new."
+     ],
+     0
+    ],
+    [
+     "Can I extend the warranty?",
+     [
+      "Yes, for an extra fee.",
+      "Extend your arms.",
+      "The warranty expired."
+     ],
+     0
+    ],
+    [
+     "When is the next maintenance check?",
+     [
+      "Next Tuesday morning.",
+      "Check the box.",
+      "Main entrance."
+     ],
+     0
     ]
    ],
    "parts": [
@@ -6206,7 +12164,14 @@
      "c": [
       0,
       1,
-      7
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
      ],
      "v": [
       0
@@ -6216,14 +12181,24 @@
       3
      ],
      "l": [
-      2
+      2,
+      4,
+      5,
+      6,
+      7
      ]
     },
     {
      "t": "Garanties et rappels de produits",
      "c": [
       2,
-      3
+      3,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
      ],
      "v": [
       2,
@@ -6233,7 +12208,10 @@
       1
      ],
      "l": [
-      1
+      1,
+      8,
+      9,
+      10
      ]
     },
     {
@@ -6242,7 +12220,9 @@
       4,
       5,
       6,
-      8
+      8,
+      22,
+      23
      ],
      "v": [
       1,
@@ -6254,7 +12234,8 @@
      ],
      "l": [
       0,
-      3
+      3,
+      11
      ]
     }
    ]
@@ -6352,6 +12333,182 @@
      ],
      0,
      "be expected to = devoir normalement (passif)."
+    ],
+    [
+     "The agreement ___ on December 31.",
+     [
+      "expires",
+      "expire",
+      "expiration",
+      "expiring"
+     ],
+     0,
+     "Présent 3e personne : expires."
+    ],
+    [
+     "Both parties must ___ to the terms.",
+     [
+      "agree",
+      "agreement",
+      "agreeable",
+      "agreeing"
+     ],
+     0,
+     "must + base verbale."
+    ],
+    [
+     "The rules apply to all employees ___ exception.",
+     [
+      "without",
+      "with",
+      "except",
+      "unless"
+     ],
+     0,
+     "without exception = sans exception."
+    ],
+    [
+     "The contract can be ___ with 30 days' notice.",
+     [
+      "terminated",
+      "terminate",
+      "termination",
+      "terminating"
+     ],
+     0,
+     "Passif : can be terminated."
+    ],
+    [
+     "The new policy takes ___ on May 1.",
+     [
+      "effect",
+      "affect",
+      "effective",
+      "effectively"
+     ],
+     0,
+     "take effect = entrer en vigueur."
+    ],
+    [
+     "All staff must ___ by the company dress code.",
+     [
+      "abide",
+      "obey to",
+      "respect to",
+      "follow by"
+     ],
+     0,
+     "abide by = respecter."
+    ],
+    [
+     "Please read the terms and ___ carefully.",
+     [
+      "conditions",
+      "conditional",
+      "conditioned",
+      "conditioning"
+     ],
+     0,
+     "terms and conditions."
+    ],
+    [
+     "The lease was ___ for another year.",
+     [
+      "renewed",
+      "renew",
+      "renewal",
+      "renewing"
+     ],
+     0,
+     "Passif : was renewed."
+    ],
+    [
+     "The company reported a net ___ of $3 million.",
+     [
+      "profit",
+      "profitable",
+      "profitably",
+      "profiting"
+     ],
+     0,
+     "Après « a net » → nom (profit)."
+    ],
+    [
+     "Expenses must be kept to a ___.",
+     [
+      "minimum",
+      "minimal",
+      "minimize",
+      "minimally"
+     ],
+     0,
+     "to a minimum = au minimum."
+    ],
+    [
+     "The firm's ___ have improved this year.",
+     [
+      "earnings",
+      "earn",
+      "earned",
+      "earner"
+     ],
+     0,
+     "Nom pluriel : earnings (bénéfices)."
+    ],
+    [
+     "Shareholders ___ the annual report next week.",
+     [
+      "will receive",
+      "receiving",
+      "receipt",
+      "received by"
+     ],
+     0,
+     "Futur : will receive."
+    ],
+    [
+     "The company is in a strong financial ___.",
+     [
+      "position",
+      "positive",
+      "positioned",
+      "positively"
+     ],
+     0,
+     "Après « financial » → nom."
+    ],
+    [
+     "Travel costs will be ___ upon presentation of receipts.",
+     [
+      "refunded",
+      "refund",
+      "refunding",
+      "refundable"
+     ],
+     0,
+     "Passif : will be refunded."
+    ],
+    [
+     "The firm is ___ for a marketing director.",
+     [
+      "recruiting",
+      "recruit",
+      "recruitment",
+      "recruiter"
+     ],
+     0,
+     "Présent progressif : is recruiting."
+    ],
+    [
+     "The company ___ two smaller competitors last year.",
+     [
+      "acquired",
+      "acquire",
+      "acquisition",
+      "acquiring"
+     ],
+     0,
+     "Prétérit : acquired (a racheté)."
     ]
    ],
    "l": [
@@ -6388,6 +12545,78 @@
       "Sure, send it over.",
       "A new pro sale.",
       "Yes, I viewed it last year."
+     ],
+     0
+    ],
+    [
+     "When does the new contract start?",
+     [
+      "On the first of next month.",
+      "A new contact.",
+      "It started raining."
+     ],
+     0
+    ],
+    [
+     "Do we need a lawyer to review this?",
+     [
+      "It would be safer.",
+      "I reviewed the film.",
+      "Law and order."
+     ],
+     0
+    ],
+    [
+     "Is the rule the same for part-time staff?",
+     [
+      "Yes, it applies to everyone.",
+      "A ruler, please.",
+      "Part of the time."
+     ],
+     0
+    ],
+    [
+     "Who has to sign the agreement?",
+     [
+      "Both department heads.",
+      "Sign language.",
+      "I agree."
+     ],
+     0
+    ],
+    [
+     "Did we meet our sales targets?",
+     [
+      "We exceeded them by five percent.",
+      "Target practice.",
+      "Meet me at five."
+     ],
+     0
+    ],
+    [
+     "When is the annual report published?",
+     [
+      "Usually in March.",
+      "Every year.",
+      "A public report."
+     ],
+     0
+    ],
+    [
+     "Who handles the company's accounts?",
+     [
+      "An outside accounting firm.",
+      "I have an account.",
+      "By hand."
+     ],
+     0
+    ],
+    [
+     "How many people are we hiring this year?",
+     [
+      "About twenty, mostly engineers.",
+      "Higher than last year.",
+      "Yes, we are."
      ],
      0
     ]
@@ -6445,7 +12674,15 @@
      "t": "Contrats et règles",
      "c": [
       1,
-      2
+      2,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
      ],
      "v": [
       1,
@@ -6455,14 +12692,24 @@
       2
      ],
      "l": [
-      3
+      3,
+      4,
+      5,
+      6,
+      7
      ]
     },
     {
      "t": "Résultats et finances",
      "c": [
       3,
-      4
+      4,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
      ],
      "v": [
       2,
@@ -6473,7 +12720,10 @@
       0
      ],
      "l": [
-      1
+      1,
+      8,
+      9,
+      10
      ]
     },
     {
@@ -6482,7 +12732,9 @@
       0,
       5,
       6,
-      7
+      7,
+      22,
+      23
      ],
      "v": [
       0
@@ -6492,7 +12744,8 @@
      ],
      "l": [
       0,
-      2
+      2,
+      11
      ]
     }
    ]
@@ -6610,6 +12863,136 @@
        "« to be off » = être en congé / ne pas travailler."
       ]
      ]
+    },
+    {
+     "x": "To: All employees\nFrom: Human Resources\nSubject: New vacation request system\n\nStarting June 1, all vacation requests must be submitted through the online portal instead of by e-mail. Requests should be made at least two weeks in advance. Managers will reply within three working days. A short video guide is available on the intranet.",
+     "q": [
+      [
+       "What is the purpose of the memo?",
+       [
+        "To introduce a new process",
+        "To announce a holiday",
+        "To hire new staff",
+        "To change salaries"
+       ],
+       0,
+       "Les demandes de congés passent désormais par un portail en ligne."
+      ],
+      [
+       "How far in advance should requests be made?",
+       [
+        "Two weeks",
+        "Three days",
+        "One month",
+        "One week"
+       ],
+       0,
+       "« at least two weeks in advance »."
+      ],
+      [
+       "Where can employees find a guide?",
+       [
+        "On the intranet",
+        "In the HR office",
+        "In their e-mail",
+        "At the reception desk"
+       ],
+       0,
+       "« A short video guide is available on the intranet »."
+      ]
+     ]
+    },
+    {
+     "x": "Memo — To: Warehouse staff\nThe loading dock will be repaved on Saturday, August 12. No deliveries will be accepted that day. Trucks scheduled for Saturday will be redirected to our Elm Road site. Please inform your suppliers by Wednesday.",
+     "q": [
+      [
+       "What will happen on August 12?",
+       [
+        "Repair work will be done",
+        "A new warehouse will open",
+        "Staff will receive training",
+        "A sale will take place"
+       ],
+       0,
+       "« The loading dock will be repaved »."
+      ],
+      [
+       "What are staff asked to do by Wednesday?",
+       [
+        "Inform suppliers",
+        "Move trucks",
+        "Order materials",
+        "Work overtime"
+       ],
+       0,
+       "« Please inform your suppliers by Wednesday »."
+      ]
+     ]
+    },
+    {
+     "x": "JOB OPENING — Customer Service Representative\nBright Telecom is looking for a friendly, organized person to join our team in Dublin. Responsibilities include answering customer calls and e-mails and solving billing problems. Requirements: one year of experience in customer service; fluent English; knowledge of French is an advantage. Send your résumé to jobs@brighttelecom.com by April 30.",
+     "q": [
+      [
+       "What is one responsibility of the job?",
+       [
+        "Solving billing problems",
+        "Repairing phones",
+        "Managing a store",
+        "Writing software"
+       ],
+       0,
+       "« solving billing problems »."
+      ],
+      [
+       "What is NOT required?",
+       [
+        "Knowledge of French",
+        "Fluent English",
+        "Customer service experience",
+        "A résumé"
+       ],
+       0,
+       "Le français est « an advantage », donc pas obligatoire."
+      ],
+      [
+       "How should candidates apply?",
+       [
+        "By e-mail",
+        "In person",
+        "By phone",
+        "By mail"
+       ],
+       0,
+       "« Send your résumé to jobs@… »."
+      ]
+     ]
+    },
+    {
+     "x": "COMMUNITY NOTICE\nThe Oakwood Library will host a free workshop on writing résumés on Saturday, October 5, from 10 a.m. to noon. Space is limited to 20 people, so please register at the front desk. Light refreshments will be provided.",
+     "q": [
+      [
+       "What is the workshop about?",
+       [
+        "Writing résumés",
+        "Using computers",
+        "Reading to children",
+        "Cooking"
+       ],
+       0,
+       "« a free workshop on writing résumés »."
+      ],
+      [
+       "How can people register?",
+       [
+        "At the front desk",
+        "Online",
+        "By phone",
+        "By e-mail"
+       ],
+       0,
+       "« please register at the front desk »."
+      ]
+     ]
     }
    ],
    "c": [
@@ -6678,6 +13061,204 @@
      ],
      0,
      "pick someone up at + lieu précis (at the airport)."
+    ],
+    [
+     "The cafeteria will be closed ___ renovations.",
+     [
+      "for",
+      "at",
+      "since",
+      "by"
+     ],
+     0,
+     "for + nom = pour cause de."
+    ],
+    [
+     "Employees are ___ to bring their own lunch.",
+     [
+      "encouraged",
+      "encourage",
+      "encouraging",
+      "encouragement"
+     ],
+     0,
+     "Passif : are encouraged."
+    ],
+    [
+     "The new policy is ___ immediately.",
+     [
+      "effective",
+      "effect",
+      "effectively",
+      "affected"
+     ],
+     0,
+     "effective immediately = applicable immédiatement."
+    ],
+    [
+     "Please ___ this memo to your team.",
+     [
+      "forward",
+      "forwarding",
+      "forwarded",
+      "forwards"
+     ],
+     0,
+     "Impératif → base verbale."
+    ],
+    [
+     "The meeting has been ___ until further notice.",
+     [
+      "postponed",
+      "postpone",
+      "postponing",
+      "postponement"
+     ],
+     0,
+     "Passif : has been postponed."
+    ],
+    [
+     "___ questions should be sent to Ms. Diaz.",
+     [
+      "Any",
+      "Some",
+      "Much",
+      "Every"
+     ],
+     0,
+     "Any questions = toutes les questions éventuelles."
+    ],
+    [
+     "The memo was sent to all ___.",
+     [
+      "departments",
+      "departing",
+      "departed",
+      "department's"
+     ],
+     0,
+     "Nom pluriel : departments."
+    ],
+    [
+     "Staff will be ___ by e-mail of any changes.",
+     [
+      "notified",
+      "notify",
+      "notifying",
+      "notification"
+     ],
+     0,
+     "Passif : will be notified."
+    ],
+    [
+     "The position ___ frequent travel.",
+     [
+      "requires",
+      "require",
+      "requirement",
+      "requiring"
+     ],
+     0,
+     "Présent 3e personne : requires."
+    ],
+    [
+     "Candidates must have a ___ degree in finance.",
+     [
+      "university",
+      "universal",
+      "universe",
+      "universally"
+     ],
+     0,
+     "Nom adjectival : university degree."
+    ],
+    [
+     "Previous experience is ___ but not required.",
+     [
+      "preferred",
+      "prefer",
+      "preference",
+      "preferring"
+     ],
+     0,
+     "Participe adjectif : preferred (souhaité)."
+    ],
+    [
+     "Interested candidates should ___ a cover letter.",
+     [
+      "submit",
+      "submission",
+      "submitted",
+      "submitting"
+     ],
+     0,
+     "should + base verbale."
+    ],
+    [
+     "The salary is ___ on experience.",
+     [
+      "dependent",
+      "depend",
+      "dependence",
+      "depending of"
+     ],
+     0,
+     "dependent on = selon."
+    ],
+    [
+     "Benefits ___ health insurance and paid leave.",
+     [
+      "include",
+      "including",
+      "inclusion",
+      "inclusive"
+     ],
+     0,
+     "Verbe conjugué : include."
+    ],
+    [
+     "The library will extend its opening hours ___ the exam period.",
+     [
+      "during",
+      "while",
+      "since",
+      "until to"
+     ],
+     0,
+     "during + nom = pendant."
+    ],
+    [
+     "The museum is ___ to the public on weekends.",
+     [
+      "open",
+      "opening",
+      "opened",
+      "opens"
+     ],
+     0,
+     "Adjectif : open to the public."
+    ],
+    [
+     "Registration is ___ for all participants.",
+     [
+      "required",
+      "require",
+      "requiring",
+      "requirement"
+     ],
+     0,
+     "Passif d'état : is required."
+    ],
+    [
+     "Refreshments will be ___ after the talk.",
+     [
+      "served",
+      "serve",
+      "serving",
+      "service"
+     ],
+     0,
+     "Passif : will be served."
     ]
    ],
    "v": [
@@ -6712,20 +13293,43 @@
      "t": "Lis une note de service",
      "c": [
       0,
-      2
+      2,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
      ],
      "v": [
       4
      ],
      "rd": [
-      0
+      0,
+      4,
+      5
+     ],
+     "l": [
+      0,
+      1,
+      2,
+      3,
+      4
      ]
     },
     {
      "t": "Lis une offre d'emploi",
      "c": [
       1,
-      3
+      3,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
      ],
      "v": [
       0,
@@ -6733,14 +13337,25 @@
       5
      ],
      "rd": [
-      1
+      1,
+      6
+     ],
+     "l": [
+      5,
+      6,
+      7,
+      8
      ]
     },
     {
      "t": "Lis annonces et messages",
      "c": [
       4,
-      5
+      5,
+      20,
+      21,
+      22,
+      23
      ],
      "v": [
       2,
@@ -6748,9 +13363,125 @@
      ],
      "rd": [
       2,
-      3
+      3,
+      7
+     ],
+     "l": [
+      9,
+      10,
+      11
      ]
     }
+   ],
+   "l": [
+    [
+     "Did you see the memo about the cafeteria?",
+     [
+      "Yes, it's closing for two weeks.",
+      "I saw the menu.",
+      "See you later."
+     ],
+     0
+    ],
+    [
+     "Who sent the memo?",
+     [
+      "The facilities manager.",
+      "Send it to me.",
+      "A memory card."
+     ],
+     0
+    ],
+    [
+     "When does the new policy start?",
+     [
+      "Next Monday.",
+      "It's a polite question.",
+      "It started last year."
+     ],
+     0
+    ],
+    [
+     "Is the memo for everyone?",
+     [
+      "Only for the sales staff.",
+      "Everyone is here.",
+      "Memo pad."
+     ],
+     0
+    ],
+    [
+     "Where can I read the full memo?",
+     [
+      "It's on the intranet.",
+      "Read it aloud.",
+      "In full color."
+     ],
+     0
+    ],
+    [
+     "Is the job full-time?",
+     [
+      "Yes, Monday to Friday.",
+      "Time is full.",
+      "A full tank."
+     ],
+     0
+    ],
+    [
+     "What qualifications do I need?",
+     [
+      "A degree and two years of experience.",
+      "Qualify for the final.",
+      "I need a coffee."
+     ],
+     0
+    ],
+    [
+     "When is the application deadline?",
+     [
+      "The end of this month.",
+      "Apply the cream.",
+      "A dead line."
+     ],
+     0
+    ],
+    [
+     "Does the job include travel?",
+     [
+      "About once a month.",
+      "Travel light.",
+      "Include me."
+     ],
+     0
+    ],
+    [
+     "Is registration free?",
+     [
+      "Yes, but you need to sign up online.",
+      "Free time.",
+      "A cash register."
+     ],
+     0
+    ],
+    [
+     "Where will the talk take place?",
+     [
+      "In the main hall.",
+      "Talk to me.",
+      "It took place."
+     ],
+     0
+    ],
+    [
+     "Can children attend the workshop?",
+     [
+      "Only those over ten.",
+      "Children are noisy.",
+      "A workshop on Tuesday."
+     ],
+     0
+    ]
    ]
   },
   {
@@ -6868,6 +13599,138 @@
      ],
      0,
      "Après « please » : base verbale."
+    ],
+    [
+     "« Your order has been shipped. ___ You can track it using the link below. »",
+     [
+      "It should arrive within three days.",
+      "We are closed on Sundays.",
+      "Thank you for applying.",
+      "The weather is nice."
+     ],
+     0,
+     "La phrase doit parler de la livraison, entre « shipped » et « track it »."
+    ],
+    [
+     "« We are moving to a new office. ___ Our phone number will stay the same. »",
+     [
+      "The new address is 25 Park Lane.",
+      "We sell furniture.",
+      "Lunch is served at noon.",
+      "The meeting was long."
+     ],
+     0,
+     "Après l'annonce du déménagement, on donne la nouvelle adresse."
+    ],
+    [
+     "« Thank you for attending our seminar. ___ Please fill it out by Friday. »",
+     [
+      "A short survey is attached.",
+      "The room was cold.",
+      "We hire every year.",
+      "Parking is free."
+     ],
+     0,
+     "« it » renvoie au questionnaire (survey)."
+    ],
+    [
+     "« The gym will close for cleaning. ___ We apologize for the inconvenience. »",
+     [
+      "It will reopen on Monday.",
+      "Membership is cheap.",
+      "Our trainers are friendly.",
+      "Towels are blue."
+     ],
+     0,
+     "Il faut préciser la réouverture avant les excuses."
+    ],
+    [
+     "« Our new app is now available. ___ Download it today for free. »",
+     [
+      "It lets you book tables in seconds.",
+      "Our chef is French.",
+      "The office is closed.",
+      "Prices went up."
+     ],
+     0,
+     "La phrase présente l'application avant l'appel à la télécharger."
+    ],
+    [
+     "« Please note that prices will rise on July 1. ___ Orders placed before then will not be affected. »",
+     [
+      "This is due to higher material costs.",
+      "Our staff is very kind.",
+      "We are open late.",
+      "The sale ended."
+     ],
+     0,
+     "La phrase explique la hausse annoncée."
+    ],
+    [
+     "The hotel is fully booked. ___, we can suggest another hotel nearby.",
+     [
+      "However",
+      "Therefore",
+      "Because",
+      "Unless"
+     ],
+     0,
+     "Opposition : malgré le complet, une solution → However."
+    ],
+    [
+     "Our sales have doubled. ___, we will open two new stores.",
+     [
+      "As a result",
+      "In contrast",
+      "Nevertheless",
+      "Instead"
+     ],
+     0,
+     "Conséquence → As a result."
+    ],
+    [
+     "The tour includes lunch. ___, there is a stop at a famous market.",
+     [
+      "In addition",
+      "However",
+      "Otherwise",
+      "Instead"
+     ],
+     0,
+     "Ajout → In addition."
+    ],
+    [
+     "We received your request. ___ will be processed within 48 hours.",
+     [
+      "It",
+      "They",
+      "This one's",
+      "Its"
+     ],
+     0,
+     "« It » renvoie à « your request »."
+    ],
+    [
+     "Mr. Lee and Ms. Kim will lead the session. ___ both have ten years of experience.",
+     [
+      "They",
+      "He",
+      "Their",
+      "Them"
+     ],
+     0,
+     "Sujet pluriel → They."
+    ],
+    [
+     "Thank you for choosing Star Hotel. We hope you enjoyed ___ stay.",
+     [
+      "your",
+      "you're",
+      "yours",
+      "you"
+     ],
+     0,
+     "Possessif avant le nom → your."
     ]
    ],
    "p": [
@@ -6950,6 +13813,69 @@
       "Pay at the front desk."
      ],
      0
+    ],
+    [
+     "Did you read the notice about the price change?",
+     [
+      "Yes, it starts in July.",
+      "Notice the change.",
+      "The price is right."
+     ],
+     0
+    ],
+    [
+     "Is the gym open this weekend?",
+     [
+      "No, it's closed for cleaning.",
+      "Jim is open-minded.",
+      "The weekend is short."
+     ],
+     0
+    ],
+    [
+     "Who wrote this announcement?",
+     [
+      "The marketing team.",
+      "Write it down.",
+      "I announced it."
+     ],
+     0
+    ],
+    [
+     "Should we choose the cheaper option?",
+     [
+      "It depends on the quality.",
+      "Cheaper by the dozen.",
+      "Option B is blue."
+     ],
+     0
+    ],
+    [
+     "Did the change improve sales?",
+     [
+      "Yes, almost immediately.",
+      "Change the sales.",
+      "Improve your English."
+     ],
+     0
+    ],
+    [
+     "Is this your stapler or Jane's?",
+     [
+      "It's hers.",
+      "Staple it.",
+      "Jane is here."
+     ],
+     0
+    ],
+    [
+     "Did the customers like the new menu?",
+     [
+      "Most of them did.",
+      "The menu is on the table.",
+      "Customers are always right."
+     ],
+     0
     ]
    ],
    "parts": [
@@ -6959,7 +13885,13 @@
       0,
       1,
       2,
-      3
+      3,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
      ],
      "v": [
       0,
@@ -6971,7 +13903,10 @@
      ],
      "l": [
       1,
-      2
+      2,
+      4,
+      5,
+      6
      ]
     },
     {
@@ -6979,7 +13914,10 @@
      "c": [
       4,
       5,
-      7
+      7,
+      16,
+      17,
+      18
      ],
      "v": [
       4
@@ -6989,7 +13927,9 @@
       1
      ],
      "l": [
-      0
+      0,
+      7,
+      8
      ]
     },
     {
@@ -6997,14 +13937,19 @@
      "c": [
       6,
       8,
-      9
+      9,
+      19,
+      20,
+      21
      ],
      "v": [
       1,
       5
      ],
      "l": [
-      3
+      3,
+      9,
+      10
      ],
      "p": []
     }
@@ -7167,6 +14112,125 @@
        "La phrase parle du remboursement : juste après la phrase qui l'annonce, en [2]."
       ]
      ]
+    },
+    {
+     "x": "Sam Ortiz [9:15] Morning! The projector in room B is broken again.\nLena Choi [9:17] Oh no. My client presentation is at 11.\nSam Ortiz [9:18] Room D is free until noon. Want me to book it for you?\nLena Choi [9:19] That would be great, thanks! I'll tell the client.\nSam Ortiz [9:20] Done. I'll also call IT about room B.",
+     "q": [
+      [
+       "What problem does Mr. Ortiz mention?",
+       [
+        "A projector is not working",
+        "A client canceled",
+        "A room is too small",
+        "The internet is down"
+       ],
+       0,
+       "« The projector in room B is broken again »."
+      ],
+      [
+       "At 9:19, what does Ms. Choi mean when she writes, « That would be great »?",
+       [
+        "She accepts an offer",
+        "She is disappointed",
+        "She wants a new projector",
+        "She will cancel"
+       ],
+       0,
+       "Elle accepte la proposition de réserver la salle D."
+      ],
+      [
+       "What will Mr. Ortiz do next?",
+       [
+        "Contact IT",
+        "Meet the client",
+        "Fix the projector himself",
+        "Cancel the meeting"
+       ],
+       0,
+       "« I'll also call IT about room B »."
+      ]
+     ]
+    },
+    {
+     "x": "Hana Kim [14:02] The supplier says the fabric order will be one week late.\nLeo Martin [14:04] That's a problem. The new collection launches on the 20th.\nHana Kim [14:05] They can send half of it by Friday if we pay for express shipping.\nLeo Martin [14:07] Let's do that. Half is enough to start production.",
+     "q": [
+      [
+       "What is the main topic of the discussion?",
+       [
+        "A delayed delivery",
+        "A new employee",
+        "A price increase",
+        "A store opening"
+       ],
+       0,
+       "La commande de tissu aura une semaine de retard."
+      ],
+      [
+       "What does Mr. Martin decide to do?",
+       [
+        "Pay for faster shipping",
+        "Change suppliers",
+        "Delay the launch",
+        "Cancel the order"
+       ],
+       0,
+       "« Let's do that » = payer la livraison express."
+      ]
+     ]
+    },
+    {
+     "x": "NOTICE — Riverside Office Tower\nThe main elevators will be replaced from May 2 to May 20. During this time, please use the service elevator at the back of the building. Deliveries must be scheduled before 9 a.m. We thank all tenants for their cooperation.",
+     "q": [
+      [
+       "Why was the notice written?",
+       [
+        "To announce elevator work",
+        "To welcome new tenants",
+        "To change office hours",
+        "To advertise a job"
+       ],
+       0,
+       "Les ascenseurs principaux seront remplacés."
+      ],
+      [
+       "What must deliveries do?",
+       [
+        "Be scheduled before 9 a.m.",
+        "Use the front entrance",
+        "Be made on weekends",
+        "Be approved by the manager"
+       ],
+       0,
+       "« Deliveries must be scheduled before 9 a.m. »."
+      ]
+     ]
+    },
+    {
+     "x": "Dear Mr. Jones,\nThank you for contacting Sunline Travel. We are sorry that your flight to Rome was canceled. A full refund of $320 has been issued to your credit card. Please allow five to seven business days for it to appear. As an apology, we have also added a $30 voucher to your account.\nSincerely,\nSunline Travel Customer Care",
+     "q": [
+      [
+       "Why is Mr. Jones receiving a refund?",
+       [
+        "His flight was canceled",
+        "He was charged twice",
+        "His hotel was full",
+        "He changed his destination"
+       ],
+       0,
+       "« your flight to Rome was canceled »."
+      ],
+      [
+       "What else has the company given him?",
+       [
+        "A voucher",
+        "A free flight",
+        "A hotel room",
+        "A new credit card"
+       ],
+       0,
+       "« a $30 voucher »."
+      ]
+     ]
     }
    ],
    "p": [
@@ -7281,6 +14345,182 @@
      ],
      0,
      "before noon = avant midi (échéance)."
+    ],
+    [
+     "Can you ___ me know when the files are ready?",
+     [
+      "let",
+      "make",
+      "have",
+      "get"
+     ],
+     0,
+     "let someone know = prévenir."
+    ],
+    [
+     "I'm running ___ late, sorry!",
+     [
+      "a bit",
+      "a few",
+      "few",
+      "bit of"
+     ],
+     0,
+     "a bit late = un peu en retard."
+    ],
+    [
+     "I'll ___ the client after lunch.",
+     [
+      "follow up with",
+      "follow with up",
+      "follow up to",
+      "up follow"
+     ],
+     0,
+     "follow up with = recontacter."
+    ],
+    [
+     "Who's free to ___ the visitors at 2 p.m.?",
+     [
+      "greet",
+      "greeting",
+      "greeted",
+      "greets"
+     ],
+     0,
+     "to + base verbale."
+    ],
+    [
+     "The link isn't working ___ my end.",
+     [
+      "on",
+      "at",
+      "in",
+      "by"
+     ],
+     0,
+     "on my end = de mon côté."
+    ],
+    [
+     "Good ___! I'll update the document.",
+     [
+      "catch",
+      "catching",
+      "caught",
+      "catches"
+     ],
+     0,
+     "« Good catch! » = bien vu !"
+    ],
+    [
+     "I'm ___ a call right now; I'll reply later.",
+     [
+      "on",
+      "in",
+      "at",
+      "by"
+     ],
+     0,
+     "on a call = en appel."
+    ],
+    [
+     "Can we push the meeting ___ to 4 p.m.?",
+     [
+      "back",
+      "behind",
+      "after",
+      "later of"
+     ],
+     0,
+     "push back = décaler."
+    ],
+    [
+     "The position is open to internal ___ only.",
+     [
+      "candidates",
+      "candidacy",
+      "candid",
+      "candidly"
+     ],
+     0,
+     "Nom pluriel : internal candidates."
+    ],
+    [
+     "The office will move ___ the fifth floor next month.",
+     [
+      "to",
+      "at",
+      "in",
+      "on"
+     ],
+     0,
+     "move to = déménager vers."
+    ],
+    [
+     "Applications are ___ until June 15.",
+     [
+      "accepted",
+      "accept",
+      "accepting",
+      "acceptance"
+     ],
+     0,
+     "Passif : are accepted."
+    ],
+    [
+     "Please read the notice ___ before applying.",
+     [
+      "carefully",
+      "careful",
+      "care",
+      "carefulness"
+     ],
+     0,
+     "Adverbe modifiant « read »."
+    ],
+    [
+     "We have ___ your refund of $45.",
+     [
+      "processed",
+      "process",
+      "processing",
+      "procession"
+     ],
+     0,
+     "Present perfect : have processed."
+    ],
+    [
+     "The amount will appear on your next ___.",
+     [
+      "statement",
+      "state",
+      "stated",
+      "stating"
+     ],
+     0,
+     "Nom : statement (relevé)."
+    ],
+    [
+     "We regret any ___ this may have caused.",
+     [
+      "inconvenience",
+      "inconvenient",
+      "inconveniently",
+      "inconvenienced"
+     ],
+     0,
+     "Après « any » → nom."
+    ],
+    [
+     "The refund was issued ___ your original payment method.",
+     [
+      "to",
+      "by",
+      "at",
+      "in"
+     ],
+     0,
+     "issued to = crédité sur."
     ]
    ],
    "l": [
@@ -7310,6 +14550,87 @@
       "It's a full refund policy."
      ],
      0
+    ],
+    [
+     "Did you see Anna's message in the group chat?",
+     [
+      "Yes, I already replied.",
+      "A chat with friends.",
+      "The group is big."
+     ],
+     0
+    ],
+    [
+     "Can you join the call in five minutes?",
+     [
+      "Sure, send me the link.",
+      "Join the club.",
+      "Five minutes is short."
+     ],
+     0
+    ],
+    [
+     "Who added me to this channel?",
+     [
+      "I think it was Ben.",
+      "Add some salt.",
+      "The TV channel."
+     ],
+     0
+    ],
+    [
+     "Is the meeting still at three?",
+     [
+      "No, it's been moved to four.",
+      "Three is a crowd.",
+      "Still waters."
+     ],
+     0
+    ],
+    [
+     "Should I reply to all?",
+     [
+      "Just to the manager is fine.",
+      "Reply soon.",
+      "All of them."
+     ],
+     0
+    ],
+    [
+     "Is the notice about the new parking rules?",
+     [
+      "Yes, they start next week.",
+      "Notice me.",
+      "Park the car."
+     ],
+     0
+    ],
+    [
+     "Can external candidates apply for this job?",
+     [
+      "No, it's for current employees only.",
+      "Apply sunscreen.",
+      "External hard drive."
+     ],
+     0
+    ],
+    [
+     "How will I receive the refund?",
+     [
+      "On the card you used to pay.",
+      "I received a letter.",
+      "Refund policy."
+     ],
+     0
+    ],
+    [
+     "Why was I charged twice?",
+     [
+      "It was a system error.",
+      "Charge your phone.",
+      "Twice a week."
+     ],
+     0
     ]
    ],
    "parts": [
@@ -7317,21 +14638,42 @@
      "t": "Lis une discussion en ligne",
      "c": [
       4,
-      5
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
      ],
      "p": [
       0
      ],
      "rd": [
-      0
+      0,
+      4,
+      5
      ],
-     "v": []
+     "v": [],
+     "l": [
+      3,
+      4,
+      5,
+      6,
+      7
+     ]
     },
     {
      "t": "Lis un avis et une offre d'emploi",
      "c": [
       1,
-      3
+      3,
+      14,
+      15,
+      16,
+      17
      ],
      "v": [
       1,
@@ -7344,18 +14686,25 @@
      ],
      "l": [
       0,
-      1
+      1,
+      8,
+      9
      ],
      "rd": [
       1,
-      2
+      2,
+      6
      ]
     },
     {
      "t": "Lis une lettre de remboursement",
      "c": [
       0,
-      2
+      2,
+      18,
+      19,
+      20,
+      21
      ],
      "v": [
       0,
@@ -7365,10 +14714,13 @@
       2
      ],
      "l": [
-      2
+      2,
+      10,
+      11
      ],
      "rd": [
-      3
+      3,
+      7
      ]
     }
    ]
@@ -7561,6 +14913,138 @@
      ],
      0,
      "Hardly … when + past perfect inversé : Hardly had the meeting begun."
+    ],
+    [
+     "The office ___ every night by a cleaning company.",
+     [
+      "is cleaned",
+      "cleans",
+      "is cleaning",
+      "cleaned"
+     ],
+     0,
+     "Passif présent d'habitude : is cleaned."
+    ],
+    [
+     "The results will ___ next week.",
+     [
+      "be announced",
+      "announce",
+      "announcing",
+      "be announcing"
+     ],
+     0,
+     "Passif futur : will be announced."
+    ],
+    [
+     "The bridge ___ in 1890.",
+     [
+      "was built",
+      "built",
+      "has built",
+      "is building"
+     ],
+     0,
+     "Passif passé : was built."
+    ],
+    [
+     "The order is ___ prepared right now.",
+     [
+      "being",
+      "been",
+      "be",
+      "to be"
+     ],
+     0,
+     "Passif progressif : is being prepared."
+    ],
+    [
+     "Three new managers have ___ appointed.",
+     [
+      "been",
+      "being",
+      "be",
+      "was"
+     ],
+     0,
+     "Passif parfait : have been appointed."
+    ],
+    [
+     "The package should ___ delivered by noon.",
+     [
+      "be",
+      "been",
+      "being",
+      "is"
+     ],
+     0,
+     "Modal + be + participe."
+    ],
+    [
+     "Our products ___ in over thirty countries.",
+     [
+      "are sold",
+      "sell",
+      "are selling",
+      "sold"
+     ],
+     0,
+     "Passif présent : are sold."
+    ],
+    [
+     "The report, ___ last week, contains several errors.",
+     [
+      "published",
+      "publishing",
+      "publishes",
+      "to publish"
+     ],
+     0,
+     "Participe passé à sens passif."
+    ],
+    [
+     "Visitors ___ the building must sign in.",
+     [
+      "entering",
+      "entered",
+      "enter",
+      "enters"
+     ],
+     0,
+     "Participe présent : ceux qui entrent."
+    ],
+    [
+     "We had the documents ___ into French.",
+     [
+      "translated",
+      "translate",
+      "translating",
+      "translation"
+     ],
+     0,
+     "have + objet + participe passé (faire traduire)."
+    ],
+    [
+     "Never ___ we seen such high demand.",
+     [
+      "have",
+      "had been",
+      "are",
+      "did have"
+     ],
+     0,
+     "Never + inversion : have we seen."
+    ],
+    [
+     "___ you have any problems, call this number.",
+     [
+      "Should",
+      "Would",
+      "Could",
+      "Had"
+     ],
+     0,
+     "Should + sujet = si jamais."
     ]
    ],
    "l": [
@@ -7599,6 +15083,69 @@
       "Two copies, please."
      ],
      0
+    ],
+    [
+     "When was the building constructed?",
+     [
+      "In the early 1990s.",
+      "It's under construction.",
+      "The building is tall."
+     ],
+     0
+    ],
+    [
+     "Has the new manager been chosen?",
+     [
+      "Yes, it'll be announced tomorrow.",
+      "Choose wisely.",
+      "The manager is new."
+     ],
+     0
+    ],
+    [
+     "Is lunch included in the price?",
+     [
+      "Yes, and coffee too.",
+      "Price included.",
+      "Lunch is at noon."
+     ],
+     0
+    ],
+    [
+     "Did you get your laptop fixed?",
+     [
+      "Yes, it works perfectly now.",
+      "Fixed price.",
+      "My laptop is new."
+     ],
+     0
+    ],
+    [
+     "Who was the woman wearing the red jacket?",
+     [
+      "She's a journalist.",
+      "A red jacket.",
+      "She's wearing it."
+     ],
+     0
+    ],
+    [
+     "Have you ever seen sales this high?",
+     [
+      "Never, it's a record.",
+      "I saw the sale.",
+      "High above."
+     ],
+     0
+    ],
+    [
+     "Should I call if I'm late?",
+     [
+      "Yes, please let us know.",
+      "Call me later.",
+      "Late night."
+     ],
+     0
     ]
    ],
    "parts": [
@@ -7607,7 +15154,14 @@
      "c": [
       0,
       1,
-      10
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
      ],
      "v": [
       0,
@@ -7620,7 +15174,10 @@
      ],
      "l": [
       0,
-      1
+      1,
+      4,
+      5,
+      6
      ]
     },
     {
@@ -7630,7 +15187,10 @@
       3,
       4,
       5,
-      9
+      9,
+      19,
+      20,
+      21
      ],
      "v": [
       2,
@@ -7641,7 +15201,9 @@
       3
      ],
      "l": [
-      3
+      3,
+      7,
+      8
      ]
     },
     {
@@ -7650,13 +15212,17 @@
       6,
       7,
       8,
-      11
+      11,
+      22,
+      23
      ],
      "p": [
       2
      ],
      "l": [
-      2
+      2,
+      9,
+      10
      ],
      "v": []
     }
@@ -7776,6 +15342,204 @@
      ],
      0,
      "on the third floor = au troisième étage."
+    ],
+    [
+     "The workshop has been ___ to Room 3.",
+     [
+      "moved",
+      "move",
+      "moving",
+      "movement"
+     ],
+     0,
+     "Passif : has been moved."
+    ],
+    [
+     "The keynote speech will start ___ 9:30.",
+     [
+      "at",
+      "on",
+      "in",
+      "by of"
+     ],
+     0,
+     "Heure précise → at."
+    ],
+    [
+     "There is a short ___ between the two sessions.",
+     [
+      "break",
+      "broke",
+      "broken",
+      "breaking"
+     ],
+     0,
+     "Nom : a short break (pause)."
+    ],
+    [
+     "Lunch will be ___ in the main hall.",
+     [
+      "served",
+      "serve",
+      "serving",
+      "servant"
+     ],
+     0,
+     "Passif : will be served."
+    ],
+    [
+     "The last session ends ___ 5 p.m.",
+     [
+      "at",
+      "on",
+      "during",
+      "since"
+     ],
+     0,
+     "Heure → at."
+    ],
+    [
+     "Attendees can ___ for workshops on the website.",
+     [
+      "sign up",
+      "sign on up",
+      "signing up",
+      "signed up"
+     ],
+     0,
+     "can + base verbale : sign up (s'inscrire)."
+    ],
+    [
+     "The opening session was ___ attended.",
+     [
+      "well",
+      "good",
+      "goodly",
+      "nicely of"
+     ],
+     0,
+     "well attended = qui a eu beaucoup de monde."
+    ],
+    [
+     "Please check the ___ schedule at the entrance.",
+     [
+      "updated",
+      "update",
+      "updating",
+      "updates"
+     ],
+     0,
+     "Participe adjectif : updated schedule."
+    ],
+    [
+     "The Premium plan ___ unlimited storage.",
+     [
+      "includes",
+      "including",
+      "inclusion",
+      "include"
+     ],
+     0,
+     "Présent 3e personne : includes."
+    ],
+    [
+     "The Basic plan is the ___ expensive option.",
+     [
+      "least",
+      "less",
+      "little",
+      "fewest"
+     ],
+     0,
+     "Superlatif d'infériorité : the least."
+    ],
+    [
+     "Customers can ___ to a higher plan at any time.",
+     [
+      "upgrade",
+      "upgraded",
+      "upgrading",
+      "upgrades"
+     ],
+     0,
+     "can + base verbale."
+    ],
+    [
+     "The annual plan is cheaper ___ the monthly plan.",
+     [
+      "than",
+      "then",
+      "as",
+      "that"
+     ],
+     0,
+     "Comparatif → than."
+    ],
+    [
+     "Both plans ___ free customer support.",
+     [
+      "offer",
+      "offers",
+      "offering",
+      "offered by"
+     ],
+     0,
+     "Sujet pluriel → offer."
+    ],
+    [
+     "The Standard plan is ___ for small teams.",
+     [
+      "suitable",
+      "suit",
+      "suitably",
+      "suited for of"
+     ],
+     0,
+     "Adjectif : suitable (adapté)."
+    ],
+    [
+     "The 9:40 train is running ten minutes ___.",
+     [
+      "late",
+      "lately",
+      "later on",
+      "lateness"
+     ],
+     0,
+     "Adverbe : running late."
+    ],
+    [
+     "Passengers must change trains ___ Leeds.",
+     [
+      "at",
+      "on",
+      "to",
+      "by"
+     ],
+     0,
+     "change at + gare."
+    ],
+    [
+     "The express train does not stop ___ smaller stations.",
+     [
+      "at",
+      "on",
+      "to",
+      "in to"
+     ],
+     0,
+     "stop at."
+    ],
+    [
+     "Tickets must be ___ before boarding.",
+     [
+      "validated",
+      "validate",
+      "validating",
+      "validation"
+     ],
+     0,
+     "Passif : must be validated."
     ]
    ],
    "cv": [
@@ -7934,6 +15698,215 @@
        "« it stops at every station »."
       ]
      ]
+    },
+    {
+     "d": [
+      [
+       "W",
+       "Hi Mark, did you see the workshop program? The data session has been canceled."
+      ],
+      [
+       "M",
+       "Really? I wanted to go to that one."
+      ],
+      [
+       "W",
+       "Me too. They've added a session on presentation skills in the same time slot instead."
+      ]
+     ],
+     "q": [
+      [
+       "Look at the graphic. When will the new session take place?",
+       [
+        "At 10:30",
+        "At 9:00",
+        "At 1:00",
+        "At 3:00"
+       ],
+       0,
+       "La séance sur les données (10:30) est remplacée dans le même créneau."
+      ],
+      [
+       "What is the new session about?",
+       [
+        "Presentation skills",
+        "Leadership",
+        "Customer care",
+        "Data analysis"
+       ],
+       0,
+       "« a session on presentation skills »."
+      ]
+     ],
+     "g": "WORKSHOP PROGRAM\n9:00  Leadership basics\n10:30  Working with data\n1:00  Project management\n3:00  Customer care"
+    },
+    {
+     "d": [
+      [
+       "M",
+       "Excuse me, I'm looking for the room where the sales training is held."
+      ],
+      [
+       "W",
+       "It's on the program here. Oh, wait, they've switched it with the HR meeting."
+      ],
+      [
+       "M",
+       "So it's in the HR room now?"
+      ],
+      [
+       "W",
+       "That's right, on the second floor."
+      ]
+     ],
+     "q": [
+      [
+       "Look at the graphic. Where will the sales training take place?",
+       [
+        "Room 205",
+        "Room 101",
+        "Room 310",
+        "Room 412"
+       ],
+       0,
+       "Elle a été échangée avec la réunion RH : salle 205, au deuxième étage."
+      ],
+      [
+       "What is the man looking for?",
+       [
+        "A training room",
+        "An elevator",
+        "The reception desk",
+        "The cafeteria"
+       ],
+       0,
+       "« the room where the sales training is held »."
+      ]
+     ],
+     "g": "FLOOR GUIDE\nRoom 101 — Sales training\nRoom 205 — HR meeting\nRoom 310 — Finance\nRoom 412 — IT support"
+    },
+    {
+     "d": [
+      [
+       "W",
+       "I'm comparing phone plans for our team. We need at least 20 gigabytes of data each."
+      ],
+      [
+       "M",
+       "Then the Basic plan won't work. What about the next one up?"
+      ],
+      [
+       "W",
+       "It has enough data and it's cheaper than the Unlimited plan. Let's go with that."
+      ]
+     ],
+     "q": [
+      [
+       "Look at the graphic. Which plan will the speakers choose?",
+       [
+        "Plus",
+        "Basic",
+        "Pro",
+        "Unlimited"
+       ],
+       0,
+       "Le plan juste au-dessus du Basic, avec au moins 20 Go : Plus (25 Go)."
+      ],
+      [
+       "What do the speakers need?",
+       [
+        "At least 20 GB of data",
+        "Free calls abroad",
+        "New phones",
+        "A cheaper internet plan"
+       ],
+       0,
+       "« at least 20 gigabytes of data each »."
+      ]
+     ],
+     "g": "PHONE PLANS\nBasic — 5 GB — $15\nPlus — 25 GB — $25\nPro — 50 GB — $35\nUnlimited — no limit — $45"
+    },
+    {
+     "d": [
+      [
+       "M",
+       "We need a new printer for the office. I've narrowed it down to four models."
+      ],
+      [
+       "W",
+       "Speed matters more than price for us. We print a lot of reports."
+      ],
+      [
+       "M",
+       "Then let's take the fastest one, even if it isn't the cheapest."
+      ]
+     ],
+     "q": [
+      [
+       "Look at the graphic. Which model will the speakers buy?",
+       [
+        "Model C",
+        "Model A",
+        "Model B",
+        "Model D"
+       ],
+       0,
+       "Le plus rapide : Model C (50 pages/min)."
+      ],
+      [
+       "Why is speed important to the woman?",
+       [
+        "They print many reports",
+        "They have a small budget",
+        "Their old printer was slow",
+        "They print photos"
+       ],
+       0,
+       "« We print a lot of reports »."
+      ]
+     ],
+     "g": "PRINTERS\nModel A — 20 pages/min — $150\nModel B — 35 pages/min — $260\nModel C — 50 pages/min — $390\nModel D — 30 pages/min — $210"
+    },
+    {
+     "d": [
+      [
+       "W",
+       "Excuse me, I need to be in Bristol before eleven. Which train should I take?"
+      ],
+      [
+       "M",
+       "The 9:15 is delayed, so take the next one. It arrives in plenty of time."
+      ],
+      [
+       "W",
+       "Great, thank you."
+      ]
+     ],
+     "q": [
+      [
+       "Look at the graphic. Which train will the woman take?",
+       [
+        "The 9:45",
+        "The 9:15",
+        "The 10:15",
+        "The 10:45"
+       ],
+       0,
+       "Le 9:15 est retardé, le suivant est le 9:45 (arrivée 10:55, avant 11 h)."
+      ],
+      [
+       "When does the woman need to arrive?",
+       [
+        "Before eleven",
+        "Before ten",
+        "By noon",
+        "After lunch"
+       ],
+       0,
+       "« before eleven »."
+      ]
+     ],
+     "g": "DEPARTURES TO BRISTOL\n9:15 — arrives 10:40 — DELAYED\n9:45 — arrives 10:55\n10:15 — arrives 11:35\n10:45 — arrives 12:05"
     }
    ],
    "parts": [
@@ -7941,7 +15914,15 @@
      "t": "Lis un programme",
      "c": [
       0,
-      1
+      1,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
      ],
      "v": [
       0,
@@ -7951,14 +15932,29 @@
       0
      ],
      "cv": [
-      0
+      0,
+      4,
+      5
+     ],
+     "l": [
+      0,
+      1,
+      2,
+      3,
+      4
      ]
     },
     {
      "t": "Compare des offres",
      "c": [
       2,
-      4
+      4,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
      ],
      "v": [
       1
@@ -7967,14 +15963,26 @@
       1
      ],
      "cv": [
-      1
+      1,
+      6,
+      7
+     ],
+     "l": [
+      5,
+      6,
+      7,
+      8
      ]
     },
     {
      "t": "Plans et horaires de train",
      "c": [
       3,
-      5
+      5,
+      20,
+      21,
+      22,
+      23
      ],
      "v": [
       2,
@@ -7986,9 +15994,125 @@
      ],
      "cv": [
       2,
-      3
+      3,
+      8
+     ],
+     "l": [
+      9,
+      10,
+      11
      ]
     }
+   ],
+   "l": [
+    [
+     "Which room is the marketing session in?",
+     [
+      "Room 2, on the left.",
+      "Marketing is fun.",
+      "A room with a view."
+     ],
+     0
+    ],
+    [
+     "What time does the first session start?",
+     [
+      "At nine sharp.",
+      "First come, first served.",
+      "It started yesterday."
+     ],
+     0
+    ],
+    [
+     "Is there a break before lunch?",
+     [
+      "Yes, fifteen minutes at 10:45.",
+      "Don't break it.",
+      "Lunch is free."
+     ],
+     0
+    ],
+    [
+     "Who's speaking after Dr. Lim?",
+     [
+      "Ms. Ford, from the sales team.",
+      "Speak up.",
+      "After lunch."
+     ],
+     0
+    ],
+    [
+     "Can I still sign up for the workshop?",
+     [
+      "Only if there are seats left.",
+      "Sign the paper.",
+      "A workshop on Monday."
+     ],
+     0
+    ],
+    [
+     "Which plan do you recommend?",
+     [
+      "The Standard one, for a team your size.",
+      "I plan to go.",
+      "Recommend it to me."
+     ],
+     0
+    ],
+    [
+     "Is there a free trial?",
+     [
+      "Yes, for thirty days.",
+      "Free of charge.",
+      "The trial was long."
+     ],
+     0
+    ],
+    [
+     "Can I cancel at any time?",
+     [
+      "Yes, there's no contract.",
+      "Cancel the meeting.",
+      "Any time is fine."
+     ],
+     0
+    ],
+    [
+     "How much is the Premium plan?",
+     [
+      "Twenty dollars a month.",
+      "Premium gas.",
+      "Plan B."
+     ],
+     0
+    ],
+    [
+     "Which platform does the Oxford train leave from?",
+     [
+      "Platform 4, I think.",
+      "Platform shoes.",
+      "Oxford is far."
+     ],
+     0
+    ],
+    [
+     "Do I need to change trains?",
+     [
+      "Yes, once, in Manchester.",
+      "Change is good.",
+      "Train hard."
+     ],
+     0
+    ],
+    [
+     "Is there a direct train to the airport?",
+     [
+      "Every thirty minutes.",
+      "Direct me.",
+      "The airport is new."
+     ],
+     0
+    ]
    ]
   },
   {
@@ -8104,6 +16228,182 @@
      ],
      0,
      "over + montant = de plus de."
+    ],
+    [
+     "Please specify any dietary ___ when ordering.",
+     [
+      "requirements",
+      "require",
+      "required",
+      "requiring"
+     ],
+     0,
+     "Nom pluriel : dietary requirements."
+    ],
+    [
+     "Orders over $200 qualify ___ free delivery.",
+     [
+      "for",
+      "to",
+      "at",
+      "with"
+     ],
+     0,
+     "qualify for."
+    ],
+    [
+     "The menu can be ___ to your needs.",
+     [
+      "adapted",
+      "adapt",
+      "adapting",
+      "adaptation"
+     ],
+     0,
+     "Passif : can be adapted."
+    ],
+    [
+     "A deposit is required to ___ your order.",
+     [
+      "confirm",
+      "confirmation",
+      "confirmed",
+      "confirming"
+     ],
+     0,
+     "to + base verbale."
+    ],
+    [
+     "Cancellations must be made 24 hours ___ advance.",
+     [
+      "in",
+      "at",
+      "on",
+      "by"
+     ],
+     0,
+     "in advance = à l'avance."
+    ],
+    [
+     "Delivery is ___ for orders within the city.",
+     [
+      "available",
+      "avail",
+      "availability",
+      "availably"
+     ],
+     0,
+     "Adjectif : available."
+    ],
+    [
+     "Tenants are reminded to keep the hallways ___.",
+     [
+      "clear",
+      "clearly",
+      "clearing",
+      "clearance"
+     ],
+     0,
+     "keep + objet + adjectif."
+    ],
+    [
+     "The water will be shut ___ from 9 a.m. to noon.",
+     [
+      "off",
+      "out",
+      "down",
+      "up"
+     ],
+     0,
+     "shut off = couper (l'eau)."
+    ],
+    [
+     "Bicycles may not be stored ___ the stairwell.",
+     [
+      "in",
+      "at",
+      "on to",
+      "by"
+     ],
+     0,
+     "in the stairwell = dans la cage d'escalier."
+    ],
+    [
+     "The building manager can be ___ at extension 12.",
+     [
+      "reached",
+      "reach",
+      "reaching",
+      "reaches"
+     ],
+     0,
+     "Passif : can be reached."
+    ],
+    [
+     "Please make payment ___ the due date.",
+     [
+      "before",
+      "until",
+      "since",
+      "during"
+     ],
+     0,
+     "before = avant."
+    ],
+    [
+     "Late payments are subject to a 5% ___.",
+     [
+      "fee",
+      "fees of",
+      "feed",
+      "fed"
+     ],
+     0,
+     "Nom : a 5% fee."
+    ],
+    [
+     "The invoice ___ all items delivered in May.",
+     [
+      "lists",
+      "list",
+      "listing",
+      "listed by"
+     ],
+     0,
+     "Présent 3e personne : lists."
+    ],
+    [
+     "The goods were delivered ___ schedule.",
+     [
+      "on",
+      "at",
+      "in",
+      "by"
+     ],
+     0,
+     "on schedule = dans les temps."
+    ],
+    [
+     "Please ___ the invoice number in your payment.",
+     [
+      "include",
+      "inclusion",
+      "included",
+      "inclusive"
+     ],
+     0,
+     "Impératif → base verbale."
+    ],
+    [
+     "The second shipment is still ___.",
+     [
+      "pending",
+      "pend",
+      "pended",
+      "pendant"
+     ],
+     0,
+     "pending = en attente."
     ]
    ],
    "l": [
@@ -8131,6 +16431,87 @@
       "Yes, the premium menu.",
       "The training was useful.",
       "I'd like to, thanks."
+     ],
+     0
+    ],
+    [
+     "Did the caterer confirm the order?",
+     [
+      "Yes, this morning.",
+      "Order a taxi.",
+      "The caterer is busy."
+     ],
+     0
+    ],
+    [
+     "Are there vegetarian options?",
+     [
+      "Yes, three different dishes.",
+      "Options are open.",
+      "Vegetables are healthy."
+     ],
+     0
+    ],
+    [
+     "How many people is the lunch for?",
+     [
+      "About forty.",
+      "Lunch is at noon.",
+      "Many people."
+     ],
+     0
+    ],
+    [
+     "When should we place the order?",
+     [
+      "By Wednesday at the latest.",
+      "Place it here.",
+      "In order."
+     ],
+     0
+    ],
+    [
+     "Will the water be off all day?",
+     [
+      "No, only in the morning.",
+      "Water the plants.",
+      "All day long."
+     ],
+     0
+    ],
+    [
+     "Where should we put our recycling?",
+     [
+      "In the bins behind the building.",
+      "Recycle it.",
+      "Put it on."
+     ],
+     0
+    ],
+    [
+     "Who do I call about a broken heater?",
+     [
+      "The building manager.",
+      "Call me Heater.",
+      "It's broken."
+     ],
+     0
+    ],
+    [
+     "Has the client paid the invoice?",
+     [
+      "Not yet, it's due on Friday.",
+      "Pay attention.",
+      "An invoice number."
+     ],
+     0
+    ],
+    [
+     "Why was the delivery split in two?",
+     [
+      "Some items were out of stock.",
+      "Split the bill.",
+      "Deliver it twice."
      ],
      0
     ]
@@ -8233,6 +16614,87 @@
        "« I'll be at the client's all day tomorrow »."
       ]
      ]
+    },
+    {
+     "x": "DOCUMENT 1 — Price list\nCityBites Catering: Sandwich platter $8/person · Hot buffet $15/person · Delivery free over $300.\n\nDOCUMENT 2 — E-mail\nFrom: Ken Ito\nPlease send a hot buffet for 18 people to our office on Friday at noon.\n\nDOCUMENT 3 — Receipt\nCityBites — Order 882 — Hot buffet × 18 = $270 — Delivery fee: $25 — Total: $295",
+     "q": [
+      [
+       "What did Mr. Ito order?",
+       [
+        "A hot buffet",
+        "Sandwich platters",
+        "Drinks only",
+        "A dessert tray"
+       ],
+       0,
+       "« Please send a hot buffet »."
+      ],
+      [
+       "Why did Mr. Ito pay a delivery fee?",
+       [
+        "His order was under $300",
+        "He ordered on a weekend",
+        "He changed the time",
+        "His office is outside the city"
+       ],
+       0,
+       "Livraison gratuite au-dessus de 300 $ ; sa commande fait 270 $."
+      ]
+     ]
+    },
+    {
+     "x": "DOCUMENT 1 — Notice\nWindow cleaning: east side on Tuesday, west side on Thursday. Please close your blinds.\n\nDOCUMENT 2 — E-mail\nFrom: Rita Gomez, Office 6E\nOur office is on the east side. We have an important video call on Tuesday morning. Could the cleaning be done in the afternoon?\n\nDOCUMENT 3 — Reply\nDear Ms. Gomez, the cleaners will do your floor after 2 p.m. on Tuesday.",
+     "q": [
+      [
+       "When will Ms. Gomez's windows be cleaned?",
+       [
+        "On Tuesday afternoon",
+        "On Tuesday morning",
+        "On Thursday",
+        "On Wednesday"
+       ],
+       0,
+       "Côté est = mardi, et la réponse dit « after 2 p.m. »."
+      ],
+      [
+       "Why did Ms. Gomez write the e-mail?",
+       [
+        "To change the time of a service",
+        "To complain about dirty windows",
+        "To book a meeting room",
+        "To ask for new blinds"
+       ],
+       0,
+       "Elle demande que le nettoyage soit fait l'après-midi."
+      ]
+     ]
+    },
+    {
+     "x": "DOCUMENT 1 — Order form\nOffice Plus — 10 desk chairs ($90 each), 5 lamps ($30 each).\n\nDOCUMENT 2 — Delivery note\nDelivered on June 3: 10 desk chairs. Lamps: out of stock, to be sent on June 10.\n\nDOCUMENT 3 — Invoice\nOffice Plus — Invoice 5521 — Amount due: $900 — Due date: July 3",
+     "q": [
+      [
+       "What was NOT delivered on June 3?",
+       [
+        "The lamps",
+        "The chairs",
+        "The invoice",
+        "The desks"
+       ],
+       0,
+       "Les lampes sont en rupture, envoyées le 10 juin."
+      ],
+      [
+       "Why is the amount due $900?",
+       [
+        "Only the chairs have been billed",
+        "A discount was applied",
+        "The lamps were free",
+        "Delivery was included"
+       ],
+       0,
+       "10 chaises × 90 $ = 900 $ : les lampes ne sont pas encore facturées."
+      ]
+     ]
     }
    ],
    "parts": [
@@ -8240,7 +16702,13 @@
      "t": "Commandes et traiteur",
      "c": [
       0,
-      2
+      2,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
      ],
      "v": [
       3,
@@ -8251,6 +16719,13 @@
       2
      ],
      "l": [
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "rd": [
       2
      ]
     },
@@ -8258,7 +16733,11 @@
      "t": "Avis aux occupants",
      "c": [
       1,
-      3
+      3,
+      12,
+      13,
+      14,
+      15
      ],
      "v": [
       1,
@@ -8268,23 +16747,40 @@
       1
      ],
      "l": [
-      1
+      1,
+      7,
+      8,
+      9
+     ],
+     "rd": [
+      3
      ]
     },
     {
      "t": "Factures et livraisons",
      "c": [
       4,
-      5
+      5,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
      ],
      "v": [
       0,
       5
      ],
      "l": [
-      0
+      0,
+      10,
+      11
      ],
-     "p": []
+     "p": [],
+     "rd": [
+      4
+     ]
     }
    ]
   }
