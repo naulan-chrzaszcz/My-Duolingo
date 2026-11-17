@@ -102,6 +102,23 @@ export const FB = {
 };
 export function take(ctx, k) {
   const a = ctx[k];
+  // v37 : dans une leçon, une phrase à trou (QCM ou « repère l'erreur ») est prise parmi les moins utilisées,
+  // jamais celle de l'exercice précédent : chacune sert une fois avant qu'une autre ne revienne
+  if (ctx.cap && (k === "c" || k === "cs") && a.length > 1) {
+    const u = ctx.uses || (ctx.uses = new Map());
+    let best = null,
+      bn = Infinity;
+    for (const it of shuffle(a)) {
+      if (it === ctx.prevIt) continue;
+      const n = u.get(it) || 0;
+      if (n < bn) [best, bn] = [it, n];
+    }
+    u.set(best, bn + 1);
+    ctx.prevIt = best;
+    ctx.last = best;
+    ctx.ptr[k]++;
+    return best;
+  }
   const it = a[ctx.ptr[k] % a.length];
   ctx.last = it;
   ctx.ptr[k]++;
@@ -179,8 +196,15 @@ export function make0(t, ctx) {
     const k = NEED[x],
       a = ctx[k];
     // une conversation ou un texte sert une fois par question
-    const lim = k === "cv" || k === "rd" ? a.reduce((s, it) => s + ((it && it.q) || []).length, 0) : ctx.cap * a.length;
-    return a && a.length && !(ctx.cap && x !== "match" && (ctx.ptr[k] || 0) >= lim);
+    // une conversation ou un texte sert une fois par question, une dictée une seule fois ;
+    // une phrase à trou sert au plus ctx.cap fois en tout, en QCM (c) comme en « repère l'erreur » (cs)
+    if (!a || !a.length) return false;
+    if (!ctx.cap || x === "match") return true;
+    const used = k === "c" || k === "cs" ? (ctx.ptr.c || 0) + (ctx.ptr.cs || 0) : ctx.ptr[k] || 0;
+    const n = k === "cs" ? Math.max(a.length, (ctx.c || []).length) : a.length;
+    const lim =
+      k === "cv" || k === "rd" ? a.reduce((s, it) => s + ((it && it.q) || []).length, 0) : k === "d" ? n : ctx.cap * n;
+    return used < lim;
   };
   t = order.find(ok);
   if (!t) return null;
@@ -274,7 +298,9 @@ export function make0(t, ctx) {
     };
     const first = take(ctx, "cs");
     // v33 : une fois sur deux, 2 ou 3 phrases à la suite, avec de 0 à 3 fautes à trouver
-    const n = !ctx.spot1 && (ctx.cs || []).length >= 3 && Math.random() < 0.5 ? (Math.random() < 0.7 ? 2 : 3) : 1;
+    let n = !ctx.spot1 && (ctx.cs || []).length >= 3 && Math.random() < 0.5 ? (Math.random() < 0.7 ? 2 : 3) : 1;
+    // v37 : dans une leçon, on ne dépasse pas le nombre d'utilisations permis pour ses phrases
+    if (ctx.cap) n = Math.min(n, 1 + ctx.cap * ctx.cs.length - ((ctx.ptr.c || 0) + (ctx.ptr.cs || 0)));
     if (n > 1) {
       const cs = [first];
       for (let i = 1; i < n; i++) {
