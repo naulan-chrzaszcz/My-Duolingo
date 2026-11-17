@@ -1,0 +1,68 @@
+# Tests à chaque pull request et à chaque envoi sur main (appelé aussi par deploy.yml avant la mise en production).
+name: Tests
+
+on:
+  pull_request:
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # la migration est testée depuis le serveur de la v36
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: PHP + SQLite (serveur de test)
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          extensions: pdo_sqlite, sqlite3, curl, mbstring, openssl
+          tools: none
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dépendances
+        run: |
+          npm install --no-audit --no-fund
+          pip install playwright==1.49.1
+          python -m playwright install --with-deps chromium
+
+      - name: Construction et TypeScript
+        run: npm run check
+
+      - name: Tests rapides (contenu, leçons uniques, serveur, parcours)
+        run: npm test
+
+      - name: Migration d'une base v36 vers la version courante
+        run: |
+          set -e
+          T=$(mktemp -d); mkdir -p $T/old/data
+          git show 981de5f:server/api/account.php > $T/old/account.php
+          (cd $T/old && php -r '$_GET["a"]="ping"; $_SERVER["REQUEST_METHOD"]="GET"; include "account.php";')
+          php -r '$d=new PDO("sqlite:'$T'/old/data/speakeasy.sqlite"); $d->exec("INSERT INTO users(name,pass,xp) VALUES(\"test\",\"x\",42)");'
+          php server/api/migrate-cli.php $T/old/data/speakeasy.sqlite
+          php -r '$d=new PDO("sqlite:'$T'/old/data/speakeasy.sqlite"); exit($d->query("SELECT xp FROM users WHERE name=\"test\"")->fetchColumn()==42 ? 0 : 1);'
+          ls $T/old/data/speakeasy-avant-*.sqlite
+
+      - name: Journaux des tests
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tests-out
+          path: tests/out/

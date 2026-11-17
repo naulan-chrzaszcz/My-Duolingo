@@ -102,6 +102,23 @@ export const FB = {
 };
 export function take(ctx, k) {
   const a = ctx[k];
+  // v37 : dans une leçon, une phrase à trou (QCM ou « repère l'erreur ») est prise parmi les moins utilisées,
+  // jamais celle de l'exercice précédent : chacune sert une fois avant qu'une autre ne revienne
+  if (ctx.cap && (k === "c" || k === "cs") && a.length > 1) {
+    const u = ctx.uses || (ctx.uses = new Map());
+    let best = null,
+      bn = Infinity;
+    for (const it of shuffle(a)) {
+      if (it === ctx.prevIt) continue;
+      const n = u.get(it) || 0;
+      if (n < bn) [best, bn] = [it, n];
+    }
+    u.set(best, bn + 1);
+    ctx.prevIt = best;
+    ctx.last = best;
+    ctx.ptr[k]++;
+    return best;
+  }
   const it = a[ctx.ptr[k] % a.length];
   ctx.last = it;
   ctx.ptr[k]++;
@@ -174,7 +191,22 @@ export function make0(t, ctx) {
       t = ctx.c && ctx.c.length ? "choice" : ctx.rd && ctx.rd.length ? "read" : t;
   }
   const order = [t, ...(FB[t] || []), "choice", "mc", "dictee"];
-  t = order.find(x => ctx[NEED[x]] && ctx[NEED[x]].length);
+  // v37 : dans une leçon (ctx.cap), un même élément ne sert pas plus de ctx.cap fois : on passe au type suivant
+  const ok = x => {
+    const k = NEED[x],
+      a = ctx[k];
+    // une conversation ou un texte sert une fois par question
+    // une conversation ou un texte sert une fois par question, une dictée une seule fois ;
+    // une phrase à trou sert au plus ctx.cap fois en tout, en QCM (c) comme en « repère l'erreur » (cs)
+    if (!a || !a.length) return false;
+    if (!ctx.cap || x === "match") return true;
+    const used = k === "c" || k === "cs" ? (ctx.ptr.c || 0) + (ctx.ptr.cs || 0) : ctx.ptr[k] || 0;
+    const n = k === "cs" ? Math.max(a.length, (ctx.c || []).length) : a.length;
+    const lim =
+      k === "cv" || k === "rd" ? a.reduce((s, it) => s + ((it && it.q) || []).length, 0) : k === "d" ? n : ctx.cap * n;
+    return used < lim;
+  };
+  t = order.find(ok);
   if (!t) return null;
   if (t === "match") {
     // jamais deux fois le même mot à gauche ou à droite (un mot peut figurer dans deux unités, parfois avec deux sens)
@@ -241,7 +273,11 @@ export function make0(t, ctx) {
   }
   if (t === "conv" || t === "read") {
     const it = take(ctx, t === "conv" ? "cv" : "rd");
-    const qq = rnd(it.q);
+    // v37 : dans une leçon, chaque passage d'un même texte pose une autre question
+    const qu = ctx.qUsed || (ctx.qUsed = new Map());
+    const j = qu.has(it) ? qu.get(it) : Math.floor(Math.random() * it.q.length);
+    qu.set(it, j + 1);
+    const qq = ctx.cap ? it.q[j % it.q.length] : rnd(it.q);
     return { t, lang, d: it.d, x: it.x, g: it.g, q: qq[0], answer: qq[1][qq[2]], options: shuffle(qq[1]), e: qq[3] };
   }
   if (t === "spot") {
@@ -258,11 +294,25 @@ export function make0(t, ctx) {
         q = q.slice(0, m.index);
       }
       const [before, after] = q.split("___");
-      return { before, after: after || "", chunk: faulty ? rnd(others) : right, right, faulty, e: c[3], hint, q: c[0] };
+      const r = {
+        before,
+        after: after || "",
+        chunk: faulty ? rnd(others) : right,
+        right,
+        faulty,
+        e: c[3],
+        hint,
+        q: c[0],
+      };
+      if (c._sub) r._sub = c._sub; // phrase générée (notion de grammaire)
+      return r;
     };
     const first = take(ctx, "cs");
     // v33 : une fois sur deux, 2 ou 3 phrases à la suite, avec de 0 à 3 fautes à trouver
-    const n = !ctx.spot1 && (ctx.cs || []).length >= 3 && Math.random() < 0.5 ? (Math.random() < 0.7 ? 2 : 3) : 1;
+    let n = !ctx.spot1 && (ctx.cs || []).length >= 3 && Math.random() < 0.5 ? (Math.random() < 0.7 ? 2 : 3) : 1;
+    // v37 : dans une leçon, on ne dépasse pas le nombre d'utilisations permis pour ses phrases
+    // et au plus 2 phrases à la suite, s'il reste assez d'utilisations pour les exercices suivants
+    if (ctx.cap) n = Math.min(n, 2, Math.max(1, ctx.cap * ctx.cs.length - ((ctx.ptr.c || 0) + (ctx.ptr.cs || 0)) - 2));
     if (n > 1) {
       const cs = [first];
       for (let i = 1; i < n; i++) {

@@ -25,10 +25,9 @@ function vapid($file) {
   return $v;
 }
 
+require_once __DIR__ . '/migrate.php';
 try {
-  $db = new PDO('sqlite:' . $DB_PATH);
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $db->exec('CREATE TABLE IF NOT EXISTS subs(endpoint TEXT PRIMARY KEY, uid INTEGER, hour INTEGER, tz INTEGER, last_day TEXT DEFAULT "", created INTEGER)');
+  $db = speakeasy_db($DB_PATH);
 } catch (Exception $e) { out(['ok' => false, 'error' => 'db'], 500); }
 
 $a = $_GET['a'] ?? '';

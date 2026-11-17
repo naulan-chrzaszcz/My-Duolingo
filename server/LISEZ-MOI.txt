@@ -100,9 +100,47 @@ Tout est stocké sur le serveur, dans la base SQLite de api/account.php (aucune 
   premiers gagnent une médaille définitive, et chaque joueur voit son résultat à sa prochaine visite
   (+50 / +30 / +20 gemmes pour le podium).
 - La base existante est mise à jour toute seule au premier appel (nouvelles colonnes et tables).
+  Depuis la v37, une copie de sauvegarde est faite juste avant, dans api/data/
+  (speakeasy-avant-v<N>-depuis-v<M>-<date>.sqlite). Les données ne sont jamais supprimées.
 - Pour vérifier que le serveur de comptes répond : ouvre  .../speakeasy/api/account.php?a=ping
   dans un navigateur. La réponse doit être {"ok":true}. Sinon : PHP ou l'extension pdo_sqlite manque,
   ou le dossier api/data/ n'est pas accessible en écriture par le serveur web.
+
+=== Mise en production automatique (v37, GitHub Actions) ===
+Chaque fusion sur la branche main lance .github/workflows/deploy.yml :
+  1. tous les tests rapides (et un essai de migration d'une base de la v36) ;
+  2. le zip de production ;
+  3. envoi par SSH au VPS, puis deploy-fedora.sh, qui :
+     - sauvegarde le site et la base dans /var/backups/speakeasy (10 dernières versions) ;
+     - remplace les fichiers SANS toucher à api/data/ (base, config.php, clés des rappels) ;
+     - remet les droits et les contextes SELinux ;
+     - migre la base (api/migrate-cli.php : copie de sauvegarde puis ajouts seulement, rien n'est supprimé) ;
+     - vérifie que l'API répond, et remet les fichiers précédents en place sinon ;
+  4. vérifie depuis Internet que .../speakeasy/api/account.php?a=ping répond.
+On peut aussi la lancer à la main : GitHub > Actions > « Mise en production » > Run workflow.
+Sans GitHub, même chose à la main sur le VPS :  sudo bash deploy-fedora.sh speakeasy-production.zip
+
+Configuration, une seule fois :
+  a) Sur le VPS, en root : un utilisateur dédié, autorisé à lancer la mise à jour sans mot de passe.
+        useradd -m deploy
+        install -d -m 700 -o deploy -g deploy /home/deploy/.ssh
+        echo 'deploy ALL=(root) NOPASSWD: ALL' > /etc/sudoers.d/speakeasy-deploy && chmod 440 /etc/sudoers.d/speakeasy-deploy
+     (ou utilise directement root si la connexion SSH root par clé est déjà ouverte)
+  b) Sur ton ordinateur : une clé réservée au déploiement.
+        ssh-keygen -t ed25519 -N '' -f speakeasy-deploy -C github-deploy
+        ssh-copy-id -i speakeasy-deploy.pub deploy@IP_DU_VPS
+        ssh-keyscan -p 22 IP_DU_VPS          (copie toute la sortie)
+  c) Dans GitHub > Settings > Secrets and variables > Actions :
+        Secrets    VPS_HOST         IP ou nom du VPS
+                   VPS_USER         deploy (ou root)
+                   VPS_SSH_KEY      contenu du fichier speakeasy-deploy (clé PRIVÉE)
+                   VPS_KNOWN_HOSTS  sortie de ssh-keyscan (empêche une usurpation du serveur)
+        Variables  VPS_PORT (22), SITE_DIR (/var/www/html/speakeasy), SITE_URL
+                   (https://www.naulan-chrzaszcz.fr/speakeasy) : à renseigner seulement si différents.
+  d) Facultatif : GitHub > Settings > Environments > production > Required reviewers, pour valider
+     chaque mise en production d'un clic.
+Restaurer une sauvegarde : arrêter Apache, copier /var/backups/speakeasy/speakeasy-<date>.sqlite sur
+api/data/speakeasy.sqlite (propriétaire apache), relancer Apache.
 
 === Exercices d'écoute et de micro ===
 « Pas de son » (écoute) et « Plus tard » (micro) mettent ces exercices en pause 15 minutes sans

@@ -48,6 +48,7 @@ const copy = (from, to) => fs.cpSync(path.join(ROOT, from), path.join(DIST, to),
 copy('public', '.');
 copy('server/api', 'api');
 copy('server/installer-fedora.sh', 'installer-fedora.sh');
+copy('server/deploy-fedora.sh', 'deploy-fedora.sh');
 copy('server/LISEZ-MOI.txt', 'LISEZ-MOI.txt');
 fs.rmSync(path.join(DIST, 'api/data/speakeasy.sqlite'), { force: true });
 fs.rmSync(path.join(DIST, 'api/data/vapid.json'), { force: true });

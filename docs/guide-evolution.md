@@ -142,3 +142,19 @@ Insérer une unité au milieu est possible : la progression des profils est reca
 - Un nouveau module peut être un fichier `.ts` : `src/exercises/hangul.ts` sert d'exemple.
 - Les autres modules l'importent avec l'extension `.js` (`import { hgCompose } from './hangul.js'`) : esbuild trouve le `.ts`.
 - `npm run check` vérifie les types des fichiers `.ts`. Les types communs sont dans `src/types.ts`.
+
+## Ajouter du contenu à une unité (v37)
+
+Chaque leçon d'une unité travaille sa propre tranche des listes de l'unité : pour que les leçons restent pleines et différentes, il faut environ 3 phrases (cours de traduction), 2 QCM et 1 question Part 2 (TOEIC), 3 à 4 QCM et 1 dictée (Voltaire) par leçon, soit 5, 4 et 3 leçons pour les unités 1, 2 et 3 d'un thème.
+
+1. Écrire les ajouts dans un fichier texte (format décrit en tête de `scripts/add-content.py`).
+2. `python3 scripts/add-content.py ajout.txt` : chaque élément est ajouté au thème et rattaché à son unité, avec ses traductions.
+3. Pour Voltaire, reprendre mot pour mot une explication existante quand la règle est la même : elle est déjà traduite.
+4. Vérifier avec `node tests/run.mjs unit_parts` puis `node tests/run.mjs lesson_unique`.
+
+## Changer la base de données du serveur (v37)
+
+1. Ajouter une étape à la fin de `speakeasy_migrations()` dans `server/api/migrate.php`, numérotée à la suite (2, 3…).
+2. N'y mettre que des ajouts : `CREATE TABLE IF NOT EXISTS`, `speakeasy_add_column(...)`, reprise des données. Ne jamais supprimer ni renommer.
+3. Ne jamais modifier une étape déjà publiée : une base peut venir de n'importe quelle version précédente.
+4. La copie de sauvegarde est faite automatiquement avant la migration. Tester en ouvrant une base de la version précédente (voir l'historique), puis `node tests/run.mjs server`.

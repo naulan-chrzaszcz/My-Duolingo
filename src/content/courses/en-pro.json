@@ -102,6 +102,108 @@
      "Merci d'avance pour votre aide.",
      "Thank you in advance for your help.",
      "Thanks in advance for your help."
+    ],
+    [
+     "Bonjour à tous,",
+     "Hello everyone,",
+     "Hi everyone,",
+     "Hi all,"
+    ],
+    [
+     "Je me permets de vous écrire de la part de Marc.",
+     "I'm writing to you on behalf of Marc.",
+     "I am writing to you on behalf of Marc."
+    ],
+    [
+     "Suite à notre appel de ce matin,",
+     "Following our call this morning,",
+     "Further to our call this morning,"
+    ],
+    [
+     "Merci pour votre message.",
+     "Thank you for your message.",
+     "Thanks for your message."
+    ],
+    [
+     "Je vous écris pour vous informer d'un changement.",
+     "I'm writing to inform you of a change.",
+     "I am writing to let you know about a change.",
+     "I'm writing to let you know about a change."
+    ],
+    [
+     "Madame, Monsieur,",
+     "Dear Sir or Madam,",
+     "Dear Sir/Madam,"
+    ],
+    [
+     "J'espère que vous avez passé un bon week-end.",
+     "I hope you had a good weekend.",
+     "I hope you had a nice weekend."
+    ],
+    [
+     "Je reviens vers vous concernant votre demande.",
+     "I'm getting back to you regarding your request.",
+     "I am getting back to you about your request."
+    ],
+    [
+     "Je suis la nouvelle responsable du compte.",
+     "I'm the new account manager.",
+     "I am the new account manager."
+    ],
+    [
+     "Je vous contacte au sujet de la réunion de jeudi.",
+     "I'm contacting you about Thursday's meeting.",
+     "I am contacting you about the meeting on Thursday."
+    ],
+    [
+     "Vous trouverez le devis en pièce jointe.",
+     "Please find the quote attached.",
+     "You will find the quote attached.",
+     "Attached is the quote."
+    ],
+    [
+     "J'ai oublié la pièce jointe, la voici.",
+     "I forgot the attachment, here it is.",
+     "I forgot to attach the file, here it is."
+    ],
+    [
+     "Le fichier est trop lourd, je vous envoie un lien.",
+     "The file is too large, I'm sending you a link.",
+     "The file is too big, I'll send you a link."
+    ],
+    [
+     "Pourriez-vous me répondre avant vendredi ?",
+     "Could you reply before Friday?",
+     "Could you get back to me by Friday?",
+     "Could you answer before Friday?"
+    ],
+    [
+     "Pouvez-vous ouvrir le document ?",
+     "Can you open the document?",
+     "Are you able to open the document?"
+    ],
+    [
+     "Je vous renvoie le fichier corrigé.",
+     "I'm resending the corrected file.",
+     "I'm sending you the corrected file again.",
+     "Here is the corrected file again."
+    ],
+    [
+     "Bonne journée,",
+     "Have a nice day,",
+     "Have a good day,"
+    ],
+    [
+     "Je reste à votre disposition pour toute question.",
+     "I remain available for any questions.",
+     "I'm available if you have any questions.",
+     "I remain at your disposal for any questions."
+    ],
+    [
+     "Dans l'attente de votre réponse,",
+     "I look forward to your reply.",
+     "Looking forward to hearing from you,",
+     "I look forward to hearing from you."
     ]
    ],
    "v": [
@@ -253,7 +355,17 @@
       2,
       8,
       9,
-      10
+      10,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       1,
@@ -275,7 +387,13 @@
       6,
       11,
       12,
-      13
+      13,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
      ],
      "v": [
       0,
@@ -296,7 +414,10 @@
       4,
       5,
       7,
-      14
+      14,
+      31,
+      32,
+      33
      ],
      "v": [
       7,
@@ -400,6 +521,118 @@
      "What I like best is working in a team.",
      "What I like most is working in a team.",
      "My favorite part is teamwork."
+    ],
+    [
+     "Je travaille dans les ressources humaines.",
+     "I work in human resources.",
+     "I work in HR."
+    ],
+    [
+     "Je suis comptable dans une banque.",
+     "I'm an accountant at a bank.",
+     "I am an accountant in a bank."
+    ],
+    [
+     "Je dirige le service marketing.",
+     "I run the marketing department.",
+     "I head the marketing department.",
+     "I manage the marketing department."
+    ],
+    [
+     "Je suis consultante indépendante.",
+     "I'm a freelance consultant.",
+     "I am an independent consultant."
+    ],
+    [
+     "Je suis en stage pour six mois.",
+     "I'm doing a six-month internship.",
+     "I'm on a six-month internship.",
+     "I am doing an internship for six months."
+    ],
+    [
+     "Je m'occupe des relations avec les clients.",
+     "I handle client relations.",
+     "I take care of customer relations.",
+     "I'm in charge of client relations."
+    ],
+    [
+     "Je viens d'être promu.",
+     "I've just been promoted.",
+     "I have just been promoted.",
+     "I just got promoted."
+    ],
+    [
+     "Je travaille dans le secteur de la santé.",
+     "I work in the healthcare sector.",
+     "I work in healthcare.",
+     "I work in the health sector."
+    ],
+    [
+     "Mon poste s'appelle « chef de produit ».",
+     "My job title is \"product manager\".",
+     "My title is \"product manager\"."
+    ],
+    [
+     "Je suis en CDI depuis janvier.",
+     "I've had a permanent contract since January.",
+     "I've been on a permanent contract since January."
+    ],
+    [
+     "Mon équipe est répartie sur trois pays.",
+     "My team is spread across three countries.",
+     "My team is based in three countries."
+    ],
+    [
+     "Ma manageuse est très disponible.",
+     "My manager is very approachable.",
+     "My manager is always available.",
+     "My manager is very available."
+    ],
+    [
+     "Nous sommes une petite entreprise familiale.",
+     "We are a small family business.",
+     "We're a small family company.",
+     "We're a small family business."
+    ],
+    [
+     "Je travaille en étroite collaboration avec les ventes.",
+     "I work closely with sales.",
+     "I work closely with the sales team."
+    ],
+    [
+     "Notre équipe vient de recruter deux personnes.",
+     "Our team has just hired two people.",
+     "Our team just hired two people."
+    ],
+    [
+     "Nous avons des bureaux à Londres et à Berlin.",
+     "We have offices in London and Berlin.",
+     "We've got offices in London and Berlin."
+    ],
+    [
+     "Je gère une équipe de cinq développeurs.",
+     "I manage a team of five developers.",
+     "I lead a team of five developers."
+    ],
+    [
+     "Je déjeune souvent avec mes collègues.",
+     "I often have lunch with my colleagues.",
+     "I often eat lunch with my coworkers."
+    ],
+    [
+     "Mes horaires sont flexibles.",
+     "My hours are flexible.",
+     "I have flexible hours."
+    ],
+    [
+     "Je finis rarement avant dix-neuf heures.",
+     "I rarely finish before 7 p.m.",
+     "I rarely finish before seven p.m.",
+     "I seldom finish before 7 p.m."
+    ],
+    [
+     "Je passe beaucoup de temps au téléphone.",
+     "I spend a lot of time on the phone."
     ]
    ],
    "v": [
@@ -550,7 +783,17 @@
       1,
       2,
       8,
-      9
+      9,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       0,
@@ -570,7 +813,14 @@
       4,
       5,
       10,
-      11
+      11,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       1,
@@ -592,7 +842,11 @@
       7,
       12,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       3,
@@ -701,6 +955,118 @@
      "Let's touch base next week.",
      "We'll touch base next week.",
      "Let's check in next week."
+    ],
+    [
+     "Nous attendons encore deux personnes.",
+     "We're still waiting for two people.",
+     "We are still waiting for two people."
+    ],
+    [
+     "Commençons, nous avons peu de temps.",
+     "Let's get started, we don't have much time.",
+     "Let's begin, we're short on time."
+    ],
+    [
+     "L'objectif de cette réunion est de choisir un fournisseur.",
+     "The goal of this meeting is to choose a supplier.",
+     "The aim of this meeting is to choose a supplier.",
+     "The purpose of this meeting is to choose a supplier."
+    ],
+    [
+     "Je vous présente notre nouvelle collègue, Julie.",
+     "Let me introduce our new colleague, Julie.",
+     "This is our new colleague, Julie."
+    ],
+    [
+     "Qui prend des notes aujourd'hui ?",
+     "Who is taking notes today?",
+     "Who's taking notes today?"
+    ],
+    [
+     "La réunion durera une heure.",
+     "The meeting will last one hour.",
+     "The meeting will last an hour."
+    ],
+    [
+     "Tout le monde a reçu l'ordre du jour ?",
+     "Has everyone received the agenda?",
+     "Did everyone get the agenda?"
+    ],
+    [
+     "Je propose de commencer par le budget.",
+     "I suggest we start with the budget.",
+     "I propose starting with the budget."
+    ],
+    [
+     "Bienvenue à tous, merci d'être à l'heure.",
+     "Welcome, everyone, thank you for being on time.",
+     "Welcome everyone, thanks for being on time."
+    ],
+    [
+     "Je vous entends mal, pouvez-vous couper votre micro ?",
+     "I can't hear you well, can you mute your mic?",
+     "I can barely hear you, could you mute your microphone?"
+    ],
+    [
+     "Si je peux me permettre…",
+     "If I may…",
+     "If I may say so…"
+    ],
+    [
+     "J'aimerais revenir sur ce point.",
+     "I'd like to come back to this point.",
+     "I would like to go back to this point."
+    ],
+    [
+     "Je ne suis pas sûr d'avoir compris.",
+     "I'm not sure I understood.",
+     "I'm not sure I followed.",
+     "I am not sure I understood."
+    ],
+    [
+     "Pouvez-vous donner un exemple ?",
+     "Can you give an example?",
+     "Could you give us an example?"
+    ],
+    [
+     "Laissez-moi terminer ma phrase.",
+     "Let me finish my sentence.",
+     "Let me finish what I'm saying."
+    ],
+    [
+     "Je rejoins l'avis de Paul.",
+     "I agree with Paul.",
+     "I share Paul's view.",
+     "I'm with Paul on this."
+    ],
+    [
+     "Ce n'est pas tout à fait exact.",
+     "That's not quite right.",
+     "That's not entirely accurate.",
+     "That isn't quite right."
+    ],
+    [
+     "Nous n'avons plus de temps.",
+     "We're out of time.",
+     "We have run out of time.",
+     "We've run out of time."
+    ],
+    [
+     "Merci à tous pour votre participation.",
+     "Thank you all for taking part.",
+     "Thanks, everyone, for your participation.",
+     "Thank you all for your participation."
+    ],
+    [
+     "La prochaine réunion aura lieu lundi.",
+     "The next meeting will be on Monday.",
+     "The next meeting will take place on Monday."
+    ],
+    [
+     "Avez-vous d'autres questions ?",
+     "Do you have any other questions?",
+     "Are there any other questions?",
+     "Any other questions?"
     ]
    ],
    "v": [
@@ -852,7 +1218,17 @@
       1,
       8,
       9,
-      10
+      10,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       0,
@@ -876,7 +1252,14 @@
       3,
       4,
       11,
-      12
+      12,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       6,
@@ -899,7 +1282,11 @@
       6,
       7,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       1,
@@ -1012,6 +1399,123 @@
      "I'll make it a priority.",
      "I'll deal with it first.",
      "I'll prioritize it."
+    ],
+    [
+     "Le projet avance bien.",
+     "The project is going well.",
+     "The project is progressing well."
+    ],
+    [
+     "Nous avons pris un peu de retard.",
+     "We've fallen a little behind.",
+     "We're slightly behind.",
+     "We have fallen slightly behind."
+    ],
+    [
+     "Les tests sont terminés.",
+     "Testing is complete.",
+     "The tests are finished.",
+     "The tests are done."
+    ],
+    [
+     "Il reste encore beaucoup à faire.",
+     "There's still a lot to do.",
+     "There is still a lot to do.",
+     "We still have a lot to do."
+    ],
+    [
+     "Quelle est la prochaine étape ?",
+     "What's the next step?",
+     "What is the next step?"
+    ],
+    [
+     "Le client est satisfait du résultat.",
+     "The client is happy with the result.",
+     "The client is satisfied with the result."
+    ],
+    [
+     "Nous attendons le feu vert de la direction.",
+     "We're waiting for the green light from management.",
+     "We are waiting for management's approval.",
+     "We're waiting for the go-ahead from management."
+    ],
+    [
+     "J'ai mis à jour le planning.",
+     "I've updated the schedule.",
+     "I have updated the schedule.",
+     "I updated the schedule."
+    ],
+    [
+     "Nous sommes à mi-parcours.",
+     "We're halfway there.",
+     "We are halfway through.",
+     "We're halfway through."
+    ],
+    [
+     "Tout est prêt pour le lancement.",
+     "Everything is ready for the launch.",
+     "Everything's ready for the launch."
+    ],
+    [
+     "Nous ne serons pas prêts à temps.",
+     "We won't be ready on time.",
+     "We will not be ready in time.",
+     "We won't be ready in time."
+    ],
+    [
+     "Peut-on décaler la date de livraison ?",
+     "Can we push back the delivery date?",
+     "Could we postpone the delivery date?"
+    ],
+    [
+     "C'est un délai très serré.",
+     "It's a very tight deadline.",
+     "That's a very tight deadline."
+    ],
+    [
+     "Nous avons rattrapé notre retard.",
+     "We've caught up.",
+     "We have caught up.",
+     "We caught up."
+    ],
+    [
+     "La date limite est le quinze mars.",
+     "The deadline is March fifteenth.",
+     "The deadline is the fifteenth of March.",
+     "The deadline is March 15th."
+    ],
+    [
+     "Le fournisseur a une semaine de retard.",
+     "The supplier is a week late.",
+     "The supplier is one week behind."
+    ],
+    [
+     "Il faut accélérer.",
+     "We need to speed up.",
+     "We have to speed things up."
+    ],
+    [
+     "Commençons par l'essentiel.",
+     "Let's start with the essentials.",
+     "Let's start with what matters most."
+    ],
+    [
+     "Ce n'est pas notre priorité pour l'instant.",
+     "It's not our priority right now.",
+     "That's not a priority for now.",
+     "It is not our priority at the moment."
+    ],
+    [
+     "Qui peut s'en charger ?",
+     "Who can take care of it?",
+     "Who can handle it?",
+     "Who can take this on?"
+    ],
+    [
+     "On reporte ce sujet au mois prochain.",
+     "We'll postpone this until next month.",
+     "Let's push this to next month.",
+     "We're postponing this until next month."
     ]
    ],
    "v": [
@@ -1162,7 +1666,17 @@
       1,
       3,
       6,
-      8
+      8,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       0,
@@ -1185,7 +1699,14 @@
       7,
       9,
       10,
-      11
+      11,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       1,
@@ -1210,7 +1731,11 @@
       5,
       12,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       3,
@@ -1324,6 +1849,119 @@
      "Could you turn off your camera?",
      "Can you turn your camera off?",
      "Could you turn your camera off?"
+    ],
+    [
+     "Tu as deux minutes ?",
+     "Do you have two minutes?",
+     "Got a minute?",
+     "Have you got two minutes?"
+    ],
+    [
+     "Je te mets le lien ici.",
+     "I'll drop the link here.",
+     "I'm putting the link here.",
+     "Here's the link."
+    ],
+    [
+     "C'est noté, merci !",
+     "Noted, thanks!",
+     "Got it, thanks!"
+    ],
+    [
+     "Je regarde ça dans l'après-midi.",
+     "I'll look at it this afternoon.",
+     "I'll take a look this afternoon."
+    ],
+    [
+     "Désolé pour le délai de réponse.",
+     "Sorry for the slow reply.",
+     "Sorry for the late reply.",
+     "Sorry for the delay in replying."
+    ],
+    [
+     "Je t'envoie un message privé.",
+     "I'll send you a direct message.",
+     "I'll DM you.",
+     "I'm sending you a private message."
+    ],
+    [
+     "Qui s'occupe de ce sujet ?",
+     "Who's handling this?",
+     "Who is working on this?",
+     "Who's in charge of this?"
+    ],
+    [
+     "Je partage ça avec l'équipe.",
+     "I'll share this with the team.",
+     "I'm sharing this with the team."
+    ],
+    [
+     "Pas d'urgence, réponds quand tu peux.",
+     "No urgency, reply when you can.",
+     "Not urgent, answer when you can."
+    ],
+    [
+     "J'ai mis à jour le canal du projet.",
+     "I've updated the project channel.",
+     "I updated the project channel."
+    ],
+    [
+     "Je suis en réunion jusqu'à midi.",
+     "I'm in meetings until noon.",
+     "I'm in a meeting until noon.",
+     "I am in a meeting until noon."
+    ],
+    [
+     "Je serai joignable sur mon portable.",
+     "I'll be reachable on my mobile.",
+     "You can reach me on my cell.",
+     "I'll be reachable on my cell phone."
+    ],
+    [
+     "Je pars plus tôt aujourd'hui.",
+     "I'm leaving early today.",
+     "I'm leaving earlier today."
+    ],
+    [
+     "Mon calendrier est à jour.",
+     "My calendar is up to date.",
+     "My calendar is up-to-date."
+    ],
+    [
+     "Je ne suis pas disponible demain matin.",
+     "I'm not available tomorrow morning.",
+     "I am not available tomorrow morning."
+    ],
+    [
+     "Je travaille au bureau mardi et jeudi.",
+     "I work in the office on Tuesdays and Thursdays.",
+     "I'm in the office on Tuesday and Thursday."
+    ],
+    [
+     "Je suis en déplacement cette semaine.",
+     "I'm traveling for work this week.",
+     "I'm on a business trip this week.",
+     "I'm away on business this week."
+    ],
+    [
+     "Je vous envoie le lien de la réunion.",
+     "I'll send you the meeting link.",
+     "I'm sending you the link to the meeting."
+    ],
+    [
+     "Votre écran est figé.",
+     "Your screen is frozen.",
+     "Your screen has frozen."
+    ],
+    [
+     "On vous voit mal, il y a un contre-jour.",
+     "We can't see you well, you're backlit.",
+     "We can barely see you, there's light behind you."
+    ],
+    [
+     "Je vais enregistrer la réunion.",
+     "I'm going to record the meeting.",
+     "I'll record the meeting."
     ]
    ],
    "v": [
@@ -1478,7 +2116,17 @@
       2,
       4,
       8,
-      9
+      9,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       0,
@@ -1499,7 +2147,14 @@
       3,
       10,
       11,
-      12
+      12,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       1,
@@ -1519,7 +2174,11 @@
       6,
       7,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       3,
@@ -1627,6 +2286,115 @@
      "I've added a screenshot.",
      "I added a screenshot.",
      "I have added a screenshot."
+    ],
+    [
+     "Hier, j'ai relu la pull request de Tom.",
+     "Yesterday I reviewed Tom's pull request.",
+     "Yesterday, I reviewed Tom's pull request."
+    ],
+    [
+     "J'ai presque fini la nouvelle fonctionnalité.",
+     "I've almost finished the new feature.",
+     "I have nearly finished the new feature.",
+     "I'm almost done with the new feature."
+    ],
+    [
+     "Aujourd'hui, je m'occupe des tests.",
+     "Today I'm working on the tests.",
+     "Today, I'm taking care of the tests."
+    ],
+    [
+     "J'ai déployé la correction en production.",
+     "I deployed the fix to production.",
+     "I've deployed the fix to production."
+    ],
+    [
+     "Je continue sur le même ticket.",
+     "I'm continuing on the same ticket.",
+     "I'm still on the same ticket."
+    ],
+    [
+     "J'ai une réunion avec le client cet après-midi.",
+     "I have a meeting with the client this afternoon.",
+     "I've got a client meeting this afternoon."
+    ],
+    [
+     "C'est terminé, il reste juste la revue.",
+     "It's done, it just needs a review.",
+     "It's finished, only the review is left.",
+     "It's done, just the review left."
+    ],
+    [
+     "J'ai commencé la documentation.",
+     "I've started the documentation.",
+     "I started the documentation."
+    ],
+    [
+     "Rien de nouveau depuis hier.",
+     "Nothing new since yesterday."
+    ],
+    [
+     "Je serai absent demain après-midi.",
+     "I'll be off tomorrow afternoon.",
+     "I will be away tomorrow afternoon.",
+     "I'll be out tomorrow afternoon."
+    ],
+    [
+     "Je n'ai pas les droits d'accès.",
+     "I don't have access rights.",
+     "I don't have the access rights.",
+     "I don't have permission."
+    ],
+    [
+     "Le serveur de test ne répond plus.",
+     "The test server isn't responding.",
+     "The test server is not responding anymore.",
+     "The staging server isn't responding."
+    ],
+    [
+     "J'attends la validation du design.",
+     "I'm waiting for the design to be approved.",
+     "I'm waiting for design approval."
+    ],
+    [
+     "Le build échoue depuis ce matin.",
+     "The build has been failing since this morning.",
+     "The build's been failing since this morning."
+    ],
+    [
+     "Quelqu'un a déjà eu cette erreur ?",
+     "Has anyone had this error before?",
+     "Has anybody seen this error before?"
+    ],
+    [
+     "Il me manque des informations.",
+     "I'm missing some information.",
+     "I am missing information."
+    ],
+    [
+     "Ça me bloque pour la suite.",
+     "It's blocking me for the next step.",
+     "It's holding me up.",
+     "This is blocking my next steps."
+    ],
+    [
+     "Le problème arrive seulement sur mobile.",
+     "The issue only happens on mobile.",
+     "The problem only occurs on mobile."
+    ],
+    [
+     "J'ai joint les journaux d'erreurs.",
+     "I've attached the error logs.",
+     "I attached the error logs."
+    ],
+    [
+     "La priorité est haute.",
+     "The priority is high.",
+     "It's high priority."
+    ],
+    [
+     "La page met dix secondes à charger.",
+     "The page takes ten seconds to load."
     ]
    ],
    "v": [
@@ -1781,7 +2549,17 @@
       1,
       6,
       7,
-      8
+      8,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       0,
@@ -1805,7 +2583,14 @@
       5,
       9,
       10,
-      11
+      11,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       2,
@@ -1826,7 +2611,11 @@
       4,
       12,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       1,
@@ -1938,6 +2727,115 @@
      "When will I hear back?",
      "When will I get an answer?",
      "When can I expect an answer?"
+    ],
+    [
+     "J'ai étudié le commerce à Paris.",
+     "I studied business in Paris."
+    ],
+    [
+     "J'ai changé de carrière il y a deux ans.",
+     "I changed careers two years ago.",
+     "I switched careers two years ago."
+    ],
+    [
+     "J'ai travaillé un an à l'étranger.",
+     "I worked abroad for a year.",
+     "I worked abroad for one year."
+    ],
+    [
+     "Mon dernier poste était chef de projet.",
+     "My last position was project manager.",
+     "My last job was project manager.",
+     "My previous role was project manager."
+    ],
+    [
+     "J'ai obtenu mon diplôme en 2020.",
+     "I graduated in 2020.",
+     "I got my degree in 2020."
+    ],
+    [
+     "J'ai commencé comme stagiaire.",
+     "I started as an intern.",
+     "I began as an intern."
+    ],
+    [
+     "J'ai lancé plusieurs produits.",
+     "I've launched several products.",
+     "I have launched several products."
+    ],
+    [
+     "Je parle anglais et espagnol couramment.",
+     "I speak English and Spanish fluently.",
+     "I'm fluent in English and Spanish."
+    ],
+    [
+     "J'ai doublé les ventes de mon équipe.",
+     "I doubled my team's sales.",
+     "I've doubled my team's sales."
+    ],
+    [
+     "Je suis passionné par la technologie.",
+     "I'm passionate about technology.",
+     "I am passionate about technology."
+    ],
+    [
+     "J'apprends vite.",
+     "I'm a fast learner.",
+     "I learn quickly.",
+     "I learn fast."
+    ],
+    [
+     "Je suis à l'aise avec les chiffres.",
+     "I'm comfortable with numbers.",
+     "I'm good with numbers."
+    ],
+    [
+     "Je sais gérer les conflits.",
+     "I know how to handle conflicts.",
+     "I can manage conflict.",
+     "I know how to manage conflicts."
+    ],
+    [
+     "J'aime travailler en équipe.",
+     "I like working in a team.",
+     "I enjoy teamwork.",
+     "I like working in teams."
+    ],
+    [
+     "Je suis très organisée.",
+     "I'm very organized.",
+     "I am very organised."
+    ],
+    [
+     "Pourquoi devrions-nous vous embaucher ?",
+     "Why should we hire you?"
+    ],
+    [
+     "Je cherche de nouveaux défis.",
+     "I'm looking for new challenges.",
+     "I am looking for new challenges."
+    ],
+    [
+     "Y a-t-il des possibilités d'évolution ?",
+     "Are there opportunities for growth?",
+     "Are there any career opportunities?",
+     "Are there opportunities for promotion?"
+    ],
+    [
+     "Le télétravail est-il possible ?",
+     "Is remote work possible?",
+     "Is working from home possible?",
+     "Can I work remotely?"
+    ],
+    [
+     "Comment est l'ambiance dans l'équipe ?",
+     "What's the atmosphere like in the team?",
+     "What is the team atmosphere like?"
+    ],
+    [
+     "Quand le poste commence-t-il ?",
+     "When does the position start?",
+     "When does the job start?"
     ]
    ],
    "v": [
@@ -2088,7 +2986,17 @@
       1,
       4,
       8,
-      9
+      9,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       6,
@@ -2112,7 +3020,14 @@
       3,
       7,
       10,
-      11
+      11,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       0,
@@ -2134,7 +3049,11 @@
       6,
       12,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       2,
@@ -2244,6 +3163,114 @@
      "Let me know if you get stuck.",
      "Don't hesitate if you get stuck.",
      "Just ask if you get stuck."
+    ],
+    [
+     "C'est mon premier jour.",
+     "It's my first day.",
+     "It is my first day."
+    ],
+    [
+     "Où se trouve la salle de réunion ?",
+     "Where is the meeting room?",
+     "Where's the meeting room?"
+    ],
+    [
+     "J'ai reçu mon ordinateur ce matin.",
+     "I got my laptop this morning.",
+     "I received my computer this morning."
+    ],
+    [
+     "Qui est mon référent ?",
+     "Who is my point of contact?",
+     "Who's my buddy?",
+     "Who is my mentor?"
+    ],
+    [
+     "Je dois encore installer les outils.",
+     "I still need to install the tools.",
+     "I still have to install the tools."
+    ],
+    [
+     "À quelle heure est le déjeuner d'équipe ?",
+     "What time is the team lunch?"
+    ],
+    [
+     "Je découvre encore le code.",
+     "I'm still getting to know the code.",
+     "I'm still discovering the codebase.",
+     "I'm still learning the codebase."
+    ],
+    [
+     "Tout le monde a été très accueillant.",
+     "Everyone has been very welcoming.",
+     "Everyone was very welcoming."
+    ],
+    [
+     "Il me faut un badge pour entrer.",
+     "I need a badge to get in.",
+     "I need a pass to get in."
+    ],
+    [
+     "Pouvez-vous m'expliquer ce sigle ?",
+     "Can you explain this acronym to me?",
+     "Could you explain this acronym?"
+    ],
+    [
+     "J'aimerais parler de mon évolution.",
+     "I'd like to talk about my career development.",
+     "I would like to discuss my progression.",
+     "I'd like to talk about my growth."
+    ],
+    [
+     "Je me sens un peu débordé.",
+     "I feel a bit overwhelmed.",
+     "I'm feeling a little overwhelmed."
+    ],
+    [
+     "Qu'est-ce qui s'est bien passé ce mois-ci ?",
+     "What went well this month?"
+    ],
+    [
+     "Je voudrais suivre une formation.",
+     "I'd like to take a training course.",
+     "I would like to do a training course.",
+     "I'd like to get some training."
+    ],
+    [
+     "Tu as fait du très bon travail.",
+     "You did a really good job.",
+     "You've done a great job.",
+     "You did very good work."
+    ],
+    [
+     "Comment je peux t'aider ?",
+     "How can I help you?"
+    ],
+    [
+     "On fixe des objectifs pour le trimestre ?",
+     "Shall we set goals for the quarter?",
+     "Should we set objectives for the quarter?"
+    ],
+    [
+     "Je vais te montrer nos outils.",
+     "I'll show you our tools.",
+     "Let me show you our tools."
+    ],
+    [
+     "N'hésite pas à poser des questions bêtes.",
+     "Don't hesitate to ask silly questions.",
+     "Don't be afraid to ask silly questions."
+    ],
+    [
+     "On fait une revue de code ensemble ?",
+     "Shall we do a code review together?",
+     "Want to do a code review together?"
+    ],
+    [
+     "Tu progresses très vite.",
+     "You're making fast progress.",
+     "You're improving very quickly.",
+     "You're progressing very fast."
     ]
    ],
    "v": [
@@ -2398,7 +3425,17 @@
       1,
       6,
       8,
-      9
+      9,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       0,
@@ -2418,7 +3455,14 @@
       5,
       10,
       11,
-      12
+      12,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       2,
@@ -2439,7 +3483,11 @@
       3,
       7,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       3,
@@ -2553,6 +3601,109 @@
      "Je vous ajoute sur LinkedIn.",
      "I'll add you on LinkedIn.",
      "I'll connect with you on LinkedIn."
+    ],
+    [
+     "Le poste m'intéresse beaucoup.",
+     "I'm very interested in the position.",
+     "The position interests me a lot.",
+     "I'm really interested in the role."
+    ],
+    [
+     "Pouvez-vous m'en dire plus ?",
+     "Can you tell me more?",
+     "Could you tell me more about it?"
+    ],
+    [
+     "Je suis disponible pour un appel cette semaine.",
+     "I'm available for a call this week.",
+     "I am available for a call this week."
+    ],
+    [
+     "Je ne suis pas intéressé, mais merci.",
+     "I'm not interested, but thank you.",
+     "I'm not interested, but thanks."
+    ],
+    [
+     "Je cherche un poste en télétravail.",
+     "I'm looking for a remote position.",
+     "I'm looking for a remote job.",
+     "I am looking for a remote role."
+    ],
+    [
+     "Mon préavis est d'un mois.",
+     "My notice period is one month.",
+     "I have a one-month notice period."
+    ],
+    [
+     "Pourriez-vous m'envoyer la fiche de poste ?",
+     "Could you send me the job description?",
+     "Can you send me the job description?"
+    ],
+    [
+     "Je suis en poste, mais à l'écoute.",
+     "I'm employed, but open to offers.",
+     "I have a job, but I'm open to opportunities."
+    ],
+    [
+     "Mes prétentions salariales sont flexibles.",
+     "My salary expectations are flexible.",
+     "I'm flexible on salary."
+    ],
+    [
+     "Quelles sont les missions principales ?",
+     "What are the main responsibilities?",
+     "What are the main duties?"
+    ],
+    [
+     "Quels sont les avantages ?",
+     "What are the benefits?",
+     "What benefits are there?"
+    ],
+    [
+     "Qui serait mon responsable ?",
+     "Who would be my manager?",
+     "Who would I report to?"
+    ],
+    [
+     "Quelle est la culture de l'entreprise ?",
+     "What is the company culture like?",
+     "What's the company culture?"
+    ],
+    [
+     "Y a-t-il un test technique ?",
+     "Is there a technical test?",
+     "Is there a coding test?"
+    ],
+    [
+     "Combien de jours de congés y a-t-il ?",
+     "How many days off are there?",
+     "How many vacation days are there?",
+     "How many days of leave do you get?"
+    ],
+    [
+     "Pourquoi le poste est-il ouvert ?",
+     "Why is the position open?",
+     "Why is the job vacant?"
+    ],
+    [
+     "Je travaille aussi dans le marketing.",
+     "I also work in marketing.",
+     "I work in marketing too."
+    ],
+    [
+     "Voici ma carte de visite.",
+     "Here's my business card.",
+     "Here is my business card."
+    ],
+    [
+     "On pourrait prendre un café un de ces jours.",
+     "We could grab a coffee sometime.",
+     "We could have a coffee one of these days."
+    ],
+    [
+     "Votre présentation m'a beaucoup plu.",
+     "I really enjoyed your presentation.",
+     "I liked your presentation a lot."
     ]
    ],
    "v": [
@@ -2707,7 +3858,16 @@
       1,
       2,
       7,
-      8
+      8,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
      ],
      "v": [
       0,
@@ -2726,7 +3886,14 @@
       4,
       9,
       10,
-      11
+      11,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
      ],
      "v": [
       2,
@@ -2748,7 +3915,11 @@
       6,
       12,
       13,
-      14
+      14,
+      31,
+      32,
+      33,
+      34
      ],
      "v": [
       5,
@@ -2859,6 +4030,118 @@
      "It was a mistake on our part.",
      "That was a mistake on our part.",
      "It was our mistake."
+    ],
+    [
+     "Je me permets de revenir vers vous.",
+     "I'm taking the liberty of getting back to you.",
+     "Allow me to get back to you.",
+     "I'm just getting back to you."
+    ],
+    [
+     "Je comprends que vous soyez très occupé.",
+     "I understand you're very busy.",
+     "I understand that you are very busy."
+    ],
+    [
+     "Auriez-vous un moment cette semaine ?",
+     "Would you have a moment this week?",
+     "Do you have a moment this week?"
+    ],
+    [
+     "Je voulais m'assurer que vous aviez bien reçu mon e-mail.",
+     "I wanted to make sure you received my email.",
+     "I wanted to check that you got my email."
+    ],
+    [
+     "Ce serait très aimable de votre part.",
+     "That would be very kind of you.",
+     "It would be very kind of you."
+    ],
+    [
+     "Sans nouvelles de votre part, je vous rappellerai jeudi.",
+     "If I don't hear from you, I'll call you on Thursday.",
+     "If I haven't heard from you, I'll call you on Thursday."
+    ],
+    [
+     "Merci de me tenir informé.",
+     "Please keep me informed.",
+     "Please keep me posted.",
+     "Thank you for keeping me informed."
+    ],
+    [
+     "Pourriez-vous me donner une date ?",
+     "Could you give me a date?",
+     "Can you give me a date?"
+    ],
+    [
+     "Je sais que c'est une période chargée.",
+     "I know it's a busy period.",
+     "I know this is a busy time.",
+     "I know it's a busy time."
+    ],
+    [
+     "Je reste dans l'attente de votre retour.",
+     "I look forward to your feedback.",
+     "I'm awaiting your reply.",
+     "I look forward to hearing back from you."
+    ],
+    [
+     "Je crains de ne pas pouvoir vous aider.",
+     "I'm afraid I can't help you.",
+     "I'm afraid I'm unable to help you."
+    ],
+    [
+     "Ce n'est pas possible pour le moment.",
+     "It's not possible at the moment.",
+     "That isn't possible for now.",
+     "It's not possible right now."
+    ],
+    [
+     "Je vous remercie, mais nous allons décliner.",
+     "Thank you, but we will decline.",
+     "Thank you, but we'll have to decline."
+    ],
+    [
+     "Je ne peux pas m'engager sur cette date.",
+     "I can't commit to that date.",
+     "I cannot commit to this date."
+    ],
+    [
+     "Ce n'est pas dans notre budget.",
+     "It's not within our budget.",
+     "It isn't in our budget.",
+     "That's outside our budget."
+    ],
+    [
+     "Puis-je vous proposer une alternative ?",
+     "May I suggest an alternative?",
+     "Can I offer you an alternative?"
+    ],
+    [
+     "Je préfère ne pas me prononcer.",
+     "I'd rather not comment.",
+     "I would prefer not to comment."
+    ],
+    [
+     "Je suis désolé pour ce retard de réponse.",
+     "I'm sorry for the delay in replying.",
+     "I apologize for the late reply.",
+     "Sorry for the late response."
+    ],
+    [
+     "Nous corrigeons le problème au plus vite.",
+     "We're fixing the problem as quickly as possible.",
+     "We are fixing the issue as soon as possible."
+    ],
+    [
+     "Cela ne se reproduira pas.",
+     "It won't happen again.",
+     "This will not happen again."
+    ],
+    [
+     "Je prends l'entière responsabilité.",
+     "I take full responsibility.",
+     "I take complete responsibility."
     ]
    ],
    "v": [
@@ -3010,7 +4293,17 @@
       5,
       6,
       8,
-      9
+      9,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       3,
@@ -3034,7 +4327,14 @@
       4,
       10,
       11,
-      12
+      12,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       2,
@@ -3058,7 +4358,11 @@
       3,
       7,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       0,
@@ -3167,6 +4471,117 @@
      "Je vous enverrai les diapositives.",
      "I'll send you the slides.",
      "I will send you the slides."
+    ],
+    [
+     "Bonjour à tous et merci d'être venus.",
+     "Good morning, everyone, and thank you for coming.",
+     "Hello everyone, and thanks for coming."
+    ],
+    [
+     "Je vais vous parler de notre nouvelle stratégie.",
+     "I'm going to talk to you about our new strategy.",
+     "I'll be talking about our new strategy.",
+     "I'm going to talk about our new strategy."
+    ],
+    [
+     "Vous m'entendez au fond de la salle ?",
+     "Can you hear me at the back of the room?",
+     "Can you hear me at the back?"
+    ],
+    [
+     "Je garderai les questions pour la fin.",
+     "I'll take questions at the end.",
+     "I will keep questions for the end."
+    ],
+    [
+     "Commençons par un chiffre.",
+     "Let's start with a number.",
+     "Let's begin with a figure.",
+     "Let's start with a figure."
+    ],
+    [
+     "Je suis ravi d'être ici aujourd'hui.",
+     "I'm delighted to be here today.",
+     "I'm happy to be here today.",
+     "I am delighted to be here today."
+    ],
+    [
+     "Le but de cette présentation est de vous convaincre.",
+     "The aim of this presentation is to convince you.",
+     "The goal of this presentation is to convince you."
+    ],
+    [
+     "D'abord, je vais présenter le contexte.",
+     "First, I'll present the background.",
+     "First, I'm going to present the context.",
+     "First, I will present the context."
+    ],
+    [
+     "Ensuite, nous verrons les résultats.",
+     "Then we'll look at the results.",
+     "Next, we will look at the results."
+    ],
+    [
+     "Je vais être bref.",
+     "I'll be brief.",
+     "I will keep it short.",
+     "I'll keep it short."
+    ],
+    [
+     "Les ventes ont chuté en été.",
+     "Sales dropped in the summer.",
+     "Sales fell in summer.",
+     "Sales dropped in summer."
+    ],
+    [
+     "La courbe bleue représente les coûts.",
+     "The blue line represents costs.",
+     "The blue curve shows the costs.",
+     "The blue line shows costs."
+    ],
+    [
+     "Les chiffres sont restés stables.",
+     "The figures remained stable.",
+     "The numbers stayed stable."
+    ],
+    [
+     "On observe un pic en décembre.",
+     "There is a peak in December.",
+     "We can see a peak in December."
+    ],
+    [
+     "Regardez cette colonne à droite.",
+     "Look at this column on the right.",
+     "Take a look at the column on the right."
+    ],
+    [
+     "Le nombre de clients a doublé.",
+     "The number of customers has doubled.",
+     "The number of clients doubled."
+    ],
+    [
+     "Ce tableau compare les trois régions.",
+     "This table compares the three regions."
+    ],
+    [
+     "Pour conclure, je voudrais vous remercier.",
+     "To conclude, I'd like to thank you.",
+     "In conclusion, I would like to thank you."
+    ],
+    [
+     "Je ne connais pas la réponse, mais je vais vérifier.",
+     "I don't know the answer, but I'll check.",
+     "I don't know the answer, but I will find out."
+    ],
+    [
+     "Si je résume, nous devons agir vite.",
+     "To sum up, we need to act fast.",
+     "In short, we have to act quickly."
+    ],
+    [
+     "Il nous reste cinq minutes pour les questions.",
+     "We have five minutes left for questions.",
+     "There are five minutes left for questions."
     ]
    ],
    "v": [
@@ -3317,7 +4732,17 @@
       1,
       8,
       9,
-      10
+      10,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       0,
@@ -3341,7 +4766,14 @@
       3,
       5,
       11,
-      12
+      12,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       1,
@@ -3366,7 +4798,11 @@
       6,
       7,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       5,
@@ -3472,6 +4908,112 @@
      "I've pushed a new commit.",
      "I pushed a new commit.",
      "I have pushed a new commit."
+    ],
+    [
+     "Cette PR corrige un bug d'affichage.",
+     "This PR fixes a display bug.",
+     "This PR fixes a rendering bug."
+    ],
+    [
+     "J'ai ajouté des tests unitaires.",
+     "I've added unit tests.",
+     "I added unit tests."
+    ],
+    [
+     "Cette PR met à jour les dépendances.",
+     "This PR updates the dependencies."
+    ],
+    [
+     "Les captures d'écran sont ci-dessous.",
+     "The screenshots are below.",
+     "Screenshots are below."
+    ],
+    [
+     "Merci de relire en priorité le fichier principal.",
+     "Please review the main file first.",
+     "Please prioritize reviewing the main file."
+    ],
+    [
+     "J'ai supprimé l'ancien code.",
+     "I removed the old code.",
+     "I've removed the old code.",
+     "I deleted the old code."
+    ],
+    [
+     "C'est une petite modification.",
+     "It's a small change.",
+     "This is a small change."
+    ],
+    [
+     "Cette PR est encore en brouillon.",
+     "This PR is still a draft.",
+     "This PR is still in draft."
+    ],
+    [
+     "Elle ajoute le mode sombre.",
+     "It adds dark mode.",
+     "It adds a dark mode."
+    ],
+    [
+     "Il n'y a pas d'impact sur les performances.",
+     "There's no performance impact.",
+     "There is no impact on performance."
+    ],
+    [
+     "Pourquoi as-tu choisi cette approche ?",
+     "Why did you choose this approach?",
+     "Why did you go with this approach?"
+    ],
+    [
+     "Ce nom de variable n'est pas très clair.",
+     "This variable name isn't very clear.",
+     "This variable name is not very clear."
+    ],
+    [
+     "On pourrait simplifier cette condition.",
+     "We could simplify this condition."
+    ],
+    [
+     "Il manque un test pour ce cas.",
+     "There's a missing test for this case.",
+     "A test is missing for this case.",
+     "This case is missing a test."
+    ],
+    [
+     "Super travail, juste une petite remarque.",
+     "Great work, just a small comment.",
+     "Great job, just one small remark."
+    ],
+    [
+     "Ce code est dupliqué plus haut.",
+     "This code is duplicated above.",
+     "This code is repeated further up."
+    ],
+    [
+     "Est-ce qu'on gère le cas où la liste est vide ?",
+     "Do we handle the case where the list is empty?",
+     "Are we handling the empty list case?"
+    ],
+    [
+     "Merci pour la relecture.",
+     "Thanks for the review.",
+     "Thank you for the review."
+    ],
+    [
+     "Je ne suis pas d'accord, voici pourquoi.",
+     "I disagree, here's why.",
+     "I don't agree, and here's why."
+    ],
+    [
+     "Je le ferai dans une autre PR.",
+     "I'll do it in another PR.",
+     "I will do that in a separate PR.",
+     "I'll do it in a separate PR."
+    ],
+    [
+     "Peux-tu relire à nouveau ?",
+     "Can you review it again?",
+     "Could you take another look?"
     ]
    ],
    "v": [
@@ -3626,7 +5168,17 @@
       1,
       2,
       8,
-      9
+      9,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       4,
@@ -3645,7 +5197,14 @@
       4,
       10,
       11,
-      12
+      12,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       0,
@@ -3665,7 +5224,11 @@
       6,
       7,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       1,
@@ -3765,6 +5328,112 @@
      "See the license for more details.",
      "See the licence for more details.",
      "See the license for details."
+    ],
+    [
+     "Corrige le calcul de la TVA.",
+     "Fix VAT calculation.",
+     "Fix the VAT calculation."
+    ],
+    [
+     "Ajoute un bouton de déconnexion.",
+     "Add logout button.",
+     "Add a logout button."
+    ],
+    [
+     "Met à jour la documentation de l'API.",
+     "Update API documentation.",
+     "Update the API documentation.",
+     "Update the API docs."
+    ],
+    [
+     "Supprime une dépendance inutile.",
+     "Remove unused dependency.",
+     "Remove an unused dependency."
+    ],
+    [
+     "Améliore le temps de chargement.",
+     "Improve loading time.",
+     "Improve load time."
+    ],
+    [
+     "Renomme le fichier de configuration.",
+     "Rename config file.",
+     "Rename the configuration file.",
+     "Rename the config file."
+    ],
+    [
+     "Corrige les tests qui échouent.",
+     "Fix failing tests.",
+     "Fix the failing tests."
+    ],
+    [
+     "Traduit les messages d'erreur.",
+     "Translate error messages.",
+     "Translate the error messages."
+    ],
+    [
+     "Annule le dernier commit.",
+     "Revert the last commit.",
+     "Revert last commit."
+    ],
+    [
+     "Ajoute des logs pour le débogage.",
+     "Add logs for debugging.",
+     "Add debug logging.",
+     "Add logging for debugging."
+    ],
+    [
+     "Cette méthode envoie un e-mail de confirmation.",
+     "This method sends a confirmation email."
+    ],
+    [
+     "La valeur par défaut est zéro.",
+     "The default value is zero.",
+     "The default is zero."
+    ],
+    [
+     "Ne pas appeler cette fonction directement.",
+     "Do not call this function directly.",
+     "Don't call this function directly."
+    ],
+    [
+     "Le résultat est mis en cache pendant une heure.",
+     "The result is cached for one hour.",
+     "The result is cached for an hour."
+    ],
+    [
+     "Exemple d'utilisation ci-dessous.",
+     "Usage example below.",
+     "See the usage example below."
+    ],
+    [
+     "Cette fonction est asynchrone.",
+     "This function is asynchronous.",
+     "This function is async."
+    ],
+    [
+     "Les dates sont au format ISO.",
+     "Dates are in ISO format.",
+     "The dates are in ISO format."
+    ],
+    [
+     "Ce projet nécessite Python 3.12.",
+     "This project requires Python 3.12."
+    ],
+    [
+     "Copiez le fichier d'exemple de configuration.",
+     "Copy the example configuration file.",
+     "Copy the sample config file."
+    ],
+    [
+     "Les tests se lancent avec une seule commande.",
+     "The tests run with a single command.",
+     "You can run the tests with one command."
+    ],
+    [
+     "Ouvrez une issue si vous trouvez un bug.",
+     "Open an issue if you find a bug.",
+     "Please open an issue if you find a bug."
     ]
    ],
    "v": [
@@ -3919,7 +5588,17 @@
       1,
       7,
       8,
-      9
+      9,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       2,
@@ -3940,7 +5619,14 @@
       4,
       10,
       11,
-      12
+      12,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       0,
@@ -3961,7 +5647,11 @@
       5,
       6,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       1,
@@ -4069,6 +5759,117 @@
      "Have a nice day!",
      "Have a good day!",
      "Have a nice rest of your day!"
+    ],
+    [
+     "Je suis vraiment désolé pour ce problème.",
+     "I'm really sorry about this problem.",
+     "I'm very sorry about this issue.",
+     "I am really sorry about this problem."
+    ],
+    [
+     "Pouvez-vous m'expliquer ce qui s'est passé ?",
+     "Can you explain what happened?",
+     "Could you tell me what happened?"
+    ],
+    [
+     "Je comprends tout à fait.",
+     "I completely understand.",
+     "I totally understand.",
+     "I fully understand."
+    ],
+    [
+     "Je vais m'occuper personnellement de votre dossier.",
+     "I'll personally take care of your case.",
+     "I will handle your case personally."
+    ],
+    [
+     "Ce n'est pas le service que nous voulons offrir.",
+     "That's not the service we want to provide.",
+     "This is not the service we want to offer."
+    ],
+    [
+     "Depuis quand avez-vous ce problème ?",
+     "How long have you had this problem?",
+     "Since when have you had this issue?"
+    ],
+    [
+     "Je vais vérifier votre commande.",
+     "I'll check your order.",
+     "I will check your order.",
+     "Let me check your order."
+    ],
+    [
+     "Vous avez raison d'être contrarié.",
+     "You're right to be upset.",
+     "You have every right to be upset."
+    ],
+    [
+     "Merci de nous l'avoir signalé.",
+     "Thank you for letting us know.",
+     "Thanks for reporting it.",
+     "Thank you for reporting this."
+    ],
+    [
+     "Je vous écoute.",
+     "I'm listening.",
+     "Go ahead, I'm listening."
+    ],
+    [
+     "Nous pouvons vous proposer un avoir.",
+     "We can offer you a credit note.",
+     "We can offer you store credit.",
+     "We can give you a credit."
+    ],
+    [
+     "Le technicien passera demain matin.",
+     "The technician will come tomorrow morning.",
+     "The engineer will come by tomorrow morning."
+    ],
+    [
+     "Vous recevrez un nouveau colis sous trois jours.",
+     "You'll receive a new package within three days.",
+     "You will receive a new parcel within three days."
+    ],
+    [
+     "Nous prenons en charge les frais de retour.",
+     "We'll cover the return costs.",
+     "We will pay for the return shipping.",
+     "We cover the return costs."
+    ],
+    [
+     "Je vous rembourse la différence.",
+     "I'll refund you the difference.",
+     "I will refund the difference."
+    ],
+    [
+     "Voulez-vous un échange ou un remboursement ?",
+     "Would you like an exchange or a refund?",
+     "Do you want an exchange or a refund?"
+    ],
+    [
+     "Je vous envoie une étiquette de retour.",
+     "I'll send you a return label.",
+     "I'm sending you a return label."
+    ],
+    [
+     "Je suis ravi d'avoir pu vous aider.",
+     "I'm glad I could help.",
+     "I'm happy I was able to help you."
+    ],
+    [
+     "N'hésitez pas à nous recontacter.",
+     "Don't hesitate to contact us again.",
+     "Feel free to contact us again."
+    ],
+    [
+     "Vous recevrez une enquête de satisfaction.",
+     "You'll receive a satisfaction survey.",
+     "You will receive a customer satisfaction survey."
+    ],
+    [
+     "Votre numéro de dossier est le 4521.",
+     "Your case number is 4521.",
+     "Your reference number is 4521."
     ]
    ],
    "v": [
@@ -4219,7 +6020,17 @@
       1,
       3,
       7,
-      8
+      8,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       3,
@@ -4240,7 +6051,14 @@
       4,
       5,
       9,
-      10
+      10,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       0,
@@ -4260,7 +6078,11 @@
       11,
       12,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       5,
@@ -4363,6 +6185,112 @@
      "The rollout will happen in three stages.",
      "The rollout will be done in three phases.",
      "We will roll it out in three stages."
+    ],
+    [
+     "Ce document décrit le problème actuel.",
+     "This document describes the current problem.",
+     "This doc describes the current issue."
+    ],
+    [
+     "Les utilisateurs se plaignent de la lenteur.",
+     "Users are complaining about the slowness.",
+     "Users complain about how slow it is.",
+     "Users are complaining that it's slow."
+    ],
+    [
+     "Le système actuel ne tient pas la charge.",
+     "The current system can't handle the load.",
+     "The current system cannot handle the load."
+    ],
+    [
+     "Ce projet concerne uniquement le web.",
+     "This project only covers the web.",
+     "This project only concerns the web."
+    ],
+    [
+     "Les objectifs sont listés ci-dessous.",
+     "The goals are listed below.",
+     "The objectives are listed below."
+    ],
+    [
+     "Nous devons respecter le RGPD.",
+     "We must comply with the GDPR.",
+     "We have to comply with GDPR."
+    ],
+    [
+     "Le budget est limité.",
+     "The budget is limited.",
+     "We have a limited budget."
+    ],
+    [
+     "Cette proposition remplace la précédente.",
+     "This proposal replaces the previous one.",
+     "This proposal supersedes the previous one."
+    ],
+    [
+     "Les non-objectifs sont aussi importants.",
+     "The non-goals are also important.",
+     "Non-goals are important too."
+    ],
+    [
+     "Nous avons interrogé trois équipes.",
+     "We interviewed three teams.",
+     "We talked to three teams."
+    ],
+    [
+     "L'option B coûte deux fois plus cher.",
+     "Option B costs twice as much.",
+     "Option B is twice as expensive."
+    ],
+    [
+     "Les deux options ont des avantages.",
+     "Both options have advantages.",
+     "Both options have their advantages."
+    ],
+    [
+     "Cette solution est plus facile à maintenir.",
+     "This solution is easier to maintain."
+    ],
+    [
+     "Nous avons écarté cette piste.",
+     "We ruled out this option.",
+     "We rejected this approach.",
+     "We've ruled this out."
+    ],
+    [
+     "Le risque est faible.",
+     "The risk is low."
+    ],
+    [
+     "Cette option demande plus de temps.",
+     "This option requires more time.",
+     "This option takes more time."
+    ],
+    [
+     "Voici un tableau comparatif.",
+     "Here is a comparison table.",
+     "Here's a comparison table."
+    ],
+    [
+     "Nous testerons d'abord avec cinq pour cent des utilisateurs.",
+     "We'll test with five percent of users first.",
+     "We will first test with 5% of users.",
+     "We'll first test with five percent of users."
+    ],
+    [
+     "Nous pouvons revenir en arrière à tout moment.",
+     "We can roll back at any time.",
+     "We can revert at any time."
+    ],
+    [
+     "La migration se fera un dimanche.",
+     "The migration will happen on a Sunday.",
+     "The migration will take place on a Sunday."
+    ],
+    [
+     "Merci de valider ce document avant lundi.",
+     "Please approve this document before Monday.",
+     "Please sign off on this document by Monday."
     ]
    ],
    "v": [
@@ -4517,7 +6445,17 @@
       1,
       6,
       8,
-      9
+      9,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       0,
@@ -4541,7 +6479,14 @@
       3,
       10,
       11,
-      12
+      12,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       1,
@@ -4565,7 +6510,11 @@
       5,
       7,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       3,
@@ -4667,6 +6616,112 @@
      "We can set up a free trial.",
      "We can organize a free trial.",
      "We can arrange a free trial."
+    ],
+    [
+     "Combien de temps perdez-vous chaque semaine ?",
+     "How much time do you waste every week?",
+     "How much time do you lose each week?"
+    ],
+    [
+     "Les outils actuels sont trop compliqués.",
+     "Current tools are too complicated.",
+     "The current tools are too complicated."
+    ],
+    [
+     "Nous avons créé une application simple.",
+     "We've built a simple app.",
+     "We created a simple application.",
+     "We built a simple app."
+    ],
+    [
+     "Le marché est énorme.",
+     "The market is huge.",
+     "It's a huge market."
+    ],
+    [
+     "Nos clients gagnent du temps et de l'argent.",
+     "Our customers save time and money.",
+     "Our clients save time and money."
+    ],
+    [
+     "Nous avons déjà mille utilisateurs.",
+     "We already have a thousand users.",
+     "We already have 1,000 users."
+    ],
+    [
+     "Imaginez une journée sans réunions inutiles.",
+     "Imagine a day without pointless meetings.",
+     "Imagine a day with no unnecessary meetings."
+    ],
+    [
+     "Personne ne propose cela aujourd'hui.",
+     "No one offers this today.",
+     "Nobody offers this today."
+    ],
+    [
+     "Notre équipe a dix ans d'expérience.",
+     "Our team has ten years of experience."
+    ],
+    [
+     "Nous cherchons des investisseurs.",
+     "We are looking for investors.",
+     "We're looking for investors."
+    ],
+    [
+     "Je vais partager mon écran.",
+     "I'll share my screen.",
+     "I'm going to share my screen."
+    ],
+    [
+     "Il suffit de glisser le fichier ici.",
+     "Just drag the file here.",
+     "You just drag the file here."
+    ],
+    [
+     "Le rapport est généré automatiquement.",
+     "The report is generated automatically.",
+     "The report is created automatically."
+    ],
+    [
+     "Vous pouvez personnaliser les couleurs.",
+     "You can customize the colors.",
+     "You can customise the colours."
+    ],
+    [
+     "Tout est synchronisé sur votre téléphone.",
+     "Everything syncs to your phone.",
+     "Everything is synced to your phone."
+    ],
+    [
+     "Désolé, la connexion est un peu lente.",
+     "Sorry, the connection is a little slow.",
+     "Sorry, the connection is a bit slow."
+    ],
+    [
+     "Voyons maintenant le tableau de bord.",
+     "Now let's look at the dashboard.",
+     "Let's now look at the dashboard."
+    ],
+    [
+     "Nous proposons une remise pour les grandes équipes.",
+     "We offer a discount for large teams.",
+     "We give a discount to large teams."
+    ],
+    [
+     "L'intégration prend une journée.",
+     "Setup takes one day.",
+     "Onboarding takes a day.",
+     "Integration takes a day."
+    ],
+    [
+     "Vos données restent en Europe.",
+     "Your data stays in Europe.",
+     "Your data remains in Europe."
+    ],
+    [
+     "Je vous envoie une proposition demain.",
+     "I'll send you a proposal tomorrow.",
+     "I will send you a proposal tomorrow."
     ]
    ],
    "v": [
@@ -4821,7 +6876,17 @@
       3,
       8,
       9,
-      10
+      10,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       3,
@@ -4842,7 +6907,14 @@
       1,
       6,
       11,
-      12
+      12,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       0,
@@ -4862,7 +6934,11 @@
       5,
       7,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       2,
@@ -4971,6 +7047,117 @@
      "Nous sommes d'accord sur les conditions.",
      "We agree on the terms.",
      "We are in agreement on the terms."
+    ],
+    [
+     "Le chiffre d'affaires a atteint deux millions.",
+     "Revenue reached two million.",
+     "Turnover reached two million."
+    ],
+    [
+     "Les coûts ont baissé de dix pour cent.",
+     "Costs went down by ten percent.",
+     "Costs fell by 10%.",
+     "Costs decreased by ten percent."
+    ],
+    [
+     "Nous avons dépassé nos objectifs.",
+     "We exceeded our targets.",
+     "We have exceeded our goals.",
+     "We beat our targets."
+    ],
+    [
+     "La marge reste stable.",
+     "The margin remains stable.",
+     "The margin is stable."
+    ],
+    [
+     "Les résultats sont inférieurs aux prévisions.",
+     "The results are below forecast.",
+     "Results are lower than expected.",
+     "The results are below expectations."
+    ],
+    [
+     "Le deuxième trimestre a été difficile.",
+     "The second quarter was difficult.",
+     "Q2 was tough.",
+     "The second quarter was tough."
+    ],
+    [
+     "Le nombre d'abonnés a augmenté de moitié.",
+     "The number of subscribers increased by half.",
+     "Subscribers grew by fifty percent."
+    ],
+    [
+     "Ces chiffres sont provisoires.",
+     "These figures are provisional.",
+     "These numbers are preliminary."
+    ],
+    [
+     "Les ventes en ligne représentent un tiers du total.",
+     "Online sales account for a third of the total.",
+     "Online sales represent one third of the total."
+    ],
+    [
+     "Nous prévoyons une croissance de huit pour cent.",
+     "We expect eight percent growth.",
+     "We forecast 8% growth.",
+     "We expect growth of eight percent."
+    ],
+    [
+     "C'est au-dessus de nos attentes.",
+     "That's above our expectations.",
+     "It's higher than we expected."
+    ],
+    [
+     "Pouvez-vous faire un geste ?",
+     "Can you make a gesture?",
+     "Could you do something on the price?",
+     "Can you offer something?"
+    ],
+    [
+     "Nous commandons de grandes quantités.",
+     "We order large quantities.",
+     "We place large orders."
+    ],
+    [
+     "Nous pouvons payer d'avance.",
+     "We can pay in advance.",
+     "We can pay upfront."
+    ],
+    [
+     "Le concurrent propose un meilleur prix.",
+     "The competitor offers a better price.",
+     "Your competitor is offering a better price."
+    ],
+    [
+     "Quelles sont vos conditions de paiement ?",
+     "What are your payment terms?"
+    ],
+    [
+     "Nous avons besoin d'y réfléchir.",
+     "We need to think about it.",
+     "We need some time to think about it."
+    ],
+    [
+     "Je vous envoie le contrat ce soir.",
+     "I'll send you the contract tonight.",
+     "I will send you the contract this evening."
+    ],
+    [
+     "Nous sommes ravis de travailler avec vous.",
+     "We're delighted to work with you.",
+     "We are very happy to work with you."
+    ],
+    [
+     "Le contrat dure deux ans.",
+     "The contract lasts two years.",
+     "The contract is for two years."
+    ],
+    [
+     "Nous signons demain.",
+     "We're signing tomorrow.",
+     "We sign tomorrow.",
+     "We'll sign tomorrow."
     ]
    ],
    "v": [
@@ -5122,7 +7309,17 @@
       4,
       5,
       6,
-      8
+      8,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       0,
@@ -5147,7 +7344,14 @@
       2,
       7,
       9,
-      10
+      10,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       3,
@@ -5170,7 +7374,11 @@
       11,
       12,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       8,
@@ -5274,6 +7482,111 @@
      "Let's review this in a month.",
      "Let's check in again in a month.",
      "Let's follow up in a month."
+    ],
+    [
+     "J'ai remarqué que tu étais souvent en retard.",
+     "I've noticed you're often late.",
+     "I noticed that you are often late."
+    ],
+    [
+     "Ton travail sur ce projet était excellent.",
+     "Your work on this project was excellent.",
+     "You did excellent work on this project."
+    ],
+    [
+     "Qu'est-ce que tu en penses, toi ?",
+     "What do you think?",
+     "What's your take on it?",
+     "What do you think about it?"
+    ],
+    [
+     "Ce point mérite d'être amélioré.",
+     "This point needs improvement.",
+     "This could be improved.",
+     "This area needs improvement."
+    ],
+    [
+     "Voici ce qui marche bien.",
+     "Here's what's working well.",
+     "Here is what works well."
+    ],
+    [
+     "Essaie de partager l'information plus tôt.",
+     "Try to share information earlier.",
+     "Try to share the information sooner."
+    ],
+    [
+     "Je te fais confiance.",
+     "I trust you."
+    ],
+    [
+     "Tes slides étaient très claires.",
+     "Your slides were very clear."
+    ],
+    [
+     "J'ai un petit conseil pour la prochaine fois.",
+     "I have a small tip for next time.",
+     "I've got a little tip for next time."
+    ],
+    [
+     "Comment tu as vécu ce projet ?",
+     "How did you feel about this project?",
+     "How did you find this project?"
+    ],
+    [
+     "Calmons-nous un instant.",
+     "Let's calm down for a moment.",
+     "Let's all calm down for a second."
+    ],
+    [
+     "Je comprends ton point de vue.",
+     "I understand your point of view.",
+     "I understand where you're coming from."
+    ],
+    [
+     "Ce n'est la faute de personne.",
+     "It's nobody's fault.",
+     "It's no one's fault."
+    ],
+    [
+     "Écoutons d'abord Marie.",
+     "Let's listen to Marie first.",
+     "Let's hear from Marie first."
+    ],
+    [
+     "Je m'excuse si j'ai été trop direct.",
+     "I apologize if I was too blunt.",
+     "Sorry if I was too direct.",
+     "I apologise if I was too direct."
+    ],
+    [
+     "On veut tous la même chose.",
+     "We all want the same thing."
+    ],
+    [
+     "Parlons des faits, pas des personnes.",
+     "Let's talk about facts, not people.",
+     "Let's focus on facts, not people."
+    ],
+    [
+     "Que proposes-tu ?",
+     "What do you suggest?",
+     "What do you propose?"
+    ],
+    [
+     "Faisons un essai pendant deux semaines.",
+     "Let's try it for two weeks.",
+     "Let's give it a two-week trial."
+    ],
+    [
+     "Chacun peut faire un pas vers l'autre.",
+     "We can each meet halfway.",
+     "Each of us can take a step towards the other."
+    ],
+    [
+     "Je suis content qu'on en ait parlé.",
+     "I'm glad we talked about it.",
+     "I'm happy we discussed it."
     ]
    ],
    "v": [
@@ -5424,7 +7737,17 @@
       1,
       7,
       8,
-      9
+      9,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       0,
@@ -5448,7 +7771,14 @@
       4,
       5,
       10,
-      11
+      11,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       1,
@@ -5471,7 +7801,11 @@
       6,
       12,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       2,
@@ -5580,6 +7914,115 @@
      "Personne n'est à blâmer.",
      "No one is to blame.",
      "Nobody is to blame."
+    ],
+    [
+     "Le site est inaccessible depuis dix minutes.",
+     "The website has been down for ten minutes.",
+     "The site has been unreachable for ten minutes."
+    ],
+    [
+     "Les clients ne peuvent plus se connecter.",
+     "Customers can't log in anymore.",
+     "Customers can no longer log in."
+    ],
+    [
+     "Nous avons reçu plusieurs alertes.",
+     "We've received several alerts.",
+     "We received several alerts."
+    ],
+    [
+     "L'équipe d'astreinte est prévenue.",
+     "The on-call team has been notified.",
+     "The on-call team is aware.",
+     "The on-call team has been alerted."
+    ],
+    [
+     "L'incident est classé critique.",
+     "The incident is classified as critical.",
+     "The incident has been rated critical."
+    ],
+    [
+     "Les e-mails ne partent plus.",
+     "Emails are no longer being sent.",
+     "Emails aren't going out.",
+     "Emails aren't being sent anymore."
+    ],
+    [
+     "Je crée un canal pour l'incident.",
+     "I'm creating a channel for the incident.",
+     "I'll create a channel for the incident."
+    ],
+    [
+     "L'application est très lente.",
+     "The app is very slow.",
+     "The application is very slow."
+    ],
+    [
+     "La base de données est saturée.",
+     "The database is overloaded.",
+     "The database is saturated."
+    ],
+    [
+     "Nous ne connaissons pas encore la cause.",
+     "We don't know the cause yet.",
+     "We do not know the cause yet."
+    ],
+    [
+     "Nous avons redémarré les serveurs.",
+     "We restarted the servers.",
+     "We've restarted the servers."
+    ],
+    [
+     "Le problème est résolu.",
+     "The issue is resolved.",
+     "The problem has been solved.",
+     "The issue has been resolved."
+    ],
+    [
+     "Nous informons les clients concernés.",
+     "We're informing the affected customers.",
+     "We are notifying the affected customers."
+    ],
+    [
+     "Tout le monde reste concentré.",
+     "Everyone stay focused.",
+     "Let's all stay focused.",
+     "Everyone is staying focused."
+    ],
+    [
+     "Qui s'occupe de la communication ?",
+     "Who's handling communication?",
+     "Who is in charge of communication?"
+    ],
+    [
+     "La situation est sous contrôle.",
+     "The situation is under control."
+    ],
+    [
+     "Nous avons appliqué un correctif temporaire.",
+     "We applied a temporary fix.",
+     "We've applied a workaround.",
+     "We applied a hotfix."
+    ],
+    [
+     "Voici la chronologie de l'incident.",
+     "Here is the timeline of the incident.",
+     "Here's the incident timeline."
+    ],
+    [
+     "L'alerte est arrivée trop tard.",
+     "The alert came too late.",
+     "The alert arrived too late."
+    ],
+    [
+     "Nous avons appris plusieurs leçons.",
+     "We learned several lessons.",
+     "We've learned several lessons."
+    ],
+    [
+     "Nous allons améliorer la surveillance.",
+     "We will improve monitoring.",
+     "We're going to improve our monitoring."
     ]
    ],
    "v": [
@@ -5734,7 +8177,17 @@
       2,
       6,
       8,
-      9
+      9,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       0,
@@ -5757,7 +8210,14 @@
       4,
       5,
       10,
-      11
+      11,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
      ],
      "v": [
       2,
@@ -5781,7 +8241,11 @@
       7,
       12,
       13,
-      14
+      14,
+      32,
+      33,
+      34,
+      35
      ],
      "v": [
       1,
@@ -5887,6 +8351,110 @@
      "Pouvez-vous préciser les contraintes ?",
      "Could you clarify the constraints?",
      "Can you clarify the constraints?"
+    ],
+    [
+     "J'ai conçu le système de paiement.",
+     "I designed the payment system.",
+     "I built the payment system."
+    ],
+    [
+     "Le plus difficile était la montée en charge.",
+     "The hardest part was scaling.",
+     "The most difficult part was scaling up."
+    ],
+    [
+     "Nous étions une équipe de six.",
+     "We were a team of six.",
+     "There were six of us on the team."
+    ],
+    [
+     "J'ai choisi React pour le front-end.",
+     "I chose React for the front end.",
+     "I picked React for the front-end."
+    ],
+    [
+     "Le projet a duré huit mois.",
+     "The project lasted eight months.",
+     "The project took eight months."
+    ],
+    [
+     "J'ai écrit la plupart des tests.",
+     "I wrote most of the tests."
+    ],
+    [
+     "Nous avons divisé les coûts par deux.",
+     "We cut costs in half.",
+     "We halved the costs."
+    ],
+    [
+     "Si c'était à refaire, je choisirais autrement.",
+     "If I did it again, I would choose differently.",
+     "If I had to do it again, I'd choose differently."
+    ],
+    [
+     "J'ai appris à mieux estimer les délais.",
+     "I learned to estimate deadlines better.",
+     "I learned to better estimate timelines."
+    ],
+    [
+     "L'application gère un million de requêtes par jour.",
+     "The app handles a million requests a day.",
+     "The application handles one million requests per day."
+    ],
+    [
+     "Je séparerais le service en deux.",
+     "I would split the service in two.",
+     "I'd split the service into two."
+    ],
+    [
+     "On peut utiliser une base de données relationnelle.",
+     "We can use a relational database.",
+     "We could use a relational database."
+    ],
+    [
+     "Il faut prévoir un répartiteur de charge.",
+     "We need a load balancer.",
+     "We should plan for a load balancer."
+    ],
+    [
+     "Les données seraient répliquées dans deux régions.",
+     "The data would be replicated across two regions.",
+     "Data would be replicated in two regions."
+    ],
+    [
+     "Je commencerais par un monolithe simple.",
+     "I would start with a simple monolith.",
+     "I'd start with a simple monolith."
+    ],
+    [
+     "Cette API doit être idempotente.",
+     "This API must be idempotent.",
+     "This API needs to be idempotent."
+    ],
+    [
+     "Je dessine un schéma au tableau ?",
+     "Shall I draw a diagram on the board?",
+     "Should I draw a diagram on the whiteboard?"
+    ],
+    [
+     "Le cache réduit la charge sur la base.",
+     "The cache reduces the load on the database.",
+     "Caching reduces the database load."
+    ],
+    [
+     "C'est plus simple, mais moins flexible.",
+     "It's simpler, but less flexible.",
+     "It is simpler but less flexible."
+    ],
+    [
+     "Ça dépend du budget.",
+     "It depends on the budget."
+    ],
+    [
+     "Je mesurerais avant d'optimiser.",
+     "I would measure before optimizing.",
+     "I'd measure before optimising.",
+     "I'd measure before optimizing."
     ]
    ],
    "v": [
@@ -6041,7 +8609,17 @@
       5,
       8,
       9,
-      10
+      10,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
      ],
      "v": [
       3,
@@ -6060,7 +8638,15 @@
       0,
       3,
       6,
-      11
+      11,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
      ],
      "v": [
       1,
@@ -6083,7 +8669,10 @@
       7,
       12,
       13,
-      14
+      14,
+      33,
+      34,
+      35
      ],
      "v": [
       0,

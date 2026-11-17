@@ -53,8 +53,8 @@ function sendPush($endpoint, $v, $subject) {
 
 if (!is_file($VAPID_FILE)) exit("Aucun abonné pour l'instant.\n");
 $v = json_decode((string)file_get_contents($VAPID_FILE), true);
-$db = new PDO('sqlite:' . $DB_PATH);
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+require_once __DIR__ . '/migrate.php';
+$db = speakeasy_db($DB_PATH);
 $rows = $db->query('SELECT s.endpoint, s.hour, s.tz, s.last_day, u.state FROM subs s JOIN users u ON u.id = s.uid')->fetchAll(PDO::FETCH_ASSOC);
 $sent = 0;
 foreach ($rows as $r) {
