@@ -174,7 +174,13 @@ export function make0(t, ctx) {
       t = ctx.c && ctx.c.length ? "choice" : ctx.rd && ctx.rd.length ? "read" : t;
   }
   const order = [t, ...(FB[t] || []), "choice", "mc", "dictee"];
-  t = order.find(x => ctx[NEED[x]] && ctx[NEED[x]].length);
+  // v37 : dans une leçon (ctx.cap), un même élément ne sert pas plus de ctx.cap fois : on passe au type suivant
+  const ok = x => {
+    const k = NEED[x],
+      a = ctx[k];
+    return a && a.length && !(ctx.cap && x !== "match" && (ctx.ptr[k] || 0) >= ctx.cap * a.length);
+  };
+  t = order.find(ok);
   if (!t) return null;
   if (t === "match") {
     // jamais deux fois le même mot à gauche ou à droite (un mot peut figurer dans deux unités, parfois avec deux sens)
