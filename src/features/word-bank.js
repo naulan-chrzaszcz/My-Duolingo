@@ -1,5 +1,5 @@
 // Mots à retenir (répétition espacée)
-import { COURSES, SECTIONS } from "../content/index.js";
+import { COURSES, FR_WORDS, SECTIONS } from "../content/index.js";
 import { S, save, uid } from "../core/accounts.js";
 import { $, esc, shuffle } from "../core/util.js";
 import { simScore, tooClose } from "../exercises/distractors.js";
@@ -65,7 +65,8 @@ export function bankView() {
         if (!item.tr && x[1]) item.tr = x[1];
         item.ex = x[2] || "";
         item.exTr = x[3] || "";
-        item.rom = x[4] || "";
+        item.rom = typeof x[4] === "string" ? x[4] : "";
+        if (x.traps && x.traps.length) item.traps = x.traps;
       }
       save();
       if (!$("#modal").classList.contains("hidden") && $("#blist")) bankView();
@@ -178,35 +179,94 @@ export function micCheck(text, lang, out, btn) {
     micCheck(text, lang, out, btn);
   }
 }
+// ---------- Mauvaises réponses du QCM « Comment dit-on ce mot ? » ----------
+// Elles viennent, dans l'ordre : des pièges proposés par l'IA à l'ajout du mot, des autres mots à retenir,
+// puis du vocabulaire de tous les cours de la section (Voltaire n'en a pas : on prend les mots français du FLE).
+const endMark = x =>
+  (String(x)
+    .trim()
+    .match(/[?!.…]$/) || [""])[0];
+const nWords = x => String(x).trim().split(/\s+/).length;
+const koEnd = x => {
+  const t = String(x)
+    .trim()
+    .replace(/[?!.…]+$/, "");
+  return /니다$/.test(t) ? "니다" : /요$/.test(t) ? "요" : /다$/.test(t) ? "다" : "";
+};
+const jamoOnly = x => /^[\u3130-\u318f\s]+$/.test(String(x));
+export function bankVocab(sec) {
+  const ids = (SECTIONS.find(x => x.id === sec) || { tracks: [] }).tracks.filter(id => COURSES[id]);
+  const v = ids.flatMap(id => COURSES[id].units.flatMap(u => (u.v || []).map(x => x[1])));
+  return sec === "fr" && !ids.includes("fr-fle") ? v.concat(FR_WORDS) : v;
+}
+// 3 mauvaises réponses pour le mot w, ou moins s'il n'y en a pas assez de crédibles (le QCM est alors retiré)
+export function bankWrong(sec, w, all, vocab) {
+  const ans = w.w,
+    low = x => String(x).trim().toLowerCase();
+  const seen = new Set([low(ans)]);
+  const cands = [];
+  const add = (list, bonus) =>
+    list.forEach(x => {
+      if (typeof x !== "string" || !x.trim() || seen.has(low(x)) || tooClose(x, ans) || jamoOnly(x)) return;
+      seen.add(low(x));
+      cands.push([x, bonus]);
+    });
+  add(w.traps || [], 100);
+  add(
+    all.filter(x => x !== w).map(x => x.w),
+    3,
+  );
+  add(vocab || bankVocab(sec), 0);
+  // toujours la même ponctuation finale et, en coréen, la même terminaison (‑니다, ‑요, ‑다 ou nom) :
+  // sinon la bonne réponse se repère à sa forme. À défaut de mieux, on relâche le nombre de mots et la longueur.
+  const same = x => endMark(x) === endMark(ans) && (sec !== "ko" || koEnd(x) === koEnd(ans));
+  const strict = x =>
+    Math.abs(nWords(x) - nWords(ans)) <= 1 && x.length * 2 >= ans.length && x.length <= ans.length * 2;
+  const out = [];
+  for (const keep of [strict, () => true]) {
+    cands
+      .filter(([x, b]) => !out.includes(x) && same(x) && (b === 100 || keep(x)))
+      .map(([x, b]) => [simScore(ans, x) + b + Math.random() * 1.5, x])
+      .sort((p, q) => q[0] - p[0])
+      .slice(0, 3 - out.length)
+      .forEach(([, x]) => out.push(x));
+    if (out.length >= 3) break;
+  }
+  return out;
+}
 export function bankSession(sec) {
   const lang = SEC_LANG[sec];
   const all = S.bank[sec] || [];
   if (!all.length) return;
   const due = all.filter(w => (w.due || 0) <= Date.now());
   const pick = shuffle(due.length ? due : all).slice(0, 8);
-  const pool = all
-    .map(w => w.w)
-    .concat(COURSES[SECTIONS.find(x => x.id === sec).tracks[0]].units.flatMap(u => (u.v || []).map(v => v[1])));
-  const p1 = [],
+  const vocab = bankVocab(sec);
+  const pool = all.map(w => w.w).concat(vocab);
+  // p0 : rappel d'abord (mot en révision : on l'écrit avant de le revoir), p1 : découverte, p2 : oral, p3 : exemple et écriture
+  const p0 = [],
+    p1 = [],
     p2 = [],
     p3 = [];
   pick.forEach(w => {
     const b = { lang, _bank: w.id, rom: w.rom || "" };
     const same = !w.tr || norm(w.tr, lang) === norm(w.w, lang);
-    if (!same) {
-      const lw = w.w.trim().toLowerCase();
-      const cands = [...new Set(pool.filter(x => x && x.trim().toLowerCase() !== lw && !tooClose(x, w.w)))]
-        .map(x => [simScore(w.w, x) + Math.random() * 2.5, x])
-        .sort((p, q) => q[0] - p[0])
-        .slice(0, 3)
-        .map(x => x[1]);
-      p1.push({ ...b, t: "mc", w: true, prompt: w.tr, answer: w.w, options: shuffle([w.w, ...cands]) });
-    }
-    p1.push(
+    const review = (w.box || 0) > 0;
+    const typeEx = { ...b, t: "type", prompt: w.tr, answer: w.w, alts: [w.w] };
+    const listenEx =
       sec === "fr"
         ? { ...b, t: "dictee", audio: w.w, answer: w.w, alts: [w.w] }
-        : { ...b, t: "listen", audio: w.w, answer: w.w, alts: [w.w] },
-    );
+        : { ...b, t: "listen", audio: w.w, answer: w.w, alts: [w.w] };
+    if (review && !same) {
+      p0.push(typeEx);
+      p2.push(listenEx);
+    } else {
+      if (!same) {
+        const wrong = bankWrong(sec, w, all, vocab);
+        if (wrong.length >= 3)
+          p1.push({ ...b, t: "mc", w: true, prompt: w.tr, answer: w.w, options: shuffle([w.w, ...wrong]) });
+      }
+      p1.push(listenEx);
+    }
     p2.push({ ...b, t: "speak", text: w.w, prompt: same ? "" : w.tr });
     if (w.ex) {
       const ws = words(w.ex);
@@ -220,12 +280,12 @@ export function bankSession(sec) {
       });
       if (sec !== "fr" || NONFR) p3.push({ ...b, t: "speak", text: w.ex, prompt: w.exTr || "" });
     }
-    if (!same) p3.push({ ...b, t: "type", prompt: w.tr, answer: w.w, alts: [w.w] });
+    if (!same && !review) p3.push(typeEx);
   });
   openSession({
     mode: "train",
     cid: SECTIONS.find(x => x.id === sec).tracks[0],
-    exs: [...shuffle(p1), ...shuffle(p2), ...shuffle(p3)],
+    exs: [...shuffle(p0), ...shuffle(p1), ...shuffle(p2), ...shuffle(p3)],
     bankSec: sec,
     bankRes: {},
   });
