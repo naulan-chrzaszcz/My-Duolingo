@@ -23,6 +23,7 @@ import { secUnits } from "../ui/router.js";
 import { IOS, STANDALONE, THEME, haptic, setTheme } from "../ui/platform.js";
 import { avatar, curCid, curSec, renderAll } from "../ui/router.js";
 import { closeModal, modal, toast } from "../ui/ui.js";
+import { interestsPicker, likesList } from "../features/interests.ts";
 
 /** Sous-pages des paramètres : [identifiant dans l'adresse, titre, icône]. */
 export const SETTINGS_PAGES = [
@@ -47,6 +48,7 @@ function pageHtml(sub) {
   ]
     .map(([x, l]) => `<option value="${x}" ${S.goal === x ? "selected" : ""}>${l} · ${x} XP</option>`)
     .join("")}</select></div>
+  <div class="setrow"><span>Centres d'intérêt</span><button class="btn ghost" id="sLikes" style="padding:8px 14px">${likesList().length ? "Modifier" : "Choisir"}</button></div>
   <div class="setrow"><span>Vitesse de la voix</span><input id="sRate" type="range" min="0.6" max="1.2" step="0.05" value="${S.set.rate}"></div>
   <div class="setrow"><span>Lecture auto après chaque réponse</span><button class="switch ${S.set.auto ? "on" : ""}" id="sAuto" aria-label="Lecture auto"></button></div>
   <div class="setrow"><span>Effets sonores</span><button class="switch ${S.set.sound ? "on" : ""}" id="sSound" aria-label="Sons"></button></div>
@@ -254,6 +256,11 @@ function bindSettings() {
     save();
   };
   $$("#sUi").onchange = e => setUi(e.target.value);
+  $$("#sLikes").onclick = () =>
+    interestsPicker(() => {
+      toast("Centres d'intérêt enregistrés");
+      renderAll();
+    });
   $$("#sTheme").onchange = e => setTheme(e.target.value);
   $$("#sRate").onchange = e => {
     S.set.rate = +e.target.value;

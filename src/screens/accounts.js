@@ -14,6 +14,7 @@ import { beep } from "../services/speech.js";
 import { mascot } from "../ui/mascot.js";
 import { avatar, renderAll } from "../ui/router.js";
 import { closeModal, modal, toast } from "../ui/ui.js";
+import { dailyLessonCheck } from "../features/daily-lesson.ts";
 
 // ===================== COMPTES =====================
 export function accStats(a) {
@@ -191,7 +192,10 @@ export function switchTo(id, isNew) {
   renderAll();
   const a = curAcc();
   if (!S.onb) onboarding(isNew ? a.name : null);
-  else toast(`${a.emoji} Bonjour ${a.name} !`);
+  else {
+    toast(`${a.emoji} Bonjour ${a.name} !`);
+    setTimeout(dailyLessonCheck, 1500);
+  }
   cloudInit();
   if (a.srv) srvPull();
 }
