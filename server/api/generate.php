@@ -75,6 +75,8 @@ $theme  = $clean($in['theme'] ?? '', 80);
 // v39 : centres d'intérêt de l'élève (8 au plus, 60 caractères chacun) et leçon du jour
 $likes  = array_values(array_filter(array_slice(array_map(function ($s) use ($clean) { return $clean($s, 60); }, array_filter((array)($in['likes'] ?? []), 'is_string')), 0, 8), 'strlen'));
 $dailyL = !empty($in['daily']);
+$GOALS  = ['trip' => 'voyager et se débrouiller sur place', 'job' => 'utiliser la langue dans son travail', 'exam' => 'réussir un examen (TOEIC, Certificat Voltaire, TOPIK…)', 'study' => 'réussir ses études', 'people' => 'parler avec des proches ou des amis', 'fun' => "le plaisir d'apprendre (culture, séries, musique)"];
+$why    = is_string($in['why'] ?? null) && isset($GOALS[$in['why']]) ? $GOALS[$in['why']] : '';
 $mode = (string)($in['mode'] ?? '');
 // Seuls les types de génération de l'application sont acceptés (pas de prompt libre)
 if (!in_array($mode, ['', 'exercise', 'word', 'write', 'unit', 'story', 'explain'], true)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_mode']); exit; }
@@ -103,6 +105,7 @@ $prompt = "Tu es le coach d'une application d'apprentissage façon Duolingo. L'�
   . implode("\n- ", $seen) . "\n\n"
   . ($bilan ? "Séance BILAN : couvre l'ensemble des unités listées (pas seulement la dernière), en donnant plus de place aux erreurs récurrentes et aux mots que l'élève doit revoir, placés en tête de la liste ci-dessus.\n\n" : '')
   . ($dailyL ? "Leçon du jour : une leçon INÉDITE, construite autour d'une situation concrète et nouvelle (si possible liée à un centre d'intérêt de l'élève), qui réutilise ce qu'il a déjà vu et y ajoute quelques mots nouveaux utiles.\n\n" : '')
+  . ($why !== '' ? "Objectif de l'élève : $why. Choisis des situations utiles pour cet objectif.\n\n" : '')
   . ($likes ? "Centres d'intérêt de l'élève : " . implode(', ', $likes) . ". Situe une bonne partie des phrases, des dialogues et des exemples dans ces domaines, quand cela reste naturel.\n\n" : '')
   . ($theme !== '' ? "Thème imposé par l'élève : « $theme ». TOUS les exercices doivent porter sur ce thème (vocabulaire, situations, phrases), au niveau indiqué, en réutilisant si possible les structures déjà vues.\n\n" : '')
   . ($coach ? "Erreurs récentes de l'élève (exercice | réponse attendue | réponse donnée) :\n- " . implode("\n- ", $errors)

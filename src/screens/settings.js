@@ -13,7 +13,7 @@ import { unlockedUnits } from "../lesson/build.js";
 import { accountForm, accountPicker, deleteAcc, exportAcc, importAcc, openAccount } from "./accounts.js";
 import { setUi } from "./language.js";
 import { TROPHY, tierOf, weekStart, weekXp, TIERS } from "./league.js";
-import { AI_MODELS, aiCfg, aiDetect, aiDirect, aiKey, aiLabel, aiSetCfg } from "../services/ai.js";
+import { AI_MODELS, aiCfg, aiConnect, aiDetect, aiDirect, aiKey, aiLabel, aiSetCfg } from "../services/ai.js";
 import { SRV, srv } from "../services/cloud.js";
 import { goOnline, pushCapable, remindSet } from "../services/reminders.js";
 import { SR0, beep, say, set_SR } from "../services/speech.js";
@@ -166,46 +166,15 @@ function bindSettings() {
     }
   };
   $$("#aiSave").onclick = async () => {
-    const k = $$("#aiKey").value.trim(),
-      msg = $$("#aiMsg");
-    if (!k) {
-      msg.className = "aimsg bad";
-      msg.textContent = "Colle ta clé (elle commence par sk-ant-).";
-      return;
-    }
-    if (!/^sk-ant-[A-Za-z0-9_\-]{20,}$/.test(k)) {
-      msg.className = "aimsg bad";
-      msg.textContent =
-        "Ça ne ressemble pas à une clé Claude : elle commence par « sk-ant- » et fait une centaine de caractères. Copie-la en entier.";
-      return;
-    }
-    const prev = aiCfg();
-    aiSetCfg({ key: k, model: $$("#aiModel").value });
+    const msg = $$("#aiMsg");
     msg.className = "aimsg";
     msg.textContent = "⏳ Test de la clé…";
-    await aiDetect();
-    try {
-      const t = await aiDirect(
-        'Réponds uniquement par le mot JSON {"ok":true}.',
-        { mode: "word", lang: "en-US", words: ["hello"] },
-        "quick",
-        25000,
-        20,
-      );
-      msg.className = "aimsg ok";
-      msg.textContent = "✅ Clé valide : ton Claude est connecté !";
+    const r = await aiConnect($$("#aiKey").value, $$("#aiModel").value);
+    msg.className = "aimsg " + r.cls;
+    msg.textContent = r.text;
+    if (r.cls === "ok") {
       beep("win");
       haptic(2);
-    } catch (e) {
-      const fb = e && e.fallback;
-      msg.className = "aimsg " + (fb ? "" : "bad");
-      msg.textContent = fb
-        ? "Clé enregistrée. Ici l'appel direct est bloqué : Speakeasy utilisera Claude de la page."
-        : e.userMsg ||
-          (e.message === "timeout"
-            ? "⏳ Pas de réponse (réseau ?). La clé est enregistrée, réessaie plus tard."
-            : "Clé enregistrée, mais le test a échoué (" + esc(String(e.message || e).slice(0, 80)) + ").");
-      if (e && e.status === 401 && prev.key !== k) aiSetCfg(prev.key ? prev : null);
     }
     aiDetect().then(m => {
       $$("#aiStat").textContent = aiLabel(m);
