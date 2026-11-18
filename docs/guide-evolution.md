@@ -89,6 +89,8 @@ Insérer une unité au milieu est possible : la progression des profils est reca
 1. Ouvrir `src/content/grammar/<langue>.json` (`en` : anglais, textes en français ; `fr` : « Learn French », textes en anglais ; `ko` : coréen, textes en français).
 2. Une règle (`subs`) a un `id`, un titre `t`, un niveau `lv`, un mémo `memo`, ses règles `r`, ses QCM `i` et, en anglais et en FLE, des phrases à traduire `p`.
 3. QCM : `[question avec ___, options, n° de règle, indice, autres réponses acceptées]`.
+   - Le n° de règle peut être une liste, une entrée par choix du lien `{1=…}` : `["{1=Yesterday|So far} I ___ …", ["{1=went|have been}", "{1=have been|went}", …], [0, 1]]`. C'est le meilleur moyen d'empêcher qu'on retienne la réponse d'une phrase : la même phrase demande une autre forme selon l'indice tiré.
+   - Viser au moins 8 gabarits par règle, presque tous avec des parties variables, et pas plus de la moitié des phrases avec la même bonne réponse : `grammar_drills` le vérifie.
    - La première option est la bonne ; les autres doivent être de vraies formes fausses dans cette phrase (pas de mots inventés).
    - L'indice (verbe à l'infinitif…) autorise l'exercice « écris le mot qui manque ».
    - `{a|b}` = choix au hasard, `{1=a|b}` = choix lié (même rang dans toute la phrase, options comprises), `{@liste}` = mot du lexique `lex`.

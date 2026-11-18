@@ -18,7 +18,8 @@ for(const key in DRILL_SETS){const set=DRILL_SETS[key];
  for(const no of set.notions){tr(no.t);tr(no.d);
   for(const sub of no.subs){tr(sub.t);tr(sub.memo);sub.r.forEach(tr);
    sub.i.forEach((it,j)=>{const id=sub.id+'#'+j;linked([it[0],...it[1],it[3]||'',...(it[4]||[])],id);
-    if(!(it[2]>=0&&it[2]<sub.r.length))B(id+' : n° de règle invalide');
+    const rs=Array.isArray(it[2])?it[2]:[it[2]];if(!rs.length||rs.some(x=>!(x>=0&&x<sub.r.length)))B(id+' : n° de règle invalide');
+    if(Array.isArray(it[2])){const t1=[it[0],...it[1]].join(' ').match(/\{1=([^{}]*)\}/);const n1=t1?(t1[1].startsWith('@')?(set.lex[t1[1].slice(1)]||[]).length:t1[1].split('|').length):0;if(n1!==it[2].length)B(id+' : liste de règles de '+it[2].length+' pour un choix lié de '+n1);}
     if((it[0].match(/___/g)||[]).length!==1)B(id+' : il faut exactement un ___');
     for(let k=0;k<40;k++){const g=genItem(set,sub,j);if(!g){B(id+' : aucun tirage valable');break}n++;
      const all=[g[0],...g[1],g[3],g._h||'',...(g._a||[])].join(' ');if(/[{}]/.test(all))B(id+' : accolade restante — '+all.slice(0,80));
@@ -36,6 +37,18 @@ for(const key in DRILL_SETS){const set=DRILL_SETS[key];
  for(const cid in set.units){const C=COURSES[cid];if(!C)continue;const ts=new Set(C.units.map(U=>U.t0||U.t));
   for(const t in set.units[cid]){if(!ts.has(t))B(key+' : unité inconnue dans '+cid+' — '+t);set.units[cid][t].forEach(id=>{if(!drillSub(id))B(key+' : règle inconnue '+id)})}}}
 return {n,bad}}"""
+# v38 : rien de prévisible — au moins 8 gabarits par règle, une bonne réponse qui change d'une phrase à l'autre,
+# un ordre d'exercices qui change d'une séance à l'autre et peu de phrases identiques dans une séance sur une seule règle
+PREDICT = r"""(cid)=>{const set=drillSetFor(cid);const bad=[];const orders=new Set();
+ for(let k=0;k<12;k++)orders.add(drillExercises(cid).map(e=>e.t).join(','));
+ if(orders.size<6)bad.push(cid+' : ordre des exercices trop régulier ('+orders.size+' ordres sur 12 séances)');
+ for(const no of set.notions)for(const sub of no.subs){
+  if(sub.i.length<8)bad.push(sub.id+' : seulement '+sub.i.length+' gabarits');
+  const ans=new Map();let tot=0;for(let j=0;j<sub.i.length;j++)for(let k=0;k<10;k++){const g=genItem(set,sub,j);if(!g)continue;tot++;ans.set(g[1][0],(ans.get(g[1][0])||0)+1)}
+  const top=Math.max(...ans.values())/tot;if(top>0.55)bad.push(sub.id+' : la même bonne réponse revient '+Math.round(top*100)+' % du temps');
+  let dup=0;for(let k=0;k<20;k++){const qs=drillExercises(cid,sub.id).map(e=>e.q);dup+=qs.length-new Set(qs).size}
+  if(dup/20>3.5)bad.push(sub.id+' : '+(dup/20).toFixed(1)+' phrases identiques par séance');}
+ return bad}"""
 SESSION = r"""(cid)=>{const set=drillSetFor(cid);const out=[];[undefined,...set.notions.map(n=>n.id),...set.notions.flatMap(n=>n.subs.map(s=>s.id))].forEach(pick=>{const exs=drillExercises(cid,pick);out.push([pick||'tout',exs.length,exs.map(e=>e.t).join(',')]);});return out}"""
 async def main():
   async with async_playwright() as pw:
@@ -47,6 +60,7 @@ async def main():
       r=await p.evaluate(CHECK, ui); total+=r['n']; problems+=[ui+' | '+x for x in r['bad']]
       print(f'== {ui} : {r["n"]} phrases générées, anomalies {len(r["bad"])}')
       for cid in cids:
+        pr=await p.evaluate(PREDICT, cid); problems+=[f'{ui} {x}' for x in pr]
         sess=await p.evaluate(SESSION, cid)
         short=[s for s in sess if s[1]<10]
         if short: problems+=[f'{ui} {cid} séance trop courte {s}' for s in short]
@@ -81,7 +95,7 @@ async def main():
           await p.evaluate("document.querySelector('#dgo').click()"); await p.wait_for_timeout(300)
           st=await p.evaluate("L?L.q.length+1:0")
           print(f'   carte {card[0]!r} : {n} notions, {ns} règles, mémo {memo!r}, séance de {st} exercices')
-          if n!=4 or st<10: problems.append(f'{ui} {sec} : fenêtre des notions incomplète ({n} notions, séance {st})')
+          if n<5 or st<10: problems.append(f'{ui} {sec} : fenêtre des notions incomplète ({n} notions, séance {st})')
           await p.evaluate("if(L)closeLesson();closeModal()")
     # effets : sons synthétisés, motifs de vibration, éclats de couleurs
     fx=await p.evaluate("""(()=>{S.set.sound=true;S.set.haptic=true;let osc=0;const AC0=window.AudioContext;const o=AC0.prototype.createOscillator;AC0.prototype.createOscillator=function(){osc++;return o.call(this)};
