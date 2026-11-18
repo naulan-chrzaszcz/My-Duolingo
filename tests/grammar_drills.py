@@ -46,8 +46,8 @@ PREDICT = r"""(cid)=>{const set=drillSetFor(cid);const bad=[];const orders=new S
   if(sub.i.length<8)bad.push(sub.id+' : seulement '+sub.i.length+' gabarits');
   const ans=new Map();let tot=0;for(let j=0;j<sub.i.length;j++)for(let k=0;k<10;k++){const g=genItem(set,sub,j);if(!g)continue;tot++;ans.set(g[1][0],(ans.get(g[1][0])||0)+1)}
   const top=Math.max(...ans.values())/tot;if(top>0.55)bad.push(sub.id+' : la même bonne réponse revient '+Math.round(top*100)+' % du temps');
-  let dup=0;for(let k=0;k<20;k++){const qs=drillExercises(cid,sub.id).map(e=>e.q);dup+=qs.length-new Set(qs).size}
-  if(dup/20>3.5)bad.push(sub.id+' : '+(dup/20).toFixed(1)+' phrases identiques par séance');}
+  let dup=0;for(let k=0;k<50;k++){const qs=drillExercises(cid,sub.id).map(e=>e.q);dup+=qs.length-new Set(qs).size}
+  if(dup/50>3.5)bad.push(sub.id+' : '+(dup/50).toFixed(1)+' phrases identiques par séance');}
  return bad}"""
 SESSION = r"""(cid)=>{const set=drillSetFor(cid);const out=[];[undefined,...set.notions.map(n=>n.id),...set.notions.flatMap(n=>n.subs.map(s=>s.id))].forEach(pick=>{const exs=drillExercises(cid,pick);out.push([pick||'tout',exs.length,exs.map(e=>e.t).join(',')]);});return out}"""
 async def main():
