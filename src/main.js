@@ -69,6 +69,7 @@ import { mascot } from "./ui/mascot.js";
 import { INSTALL, THEME, setTheme } from "./ui/platform.js";
 import { renderAll, route, sectionPicker } from "./ui/router.js";
 import { installTypography } from "./ui/typography.js";
+import { dailyLessonCheck } from "./features/daily-lesson.ts";
 
 if (UI !== "fr") {
   trTree(document.body);
@@ -139,6 +140,8 @@ loadAcc();
 window.addEventListener("online", onOnline);
 window.addEventListener("offline", netUI);
 document.addEventListener("visibilitychange", () => {
+  // retour dans l'app installée un autre jour (iPhone : la page reste en mémoire)
+  if (document.visibilityState === "visible" && ACC.current && S.onb) setTimeout(dailyLessonCheck, 1200);
   if (document.visibilityState !== "visible" || !navigator.onLine) return;
   if (Date.now() - (SRV.lastPull || 0) < 30000) return;
   SRV.lastPull = Date.now();
@@ -167,6 +170,7 @@ try {
     else if (a.pin || ACC.list.length > 1) accountPicker(true);
     else {
       if (!S.onb) onboarding();
+      else setTimeout(dailyLessonCheck, 2500); // leçon du jour (v39), après les messages de démarrage
       if (a.srv) {
         SRV.lastPull = Date.now();
         srvPull().then(() => setTimeout(leagueCheck, 1500));

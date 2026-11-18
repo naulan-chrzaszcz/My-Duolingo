@@ -127,6 +127,15 @@ export interface State {
   wear: string;
   bank: Record<string, unknown[]>;
   mist: Record<string, unknown[]>;
+  /** Centres d'intérêt choisis (identifiants de features/interests.ts) et texte libre (v39). */
+  likes?: string[];
+  likeFree?: string;
+  /** Jour (dkey) où la leçon du jour a été proposée (v39). */
+  dlDay?: string;
+  /** Objectif d'apprentissage (identifiant de features/personalize.ts) et étapes de personnalisation (v39). */
+  why?: string;
+  pzSeen?: boolean;
+  pzDone?: boolean;
   badges: string[];
   set: {
     rate: number;

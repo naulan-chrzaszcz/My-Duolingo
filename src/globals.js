@@ -20,6 +20,9 @@ import * as m_features_placement from "./features/placement.js";
 import * as m_features_quests from "./features/quests.js";
 import * as m_features_theme_training from "./features/theme-training.js";
 import * as m_features_word_bank from "./features/word-bank.js";
+import * as m_features_interests from "./features/interests.ts";
+import * as m_features_daily_lesson from "./features/daily-lesson.ts";
+import * as m_features_personalize from "./features/personalize.ts";
 import * as m_i18n_dict_en from "./i18n/dict-en.js";
 import * as m_i18n_dict_ko from "./i18n/dict-ko.js";
 import * as m_i18n_locale from "./i18n/locale.js";
@@ -72,6 +75,9 @@ const MODULES = [
   m_features_quests,
   m_features_theme_training,
   m_features_word_bank,
+  m_features_interests,
+  m_features_daily_lesson,
+  m_features_personalize,
   m_i18n_dict_en,
   m_i18n_dict_ko,
   m_i18n_locale,
