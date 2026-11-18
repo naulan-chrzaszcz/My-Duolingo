@@ -12,6 +12,7 @@ import { extremize } from "../lesson/build.js";
 import { L, dueReviews, openSession } from "../lesson/engine.js";
 import { mascot } from "../ui/mascot.js";
 import { cacheGet, cacheKey, cachePick, cachePut, cacheVersions } from "./ai-cache.ts";
+import { revFailed, revPerf, revPerfText } from "../features/revision.ts";
 import { closeModal, modal, toast } from "../ui/ui.js";
 
 // ===================== GÉNÉRATION PAR IA =====================
@@ -121,7 +122,8 @@ export async function aiAsk(prompt, req, o) {
     prompt += UI === "ko" ? KO_SUFFIX : EN_SUFFIX;
     req = Object.assign({}, req, { ui: UI });
   }
-  const cap = cacheVersions((req && req.mode) || "");
+  // o.cache === false : toujours une génération nouvelle (carte « Révision IA illimitée »)
+  const cap = o.cache === false ? 0 : cacheVersions((req && req.mode) || "");
   const k = cap ? cacheKey((o.tier || "quick") + "\n" + prompt) : "";
   const hit = cap ? await cacheGet(k) : null;
   if (hit && hit.v.length >= cap) return cachePick(hit);
@@ -260,6 +262,8 @@ export function aiRequest(cid, units, errors, theme, opt) {
     bilan: !!opt.bilan,
     errors: errs,
     theme: (theme || "").slice(0, 80),
+    // révision IA (v38.2) : réglage de la difficulté d'après la réussite aux dernières révisions
+    ...(opt.rev && revPerf(cid) ? revPerf(cid) : {}),
   };
 }
 export function aiPrompt(r) {
@@ -317,6 +321,7 @@ export function aiPrompt(r) {
     (r.bilan
       ? "Séance BILAN : couvre l'ensemble des unités listées (pas seulement la dernière), en donnant plus de place aux erreurs récurrentes et aux mots que l'élève doit revoir, placés en tête de la liste ci-dessus.\n\n"
       : "") +
+    (r.perf ? revPerfText(r.perf, r.acc) : "") +
     (r.theme
       ? "Thème imposé par l'élève : « " +
         r.theme +
@@ -481,7 +486,12 @@ export function validateGen(raw, C) {
 }
 export async function aiGenerate(cid, units, errors, theme, opt) {
   const req = aiRequest(cid, units, errors, theme, opt);
-  const raw = await aiAsk(aiPrompt(req), req, { tier: "quick", ms: 70000, ok: r => !!validateGen(r, COURSES[cid]) });
+  const raw = await aiAsk(aiPrompt(req), req, {
+    tier: "quick",
+    ms: 70000,
+    ok: r => !!validateGen(r, COURSES[cid]),
+    cache: !(opt && opt.rev),
+  });
   return validateGen(raw, COURSES[cid]);
 }
 export function localRemix(cid, units) {
@@ -591,7 +601,7 @@ export async function startAI(cid, units, cfg) {
       units,
       errs.length ? errs : null,
       theme,
-      cfg.bilan ? { bilan: true, words: cfg.words } : null,
+      cfg.bilan ? { bilan: true, words: cfg.words } : cfg.rev ? { rev: true } : null,
     );
     if (G) src = "ia";
   } catch (e) {}
@@ -604,8 +614,9 @@ export async function startAI(cid, units, cfg) {
     const extra = drillExercises(cid, rnd(wk), 3);
     exs = exs.concat(extra);
   }
-  const rv = dueReviews(cid, coach || cfg.bilan ? 6 : 3);
-  exs = coach ? shuffle(rv.concat(exs)) : exs.concat(rv);
+  // révision IA : les exercices ratés pas encore réussis reviennent aussi, mêlés aux nouveaux
+  const rv = cfg.rev ? revFailed(cid) : dueReviews(cid, coach || cfg.bilan ? 6 : 3);
+  exs = coach || cfg.rev ? shuffle(rv.concat(exs)) : exs.concat(rv);
   if (src === "mix" && AI.mode === "local")
     toast(
       theme

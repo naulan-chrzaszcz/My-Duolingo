@@ -72,6 +72,16 @@ $bilan  = !empty($in['bilan']);   // v33 : leçon bilan sur tout ce qui a été 
 $errors = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 300); }, (array)($in['errors'] ?? [])), 0, 25);
 $coach  = count($errors) > 0;
 $theme  = $clean($in['theme'] ?? '', 80);
+// Révision IA (v38.2) : réglage de la difficulté d'après la réussite aux dernières révisions (valeurs en liste blanche)
+$perf   = in_array($in['perf'] ?? '', ['up', 'keep', 'down'], true) ? $in['perf'] : '';
+$acc    = max(0, min(100, (int)($in['acc'] ?? 0)));
+$perfTxt = '';
+if ($perf !== '') {
+  $perfTxt = "Adaptation au niveau réel : l'élève réussit $acc % de ses dernières révisions. ";
+  if ($perf === 'up') $perfTxt .= "Propose des exercices un peu plus difficiles que le niveau indiqué (phrases plus longues, structures et vocabulaire du niveau suivant), toujours à partir de ce qu'il a vu.\n\n";
+  elseif ($perf === 'down') $perfTxt .= "Propose des exercices un peu plus simples que le niveau indiqué (phrases courtes, vocabulaire de base des unités vues) pour consolider.\n\n";
+  else $perfTxt .= "Garde exactement le niveau indiqué, en variant les formes d'exercices.\n\n";
+}
 $mode = (string)($in['mode'] ?? '');
 // Seuls les types de génération de l'application sont acceptés (pas de prompt libre)
 if (!in_array($mode, ['', 'exercise', 'word', 'write', 'unit', 'story', 'explain'], true)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_mode']); exit; }
@@ -99,6 +109,7 @@ $prompt = "Tu es le coach d'une application d'apprentissage façon Duolingo. L'�
   . "Éléments déjà vus par l'élève (réutilise ce vocabulaire et ces structures dans des phrases NOUVELLES, jamais identiques) :\n- "
   . implode("\n- ", $seen) . "\n\n"
   . ($bilan ? "Séance BILAN : couvre l'ensemble des unités listées (pas seulement la dernière), en donnant plus de place aux erreurs récurrentes et aux mots que l'élève doit revoir, placés en tête de la liste ci-dessus.\n\n" : '')
+  . $perfTxt
   . ($theme !== '' ? "Thème imposé par l'élève : « $theme ». TOUS les exercices doivent porter sur ce thème (vocabulaire, situations, phrases), au niveau indiqué, en réutilisant si possible les structures déjà vues.\n\n" : '')
   . ($coach ? "Erreurs récentes de l'élève (exercice | réponse attendue | réponse donnée) :\n- " . implode("\n- ", $errors)
       . "\n\nAnalyse ces erreurs et repère les erreurs RÉCURRENTES : mots ou vocabulaire, construction des phrases, temps et conjugaison, accords, prépositions, orthographe, écoute. Dans \"diag\", écris un diagnostic bienveillant en français (2 à 3 phrases, tutoiement). Dans \"focus\", liste 2 à 4 points faibles courts. Au moins 70 % des exercices doivent cibler ces points faibles, sous des formes variées.\n\n" : '')

@@ -127,6 +127,8 @@ export interface State {
   wear: string;
   bank: Record<string, unknown[]>;
   mist: Record<string, unknown[]>;
+  /** Réussite des dernières séances « Révision IA illimitée », par cours (v38.2). */
+  revAcc?: Record<string, { ts: number; ok: number; n: number }[]>;
   badges: string[];
   set: {
     rate: number;

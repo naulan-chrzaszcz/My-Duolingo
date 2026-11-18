@@ -144,6 +144,15 @@ export function mergeStates(a, b) {
     cur.sort((x, y) => (x.ts || 0) - (y.ts || 0));
     if (cur.length > 60) m.elog[c] = cur.slice(-60);
   });
+  m.revAcc = m.revAcc || {};
+  Object.entries(O.revAcc || {}).forEach(([c, a]) => {
+    const cur = (m.revAcc[c] = m.revAcc[c] || []);
+    (a || []).forEach(r => {
+      if (!cur.some(x => x.ts === r.ts)) cur.push(r);
+    });
+    cur.sort((x, y) => (x.ts || 0) - (y.ts || 0));
+    if (cur.length > 5) m.revAcc[c] = cur.slice(-5);
+  });
   Object.entries(O.genU || {}).forEach(([c, a]) => {
     if ((a || []).length > (m.genU[c] || []).length) m.genU[c] = a;
   });

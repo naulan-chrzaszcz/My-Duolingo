@@ -40,6 +40,7 @@ export const DEF = () => ({
   week: {},
   prog: {},
   mist: {},
+  revAcc: {},
   badges: [],
   lessons: 0,
   perfect: 0,

@@ -19,6 +19,7 @@ import { ic } from "../ui/icons.js";
 import { mascot } from "../ui/mascot.js";
 import { VIEW, curSec, renderAll, renderTop } from "../ui/router.js";
 import { burst, closeModal, confetti, countUp, modal, toast } from "../ui/ui.js";
+import { revRecord } from "../features/revision.ts";
 
 // ===================== MOTEUR DE LEÇON =====================
 /** Leçon en cours (null hors leçon). Lecture partout ; remplacement avec set_L(). */
@@ -590,6 +591,7 @@ export function finish() {
   } catch (e) {}
   const secs = Math.round((Date.now() - L.start) / 1000),
     acc = L.correct + L.wrong ? Math.round((L.correct / (L.correct + L.wrong)) * 100) : 100;
+  if (L.rev) revRecord(L.cid, L.correct, L.correct + L.wrong);
   let bonus = 0;
   if (L.mode === "lesson" && L.wrong === 0) {
     bonus = 10;

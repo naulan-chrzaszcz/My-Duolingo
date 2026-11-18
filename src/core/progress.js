@@ -170,9 +170,11 @@ export function hydrate(o) {
   ["owned", "stories", "badges"].forEach(k => {
     if (!Array.isArray(s[k])) s[k] = [];
   });
-  ["place", "dn", "genStories", "ext", "st", "genU", "bank", "elog", "coach", "mist", "prog", "week"].forEach(k => {
-    if (!s[k] || typeof s[k] !== "object") s[k] = {};
-  });
+  ["place", "dn", "genStories", "ext", "st", "genU", "bank", "elog", "coach", "mist", "prog", "week", "revAcc"].forEach(
+    k => {
+      if (!s[k] || typeof s[k] !== "object") s[k] = {};
+    },
+  );
   if (s.pv === 2) {
     if (s.prog.ko) s.prog.ko += HANGUL_UNITS.length * 6;
     s.pv = 3;

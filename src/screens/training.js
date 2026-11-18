@@ -275,9 +275,9 @@ export function renderTrain(v) {
   add(
     "✨",
     "Révision IA illimitée",
-    `Des exercices nouveaux à chaque séance, générés à partir de tout ce que tu as vu (${COURSES[curCid()].name}).`,
+    `Des exercices toujours nouveaux, à ton niveau, à partir de tout ce que tu as vu (${COURSES[curCid()].name}). Ceux que tu rates reviennent.`,
     "IA",
-    () => startAI(curCid(), unlockedUnits(curCid()), { mode: "train" }),
+    () => startAI(curCid(), unlockedUnits(curCid()), { mode: "train", rev: true }),
   );
   add("⏱️", "Sprint 60 secondes", `Un maximum de bonnes réponses en 1 minute. Record : ${S.sprint}`, "Défi", () =>
     trainSprint(),
