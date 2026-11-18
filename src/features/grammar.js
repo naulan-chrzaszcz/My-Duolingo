@@ -11,7 +11,7 @@ import { closeModal, modal } from "../ui/ui.js";
 const rateCls = r => (r === null ? "" : r < 70 ? "bad" : r < 85 ? "mid" : "good");
 const rateTxt = r => (r === null ? "—" : r + " %");
 
-/** Fenêtre de choix : les 4 notions (temps, liaison, modaux, prépositions/particules) et leurs règles. */
+/** Fenêtre de choix : les notions (temps, liaison, modaux, prépositions/particules, phrase, mots) et leurs règles. */
 export function notionPicker(cid) {
   const set = drillSetFor(cid);
   if (!set) return;
@@ -77,11 +77,27 @@ export function ruleCard(cid, subId) {
   m.querySelector("#dback").onclick = () => notionPicker(cid);
 }
 
-// Déroulé d'une séance : QCM, mot à écrire, faute à trouver, phrase à reconstituer
+// Exercices d'une séance : QCM, mot à écrire, faute à trouver, phrase à reconstituer (pas de paires en coréen)
 const PLAN = {
-  ko: ["choice", "choice", "fill", "choice", "choice", "fill", "choice", "choice", "fill", "choice", "fill", "choice"],
+  ko: ["choice", "choice", "fill", "spot", "choice", "choice", "fill", "spot", "choice", "fill", "choice", "choice"],
   def: ["choice", "choice", "fill", "spot", "choice", "tiles", "fill", "choice", "spot", "choice", "fill", "tiles"],
 };
+/** v38 : ordre tiré à chaque séance, pour qu'on ne puisse pas prévoir l'exercice suivant.
+ *  Jamais deux fois de suite le même exercice (hors QCM), ni trois QCM d'affilée. */
+export function planOrder(base) {
+  const ok = p =>
+    p.every(
+      (t, i) =>
+        !(i && t === p[i - 1] && t !== "choice") && !(i > 1 && t === "choice" && p[i - 1] === t && p[i - 2] === t),
+    );
+  for (let k = 0; k < 40; k++) {
+    const p = shuffle(base);
+    if (ok(p)) return p;
+  }
+  return shuffle(base);
+}
+// « Trouve l'erreur » découpe la phrase en mots : le trou doit être un mot entier (pas 도서관___ ni j'___)
+const wholeGap = q => /(^|\s)___(?=[\s.,!?…:;]|$)/.test(q);
 
 /** Fabrique les exercices d'une séance de notions (une notion, une règle, ou tout si pick est vide). */
 export function drillExercises(cid, pick, n = 12) {
@@ -91,7 +107,7 @@ export function drillExercises(cid, pick, n = 12) {
   if (!subs.length) return [];
   const course = drillCid(set);
   const ctx = ctxFor(course, [], { noDrill: true });
-  const plan = (set.lang.startsWith("ko") ? PLAN.ko : PLAN.def).slice(0, n);
+  const plan = planOrder(set.lang.startsWith("ko") ? PLAN.ko : PLAN.def).slice(0, n);
   let order = shuffle(subs);
   let k = 0;
   const nextSub = () => {
@@ -116,6 +132,7 @@ export function drillExercises(cid, pick, n = 12) {
         const it = genItem(set, sub);
         if (!it) continue;
         if (t === "fill" && !it._h) continue;
+        if (t === "spot" && !wholeGap(it[0])) continue;
         ctx.c = [it];
         ctx.cs = [it];
         ctx.ptr.c = ctx.ptr.cs = 0;

@@ -86,7 +86,7 @@ export function renderTrain(v) {
     add(
       "🧩",
       NOTIONS,
-      "Temps, mots de liaison, modaux, prépositions : des phrases nouvelles à chaque séance.",
+      "Temps, liaison, modaux, prépositions, construction de la phrase, familles de mots : des phrases nouvelles à chaque séance.",
       "Grammaire",
       () => notionPicker(ccid),
     );
@@ -135,7 +135,7 @@ export function renderTrain(v) {
     add(
       "🧩",
       NOTIONS,
-      "Temps, mots de liaison, modaux, prépositions : des phrases nouvelles à chaque séance.",
+      "Temps, liaison, modaux, prépositions, pronoms, accords : des phrases nouvelles à chaque séance.",
       "Grammaire",
       () => notionPicker("fr-fle"),
     );
@@ -212,7 +212,7 @@ export function renderTrain(v) {
     add(
       "🧩",
       NOTIONS,
-      "Temps, connecteurs, modaux, particules : des phrases nouvelles à chaque séance.",
+      "Temps, connecteurs, modaux, particules, négation, honorifiques : des phrases nouvelles à chaque séance.",
       "Grammaire",
       () => notionPicker("ko"),
     );

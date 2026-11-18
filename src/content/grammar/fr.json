@@ -5,7 +5,12 @@
  "lex": {
   "ville": ["Lyon", "Marseille", "Séoul", "Tokyo", "Lille", "Nantes", "Bordeaux"],
   "paysF": ["Italie", "Espagne", "Corée", "Allemagne", "Belgique", "Suisse", "Chine"],
-  "paysM": ["Japon", "Canada", "Portugal", "Brésil", "Mexique", "Maroc", "Danemark"]
+  "paysM": ["Japon", "Canada", "Portugal", "Brésil", "Mexique", "Maroc", "Danemark"],
+  "pers": ["Paul", "Léa", "Marc", "Sophie", "Karim", "Inès"],
+  "il": ["il", "elle", "il", "elle", "il", "elle"],
+  "e": ["", "e", "", "e", "", "e"],
+  "eX": ["e", "", "e", "", "e", ""],
+  "paysF2": ["Corée", "Belgique", "Suisse", "Chine", "France", "Grèce"]
  },
  "notions": [
   {
@@ -25,14 +30,18 @@
       "With être, the past participle agrees with the subject: elle est allée, ils sont venus."
      ],
      "i": [
-      ["Hier, {1=Paul|Léa|Marc|Sophie} ___ au cinéma.", ["{1=est allé|est allée|est allé|est allée}", "a allé", "{1=est allée|est allé|est allée|est allé}", "va"], 2, "aller"],
+      ["Hier, {1=@pers} ___ au cinéma.", ["est allé{1=@e}", "a allé", "est allé{1=@eX}", "va"], 2, "aller"],
       ["Nous ___ une pizza {hier soir|samedi dernier|hier midi}.", ["avons mangé", "sommes mangés", "mangeons", "avons mangés"], 0, "manger"],
-      ["Ce matin, je ___ à sept heures.", ["me suis levé", "ai levé", "me suis lever", "m'ai levé"], 1, "se lever", ["me suis levée"]],
+      ["Ce matin, je ___ à {sept|six|huit} heures.", ["me suis levé", "ai levé", "me suis lever", "m'ai levé"], 1, "se lever", ["me suis levée"]],
       ["{Mes parents|Les enfants|Mes amis} ___ à la maison tout le week-end dernier.", ["sont restés", "ont resté", "sont resté", "restent"], 2, "rester"],
-      ["{Paul|Léa} ___ son train ce matin.", ["a raté", "est raté", "a ratée", "était raté"], 0, "rater"],
-      ["{1=Mon frère|Ma sœur} ___ en 1998.", ["{1=est né|est née}", "a né", "{1=est née|est né}", "naît"], 2, "naître"],
-      ["Tu ___ le message de Julie ?", ["as lu", "es lu", "as lis", "a lu"], 0, "lire"],
-      ["Elles ___ très tard hier soir.", ["sont rentrées", "ont rentré", "sont rentrés", "sont rentré"], 2, "rentrer"]
+      ["{1=@pers} ___ son train ce matin.", ["a raté", "est raté{1=@e}", "a ratée", "était raté{1=@e}"], 0, "rater"],
+      ["{1=Mon frère|Ma sœur} ___ en {1998|2003|1995}.", ["{1=est né|est née}", "a né", "{1=est née|est né}", "naît"], 2, "naître"],
+      ["Tu ___ le message de {Julie|Paul|ta mère} ?", ["as lu", "es lu", "as lis", "a lu"], 0, "lire"],
+      ["Elles ___ très tard {hier soir|samedi}.", ["sont rentrées", "ont rentré", "sont rentrés", "sont rentré"], 2, "rentrer"],
+      ["Samedi, nous ___ {1=à la plage|un film|à la maison|nos grands-parents}.", ["{1=sommes allés|avons regardé|sommes restés|avons vu}", "{1=avons allé|sommes regardés|avons resté|sommes vus}", "{1=allons|regardons|restons|voyons}", "{1=sommes allé|avons regardés|sommes resté|avons vus}"], [1, 0, 1, 0], "{1=aller|regarder|rester|voir}"],
+      ["Le week-end dernier, je ___ {1=à Lyon|mes devoirs|tôt}.", ["{1=suis parti|ai fait|suis rentré}", "{1=ai parti|suis fait|ai rentré}", "{1=pars|fais|rentre}", "{1=partirai|ferai|rentrerai}"], [1, 0, 1], "{1=partir|faire|rentrer}", ["{1=suis partie|ai fait|suis rentrée}"]],
+      ["Hier soir, {1=@pers} est ___ à minuit.", ["rentré{1=@e}", "rentré{1=@eX}", "rentrer", "rentrait"], 2, "rentrer"],
+      ["{Les filles|Mes sœurs} se sont ___ très tôt ce matin.", ["levées", "levés", "lever", "levé"], 2, "lever"]
      ],
      "p": [
       {"s": {"en": "Yesterday, {1=Léa|Paul} went to the market.", "ko": "어제 {1=레아는|폴은} 시장에 갔어요."}, "t": ["Hier, {1=Léa est allée|Paul est allé} au marché.", "{1=Léa est allée|Paul est allé} au marché hier."], "x": ["Hier, {1=Léa a allé|Paul a allé} au marché.", "Hier, {1=Léa est allé|Paul est allée} au marché.", "Hier, {1=Léa va|Paul va} au marché."]},
@@ -50,13 +59,16 @@
       "An action in progress interrupted by another: imparfait + passé composé: je dormais quand tu as appelé."
      ],
      "i": [
-      ["Quand j'étais petit, je ___ au foot tous les samedis.", ["jouais", "ai joué", "joue", "jouerai"], 0, "jouer"],
-      ["Je ___ quand tu as appelé.", ["dormais", "ai dormi", "dors", "dormirai"], 2, "dormir"],
-      ["Ce jour-là, il ___ beau et les oiseaux chantaient.", ["faisait", "a fait", "fera", "ferait"], 0, "faire"],
-      ["Soudain, quelqu'un ___ à la porte.", ["a frappé", "frappait", "frapperait", "frapperai"], 1, "frapper"],
-      ["Pendant que je ___, mon téléphone a sonné.", ["{1=cuisinais|lisais|travaillais}", "{1=ai cuisiné|ai lu|ai travaillé}", "{1=cuisine|lis|travaille}", "{1=cuisinerai|lirai|travaillerai}"], 2, "{1=cuisiner|lire|travailler}"],
-      ["Avant, nous ___ à la campagne ; maintenant, nous habitons en ville.", ["habitions", "avons habité", "habitons", "habiterons"], 0, "habiter"],
-      ["Hier soir, nous ___ un film, puis nous sommes allés dormir.", ["avons regardé", "regardions", "regardons", "regarderions"], 1, "regarder"]
+      ["Quand j'étais {petit|petite|enfant}, je ___ au foot tous les samedis.", ["jouais", "ai joué", "joue", "jouerai"], 0, "jouer"],
+      ["Je ___ quand {tu as appelé|le facteur est passé|l'alarme a sonné}.", ["dormais", "ai dormi", "dors", "dormirai"], 2, "dormir"],
+      ["{Ce jour-là|Ce matin-là|Ce dimanche-là}, il ___ beau et les oiseaux chantaient.", ["faisait", "a fait", "fera", "ferait"], 0, "faire"],
+      ["Soudain, {quelqu'un|un voisin|le livreur} ___ à la porte.", ["a frappé", "frappait", "frapperait", "frapperai"], 1, "frapper"],
+      ["Pendant que je ___, {mon téléphone a sonné|quelqu'un a frappé}.", ["{1=cuisinais|lisais|travaillais}", "{1=ai cuisiné|ai lu|ai travaillé}", "{1=cuisine|lis|travaille}", "{1=cuisinerai|lirai|travaillerai}"], 2, "{1=cuisiner|lire|travailler}"],
+      ["Avant, nous ___ à la {campagne|montagne} ; maintenant, nous habitons en ville.", ["habitions", "avons habité", "habitons", "habiterons"], 0, "habiter"],
+      ["{Hier soir|Samedi soir}, nous ___ un film, puis nous sommes allés dormir.", ["avons regardé", "regardions", "regardons", "regarderions"], 1, "regarder"],
+      ["{1=Tous les étés, quand j'étais enfant|Un jour, en 2015}, je ___ en Bretagne.", ["{1=allais|suis allé}", "{1=suis allé|allais}", "vais", "irai"], [0, 1], "aller", ["{1=allais|suis allée}"]],
+      ["{1=Le dimanche, d'habitude|Dimanche dernier}, nous ___ chez mes grands-parents.", ["{1=déjeunions|avons déjeuné}", "{1=avons déjeuné|déjeunions}", "déjeunons", "déjeunerons"], [0, 1], "déjeuner"],
+      ["Je {lisais|travaillais|cuisinais} quand soudain la lumière ___.", ["s'est éteinte", "s'éteignait", "s'éteint", "s'éteindra"], 2, "s'éteindre"]
      ],
      "p": [
       {"s": {"en": "When I was a child, I played {1=football|the piano|outside} every day.", "ko": "어렸을 때 매일 {1=축구를 했어요|피아노를 쳤어요|밖에서 놀았어요}."}, "t": ["Quand j'étais petit, je {1=jouais au foot|jouais du piano|jouais dehors} tous les jours.", "Quand j'étais petite, je {1=jouais au foot|jouais du piano|jouais dehors} tous les jours.", "Quand j'étais enfant, je {1=jouais au foot|jouais du piano|jouais dehors} tous les jours.", "Quand j'étais petit, je {1=jouais au football|jouais du piano|jouais dehors} tous les jours."], "x": ["Quand j'étais petit, je {1=ai joué au foot|ai joué du piano|ai joué dehors} tous les jours.", "Quand j'ai été petit, je {1=jouais au foot|jouais du piano|jouais dehors} tous les jours.", "Quand j'étais petit, je {1=joue au foot|joue du piano|joue dehors} tous les jours."]}
@@ -73,12 +85,16 @@
       "After quand / dès que, talking about the future, French uses the futur simple: quand j'arriverai, je t'appellerai."
      ],
      "i": [
-      ["Quand j'___ à Paris, je t'appellerai.", ["arriverai", "arrive", "arrivais", "arriverais"], 2, "arriver"],
-      ["Regarde ces nuages : il ___ pleuvoir !", ["va", "vas", "allait", "est"], 0, "aller"],
-      ["Demain, il ___ beau sur toute la France.", ["fera", "faisait", "ferait", "a fait"], 1, "faire"],
-      ["Ne t'inquiète pas, je te ___ demain.", ["rappellerai", "rappelais", "rappellerais", "ai rappelé"], 1, "rappeler"],
+      ["Quand j'___ à {Paris|Lyon|la gare}, je t'appellerai.", ["arriverai", "arrive", "arrivais", "arriverais"], 2, "arriver"],
+      ["Regarde {ces nuages|le ciel} : il ___ {pleuvoir|neiger} !", ["va", "vas", "allait", "est"], 0, "aller"],
+      ["Demain, il ___ beau sur {toute la France|la côte|Paris}.", ["fera", "faisait", "ferait", "a fait"], 1, "faire"],
+      ["Ne t'inquiète pas, je te ___ {demain|ce soir|lundi}.", ["rappellerai", "rappelais", "rappellerais", "ai rappelé"], 1, "rappeler"],
       ["Nous ___ {partir|commencer|manger} dans cinq minutes.", ["allons", "allez", "vont", "sommes"], 0, "aller"],
-      ["L'année prochaine, j'___ dix-huit ans.", ["aurai", "aurais", "avais", "ai eu"], 1, "avoir"]
+      ["L'année prochaine, j'___ {dix-huit|trente|vingt} ans.", ["aurai", "aurais", "avais", "ai eu"], 1, "avoir"],
+      ["Dans dix ans, {@pers} ___ médecin.", ["sera", "serait", "était", "a été"], 1, "être"],
+      ["Demain, {1=nous|vous|ils} ___ le train de 8 heures.", ["{1=prendrons|prendrez|prendront}", "{1=prendrez|prendront|prendrons}", "{1=prendrions|prendriez|prendraient}", "{1=prenions|preniez|prenaient}"], 1, "prendre"],
+      ["Dès que nous ___ prêts, nous {partirons|t'appellerons|commencerons}.", ["serons", "sommes", "serions", "étions"], 2, "être"],
+      ["Je vais ___ {mes parents|mes cousins|ma grand-mère} {ce week-end|demain|samedi}.", ["voir", "vois", "verrai", "vu"], 0, "voir"]
      ],
      "p": [
       {"s": {"en": "Next year, we're going to move to {1=Lyon|Nantes|Lille}.", "ko": "내년에 우리는 {1=리옹으로|낭트로|릴로} 이사할 거예요."}, "t": ["L'année prochaine, nous allons déménager à {1=Lyon|Nantes|Lille}.", "L'année prochaine, on va déménager à {1=Lyon|Nantes|Lille}.", "Nous allons déménager à {1=Lyon|Nantes|Lille} l'année prochaine."], "x": ["L'année prochaine, nous allons déménageons à {1=Lyon|Nantes|Lille}.", "L'année prochaine, nous allons déménager en {1=Lyon|Nantes|Lille}.", "L'année prochaine, nous vont déménager à {1=Lyon|Nantes|Lille}."]}
@@ -93,15 +109,19 @@
       "si + imparfait → conditionnel présent: si j'avais le temps, je voyagerais.",
       "si + plus-que-parfait → conditionnel passé: si j'avais su, je serais venu.",
       "Never use the conditional right after « si ».",
-      "The conditional makes requests polite: je voudrais un café, pourriez-vous m'aider ?"
+      "The conditional makes requests polite: je voudrais un café, pourriez-vous m'aider ?",
+      "si + present → futur: s'il pleut, je resterai à la maison."
      ],
      "i": [
-      ["Si j'avais plus de temps, je ___ plus souvent.", ["{1=voyagerais|lirais|sortirais}", "{1=voyagerai|lirai|sortirai}", "{1=voyageais|lisais|sortais}", "{1=voyage|lis|sors}"], 0, "{1=voyager|lire|sortir}"],
-      ["Si j'___ riche, j'achèterais une maison au bord de la mer.", ["étais", "serais", "suis", "serai"], 2, "être"],
-      ["Si tu étais venu, tu ___ Marie.", ["aurais vu", "verrais", "avais vu", "auras vu"], 1, "voir"],
-      ["Je ___ un café, s'il vous plaît.", ["voudrais", "voudrai", "voulez", "voudras"], 3, "vouloir"],
-      ["___-vous m'aider, s'il vous plaît ?", ["Pourriez", "Pouvoir", "Pourrais", "Pouvons"], 3],
-      ["Si nous ___ le train de 8 heures, nous serions arrivés à l'heure.", ["avions pris", "aurions pris", "prenions", "avons pris"], 1, "prendre"]
+      ["Si j'avais plus {de temps|d'argent}, je ___ plus souvent.", ["{1=voyagerais|lirais|sortirais}", "{1=voyagerai|lirai|sortirai}", "{1=voyageais|lisais|sortais}", "{1=voyage|lis|sors}"], 0, "{1=voyager|lire|sortir}"],
+      ["Si j'___ riche, j'achèterais une maison {au bord de la mer|à la montagne}.", ["étais", "serais", "suis", "serai"], 2, "être"],
+      ["Si tu étais venu, tu ___ {Marie|mes cousins|le spectacle}.", ["aurais vu", "verrais", "avais vu", "auras vu"], 1, "voir"],
+      ["Je ___ un {café|thé|croissant}, s'il vous plaît.", ["voudrais", "voudrai", "voulez", "voudras"], 3, "vouloir"],
+      ["___-vous {m'aider|répéter|fermer la porte}, s'il vous plaît ?", ["Pourriez", "Pouvoir", "Pourrais", "Pouvons"], 3],
+      ["Si nous ___ le train de {8|9} heures, nous serions arrivés à l'heure.", ["avions pris", "aurions pris", "prenions", "avons pris"], 1, "prendre"],
+      ["Si j'___ le temps, je {1=viendrai|viendrais|serais venu}.", ["{1=ai|avais|avais eu}", "{1=avais|avais eu|ai}", "{1=aurais|aurai|aurais eu}", "{1=aurai|aurais eu|aurais}"], [4, 0, 1], "avoir"],
+      ["S'il ___ {demain|ce week-end}, nous resterons à la maison.", ["pleut", "pleuvait", "pleuvrait", "pleuvra"], 4, "pleuvoir"],
+      ["Tu ___ {te reposer|dormir un peu|aller au lit}, tu as l'air fatigué.", ["devrais", "devras", "devais", "doives"], 3, "devoir"]
      ],
      "p": [
       {"s": {"en": "If I had more time, I would travel more.", "ko": "시간이 더 있으면 여행을 더 많이 할 텐데요."}, "t": ["Si j'avais plus de temps, je voyagerais plus.", "Si j'avais plus de temps, je voyagerais davantage.", "Je voyagerais plus si j'avais plus de temps."], "x": ["Si j'aurais plus de temps, je voyagerais plus.", "Si j'avais plus de temps, je voyagerai plus.", "Si j'ai plus de temps, je voyagerais plus."]},
@@ -124,15 +144,19 @@
      "r": [
       "mais / pourtant / cependant introduce a contrasting clause: c'est cher, mais c'est bon.",
       "bien que + subjunctive: bien qu'il pleuve, nous sortons.",
-      "malgré + noun: malgré la pluie."
+      "malgré + noun: malgré la pluie.",
+      "même si + indicative (never the subjunctive): même si nous sommes fatigués, nous sortons."
      ],
      "i": [
-      ["___ la pluie, nous sommes sortis.", ["Malgré", "Bien que", "Pourtant", "Mais"], 2],
-      ["Bien qu'il ___, nous sortons.", ["pleuve", "pleut", "pleuvra", "pleuvait"], 1, "pleuvoir"],
-      ["Ce restaurant est cher, ___ la cuisine est excellente.", ["mais", "donc", "parce que", "malgré"], 0],
-      ["Il a beaucoup travaillé ; ___, il a raté son examen.", ["pourtant", "donc", "parce que", "car"], 0],
-      ["Bien qu'elle ___ fatiguée, elle continue de travailler.", ["soit", "est", "sera", "était"], 1, "être"],
-      ["Nous sommes allés à la plage ___ le froid.", ["malgré", "bien que", "pourtant", "mais"], 2]
+      ["___ la {pluie|neige|grève}, nous sommes sortis.", ["Malgré", "Bien que", "Pourtant", "Mais"], 2],
+      ["Bien qu'il ___, nous {sortons|allons au parc|faisons une promenade}.", ["pleuve", "pleut", "pleuvra", "pleuvait"], 1, "pleuvoir"],
+      ["{Ce restaurant|Ce petit bistrot} est cher, ___ la cuisine est excellente.", ["mais", "donc", "parce que", "malgré"], 0],
+      ["{1=@pers} a beaucoup travaillé ; ___, {1=@il} a raté son examen.", ["pourtant", "donc", "parce que", "car"], 0],
+      ["Bien qu'elle ___ {fatiguée|malade}, elle continue de travailler.", ["soit", "est", "sera", "était"], 1, "être"],
+      ["Nous sommes allés à la plage ___ le {froid|vent}.", ["malgré", "bien que", "pourtant", "mais"], 2],
+      ["___ {1=la fatigue|nous soyons fatigués}, nous continuons de travailler.", ["{1=Malgré|Bien que}", "{1=Bien que|Malgré}", "Pourtant", "Parce que"], [2, 1]],
+      ["Nous irons {à la plage|au marché|au concert} ___ nous sommes fatigués.", ["même si", "malgré", "bien que", "pourtant"], 3],
+      ["Même si tu ___ raison, tu devrais {t'excuser|te calmer|l'écouter}.", ["as", "aies", "auras", "avoir"], 3, "avoir"]
      ],
      "p": [
       {"s": {"en": "Despite the rain, we went out.", "ko": "비가 왔는데도 우리는 밖에 나갔어요."}, "t": ["Malgré la pluie, nous sommes sortis.", "Malgré la pluie, on est sortis.", "Nous sommes sortis malgré la pluie."], "x": ["Bien que la pluie, nous sommes sortis.", "Malgré la pluie, nous avons sortis.", "Malgré de la pluie, nous sommes sortis."]}
@@ -146,15 +170,18 @@
      "r": [
       "parce que / car + clause; à cause de / grâce à + noun.",
       "donc / alors introduce a consequence: il pleut, donc je reste.",
-      "grâce à = thanks to (good result); à cause de = because of (bad result)."
+      "grâce à = thanks to (good result); à cause de = because of (bad result).",
+      "comme (at the start of the sentence) = as / since: comme il pleut, je reste."
      ],
      "i": [
-      ["Je reste à la maison ___ je suis malade.", ["parce que", "à cause de", "donc", "grâce à"], 0],
-      ["Le match est annulé ___ la neige.", ["à cause de", "parce que", "grâce à", "donc"], 2],
-      ["J'ai réussi mon examen ___ mon professeur.", ["grâce à", "à cause de", "parce que", "car"], 2],
-      ["Il fait froid, ___ je mets un manteau.", ["donc", "parce que", "car", "malgré"], 1],
-      ["___ la grève, nous sommes en retard.", ["À cause de", "Parce que", "Grâce à", "Donc"], 2],
-      ["Je n'ai pas faim ___ j'ai déjeuné tard.", ["car", "donc", "à cause de", "grâce à"], 0]
+      ["Je reste à la maison ___ je suis {malade|fatigué}.", ["parce que", "à cause de", "donc", "grâce à"], 0],
+      ["Le match est annulé ___ {1=la tempête|le terrain est inondé}.", ["{1=à cause de|parce que}", "{1=parce que|à cause de}", "grâce à", "donc"], 0],
+      ["J'ai {1=réussi|raté} mon examen ___ {1=mon professeur|la grève des bus}.", ["{1=grâce à|à cause de}", "{1=à cause de|grâce à}", "parce que", "donc"], 2],
+      ["Il fait froid, ___ je mets un {manteau|pull}.", ["donc", "parce que", "car", "malgré"], 1],
+      ["___ la {grève|neige|panne}, nous sommes en retard.", ["À cause de", "Parce que", "Grâce à", "Donc"], 2],
+      ["Je n'ai pas faim ___ j'ai {déjeuné|mangé} tard.", ["car", "donc", "à cause de", "grâce à"], 0],
+      ["{1=@pers} était fatigué{1=@e}, ___ {1=@il} est rentré{1=@e} tôt.", ["alors", "parce que", "car", "grâce à"], 1],
+      ["___ il {1=pleut|fait froid}, je prends {1=un parapluie|un manteau}.", ["Comme", "Donc", "Car", "Grâce à"], 3]
      ],
      "p": [
       {"s": {"en": "I'm staying at home because I'm sick.", "ko": "아파서 집에 있어요."}, "t": ["Je reste à la maison parce que je suis malade.", "Je reste chez moi parce que je suis malade.", "Je reste à la maison car je suis malade.", "Je reste chez moi car je suis malade."], "x": ["Je reste à la maison à cause de je suis malade.", "Je reste à la maison donc je suis malade.", "Je reste à la maison grâce à je suis malade."]}
@@ -168,14 +195,19 @@
      "r": [
       "avant de + infinitive: lave-toi les mains avant de manger.",
       "après + past infinitive: après avoir mangé, après être sorti.",
-      "pendant que + clause (while); pendant + noun (during): pendant le film."
+      "pendant que + clause (while); pendant + noun (during): pendant le film.",
+      "dès que / après que + conjugated verb: dès que j'arrive, je t'appelle."
      ],
      "i": [
-      ["Lave-toi les mains ___ manger.", ["avant de", "après", "pendant", "depuis"], 0],
-      ["___ avoir mangé, nous sommes allés nous promener.", ["Après", "Avant de", "Pendant", "Depuis"], 1],
-      ["J'écoute de la musique ___ je travaille.", ["pendant que", "pendant", "avant de", "après"], 2],
-      ["J'ai dormi ___ le film.", ["pendant", "pendant que", "avant de", "depuis que"], 2],
-      ["Éteins la lumière ___ sortir.", ["avant de", "après", "pendant que", "depuis"], 0]
+      ["Lave-toi les mains ___ {manger|passer à table}.", ["avant de", "après", "pendant", "depuis"], 0],
+      ["___ avoir {mangé|déjeuné}, nous sommes allés nous promener.", ["Après", "Avant de", "Pendant", "Depuis"], 1],
+      ["J'écoute de la musique ___ je {travaille|cuisine|fais le ménage}.", ["pendant que", "pendant", "avant de", "après"], 2],
+      ["J'ai dormi ___ le {film|voyage|concert}.", ["pendant", "pendant que", "avant de", "depuis que"], 2],
+      ["{Éteins la lumière|Ferme la fenêtre|Range ta chambre} ___ sortir.", ["avant de", "après", "pendant que", "depuis"], 0],
+      ["J'ai lu ___ {1=le voyage|que tu dormais}.", ["{1=pendant|pendant que}", "{1=pendant que|pendant}", "avant de", "après"], 2],
+      ["{1=Ferme la porte|Appelle-moi} ___ {1=partir|être arrivé}.", ["{1=avant de|après}", "{1=après|avant de}", "pendant", "depuis"], [0, 1]],
+      ["Je t'appelle ___ j'arrive {à la gare|à l'hôtel|chez moi}.", ["dès que", "avant de", "pendant", "après"], 3],
+      ["___ le {repas|film|concert}, nous avons pris un café.", ["Après", "Avant de", "Pendant que", "Depuis que"], 1]
      ]
     }
    ]
@@ -198,14 +230,19 @@
       "A modal verb is followed directly by an infinitive: je peux venir, elle doit travailler."
      ],
      "i": [
-      ["Tu ___ nager ? — Oui, j'ai appris quand j'étais petit.", ["sais", "peux", "connais", "dois"], 0],
-      ["Il est tard, je ___ partir.", ["dois", "sais", "connais", "fais"], 1],
-      ["Il fait chaud. Est-ce que je ___ ouvrir la fenêtre, s'il te plaît ?", ["peux", "sais", "connais", "fais"], 0],
-      ["Il ___ que tu partes tôt pour éviter les bouchons.", ["faut", "doit", "peut", "sait"], 1],
-      ["Je ___ un billet pour Lyon, s'il vous plaît.", ["voudrais", "saurais", "devrais", "pourrais"], 2],
-      ["Nous ___ venir demain : nous sommes libres.", ["pouvons", "savons", "connaissons", "faisons"], 0],
-      ["Elle veut ___ médecin.", ["devenir", "devient", "devenu", "deviendra"], 3, "devenir"],
-      ["Vous ___ parler plus lentement, s'il vous plaît ?", ["pouvez", "savez", "connaissez", "faites"], 0]
+      ["Tu ___ {nager|skier} ? — Oui, j'ai appris quand j'étais petit.", ["sais", "peux", "connais", "dois"], 0],
+      ["Il est {tard|déjà minuit}, je ___ partir.", ["dois", "sais", "connais", "fais"], 1],
+      ["Il fait chaud. Est-ce que je ___ ouvrir {la fenêtre|la porte}, s'il te plaît ?", ["peux", "sais", "connais", "fais"], 0],
+      ["Il ___ que tu partes tôt pour éviter {les bouchons|la foule}.", ["faut", "doit", "peut", "sait"], 1],
+      ["Je ___ un billet pour {Lyon|Nantes|Lille}, s'il vous plaît.", ["voudrais", "saurais", "devrais", "pourrais"], 2],
+      ["Nous ___ venir {demain|samedi} : nous sommes libres.", ["pouvons", "savons", "connaissons", "faisons"], 0],
+      ["{@pers} veut ___ médecin.", ["devenir", "devient", "devenu", "deviendra"], 3, "devenir"],
+      ["Vous ___ parler plus {lentement|fort}, s'il vous plaît ?", ["pouvez", "savez", "connaissez", "faites"], 0],
+      ["{1=Je|Nous|Ils} ___ partir maintenant.", ["{1=dois|devons|doivent}", "{1=devons|doivent|dois}", "{1=doivent|dois|devons}", "{1=dois de|devons de|doivent de}"], 1, "devoir"],
+      ["{1=Tu|Vous} ___ venir ce soir ?", ["{1=peux|pouvez}", "{1=pouvez|peux}", "{1=connais|connaissez}", "{1=fais|faites}"], 0, "pouvoir"],
+      ["Nous voulons ___ en vacances en {juillet|août}.", ["partir", "partons", "parti", "partirons"], 3, "partir"],
+      ["Vous ne ___ pas {fumer|manger|téléphoner} ici.", ["pouvez", "savez", "connaissez", "faites"], 0],
+      ["Il faut que tu ___ ce {formulaire|questionnaire}.", ["remplisses", "remplis", "remplir", "rempliras"], 1, "remplir"]
      ],
      "p": [
       {"s": {"en": "Can you swim?", "ko": "수영할 줄 알아요?"}, "t": ["Tu sais nager ?", "Sais-tu nager ?", "Est-ce que tu sais nager ?", "Vous savez nager ?"], "x": ["Tu connais nager ?", "Tu sais de nager ?", "Tu sais nages ?"]},
@@ -228,14 +265,19 @@
      "r": [
       "à + city: à Paris, à Séoul.",
       "en + feminine country (most end in -e) or a country starting with a vowel: en France, en Corée, en Iran.",
-      "au + masculine country, aux + plural country: au Japon, au Canada, aux États-Unis."
+      "au + masculine country, aux + plural country: au Japon, au Canada, aux États-Unis.",
+      "Coming from: de + city or feminine country (de Lyon, de Chine), du + masculine country (du Japon), des + plural (des États-Unis)."
      ],
      "i": [
       ["J'habite ___ {@ville}.", ["à", "en", "au", "aux"], 0],
       ["Nous partons en vacances ___ {@paysF}.", ["en", "au", "à", "aux"], 1],
-      ["Mon frère travaille ___ {@paysM}.", ["au", "en", "à", "aux"], 2],
-      ["Ils vivent ___ États-Unis.", ["aux", "au", "en", "à"], 2],
-      ["Ma tante habite ___ Pays-Bas.", ["aux", "au", "en", "à"], 2]
+      ["{@pers} travaille ___ {@paysM}.", ["au", "en", "à", "aux"], 2],
+      ["{Ils vivent|Mes cousins habitent|Nous partons} ___ États-Unis.", ["aux", "au", "en", "à"], 2],
+      ["{Ma tante habite|Mon oncle travaille} ___ Pays-Bas.", ["aux", "au", "en", "à"], 2],
+      ["Cet été, nous allons ___ {1=Japon|Italie|Lisbonne|États-Unis|Mexique}.", ["{1=au|en|à|aux|au}", "{1=en|au|en|au|en}", "{1=à|à|au|en|à}", "{1=aux|aux|aux|à|aux}"], [2, 1, 0, 2, 2]],
+      ["{@pers} vient ___ {@paysM}.", ["du", "de", "des", "en"], 3],
+      ["Je reviens ___ {@paysF2}.", ["de", "du", "des", "en"], 3],
+      ["Mon vol arrive ___ {Canada|Portugal|Brésil} demain.", ["au", "en", "à", "aux"], 2]
      ],
      "p": [
       {"s": {"en": "We're going to {1=Japan|Canada|Portugal} next summer.", "ko": "내년 여름에 {1=일본에|캐나다에|포르투갈에} 가요."}, "t": ["Nous allons au {1=Japon|Canada|Portugal} l'été prochain.", "On va au {1=Japon|Canada|Portugal} l'été prochain.", "L'été prochain, nous allons au {1=Japon|Canada|Portugal}."], "x": ["Nous allons en {1=Japon|Canada|Portugal} l'été prochain.", "Nous allons à {1=Japon|Canada|Portugal} l'été prochain.", "Nous allons aux {1=Japon|Canada|Portugal} l'été prochain."]}
@@ -254,11 +296,15 @@
      ],
      "i": [
       ["J'apprends le français ___ {deux ans|six mois|janvier}.", ["depuis", "pendant", "il y a", "dans"], 0],
-      ["Je suis arrivé en France ___ trois ans.", ["il y a", "depuis", "dans", "pendant"], 2],
-      ["Le train part ___ dix minutes.", ["dans", "il y a", "depuis", "pendant"], 3],
-      ["J'ai étudié ___ trois heures sans faire de pause.", ["pendant", "depuis", "dans", "il y a"], 1],
-      ["J'ai fait l'exercice ___ cinq minutes : c'était facile !", ["en", "dans", "depuis", "chez"], 3],
-      ["Nous habitons dans cet appartement ___ 2021.", ["depuis", "pendant", "il y a", "dans"], 0]
+      ["Je suis arrivé en France ___ {trois|deux|dix} ans.", ["il y a", "depuis", "dans", "pendant"], 2],
+      ["Le {train|bus|film} part ___ dix minutes.", ["dans", "il y a", "depuis", "pendant"], 3],
+      ["J'ai {étudié|travaillé|joué} ___ {trois|deux|quatre} heures sans faire de pause.", ["pendant", "depuis", "dans", "il y a"], 1],
+      ["J'ai fait {l'exercice|le test|le puzzle} ___ {cinq|dix} minutes : c'était facile !", ["en", "dans", "depuis", "chez"], 3],
+      ["Nous habitons dans cet appartement ___ {2021|2018|l'année dernière}.", ["depuis", "pendant", "il y a", "dans"], 0],
+      ["{1=J'habite à Lyon|J'ai déménagé à Lyon|Je déménage à Lyon} ___ deux ans.", ["{1=depuis|il y a|dans}", "{1=il y a|dans|depuis}", "{1=dans|depuis|il y a}", "pendant"], [0, 2, 3]],
+      ["Le {magasin|musée|restaurant} est fermé ___ les {vacances|travaux}.", ["pendant", "depuis", "il y a", "dans"], 1],
+      ["{1=@pers} est parti{1=@e} en vacances ___ {deux jours|une semaine}.", ["il y a", "depuis", "dans", "en"], 2],
+      ["Le {concert|film|cours} commence ___ {une heure|vingt minutes}.", ["dans", "il y a", "depuis", "pendant"], 3]
      ],
      "p": [
       {"s": {"en": "I have been learning French for {1=two years|six months|a year}.", "ko": "{1=2년|6개월|1년} 전부터 프랑스어를 배우고 있어요."}, "t": ["J'apprends le français depuis {1=deux ans|six mois|un an}.", "J'étudie le français depuis {1=deux ans|six mois|un an}.", "Depuis {1=deux ans|six mois|un an}, j'apprends le français."], "x": ["J'apprends le français pendant {1=deux ans|six mois|un an}.", "J'ai appris le français depuis {1=deux ans|six mois|un an}.", "J'apprends le français il y a {1=deux ans|six mois|un an}."]},
@@ -272,15 +318,247 @@
      "memo": "à + le = au, à + les = aux; de + le = du, de + les = des. À la, à l', de la, de l' never change.",
      "r": [
       "à + le = au, à + les = aux (à la and à l' don't change): je vais au cinéma, à la plage.",
-      "de + le = du, de + les = des: la voiture du voisin, nous parlons des vacances."
+      "de + le = du, de + les = des: la voiture du voisin, nous parlons des vacances.",
+      "jouer à + a sport or game (au foot, aux cartes); jouer de + an instrument (du piano, de la guitare)."
      ],
      "i": [
       ["Je vais ___ {cinéma|marché|restaurant|parc}.", ["au", "à le", "à la", "aux"], 0],
       ["Elle va ___ {piscine|plage|boulangerie|banque}.", ["à la", "au", "à le", "aux"], 0],
       ["C'est la voiture ___ {voisin|directeur|professeur}.", ["du", "de le", "de la", "des"], 1],
-      ["Nous parlons ___ vacances.", ["des", "de les", "du", "aux"], 1],
+      ["Nous parlons ___ {vacances|examens|résultats}.", ["des", "de les", "du", "aux"], 1],
       ["J'ai mal ___ {dents|pieds|yeux}.", ["aux", "au", "à les", "des"], 0],
-      ["Il revient ___ {marché|travail|bureau}.", ["du", "de le", "à le", "des"], 1]
+      ["Il revient ___ {marché|travail|bureau}.", ["du", "de le", "à le", "des"], 1],
+      ["Ce soir, je vais ___ {1=cinéma|piscine|toilettes|marché}.", ["{1=au|à la|aux|au}", "{1=à le|au|à la|à le}", "{1=à la|aux|au|aux}", "{1=aux|à le|à les|à la}"], 0],
+      ["Le bureau ___ directeur est au {deuxième|troisième} étage.", ["du", "de le", "de la", "des"], 1],
+      ["Nous jouons ___ {foot|tennis|basket}.", ["au", "à le", "du", "aux"], 2],
+      ["Elle joue ___ {piano|violon|saxophone}.", ["du", "de le", "au", "des"], 2]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "struct",
+   "ic": "🧱",
+   "t": "Building sentences",
+   "d": "Pronouns, relative pronouns, negation, the subjunctive, the passive: build natural French sentences.",
+   "subs": [
+    {
+     "id": "fr.s.pron",
+     "t": "Pronouns: le, la, les, lui, leur, y, en",
+     "lv": 2,
+     "memo": "le / la / les replace a direct object, lui / leur replace à + a person, y replaces à + a place or a thing, en replaces de + a noun or a quantity. The pronoun goes before the conjugated verb, or before the infinitive.",
+     "r": [
+      "le, la, les replace a direct object (no preposition): je regarde le film → je le regarde.",
+      "lui, leur replace à + a person: je parle à Paul → je lui parle ; j'écris à mes parents → je leur écris.",
+      "y replaces à + a place or a thing: je vais à Paris → j'y vais ; je pense à l'examen → j'y pense.",
+      "en replaces de + a noun or a quantity: je veux du pain → j'en veux ; j'ai deux frères → j'en ai deux.",
+      "The pronoun goes before the conjugated verb, or before the infinitive: je le vois, je vais le voir."
+     ],
+     "i": [
+      ["Tu connais {1=Paul|Léa|mes parents} ? — Oui, je ___ connais bien.", ["{1=le|la|les}", "{1=la|les|le}", "{1=lui|lui|leur}", "{1=les|le|la}"], 0],
+      ["Tu as téléphoné à {1=ta mère|tes parents} ? — Oui, je ___ ai téléphoné hier.", ["{1=lui|leur}", "{1=leur|lui}", "{1=la|les}", "y"], 1],
+      ["Vous allez à la {plage|piscine} ? — Oui, nous ___ allons cet après-midi.", ["y", "en", "la", "lui"], 2],
+      ["Tu veux du {café|thé|gâteau} ? — Oui, j'___ veux bien.", ["en", "y", "le", "lui"], 3],
+      ["Combien de {frères|cousins|chats} as-tu ? — J'___ ai deux.", ["en", "y", "les", "leur"], 3],
+      ["Ce {film|documentaire} ? Je vais ___ regarder ce soir.", ["le", "lui", "en", "y"], 4],
+      ["Tu penses à ton {examen|entretien} ? — Oui, j'___ pense tout le temps.", ["y", "en", "le", "lui"], 2],
+      ["Tu prends {1=le pain|la voiture|les billets} ? — Oui, je ___ prends.", ["{1=le|la|les}", "{1=la|les|le}", "{1=les|le|la}", "{1=lui|lui|leur}"], 0],
+      ["Tu écris souvent à tes {grands-parents|cousins} ? — Oui, je ___ écris chaque {semaine|mois}.", ["leur", "les", "lui", "y"], 1]
+     ],
+     "p": [
+      {"s": {"en": "I'm calling her tomorrow.", "ko": "내일 그녀에게 전화할 거예요."}, "t": ["Je lui téléphone demain.", "Je l'appelle demain.", "Je vais l'appeler demain.", "Je vais lui téléphoner demain."], "x": ["Je la téléphone demain.", "Je téléphone lui demain.", "Je leur téléphone demain."]},
+      {"s": {"en": "We're going there tomorrow.", "ko": "우리는 내일 거기에 가요."}, "t": ["Nous y allons demain.", "On y va demain.", "Nous allons y aller demain."], "x": ["Nous en allons demain.", "Nous allons y demain.", "Nous le allons demain."]}
+     ]
+    },
+    {
+     "id": "fr.s.rel",
+     "t": "Relative pronouns: qui, que, dont, où",
+     "lv": 3,
+     "memo": "qui is the subject of the next verb, que is its object, dont replaces de + noun, où is a place or a moment. ce qui / ce que = what.",
+     "r": [
+      "qui = the subject of the verb that follows: le train qui part à 8 heures.",
+      "que (qu') = the direct object of the verb that follows: le gâteau que tu as préparé.",
+      "dont replaces de + noun (parler de, avoir besoin de): le livre dont je parle.",
+      "où = a place or a moment: la ville où je suis né, le jour où nous nous sommes rencontrés.",
+      "ce qui (subject) / ce que (object) = what: ce qui me plaît, ce que tu veux."
+     ],
+     "i": [
+      ["C'est {le film|la chanson|le livre} ___ tout le monde parle.", ["dont", "que", "qui", "où"], 2],
+      ["C'est {la ville|le village|le quartier} ___ je suis né.", ["où", "que", "dont", "qui"], 3],
+      ["Le {train|bus} ___ part à 8 heures est complet.", ["qui", "que", "dont", "où"], 0],
+      ["Le {gâteau|plat} ___ tu as préparé est délicieux.", ["que", "qui", "dont", "où"], 1],
+      ["J'ai un ami ___ {1=habite à Séoul|tu connais déjà|le père est médecin}.", ["{1=qui|que|dont}", "{1=que|dont|qui}", "{1=dont|qui|que}", "où"], [0, 1, 2]],
+      ["Je ne sais pas ___ tu {veux|préfères|cherches}.", ["ce que", "ce qui", "que", "dont"], 4],
+      ["___ me plaît ici, c'est {le calme|la vue|la lumière}.", ["Ce qui", "Ce que", "Qui", "Que"], 4],
+      ["Je me souviens du jour ___ nous nous sommes {rencontrés|mariés}.", ["où", "que", "dont", "qui"], 3],
+      ["Voici le {collègue|voisin|professeur} ___ je t'ai parlé.", ["dont", "que", "qui", "où"], 2]
+     ],
+     "p": [
+      {"s": {"en": "This is the city where I live.", "ko": "여기가 제가 사는 도시예요."}, "t": ["C'est la ville où j'habite.", "Voici la ville où j'habite.", "C'est la ville où je vis."], "x": ["C'est la ville dont j'habite.", "C'est la ville qui j'habite.", "C'est la ville où j'habiter."]},
+      {"s": {"en": "The book I'm talking about is great.", "ko": "제가 말하는 책은 정말 좋아요."}, "t": ["Le livre dont je parle est génial.", "Le livre dont je parle est super.", "Le livre dont je parle est très bien."], "x": ["Le livre que je parle est génial.", "Le livre qui je parle est génial.", "Le livre où je parle est génial."]}
+     ]
+    },
+    {
+     "id": "fr.s.neg",
+     "t": "Negation: ne… pas, jamais, plus, rien, personne",
+     "lv": 1,
+     "memo": "ne… pas goes around the conjugated verb (n' before a vowel). Other negations: ne… jamais, ne… plus, ne… rien, ne… personne. After a negation, un / une / du / des become de.",
+     "r": [
+      "ne… pas goes around the conjugated verb; ne becomes n' before a vowel: je ne mange pas, elle n'habite pas ici.",
+      "ne… jamais = never, ne… plus = no longer, ne… rien = nothing, ne… personne = nobody.",
+      "After a negation, un, une, du, de la, des become de (d'): je n'ai pas de voiture.",
+      "In the passé composé, the negation goes around the auxiliary: je n'ai pas vu, nous ne sommes jamais allés."
+     ],
+     "i": [
+      ["Je n'ai pas ___ {voiture|frères|temps}.", ["de", "des", "du", "de la"], 2],
+      ["Tu fumes encore ? — Non, j'ai arrêté : je ne fume ___ depuis deux ans.", ["plus", "jamais", "rien", "personne"], 1],
+      ["Il n'y a ___ dans le {frigo|placard} : il est vide.", ["rien", "personne", "jamais", "pas"], 1],
+      ["J'ai {sonné|appelé|frappé}, mais ___ n'a répondu.", ["personne", "rien", "jamais", "pas"], 1],
+      ["Je ne suis ___ allé au {Japon|Canada|Brésil}, mais j'aimerais y aller.", ["jamais", "rien", "personne", "plus de"], 1],
+      ["Nous ___ ce {film|spectacle} {hier|samedi}.", ["n'avons pas vu", "n'avons vu pas", "ne pas avons vu", "n'avons pas voir"], 3, "voir"],
+      ["{@pers} ___ mange jamais de viande.", ["ne", "n'", "pas", "non"], 0],
+      ["{1=Il|Elle} ___habite plus ici.", ["n'", "ne", "pas", "non"], 0],
+      ["Je n'ai ___ compris : tu peux {répéter|expliquer encore} ?", ["rien", "personne", "jamais de", "plus de"], 1],
+      ["Merci, je ne bois pas ___ {café|vin|lait}.", ["de", "du", "des", "un"], 2]
+     ],
+     "p": [
+      {"s": {"en": "I don't have a car.", "ko": "저는 차가 없어요."}, "t": ["Je n'ai pas de voiture.", "Je n'ai pas de véhicule."], "x": ["Je n'ai pas une voiture.", "Je ne pas ai de voiture.", "Je n'ai pas des voiture."]},
+      {"s": {"en": "Nobody called.", "ko": "아무도 전화하지 않았어요."}, "t": ["Personne n'a appelé.", "Personne n'a téléphoné."], "x": ["Personne a pas appelé.", "Rien n'a appelé.", "Personne n'a pas appelé."]}
+     ]
+    },
+    {
+     "id": "fr.s.subj",
+     "t": "The subjunctive",
+     "lv": 3,
+     "memo": "After il faut que, je veux que, and expressions of feeling or doubt, French uses the subjunctive. After je pense que or je suis sûr que (certainty), use the indicative; je ne pense pas que takes the subjunctive.",
+     "r": [
+      "After il faut que, je veux que, j'aimerais que, il est important que → subjunctive: il faut que tu viennes.",
+      "After feelings and doubt (je suis content que, j'ai peur que, je doute que) → subjunctive.",
+      "After je pense que, je crois que, je suis sûr que (certainty) → indicative; je ne pense pas que → subjunctive.",
+      "Common irregular forms: que je sois (être), que j'aie (avoir), que j'aille (aller), que je fasse (faire), que je puisse (pouvoir)."
+     ],
+     "i": [
+      ["Il faut que tu ___ à l'heure {demain|lundi|ce soir}.", ["sois", "es", "seras", "être"], 0, "être"],
+      ["Je veux que {1=tu|vous|nous} ___ avec moi.", ["{1=viennes|veniez|venions}", "{1=viens|venez|venons}", "{1=viendras|viendrez|viendrons}", "venir"], 0, "venir"],
+      ["{1=Je pense|Je ne pense pas} qu'il ___ raison.", ["{1=a|ait}", "{1=ait|a}", "avoir", "est"], 2, "avoir"],
+      ["Je suis {content|heureux} que tu ___ là.", ["sois", "es", "étais", "seras"], 1, "être"],
+      ["Il est important que nous ___ ce {dossier|rapport} aujourd'hui.", ["finissions", "finissons", "finirons", "finir"], 0, "finir"],
+      ["J'ai peur qu'il ___ trop tard {pour le train|pour réserver}.", ["soit", "est", "sera", "être"], 1, "être"],
+      ["Je suis sûr qu'elle ___ {demain|ce soir|samedi}.", ["viendra", "vienne", "venir", "viens"], 2, "venir"],
+      ["Il faut que je ___ des courses {ce soir|demain}.", ["fasse", "fais", "ferai", "faire"], 3, "faire"],
+      ["Il faut que vous ___ ce formulaire avant {lundi|vendredi}.", ["remplissiez", "remplissez", "remplirez", "remplir"], 0, "remplir"],
+      ["Je doute qu'il ___ venir {demain|à la fête}.", ["puisse", "peut", "pourra", "pouvoir"], 1, "pouvoir"]
+     ],
+     "p": [
+      {"s": {"en": "You have to come tomorrow.", "ko": "내일 꼭 와야 해요."}, "t": ["Il faut que tu viennes demain.", "Tu dois venir demain.", "Il faut que vous veniez demain.", "Vous devez venir demain."], "x": ["Il faut que tu viens demain.", "Il faut que tu viendras demain.", "Il faut tu viennes demain."]}
+     ]
+    },
+    {
+     "id": "fr.s.pass",
+     "t": "The passive: être + past participle",
+     "lv": 3,
+     "memo": "The passive uses être + past participle, which agrees with the subject; par introduces who does the action. The tense is carried by être: est construit, a été construit, sera construit.",
+     "r": [
+      "être + past participle, agreeing with the subject; par introduces the agent: la lettre a été écrite par Marie.",
+      "The tense is carried by être: est publié (present), a été publié (passé composé), sera publié (future).",
+      "Use the active voice when the subject does the action: la police a arrêté le voleur."
+     ],
+     "i": [
+      ["Ce {château|pont} ___ au XVIe siècle.", ["a été construit", "a construit", "est construire", "construisait"], 1, "construire"],
+      ["La {réunion|conférence} ___ à cause de la {grève|tempête}.", ["a été annulée", "a annulé", "a été annulé", "est annulant"], 0, "annuler"],
+      ["{1=Le colis|La lettre|Les colis|Les lettres} ___ demain.", ["{1=sera livré|sera livrée|seront livrés|seront livrées}", "{1=sera livrée|sera livré|seront livrées|seront livrés}", "{1=livrera|livrera|livreront|livreront}", "{1=seront livrés|seront livrées|sera livré|sera livrée}"], 1, "livrer"],
+      ["Ce {roman|livre|journal} ___ par des millions de lecteurs.", ["est lu", "lit", "est lis", "a lu"], 0, "lire"],
+      ["Les {résultats|chiffres} ___ {la semaine prochaine|lundi}.", ["seront publiés", "publieront", "seront publié", "sont publiant"], 1, "publier"],
+      ["{1=Le voleur|La police} ___ {1=par la police hier|le voleur hier}.", ["{1=a été arrêté|a arrêté}", "{1=a arrêté|a été arrêtée}", "{1=a été arrêtée|a été arrêté}", "est arrêter"], [0, 2]],
+      ["Cette photo ___ par {mon grand-père|ma tante|un ami}.", ["a été prise", "a été pris", "a pris", "est prenant"], 0, "prendre"],
+      ["{Le français|L'anglais|L'espagnol} ___ dans de nombreux pays.", ["est parlé", "parle", "est parlant", "a parlé"], 1, "parler"]
+     ],
+     "p": [
+      {"s": {"en": "The meeting was cancelled.", "ko": "회의가 취소됐어요."}, "t": ["La réunion a été annulée.", "La réunion est annulée."], "x": ["La réunion a été annulé.", "La réunion a annulée.", "La réunion est annulant."]}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "ic": "🔤",
+   "t": "Words & agreement",
+   "d": "Articles, possessives and adjectives that agree: choose the right form.",
+   "subs": [
+    {
+     "id": "fr.w.part",
+     "t": "Articles: le, un, du, de",
+     "lv": 0,
+     "memo": "le / la / les for something in general or specific, un / une / des for things you can count, du / de la for an amount you don't specify. After a quantity (beaucoup, un kilo, un peu), just de.",
+     "r": [
+      "le, la, les for things in general (with aimer, adorer, détester) or something specific: j'aime le chocolat.",
+      "un, une, des for one or several things you can count: un œuf, des croissants.",
+      "du, de la, de l' for an amount you don't specify (food, drinks, qualities): je bois du café, de la limonade.",
+      "After a quantity (beaucoup, un kilo, un peu, assez) → de: beaucoup de monde, un kilo de pommes."
+     ],
+     "i": [
+      ["Je voudrais ___ {1=pain|confiture|pommes|fromage}, s'il vous plaît.", ["{1=du|de la|des|du}", "{1=de la|du|du|des}", "{1=des|des|de la|de la}", "de"], [2, 2, 1, 2]],
+      ["J'aime beaucoup ___ {1=chocolat|musique|fruits}.", ["{1=le|la|les}", "{1=du|de la|des}", "{1=la|le|le}", "de"], 0],
+      ["Un kilo ___ {pommes|tomates|carottes}, s'il vous plaît.", ["de", "des", "du", "les"], 3],
+      ["Il y a beaucoup ___ monde {ici|au marché|ce soir}.", ["de", "du", "des", "le"], 3],
+      ["{Je mange|Mon fils mange} ___ œuf tous les matins.", ["un", "une", "du", "de"], 1],
+      ["Tu veux ___ sucre dans ton {café|thé} ?", ["du", "de la", "des", "de"], 2],
+      ["{Elle boit|Mon père boit} ___ thé tous les matins.", ["du", "de la", "des", "de"], 2],
+      ["J'ai acheté ___ {baguettes|croissants}.", ["des", "du", "de la", "de"], 1],
+      ["Il faut un peu ___ patience {avec les enfants|au début}.", ["de", "de la", "du", "la"], 3]
+     ],
+     "p": [
+      {"s": {"en": "I'd like some bread, please.", "ko": "빵 좀 주세요."}, "t": ["Je voudrais du pain, s'il vous plaît.", "Je voudrais du pain, s'il te plaît."], "x": ["Je voudrais de pain, s'il vous plaît.", "Je voudrais des pain, s'il vous plaît.", "Je voudrais de la pain, s'il vous plaît."]}
+     ]
+    },
+    {
+     "id": "fr.w.poss",
+     "t": "Possessives: mon, ma, mes, son, sa, leur",
+     "lv": 0,
+     "memo": "The possessive agrees with the thing owned, not with the owner: son frère, sa sœur, ses clés (his or her). Before a feminine noun starting with a vowel, use mon / ton / son: mon amie.",
+     "r": [
+      "The possessive agrees with the thing owned, not the owner: Paul cherche sa voiture, Léa cherche son téléphone.",
+      "Before a feminine noun starting with a vowel: mon, ton, son (mon amie, ton école).",
+      "notre, votre, leur + singular noun; nos, vos, leurs + plural noun."
+     ],
+     "i": [
+      ["{Paul|Léa|Marc} cherche ___ {2=clés|voiture|téléphone}.", ["{2=ses|sa|son}", "{2=sa|son|ses}", "{2=son|ses|sa}", "{2=leurs|leur|leur}"], 0],
+      ["C'est ___ amie {Sophie|Inès|Camille}.", ["mon", "ma", "mes", "m'"], 1],
+      ["Les {enfants|voisins} jouent avec ___ chien.", ["leur", "leurs", "sa", "ses"], 2],
+      ["Nous avons invité ___ {voisins|cousins|amis}.", ["nos", "notre", "nôtres", "leur"], 2],
+      ["Vous avez ___ {passeports|billets|valises} ?", ["vos", "votre", "ton", "vôtres"], 2],
+      ["Où est ___ {école|amie|adresse} ?", ["ton", "ta", "tes", "t'"], 1],
+      ["{Marc|Inès|Karim} adore ___ grand-mère.", ["sa", "son", "ses", "leur"], 0],
+      ["Mes {parents|voisins} vendent ___ {maison|voiture}.", ["leur", "leurs", "ses", "son"], 2]
+     ],
+     "p": [
+      {"s": {"en": "{1=Paul|Léa} is looking for {1=his|her} keys.", "ko": "{1=폴은|레아는} 열쇠를 찾고 있어요."}, "t": ["{1=Paul|Léa} cherche ses clés.", "{1=Paul|Léa} cherche ses clefs."], "x": ["{1=Paul|Léa} cherche sa clés.", "{1=Paul|Léa} cherche son clés.", "{1=Paul|Léa} cherche leurs clés."]}
+     ]
+    },
+    {
+     "id": "fr.w.adj",
+     "t": "Adjectives: agreement and position",
+     "lv": 1,
+     "memo": "An adjective agrees in gender and number with its noun (intéressant, intéressante, intéressants). Watch the irregular feminines (belle, nouvelle, vieille, blanche, gentille) and bel / nouvel / vieil before a vowel.",
+     "r": [
+      "The adjective agrees in gender and number: un livre intéressant, une ville intéressante, des livres intéressants.",
+      "Irregular feminines: beau → belle, nouveau → nouvelle, vieux → vieille, blanc → blanche, gentil → gentille, heureux → heureuse, bon → bonne.",
+      "Most adjectives go after the noun; short common ones go before: un grand appartement, une petite maison, une bonne idée.",
+      "Before a masculine noun starting with a vowel: un bel homme, un nouvel ami, un vieil hôtel."
+     ],
+     "i": [
+      ["Ils ont {1=une maison|un jardin|des voisins|des fleurs} très ___.", ["{1=grande|grand|gentils|belles}", "{1=grand|grande|gentil|beaux}", "{1=grands|grands|gentilles|belle}", "{1=grandes|grandes|gentille|beau}"], [0, 0, 0, 1], "{1=grand|grand|gentil|beau}"],
+      ["{Ma sœur|Ma voisine|Ma collègue} est très ___.", ["gentille", "gentil", "gentils", "gentilles"], 1, "gentil"],
+      ["C'est une ___ {idée|nouvelle} !", ["bonne", "bon", "bonnes", "bons"], 1, "bon"],
+      ["{J'ai|Elle a} une ___ voiture.", ["nouvelle", "nouveau", "nouvel", "nouveaux"], 1, "nouveau"],
+      ["C'est un ___ ami {de l'école|du lycée}.", ["vieil", "vieux", "vieille", "vieilles"], 3, "vieux"],
+      ["Elle porte une {robe|chemise|jupe} ___.", ["blanche", "blanc", "blanches", "blancs"], 1, "blanc"],
+      ["Nous habitons dans un ___ appartement {au centre-ville|près de la gare}.", ["grand", "grande", "grands", "grandes"], 2, "grand"],
+      ["Mes {amies|cousines} sont très ___.", ["heureuses", "heureux", "heureuse", "heureusement"], 1, "heureux"],
+      ["Ces {1=films|séries} sont vraiment ___.", ["{1=intéressants|intéressantes}", "{1=intéressantes|intéressants}", "intéressant", "intéressante"], 0, "intéressant"]
+     ],
+     "p": [
+      {"s": {"en": "She has a new car.", "ko": "그녀는 새 차가 있어요."}, "t": ["Elle a une nouvelle voiture.", "Elle a une voiture neuve."], "x": ["Elle a une nouveau voiture.", "Elle a une nouvel voiture.", "Elle a un nouvelle voiture."]}
      ]
     }
    ]
@@ -288,10 +566,10 @@
  ],
  "units": {
   "fr-fle": {
-   "Food & shopping": ["fr.p.art"],
+   "Food & shopping": ["fr.p.art", "fr.w.part"],
    "Getting around town": ["fr.p.art", "fr.p.lieu"],
-   "My daily routine": ["fr.m.modal"],
-   "The past: passé composé (avoir)": ["fr.t.pc"],
+   "My daily routine": ["fr.m.modal", "fr.s.neg"],
+   "The past: passé composé (avoir)": ["fr.t.pc", "fr.s.neg"],
    "The past with être": ["fr.t.pc"],
    "At the restaurant": ["fr.m.modal", "fr.t.cond"],
    "Weather, seasons & plans": ["fr.t.fut", "fr.p.temps"],
@@ -299,10 +577,14 @@
    "Telling a story: imparfait vs passé composé": ["fr.t.imp", "fr.l.time"],
    "Work & emails": ["fr.t.cond", "fr.l.cause"],
    "Housing & renting a flat": ["fr.p.temps"],
-   "Opinions & the subjunctive": ["fr.l.opp"],
+   "Opinions & the subjunctive": ["fr.l.opp", "fr.s.subj"],
    "Hypotheses & the conditional": ["fr.t.cond"],
-   "Job interview": ["fr.p.temps", "fr.l.cause"],
-   "News, culture & complex sentences": ["fr.l.opp", "fr.l.cause"]
+   "Job interview": ["fr.p.temps", "fr.l.cause", "fr.t.cond"],
+   "News, culture & complex sentences": ["fr.l.opp", "fr.l.cause", "fr.s.rel", "fr.s.pass"],
+   "Hello & introductions": ["fr.w.adj", "fr.p.lieu"],
+   "At the café": ["fr.w.part", "fr.t.cond"],
+   "Family & describing people": ["fr.w.poss", "fr.w.adj"],
+   "Pronouns: le, lui, y, en": ["fr.s.pron"]
   }
  }
 }

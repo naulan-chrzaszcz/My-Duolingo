@@ -174,12 +174,12 @@ Généré à partir des données de l'application (`src/content/courses/*.json`)
 | 19 | Job interview | 4 | Present your experience, strengths, questions to ask | Present your experience · Sell your strengths · Ask the recruiter | 12 | 36 | 8 |  |
 | 20 | News, culture & complex sentences | 4 | dont, où, ce qui / ce que, passive voice, connectors | Use relative pronouns · Talk about the news · Discuss culture | 12 | 36 | 8 |  |
 
-## Notions de grammaire (v27) — phrases générées
+## Notions de grammaire (v27, enrichies en v38) — phrases générées
 
-Carte « 🧩 Notions de grammaire » de l'onglet Entraînement (anglais, Learn French, coréen) : 4 notions, chacune découpée en règles avec mémo et taux de réussite. Les mêmes règles alimentent environ la moitié des QCM des leçons des unités indiquées dans `units`.
+Carte « 🧩 Notions de grammaire » de l'onglet Entraînement (anglais, Learn French, coréen) : 5 ou 6 notions, chacune découpée en règles avec mémo et taux de réussite. Les mêmes règles alimentent environ la moitié des QCM des leçons des unités indiquées dans `units` (et, pour une unité à sujet propre, dans le champ `g` de sa partie). Depuis la v38, chaque règle a au moins 8 gabarits, presque tous variables, et dans une partie d'entre eux la bonne réponse change avec l'indice tiré (yesterday → went, so far → have visited) ; l'ordre des exercices d'une séance est tiré au hasard.
 
-| Langue | Temps | Liaison | Modaux | Prépositions / particules |
-| --- | --- | --- | --- | --- |
-| Anglais (`en.json`) | présent simple / -ing, prétérit / present perfect, récit au passé, futur, conditionnels | opposition, cause et but, temps et ajout | obligation, conseil et permission, déduction, capacité | at / in / on, for / since / during…, lieu, verbe + préposition |
-| Learn French (`fr.json`) | passé composé avoir / être, imparfait / passé composé, futur, conditionnel | mais / bien que / malgré, parce que / à cause de / donc, avant de / après / pendant | pouvoir, devoir, vouloir, savoir, il faut | à / en / au / aux, depuis / pendant / il y a / dans, au / du / des |
-| Coréen (`ko.json`) | -았/었어요, -(으)ㄹ 거예요, -고 있어요 | -고 / -지만, -아서 / -(으)니까, -(으)면 / -는데 | -아야 해요 / -아도 돼요 / -(으)면 안 돼요, -(으)ㄹ 수 있어요 / -고 싶어요, -(으)ㄹ 것 같아요 | 에 / 에서, 에게 / (으)로, 에 / 부터 / 까지 / 동안 |
+| Langue | Règles | Gabarits | Temps | Liaison | Modaux | Prépositions / particules | La phrase | Les mots |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Anglais (`en.json`) | 26 | 273 | présent simple / -ing, prétérit / present perfect, récit au passé, futur, conditionnels (unless, I wish) | opposition, cause et but, temps et ajout | obligation, conseil et permission, déduction, capacité | at / in / on, for / since / during…, lieu, verbe + préposition | passif, relatifs, questions et question tags, discours rapporté, so / such, too / enough, used to | familles de mots, pronoms, comparatifs, quantifieurs et articles, -ing ou to |
+| Learn French (`fr.json`) | 19 | 179 | passé composé avoir / être, imparfait / passé composé, futur, conditionnel | mais / bien que / malgré / même si, parce que / à cause de / comme, avant de / après / pendant / dès que | pouvoir, devoir, vouloir, savoir, il faut | à / en / au / aux, venir de / du, depuis / pendant / il y a / dans, au / du / des, jouer à / de | pronoms le / lui / y / en, relatifs qui / que / dont / où, négation, subjonctif, passif | articles le / un / du / de, possessifs, accord et place des adjectifs |
+| Coréen (`ko.json`) | 19 | 174 | -았/었어요, -(으)ㄹ 거예요, -고 있어요 | -고 / -지만, -아서 / -(으)니까, -(으)면 / -는데, -기 전에 / -(으)ㄴ 후에 / -(으)면서 / -(으)러 | -아야 해요 / -아도 돼요 / -(으)면 안 돼요, -(으)ㄹ 수 있어요 / -고 싶어요, -(으)ㄹ 것 같아요, -(으)ㄹ게요 / -(으)ㄹ까요 | 에 / 에서, 에게 / (으)로, 에 / 부터 / 까지 / 동안, 은/는 et 이/가, 을/를, 도, 만, 와/과 | négation 안 / 못 / -지 않다, honorifiques -(으)세요 / -(으)셨어요 / 께서, -아/어 보다 / -(으)ㄴ 적이 있다 / -아/어 주다 | — |

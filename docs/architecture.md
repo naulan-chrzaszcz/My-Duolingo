@@ -59,9 +59,9 @@ L'ordre compte : la traduction du DOM doit observer la page avant la typographie
 
 ## Notions de grammaire (v27)
 
-- `content/grammar/en.json`, `fr.json`, `ko.json` : notions (temps, liaison, modaux, prépositions ou particules), règles, gabarits de QCM et de phrases à traduire, et correspondance avec les unités des cours (`units`).
+- `content/grammar/en.json`, `fr.json`, `ko.json` : notions (temps, liaison, modaux, prépositions ou particules, la phrase, les mots), règles, gabarits de QCM et de phrases à traduire, et correspondance avec les unités des cours (`units`). Le n° de règle d'un QCM peut être une liste qui suit le choix lié « 1= » (v38) : la bonne réponse change avec l'indice tiré, l'explication aussi.
 - `exercises/drills.ts` développe les gabarits (`genItem`, `genPair`) et mélange des phrases générées aux leçons : `ctxFor` appelle `mixDrills`, sauf avec l'option `noDrill`.
-- `features/grammar.js` : fenêtre de choix, mémo d'une règle, séance de 12 exercices (`drillExercises`).
+- `features/grammar.js` : fenêtre de choix, mémo d'une règle, séance de 12 exercices (`drillExercises`). L'ordre des exercices est tiré à chaque séance (`planOrder`, v38) ; « Trouve l'erreur » ne prend que les phrases dont le trou est un mot entier (pas 도서관___ ni j'___), ce qui permet de le proposer aussi en coréen.
 - Le taux de réussite par règle est gardé dans `S.drill` (`{ id de la règle: [réponses, erreurs] }`), synchronisé avec le profil.
 
 ## Points faibles connus (prochaines étapes)

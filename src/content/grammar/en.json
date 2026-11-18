@@ -37,12 +37,14 @@
       ["Sorry, I don't ___ what you mean.", ["understand", "understanding", "understands", "am understanding"], 2, "understand"],
       ["{We|They} ___ a bigger flat {right now|at the moment}: the baby is coming!", ["need", "are needing", "needs", "is needing"], 2, "need"],
       ["Water ___ at 100 degrees.", ["boils", "is boiling", "boil", "are boiling"], 0, "boil"],
-      ["Listen! Someone ___ at the door.", ["is knocking", "knocks", "knock", "are knocking"], 1, "knock"],
+      ["Listen! {Someone|A neighbour|The postman} ___ at the door.", ["is knocking", "knocks", "knock", "are knocking"], 1, "knock"],
       ["This week {@S3} ___ from home because the office is closed.", ["is working", "works", "work", "are working"], 3, "work"],
       ["{@S3} ___ from home every {Friday|Monday|Wednesday}.", ["works", "is working", "work", "are working"], 3, "work"],
       ["Look! The {kids|dogs} ___ in the garden.", ["are playing", "play", "plays", "is playing"], 1, "play"],
       ["How often ___ you {go to the gym|see your parents|cook at home}?", ["do", "are", "does", "is"], 0],
-      ["{@S3} ___ like {spicy food|horror films|getting up early}.", ["doesn't", "don't", "isn't", "aren't"], 2]
+      ["{@S3} ___ like {spicy food|horror films|getting up early}.", ["doesn't", "don't", "isn't", "aren't"], 2],
+      ["{1=Every Sunday|Look, right now,} my brother ___ the car.", ["{1=washes|is washing}", "{1=is washing|washes}", "wash", "are washing"], [0, 1], "wash"],
+      ["{@S3} ___ to work by bike {1=every day|today because the buses are on strike}.", ["{1=goes|is going}", "{1=is going|goes}", "go", "are going"], [0, 3], "go"]
      ],
      "p": [
       {"s": {"fr": "Chut, {1=le bébé|mon frère|le chat} dort.", "ko": "쉿, {1=아기가|남동생이|고양이가} 자고 있어요."}, "t": ["Shh, {1=the baby|my brother|the cat} is sleeping.", "Shh, {1=the baby's|my brother's|the cat's} sleeping."], "x": ["Shh, {1=the baby|my brother|the cat} sleeps.", "Shh, {1=the baby|my brother|the cat} is sleep.", "Shh, {1=the baby|my brother|the cat} are sleeping."]},
@@ -73,7 +75,9 @@
       ["How long ___ you {lived here|had this car|been a nurse}? — Since {2019|last year|March}.", ["have", "did", "do", "are"], 2],
       ["I ___ {my best friend|my husband|my boss} {ten years ago|in 2012|at university}.", ["met", "have met", "meet", "was meeting"], 0, "meet"],
       ["{@S3} has never ___ on a plane.", ["been", "was", "be", "being"], 1, "be"],
-      ["I ___ three emails since this morning.", ["have sent", "sent", "send", "am sending"], 2, "send"]
+      ["I ___ {three|five|ten} emails since this morning.", ["have sent", "sent", "send", "am sending"], 2, "send"],
+      ["{@S3} ___ in {@city} {1=in 2019|since 2019}.", ["{1=lived|has lived}", "{1=has lived|lived}", "lives", "is living"], [0, 2], "live"],
+      ["We ___ that museum {1=last summer|three times so far}.", ["{1=visited|have visited}", "{1=have visited|visited}", "visit", "are visiting"], [0, 1], "visit"]
      ],
      "p": [
       {"s": {"fr": "{1=Léa|Tom|Ma sœur} habite à {2=Lyon|Séoul|Berlin} depuis {3=deux ans|six mois|2019}.", "ko": "{1=레아는|톰은|제 여동생은} {3=2년 전부터|6개월 전부터|2019년부터} {2=리옹에|서울에|베를린에} 살고 있어요."}, "t": ["{1=Léa|Tom|My sister} has lived in {2=Lyon|Seoul|Berlin} {3=for two years|for six months|since 2019}.", "{1=Léa|Tom|My sister} has been living in {2=Lyon|Seoul|Berlin} {3=for two years|for six months|since 2019}.", "{1=Léa's|Tom's|My sister's} lived in {2=Lyon|Seoul|Berlin} {3=for two years|for six months|since 2019}."], "x": ["{1=Léa|Tom|My sister} lives in {2=Lyon|Seoul|Berlin} {3=for two years|for six months|since 2019}.", "{1=Léa|Tom|My sister} has lived in {2=Lyon|Seoul|Berlin} {3=since two years|since six months|for 2019}.", "{1=Léa|Tom|My sister} is living in {2=Lyon|Seoul|Berlin} {3=since two years|since six months|from 2019}."]},
@@ -94,12 +98,15 @@
      "i": [
       ["I ___ {1=dinner|a shower|my homework} when the phone rang, so I didn't hear it.", ["was {1=cooking|having|doing}", "{1=cooked|had|did}", "am {1=cooking|having|doing}", "have {1=cooked|had|done}"], 0, "{1=cook|have|do}"],
       ["While {@S3} ___ {to work|home|to the station}, it started to rain.", ["was walking", "walked", "walks", "has walked"], 0, "walk"],
-      ["By the time we arrived at the cinema, the film ___.", ["had started", "has started", "starts", "is starting"], 2, "start"],
+      ["By the time we arrived at the {cinema|theatre}, the {film|show} ___.", ["had started", "has started", "starts", "is starting"], 2, "start"],
       ["{@S3} ___ the {letter|parcel|box}, looked inside and smiled.", ["opened", "was opening", "has opened", "opens"], 1, "open"],
       ["By the time {1=Tom|Léa} {2=got to the station|reached the airport}, the {2=train|plane} ___.", ["had left", "has left", "leaves", "is leaving"], 2, "leave"],
-      ["What ___ you doing at 8 p.m. last night?", ["were", "did", "are", "have"], 0],
-      ["When I got home, my parents ___ already gone to bed.", ["had", "have", "were", "did"], 2],
-      ["We ___ {in the park|on the beach} when it suddenly started to snow.", ["were walking", "walk", "are walking", "had walked"], 0, "walk"]
+      ["What ___ you doing at {8|9|10} p.m. last night?", ["were", "did", "are", "have"], 0],
+      ["When I got home, {my parents|the kids|my flatmates} ___ already gone to bed.", ["had", "have", "were", "did"], 2],
+      ["We ___ {in the park|on the beach} when it suddenly started to snow.", ["were walking", "walk", "are walking", "had walked"], 0, "walk"],
+      ["When I got home, my flatmate ___ {1=dinner, so I helped him|all the pizza, so there was nothing left for me}.", ["{1=was cooking|had eaten}", "{1=had eaten|was cooking}", "{1=cooks|eats}", "{1=has cooked|has eaten}"], [0, 2], "{1=cook|eat}"],
+      ["{@S3} ___ {1=the dishes|a shower} when the doorbell rang.", ["was {1=doing|having}", "{1=did|had}", "is {1=doing|having}", "has {1=done|had}"], 0, "{1=do|have}"],
+      ["I didn't recognise {1=Tom|Léa} because {1=he|she} ___ a lot of weight.", ["had lost", "has lost", "was losing", "loses"], 2, "lose"]
      ],
      "p": [
       {"s": {"fr": "Je cuisinais quand {1=le téléphone a sonné|tu es arrivé|l'électricité a été coupée}.", "ko": "{1=전화가 울렸을 때|네가 왔을 때|정전이 됐을 때} 저는 요리하고 있었어요."}, "t": ["I was cooking when {1=the phone rang|you arrived|the power went out}.", "When {1=the phone rang|you arrived|the power went out}, I was cooking."], "x": ["I cooked when {1=the phone was ringing|you were arriving|the power was going out}.", "I was cooking when {1=the phone was rang|you was arrived|the power was went out}.", "I am cooking when {1=the phone rang|you arrived|the power went out}."]}
@@ -121,13 +128,15 @@
       ["— The phone's ringing. — OK, I ___ it!", ["will get", "am getting", "get", "got"], 1, "get", ["'ll get"]],
       ["Look at those {clouds|black clouds}! It ___ rain.", ["is going to", "goes to", "is going", "was going"], 2],
       ["I ___ {the dentist|a client|my manager} {tomorrow at 10|on Friday at 3|at noon tomorrow}. It's in my diary.", ["am seeing", "see", "saw", "have seen"], 3, "see", ["am meeting"]],
-      ["When I ___ home, I'll call you.", ["get", "will get", "got", "am going to get"], 4, "get"],
+      ["When I ___ {home|to the office|to the hotel}, I'll {call|text} you.", ["get", "will get", "got", "am going to get"], 4, "get"],
       ["I'll wait here until you ___ {1=back|ready}.", ["{1=come|are}", "will {1=come|be}", "{1=came|were}", "would {1=come|be}"], 4, "{1=come|be}"],
       ["We've decided: we ___ a {house|flat} in {@city} next year.", ["are going to buy", "buy", "bought", "have bought"], 0, "buy"],
       ["{This bag|This box|Your suitcase} looks heavy. I ___ you.", ["will help", "am helping", "help", "helped"], 1, "help", ["'ll help"]],
-      ["If it ___ tomorrow, we'll stay at home.", ["rains", "will rain", "rained", "would rain"], 4, "rain"],
+      ["If it ___ {tomorrow|this weekend|on Sunday}, we'll stay at home.", ["rains", "will rain", "rained", "would rain"], 4, "rain"],
       ["As soon as the {meeting|film|match} ___, I'll send you a message.", ["ends", "will end", "ended", "would end"], 4, "end"],
-      ["My train ___ at {6:45|7:10|8:20} tomorrow morning.", ["leaves", "left", "has left", "was leaving"], 3, "leave"]
+      ["My train ___ at {6:45|7:10|8:20} tomorrow morning.", ["leaves", "left", "has left", "was leaving"], 3, "leave"],
+      ["— We've run out of milk. — {1=Oh really? Wait, I|I know, I decided this morning: I} ___ some.", ["{1=will buy|am going to buy}", "{1=am going to buy|will buy}", "buy", "bought"], [1, 0], "buy", ["{1='ll buy|'m going to buy}"]],
+      ["Don't worry, I ___ you as soon as I {land|arrive}.", ["will call", "call", "called", "would call"], 1, "call", ["'ll call"]]
      ],
      "p": [
       {"s": {"fr": "{1=L'année prochaine|Cet été|Bientôt}, nous allons déménager à {2=Lisbonne|Osaka|Montréal}.", "ko": "{1=내년에|이번 여름에|곧} 우리는 {2=리스본으로|오사카로|몬트리올로} 이사할 거예요."}, "t": ["{1=Next year|This summer|Soon}, we are going to move to {2=Lisbon|Osaka|Montreal}.", "{1=Next year|This summer|Soon}, we're going to move to {2=Lisbon|Osaka|Montreal}.", "We are going to move to {2=Lisbon|Osaka|Montreal} {1=next year|this summer|soon}.", "We're going to move to {2=Lisbon|Osaka|Montreal} {1=next year|this summer|soon}."], "x": ["{1=Next year|This summer|Soon}, we go to move to {2=Lisbon|Osaka|Montreal}.", "{1=Next year|This summer|Soon}, we are going to moving to {2=Lisbon|Osaka|Montreal}.", "{1=Next year|This summer|Soon}, we are going move to {2=Lisbon|Osaka|Montreal}."]},
@@ -143,17 +152,23 @@
       "Condition réelle : if + présent, puis will : If it rains, we'll stay home.",
       "Hypothèse sur le présent : if + prétérit, puis would : If I had time, I would travel.",
       "Regret sur le passé : if + past perfect, puis would have + participe : If I had known, I would have come.",
-      "Jamais de would juste après if. Avec be, on emploie were à toutes les personnes : If I were you."
+      "Jamais de would juste après if. Avec be, on emploie were à toutes les personnes : If I were you.",
+      "unless = if… not : Unless you hurry, you'll miss the train (= if you don't hurry).",
+      "I wish + prétérit = regret sur le présent (I wish I had more time) ; I wish + past perfect = regret sur le passé (I wish I hadn't said that)."
      ],
      "i": [
       ["If I ___ more time, I would {learn the guitar|travel more|cook every day}.", ["had", "have", "would have", "will have"], 3, "have"],
       ["If I were you, I ___ {1=the job|the offer|this flat}.", ["would {1=take|accept|rent}", "will {1=take|accept|rent}", "{1=took|accepted|rented}", "had {1=taken|accepted|rented}"], 1, "{1=take|accept|rent}"],
       ["If we ___ earlier, we would have caught the {train|bus|plane}.", ["had left", "left", "would leave", "have left"], 2, "leave"],
-      ["I ___ you if I had known you were in town.", ["would have called", "would call", "will call", "had called"], 2, "call"],
+      ["I ___ you if I had known you were in {town|@city}.", ["would have called", "would call", "will call", "had called"], 2, "call"],
       ["If I ___ rich, I would buy a {boat|house by the sea|small farm}.", ["were", "am", "would be", "will be"], 3, "be"],
       ["What would you do if you ___ the lottery?", ["won", "win", "would win", "will win"], 1, "win"],
       ["We'll miss the {bus|train|start of the film} if we ___ now.", ["don't leave", "won't leave", "didn't leave", "wouldn't leave"], 0, "leave", ["do not leave"]],
-      ["If you heat ice, it ___.", ["melts", "melted", "would melt", "had melted"], 0, "melt"]
+      ["If you heat ice, it ___.", ["melts", "melted", "would melt", "had melted"], 0, "melt"],
+      ["If I ___ {1=time tomorrow|more time these days|more time last year}, I {1=will help|would help|would have helped} you.", ["{1=have|had|had had}", "{1=had|had had|have}", "{1=had had|have|had}", "{1=will have|would have|would have had}"], [0, 1, 2], "have"],
+      ["{1=Unless|If} you hurry, you ___ the {train|bus}.", ["{1=will miss|won't miss}", "{1=won't miss|will miss}", "{1=would miss|wouldn't miss}", "{1=missed|didn't miss}"], 4, "miss", ["{1='ll miss|will not miss}"]],
+      ["I wish I ___ more free time.", ["had", "have", "would have", "will have"], 5, "have"],
+      ["I wish I ___ that to {her|him} — I'm sorry.", ["hadn't said", "didn't say", "haven't said", "wouldn't say"], 5, "say", ["had not said"]]
      ],
      "p": [
       {"s": {"fr": "Si j'avais plus de temps, je {1=voyagerais|lirais|cuisinerais} davantage.", "ko": "시간이 더 있으면 {1=여행을 더 많이 할|책을 더 많이 읽을|요리를 더 자주 할} 텐데요."}, "t": ["If I had more time, I would {1=travel|read|cook} more.", "If I had more time, I'd {1=travel|read|cook} more.", "I would {1=travel|read|cook} more if I had more time.", "I'd {1=travel|read|cook} more if I had more time."], "x": ["If I have more time, I would {1=travel|read|cook} more.", "If I would have more time, I would {1=travel|read|cook} more.", "If I had more time, I will {1=travel|read|cook} more."]}
@@ -182,12 +197,14 @@
      "i": [
       ["___ the rain, {we went for a walk|the match went ahead|the concert took place}.", ["Despite", "Although", "However", "Even though"], 1],
       ["___ it was raining, {we went for a walk|the match went ahead|the concert took place}.", ["Although", "Despite", "In spite of", "However"], 0],
-      ["The hotel was expensive. ___, the service was excellent.", ["However", "Although", "Despite", "Even though"], 2],
+      ["The {hotel|restaurant} was expensive. ___, the {service|staff} was excellent.", ["However", "Although", "Despite", "Even though"], 2],
       ["{1=I like tea|Tom loves the city|Our office is modern}, ___ {1=my sister prefers coffee|his wife prefers the countryside|theirs is very old}.", ["whereas", "despite", "however", "in spite of"], 3],
-      ["The flat is small, ___ it's very bright.", ["but", "despite", "however", "in spite of"], 4],
+      ["The {flat|office|room} is small, ___ it's very bright.", ["but", "despite", "however", "in spite of"], 4],
       ["___ being tired, {@S3} finished the report.", ["Despite", "Although", "Even though", "But"], 1],
-      ["We enjoyed the trip ___ the bad weather.", ["despite", "although", "however", "even though"], 1],
-      ["{1=Tom|Léa|Mr. Kim|Anna} went to work ___ {1=he|she|he|she} had a fever.", ["even though", "despite", "in spite of", "however"], 0]
+      ["We enjoyed the {trip|holiday|weekend} ___ the bad weather.", ["despite", "although", "however", "even though"], 1],
+      ["{1=Tom|Léa|Mr. Kim|Anna} went to work ___ {1=he|she|he|she} had a fever.", ["even though", "despite", "in spite of", "however"], 0],
+      ["___ {1=it was freezing|the freezing weather}, we went swimming.", ["{1=Although|Despite}", "{1=Despite|Although}", "However", "{1=In spite of|Even though}"], [0, 1]],
+      ["The {film|book} was long. ___, it was never boring.", ["However", "Although", "Despite", "Even though"], 2]
      ],
      "p": [
       {"s": {"fr": "Malgré {1=la pluie|le froid|la grève}, nous sommes sortis.", "ko": "{1=비가 왔는데도|추웠는데도|파업이 있었는데도} 우리는 밖에 나갔어요."}, "t": ["Despite {1=the rain|the cold|the strike}, we went out.", "In spite of {1=the rain|the cold|the strike}, we went out.", "We went out despite {1=the rain|the cold|the strike}.", "We went out in spite of {1=the rain|the cold|the strike}."], "x": ["Although {1=the rain|the cold|the strike}, we went out.", "Despite of {1=the rain|the cold|the strike}, we went out.", "However {1=the rain|the cold|the strike}, we went out."]},
@@ -209,11 +226,13 @@
       ["The flight was cancelled ___ the {storm|strike|snow}.", ["because of", "because", "so", "therefore"], 0],
       ["The flight was cancelled ___ there was a {storm|strike}.", ["because", "because of", "due to", "so"], 0],
       ["It was {late|getting dark}, ___ we went home.", ["so", "because", "because of", "so that"], 1],
-      ["Sales fell sharply. ___, the company cut costs.", ["As a result", "Because", "Because of", "So that"], 2],
+      ["{Sales|Profits} fell sharply. ___, the company cut costs.", ["As a result", "Because", "Because of", "So that"], 2],
       ["I {spoke slowly|wrote it on the board} ___ everyone could understand.", ["so that", "because", "therefore", "because of"], 3],
       ["{@S3} stayed at home ___ {a cold|a headache|the strike}.", ["because of", "because", "so", "since"], 0],
-      ["The road was icy. ___, several schools closed.", ["Therefore", "Because", "Due to", "So that"], 2],
-      ["We took a taxi ___ we wouldn't be late.", ["so that", "because of", "therefore", "due to"], 3]
+      ["The roads were {icy|flooded}. ___, several schools closed.", ["Therefore", "Because", "Due to", "So that"], 2],
+      ["We took a {taxi|shortcut} ___ we wouldn't be late.", ["so that", "because of", "therefore", "due to"], 3],
+      ["We stayed inside ___ {1=it was raining|the rain}.", ["{1=because|because of}", "{1=because of|because}", "so", "therefore"], 0],
+      ["{@S3} is saving money ___ {1=buy a car|travel next year}.", ["in order to", "so that", "because", "due to"], 3]
      ],
      "p": [
       {"s": {"fr": "Le vol a été annulé à cause de {1=la tempête|la grève|la neige}.", "ko": "{1=폭풍|파업|눈} 때문에 비행기가 취소됐어요."}, "t": ["The flight was cancelled because of {1=the storm|the strike|the snow}.", "The flight was canceled because of {1=the storm|the strike|the snow}.", "The flight was cancelled due to {1=the storm|the strike|the snow}.", "The flight was canceled due to {1=the storm|the strike|the snow}.", "The flight has been cancelled because of {1=the storm|the strike|the snow}."], "x": ["The flight was cancelled because {1=the storm|the strike|the snow}.", "The flight was cancelled so {1=the storm|the strike|the snow}.", "The flight cancelled because of {1=the storm|the strike|the snow}."]}
@@ -231,14 +250,16 @@
       "before / after + verbe en -ing ou sujet + verbe : before sending it, after we ate."
      ],
      "i": [
-      ["I fell asleep ___ the film.", ["during", "while", "meanwhile", "for"], 0],
-      ["I fell asleep ___ I was watching the film.", ["while", "during", "meanwhile", "for"], 0],
-      ["The flat is cheap. ___, it's close to the station.", ["Moreover", "However", "Therefore", "Although"], 1],
-      ["Please wait here ___ the doctor calls you.", ["until", "by", "during", "since"], 2],
-      ["Please send me the file ___ Friday at the latest.", ["by", "until", "during", "while"], 2],
+      ["{I|Tom|My dad} fell asleep ___ the {film|match|concert}.", ["during", "while", "meanwhile", "for"], 0],
+      ["{1=I|Tom|My dad} fell asleep ___ {1=I was|he was|he was} watching the {film|match}.", ["while", "during", "meanwhile", "for"], 0],
+      ["The {flat|hotel} is cheap. ___, it's close to the {station|beach}.", ["Moreover", "However", "Therefore", "Although"], 1],
+      ["Please wait here ___ the {doctor|nurse|receptionist} calls you.", ["until", "by", "during", "since"], 2],
+      ["Please send me the {file|report|invoice} ___ {Friday|Monday|tomorrow} at the latest.", ["by", "until", "during", "while"], 2],
       ["Always check your work ___ {sending|submitting} it.", ["before", "during", "until", "since"], 3],
       ["Don't use your phone ___ the {meeting|exam|lesson}.", ["during", "while", "until", "by"], 0],
-      ["___ lunch, we went for a walk by the river.", ["After", "While", "Until", "By"], 3]
+      ["___ {lunch|dinner|the meeting}, we went for a walk by the river.", ["After", "While", "Until", "By"], 3],
+      ["My phone rang ___ {1=the meeting|I was driving}.", ["{1=during|while}", "{1=while|during}", "meanwhile", "for"], 0],
+      ["{1=Please send the file|We'll keep the office open} ___ 6 p.m.", ["{1=by|until}", "{1=until|by}", "during", "since"], 2]
      ]
     }
    ]
@@ -265,9 +286,12 @@
       ["It's {Sunday|a holiday}: you ___ get up early.", ["don't have to", "mustn't", "can't", "had to"], 2],
       ["Yesterday I ___ wait two hours at the {station|airport|doctor's}.", ["had to", "must", "have to", "mustn't"], 3],
       ["All visitors ___ show {their ID|a badge} at reception.", ["must", "mustn't", "don't have to", "can't"], 0],
-      ["The museum is free, so you ___ pay.", ["don't have to", "mustn't", "have to", "must"], 2],
+      ["The {museum|concert|exhibition} is free, so you ___ pay.", ["don't have to", "mustn't", "have to", "must"], 2],
       ["{@S3} ___ work tomorrow: it's a day off.", ["doesn't have to", "mustn't", "has to", "must"], 2],
-      ["You ___ forget your passport, or you won't be able to board.", ["mustn't", "don't have to", "needn't", "didn't have to"], 1]
+      ["You ___ forget your {passport|boarding pass}, or you won't be able to board.", ["mustn't", "don't have to", "needn't", "didn't have to"], 1],
+      ["{1=Smoking is forbidden here|The party is casual}: you ___ {1=smoke|wear a tie}.", ["{1=mustn't|don't have to}", "{1=don't have to|mustn't}", "have to", "must"], [1, 2]],
+      ["{@S3} ___ wear a uniform at work: it's the rule.", ["has to", "have to", "must to", "doesn't have to"], 0],
+      ["Did you ___ wait long at the {airport|station|doctor's}?", ["have to", "must", "had to", "has to"], 3]
      ],
      "p": [
       {"s": {"fr": "Tu n'es pas obligé de venir {1=demain|ce soir|samedi}.", "ko": "{1=내일|오늘 저녁에|토요일에} 안 와도 돼요."}, "t": ["You don't have to come {1=tomorrow|tonight|on Saturday}.", "You don't need to come {1=tomorrow|tonight|on Saturday}.", "You do not have to come {1=tomorrow|tonight|on Saturday}.", "You needn't come {1=tomorrow|tonight|on Saturday}."], "x": ["You mustn't come {1=tomorrow|tonight|on Saturday}.", "You don't have come {1=tomorrow|tonight|on Saturday}.", "You haven't to come {1=tomorrow|tonight|on Saturday}."]},
@@ -289,10 +313,12 @@
       ["You look exhausted. You ___ {get some rest|see a doctor|go to bed early}.", ["should", "would", "ought", "shall"], 0],
       ["Excuse me, ___ I {borrow your pen|sit here}? — Sure, go ahead.", ["could", "would", "must", "have"], 1],
       ["Would you mind ___ the {door|window}?", ["closing", "to close", "close", "closed"], 2],
-      ["The train leaves in five minutes. We ___ hurry!", ["had better", "would rather", "had", "better to"], 3],
-      ["You ___ to apologize to her.", ["ought", "should", "must", "had better"], 0],
-      ["___ you help me with this box, please?", ["Could", "Should", "Must", "May"], 1],
-      ["It's late. You ___ take a taxi.", ["should", "would", "should to", "ought"], 0]
+      ["The {1=train leaves|film starts|bus leaves} in five minutes. We ___ hurry!", ["had better", "would rather", "had", "better to"], 3],
+      ["You ___ to apologize to {her|him|them}.", ["ought", "should", "must", "had better"], 0],
+      ["___ you help me with this {box|suitcase}, please?", ["Could", "Should", "Must", "May"], 1],
+      ["It's {late|raining}. You ___ take a taxi.", ["should", "would", "should to", "ought"], 0],
+      ["{Excuse me|Sorry to bother you}, ___ you tell me the way to the station?", ["could", "should", "must", "ought"], 1],
+      ["We ___ better not be late again.", ["had", "would", "should", "have"], 3]
      ],
      "p": [
       {"s": {"fr": "Tu devrais {1=te reposer|appeler ta mère|aller chez le médecin}.", "ko": "{1=좀 쉬는 게|어머니께 전화하는 게|병원에 가 보는 게} 좋겠어요."}, "t": ["You should {1=get some rest|call your mother|see a doctor}.", "You should {1=rest|call your mom|go to the doctor}.", "You ought to {1=get some rest|call your mother|see a doctor}."], "x": ["You should to {1=get some rest|call your mother|see a doctor}.", "You would {1=get some rest|call your mother|see a doctor}.", "You should {1=getting some rest|calling your mother|seeing a doctor}."]}
@@ -311,11 +337,17 @@
      "i": [
       ["{1=Tom|Léa|Mr. Kim|Anna} has been working for twelve hours. {1=He|She|He|She} ___ be exhausted.", ["must", "can't", "mustn't", "needn't"], 0],
       ["That ___ be {Anna|Léa|Sophie}: she's in {Tokyo|Seoul} this week.", ["can't", "must", "mustn't", "should"], 0],
-      ["The lights are off. They ___ have gone to bed.", ["must", "can't", "mustn't", "should"], 2],
-      ["I'm not sure, but it ___ rain later.", ["might", "must", "can't", "mustn't"], 1],
+      ["The lights are off. {They|The neighbours} ___ have gone to bed.", ["must", "can't", "mustn't", "should"], 2],
+      ["I'm not sure, but it ___ {rain|snow} {later|tonight}.", ["might", "must", "can't", "mustn't"], 1],
       ["{1=Tom|Léa} was asleep, so {1=he|she} ___ have heard the phone.", ["can't", "mustn't", "must", "needn't"], 2],
       ["Take an umbrella: it ___ rain this afternoon.", ["might", "must", "can't", "mustn't"], 1],
-      ["You've been travelling all day. You ___ be hungry.", ["must", "can't", "mustn't", "needn't"], 0]
+      ["You've been {travelling|working} all day. You ___ be {hungry|tired}.", ["must", "can't", "mustn't", "needn't"], 0],
+      ["{1=Her car is outside|Her car isn't here}, so she ___ be at home.", ["{1=must|can't}", "{1=can't|must}", "mustn't", "needn't"], 0],
+      ["The ground is wet. It ___ have rained last night.", ["must", "can't", "mustn't", "needn't"], 2],
+      ["{1=Tom|Léa} isn't answering. {1=He|She} ___ be in a meeting, I'm not sure.", ["might", "must", "can't", "mustn't"], 1],
+      ["That ___ be true! I saw {him|her} yesterday.", ["can't", "must", "mustn't", "needn't"], 0],
+      ["You ___ have seen Anna in Paris: she was in Seoul all week.", ["can't", "must", "mustn't", "needn't"], 2],
+      ["The keys aren't in my bag. I ___ have left them at the office — I'm not sure.", ["might", "must", "can't", "mustn't"], 2]
      ],
      "p": [
       {"s": {"fr": "Il va peut-être pleuvoir cet après-midi.", "ko": "오늘 오후에 비가 올지도 몰라요."}, "t": ["It might rain this afternoon.", "It may rain this afternoon.", "It could rain this afternoon.", "Maybe it will rain this afternoon."], "x": ["It must rain this afternoon.", "It might to rain this afternoon.", "It might raining this afternoon."]}
@@ -332,10 +364,14 @@
      ],
      "i": [
       ["When I was {five|a child|ten}, I ___ swim.", ["could", "can", "will be able to", "am able to"], 0],
-      ["I'm sorry, I ___ come to your party next week.", ["won't be able to", "haven't been able to", "couldn't", "wasn't able to"], 1],
+      ["I'm sorry, I ___ come to your {party|wedding|barbecue} next {week|month}.", ["won't be able to", "haven't been able to", "couldn't", "wasn't able to"], 1],
       ["I ___ sleep {since Monday|for days|since the neighbours moved in} because of the noise.", ["haven't been able to", "couldn't", "can't", "won't be able to"], 1],
       ["{@S3} ___ speak three languages.", ["can", "is able", "can to", "does can"], 0],
-      ["Last year I ___ run 10 km; now I can only run 5.", ["could", "can", "will be able to", "have been able to"], 0]
+      ["Last year I ___ run 10 km; now I can only run 5.", ["could", "can", "will be able to", "have been able to"], 0],
+      ["Sorry, I ___ hear you: can you speak up?", ["can't", "mustn't", "needn't", "shouldn't"], 0],
+      ["After months of practice, {@S3} ___ to swim across the lake last summer.", ["was able", "could", "can", "is able"], 1],
+      ["{1=Yesterday|Tomorrow} I ___ come to the meeting, sorry.", ["{1=couldn't|won't be able to}", "{1=won't be able to|couldn't}", "can't to", "{1=can|will can}"], [0, 1]],
+      ["I'd love to ___ play the piano.", ["be able to", "can", "could", "able to"], 1]
      ]
     }
    ]
@@ -360,10 +396,12 @@
       ["The {meeting|film|class} starts ___ {7 p.m.|half past nine|noon|8:15}.", ["at", "on", "in", "by"], 0],
       ["{My|Our} {birthday|anniversary} is ___ {12 May|Friday|the 3rd of June}.", ["on", "in", "at", "by"], 1],
       ["{@S3} was born ___ {1995|July|the spring of 2001|winter}.", ["in", "on", "at", "since"], 2],
-      ["I usually go jogging ___ the morning.", ["in", "on", "at", "by"], 2],
+      ["I usually go jogging ___ the {morning|evening|afternoon}.", ["in", "on", "at", "by"], 2],
       ["See you ___ {Monday|Saturday morning|Christmas Day}!", ["on", "in", "at", "by"], 1],
       ["I can't sleep ___ night when it's hot.", ["at", "in", "on", "for"], 0],
-      ["The shop is closed ___ {August|the summer|2025}.", ["in", "on", "at", "by"], 2]
+      ["The shop is closed ___ {August|the summer|2025}.", ["in", "on", "at", "by"], 2],
+      ["The museum opens ___ {1=9 a.m.|Sundays|the summer}.", ["{1=at|on|in}", "{1=on|in|at}", "{1=in|at|on}", "by"], [0, 1, 2]],
+      ["{@S3} was born ___ {1=1998|the 4th of July|midnight}.", ["{1=in|on|at}", "{1=on|at|in}", "{1=at|in|on}", "since"], [2, 1, 0]]
      ],
      "p": [
       {"s": {"fr": "Le cours commence à {1=huit heures|neuf heures|midi} {2=lundi|mardi|vendredi}.", "ko": "수업은 {2=월요일|화요일|금요일} {1=8시에|9시에|12시에} 시작해요."}, "t": ["The class starts at {1=eight|nine|noon} on {2=Monday|Tuesday|Friday}.", "The class starts on {2=Monday|Tuesday|Friday} at {1=eight|nine|noon}.", "The lesson starts at {1=eight|nine|noon} on {2=Monday|Tuesday|Friday}.", "The class begins at {1=eight|nine|noon} on {2=Monday|Tuesday|Friday}."], "x": ["The class starts in {1=eight|nine|noon} on {2=Monday|Tuesday|Friday}.", "The class starts at {1=eight|nine|noon} in {2=Monday|Tuesday|Friday}.", "The class starts on {1=eight|nine|noon} at {2=Monday|Tuesday|Friday}."]}
@@ -383,11 +421,14 @@
      "i": [
       ["{@S3} has lived here ___ {@dur}.", ["for", "since", "during", "ago"], 0],
       ["{@S3} has lived here ___ {@since}.", ["since", "for", "during", "from"], 0],
-      ["I met my best friend ten years ___.", ["ago", "since", "for", "last"], 2],
+      ["I met my {best friend|husband|wife} {ten|five|twenty} years ___.", ["ago", "since", "for", "last"], 2],
       ["Please don't use your phone ___ the {exam|meeting|film}.", ["during", "for", "since", "ago"], 1],
-      ["The shop is open ___ 9 p.m. tonight.", ["until", "by", "since", "for"], 3],
-      ["I need the report ___ Thursday at the latest.", ["by", "until", "since", "during"], 3],
-      ["We've been waiting ___ {twenty minutes|an hour|ages}!", ["for", "since", "during", "ago"], 0]
+      ["The {shop|pharmacy|museum} is open ___ {9|10} p.m. tonight.", ["until", "by", "since", "for"], 3],
+      ["I need the {report|slides} ___ {Thursday|Friday} at the latest.", ["by", "until", "since", "during"], 3],
+      ["We've been waiting ___ {twenty minutes|an hour|ages}!", ["for", "since", "during", "ago"], 0],
+      ["{@S3} has been waiting ___ {1=ten minutes|9 o'clock|an hour|this morning}.", ["{1=for|since|for|since}", "{1=since|for|since|for}", "during", "ago"], 0],
+      ["We lived in {@city} ___ three years, then we moved.", ["for", "since", "during", "ago"], 0],
+      ["It rained ___ {1=the night|six hours}.", ["{1=during|for}", "{1=for|during}", "since", "ago"], [1, 0]]
      ]
     },
     {
@@ -407,7 +448,9 @@
       ["We're going ___ {the cinema|the beach|Italy} this weekend.", ["to", "at", "in", "on"], 2],
       ["There's a {picture|clock|map} ___ the wall.", ["on", "in", "at", "to"], 0],
       ["{@S3} is ___ work until six.", ["at", "in", "on", "to"], 1],
-      ["The milk is ___ the fridge.", ["in", "on", "at", "to"], 0]
+      ["The {milk|butter|cheese} is ___ the fridge.", ["in", "on", "at", "to"], 0],
+      ["We arrived ___ {1=the airport|Seoul} at seven.", ["{1=at|in}", "{1=in|at}", "to", "on"], [1, 0]],
+      ["{@S3} is ___ {1=work|bed|the bus} right now.", ["{1=at|in|on}", "{1=in|on|at}", "{1=on|at|in}", "to"], [1, 0, 0]]
      ]
     },
     {
@@ -418,7 +461,8 @@
      "r": [
       "depend on, rely on, focus on (jamais depend of).",
       "good at, interested in, afraid of, proud of, responsible for.",
-      "wait for, listen to, belong to, apologize for, look forward to + -ing."
+      "wait for, listen to, belong to, apologize for, look forward to + -ing.",
+      "married to, similar to, full of, congratulations on, keen on."
      ],
      "i": [
       ["It depends ___ the {weather|price|traffic}.", ["on", "of", "from", "to"], 0],
@@ -427,12 +471,301 @@
       ["I'm waiting ___ {the bus|a call|my results}.", ["for", "to", "after", "at"], 2],
       ["This {bag|umbrella|laptop} belongs ___ my {sister|colleague}.", ["to", "at", "for", "with"], 2],
       ["I'm afraid ___ {spiders|the dark|flying}.", ["of", "from", "for", "about"], 1],
-      ["We apologize ___ the delay.", ["for", "of", "from", "to"], 2],
-      ["Please listen ___ the instructions.", ["to", "at", "for", "on"], 2],
-      ["I'm looking forward ___ seeing you.", ["to", "for", "at", "of"], 2]
+      ["We apologize ___ the {delay|inconvenience|mistake}.", ["for", "of", "from", "to"], 2],
+      ["Please listen ___ the {instructions|teacher|announcement}.", ["to", "at", "for", "on"], 2],
+      ["I'm looking forward ___ {seeing you|meeting the team|hearing from you}.", ["to", "for", "at", "of"], 2],
+      ["{@S3} is married ___ a doctor.", ["to", "with", "at", "for"], 3],
+      ["This {room|box|drawer} is full ___ old papers.", ["of", "with", "by", "from"], 3],
+      ["Congratulations ___ {your new job|passing the exam}!", ["on", "at", "to", "with"], 3]
      ],
      "p": [
       {"s": {"fr": "Ça dépend {1=du temps|du prix|de toi}.", "ko": "{1=날씨에|가격에|너에게} 달려 있어요."}, "t": ["It depends on {1=the weather|the price|you}.", "That depends on {1=the weather|the price|you}."], "x": ["It depends of {1=the weather|the price|you}.", "It depends from {1=the weather|the price|you}.", "It's depend on {1=the weather|the price|you}."]}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "struct",
+   "ic": "🧱",
+   "t": "La phrase",
+   "d": "Passif, relatifs, questions, discours rapporté, so/such, too/enough : construis des phrases justes.",
+   "subs": [
+    {
+     "id": "en.s.pass",
+     "t": "Le passif",
+     "lv": 2,
+     "memo": "Quand on s'intéresse à ce qui subit l'action : be (au bon temps) + participe passé, et by pour dire qui agit. Le temps se lit sur be : is made, was built, has been sent, will be delivered.",
+     "r": [
+      "Passif = be + participe passé ; l'auteur de l'action est introduit par by : The report was signed by the manager.",
+      "Le temps est porté par be : is cleaned (présent), was built (prétérit), has been sent (present perfect), will be delivered (futur), is being repaired (en cours).",
+      "Après un modal : modal + be + participe passé : must be submitted, can be paid online.",
+      "Si le sujet fait lui-même l'action, on garde l'actif : The mechanic repaired my car."
+     ],
+     "i": [
+      ["The {report|invoice|contract} ___ by the manager yesterday.", ["was signed", "signed", "has signed", "is signing"], 1, "sign"],
+      ["This {bridge|cathedral|castle} ___ in the {14th|16th|18th} century.", ["was built", "built", "has built", "is building"], 1, "build"],
+      ["All {forms|applications} must ___ before Friday.", ["be submitted", "submitted", "submit", "be submit"], 2, "submit"],
+      ["Your order ___ {tomorrow|next Monday|within 48 hours}.", ["will be delivered", "will deliver", "is delivering", "delivered"], 1, "deliver"],
+      ["Since this morning, {three|five|ten} emails ___ to the clients.", ["have been sent", "have sent", "were sending", "are sending"], 1, "send"],
+      ["{1=The mechanic|My car} ___ {1=my car yesterday|yesterday by the mechanic}.", ["{1=repaired|was repaired}", "{1=was repaired|repaired}", "{1=has been repaired|repairs}", "{1=is repairing|is repaired}"], [3, 1], "repair"],
+      ["{English|Spanish|French} ___ in many countries.", ["is spoken", "speaks", "is speaking", "spoke"], 1, "speak"],
+      ["The {meeting|conference|launch} has been ___ until next week.", ["postponed", "postpone", "postponing", "to postpone"], 0, "postpone"],
+      ["The new {staff|interns} ___ trained at the moment.", ["are being", "are", "have", "being"], 1],
+      ["{1=Many tourists|This museum} ___ {1=this museum every year|by many tourists every year}.", ["{1=visit|is visited}", "{1=are visited|visits}", "{1=visits|visit}", "{1=is visited|are visited}"], [3, 0], "visit"]
+     ],
+     "p": [
+      {"s": {"fr": "La réunion a été annulée.", "ko": "회의가 취소됐어요."}, "t": ["The meeting has been cancelled.", "The meeting has been canceled.", "The meeting was cancelled.", "The meeting was canceled."], "x": ["The meeting has cancelled.", "The meeting is cancelling.", "The meeting has been cancel."]},
+      {"s": {"fr": "Ce {1=pont|château} a été construit en {2=1890|1650}.", "ko": "이 {1=다리는|성은} {2=1890년에|1650년에} 지어졌어요."}, "t": ["This {1=bridge|castle} was built in {2=1890|1650}."], "x": ["This {1=bridge|castle} built in {2=1890|1650}.", "This {1=bridge|castle} was build in {2=1890|1650}.", "This {1=bridge|castle} has built in {2=1890|1650}."]}
+     ]
+    },
+    {
+     "id": "en.s.rel",
+     "t": "Les pronoms relatifs",
+     "lv": 2,
+     "memo": "who pour une personne, which pour une chose, that pour les deux (sans virgule). whose = dont (possession), where = où (lieu), when = où (moment), whom = personne complément, surtout après une préposition.",
+     "r": [
+      "who = une personne, which = une chose ; that remplace les deux, sauf après une virgule : the man who…, the phone which…",
+      "whose = dont le / dont la (possession) : the colleague whose car was stolen.",
+      "where = où (un lieu) ; when = où (un moment) : the hotel where we met, the day when we arrived.",
+      "whom = une personne complément, surtout après une préposition : the candidate to whom we offered the job."
+     ],
+     "i": [
+      ["The {1=woman|man} ___ lives next door is a nurse.", ["who", "which", "whose", "where"], 0],
+      ["The {laptop|phone|bike} ___ I bought last week is already broken.", ["which", "who", "whose", "where"], 0],
+      ["That's the {colleague|neighbour} ___ car was stolen.", ["whose", "who", "which", "whom"], 1],
+      ["This is the {restaurant|hotel|café} ___ we met for the first time.", ["where", "which", "who", "whose"], 2],
+      ["I know a {1=doctor|shop} ___ {1=speaks Korean|sells Korean food}.", ["{1=who|which}", "{1=which|who}", "whose", "where"], 0],
+      ["The candidate to ___ we offered the job has accepted.", ["whom", "who", "which", "whose"], 3],
+      ["Do you remember the day ___ we arrived in {@city}?", ["when", "which", "who", "whose"], 2],
+      ["{1=Anna|The museum}, ___ {1=works in Seoul|opened in 1990}, is very popular.", ["{1=who|which}", "{1=which|who}", "that", "whose"], 0],
+      ["Is this the {book|film} ___ everyone is talking about?", ["that", "who", "whose", "where"], 0]
+     ],
+     "p": [
+      {"s": {"fr": "La femme qui habite à côté est infirmière.", "ko": "옆집에 사는 여자는 간호사예요."}, "t": ["The woman who lives next door is a nurse.", "The woman that lives next door is a nurse."], "x": ["The woman which lives next door is a nurse.", "The woman whose lives next door is a nurse.", "The woman who live next door is a nurse."]},
+      {"s": {"fr": "C'est l'hôtel où nous avons dormi.", "ko": "여기가 우리가 묵었던 호텔이에요."}, "t": ["This is the hotel where we slept.", "That's the hotel where we slept.", "This is the hotel where we stayed.", "That's the hotel where we stayed.", "It's the hotel where we slept."], "x": ["This is the hotel which we slept.", "This is the hotel who we slept.", "This is the hotel where we sleep."]}
+     ]
+    },
+    {
+     "id": "en.s.quest",
+     "t": "Questions & question tags",
+     "lv": 1,
+     "memo": "Une question met l'auxiliaire avant le sujet (Do you…? Did she…?), sauf quand who ou what est le sujet. Le question tag reprend l'auxiliaire et inverse le sens. Dans une question indirecte, l'ordre redevient sujet + verbe.",
+     "r": [
+      "Question : (mot interrogatif) + auxiliaire + sujet + verbe : Where did you go? What time does it start?",
+      "Quand who / what est le sujet, pas de do : Who called you? What happened?",
+      "Question tag : on reprend l'auxiliaire de la phrase ; phrase affirmative → tag négatif, phrase négative → tag affirmatif : You're French, aren't you? Let's… → shall we?",
+      "Question indirecte (Can you tell me…, I wonder…) : ordre normal sujet + verbe, sans do : Do you know where the station is?"
+     ],
+     "i": [
+      ["{1=You're|You aren't|She lives|She doesn't live} here, ___?", ["{1=aren't you|are you|doesn't she|does she}", "{1=are you|aren't you|does she|doesn't she}", "{1=don't you|do you|isn't she|is she}", "{1=isn't it|is it|don't she|do she}"], 2],
+      ["{1=Tom|Léa} can drive, ___?", ["{1=can't he|can't she}", "{1=can he|can she}", "{1=doesn't he|doesn't she}", "{1=isn't he|isn't she}"], 2],
+      ["{1=You|They} went to the party, ___?", ["{1=didn't you|didn't they}", "{1=did you|did they}", "{1=weren't you|weren't they}", "{1=haven't you|haven't they}"], 2],
+      ["Let's {take a break|order a pizza}, ___?", ["shall we", "will we", "don't we", "do we"], 2],
+      ["Who ___ you this {message|parcel}?", ["sent", "did send", "does sent", "sending"], 1, "send"],
+      ["What time ___ the {train|film|meeting} start?", ["does", "is", "do", "has"], 0],
+      ["Where ___ you spend last {summer|weekend}?", ["did", "were", "have", "do"], 0],
+      ["Excuse me, can you tell me where ___?", ["the {1=station|nearest bank|post office} is", "is the {1=station|nearest bank|post office}", "the {1=station|nearest bank|post office} does", "does the {1=station|nearest bank|post office} is"], 3],
+      ["I wonder what time the {plane|train|bus} ___.", ["arrives", "does arrive", "does it arrive", "arrive"], 3, "arrive"],
+      ["How long ___ it take to get to the airport?", ["does", "is", "do", "has"], 0]
+     ],
+     "p": [
+      {"s": {"fr": "Tu es français, n'est-ce pas ?", "ko": "프랑스 사람이죠, 그렇죠?"}, "t": ["You're French, aren't you?", "You are French, aren't you?"], "x": ["You're French, isn't it?", "You're French, are you?", "You're French, don't you?"]},
+      {"s": {"fr": "Tu sais où est la gare ?", "ko": "역이 어디 있는지 알아요?"}, "t": ["Do you know where the station is?", "Do you know where the train station is?"], "x": ["Do you know where is the station?", "Do you know where the station it is?", "Are you know where the station is?"]}
+     ]
+    },
+    {
+     "id": "en.s.rep",
+     "t": "Le discours rapporté",
+     "lv": 2,
+     "memo": "Après said ou told, on recule d'un temps (am → was, will → would, have done → had done). On dit say something mais tell someone. Une question rapportée garde l'ordre sujet + verbe ; un ordre devient tell / ask someone (not) to.",
+     "r": [
+      "Après un verbe au passé (said, told), on recule d'un temps : am → was, will → would, have done / did → had done.",
+      "say + (that) ; tell + personne : She said (that)… / She told me (that)…, jamais said me.",
+      "Question rapportée : if / whether ou le mot interrogatif, puis sujet + verbe, sans do : He asked if I was ready. She asked where I lived.",
+      "Ordre ou demande rapportés : tell / ask + personne + (not) to + verbe : The doctor told me to rest."
+     ],
+     "i": [
+      ["{1=Tom|Léa} said that {1=he|she} ___ tired.", ["was", "were", "be", "been"], 0],
+      ["{Anna|My boss|The receptionist} ___ {1=me that|that} the meeting was cancelled.", ["{1=told|said}", "{1=said|told}", "spoke", "talked"], 1],
+      ["{1=Tom|Léa} said {1=he|she} ___ call me the next day.", ["would", "will", "shall", "is"], 0],
+      ["She asked me ___ I was ready.", ["if", "that", "what", "do"], 2],
+      ["He asked me where I ___.", ["lived", "did live", "do I live", "did I live"], 2, "live"],
+      ["The doctor told me ___ more water.", ["to drink", "drink", "drinking", "that drink"], 3],
+      ["My manager asked us ___ be late again.", ["not to", "don't", "no to", "not"], 3],
+      ["{1=Tom|Léa} told me {1=he|she} ___ already seen the film.", ["had", "has", "was", "did"], 0],
+      ["They asked us what time the {shop|museum} ___.", ["opened", "did open", "does open", "did it open"], 2, "open"]
+     ],
+     "p": [
+      {"s": {"fr": "Il m'a dit qu'il était fatigué.", "ko": "그는 피곤하다고 말했어요."}, "t": ["He told me he was tired.", "He told me that he was tired.", "He said he was tired.", "He said that he was tired."], "x": ["He said me he was tired.", "He told he was tired.", "He told to me he was tired."]}
+     ]
+    },
+    {
+     "id": "en.s.misc",
+     "t": "so / such, too / enough, used to",
+     "lv": 2,
+     "memo": "so + adjectif, such (a) + nom ; too + adjectif = trop, adjectif + enough = assez. used to + verbe = habitude passée terminée ; be used to + -ing = être habitué à.",
+     "r": [
+      "so + adjectif ou adverbe ; such (a) + (adjectif +) nom : so tired, such a long day, such nice people.",
+      "too + adjectif = trop (too hot to drink) ; adjectif + enough = assez (old enough) ; enough + nom (enough chairs).",
+      "used to + verbe = ce qu'on faisait avant et qu'on ne fait plus (I used to smoke) ; be used to + -ing = être habitué à (I'm used to getting up early) ; question : Did you use to…?"
+     ],
+     "i": [
+      ["It was ___ {1=hot|a hot day} that we stayed inside.", ["{1=so|such}", "{1=such|so}", "too", "very"], 0],
+      ["This {box|suitcase} is ___ heavy to carry.", ["too", "so", "enough", "such"], 1],
+      ["{@S3} isn't old ___ to drive.", ["enough", "too", "so", "such"], 1],
+      ["I ___ smoke, but I stopped five years ago.", ["used to", "use to", "am used to", "was used to"], 2],
+      ["I {1=used to|am used to} ___ {1=in Seoul, but now I live in Paris|in a big city, so the noise doesn't bother me}.", ["{1=live|living}", "{1=living|live}", "lived", "lives"], 2, "live"],
+      ["They're ___ nice people!", ["such", "so", "too", "enough"], 0],
+      ["The {film|talk} was ___ boring that I left early.", ["so", "such", "too", "enough"], 0],
+      ["We don't have ___ chairs for everyone.", ["enough", "too", "so", "such"], 1],
+      ["Did you ___ live here?", ["use to", "used to", "using to", "uses to"], 2]
+     ],
+     "p": [
+      {"s": {"fr": "Il fait trop chaud pour sortir.", "ko": "너무 더워서 나갈 수 없어요."}, "t": ["It's too hot to go out.", "It is too hot to go out."], "x": ["It's so hot to go out.", "It's too hot for go out.", "It's enough hot to go out."]}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "ic": "🔤",
+   "t": "Les mots",
+   "d": "Familles de mots, pronoms, comparatifs, quantifieurs, -ing ou to : le bon mot à la bonne place.",
+   "subs": [
+    {
+     "id": "en.w.form",
+     "t": "Familles de mots : nom, adjectif, adverbe",
+     "lv": 2,
+     "memo": "Regarde le mot d'avant : après un article ou un adjectif, un nom ; devant un nom ou après be / seem, un adjectif ; pour décrire un verbe ou un adjectif, un adverbe (souvent en -ly).",
+     "r": [
+      "Après un article, un possessif ou un adjectif → nom : the decision, your approval, a quick response.",
+      "Devant un nom ou après be, seem, become, look → adjectif : a careful driver, she seems efficient.",
+      "Pour décrire un verbe ou un adjectif → adverbe (souvent en -ly) : drive carefully, increased significantly, directly responsible.",
+      "-ed = ce que l'on ressent (I'm interested, bored) ; -ing = ce qui provoque ce sentiment (an interesting talk, a boring film)."
+     ],
+     "i": [
+      ["Please {drive|check the figures|read the contract} ___.", ["carefully", "careful", "care", "carefulness"], 2],
+      ["The manager made a {quick|final|difficult} ___.", ["decision", "decide", "decisive", "decisively"], 0],
+      ["The new {system|printer|process} is very ___.", ["efficient", "efficiency", "efficiently", "efficiencies"], 1],
+      ["{1=Our new assistant is very|Our new assistant works very} ___.", ["{1=professional|professionally}", "{1=professionally|professional}", "profession", "professionalism"], [1, 2]],
+      ["{Sales|Profits|Prices} increased ___ last quarter.", ["significantly", "significant", "significance", "signify"], 2],
+      ["We need your ___ before Friday.", ["approval", "approve", "approved", "approving"], 0],
+      ["I was really ___ in the {talk|presentation}.", ["interested", "interesting", "interest", "interestingly"], 3],
+      ["The {talk|presentation} was so ___ that I fell asleep.", ["boring", "bored", "bore", "boringly"], 3],
+      ["Thank you for your ___ reply.", ["quick", "quickly", "quickness", "quicken"], 1],
+      ["{@S3} is ___ responsible for the budget.", ["directly", "direct", "direction", "directed"], 2]
+     ],
+     "p": [
+      {"s": {"fr": "Elle conduit prudemment.", "ko": "그녀는 조심스럽게 운전해요."}, "t": ["She drives carefully.", "She drives safely."], "x": ["She drives careful.", "She drive carefully.", "She drives carefulness."]}
+     ]
+    },
+    {
+     "id": "en.w.pron",
+     "t": "Pronoms : him, his, himself",
+     "lv": 1,
+     "memo": "Sujet (I, he, she, they), complément (me, him, her, them), possessif (my, his, her, their ; seul : mine, his, hers, theirs), réfléchi (myself, herself). his / her dépend du possesseur, pas de l'objet.",
+     "r": [
+      "Sujet : I, you, he, she, it, we, they ; complément (après un verbe ou une préposition) : me, you, him, her, it, us, them.",
+      "Possessif devant un nom : my, your, his, her, its, our, their ; sans nom : mine, yours, his, hers, ours, theirs. its (à lui, pour une chose) ≠ it's (it is).",
+      "Réfléchi quand le sujet agit sur lui-même : myself, yourself, himself, herself, ourselves, themselves ; by myself = tout seul.",
+      "his = à lui, her = à elle : on choisit selon le possesseur, jamais selon l'objet possédé."
+     ],
+     "i": [
+      ["{1=Tom|Léa} lost ___ keys.", ["{1=his|her}", "{1=her|his}", "{1=him|she}", "{1=himself|herself}"], 3],
+      ["Can you help ___? I can't open this {box|door|jar}.", ["me", "I", "my", "mine"], 0],
+      ["This {pen|bag|umbrella} isn't ___: mine is {blue|black}.", ["mine", "my", "me", "I"], 1],
+      ["{1=He|She} made the cake by ___.", ["{1=himself|herself}", "{1=him|her}", "{1=his|hers}", "{1=herself|himself}"], 2],
+      ["The {students|clients} said ___ were happy with the course.", ["they", "them", "their", "theirs"], 0],
+      ["The company changed ___ logo last year.", ["its", "it's", "it", "his"], 1],
+      ["Is this {coat|seat} ___? — No, it's my sister's.", ["yours", "your", "you", "yourself"], 1],
+      ["We really enjoyed ___ at the party.", ["ourselves", "us", "our", "ours"], 2],
+      ["Mr. Kim wants the report. Please send it to ___.", ["him", "his", "he", "himself"], 0],
+      ["Let me introduce ___: I'm the new intern.", ["myself", "me", "my", "mine"], 2]
+     ],
+     "p": [
+      {"s": {"fr": "{1=Tom|Léa} a perdu son téléphone.", "ko": "{1=톰은|레아는} 휴대폰을 잃어버렸어요."}, "t": ["{1=Tom|Léa} lost {1=his|her} phone.", "{1=Tom|Léa} has lost {1=his|her} phone.", "{1=Tom|Léa} lost {1=his|her} mobile."], "x": ["{1=Tom|Léa} lost {1=her|his} phone.", "{1=Tom|Léa} lost {1=him|she} phone.", "{1=Tom|Léa} lost the {1=his|her} phone."]}
+     ]
+    },
+    {
+     "id": "en.w.comp",
+     "t": "Comparatifs & superlatifs",
+     "lv": 1,
+     "memo": "Adjectif court : -er than, the -est. Adjectif long : more … than, the most …. Irréguliers : good → better → the best, bad → worse → the worst. Égalité : as … as.",
+     "r": [
+      "Adjectif court (une syllabe, ou deux en -y) : -er than / the -est : cheaper than, the biggest, easier.",
+      "Adjectif long : more … than / the most … : more expensive than, the most beautiful.",
+      "Irréguliers : good → better → the best ; bad → worse → the worst ; far → further → the furthest.",
+      "Égalité : as … as ; infériorité : not as … as : not as fast as the old one.",
+      "Pour renforcer un comparatif : much, far, a bit (jamais very) : much faster."
+     ],
+     "i": [
+      ["This {hotel|flat|phone} is ___ than the other one.", ["{1=cheaper|more comfortable|bigger}", "{1=more cheap|comfortabler|more big}", "{1=cheapest|most comfortable|biggest}", "{1=as cheap|as comfortable|as big}"], [0, 1, 0], "{1=cheap|comfortable|big}"],
+      ["This is the ___ pizza I've ever eaten!", ["best", "better", "goodest", "most good"], 2, "good"],
+      ["The traffic today is ___ than yesterday.", ["worse", "badder", "worst", "more bad"], 2, "bad"],
+      ["My new flat is ___ than my old one.", ["more spacious", "spaciouser", "most spacious", "as spacious"], 1, "spacious"],
+      ["This laptop is not as fast ___ the old one.", ["as", "than", "that", "like"], 3],
+      ["{@city} is one of the ___ cities in the world.", ["most beautiful", "more beautiful", "beautifulest", "most beautifully"], 1, "beautiful"],
+      ["The train is ___ faster than the bus.", ["much", "more", "very", "most"], 4],
+      ["Our prices are ___ than our competitors'.", ["lower", "more low", "lowest", "as low"], 0, "low"],
+      ["This is the ___ exam I have ever taken.", ["most difficult", "difficultest", "more difficult", "most difficultest"], 1, "difficult"],
+      ["{1=Today|This week} is ___ than {1=yesterday|last week}.", ["hotter", "more hot", "hottest", "as hot"], 0, "hot"]
+     ],
+     "p": [
+      {"s": {"fr": "Le train est plus rapide que le bus.", "ko": "기차가 버스보다 더 빨라요."}, "t": ["The train is faster than the bus.", "The train is quicker than the bus."], "x": ["The train is more fast than the bus.", "The train is faster that the bus.", "The train is fastest than the bus."]}
+     ]
+    },
+    {
+     "id": "en.w.quant",
+     "t": "Quantifieurs & articles",
+     "lv": 1,
+     "memo": "Dénombrable (eggs, people) : many, a few, how many. Indénombrable (water, money, information) : much, a little, how much. some dans les phrases affirmatives et les offres, any dans les questions et les négations.",
+     "r": [
+      "Dénombrable (cars, eggs, people) : many, a few, few, how many ; indénombrable (water, money, time, information) : much, a little, little, how much.",
+      "some dans les phrases affirmatives et les offres (Would you like some tea?) ; any dans les négations et la plupart des questions.",
+      "a / an devant un nom dénombrable singulier (an devant un son voyelle : an hour) ; the pour une chose précise ou déjà citée.",
+      "every / each + nom singulier ; all + nom pluriel : every guest has to sign in."
+     ],
+     "i": [
+      ["How ___ {1=sugar|eggs|money|people} do you need?", ["{1=much|many|much|many}", "{1=many|much|many|much}", "lot", "few"], 0],
+      ["There isn't ___ {coffee|milk|bread} left.", ["any", "some", "many", "a"], 1],
+      ["Would you like ___ {tea|cake|water}?", ["some", "any", "many", "a few"], 1],
+      ["I'll be back in ___ hour.", ["an", "a", "the", "some"], 2],
+      ["We have very ___ time, so let's hurry.", ["little", "few", "many", "a few"], 0],
+      ["Only a ___ {people|clients|students} came to the meeting.", ["few", "little", "lot", "much"], 0],
+      ["___ {employee|student|guest} has to sign in at reception.", ["Every", "All", "Most", "Many"], 3],
+      ["Can you give me ___ information about the course?", ["some", "an", "many", "a few"], 0],
+      ["I don't have ___ {1=time|friends} here.", ["{1=much|many}", "{1=many|much}", "a little", "few"], 0],
+      ["I saw a film last night. ___ film was really good.", ["The", "A", "An", "Some"], 2]
+     ],
+     "p": [
+      {"s": {"fr": "Il n'y a pas de lait dans le frigo.", "ko": "냉장고에 우유가 없어요."}, "t": ["There isn't any milk in the fridge.", "There is no milk in the fridge.", "There's no milk in the fridge.", "There's not any milk in the fridge."], "x": ["There isn't some milk in the fridge.", "There aren't any milk in the fridge.", "There isn't many milk in the fridge."]}
+     ]
+    },
+    {
+     "id": "en.w.ger",
+     "t": "-ing ou to + verbe",
+     "lv": 2,
+     "memo": "Certains verbes appellent -ing (enjoy, avoid, finish, suggest), d'autres to + verbe (want, decide, plan, hope). Après une préposition (for, before, look forward to), toujours -ing.",
+     "r": [
+      "Après enjoy, avoid, finish, mind, consider, suggest, keep → -ing : I enjoy cooking.",
+      "Après want, decide, plan, agree, hope, need, forget, would like → to + verbe : We decided to leave.",
+      "Après une préposition (in, at, for, about, before, after, look forward to, be used to) → -ing : Thank you for calling.",
+      "stop change de sens : stop doing = arrêter de faire ; stop to do = s'arrêter pour faire."
+     ],
+     "i": [
+      ["I {1=enjoy|want|avoid|decided} ___ in the evening.", ["{1=working|to work|working|to work}", "{1=to work|working|to work|working}", "work", "worked"], [0, 1, 0, 1], "work"],
+      ["We {1=agreed|finished|planned|considered} ___ the website before Friday.", ["{1=to update|updating|to update|updating}", "{1=updating|to update|updating|to update}", "update", "updated"], [1, 0, 1, 0], "update"],
+      ["I'm looking forward to ___ you.", ["seeing", "see", "saw", "to see"], 2, "see"],
+      ["Thank you for ___ me.", ["{1=helping|calling|inviting}", "{1=help|call|invite}", "to {1=help|call|invite}", "{1=helped|called|invited}"], 2, "{1=help|call|invite}"],
+      ["{1=My doctor says I must stop|We were tired, so we stopped at a café} ___ coffee.", ["{1=drinking|to drink}", "{1=to drink|drinking}", "drink", "drank"], 3, "drink"],
+      ["{@S3} suggested ___ a taxi.", ["taking", "to take", "take", "took"], 0, "take"],
+      ["We hope ___ you again soon.", ["to see", "seeing", "see", "saw"], 1, "see"],
+      ["Before ___ the office, please turn off the lights.", ["leaving", "leave", "to leave", "left"], 2, "leave"],
+      ["Don't forget ___ the door when you leave.", ["to lock", "locking", "lock", "locked"], 1, "lock"],
+      ["I'm used to ___ up early.", ["getting", "get", "got", "gets"], 2, "get"]
+     ],
+     "p": [
+      {"s": {"fr": "J'ai hâte de te voir.", "ko": "빨리 보고 싶어요."}, "t": ["I'm looking forward to seeing you.", "I am looking forward to seeing you.", "I can't wait to see you."], "x": ["I'm looking forward to see you.", "I'm looking forward seeing you.", "I'm looking forward for seeing you."]}
      ]
     }
    ]
@@ -441,45 +774,69 @@
  "units": {
   "en-daily": {
    "Se présenter": ["en.t.pres"],
-   "Famille & amis": ["en.t.pres"],
+   "Famille & amis": ["en.t.pres", "en.w.pron"],
    "Ma journée & l'heure": ["en.t.pres", "en.p.time"],
-   "Loisirs & week-end": ["en.t.pres", "en.p.time"],
-   "Se déplacer & faire des achats": ["en.p.place"],
+   "Loisirs & week-end": ["en.t.pres", "en.p.time", "en.w.ger"],
+   "Se déplacer & faire des achats": ["en.p.place", "en.w.comp"],
    "Santé & bien-être": ["en.m.adv", "en.p.dur"],
    "Logement & voisins": ["en.m.obl", "en.p.place"],
-   "Voyages & vacances": ["en.t.past", "en.p.place"],
+   "Voyages & vacances": ["en.t.past", "en.p.place", "en.s.quest"],
    "Au téléphone & rendez-vous": ["en.t.fut", "en.p.time"],
-   "Inviter, accepter, refuser": ["en.m.adv", "en.l.opp"],
+   "Inviter, accepter, refuser": ["en.m.adv", "en.l.opp", "en.p.verb", "en.w.ger"],
    "Le futur & les projets": ["en.t.fut"],
-   "Small talk & opinions": ["en.t.past", "en.l.opp"],
+   "Small talk & opinions": ["en.t.past", "en.l.opp", "en.w.ger"],
    "Raconter une histoire": ["en.t.prog", "en.l.time"],
    "Débattre & convaincre": ["en.l.opp", "en.l.cause"],
    "Expériences & present perfect": ["en.t.past", "en.p.dur"],
    "Banque, administration & services": ["en.m.obl", "en.m.adv"],
    "Urgences & imprévus": ["en.t.prog", "en.m.obl"],
-   "Imprévus & expressions": ["en.m.ded", "en.t.cond"],
-   "Hypothèses & conditionnels": ["en.t.cond"]
+   "Imprévus & expressions": ["en.m.ded", "en.t.cond", "en.s.misc"],
+   "Hypothèses & conditionnels": ["en.t.cond"],
+   "Au café & au restaurant": ["en.w.quant", "en.s.quest", "en.m.adv"],
+   "Courses & cuisine": ["en.w.quant"],
+   "Tech au quotidien": ["en.m.abil", "en.s.pass"],
+   "Questions, question tags & discours rapporté": ["en.s.quest", "en.s.rep"]
   },
   "en-pro": {
-   "Réunions & appels": ["en.m.adv"],
+   "Réunions & appels": ["en.m.adv", "en.t.fut"],
    "Projets & délais": ["en.p.dur", "en.t.fut"],
-   "Stand-up & tickets": ["en.t.past"],
-   "Entretien d'embauche & carrière": ["en.t.past", "en.p.dur"],
-   "Formules polies & diplomatie": ["en.m.adv", "en.t.cond"],
-   "Présentations orales": ["en.l.time", "en.l.cause"],
-   "Rapports, chiffres & négociation": ["en.l.cause", "en.l.opp"],
+   "Stand-up & tickets": ["en.t.past", "en.m.abil", "en.s.pass"],
+   "Entretien d'embauche & carrière": ["en.t.past", "en.p.dur", "en.w.form", "en.s.quest"],
+   "Formules polies & diplomatie": ["en.m.adv", "en.t.cond", "en.w.ger"],
+   "Présentations orales": ["en.l.time", "en.l.cause", "en.s.quest"],
+   "Rapports, chiffres & négociation": ["en.l.cause", "en.l.opp", "en.t.fut"],
    "Feedback & conflits": ["en.m.adv", "en.l.opp"],
    "Incidents & post-mortems": ["en.t.prog", "en.m.ded"],
-   "Specs, RFC & design docs": ["en.t.cond", "en.l.cause"]
+   "Specs, RFC & design docs": ["en.t.cond", "en.l.cause", "en.s.pass"],
+   "E-mails : les bases": ["en.w.ger", "en.s.pass"],
+   "Présenter son métier": ["en.t.pres", "en.s.rel"],
+   "Slack, télétravail & visio": ["en.s.quest", "en.p.time", "en.m.abil"],
+   "Onboarding, 1:1 & mentoring": ["en.s.quest", "en.t.past", "en.m.adv"],
+   "Recruteurs, LinkedIn & networking": ["en.w.ger", "en.s.quest"],
+   "Pull requests & code review": ["en.s.pass", "en.m.adv", "en.t.past"],
+   "Commits, documentation & README": ["en.s.pass", "en.t.pres"],
+   "Clients & service": ["en.m.adv", "en.t.fut", "en.s.pass"],
+   "Démo, pitch & produit": ["en.w.comp", "en.s.rel", "en.s.quest"],
+   "Entretien technique & architecture": ["en.t.past", "en.w.comp", "en.l.opp"]
   },
   "en-toeic": {
-   "Part 5 : temps & verbes": ["en.t.past", "en.t.fut", "en.m.obl"],
+   "Part 5 : temps & verbes": ["en.t.past", "en.t.fut", "en.m.obl", "en.s.pass", "en.t.prog"],
    "Part 5 : prépositions après verbes, noms & adjectifs": ["en.p.verb"],
-   "Prépositions & connecteurs": ["en.l.opp", "en.l.cause", "en.p.dur"],
-   "Part 6 : textes à trous": ["en.l.opp", "en.l.cause", "en.l.time"],
-   "Part 5 : conjonctions, relatifs & quantifieurs": ["en.l.opp", "en.l.cause"],
-   "Part 5 : modaux, discours indirect & questions indirectes": ["en.m.ded", "en.m.obl"],
-   "Part 5 : gérondif, infinitif & subjonctif": ["en.p.verb"]
+   "Prépositions & connecteurs": ["en.l.opp", "en.l.cause", "en.p.dur", "en.l.time"],
+   "Part 6 : textes à trous": ["en.l.opp", "en.l.cause", "en.l.time", "en.w.ger", "en.w.form"],
+   "Part 5 : conjonctions, relatifs & quantifieurs": ["en.l.opp", "en.l.cause", "en.s.rel", "en.w.quant"],
+   "Part 5 : modaux, discours indirect & questions indirectes": ["en.m.ded", "en.m.obl", "en.s.rep", "en.s.quest"],
+   "Part 5 : gérondif, infinitif & subjonctif": ["en.p.verb", "en.w.ger"],
+   "Part 1 : le vocabulaire du bureau": ["en.p.place", "en.t.pres", "en.s.pass"],
+   "Part 5 : familles de mots": ["en.w.form"],
+   "Part 5 : pronoms & comparatifs": ["en.w.pron", "en.w.comp", "en.s.rel"],
+   "Part 2 : questions-réponses": ["en.s.quest"],
+   "Part 1 : les pièges de la photo": ["en.s.pass", "en.t.pres", "en.p.place"],
+   "Part 1 : vraies photos": ["en.s.pass", "en.t.pres", "en.p.place"],
+   "Part 5 : so/such, too/enough, used to & verbes + -ing/to": ["en.s.misc", "en.w.ger", "en.w.comp"],
+   "Vocabulaire : chiffres, tendances & graphiques": ["en.w.form"],
+   "Part 6 : insérer la bonne phrase": ["en.l.opp", "en.l.cause", "en.w.pron"],
+   "Part 5 : passif, participes & inversions": ["en.s.pass", "en.w.form"]
   }
  }
 }

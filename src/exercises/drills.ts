@@ -17,8 +17,9 @@ import { KO_TXT } from "../i18n/dict-ko.js";
 import { UI } from "../i18n/locale.js";
 import { ITEM_UNIT } from "./generate.js";
 
-/** Élément de QCM : [question avec ___, options (la 1re est la bonne), n° de règle, indice, autres réponses acceptées]. */
-export type DrillItem = [string, string[], number, (string | null)?, string[]?];
+/** Élément de QCM : [question avec ___, options (la 1re est la bonne), n° de règle, indice, autres réponses acceptées].
+ *  Le n° de règle peut être une liste : il suit alors le choix lié « 1= » (la bonne réponse change avec l'indice tiré). */
+export type DrillItem = [string, string[], number | number[], (string | null)?, string[]?];
 /** Paire de traduction : phrase source par langue d'interface, traductions acceptées, traductions fautives. */
 export interface DrillPair {
   s: Record<string, string>;
@@ -109,7 +110,9 @@ export function genItem(set: DrillSet, sub: DrillSub, idx?: number): GenItem | n
     const Q = expand(q, picks, set.lex);
     const O = opts.map(o => expand(o, picks, set.lex));
     if (new Set(O).size !== O.length) continue; // deux options identiques après tirage : on retire
-    const it = [Q, O, 0, dtx(sub.r[r] || sub.r[0])] as unknown as GenItem;
+    // v38 : règle liée au choix « 1= » quand la bonne réponse dépend de l'indice tiré (yesterday → went, since → has gone…)
+    const ri = Array.isArray(r) ? r[(picks.get("1") ?? 0) % r.length] : r;
+    const it = [Q, O, 0, dtx(sub.r[ri] || sub.r[0])] as unknown as GenItem;
     it._sub = sub.id;
     it._k = sub.id + "#" + i;
     if (h) it._h = expand(h, picks, set.lex);
