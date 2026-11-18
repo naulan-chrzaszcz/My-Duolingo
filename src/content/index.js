@@ -5,6 +5,9 @@ import { KO_TXT } from "../i18n/dict-ko.js";
 import { UI } from "../i18n/locale.js";
 
 export { LEVELS, SECTIONS, COURSES, STORIES, UNIT_REMAP, REAL_PH, PH_IMG, HANGUL_UNITS, V9 };
+// Mots français du cours FLE, gardés même quand l'interface française retire ce cours :
+// ils servent de mauvaises réponses aux « mots à retenir » de la section Voltaire, qui n'a pas de vocabulaire
+export const FR_WORDS = (COURSES["fr-fle"] ? COURSES["fr-fle"].units : []).flatMap(U => (U.v || []).map(v => v[1]));
 // ---- Contenus : titre d'origine gardé comme clé stable, puis version anglaise ----
 (function () {
   Object.values(COURSES).forEach(C =>

@@ -108,10 +108,11 @@ $prompt = "Tu es le coach d'une application d'apprentissage façon Duolingo. L'�
 
 // ---- Mode « mots à retenir » : traduction + exemple ----
 if ($wordMode) {
-  if ($lang === 'fr-FR') $fmt = '{"w":[["mot correctement orthographié","définition courte","phrase d\'exemple naturelle","piège d\'orthographe à retenir"]]}';
-  else $fmt = '{"w":[["mot ou expression en ' . $L . '","traduction française courte","phrase d\'exemple simple et naturelle en ' . $L . '","traduction française de l\'exemple"' . ($lang === 'ko-KR' ? ',"romanisation révisée du mot"' : '') . ']]}';
+  if ($lang === 'fr-FR') $fmt = '{"w":[["mot correctement orthographié","définition courte","phrase d\'exemple naturelle","piège d\'orthographe à retenir",["piège 1","piège 2","piège 3"]]]}';
+  else $fmt = '{"w":[["mot ou expression en ' . $L . '","traduction française courte","phrase d\'exemple simple et naturelle en ' . $L . '","traduction française de l\'exemple"' . ($lang === 'ko-KR' ? ',"romanisation révisée du mot"' : '') . ',["piège 1","piège 2","piège 3"]]]}';
   $prompt = "Tu aides un élève francophone qui apprend le $L. Il a noté ces mots ou expressions (écrits en $L ou en français) :\n- " . implode("\n- ", $words)
-    . "\n\nRéponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n$fmt\nUne entrée par mot, dans le même ordre. Si un mot est écrit en français, donne son équivalent en $L. Corrige l'orthographe si besoin.";
+    . "\n\nRéponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n$fmt\nUne entrée par mot, dans le même ordre. Si un mot est écrit en français, donne son équivalent en $L. Corrige l'orthographe si besoin. "
+    . "La dernière case de chaque entrée liste 3 pièges pour un QCM : des mots ou expressions qui existent vraiment en $L, de même nature, de même forme (même nombre de mots, même ponctuation, même terminaison) et faciles à confondre avec le mot (orthographe, son ou sens voisin), mais de sens nettement différent : jamais un synonyme ni une autre traduction possible.";
 }
 
 // ---- Mode « rédaction » : correction d'un texte ----

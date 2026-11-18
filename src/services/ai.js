@@ -318,18 +318,21 @@ export function aiPrompt(r) {
     'Règles : langue naturelle et 100 % correcte ; difficulté adaptée au niveau, de la plus facile à la plus difficile ; dans "c", une seule bonne réponse sans ambiguïté et des distracteurs plausibles ; varie les thèmes de la vie quotidienne et professionnelle.'
   );
 }
+// Même consigne que server/api/generate.php (mode « word ») : 3 pièges pour le QCM des mots à retenir
+export const WORD_TRAPS =
+  "La dernière case de chaque entrée liste 3 pièges pour un QCM : des mots ou expressions qui existent vraiment en ¤, de même nature, de même forme (même nombre de mots, même ponctuation, même terminaison) et faciles à confondre avec le mot (orthographe, son ou sens voisin), mais de sens nettement différent : jamais un synonyme ni une autre traduction possible.";
 export function wordPrompt(r) {
   const L = { "en-US": "anglais", "fr-FR": "français", "ko-KR": "coréen" }[r.lang];
   const fmt =
     r.lang === "fr-FR"
-      ? '{"w":[["mot correctement orthographié","définition courte","phrase d\'exemple naturelle","piège d\'orthographe à retenir"]]}'
+      ? '{"w":[["mot correctement orthographié","définition courte","phrase d\'exemple naturelle","piège d\'orthographe à retenir",["piège 1","piège 2","piège 3"]]]}'
       : '{"w":[["mot ou expression en ' +
         L +
         '","traduction française courte","phrase d\'exemple simple et naturelle en ' +
         L +
         '","traduction française de l\'exemple"' +
         (r.lang === "ko-KR" ? ',"romanisation révisée du mot"' : "") +
-        "]]}";
+        ',["piège 1","piège 2","piège 3"]]]}';
   return (
     "Tu aides un élève francophone qui apprend le " +
     L +
@@ -341,14 +344,25 @@ export function wordPrompt(r) {
     fmt +
     "\nUne entrée par mot, dans le même ordre. Si un mot est écrit en français, donne son équivalent en " +
     L +
-    ". Corrige l'orthographe si besoin."
+    ". Corrige l'orthographe si besoin. " +
+    WORD_TRAPS.replace("¤", L)
   );
 }
 export async function aiEnrich(lang, ws) {
   const req = { mode: "word", lang, words: ws.map(w => String(w).slice(0, 60)).slice(0, 10) };
   const raw = await aiAsk(wordPrompt(req), req, { tier: "quick", ms: 40000 });
   if (!raw || !Array.isArray(raw.w)) return null;
-  return raw.w.map(a => (Array.isArray(a) ? a.map(x => (typeof x === "string" ? x.slice(0, 200) : "")) : []));
+  // les cases texte gardent leur place ; la liste de pièges (dernière case) part dans .traps
+  return raw.w.map(a => {
+    if (!Array.isArray(a)) return [];
+    const e = a.filter(x => !Array.isArray(x)).map(x => (typeof x === "string" ? x.slice(0, 200) : ""));
+    const t = a.find(Array.isArray) || [];
+    e.traps = t
+      .filter(x => typeof x === "string" && x.trim())
+      .map(x => x.trim().slice(0, 60))
+      .slice(0, 5);
+    return e;
+  });
 }
 export function parseLoose(t) {
   if (t && typeof t === "object") return t;

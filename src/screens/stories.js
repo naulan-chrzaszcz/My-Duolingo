@@ -247,7 +247,8 @@ export function storyAddWord(sec, w, lang, ex, exTr, tr) {
           if (x[1]) item.tr = x[1];
           if (!item.ex && x[2]) item.ex = x[2];
           if (!item.exTr && x[3]) item.exTr = x[3];
-          if (x[4]) item.rom = x[4];
+          if (typeof x[4] === "string" && x[4]) item.rom = x[4];
+          if (x.traps && x.traps.length) item.traps = x.traps;
           if (sec === "fr" && x[3] && !item.exTr) item.exTr = x[3];
         }
         save();
