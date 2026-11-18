@@ -7,6 +7,7 @@ import { beep } from "../services/speech.js";
 import { mascot } from "../ui/mascot.js";
 import { curCid, renderAll } from "../ui/router.js";
 import { closeModal, confetti, modal } from "../ui/ui.js";
+import { interestsPicker } from "../features/interests.ts";
 
 // ===================== ACCUEIL =====================
 export function onboarding(who) {
@@ -52,7 +53,7 @@ export function onboarding(who) {
           beep("tap");
         }),
     );
-    m.querySelector("#n2").onclick = step3;
+    m.querySelector("#n2").onclick = () => interestsPicker(step3, "Passer"); // v39 : centres d'intérêt
   };
   const step3 = () => {
     S.sec = sec;

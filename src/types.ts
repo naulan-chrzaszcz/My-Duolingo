@@ -127,6 +127,11 @@ export interface State {
   wear: string;
   bank: Record<string, unknown[]>;
   mist: Record<string, unknown[]>;
+  /** Centres d'intérêt choisis (identifiants de features/interests.ts) et texte libre (v39). */
+  likes?: string[];
+  likeFree?: string;
+  /** Jour (dkey) où la leçon du jour a été proposée (v39). */
+  dlDay?: string;
   badges: string[];
   set: {
     rate: number;

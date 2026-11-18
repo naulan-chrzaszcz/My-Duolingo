@@ -11,6 +11,7 @@ import { EN_SUFFIX, KO_SUFFIX, NONFR, UI } from "../i18n/locale.js";
 import { extremize } from "../lesson/build.js";
 import { L, dueReviews, openSession } from "../lesson/engine.js";
 import { mascot } from "../ui/mascot.js";
+import { likesList } from "../features/interests.ts";
 import { closeModal, modal, toast } from "../ui/ui.js";
 
 // ===================== GÉNÉRATION PAR IA =====================
@@ -238,8 +239,18 @@ export function aiRequest(cid, units, errors, theme, opt) {
     bilan: !!opt.bilan,
     errors: errs,
     theme: (theme || "").slice(0, 80),
+    // v39 : centres d'intérêt (sauf thème imposé) et leçon du jour
+    likes: theme ? [] : likesList(),
+    daily: !!opt.daily,
   };
 }
+// v39 : mêmes textes dans server/api/generate.php
+export const DAILY_TXT =
+  "Leçon du jour : une leçon INÉDITE, construite autour d'une situation concrète et nouvelle (si possible liée à un centre d'intérêt de l'élève), qui réutilise ce qu'il a déjà vu et y ajoute quelques mots nouveaux utiles.\n\n";
+export const likesText = likes =>
+  "Centres d'intérêt de l'élève : " +
+  likes.join(", ") +
+  ". Situe une bonne partie des phrases, des dialogues et des exemples dans ces domaines, quand cela reste naturel.\n\n";
 export function aiPrompt(r) {
   const L = { "en-US": "anglais", "fr-FR": "français", "ko-KR": "coréen" }[r.lang];
   const coach = r.errors && r.errors.length > 0;
@@ -295,6 +306,8 @@ export function aiPrompt(r) {
     (r.bilan
       ? "Séance BILAN : couvre l'ensemble des unités listées (pas seulement la dernière), en donnant plus de place aux erreurs récurrentes et aux mots que l'élève doit revoir, placés en tête de la liste ci-dessus.\n\n"
       : "") +
+    (r.daily ? DAILY_TXT : "") +
+    (r.likes && r.likes.length ? likesText(r.likes) : "") +
     (r.theme
       ? "Thème imposé par l'élève : « " +
         r.theme +
@@ -557,7 +570,7 @@ export async function startAI(cid, units, cfg) {
   const theme = cfg.theme || "";
   const errs = theme ? [] : (S.elog[cid] || []).slice(-25);
   modal(
-    `<div class="mcenter">${mascot("wow", "dance")}<h2>${cfg.bilan ? "Horang prépare ta leçon bilan…" : coach ? "🧠 Horang analyse tes erreurs…" : theme ? "🎨 Thème : " + esc(theme) : "✨ Horang prépare tes exercices…"}</h2><p>${coach ? "Recherche de tes erreurs récurrentes et création d'exercices ciblés." : "Création d'exercices inédits à partir de ce que tu as appris."}</p><div class="aiload"><i></i><i></i><i></i></div></div>`,
+    `<div class="mcenter">${mascot("wow", "dance")}<h2>${cfg.daily ? "Horang prépare ta leçon du jour…" : cfg.bilan ? "Horang prépare ta leçon bilan…" : coach ? "🧠 Horang analyse tes erreurs…" : theme ? "🎨 Thème : " + esc(theme) : "✨ Horang prépare tes exercices…"}</h2><p>${coach ? "Recherche de tes erreurs récurrentes et création d'exercices ciblés." : "Création d'exercices inédits à partir de ce que tu as appris."}</p><div class="aiload"><i></i><i></i><i></i></div></div>`,
     "",
     true,
   );
@@ -569,7 +582,7 @@ export async function startAI(cid, units, cfg) {
       units,
       errs.length ? errs : null,
       theme,
-      cfg.bilan ? { bilan: true, words: cfg.words } : null,
+      cfg.bilan ? { bilan: true, words: cfg.words } : cfg.daily ? { daily: true } : null,
     );
     if (G) src = "ia";
   } catch (e) {}
