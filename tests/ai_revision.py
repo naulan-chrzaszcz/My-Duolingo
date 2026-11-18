@@ -18,11 +18,11 @@ async def main():
     prob=[]
     await p.evaluate("("+STUB+")()"); await p.evaluate("cacheClear()")
     U="COURSES['en-daily'].units.slice(0,8)"
-    # 1) toujours une génération nouvelle : 4 révisions identiques = 4 appels (les autres cartes gardent leur réserve)
+    # 1) toujours une génération nouvelle : 4 révisions identiques = 4 appels, comme les autres cartes
     r=await p.evaluate(f"(async()=>{{for(let i=0;i<4;i++)await aiGenerate('en-daily',{U},null,'',{{rev:true}});const rev=window.__calls;for(let i=0;i<4;i++)await aiGenerate('en-daily',{U},null,'',null);return [rev,window.__calls-rev]}})()")
     print('révision : appels',r[0],'· étape IA classique : appels',r[1])
     if r[0]!=4: prob.append(f'révision IA mise en réserve ({r[0]} appels au lieu de 4)')
-    if r[1]!=3: prob.append(f'autres cartes : {r[1]} appels au lieu de 3')
+    if r[1]!=4: prob.append(f'autres cartes : {r[1]} appels au lieu de 4')
     # 2) niveau : sans séance terminée, pas de consigne ; puis plus difficile, à garder, plus simple
     r=await p.evaluate(f"""(async()=>{{const out=[];const ask=async()=>{{window.__prompts=[];await aiGenerate('en-daily',{U},null,'',{{rev:true}});const q=aiRequest('en-daily',{U},null,'',{{rev:true}});const t=window.__prompts[0]||'';return [q.perf||'',q.acc||0,/plus difficiles/.test(t),/plus simples/.test(t),/Garde exactement/.test(t)]}};
       S.revAcc={{}};out.push(await ask());

@@ -1,24 +1,22 @@
 // Réserve des réponses de l'IA (v38.2), sur l'appareil seulement : IndexedDB, jamais synchronisée.
-// Chaque profil paie sa propre clé Claude : relancer la même séance ne doit pas repayer la même génération.
-// Pour une même demande, on garde jusqu'à AI_CACHE.versions réponses ; une fois la réserve pleine,
-// on en ressert une au hasard sans appeler Claude. Les exercices étant tirés au hasard dans la réponse,
-// deux séances bâties sur la même version restent différentes.
+// Chaque profil paie sa propre clé Claude : la traduction d'un mot, l'explication d'une réponse ou la correction
+// d'un texte ne changent pas d'une fois à l'autre, elles ne sont donc payées qu'une fois.
+// Les exercices, eux, sont toujours générés à nouveau (décision de la propriétaire) : les ratés sont déjà
+// gardés dans les erreurs à ancrer (S.mist) et reviennent en révision.
 
 export const AI_CACHE = {
-  versions: 3, // réponses gardées par demande d'exercices
   days: 30, // durée de vie d'une réserve, à partir de sa première réponse
   max: 60, // demandes gardées au plus ; la moins récemment utilisée part en premier
 };
 
 export type CacheEntry = { k: string; v: string[]; ts: number; used: number };
 
-// Nombre de versions à garder selon le mode de génération (0 = jamais en réserve)
+// Nombre de réponses à garder selon le mode de génération (0 = jamais en réserve)
 export function cacheVersions(mode: string): number {
-  // histoires et unités créées s'ajoutent au profil : une réponse resservie ferait un doublon
-  if (mode === "story" || mode === "unit") return 0;
   // une traduction, une explication ou une correction ne gagne rien à être redemandée
   if (mode === "word" || mode === "explain" || mode === "write") return 1;
-  return AI_CACHE.versions;
+  // exercices (toujours nouveaux), histoires et unités créées (une réponse resservie ferait un doublon)
+  return 0;
 }
 
 // Empreinte de la demande (deux empreintes de 53 bits + longueur) : on ne garde jamais le texte du prompt

@@ -113,17 +113,17 @@ export async function aiDirect(prompt, req, tier, ms, maxTok) {
     .join("");
 }
 // Point d'entrée unique pour TOUTES les générations (exercices, coach, thèmes, mots, rédactions, unités, histoires)
-// v38.2 : réserve sur l'appareil (services/ai-cache.ts). Une même demande est payée au plus 3 fois (1 fois pour
-// les mots, explications et corrections), puis resservie depuis la réserve, y compris hors ligne.
-// o.ok(raw) dit si la réponse est utilisable : une réponse refusée n'est jamais mise en réserve.
+// v38.2 : les exercices sont toujours générés à nouveau (les ratés sont gardés dans les erreurs à ancrer).
+// Seules la traduction d'un mot, une explication et une correction sont gardées sur l'appareil
+// (services/ai-cache.ts) : payées une fois, puis resservies, y compris hors ligne.
+// o.ok(raw) dit si la réponse est utilisable : une réponse refusée n'est jamais gardée.
 export async function aiAsk(prompt, req, o) {
   o = o || {};
   if (NONFR) {
     prompt += UI === "ko" ? KO_SUFFIX : EN_SUFFIX;
     req = Object.assign({}, req, { ui: UI });
   }
-  // o.cache === false : toujours une génération nouvelle (carte « Révision IA illimitée »)
-  const cap = o.cache === false ? 0 : cacheVersions((req && req.mode) || "");
+  const cap = cacheVersions((req && req.mode) || "");
   const k = cap ? cacheKey((o.tier || "quick") + "\n" + prompt) : "";
   const hit = cap ? await cacheGet(k) : null;
   if (hit && hit.v.length >= cap) return cachePick(hit);
@@ -227,15 +227,9 @@ export function weakRuleIds(cid) {
 export function weakRules(cid) {
   const d = S.drill || {};
   return weakRuleIds(cid).map(id =>
-    // arrondi à la dizaine (v38.2) : une séance de plus ne change pas la demande pour quelques points
-    `${drillLabel(id)} (${Math.round((d[id][1] / d[id][0]) * 10) * 10} % d'erreurs)`.slice(0, 120),
+    `${drillLabel(id)} (${Math.round((d[id][1] / d[id][0]) * 100)} % d'erreurs)`.slice(0, 120),
   );
 }
-// n éléments répartis régulièrement dans a (début, milieu, fin), toujours les mêmes pour la même liste
-export const spread = (a, n) =>
-  a.length <= n
-    ? a.slice()
-    : Array.from({ length: n }, (_, i) => a[Math.round((i * (a.length - 1)) / Math.max(1, n - 1))]);
 export function aiRequest(cid, units, errors, theme, opt) {
   opt = opt || {};
   const C = COURSES[cid];
@@ -257,8 +251,7 @@ export function aiRequest(cid, units, errors, theme, opt) {
     units: units.map(u => u.t).slice(opt.bilan ? -10 : -6),
     weak: weakRules(cid),
     // leçon bilan (v33) : les mots à revoir de l'élève passent en tête des éléments vus
-    // v38.2 : échantillon régulier (et non tiré au hasard) : la même séance donne la même demande et retrouve sa réserve
-    seen: (opt.words || []).concat(spread(seen, opt.bilan ? 44 : 36)).slice(0, opt.bilan ? 44 : 36),
+    seen: (opt.words || []).concat(shuffle(seen)).slice(0, opt.bilan ? 44 : 36),
     bilan: !!opt.bilan,
     errors: errs,
     theme: (theme || "").slice(0, 80),
@@ -486,12 +479,7 @@ export function validateGen(raw, C) {
 }
 export async function aiGenerate(cid, units, errors, theme, opt) {
   const req = aiRequest(cid, units, errors, theme, opt);
-  const raw = await aiAsk(aiPrompt(req), req, {
-    tier: "quick",
-    ms: 70000,
-    ok: r => !!validateGen(r, COURSES[cid]),
-    cache: !(opt && opt.rev),
-  });
+  const raw = await aiAsk(aiPrompt(req), req, { tier: "quick", ms: 70000 });
   return validateGen(raw, COURSES[cid]);
 }
 export function localRemix(cid, units) {
