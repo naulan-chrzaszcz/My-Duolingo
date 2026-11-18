@@ -31,7 +31,7 @@ server/ (api PHP, installateur, LISEZ-MOI) ──────▶ dist/
 | `lesson/` | `build.js`, `engine.js`, `writing.js`, `keyboard.js` | Construction et déroulé d'une leçon (`L`), rédactions, clavier |
 | `features/` | `placement.js`, `quests.js`, `word-bank.js`, `theme-training.js`, `ai-units.js`, `coach.js`, `grammar.js` | Test de niveau, quêtes et badges, répétition espacée, thèmes, unités IA, coach, notions de grammaire |
 | `screens/` | `path.js` (parcours et chapitres), `training.js`, `stories.js`, `league.js`, `quests.js`, `shop.js`, `profile.js`, `settings.js`, `stats.js`, `streak.js`, `accounts.js`, `onboarding.js`, `language.js` | Un module par écran ou fenêtre principale |
-| `services/` | `cloud.js`, `ai.js`, `reminders.js`, `speech.js` | Comptes en ligne et ligue, IA, rappels push, voix et micro |
+| `services/` | `cloud.js`, `ai.js`, `ai-cache.ts`, `reminders.js`, `speech.js` | Comptes en ligne et ligue, IA, réserve des réponses de l'IA sur l'appareil, rappels push, voix et micro |
 | `ui/` | `ui.js`, `router.js`, `platform.js`, `mascot.js`, `scenes.ts`, `icons.ts`, `pics.ts`, `pics/*.ts`, `back-button.js`, `typography.js` | Toasts et modales, routage par hash, iOS/Android/thème, mascotte et scènes de Horang, icônes SVG (drapeaux, coupes, médailles), images de vocabulaire et scènes de la Part 1, bouton retour, typographie |
 | racine | `main.js`, `globals.js`, `types.ts` | Démarrage, API globale, types |
 
@@ -93,6 +93,7 @@ L'ordre compte : la traduction du DOM doit observer la page avant la typographie
 - Scènes de Horang le long du parcours : `ui/scenes.ts` (`horangScene`).
 - IA (v31.1) : la clé se règle dans Paramètres › Mon Claude (`#reglages/claude`), tous les messages y renvoient ; la création d'unité (`genUnit`) envoie aussi `titles`, les titres des unités plus anciennes que les 14 dernières, pour éviter un thème déjà traité.
 - IA (v29) : `weakRuleIds()` / `weakRules()` dans `services/ai.js` envoient les règles de grammaire les moins réussies (`weak`) au prompt (`generate.php` et prompt direct) et ajoutent 3 phrases générées par gabarits à chaque séance IA ou locale. Les QCM générés peuvent porter un indice (5ᵉ champ) qui permet l'exercice `fill`.
+- Réserve de l'IA (v38.2) : `aiAsk()` passe par `services/ai-cache.ts` (IndexedDB `speakeasy-ai`, sur l'appareil, jamais synchronisée). Clé = empreinte du prompt (jamais le texte). Exercices : 3 versions par demande, puis l'une d'elles au hasard sans appeler Claude ; mots, explications, corrections : 1 version ; histoires et unités créées : jamais (doublons). Réserve valable 30 jours, 60 demandes au plus (`AI_CACHE`). Une réponse n'est gardée que si `o.ok(raw)` l'accepte ; hors ligne, la réserve est resservie même incomplète. Pour que la même séance retrouve sa réserve, `aiRequest()` choisit les phrases vues de façon régulière (`spread`) et `weakRules()` arrondit les pourcentages à la dizaine.
 - Entraînement : `TMAP` (titre de carte → rubrique, icône, couleur) dans `screens/training.js`.
 
 ## Images de vocabulaire et scènes (v30)

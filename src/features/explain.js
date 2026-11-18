@@ -205,7 +205,11 @@ export function bindExplain(ex, res, given, L) {
     if (!lines) {
       out.innerHTML = `<p class="fxw">Horang réfléchit…</p>`;
       try {
-        const raw = await aiAsk(explainPrompt(req), req, { tier: "quick", ms: 30000 });
+        const raw = await aiAsk(explainPrompt(req), req, {
+          tier: "quick",
+          ms: 30000,
+          ok: r => Array.isArray(r && r.exp) && r.exp.length > 0,
+        });
         lines =
           raw && Array.isArray(raw.exp)
             ? raw.exp

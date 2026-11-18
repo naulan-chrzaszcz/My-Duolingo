@@ -127,7 +127,11 @@ export function writePrompt(r) {
   );
 }
 export async function aiWrite(req) {
-  const raw = await aiAsk(writePrompt(req), Object.assign({ mode: "write" }, req), { tier: "default", ms: 70000 });
+  const raw = await aiAsk(writePrompt(req), Object.assign({ mode: "write" }, req), {
+    tier: "default",
+    ms: 70000,
+    ok: r => typeof (r && r.corrige) === "string",
+  });
   if (!raw || typeof raw !== "object") return null;
   const sc = Math.max(0, Math.min(100, Math.round(+raw.score || 0)));
   return {

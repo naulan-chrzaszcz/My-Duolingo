@@ -11,6 +11,7 @@ import { EN_SUFFIX, KO_SUFFIX, NONFR, UI } from "../i18n/locale.js";
 import { extremize } from "../lesson/build.js";
 import { L, dueReviews, openSession } from "../lesson/engine.js";
 import { mascot } from "../ui/mascot.js";
+import { cacheGet, cacheKey, cachePick, cachePut, cacheVersions } from "./ai-cache.ts";
 import { closeModal, modal, toast } from "../ui/ui.js";
 
 // ===================== GÉNÉRATION PAR IA =====================
@@ -111,12 +112,26 @@ export async function aiDirect(prompt, req, tier, ms, maxTok) {
     .join("");
 }
 // Point d'entrée unique pour TOUTES les générations (exercices, coach, thèmes, mots, rédactions, unités, histoires)
+// v38.2 : réserve sur l'appareil (services/ai-cache.ts). Une même demande est payée au plus 3 fois (1 fois pour
+// les mots, explications et corrections), puis resservie depuis la réserve, y compris hors ligne.
+// o.ok(raw) dit si la réponse est utilisable : une réponse refusée n'est jamais mise en réserve.
 export async function aiAsk(prompt, req, o) {
   o = o || {};
   if (NONFR) {
     prompt += UI === "ko" ? KO_SUFFIX : EN_SUFFIX;
     req = Object.assign({}, req, { ui: UI });
   }
+  const cap = cacheVersions((req && req.mode) || "");
+  const k = cap ? cacheKey((o.tier || "quick") + "\n" + prompt) : "";
+  const hit = cap ? await cacheGet(k) : null;
+  if (hit && hit.v.length >= cap) return cachePick(hit);
+  const raw = await aiCall(prompt, req, o);
+  const ok = o.ok || (r => !!r && typeof r === "object");
+  if (cap && raw && ok(raw)) await cachePut(k, raw, cap);
+  else if (hit && hit.v.length) return cachePick(hit); // IA indisponible ou réponse inutilisable : on ressert la réserve
+  return raw;
+}
+async function aiCall(prompt, req, o) {
   const mode = await aiDetect();
   if (mode === "local") return null;
   const ms = o.ms || 70000;
@@ -210,9 +225,15 @@ export function weakRuleIds(cid) {
 export function weakRules(cid) {
   const d = S.drill || {};
   return weakRuleIds(cid).map(id =>
-    `${drillLabel(id)} (${Math.round((d[id][1] / d[id][0]) * 100)} % d'erreurs)`.slice(0, 120),
+    // arrondi à la dizaine (v38.2) : une séance de plus ne change pas la demande pour quelques points
+    `${drillLabel(id)} (${Math.round((d[id][1] / d[id][0]) * 10) * 10} % d'erreurs)`.slice(0, 120),
   );
 }
+// n éléments répartis régulièrement dans a (début, milieu, fin), toujours les mêmes pour la même liste
+export const spread = (a, n) =>
+  a.length <= n
+    ? a.slice()
+    : Array.from({ length: n }, (_, i) => a[Math.round((i * (a.length - 1)) / Math.max(1, n - 1))]);
 export function aiRequest(cid, units, errors, theme, opt) {
   opt = opt || {};
   const C = COURSES[cid];
@@ -234,7 +255,8 @@ export function aiRequest(cid, units, errors, theme, opt) {
     units: units.map(u => u.t).slice(opt.bilan ? -10 : -6),
     weak: weakRules(cid),
     // leçon bilan (v33) : les mots à revoir de l'élève passent en tête des éléments vus
-    seen: (opt.words || []).concat(shuffle(seen)).slice(0, opt.bilan ? 44 : 36),
+    // v38.2 : échantillon régulier (et non tiré au hasard) : la même séance donne la même demande et retrouve sa réserve
+    seen: (opt.words || []).concat(spread(seen, opt.bilan ? 44 : 36)).slice(0, opt.bilan ? 44 : 36),
     bilan: !!opt.bilan,
     errors: errs,
     theme: (theme || "").slice(0, 80),
@@ -350,7 +372,7 @@ export function wordPrompt(r) {
 }
 export async function aiEnrich(lang, ws) {
   const req = { mode: "word", lang, words: ws.map(w => String(w).slice(0, 60)).slice(0, 10) };
-  const raw = await aiAsk(wordPrompt(req), req, { tier: "quick", ms: 40000 });
+  const raw = await aiAsk(wordPrompt(req), req, { tier: "quick", ms: 40000, ok: r => Array.isArray(r && r.w) });
   if (!raw || !Array.isArray(raw.w)) return null;
   // les cases texte gardent leur place ; la liste de pièges (dernière case) part dans .traps
   return raw.w.map(a => {
@@ -459,7 +481,7 @@ export function validateGen(raw, C) {
 }
 export async function aiGenerate(cid, units, errors, theme, opt) {
   const req = aiRequest(cid, units, errors, theme, opt);
-  const raw = await aiAsk(aiPrompt(req), req, { tier: "quick", ms: 70000 });
+  const raw = await aiAsk(aiPrompt(req), req, { tier: "quick", ms: 70000, ok: r => !!validateGen(r, COURSES[cid]) });
   return validateGen(raw, COURSES[cid]);
 }
 export function localRemix(cid, units) {

@@ -41,6 +41,7 @@ import * as m_screens_stats from "./screens/stats.js";
 import * as m_screens_stories from "./screens/stories.js";
 import * as m_screens_training from "./screens/training.js";
 import * as m_services_ai from "./services/ai.js";
+import * as m_services_ai_cache from "./services/ai-cache.ts";
 import * as m_services_cloud from "./services/cloud.js";
 import * as m_services_reminders from "./services/reminders.js";
 import * as m_services_speech from "./services/speech.js";
@@ -93,6 +94,7 @@ const MODULES = [
   m_screens_stories,
   m_screens_training,
   m_services_ai,
+  m_services_ai_cache,
   m_services_cloud,
   m_services_reminders,
   m_services_speech,
