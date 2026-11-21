@@ -77,6 +77,11 @@ jobs:
             [ $i = 5 ] && { echo "L'API de l'aperçu ne répond pas : « $r »"; exit 1; }
             sleep 5
           done
+          # la copie de la base et config.php ne doivent jamais être téléchargeables
+          for f in api/data/speakeasy.sqlite api/data/config.php; do
+            c=$(curl -s -o /dev/null -w '%{http_code}' --max-time 15 "$URL/$f" || true)
+            case "$c" in 200|000) echo "$f : réponse $c au lieu d'un refus"; exit 1 ;; *) echo "$f : refusé ($c)" ;; esac
+          done
           v=$(curl -s --max-time 15 "$URL/sw.js" | grep -o 'speakeasy-pr[0-9]*-v[0-9]*-[0-9a-f]*' | head -1)
           prod=$(curl -s --max-time 15 "$SITE_ORIGIN/speakeasy/sw.js" | grep -o 'speakeasy-v[0-9]*-[0-9a-f]*' | head -1)
           {
