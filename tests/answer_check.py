@@ -6,7 +6,7 @@ from playwright.async_api import async_playwright
 T=[("it's a 10 minutes walk",["It's a ten-minute walk."],'en-US',True),("its a ten minute walk",["It's a ten-minute walk."],'en-US',True),("i have 2 brothers and 1 sister",["I have two brothers and one sister."],'en-US',True),
 ("she is twenty one",["She is 21."],'en-US',True),("there are two hundred and fifty people",["There are 250 people."],'en-US',True),("can i have bill please",["Can I have the bill, please?"],'en-US',True),
 ("i would like coffe",["I'd like a coffee."],'en-US',True),("he is",["She is"],'en-US',False),("i like dogs",["I like cats."],'en-US',False),("the meeting was postponned untill tommorow",["The meeting was postponed until tomorrow."],'en-US',True),
-("where is the train station",["Where is the bank?"],'en-US',False),("i am not hungry",["I am hungry."],'en-US',False),("i dont agree",["I agree."],'en-US',False),
+("where is the train station",["Where is the bank?"],'en-US',False),("i am not hungry",["I am hungry."],'en-US',False),("i dont agree",["I agree."],'en-US',False),("to fish for me",["The fish for me."],'en-US',False),("the fihs for me",["The fish for me."],'en-US',True),
 ("j'ai 25 ans",["J'ai vingt-cinq ans."],'fr-FR',True),("il est 8 heures",["Il est huit heures."],'fr-FR',True),("j'ai quatre vingt dix ans",["J'ai 90 ans."],'fr-FR',True),("elle a soixante et onze ans",["Elle a 71 ans."],'fr-FR',True),("je voudrais cafe s'il vous plait",["Je voudrais un café, s'il vous plaît."],'fr-FR',True),
 ("je suis fatigue",["Je ne suis pas fatigué."],'fr-FR',False),("안녕하세요 저는 민지에요",["안녕하세요, 저는 민지예요."],'ko-KR',True),("감사합니다",["고맙습니다"],'ko-KR',False),("커피",["커피 주세요"],'ko-KR',False)]
 async def main():

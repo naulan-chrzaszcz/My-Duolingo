@@ -31,6 +31,7 @@ export const FR_WORDS = (COURSES["fr-fle"] ? COURSES["fr-fle"].units : []).flatM
       U.t = T(U.t);
       U.d = T(U.d);
       U.tip = T(U.tip);
+      if (U.pe) Object.keys(U.pe).forEach(k => (U.pe[k] = T(U.pe[k])));
       (U.parts || []).forEach(P => {
         P.t = T(P.t);
       });
@@ -89,6 +90,7 @@ export function KO_APPLY() {
       U.t = T(U.t0 || U.t);
       U.d = T(U.d);
       U.tip = T(U.tip);
+      if (U.pe) Object.keys(U.pe).forEach(k => (U.pe[k] = T(U.pe[k])));
       (U.parts || []).forEach(P => {
         P.t = T(P.t);
       });

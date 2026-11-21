@@ -170,7 +170,7 @@ R.type = (ex, b) => {
         rom: ex.rom,
         speak: ex.answer,
         lang: ex.lang,
-        diff: strict && !r.ok && tin.value.trim() ? diffHtml(tin.value, ex.answer, ex.lang) : "",
+        diff: (strict || r.near) && !r.ok && tin.value.trim() ? diffHtml(tin.value, ex.answer, ex.lang) : "",
       };
     },
   };

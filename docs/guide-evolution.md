@@ -21,11 +21,15 @@ npm test        # tests rapides ; npm run test:all avant de livrer
    - TOEIC : `l` (Part 2), `ph` (Part 1), `cv` et `rd` (Parts 3, 4 et 7). Voltaire : `dd` (dictées).
    - `pk` : mots illustrés de l'unité (identifiants de `src/content/pics.json`) pour les exercices en images et le guide.
    - Le détail est dans `src/types.ts` (interface `Unit`).
-3. Viser au moins 8 phrases et 6 mots : les 18 étapes du thème (affichées comme 3 unités de 6 étapes depuis la v34) sont générées à partir de ces données.
-4. Traduire le titre, la description, l'astuce et les phrases françaises :
+3. `pe` (v38.2, facultatif) : explication propre à une phrase, affichée dans « À savoir » après la réponse : `{ "phrase cible exacte de p": "note" }`.
+   - Une ou deux phrases courtes en français, sur ce que la phrase apprend (construction, faux ami, tournure) ; exemples originaux.
+   - La note vaut aussi pour les variantes acceptées de la phrase et pour ses révisions dans d'autres leçons.
+   - Traduire la note dans la section `content` de `src/i18n/ko.json` (et de `en.json` pour Voltaire et le coréen) ; `node tests/run.mjs explain_notes` le vérifie.
+4. Viser au moins 8 phrases et 6 mots : les 18 étapes du thème (affichées comme 3 unités de 6 étapes depuis la v34) sont générées à partir de ces données.
+5. Traduire le titre, la description, l'astuce et les phrases françaises :
    - section `content` de `src/i18n/ko.json`, pour les cours anglais et FLE vus depuis l'interface coréenne ;
    - section `content` de `src/i18n/en.json`, pour Voltaire et coréen vus depuis l'interface anglaise.
-5. Lancer `node tests/run.mjs data_integrity` puis `node tests/run.mjs play_lessons fr <cours>`.
+6. Lancer `node tests/run.mjs data_integrity` puis `node tests/run.mjs play_lessons fr <cours>`.
 
 Unités à sujet propre (v35) : tout thème porte un champ `parts` de trois objets `{ t, p, v, c }` — `t` est le titre-objectif de l'unité affichée (« Commande une boisson »), `p`, `v` et `c` les index des phrases, mots et QCM du thème qui lui reviennent. Les autres listes peuvent être découpées de la même façon (`dd` pour Voltaire, `hj`, `sy`, `mp` pour le hangul, `ph`, `l`, `cv`, `rd` pour le TOEIC) ; une liste absente d'une partie reste commune au thème. Chaque élément d'une liste découpée doit appartenir à une seule unité ; viser au moins 4 phrases, 3 mots et 2 QCM par unité (3 QCM et 1 dictée pour Voltaire, 2 lettres pour le hangul). Traduire les titres dans la section `content` de `ko.json` (et de `en.json` pour Voltaire et le coréen). Depuis la v36, les images (`pk`) se découpent de la même façon, et `g` donne les notions de grammaire générées propres à l'unité (ids de `content/grammar/<langue>.json`, pris parmi ceux du thème ; liste vide = aucune) : sans `g`, l'unité reçoit toutes les notions du thème, ce qui mêle des exercices hors sujet. `node tests/run.mjs unit_parts` vérifie tout cela. Un thème sans `parts` s'affiche avec le titre et la description du thème sur ses trois unités.
 
@@ -81,7 +85,7 @@ Insérer une unité au milieu est possible : la progression des profils est reca
 4. Si c'est un exercice d'écoute ou de micro : l'ajouter dans `isAudioEx` et `pauseAudio` (`src/lesson/engine.js`).
 5. Libellé du type pour le coach : `TYPE_FR` dans `src/features/coach.js`.
 6. Tests : ajouter la bonne réponse automatique dans `tests/solver.py`.
-   - Explication après la réponse : renvoyer `exp` (ou `exps`) dans le résultat de `grade`, sinon `features/explain.js` cherche un repère de grammaire dans la phrase ; pour un nouveau repère, ajouter une ligne `[expression régulière, texte]` dans `EN`, `FR`, `KO_END` ou `KO_PART` et traduire le texte.
+   - Explication après la réponse : renvoyer `exp` (ou `exps`) dans le résultat de `grade`, sinon `features/explain.js` cherche une note écrite pour la phrase puis un repère de grammaire ; pour un nouveau repère, ajouter une règle dans `EN`, `FR`, `KO_END` ou `KO_PART` de `features/grammar-notes.js`, traduire le texte, ajouter des phrases pièges dans `tests/explain_notes.py` et vérifier sur toutes les phrases des cours qu'il ne se déclenche jamais à tort (mieux vaut ne rien dire qu'une note fausse).
 7. Traduire les nouveaux textes (voir « Un texte d'interface »).
 
 ## Une notion de grammaire, une règle ou un gabarit de phrase

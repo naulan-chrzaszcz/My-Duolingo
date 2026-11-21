@@ -37,6 +37,8 @@ export interface Unit {
   /** Astuce affichée dans le guide de l'unité. */
   tip?: string;
   p?: Phrase[];
+  /** v38.2 : explication propre à une phrase (bloc « À savoir ») : phrase cible exacte de `p` → note en français. */
+  pe?: Record<string, string>;
   v?: Vocab[];
   c?: Mcq[];
   l?: Part2[];

@@ -1,4 +1,5 @@
 // Correction des réponses (tolérance, nombres, articles, fautes de frappe)
+import { COURSES } from "../content/index.js";
 import { esc } from "../core/util.js";
 import { L } from "../lesson/engine.js";
 
@@ -211,8 +212,67 @@ export function checkText(v, answers, lang, strict) {
       key === "fr" ? lev(da(a), da(lv)) : 1e9,
       ARTICLES[key] && u ? lev(noArt(a), u) : 1e9,
     );
-  if (best <= typoBudget(la[0].length, lang)) return { ok: true, typo: true };
+  if (best <= typoBudget(la[0].length, lang)) {
+    // v38.2 : un autre vrai mot (« to » pour « the », « form » pour « from ») n'est pas une faute de frappe
+    if ((key === "en" || key === "fr") && realWordSwap(lv, answers, lang)) return { ok: false, near: true };
+    return { ok: true, typo: true };
+  }
   return { ok: false };
+}
+// ---- v38.2 : mots connus d'une langue (toutes les phrases et le vocabulaire des cours) ----
+const KNOWN = {};
+function knownWords(key) {
+  if (KNOWN[key]) return KNOWN[key];
+  const set = new Set(),
+    add = t =>
+      typeof t === "string" &&
+      norm(t, key)
+        .split(" ")
+        .forEach(w => w && set.add(w));
+  Object.values(COURSES).forEach(C => {
+    if (!String(C.lang || "").startsWith(key)) return;
+    C.units.forEach(U => {
+      (U.p || []).forEach(p => p.slice(1).forEach(add));
+      (U.v || []).forEach(v => add(v[1]));
+      (U.c || []).forEach(c => {
+        add(c[0]);
+        (c[1] || []).forEach(add);
+      });
+      (U.dd || []).forEach(add);
+    });
+  });
+  return (KNOWN[key] = set);
+}
+/** La réponse remplace un mot de la solution par un autre mot qui existe (et pas une simple forme du même mot). */
+export function realWordSwap(given, answers, lang) {
+  const key = lang.slice(0, 2),
+    known = knownWords(key),
+    da = x => x.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const aw = new Set();
+  answers.forEach(a => {
+    looseForm(a, lang)
+      .split(" ")
+      .forEach(w => aw.add(w));
+    // formes sans apostrophe (« its » pour « it's », « dont » pour « don't ») : fautes de frappe courantes
+    String(a)
+      .toLowerCase()
+      .replace(/[’]/g, "'")
+      .split(/[^\p{L}\d']+/u)
+      .forEach(w => w && aw.add(w.replace(/'/g, "")));
+  });
+  const same = (x, u) =>
+    x === u ||
+    da(x) === da(u) ||
+    u === x + "s" ||
+    x === u + "s" ||
+    u === x + "es" ||
+    x === u + "es" ||
+    u === x + "e" ||
+    x === u + "e";
+  return String(given)
+    .split(" ")
+    .filter(Boolean)
+    .some(u => !aw.has(u) && known.has(u) && ![...aw].some(x => same(x, u)));
 }
 export function lcsMark(ans, usr) {
   const A = ans,

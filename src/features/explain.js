@@ -1,4 +1,5 @@
 // v33 : « À savoir » après chaque réponse — une explication utile sur la phrase et sa construction.
+// v38.2 : note écrite pour la phrase (champ « pe »), repères de grammaire vérifiés, astuce de la bonne unité.
 // Sans réseau : règle de l'exercice, repères de grammaire reconnus dans la phrase, mots clés de l'unité.
 // Avec une IA configurée : bouton « Explique ma réponse » (prompt construit côté serveur, mode « explain »).
 import { COURSES } from "../content/index.js";
@@ -6,6 +7,7 @@ import { esc } from "../core/util.js";
 import { drillLabel } from "../exercises/drills.js";
 import { AI, aiAsk } from "../services/ai.js";
 import { ic } from "../ui/icons.js";
+import { grammarNotes, tipFits } from "./grammar-notes.js";
 
 const clean = s =>
   String(s || "")
@@ -21,96 +23,44 @@ export function targetOf(ex, res) {
   return clean(ex.tgtText || ex.text || ex.audio || (res && res.speak) || (ex.prompt ? ex.answer : ""));
 }
 
-// ---- repères de grammaire reconnus dans la phrase (une note par repère, 2 au plus) ----
-const EN = [
-  [/\b(am|is|are|was|were|'m|'re)\s+(not\s+)?\w+ing\b/, "be + verbe en -ing : action en cours (forme progressive)."],
-  [
-    /\b(have|has|haven't|hasn't|'ve)\s+(\w+\s+)?(\w+ed|been|done|gone|seen|made|had|taken|written|eaten|known|given|found|sent|met|left|lost|bought|told)\b/,
-    "have / has + participe passé : present perfect (un lien entre le passé et maintenant).",
-  ],
-  [/\bgoing to\s+\w+/, "be going to + verbe : un projet déjà décidé."],
-  [/\b(will|won't|'ll)\b/, "will + base verbale : futur, décision prise sur le moment ou prédiction."],
-  [/\b(did|didn't)\b/, "did / didn't + base verbale : question ou négation au passé."],
-  [
-    /\b(do|does|don't|doesn't)\b/,
-    "do / does : auxiliaire des questions et des négations au présent ; le verbe reste à la base verbale.",
-  ],
-  [/\b(would like|'d like)\b/, "would like : la manière polie de dire « want »."],
-  [
-    /\b(can|can't|could|should|shouldn't|must|may|might|would)\b/,
-    "Après un modal (can, should, must, would…), le verbe reste à la base verbale, sans « to ».",
-  ],
-  [
-    /\b(more|less)\s+\w+\s+than\b|\b\w+er\s+than\b/,
-    "Comparatif : adjectif court + -er, adjectif long avec more, puis than.",
-  ],
-  [
-    /\bthere\s+(is|are|was|were|isn't|aren't)\b|\bthere's\b/,
-    "there is / there are : « il y a », accordé avec le nom qui suit.",
-  ],
-  [/\b\w+(ed)\b/, "Au prétérit, les verbes réguliers prennent -ed ; les irréguliers s'apprennent par cœur."],
-];
-const FR = [
-  [
-    /\b(ne|n['’])\s?\S+(\s\S+)?\s(pas|jamais|plus|rien)\b/,
-    "Négation : ne + verbe + pas (ne devient n' devant une voyelle).",
-  ],
-  [
-    /\b(ai|as|a|avons|avez|ont|suis|es|est|sommes|êtes|sont)\s+(\S+\s)?\S+(é|ée|és|ées|is|it|ert|u|ue|us)\b/,
-    "Passé composé : avoir ou être au présent + participe passé.",
-  ],
-  [/\b(vais|vas|va|allons|allez|vont)\s+\S+(er|ir|re)\b/, "Futur proche : aller au présent + infinitif."],
-  [/est-ce qu|qu['’]est-ce/, "est-ce que transforme une phrase en question sans changer l'ordre des mots."],
-  [/\bil y a\b/, "il y a : expression invariable pour dire qu'une chose existe ou se trouve là."],
-  [/\b(au|aux)\b/, "au = à + le ; aux = à + les."],
-  [/\b(du|de la|de l['’])\s?\S+/, "du, de la, de l' : article partitif, pour une quantité qu'on ne compte pas."],
-  [
-    /\b(me|te|se|nous|vous)\s+\S+(e|es|ons|ez|ent)\b|\bs['’]\S+/,
-    "Verbe pronominal : le pronom (me, te, se…) se place avant le verbe.",
-  ],
-];
-const KO_END = [
-  [/고 싶/, "-고 싶어요 : « vouloir » faire quelque chose."],
-  [/주세요[.?!]?$/, "주세요 : « s'il vous plaît », pour demander quelque chose ou un service."],
-  [/(으)?세요[.?!]?$/, "-(으)세요 : demande polie ou marque de respect envers la personne."],
-  [/[았었했였](어요|습니다)/, "-았/었어요 : le verbe est au passé."],
-  [/(을|ㄹ|를)? ?거예요[.?!]?$/, "-(으)ㄹ 거예요 : futur ou intention."],
-  [/지 않|(^| )안 /, "안 + verbe, ou verbe + -지 않아요 : la négation."],
-  [/(있어요|없어요)[.?!]?$/, "있어요 = il y a, avoir ; 없어요 = il n'y a pas, ne pas avoir."],
-  [/니까\?$/, "-(스)ㅂ니까 ? : question en style formel."],
-  [/니다[.!]?$/, "-(스)ㅂ니다 : style formel poli (travail, annonces, inconnus)."],
-  [/요[.?!]?$/, "La terminaison -요 est le style poli de tous les jours."],
-];
-const KO_PART = [
-  [/^.+에서$/, "에서 indique le lieu où se passe l'action, ou le point de départ."],
-  [/^.+[은는]$/, "은/는 marque le thème : ce dont on parle."],
-  [/^.+[을를]$/, "을/를 marque le complément d'objet du verbe."],
-  [/^.+에$/, "에 indique le lieu où l'on va, ou le moment."],
-  [/^.+[이가]$/, "이/가 marque le sujet du verbe."],
-];
-function grammarNotes(T, lang) {
-  const out = [];
-  if (!T) return out;
-  if (lang.startsWith("ko")) {
-    const toks = T.replace(/[.?!,]/g, "")
-      .split(" ")
-      .filter(Boolean);
-    for (const [re, txt] of KO_PART) {
-      const w = toks.slice(0, -1).find(x => x.length > 1 && re.test(x));
-      if (w) out.push(`<span class="notr" lang="ko">${esc(w)}</span> : <span>${txt}</span>`);
-      if (out.length === 1) break;
-    }
-    const e = KO_END.find(([re]) => re.test(T));
-    if (e) out.push(esc(e[1]));
-    if (!out.length && toks.length >= 2) out.push("En coréen, le verbe se place à la fin de la phrase.");
-  } else {
-    const low = T.toLowerCase().replace(/[’]/g, "'");
-    for (const [re, txt] of lang.startsWith("en") ? EN : FR) {
-      if (re.test(low)) out.push(esc(txt));
-      if (out.length === 2) break;
-    }
+// Repères de grammaire : src/features/grammar-notes.js (v38.2, testés sur toutes les phrases des cours).
+
+// ---- v38.2 : explication propre à la phrase (champ « pe » des unités : phrase cible → note) ----
+const keyOf = s =>
+  String(s || "")
+    .toLowerCase()
+    .replace(/[’]/g, "'")
+    .replace(/[.,!?;:¡¿"«»“”…]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+const PE = new Map();
+function peIndex(cid) {
+  if (PE.has(cid)) return PE.get(cid);
+  const m = new Map(),
+    C = COURSES[cid];
+  if (C)
+    C.units.forEach((U, u) => {
+      if (!U.pe) return;
+      const ko = String(C.lang).startsWith("ko");
+      (U.p || []).forEach(p => {
+        const note = U.pe[p[1]];
+        if (!note) return;
+        // variantes acceptées (en coréen, la 3e case est la romanisation)
+        [p[1], ...p.slice(ko ? 3 : 2)].forEach(t => m.set(keyOf(t), { note, u }));
+      });
+    });
+  PE.set(cid, m);
+  return m;
+}
+/** Note de la phrase étudiée (ou de sa traduction), si le cours en a une. */
+export function phraseNote(ex, res, cid) {
+  const m = peIndex(cid);
+  if (!m.size) return null;
+  for (const t of [targetOf(ex, res), ex.answer, ex.prompt, res && res.speak, res && res.sol]) {
+    const hit = t && m.get(keyOf(t));
+    if (hit) return hit;
   }
-  return out;
+  return null;
 }
 /** Mots de l'unité (ou du cours) présents dans la phrase : « mot = traduction ». */
 function keyWords(T, cid, lang) {
@@ -138,12 +88,17 @@ function keyWords(T, cid, lang) {
   );
   return hits.sort((a, b) => b[0].length - a[0].length).slice(0, 3);
 }
+/** Astuce de l'unité d'où vient la phrase (pas celle de la leçon en cours : une révision mêle les unités),
+ * seulement si elle cite un mot ou une tournure de la phrase. */
 function unitTip(T, cid, u) {
   const C = COURSES[cid];
-  if (!C) return "";
-  let U = u != null ? C.units[u] : null;
-  if (!U && T) U = C.units.find(x => (x.p || []).some(p => p[1] === T) || (x.dd || []).includes(T));
-  return (U && U.tip) || "";
+  if (!C || !T) return "";
+  const k = keyOf(T);
+  let U = C.units.find(
+    x => (x.p || []).some(p => p.some(t => keyOf(t) === k)) || (x.dd || []).some(t => keyOf(t) === k),
+  );
+  if (!U && u != null) U = C.units[u];
+  return U && U.tip && tipFits(U.tip, T, C.lang) ? U.tip : "";
 }
 /** Bloc « À savoir » du pied de page (HTML), ou "" s'il n'y a rien d'utile à dire. */
 export function explainHtml(ex, res, L) {
@@ -155,6 +110,9 @@ export function explainHtml(ex, res, L) {
   const exps = res.exps && res.exps.length ? res.exps : res.exp ? [res.exp] : [];
   // l'explication de l'exercice vient du cours : elle est déjà dans la langue de l'interface
   [...new Set(exps)].slice(0, 3).forEach(e => items.push(`<span class="notr">${esc(e)}</span>`));
+  // explication écrite pour cette phrase : la plus utile, elle passe avant les repères automatiques
+  const pn = C && phraseNote(ex, res, cid);
+  if (pn && items.length < 3 && !exps.includes(pn.note)) items.push(`<span class="notr">${esc(pn.note)}</span>`);
   if (!items.length && ex._sub) items.push(`<span>Règle travaillée :</span> <b>${esc(drillLabel(ex._sub))}</b>`);
   if (C && C.kind !== "volt" && items.length < 2) grammarNotes(T, lang).forEach(n => items.length < 3 && items.push(n));
   if (C && C.kind !== "volt") {
@@ -165,7 +123,7 @@ export function explainHtml(ex, res, L) {
       );
   }
   if (!items.length) {
-    const tip = unitTip(T, cid, L && L.mode === "lesson" ? L.u : null);
+    const tip = unitTip(T, cid, ex._u != null ? ex._u : null);
     if (tip) items.push(`<span>Astuce de l'unité :</span> <span class="notr">${esc(tip)}</span>`);
   }
   const ai = T && AI.mode && AI.mode !== "local" && ex.t !== "write";
