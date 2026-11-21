@@ -82,6 +82,9 @@ export function trNode(n) {
   if (!s || !/\p{L}/u.test(s)) return;
   const p = n.parentElement;
   if (!p || TR_SKIP.has(p.tagName) || p.closest(".notr")) return;
+  // texte marqué dans une autre langue que l'interface (contenu étudié : mot français, phrase coréenne…) : jamais traduit
+  const lg = p.closest("[lang]");
+  if (lg && lg !== document.documentElement && !String(lg.getAttribute("lang")).toLowerCase().startsWith(UI)) return;
   const t = trText(s);
   if (t !== s) n.nodeValue = t;
 }

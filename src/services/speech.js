@@ -143,7 +143,9 @@ export function ttsCheck(lang) {
 export function speakParts(text, lang) {
   text = cleanSpeak(text);
   if (!text) return [];
-  if (lang.startsWith("en") && text === "I") return [["eye", lang]]; // « I » isolé : certaines voix épellent « capital I »
+  if (lang.startsWith("en") && /^I[.,!?;:]*$/.test(text)) return [["eye", lang]]; // « I » isolé : certaines voix épellent « capital I »
+  // Lettre majuscule seule (tuile « A », « À »…) : iOS lit « capital A » / « A majuscule », on la lit en minuscule
+  if (/^\p{Lu}[.,!?;:]*$/u.test(text) && !lang.startsWith("ko")) return [[text.toLowerCase(), lang]];
   if (
     !lang.startsWith("ko") ||
     BASE_LANG.startsWith("ko") ||

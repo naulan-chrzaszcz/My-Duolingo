@@ -272,7 +272,7 @@ export function wordPop(sp, it, lang, sec) {
     hl = has(it.t);
   const p = document.createElement("div");
   p.className = "wpop";
-  p.innerHTML = `<div class="wph"><b lang="${lang}">${esc(w)}</b><button class="spk" data-a="n" aria-label="Écouter">🔊</button><button class="spk" data-a="s" style="background:#8FB9FF" aria-label="Lentement">🐢</button></div><div class="wtr" data-id="${hw ? hw.id : ""}">${hw && hw.tr ? esc(hw.tr) : ""}</div>
+  p.innerHTML = `<div class="wph"><b class="notr" lang="${lang}">${esc(w)}</b><button class="spk" data-a="n" aria-label="Écouter">🔊</button><button class="spk" data-a="s" style="background:#8FB9FF" aria-label="Lentement">🐢</button></div><div class="wtr" data-id="${hw ? hw.id : ""}">${hw && hw.tr ? esc(hw.tr) : ""}</div>
   <button class="btn okb" data-a="add" ${hw ? "disabled" : ""}>${hw ? "✓ Déjà dans mes mots" : "📌 À réviser plus tard"}</button>${it.t.trim() !== w ? `<button class="btn ghost" data-a="line" ${hl ? "disabled" : ""}>${hl ? "✓ Phrase enregistrée" : "📌 Toute la phrase"}</button>` : ""}`;
   document.body.appendChild(p);
   const r = sp.getBoundingClientRect(),
@@ -396,7 +396,7 @@ export function playStory(sec, st) {
       d.innerHTML = `<div class="sqq">❓ ${esc(it.q)}</div><div class="opts">${shuffle(it.o.map((o, k) => [o, k]))
         .map(
           ([o, k], j) =>
-            `<button class="opt" data-k="${k}"><span class="k">${j + 1}</span><span>${esc(o)}</span></button>`,
+            `<button class="opt" data-k="${k}"><span class="k">${j + 1}</span><span class="notr">${esc(o)}</span></button>`,
         )
         .join("")}</div>`;
       box.appendChild(d);

@@ -260,7 +260,7 @@ export function check(giveUp) {
         if (L) result(r);
       })
       .catch(() => {
-        if (L) result({ ok: false, title: "Correction impossible", sol: "Réessaie plus tard." });
+        if (L) result({ ok: false, title: "Correction impossible", solHtml: "Réessaie plus tard." });
       });
     return;
   }
@@ -328,7 +328,7 @@ export function result(res) {
   if (L.mode === "sprint") {
     const f = $("#lfoot");
     f.className = "lfoot " + (res.ok ? "ok" : "bad");
-    f.innerHTML = `<div class="fin"><div class="fhead"><div class="fic">${res.ok ? "✓" : "✕"}</div><div class="ftxt"><h3>${res.ok ? rnd(PRAISE) : "Raté"}</h3>${res.ok ? "" : `<div class="fsol">${res.solHtml || esc(res.sol)}</div>`}</div></div></div>`;
+    f.innerHTML = `<div class="fin"><div class="fhead"><div class="fic">${res.ok ? "✓" : "✕"}</div><div class="ftxt"><h3>${res.ok ? rnd(PRAISE) : "Raté"}</h3>${res.ok ? "" : `<div class="fsol">${res.solHtml || `<span class="notr">${esc(res.sol)}</span>`}</div>`}</div></div></div>`;
     if (res.ok) okFx();
     if (S.set.auto && res.speak) say(res.speak, res.lang);
     setTimeout(
@@ -346,7 +346,8 @@ export function result(res) {
       ? "Attention à la faute de frappe :"
       : res.title || rnd(PRAISE)
     : res.title || "Réponse correcte :";
-  const sol = res.solHtml || (res.sol ? esc(res.sol) : "");
+  // la solution est dans la langue étudiée : protégée du traducteur de l'interface
+  const sol = res.solHtml || (res.sol ? `<span class="notr">${esc(res.sol)}</span>` : "");
   f.innerHTML = `<div class="fin"><div class="fhead"><div class="fic">${res.ok ? "✓" : "✕"}</div><div class="ftxt"><h3>${title}</h3>${sol ? `<div class="fsol">${res.ok && !res.typo && !res.solHtml ? "🔊 " : ""}${sol}</div>` : ""}${res.rom ? `<div class="rom">${esc(res.rom)}</div>` : ""}${res.diff || ""}</div>${res.speak ? `<div class="faud"><button class="iconbtn" id="fa1" aria-label="Écouter">🔊</button><button class="iconbtn" id="fa2" aria-label="Écouter lentement">🐢</button></div>` : ""}</div>${explainHtml(ex, res, L)}<button class="btn ${res.ok ? "okb" : "badb"}" id="cont">Continuer</button></div>`;
   bindExplain(ex, res, given, L);
   if (res.ok) okFx();

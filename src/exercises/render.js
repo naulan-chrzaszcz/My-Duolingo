@@ -25,6 +25,8 @@ import { p1Svg, picSvg } from "../ui/pics.ts";
 
 // ===================== TYPES D'EXERCICES =====================
 export const R = {};
+// Contenu dans la langue étudiée : jamais passé au traducteur de l'interface (« demain » resterait sinon « tomorrow »)
+export const nt = s => `<span class="notr">${esc(s)}</span>`;
 export const bubble = (html, mood = "happy") =>
   `<div class="prompt">${mascot(mood)}<div class="bubble">${html}</div></div>`;
 export function wireSay(root, text, lang) {
@@ -46,7 +48,7 @@ export function markOpts(b, right, sel) {
   });
 }
 R.mc = (ex, b) => {
-  b.innerHTML = `<h2 class="ltitle">${ex.w ? "Comment dit-on ce mot ?" : "Choisis la bonne traduction"}</h2>${bubble(`« ${esc(ex.prompt)} »`)}<div class="opts">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${i + 1}</span><span>${esc(o)}</span></button>`).join("")}</div>`;
+  b.innerHTML = `<h2 class="ltitle">${ex.w ? "Comment dit-on ce mot ?" : "Choisis la bonne traduction"}</h2>${bubble(`« ${nt(ex.prompt)} »`)}<div class="opts">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${i + 1}</span><span class="notr">${esc(o)}</span></button>`).join("")}</div>`;
   let sel = -1;
   const os = b.querySelectorAll(".opt");
   os.forEach(
@@ -72,7 +74,7 @@ R.mc = (ex, b) => {
 R.tiles = (ex, b) => {
   const rev = ex.t === "tilesRev",
     lis = ex.t === "listenTiles";
-  b.innerHTML = `<h2 class="ltitle">${lis ? "Écris ce que tu entends" : "Traduis cette phrase"}</h2>${lis ? audioBig() : bubble(rev ? `<button class="spk" data-say="n" aria-label="Écouter">🔊</button>${esc(ex.tgtText)}` : esc(ex.prompt))}<div class="answer" id="ans"></div><div class="bank" id="bank">${ex.tiles.map((w, i) => `<button class="tile" data-i="${i}">${esc(w)}</button>`).join("")}</div>`;
+  b.innerHTML = `<h2 class="ltitle">${lis ? "Écris ce que tu entends" : "Traduis cette phrase"}</h2>${lis ? audioBig() : bubble(rev ? `<button class="spk" data-say="n" aria-label="Écouter">🔊</button>${nt(ex.tgtText)}` : nt(ex.prompt))}<div class="answer" id="ans"></div><div class="bank" id="bank">${ex.tiles.map((w, i) => `<button class="tile notr" data-i="${i}">${esc(w)}</button>`).join("")}</div>`;
   const audioText = rev ? ex.tgtText : ex.audio;
   wireSay(b, audioText, ex.lang);
   if (lis || rev) say(audioText, ex.lang);
@@ -80,7 +82,7 @@ R.tiles = (ex, b) => {
     ans = b.querySelector("#ans"),
     bank = b.querySelector("#bank");
   const draw = () => {
-    ans.innerHTML = sel.map((i, k) => `<button class="tile" data-k="${k}">${esc(ex.tiles[i])}</button>`).join("");
+    ans.innerHTML = sel.map((i, k) => `<button class="tile notr" data-k="${k}">${esc(ex.tiles[i])}</button>`).join("");
     bank.querySelectorAll(".tile").forEach(t => t.classList.toggle("used", sel.includes(+t.dataset.i)));
     ans.querySelectorAll(".tile").forEach(
       t =>
@@ -121,7 +123,7 @@ R.tiles = (ex, b) => {
         rom: rev ? "" : ex.rom,
         speak: rev ? ex.tgtText : ex.answer,
         lang: ex.lang,
-        solHtml: rev ? `${esc(ex.answer)}<div class="rom">🔊 ${esc(ex.tgtText)}</div>` : "",
+        solHtml: rev ? `${nt(ex.answer)}<div class="rom">🔊 ${nt(ex.tgtText)}</div>` : "",
       };
     },
   };
@@ -132,7 +134,7 @@ export const FR_CHARS = ["é", "è", "ê", "à", "â", "ç", "ù", "û", "î", "
 R.type = (ex, b) => {
   const lis = ex.t !== "type";
   const ko = ex.lang.startsWith("ko");
-  b.innerHTML = `<h2 class="ltitle">${ex.t === "dictee" ? "Dictée : écris la phrase sans aucune faute" : ex.t === "listen" ? "Écris ce que tu entends" : "Traduis cette phrase"}</h2>${lis ? audioBig() : bubble(esc(ex.prompt))}<textarea class="tin" id="tin" enterkeyhint="done" lang="${ex.lang}" placeholder="${ko ? "한국어로 입력하세요" : ex.lang.startsWith("fr") ? "Écris en français…" : "Type in English…"}" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"></textarea>${ex.lang.startsWith("fr") ? `<div class="charbar">${FR_CHARS.map(c => `<button data-ch="${c}">${c}</button>`).join("")}</div>` : ""}`;
+  b.innerHTML = `<h2 class="ltitle">${ex.t === "dictee" ? "Dictée : écris la phrase sans aucune faute" : ex.t === "listen" ? "Écris ce que tu entends" : "Traduis cette phrase"}</h2>${lis ? audioBig() : bubble(nt(ex.prompt))}<textarea class="tin" id="tin" enterkeyhint="done" lang="${ex.lang}" placeholder="${ko ? "한국어로 입력하세요" : ex.lang.startsWith("fr") ? "Écris en français…" : "Type in English…"}" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"></textarea>${ex.lang.startsWith("fr") ? `<div class="charbar">${FR_CHARS.map(c => `<button data-ch="${c}">${c}</button>`).join("")}</div>` : ""}`;
   const audioText = ex.audio;
   if (lis) {
     wireSay(b, audioText, ex.lang);
@@ -188,7 +190,7 @@ R.choice = (ex, b) => {
           : "Complète la phrase";
   const hasBlank = ex.q.includes("___");
   const qh = hasBlank ? esc(ex.q).replace("___", '<span class="blank" id="blk">_____</span>') : esc(ex.q);
-  b.innerHTML = `<h2 class="ltitle">${title}</h2><div class="qcard">${qh}</div><div class="opts">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${"ABCD"[i]}</span><span>${esc(o)}</span></button>`).join("")}</div>`;
+  b.innerHTML = `<h2 class="ltitle">${title}</h2><div class="qcard notr">${qh}</div><div class="opts">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${"ABCD"[i]}</span><span class="notr">${esc(o)}</span></button>`).join("")}</div>`;
   let sel = -1;
   const os = b.querySelectorAll(".opt");
   os.forEach(
@@ -220,7 +222,7 @@ R.fill = (ex, b) => {
   const fr = ex.lang.startsWith("fr"),
     ko = ex.lang.startsWith("ko");
   const qh = esc(ex.q).replace("___", '<span class="blank" id="blk">_____</span>');
-  b.innerHTML = `<h2 class="ltitle">Écris le mot qui manque</h2><div class="qcard">${qh}</div>${ex.hint ? `<p class="fhint">Indice : <b lang="${ex.lang}">${esc(ex.hint)}</b></p>` : ""}<input class="finput fillin" id="tin" lang="${ex.lang}" enterkeyhint="done" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="${ko ? "한국어로 입력하세요" : fr ? "Écris en français…" : "Type in English…"}">${fr ? `<div class="charbar">${FR_CHARS.map(c => `<button data-ch="${c}">${c}</button>`).join("")}</div>` : ""}`;
+  b.innerHTML = `<h2 class="ltitle">Écris le mot qui manque</h2><div class="qcard notr">${qh}</div>${ex.hint ? `<p class="fhint">Indice : <b class="notr" lang="${ex.lang}">${esc(ex.hint)}</b></p>` : ""}<input class="finput fillin" id="tin" lang="${ex.lang}" enterkeyhint="done" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="${ko ? "한국어로 입력하세요" : fr ? "Écris en français…" : "Type in English…"}">${fr ? `<div class="charbar">${FR_CHARS.map(c => `<button data-ch="${c}">${c}</button>`).join("")}</div>` : ""}`;
   const tin = b.querySelector("#tin"),
     blk = b.querySelector("#blk");
   const upd = () => {
@@ -279,7 +281,9 @@ R.fill = (ex, b) => {
         given: v,
         sol: full,
         solHtml:
-          ok && !typo ? "" : `<b>${esc(ex.answer)}</b><div class="rom" style="font-style:normal">${esc(full)}</div>`,
+          ok && !typo
+            ? ""
+            : `<b class="notr">${esc(ex.answer)}</b><div class="rom notr" style="font-style:normal">${esc(full)}</div>`,
         exp: ex.e,
         speak: full,
         lang: ex.lang,
@@ -288,7 +292,7 @@ R.fill = (ex, b) => {
   };
 };
 R.part2 = (ex, b) => {
-  b.innerHTML = `<h2 class="ltitle">Part 2 — Écoute la question et choisis la meilleure réponse</h2>${audioBig()}<div class="opts">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${"ABC"[i]}</span><span>${ex.hidden ? "Réponse " + "ABC"[i] : esc(o)}</span><span class="spk" data-o="${i}" role="button" aria-label="Écouter">🔊</span></button>`).join("")}</div>${ex.hidden ? '<p class="micnote" style="margin-top:14px">Niveau avancé : comme au vrai TOEIC, les réponses ne sont qu\'audio. Touche 🔊 pour les écouter.</p>' : ""}`;
+  b.innerHTML = `<h2 class="ltitle">Part 2 — Écoute la question et choisis la meilleure réponse</h2>${audioBig()}<div class="opts">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${"ABC"[i]}</span><span>${ex.hidden ? "Réponse " + "ABC"[i] : nt(o)}</span><span class="spk" data-o="${i}" role="button" aria-label="Écouter">🔊</span></button>`).join("")}</div>${ex.hidden ? '<p class="micnote" style="margin-top:14px">Niveau avancé : comme au vrai TOEIC, les réponses ne sont qu\'audio. Touche 🔊 pour les écouter.</p>' : ""}`;
   wireSay(b, ex.q, ex.lang);
   say(ex.q, ex.lang);
   let sel = -1;
@@ -319,7 +323,7 @@ R.part2 = (ex, b) => {
       if (ex.hidden) os.forEach((o, i) => (o.children[1].textContent = ex.options[i]));
       return {
         ok,
-        solHtml: `Q : ${esc(ex.q)}<br>R : ${esc(ex.answer)}`,
+        solHtml: `Q : ${nt(ex.q)}<br>R : ${nt(ex.answer)}`,
         speak: ex.q,
         speak2: ex.answer,
         lang: ex.lang,
@@ -372,10 +376,10 @@ R.conv = (ex, b) => {
     ex.g
       ? `<div class="qcard graphic">${ex.g
           .split("\n")
-          .map((r, i) => (i ? `<div>${esc(r)}</div>` : `<b>${esc(r)}</b>`))
+          .map((r, i) => (i ? `<div class="notr">${esc(r)}</div>` : `<b class="notr">${esc(r)}</b>`))
           .join("")}</div>`
       : ""
-  }<div class="qcard" style="font-size:18px">${esc(ex.q)}</div><div class="opts">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${"ABCD"[i]}</span><span>${esc(o)}</span></button>`).join("")}</div>`;
+  }<div class="qcard notr" style="font-size:18px">${esc(ex.q)}</div><div class="opts">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${"ABCD"[i]}</span><span class="notr">${esc(o)}</span></button>`).join("")}</div>`;
   b.querySelector("#dn").onclick = () => sayDialog(ex.d, ex.lang);
   b.querySelector("#ds").onclick = () => sayDialog(ex.d, ex.lang, true);
   sayDialog(ex.d, ex.lang);
@@ -396,11 +400,11 @@ R.conv = (ex, b) => {
     grade: give => {
       const ok = !give && ex.options[sel] === ex.answer;
       markOpts(b, ex.options.indexOf(ex.answer), sel);
-      const tr = ex.d.map(([w, t]) => `<b>${w === "N" ? "" : w === "M" ? "👨 " : "👩 "}</b>${esc(t)}`).join("<br>");
+      const tr = ex.d.map(([w, t]) => `<b>${w === "N" ? "" : w === "M" ? "👨 " : "👩 "}</b>${nt(t)}`).join("<br>");
       return {
         ok,
         title: ok ? undefined : "Réponse correcte :",
-        solHtml: `${esc(ex.answer)}<details style="margin-top:6px;color:var(--ink);font-size:14px"><summary style="cursor:pointer">📜 Voir la transcription</summary>${tr}</details>`,
+        solHtml: `${nt(ex.answer)}<details style="margin-top:6px;color:var(--ink);font-size:14px"><summary style="cursor:pointer">📜 Voir la transcription</summary>${tr}</details>`,
         exp: ex.e,
         speak: ex.answer,
         lang: ex.lang,
@@ -409,7 +413,7 @@ R.conv = (ex, b) => {
   };
 };
 R.read = (ex, b) => {
-  b.innerHTML = `<h2 class="ltitle">Part 7 — Lis le document et réponds</h2><div class="qcard passage">${esc(ex.x).replace(/\n/g, "<br>")}</div><div class="qcard" style="font-size:18px;background:var(--card)">${esc(ex.q)}</div><div class="opts">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${"ABCD"[i]}</span><span>${esc(o)}</span></button>`).join("")}</div>`;
+  b.innerHTML = `<h2 class="ltitle">Part 7 — Lis le document et réponds</h2><div class="qcard passage notr">${esc(ex.x).replace(/\n/g, "<br>")}</div><div class="qcard notr" style="font-size:18px;background:var(--card)">${esc(ex.q)}</div><div class="opts">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${"ABCD"[i]}</span><span class="notr">${esc(o)}</span></button>`).join("")}</div>`;
   let sel = -1;
   const os = b.querySelectorAll(".opt");
   os.forEach(
@@ -437,7 +441,7 @@ R.spot = (ex, b) => {
   const parts = ex.parts || [ex];
   const multi = parts.length > 1;
   const key = (pi, k) => (multi ? pi + ":" + k : k);
-  const w = (x, k) => `<button class="spotw" data-k="${k}">${esc(x)}</button>`;
+  const w = (x, k) => `<button class="spotw notr" data-k="${k}">${esc(x)}</button>`;
   const line = (p, pi) =>
     `${toks(p.before)
       .map((x, i) => w(x, key(pi, "b" + i)))
@@ -496,10 +500,10 @@ R.spot = (ex, b) => {
           ? bad
               .map(
                 p =>
-                  `<div><s>${esc(p.chunk)}</s> → <b>${esc(p.right)}</b><div class="rom" style="font-style:normal">${esc(full(p))}</div></div>`,
+                  `<div class="notr"><s>${esc(p.chunk)}</s> → <b>${esc(p.right)}</b><div class="rom" style="font-style:normal">${esc(full(p))}</div></div>`,
               )
               .join("")
-          : esc(parts.map(full).join(" ")),
+          : nt(parts.map(full).join(" ")),
         exp: (bad.length ? bad : parts)[0].e,
         exps: (bad.length ? bad : parts).map(p => p.e).filter(Boolean),
         speak: parts.map(full).join(" "),
@@ -511,7 +515,7 @@ R.spot = (ex, b) => {
 R.photo = (ex, b) => {
   // v30 : chaque scène a son dessin ; la photo réelle reste prioritaire, le dessin la remplace hors ligne
   const art = p1Svg(ex.answer);
-  const fallback = art ? `<div class="scenebox">${art}</div>` : `<div class="scene">${esc(ex.scene)}</div>`;
+  const fallback = art ? `<div class="scenebox">${art}</div>` : `<div class="scene notr">${esc(ex.scene)}</div>`;
   b.innerHTML = `<h2 class="ltitle">Part 1 — Quelle phrase décrit le mieux la ${ex.img ? "photo" : "scène"} ?</h2>${ex.img ? `<figure class="pscene"><img src="${PH_IMG(ex.img)}" alt="" decoding="async"><figcaption>Photo · Unsplash</figcaption></figure>` : fallback}<div class="opts">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${"ABCD"[i]}</span><span>${ex.hidden ? "Affirmation " + "ABCD"[i] : esc(o)}</span><span class="spk" data-o="${i}" role="button" aria-label="Écouter">🔊</span></button>`).join("")}</div>${ex.hidden ? '<p class="micnote" style="margin-top:12px">Comme au vrai TOEIC, les affirmations ne sont qu\'audio : touche 🔊 pour les écouter.</p>' : ""}`;
   const im = b.querySelector(".pscene img");
   if (im)
@@ -556,7 +560,7 @@ R.photo = (ex, b) => {
 };
 // v30 : « Choisis la bonne image » (pic) et « Quel mot correspond à l'image ? » (picw)
 R.pic = (ex, b) => {
-  const word = `<button class="spk" data-say="n" aria-label="Écouter">🔊</button><span lang="${ex.lang}">${esc(ex.word)}</span>${ex.rom ? `<div class="rom">${esc(ex.rom)}</div>` : ""}`;
+  const word = `<button class="spk" data-say="n" aria-label="Écouter">🔊</button><span class="notr" lang="${ex.lang}">${esc(ex.word)}</span>${ex.rom ? `<div class="rom">${esc(ex.rom)}</div>` : ""}`;
   b.innerHTML = `<h2 class="ltitle">Choisis la bonne image</h2>${bubble(word)}<div class="opts picgrid">${ex.options.map((o, i) => `<button class="opt picopt" data-i="${i}" aria-label="${i + 1}"><span class="k">${i + 1}</span>${picSvg(o)}</button>`).join("")}</div>`;
   wireSay(b, ex.word, ex.lang);
   say(ex.word, ex.lang);
@@ -582,7 +586,7 @@ R.pic = (ex, b) => {
   };
 };
 R.picw = (ex, b) => {
-  b.innerHTML = `<h2 class="ltitle">Quel mot correspond à l'image ?</h2><div class="picbig">${picSvg(ex.id)}</div><div class="opts optgrid">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${i + 1}</span><span lang="${ex.lang}">${esc(o)}</span></button>`).join("")}</div>`;
+  b.innerHTML = `<h2 class="ltitle">Quel mot correspond à l'image ?</h2><div class="picbig">${picSvg(ex.id)}</div><div class="opts optgrid">${ex.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${i + 1}</span><span class="notr" lang="${ex.lang}">${esc(o)}</span></button>`).join("")}</div>`;
   let sel = -1;
   const os = b.querySelectorAll(".opt");
   os.forEach(
@@ -606,7 +610,7 @@ R.picw = (ex, b) => {
   };
 };
 R.hg = (ex, b) => {
-  b.innerHTML = `<h2 class="ltitle">${esc(ex.title)}</h2>${ex.big ? `<div class="hgbig">${esc(ex.big)}</div>${ex.sub ? `<p class="micnote" style="margin:-6px 0 16px">${esc(ex.sub)}</p>` : ""}` : audioBig()}<div class="opts ${ex.letters ? "optgrid" : ""}">${ex.options.map((o, i) => `<button class="opt ${ex.letters ? "hgopt" : ""}" data-i="${i}"><span class="k">${i + 1}</span><span>${esc(o)}</span></button>`).join("")}</div>`;
+  b.innerHTML = `<h2 class="ltitle">${esc(ex.title)}</h2>${ex.big ? `<div class="hgbig">${esc(ex.big)}</div>${ex.sub ? `<p class="micnote" style="margin:-6px 0 16px">${esc(ex.sub)}</p>` : ""}` : audioBig()}<div class="opts ${ex.letters ? "optgrid" : ""}">${ex.options.map((o, i) => `<button class="opt ${ex.letters ? "hgopt" : ""}" data-i="${i}"><span class="k">${i + 1}</span><span class="notr">${esc(o)}</span></button>`).join("")}</div>`;
   if (!ex.big) {
     wireSay(b, ex.auto, ex.lang);
     say(ex.auto, ex.lang);
@@ -724,7 +728,7 @@ R.write = (ex, b) => {
         return {
           ok,
           title: ok ? undefined : "À retravailler :",
-          sol: `${good} / ${ex.items.length} mots corrects`,
+          solHtml: `${good} / ${ex.items.length} mots corrects`,
           speak: ex.items.map(x => x.ko).join(", "),
           lang: ex.lang,
         };
@@ -765,7 +769,7 @@ R.write = (ex, b) => {
         return {
           ok: sc >= 60,
           title: sc >= 60 ? undefined : "Presque !",
-          sol: `Note : ${sc}/100`,
+          solHtml: `Note : ${sc}/100`,
           speak: ex.model,
           lang: ex.lang,
         };
@@ -812,7 +816,7 @@ R.write = (ex, b) => {
 R.match = (ex, b) => {
   const left = shuffle(ex.pairs.map((p, i) => ({ i, t: p[0] }))),
     right = shuffle(ex.pairs.map((p, i) => ({ i, t: p[1] })));
-  b.innerHTML = `<h2 class="ltitle">Associe les paires</h2><div class="match"><div class="mcol">${left.map(x => `<button class="mt" data-s="l" data-i="${x.i}">${esc(x.t)}</button>`).join("")}</div><div class="mcol">${right.map(x => `<button class="mt" data-s="r" data-i="${x.i}">${esc(x.t)}</button>`).join("")}</div></div>`;
+  b.innerHTML = `<h2 class="ltitle">Associe les paires</h2><div class="match"><div class="mcol">${left.map(x => `<button class="mt notr" data-s="l" data-i="${x.i}">${esc(x.t)}</button>`).join("")}</div><div class="mcol">${right.map(x => `<button class="mt notr" data-s="r" data-i="${x.i}">${esc(x.t)}</button>`).join("")}</div></div>`;
   let sL = null,
     sR = null,
     done = 0,
@@ -862,7 +866,7 @@ R.match = (ex, b) => {
       ok: !give,
       title: "Toutes les paires :",
       solHtml: give
-        ? ex.pairs.map(p => `${esc(p[0])} = ${esc(p[1])}`).join("<br>")
+        ? ex.pairs.map(p => `${nt(p[0])} = ${nt(p[1])}`).join("<br>")
         : miss
           ? `${miss} erreur(s) d'association`
           : "Sans erreur !",
@@ -872,7 +876,7 @@ R.match = (ex, b) => {
 };
 R.speak = (ex, b) => {
   const ko = ex.lang.startsWith("ko");
-  b.innerHTML = `<h2 class="ltitle">Lis cette phrase à voix haute</h2>${bubble(`<button class="spk" data-say="n" aria-label="Écouter">🔊</button><button class="spk" data-say="s" aria-label="Lentement" style="background:#8FB9FF">🐢</button><br><span class="heard" id="tgtw">${tokensHtml(ex.text, ex.lang, null)}</span>${ex.rom ? `<div class="rom">${esc(ex.rom)}</div>` : ""}<div class="rom" style="font-style:normal">${esc(ex.prompt)}</div>`)}<div class="mic">${SR ? `<button class="micbtn" id="micb">🎙️ Appuie pour parler</button>` : ""}<div class="micnote" id="micst">${SR ? "Écoute d'abord le modèle 🔊, puis appuie et lis la phrase." : dictHint(ex.lang)}</div>
+  b.innerHTML = `<h2 class="ltitle">Lis cette phrase à voix haute</h2>${bubble(`<button class="spk" data-say="n" aria-label="Écouter">🔊</button><button class="spk" data-say="s" aria-label="Lentement" style="background:#8FB9FF">🐢</button><br><span class="heard notr" id="tgtw">${tokensHtml(ex.text, ex.lang, null)}</span>${ex.rom ? `<div class="rom">${esc(ex.rom)}</div>` : ""}<div class="rom" style="font-style:normal">${esc(ex.prompt)}</div>`)}<div class="mic">${SR ? `<button class="micbtn" id="micb">🎙️ Appuie pour parler</button>` : ""}<div class="micnote" id="micst">${SR ? "Écoute d'abord le modèle 🔊, puis appuie et lis la phrase." : dictHint(ex.lang)}</div>
  <div class="dict ${SR ? "hidden" : ""}" id="dictb"><input class="finput" id="dictin" lang="${ex.lang}" placeholder="🎤 Dicte ici avec le micro du clavier" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"><button class="btn" id="dictok">Vérifier ma prononciation</button></div></div>`;
   wireSay(b, ex.text, ex.lang);
   let best = 0,

@@ -19,10 +19,10 @@ const PORT = 8765;
 
 const QUICK = [
   ['answer_check'], ['grammar_drills'], ['unit_parts'], ['lesson_unique'], ['i18n_cards'], ['back_button'], ['server_sync'], ['server_security'], ['microphone'],
-  ['play_lessons', 'fr', 'en-daily'], ['play_lessons', 'ko', 'en-toeic'], ['play_lessons', 'en', 'fr-fle'],
+  ['play_lessons', 'fr', 'en-daily'], ['play_lessons', 'ko', 'en-toeic'], ['play_lessons', 'en', 'fr-fle'], ['content_lang'],
 ];
 const ALL = [
-  ['data_integrity'], ['grammar_drills'], ['unit_parts'], ['lesson_unique'], ['answer_check'], ['distractors'], ['i18n_cards'], ['i18n_leaks', 'en'], ['i18n_leaks', 'ko'], ['i18n_flows', 'en'], ['i18n_flows', 'ko'],
+  ['data_integrity'], ['content_lang'], ['grammar_drills'], ['unit_parts'], ['lesson_unique'], ['answer_check'], ['distractors'], ['i18n_cards'], ['i18n_leaks', 'en'], ['i18n_leaks', 'ko'], ['i18n_flows', 'en'], ['i18n_flows', 'ko'],
   ...['en-daily', 'en-pro', 'en-toeic', 'fr-volt', 'ko'].map(c => ['play_lessons', 'fr', c]),
   ['play_lessons', 'en', 'fr-fle'], ['play_lessons', 'en', 'ko'], ['play_lessons', 'ko', 'fr-fle'], ['play_lessons', 'ko', 'en-pro'],
   ['play_mobile', 'fr', 'en-daily', 'iosapp'], ['play_mobile', 'en', 'fr-fle', 'iossafari'], ['play_mobile', 'ko', 'en-toeic', 'android'],
