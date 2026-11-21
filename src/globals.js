@@ -15,6 +15,7 @@ import * as m_exercises_render from "./exercises/render.js";
 import * as m_exercises_validate from "./exercises/validate.js";
 import * as m_features_ai_units from "./features/ai-units.js";
 import * as m_features_coach from "./features/coach.js";
+import * as m_features_explain from "./features/explain.js";
 import * as m_features_grammar from "./features/grammar.js";
 import * as m_features_placement from "./features/placement.js";
 import * as m_features_quests from "./features/quests.js";
@@ -67,6 +68,7 @@ const MODULES = [
   m_exercises_validate,
   m_features_ai_units,
   m_features_coach,
+  m_features_explain,
   m_features_grammar,
   m_features_placement,
   m_features_quests,

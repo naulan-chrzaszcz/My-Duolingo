@@ -22,8 +22,65 @@ export function targetOf(ex, res) {
 }
 
 // ---- repères de grammaire reconnus dans la phrase (une note par repère, 2 au plus) ----
+// Un mot en -ed ou en -ing n'est pas forcément un verbe : adjectifs (tired, interesting), noms (bed, morning),
+// passif ou état après be (is delayed, I'm lowkey tired). Pas de lookbehind dans les regex : Safari ancien ne le lit pas.
+const toks = s =>
+  s
+    .replace(/[^a-z' ]+/g, " ")
+    .split(" ")
+    .filter(Boolean);
+const BE = new Set(
+  "am is are was were be been being 'm 're 's i'm you're he's she's it's we're they're that's there's isn't aren't wasn't weren't".split(
+    " ",
+  ),
+);
+// adverbes qui peuvent s'intercaler : « I'm lowkey tired », « it was really boring », « he just arrived »
+const ADV = new Set(
+  "not so too very really quite pretty bit little kind sort of lowkey kinda super always never still just also already".split(
+    " ",
+  ),
+);
+// après ces verbes, le mot en -ed est un adjectif ou un participe, pas un prétérit (got married, feel tired, have finished)
+const LINK = new Set(
+  "have has had haven't hasn't hadn't 've get gets got getting feel feels felt look looks looked seem seems seemed become became".split(
+    " ",
+  ),
+);
+/** Mot qui précède le mot n° i, adverbes sautés. */
+const before = (t, i) => {
+  let j = i - 1;
+  while (j >= 0 && (ADV.has(t[j]) || (t[j] === "a" && t[j + 1] === "bit"))) j--;
+  return t[j] || "";
+};
+const isBe = w => BE.has(w) || /'(m|re|s)$/.test(w);
+const NOT_ED = new Set(
+  (
+    "bed red sled hundred need indeed seed feed weed speed deed bleed breed greed proceed succeed exceed " +
+    "naked wicked sacred kindred rugged ragged beloved aged " +
+    "tired bored interested excited married worried scared surprised pleased delighted annoyed confused embarrassed " +
+    "disappointed satisfied stressed relaxed amazed frightened exhausted crowded talented skilled experienced " +
+    "qualified motivated organized organised complicated detailed related limited advanced"
+  ).split(" "),
+);
+const NOT_ING = new Set(
+  (
+    "thing something nothing anything everything king ring sing spring string sting wing swing bring morning evening " +
+    "ceiling building wedding during ending pudding sibling darling earring clothing " +
+    "interesting boring amazing exciting surprising annoying confusing disappointing tiring relaxing charming shocking " +
+    "embarrassing frightening worrying touching inspiring refreshing satisfying stunning challenging"
+  ).split(" "),
+);
+/** be (+ adverbes) + mot en -ing qui n'est ni un nom ni un adjectif connu : forme progressive. */
+const progressive = s => toks(s).some((w, i, t) => /^\w+ing$/.test(w) && !NOT_ING.has(w) && isBe(before(t, i)));
+/** Verbe régulier au prétérit : mot en -ed qui n'est ni un adjectif ou un nom connu, ni après be, have, get… */
+const pastEd = s =>
+  toks(s).some((w, i, t) => {
+    if (!/^[a-z]{2,}ed$/.test(w) || NOT_ED.has(w)) return false;
+    const p = before(t, i);
+    return !isBe(p) && !LINK.has(p) && !/'ve$/.test(p);
+  });
 const EN = [
-  [/\b(am|is|are|was|were|'m|'re)\s+(not\s+)?\w+ing\b/, "be + verbe en -ing : action en cours (forme progressive)."],
+  [{ test: progressive }, "be + verbe en -ing : action en cours (forme progressive)."],
   [
     /\b(have|has|haven't|hasn't|'ve)\s+(\w+\s+)?(\w+ed|been|done|gone|seen|made|had|taken|written|eaten|known|given|found|sent|met|left|lost|bought|told)\b/,
     "have / has + participe passé : present perfect (un lien entre le passé et maintenant).",
@@ -48,7 +105,7 @@ const EN = [
     /\bthere\s+(is|are|was|were|isn't|aren't)\b|\bthere's\b/,
     "there is / there are : « il y a », accordé avec le nom qui suit.",
   ],
-  [/\b\w+(ed)\b/, "Au prétérit, les verbes réguliers prennent -ed ; les irréguliers s'apprennent par cœur."],
+  [{ test: pastEd }, "Au prétérit, les verbes réguliers prennent -ed ; les irréguliers s'apprennent par cœur."],
 ];
 const FR = [
   [

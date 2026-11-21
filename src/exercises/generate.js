@@ -150,7 +150,15 @@ export function distract(pool, answerWords, k) {
     cands.push([near(w) + Math.random() * 2.2, w]);
   }
   cands.sort((a, b) => b[0] - a[0]);
-  return cands.slice(0, k).map(([, w]) => (w.toLowerCase() === w ? w : w.toLowerCase()));
+  return cands.slice(0, k).map(([, w]) => tileCase(w));
+}
+// Un mot pris en tête de phrase perd sa majuscule (« The » → « the »), mais pas un sigle (ID, TV, TOEIC),
+// le pronom I et ses contractions, ni un nom propre (Monday, Paris) : « ID » ne doit pas devenir « id »
+export function tileCase(w) {
+  if (!/^\p{Lu}/u.test(w)) return w;
+  if (/^I('\p{Ll}+)?$/u.test(w) || PROPER.test(w)) return w;
+  if (/^\p{Lu}[^\p{Ll}]*\p{Lu}/u.test(w)) return w;
+  return w.toLowerCase();
 }
 export const ITEM_UNIT = new WeakMap();
 export const PROPER =
