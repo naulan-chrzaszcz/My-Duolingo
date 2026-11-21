@@ -1,0 +1,123 @@
+# Aperçu de chaque pull request sur le VPS, à côté de la production, pour la tester et la comparer
+# avant de fusionner : https://www.naulan-chrzaszcz.fr/speakeasy-apercu/pr-<N>/
+#   - ouverture de la PR et chaque nouvel envoi : zip de l'aperçu (PREVIEW_PR=<N>) puis server/apercu-fedora.sh deploy ;
+#   - fusion ou fermeture de la PR : server/apercu-fedora.sh remove (dossier et copie de la base supprimés).
+# Mêmes secrets que la mise en production (VPS_HOST, VPS_USER, VPS_SSH_KEY, VPS_KNOWN_HOSTS, voir server/LISEZ-MOI.txt).
+# Les PR venant d'un fork ne sont jamais déployées (pas d'accès aux secrets, et leur code tournerait sur le VPS).
+name: Aperçu de la PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: apercu-${{ github.event.pull_request.number }}
+  cancel-in-progress: ${{ github.event.action != 'closed' }}
+
+env:
+  PR: ${{ github.event.pull_request.number }}
+  PORT: ${{ vars.VPS_PORT || '22' }}
+  SITE_DIR: ${{ vars.SITE_DIR || '/var/www/html/speakeasy' }}
+  SITE_ORIGIN: ${{ vars.SITE_ORIGIN || 'https://www.naulan-chrzaszcz.fr' }}
+
+jobs:
+  deploy:
+    if: github.event.action != 'closed' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    environment:
+      name: apercu
+      url: ${{ vars.SITE_ORIGIN || 'https://www.naulan-chrzaszcz.fr' }}/speakeasy-apercu/pr-${{ github.event.pull_request.number }}/
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Zip de l'aperçu
+        run: |
+          npm install --no-audit --no-fund
+          PREVIEW_PR="$PR" npm run zip
+          unzip -l release/speakeasy-production.zip | grep -E 'api/data/(.*\.sqlite|config\.php|vapid\.json)' && { echo "Le zip contient des données serveur : refusé"; exit 1; } || true
+
+      - name: Clé SSH
+        env:
+          KEY: ${{ secrets.VPS_SSH_KEY }}
+          KNOWN: ${{ secrets.VPS_KNOWN_HOSTS }}
+        run: |
+          test -n "$KEY" && test -n "$KNOWN" || { echo "Secrets VPS_SSH_KEY / VPS_KNOWN_HOSTS manquants"; exit 1; }
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$KEY" > ~/.ssh/id_deploy && chmod 600 ~/.ssh/id_deploy
+          printf '%s\n' "$KNOWN" > ~/.ssh/known_hosts && chmod 644 ~/.ssh/known_hosts
+
+      - name: Envoi et installation de l'aperçu
+        env:
+          HOST: ${{ secrets.VPS_HOST }}
+          USER: ${{ secrets.VPS_USER }}
+        run: |
+          set -e
+          SSH="ssh -i ~/.ssh/id_deploy -p $PORT -o StrictHostKeyChecking=yes -o BatchMode=yes"
+          DEST="/tmp/speakeasy-apercu-${GITHUB_RUN_ID}"
+          $SSH "$USER@$HOST" "mkdir -p $DEST"
+          scp -i ~/.ssh/id_deploy -P "$PORT" -o StrictHostKeyChecking=yes -o BatchMode=yes \
+            release/speakeasy-production.zip server/apercu-fedora.sh "$USER@$HOST:$DEST/"
+          SUDO=""; [ "$USER" = root ] || SUDO="sudo -n"
+          $SSH "$USER@$HOST" "$SUDO env SITE_DIR='$SITE_DIR' bash $DEST/apercu-fedora.sh deploy $PR $DEST/speakeasy-production.zip; r=\$?; rm -rf $DEST; exit \$r"
+
+      - name: Vérification publique
+        run: |
+          URL="$SITE_ORIGIN/speakeasy-apercu/pr-$PR"
+          for i in 1 2 3 4 5; do
+            r=$(curl -s --max-time 15 "$URL/api/account.php?a=ping" || true)
+            echo "$r" | grep -q '"ok":true' && { echo "API : $r"; break; }
+            [ $i = 5 ] && { echo "L'API de l'aperçu ne répond pas : « $r »"; exit 1; }
+            sleep 5
+          done
+          v=$(curl -s --max-time 15 "$URL/sw.js" | grep -o 'speakeasy-pr[0-9]*-v[0-9]*-[0-9a-f]*' | head -1)
+          prod=$(curl -s --max-time 15 "$SITE_ORIGIN/speakeasy/sw.js" | grep -o 'speakeasy-v[0-9]*-[0-9a-f]*' | head -1)
+          {
+            echo "### Aperçu de la PR $PR"
+            echo ""
+            echo "| | Adresse | Version |"
+            echo "| --- | --- | --- |"
+            echo "| Aperçu | $URL/ | \`$v\` |"
+            echo "| Production | $SITE_ORIGIN/speakeasy/ | \`$prod\` |"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  remove:
+    if: github.event.action == 'closed' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: server/apercu-fedora.sh
+          sparse-checkout-cone-mode: false
+
+      - name: Clé SSH
+        env:
+          KEY: ${{ secrets.VPS_SSH_KEY }}
+          KNOWN: ${{ secrets.VPS_KNOWN_HOSTS }}
+        run: |
+          test -n "$KEY" && test -n "$KNOWN" || { echo "Secrets VPS_SSH_KEY / VPS_KNOWN_HOSTS manquants"; exit 1; }
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$KEY" > ~/.ssh/id_deploy && chmod 600 ~/.ssh/id_deploy
+          printf '%s\n' "$KNOWN" > ~/.ssh/known_hosts && chmod 644 ~/.ssh/known_hosts
+
+      - name: Suppression de l'aperçu
+        env:
+          HOST: ${{ secrets.VPS_HOST }}
+          USER: ${{ secrets.VPS_USER }}
+        run: |
+          set -e
+          SCRIPT=server/apercu-fedora.sh
+          SSH="ssh -i ~/.ssh/id_deploy -p $PORT -o StrictHostKeyChecking=yes -o BatchMode=yes"
+          DEST="/tmp/speakeasy-apercu-${GITHUB_RUN_ID}"
+          $SSH "$USER@$HOST" "mkdir -p $DEST"
+          scp -i ~/.ssh/id_deploy -P "$PORT" -o StrictHostKeyChecking=yes -o BatchMode=yes "$SCRIPT" "$USER@$HOST:$DEST/"
+          SUDO=""; [ "$USER" = root ] || SUDO="sudo -n"
+          $SSH "$USER@$HOST" "$SUDO bash $DEST/apercu-fedora.sh remove $PR; r=\$?; rm -rf $DEST; exit \$r"

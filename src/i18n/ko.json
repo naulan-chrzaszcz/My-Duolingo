@@ -1297,7 +1297,8 @@
   "Comme au vrai TOEIC, les affirmations ne sont qu'audio : touche 🔊 pour les écouter.": "실제 TOEIC처럼 보기 문장은 음성으로만 나와요. 🔊를 눌러 들어 보세요.",
   "Affirmation ¤": "보기 ¤",
   "Le parcours se fait dans l'ordre : chaque étape réussie ouvre la suivante. Termine d'abord l'étape conseillée, ou passe le test de niveau si tu as déjà des bases.": "과정은 순서대로 진행돼요. 단계를 통과하면 다음 단계가 열려요. 추천 단계부터 끝내거나, 기초가 있다면 레벨 테스트를 보세요.",
-  "🧭 Le parcours se fait dans l'ordre : chaque étape réussie ouvre la suivante. Si tu as déjà des bases, le test de niveau te fait avancer directement.": "🧭 과정은 순서대로 진행돼요. 단계를 통과하면 다음 단계가 열려요. 기초가 있다면 레벨 테스트로 바로 앞으로 갈 수 있어요."
+  "🧭 Le parcours se fait dans l'ordre : chaque étape réussie ouvre la suivante. Si tu as déjà des bases, le test de niveau te fait avancer directement.": "🧭 과정은 순서대로 진행돼요. 단계를 통과하면 다음 단계가 열려요. 기초가 있다면 레벨 테스트로 바로 앞으로 갈 수 있어요.",
+  "Version d'essai · PR ¤": "테스트 버전 · PR ¤"
  },
  "content": {
   "Quotidien": "일상",

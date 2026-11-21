@@ -142,6 +142,27 @@ Configuration, une seule fois :
 Restaurer une sauvegarde : arrêter Apache, copier /var/backups/speakeasy/speakeasy-<date>.sqlite sur
 api/data/speakeasy.sqlite (propriétaire apache), relancer Apache.
 
+=== Aperçu de chaque pull request (v38.2, GitHub Actions) ===
+Chaque pull request est mise en ligne à côté de la production, pour la tester et la comparer avant de fusionner :
+     https://www.naulan-chrzaszcz.fr/speakeasy-apercu/pr-<numéro>/      (production : .../speakeasy/)
+  - .github/workflows/apercu.yml, à l'ouverture de la PR et à chaque nouvel envoi : zip construit avec
+    PREVIEW_PR=<numéro>, envoyé au VPS, puis server/apercu-fedora.sh deploy <numéro> <zip> ;
+  - à la fusion ou à la fermeture de la PR : apercu-fedora.sh remove <numéro> supprime le dossier et sa base.
+  - Le lien apparaît dans la PR (« View deployment ») et dans le résumé de l'action, avec les deux versions.
+Ce qui est séparé de la production (rien n'y est écrit) :
+  - dossier /var/www/html/speakeasy-apercu/pr-<numéro>, configuration Apache /etc/httpd/conf.d/speakeasy-apercu.conf
+    (api/data protégé, pages non indexées), créée au premier aperçu ;
+  - base : copie de la base de production au premier envoi (sans les abonnements aux rappels), gardée et migrée
+    aux envois suivants ; on peut donc se connecter avec son compte et retrouver sa progression ;
+  - config.php : seule la clé IA commune est reprise ; aucun rappel n'est envoyé depuis un aperçu ;
+  - navigateur : même domaine que la production, donc stockage préfixé « apercu-pr<numéro>: » ; à la première
+    ouverture, les profils de la production sont recopiés, puis tout ce qui se passe dans l'aperçu y reste ;
+    cache hors ligne et app de l'écran d'accueil distincts (« SE PR <numéro> ») ; bandeau « Version d'essai · PR N ».
+Mêmes secrets que la mise en production. Les PR venant d'un fork ne sont jamais mises en ligne.
+Le code PHP d'un aperçu tourne sur le VPS avec les droits d'Apache, comme la production : n'ouvre pas de PR
+depuis une branche dont tu ne connais pas le contenu.
+Sans GitHub :  sudo bash apercu-fedora.sh deploy 12 speakeasy-production.zip   (zip fait avec PREVIEW_PR=12 npm run zip)
+
 === Exercices d'écoute et de micro ===
 « Pas de son » (écoute) et « Plus tard » (micro) mettent ces exercices en pause 15 minutes sans
 pénalité : ils sont remplacés par des exercices silencieux. Réglage permanent dans Profil > Réglages.
