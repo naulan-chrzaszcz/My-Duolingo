@@ -17,6 +17,8 @@ La propriétaire écrit en français : réponds en français.
 | `npm run serve` | Build + serveur local sur http://localhost:8000 |
 | `npm run format` | Met en forme le code (Prettier), à lancer avant de livrer |
 | Fusion sur `main` | GitHub Actions : tests, zip, envoi au VPS, `deploy-fedora.sh` (sauvegardes, migration de la base, vérification, retour arrière) |
+| Pull request ouverte ou mise à jour | GitHub Actions (`apercu.yml`) : aperçu sur https://www.naulan-chrzaszcz.fr/speakeasy-apercu/pr-N/ (`apercu-fedora.sh`), supprimé à la fusion ou à la fermeture |
+| `PREVIEW_PR=N npm run zip` | Zip d'aperçu de la PR N (stockage, cache et nom de l'app séparés de la production) |
 
 ## Où est quoi
 
