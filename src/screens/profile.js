@@ -24,6 +24,7 @@ import { IOS, STANDALONE, THEME, haptic, setTheme } from "../ui/platform.js";
 import { avatar, curCid, curSec, renderAll } from "../ui/router.js";
 import { closeModal, modal, toast } from "../ui/ui.js";
 import { personalize, personalizeFirstVisit } from "../features/personalize.ts";
+import { lastWeekly } from "../features/weekly.ts";
 
 export function renderProfile(v) {
   const lv = level(S.xp),
@@ -73,7 +74,7 @@ export function renderProfile(v) {
  <h2 class="ph2">Comptes sur cet appareil</h2><div class="paccs">${others}<button class="pacc add" id="pAdd2" aria-label="Ajouter un compte"><span class="padd">${ic("plus", 26, "", 2.6)}</span><span>Ajouter</span></button></div>
  <div class="card"><h3>Cette semaine</h3><div class="week">${days.map(d => `<div class="${d.t ? "today" : ""}"><small>${d.x}</small><i style="height:${Math.max(3, (d.x / mx) * 90)}%"></i><small>${d.l}</small></div>`).join("")}</div></div>
  <h2 class="ph2">Badges · ${S.badges.length} sur ${BADGES.length}</h2><div class="pbdgs">${badges}</div><div class="ltip hidden" id="btip"></div>
- <h2 class="ph2">Mes outils</h2><div class="ptools"><button class="ptool" id="tStats">${ic("chart", 24, "", 2.4)}<span>Statistiques par notion</span>${ic("chevr", 20, "", 3)}</button><button class="ptool" id="tAi">${ic("spark", 24, "", 2.4)}<span>Mon Claude (IA)</span>${ic("chevr", 20, "", 3)}</button><button class="ptool" id="tPerso">${ic("target", 24, "", 2.4)}<span>Personnaliser mon expérience</span>${ic("chevr", 20, "", 3)}</button><button class="ptool" id="tWords">${ic("book", 24, "", 2.4)}<span>Mes mots</span>${ic("chevr", 20, "", 3)}</button></div>
+ <h2 class="ph2">Mes outils</h2><div class="ptools"><button class="ptool" id="tStats">${ic("chart", 24, "", 2.4)}<span>Statistiques par notion</span>${ic("chevr", 20, "", 3)}</button><button class="ptool" id="tAi">${ic("spark", 24, "", 2.4)}<span>Mon Claude (IA)</span>${ic("chevr", 20, "", 3)}</button><button class="ptool" id="tPerso">${ic("target", 24, "", 2.4)}<span>Personnaliser mon expérience</span>${ic("chevr", 20, "", 3)}</button><button class="ptool" id="tWeek">${ic("chart", 24, "", 2.4)}<span>Mon bilan de la semaine</span>${ic("chevr", 20, "", 3)}</button><button class="ptool" id="tWords">${ic("book", 24, "", 2.4)}<span>Mes mots</span>${ic("chevr", 20, "", 3)}</button></div>
 `;
   $("#pWear").onclick = () => (location.hash = "boutique");
   $("#pGear").onclick = () => (location.hash = "reglages");
@@ -83,6 +84,7 @@ export function renderProfile(v) {
   $("#tAi").onclick = () => (location.hash = "reglages/claude");
   $("#tWords").onclick = () => myWords();
   $("#tPerso").onclick = () => personalize();
+  $("#tWeek").onclick = () => lastWeekly();
   setTimeout(personalizeFirstVisit, 400); // v39 : une seule fois, à la première visite du profil
   v.querySelectorAll("[data-acc]").forEach(
     b =>

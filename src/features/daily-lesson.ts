@@ -11,6 +11,7 @@ import { mascot } from "../ui/mascot.js";
 import { curCid } from "../ui/router.js";
 import { closeModal, modal } from "../ui/ui.js";
 import { interestsPicker, likesList } from "./interests";
+import { showWeekly, weeklyDue } from "./weekly";
 
 const P = (): any => S;
 let busy = false;
@@ -27,6 +28,12 @@ export async function dailyLessonCheck(): Promise<void> {
   busy = true;
   try {
     daily(); // nouveau jour depuis la dernière ouverture : série et quêtes à jour
+    // v39.1 : le bilan de la semaine passe avant la leçon du jour, qui suit quand on le ferme
+    if (weeklyDue() && document.querySelector("#modal")?.classList.contains("hidden")) {
+      busy = false;
+      await showWeekly(() => setTimeout(dailyLessonCheck, 300));
+      return;
+    }
     if (!dailyDue() || !navigator.onLine) return;
     const modalOpen = !document.querySelector("#modal")?.classList.contains("hidden");
     if (modalOpen) return;

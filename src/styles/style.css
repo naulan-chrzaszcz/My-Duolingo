@@ -144,6 +144,15 @@ select{border:2px solid var(--line);border-radius:12px;padding:8px;background:#f
 .likechip .e{font-size:18px}
 .dlpop .dlstreak{font-weight:900;color:var(--gold-d)}
 .pzstat{font-weight:900;color:var(--ink2)}
+#bstory{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px}
+.wkstats{display:flex;justify-content:center;gap:12px;margin:4px 0 10px}
+.wkstats span{display:flex;flex-direction:column;align-items:center;min-width:80px;border:2px solid var(--line);border-radius:14px;padding:8px 12px;background:var(--soft)}
+.wkstats b{font-size:22px;color:var(--pri)}
+.wkstats small{color:var(--muted);font-weight:800}
+.wkpop .wkbilan{color:var(--ink);text-align:left}
+.wkpop .wkload{color:var(--muted);font-size:14px}
+.wkpop h3{margin:12px 0 4px;text-align:left}
+.wkobj{text-align:left;margin:0 0 6px;padding-left:22px;font-weight:800;line-height:1.5}
 .pzgoals{grid-template-columns:1fr 1fr}
 .pzgoals button{flex-direction:column;align-items:flex-start;gap:4px;font-size:15px;padding:12px}
 .vlist{display:grid;gap:8px;margin:10px 0}

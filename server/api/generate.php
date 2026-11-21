@@ -79,7 +79,7 @@ $GOALS  = ['trip' => 'voyager et se débrouiller sur place', 'job' => 'utiliser 
 $why    = is_string($in['why'] ?? null) && isset($GOALS[$in['why']]) ? $GOALS[$in['why']] : '';
 $mode = (string)($in['mode'] ?? '');
 // Seuls les types de génération de l'application sont acceptés (pas de prompt libre)
-if (!in_array($mode, ['', 'exercise', 'word', 'write', 'unit', 'story', 'explain'], true)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_mode']); exit; }
+if (!in_array($mode, ['', 'exercise', 'word', 'write', 'unit', 'story', 'explain', 'weekly'], true)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_mode']); exit; }
 $wordMode = $mode === 'word';
 // règles de grammaire les moins réussies (notions v27), envoyées par l'application
 $weak   = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 120); }, (array)($in['weak'] ?? [])), 0, 5);
@@ -162,11 +162,24 @@ if ($mode === 'story') {
   $fr = $lang === 'fr-FR' && empty($in['fle']);
   $prompt = "Tu écris une courte histoire dialoguée pour une application d'apprentissage façon Duolingo. L'élève est francophone." . ($fr ? " Il prépare le Certificat Voltaire : l'histoire est en français et sert à repérer des pièges d'orthographe et de grammaire." : " Il apprend le $L.")
     . "\nNiveau : $level." . ($theme !== '' ? " Thème : « $theme »." : " Choisis une situation originale de la vie quotidienne ou professionnelle.")
+    . ($words ? "\nMots que l'élève doit revoir : " . implode(', ', $words) . ". Utilise-les tous dans les répliques, dans leur sens habituel, et consacre au moins une question à l'un d'eux." : '')
+    . ($likes ? "\nCentres d'intérêt de l'élève : " . implode(', ', $likes) . ". Situe une bonne partie des phrases, des dialogues et des exemples dans ces domaines, quand cela reste naturel." : '')
     . "\n\nRéponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n"
     . '{"t":"titre court en français","ic":"un emoji","cast":{"Prénom":["M ou W","emoji du personnage"]},"items":[{"s":"Prénom","t":"réplique' . ($fr ? '' : ' en ' . $L) . '","fr":"' . ($fr ? '' : 'traduction française') . '"},{"q":"question","o":["bonne réponse","réponse fausse","réponse fausse"],"a":0}]}'
     . "\nRègles : 2 ou 3 personnages (M = homme, W = femme) ; 8 à 12 répliques naturelles et 100 % correctes, adaptées au niveau ; 3 questions intercalées dans l'histoire, juste après les répliques concernées, avec une seule bonne réponse, toujours en première position dans \"o\" (\"a\":0). "
     . ($fr ? "Les répliques sont en français, \"fr\" est une chaîne vide, et chaque question porte sur un piège d'orthographe ou de grammaire de la réplique qui précède."
       : ($lang === 'ko-KR' ? "Les questions sont en français et vérifient la compréhension ; ajoute la traduction française de chaque réplique dans \"fr\"." : "Les questions sont en anglais et vérifient la compréhension ; ajoute la traduction française de chaque réplique dans \"fr\"."));
+}
+
+// ---- Mode « bilan de la semaine » (v39.1) : 5 nombres, erreurs, objectif et centres d'intérêt ----
+if ($mode === 'weekly') {
+  $n = array_map(function ($x) { return max(0, min(100000, (int)$x)); }, array_slice(array_pad(array_values((array)($in['stats'] ?? [])), 5, 0), 0, 5));
+  $prompt = "Tu es le coach bienveillant d'une application d'apprentissage façon Duolingo. L'élève est francophone et apprend le $L (cours : $course, niveau : $level).\nSa semaine passée : {$n[0]} XP (semaine d'avant : {$n[1]} XP), {$n[2]} jours d'activité sur 7, série de {$n[3]} jours, {$n[4]} mots à retenir à revoir.\n"
+    . ($why !== '' ? "Objectif de l'élève : $why.\n" : '')
+    . ($likes ? "Centres d'intérêt de l'élève : " . implode(', ', $likes) . ". Situe une bonne partie des phrases, des dialogues et des exemples dans ces domaines, quand cela reste naturel.\n\n" : "\n")
+    . ($errors ? "Erreurs de la semaine (exercice | réponse attendue | réponse donnée) :\n- " . implode("\n- ", array_slice($errors, 0, 15)) . "\n\n" : "Aucune erreur enregistrée cette semaine.\n\n")
+    . "Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n{\"bilan\":\"2 à 3 phrases\",\"objectifs\":[\"objectif 1\",\"objectif 2\",\"objectif 3\"]}\n"
+    . "Le bilan est en français, au tutoiement, bienveillant et précis (progrès, point fort, erreur qui revient). Exactement 3 objectifs courts (moins de 90 caractères), concrets et réalisables dans l'application (leçons, révisions, mots à retenir, histoires), dont au moins un sur l'erreur la plus fréquente.";
 }
 
 // ---- Appel à l'API Claude ----
