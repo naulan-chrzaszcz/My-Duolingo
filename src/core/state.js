@@ -46,6 +46,8 @@ export const DEF = () => ({
   why: "",
   pzSeen: false,
   pzDone: false,
+  wkSeen: "",
+  wkLast: null,
   badges: [],
   lessons: 0,
   perfect: 0,

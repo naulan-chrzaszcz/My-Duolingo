@@ -8,11 +8,12 @@ import { LANG_FR, scoreSpeech } from "../exercises/render.js";
 import { norm, words } from "../exercises/validate.js";
 import { NONFR } from "../i18n/locale.js";
 import { L, openSession } from "../lesson/engine.js";
-import { AI, aiEnrich } from "../services/ai.js";
+import { AI, aiDetect, aiEnrich } from "../services/ai.js";
 import { SR, beep, micBroken, say } from "../services/speech.js";
 import { ic } from "../ui/icons.js";
 import { curSec } from "../ui/router.js";
 import { closeModal, modal, toast } from "../ui/ui.js";
+import { genStory, storyLevel } from "../screens/stories.js";
 
 // ---------- Mes mots à retenir (révisions espacées) ----------
 export const SEC_LANG = { en: "en-US", fr: "fr-FR", ko: "ko-KR" };
@@ -30,7 +31,7 @@ export function bankView() {
       ? '<span class="due">à revoir</span>'
       : `<span class="later">dans ${Math.max(1, Math.round((w.due - now) / 864e5))} j</span>`;
   const m =
-    modal(`<h2 class="hic">${ic("pin", 24, "", 2.4)}<span>Mes mots à retenir</span></h2><div class="bankbar"><button class="btn goldb" id="btrain" ${list.length ? "" : "disabled"}>S'entraîner · ${bankDue(s.id) || list.length} mot(s)</button></div><p>Ajoute un mot ou une expression vu aujourd'hui. Tu t'entraînes dessus tout de suite, puis il revient après 1, 3, 7, 14 et 30 jours tant que tu ne le maîtrises pas.</p>
+    modal(`<h2 class="hic">${ic("pin", 24, "", 2.4)}<span>Mes mots à retenir</span></h2><div class="bankbar"><button class="btn goldb" id="btrain" ${list.length ? "" : "disabled"}>S'entraîner · ${bankDue(s.id) || list.length} mot(s)</button>${list.length >= 3 ? `<button class="btn ghost" id="bstory">${ic("book", 20, "", 2.4)}<span>Une histoire avec mes mots</span></button>` : ""}</div><p>Ajoute un mot ou une expression vu aujourd'hui. Tu t'entraînes dessus tout de suite, puis il revient après 1, 3, 7, 14 et 30 jours tant que tu ne le maîtrises pas.</p>
   <div class="bankadd"><input class="finput" id="bw" maxlength="60" placeholder="${s.id === "ko" ? "Ex. : 감사합니다" : s.id === "fr" ? "Ex. : quoique" : "Ex. : to look forward to"}" lang="${lang}"><input class="finput" id="bt" maxlength="80" placeholder="${s.id === "fr" ? "Définition (facultatif)" : "Traduction (facultatif)"}"><button class="btn" id="badd">Ajouter</button></div>
   <p class="micnote" style="text-align:left;margin:6px 0 0">${AI.mode === "local" ? "Sans IA configurée, pense à écrire la traduction." : "Laisse la traduction vide : l'IA la complète avec un exemple."}</p>
   <div class="vlist" id="blist">${
@@ -96,10 +97,29 @@ export function bankView() {
         }),
     );
   });
+  // v39.1 : histoire écrite par l'IA avec les mots à revoir (le bouton disparaît sans IA)
+  const bs = m.querySelector("#bstory");
+  if (bs) {
+    aiDetect().then(md => {
+      if (md === "local") bs.remove();
+    });
+    bs.onclick = () => {
+      closeModal();
+      genStory(s.id, storyLevel(s.id), "", storyWords(s.id));
+    };
+  }
   m.querySelector("#btrain").onclick = () => {
     closeModal();
     bankSession(s.id);
   };
+}
+/** Mots pour une histoire : ceux à revoir d'abord, puis les plus récents (8 au plus). */
+export function storyWords(sec) {
+  const all = S.bank[sec] || [];
+  const now = Date.now();
+  const due = all.filter(w => (w.due || 0) <= now);
+  const rest = all.filter(w => !due.includes(w)).sort((a, b) => (b.added || 0) - (a.added || 0));
+  return [...due, ...rest].slice(0, 8).map(w => w.w);
 }
 export function micCheck(text, lang, out, btn) {
   if (!SR) {

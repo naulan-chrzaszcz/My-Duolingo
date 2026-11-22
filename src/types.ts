@@ -136,6 +136,9 @@ export interface State {
   why?: string;
   pzSeen?: boolean;
   pzDone?: boolean;
+  /** Semaine (lundi, dkey) où le bilan a été montré, et dernier bilan (v39.1). */
+  wkSeen?: string;
+  wkLast?: { wk: string; bilan: string; obj: string[]; src: "ia" | "local"; xp: number; days: number } | null;
   badges: string[];
   set: {
     rate: number;

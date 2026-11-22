@@ -7,12 +7,13 @@ import { sayDialog } from "../exercises/render.js";
 import { SEC_LANG } from "../features/word-bank.js";
 import { NONFR } from "../i18n/locale.js";
 import { L, finish, quitAsk, set_L } from "../lesson/engine.js";
-import { aiAsk, aiDetect, aiEnrich } from "../services/ai.js";
+import { aiAsk, aiDetect, aiEnrich, likesText } from "../services/ai.js";
 import { beep, say } from "../services/speech.js";
 import { mascot } from "../ui/mascot.js";
 import { haptic } from "../ui/platform.js";
 import { curSec, renderAll, safeEmoji } from "../ui/router.js";
 import { closeModal, modal, toast } from "../ui/ui.js";
+import { likesList } from "../features/interests.ts";
 
 // ---------- Histoires ----------
 export const STORY_LV = ["Débutant (A1-A2)", "Intermédiaire (B1)", "Avancé (B2)", "Expert (C1)"];
@@ -91,6 +92,11 @@ export function renderStories(v) {
       }),
   );
 }
+// v39.1 : mêmes textes dans server/api/generate.php
+export const STORY_WORDS_TXT = words =>
+  "Mots que l'élève doit revoir : " +
+  words.join(", ") +
+  ". Utilise-les tous dans les répliques, dans leur sens habituel, et consacre au moins une question à l'un d'eux.";
 export function storyPrompt(r) {
   const L0 = { "en-US": "anglais", "fr-FR": "français", "ko-KR": "coréen" }[r.lang];
   const fr = r.lang === "fr-FR" && !r.fle;
@@ -105,6 +111,8 @@ export function storyPrompt(r) {
     (r.theme
       ? " Thème : « " + r.theme + " »."
       : " Choisis une situation originale de la vie quotidienne ou professionnelle.") +
+    (r.words && r.words.length ? "\n" + STORY_WORDS_TXT(r.words) : "") +
+    (r.likes && r.likes.length ? "\n" + likesText(r.likes).trim() : "") +
     "\n\nRéponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n" +
     '{"t":"titre court en français","ic":"un emoji","cast":{"Prénom":["M ou W","emoji du personnage"]},"items":[{"s":"Prénom","t":"réplique' +
     (fr ? "" : " en " + L0) +
@@ -171,16 +179,7 @@ export async function storyGenPicker(sec) {
     );
     return;
   }
-  const lvDef = Math.min(
-    3,
-    Math.max(
-      0,
-      ...allStories(sec)
-        .filter(x => S.stories.includes(x.id))
-        .map(x => x.lv),
-      0,
-    ),
-  );
+  const lvDef = storyLevel(sec);
   const m =
     modal(`<h2 class="hi">${ic("spark", 22, "", 2.4)}Nouvelle histoire</h2><p>Horang écrit une histoire inédite, avec ses questions, à ton niveau.</p><label class="flabel">Niveau</label><div class="chips pick" id="slv">${STORY_LV.map((l, i) => `<button data-lv="${i}" class="${i === lvDef ? "on" : ""}">${l}</button>`).join("")}</div>
   <label class="flabel">Thème (facultatif)</label><input class="finput" id="sth" maxlength="80" placeholder="${sec === "ko" ? "Ex. : au café à Séoul, un rendez-vous K-pop…" : sec === "fr" ? "Ex. : un mail à un client, une réunion…" : "Ex. : a job interview, a lost suitcase, a code review…"}">
@@ -193,30 +192,54 @@ export async function storyGenPicker(sec) {
         m.querySelectorAll("[data-lv]").forEach(x => x.classList.toggle("on", x === b));
       }),
   );
-  m.querySelector("#sgo").onclick = async () => {
-    const theme = m.querySelector("#sth").value.trim().slice(0, 80);
-    modal(
-      `<div class="mcenter">${mascot("wow", "dance")}<h2>Horang écrit ton histoire…</h2><p>${STORY_LV[lv]}${theme ? " · " + esc(theme) : ""}</p><div class="aiload"><i></i><i></i><i></i></div></div>`,
-      "",
-      true,
-    );
-    const req = { mode: "story", lang: SEC_LANG[sec], level: STORY_LV[lv], theme };
-    if (NONFR && sec === "fr") req.fle = 1;
-    const raw = await aiAsk(storyPrompt(req), req, { tier: "default", ms: 90000 });
-    const st = validateStory(raw, sec, lv);
-    closeModal();
-    if (!st) {
-      toast("L'histoire n'a pas pu être écrite, réessaie dans un instant.");
-      return;
-    }
-    S.genStories[sec] = S.genStories[sec] || [];
-    S.genStories[sec].push(st);
-    if (S.genStories[sec].length > 60) S.genStories[sec] = S.genStories[sec].slice(-60);
-    save();
-    STORY_F = "all";
-    renderAll();
-    playStory(sec, st);
+  m.querySelector("#sgo").onclick = () => genStory(sec, lv, m.querySelector("#sth").value.trim().slice(0, 80));
+}
+/** Écrit une histoire inédite avec l'IA, la range dans les histoires créées et la lance (v39.1 : aussi avec des mots imposés). */
+export async function genStory(sec, lv, theme, words) {
+  words = (words || []).slice(0, 10);
+  modal(
+    `<div class="mcenter">${mascot("wow", "dance")}<h2>Horang écrit ton histoire…</h2><p>${STORY_LV[lv]}${theme ? " · " + esc(theme) : ""}</p>${words.length ? `<p class="notr">${esc(words.join(" · "))}</p>` : ""}<div class="aiload"><i></i><i></i><i></i></div></div>`,
+    "",
+    true,
+  );
+  const req = {
+    mode: "story",
+    lang: SEC_LANG[sec],
+    level: STORY_LV[lv],
+    theme,
+    words,
+    likes: theme ? [] : likesList(),
   };
+  if (NONFR && sec === "fr") req.fle = 1;
+  const raw = await aiAsk(storyPrompt(req), req, { tier: "default", ms: 90000 });
+  const st = validateStory(raw, sec, lv);
+  closeModal();
+  if (!st) {
+    toast("L'histoire n'a pas pu être écrite, réessaie dans un instant.");
+    return null;
+  }
+  if (words.length) st.words = words;
+  S.genStories[sec] = S.genStories[sec] || [];
+  S.genStories[sec].push(st);
+  if (S.genStories[sec].length > 60) S.genStories[sec] = S.genStories[sec].slice(-60);
+  save();
+  STORY_F = "all";
+  renderAll();
+  playStory(sec, st);
+  return st;
+}
+/** Niveau d'histoire proposé : le plus haut des histoires déjà lues de la section. */
+export function storyLevel(sec) {
+  return Math.min(
+    3,
+    Math.max(
+      0,
+      ...allStories(sec)
+        .filter(x => S.stories.includes(x.id))
+        .map(x => x.lv),
+      0,
+    ),
+  );
 }
 // Mot touché dans une histoire → « Mes mots à retenir » (révisions espacées), traduit en arrière-plan par l'IA
 export function storyAddWord(sec, w, lang, ex, exTr, tr) {
