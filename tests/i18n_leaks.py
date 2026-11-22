@@ -25,7 +25,7 @@ async def main():
         await p.evaluate(f"closeModal();location.hash='x';location.hash='{h}';route()"); await p.wait_for_timeout(250)
         for t in await p.evaluate(JS): leaks.setdefault(t,set()).add(f'{trk}/{h}')
       # fenêtres principales
-      for label,js in [('serie','openStreak()'),('langues','sectionPicker()'),('etape',"nodeSheet(curCid(),0,0)")]:
+      for label,js in [('serie','openStreak()'),('langues','sectionPicker()'),('etape',"nodeSheet(curCid(),0,0)"),('horang','askOpen()')]:
         await p.evaluate("closeModal();location.hash='parcours';route()"); await p.wait_for_timeout(150)
         await p.evaluate(js); await p.wait_for_timeout(300)
         for t in await p.evaluate(JS): leaks.setdefault(t,set()).add(f'{trk}/{label}')

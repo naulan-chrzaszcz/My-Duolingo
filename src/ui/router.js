@@ -3,6 +3,7 @@ import { COURSES, SECTIONS } from "../content/index.js";
 import { ACC, S, curAcc, save } from "../core/accounts.js";
 import { PARTS, nextStep, partsDone } from "../core/progress.js";
 import { todayXp } from "../core/xp.js";
+import { askFab } from "../features/ask.js";
 import { placeIntro } from "../features/placement.js";
 import { $, dkey, esc } from "../core/util.js";
 import { COURSE_IC, flagSvg, ic } from "./icons.ts";
@@ -79,6 +80,7 @@ export function renderAll() {
   else if (VIEW === "chapitres") renderChapters(v);
   else if (VIEW === "quetes") renderQuests(v);
   else renderProfile(v);
+  askFab(VIEW);
 }
 export const safeColor = c => (/^#[0-9a-fA-F]{3,8}$/.test(String(c || "")) ? c : "#7C4DFF");
 export const safeEmoji = e =>

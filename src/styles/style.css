@@ -1222,3 +1222,56 @@ body:has(.langdrop) #secBtn{border-color:#3D8BFF;background:#EAF2FF}
 .unit.first .ubanner{display:none}
 .unit.first .nodes{padding-top:18px}
 .pathban .umini{display:none}
+/* v39.2 : « Demande à Horang » — bulle flottante, conversation, bouton « Garder pour Horang » */
+.askfab{position:fixed;right:18px;bottom:calc(96px + env(safe-area-inset-bottom));width:58px;height:58px;border-radius:50%;border:none;background:#22B573;box-shadow:0 4px 0 #178A57;color:#FFFFFE;display:flex;align-items:center;justify-content:center;z-index:16;cursor:pointer;padding:0;animation:npop .25s cubic-bezier(.2,.9,.3,1.3)}
+.askfab:active{transform:translateY(4px);box-shadow:0 0 0 #178A57}
+.askfab .askdot{position:absolute;top:2px;right:2px;width:16px;height:16px;border-radius:50%;background:#FF4F5E;border:3px solid #FFFFFE;display:none}
+.askfab.new .askdot{display:block}
+body.askon .pathfab{right:88px}
+body.askon #view{padding-bottom:88px}
+@media(min-width:1000px){.askfab{bottom:24px;right:max(24px,calc(50% - 470px))}body.askon .pathfab{right:max(94px,calc(50% - 400px))}}
+.mcard.askmodal{display:flex;flex-direction:column;height:min(640px,86dvh);padding-left:16px;padding-right:16px}
+.mcard.askmodal>.mx{position:absolute;top:14px;right:14px;margin:0}
+.askhead{display:flex;align-items:center;gap:10px;margin:-4px 44px 8px 0}
+.askhead h2{margin:0;font-size:20px}
+.askhead small{color:var(--muted);font-weight:800;font-size:13px}
+.askav{flex:none;width:48px;height:48px;border-radius:50%;background:#DDF7E6;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.askav svg.mascot{width:44px;height:44px}
+.asklog{flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding:6px 2px 10px;-webkit-overflow-scrolling:touch}
+.askmsg{display:flex}
+.askmsg.me{justify-content:flex-end}
+.askb{max-width:88%;border-radius:18px;padding:10px 13px;font-size:15px;line-height:1.4;color:var(--ink);background:#F3EEFF;border-bottom-left-radius:6px}
+.askmsg.me .askb{background:#7C4DFF;color:#FFFFFE;border-bottom-left-radius:18px;border-bottom-right-radius:6px;font-weight:800}
+.mcard .askb p{color:var(--ink);margin:0 0 6px}
+.mcard .askb p:last-child{margin-bottom:0}
+.askh{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);margin:2px 0 6px}
+.askh:not(:first-child){margin-top:10px}
+.askchips{display:flex;flex-wrap:wrap;gap:6px}
+.askchip{display:inline-flex;align-items:center;gap:6px;max-width:100%;border:2px solid var(--line);background:#FFF;color:var(--ink);border-radius:99px;padding:7px 12px;font:inherit;font-size:13.5px;font-weight:800;cursor:pointer;text-align:left;min-height:38px}
+.askchip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.askchip .ic{flex:none;color:#7C4DFF}
+.askchip.askseen .ic{color:#22B573}.askchip.askerr .ic{color:#FF4F5E}.askchip.askunit .ic{color:#3D8BFF}
+.askul{margin:4px 0 6px;padding-left:20px;font-size:14px}
+.askul li{margin:2px 0}
+.askacts{display:flex;flex-direction:column;gap:0;margin-top:4px}
+.mcard .askacts .btn{margin-top:8px;font-size:13.5px;padding:12px 14px}
+.askwait{display:flex;gap:5px;padding:4px 2px}
+.askwait i{width:9px;height:9px;border-radius:50%;background:#7C4DFF;animation:aidot 1s infinite ease-in-out}
+.askwait i:nth-child(2){animation-delay:.15s}.askwait i:nth-child(3){animation-delay:.3s}
+.askbar{display:flex;gap:8px;align-items:center;padding-top:8px;border-top:2px solid var(--line)}
+.askbar .finput{flex:1;min-width:0;padding:11px 12px;font-size:16px}
+.askgo{flex:none;width:48px;height:48px;border-radius:14px;border:none;background:#7C4DFF;box-shadow:0 4px 0 #5A30D8;color:#FFFFFE;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.askgo:active{transform:translateY(4px);box-shadow:0 0 0 #5A30D8}
+.fxbtns{display:flex;flex-wrap:wrap;gap:6px}
+.fxpin{margin-top:8px;display:inline-flex;align-items:center;gap:6px;border:2px solid var(--line);border-radius:12px;background:var(--card);color:#178A57;font:inherit;font-size:13.5px;font-weight:900;padding:8px 12px;min-height:40px;cursor:pointer}
+.fxpin.on{background:#DDF7E6;border-color:#22B573}
+.eri.a{background:#22B573}
+/* v39.2 : réponse de Claude dans « Demande à Horang » (correction d'une phrase, règle du cours) */
+.askfix{display:flex;flex-direction:column;gap:3px;background:#FFF;border:2px solid var(--line);border-radius:14px;padding:8px 11px;margin:0 0 8px}
+.askfix .askh{margin:0 0 2px}
+.askfix s{color:#B3261E;font-weight:700;text-decoration-thickness:2px}
+.askfix .askright{color:#147A3D;font-weight:900;font-size:16px}
+.askfix small{color:var(--ink2);font-size:13.5px;line-height:1.35}
+.askfix.ok{border-color:#22B573}
+.mcard .askb .askrule{font-size:13.5px;color:var(--ink2);margin-top:4px}
+.mcard .askb .askw{font-size:13.5px;color:var(--ink2)}

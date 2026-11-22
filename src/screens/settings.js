@@ -6,6 +6,7 @@ import { KEY } from "../core/state.js";
 import { $, dkey, esc, yest } from "../core/util.js";
 import { level, lvlXp } from "../core/xp.js";
 import { pairOf } from "../exercises/generate.js";
+import { askFab } from "../features/ask.js";
 import { shareProgress } from "../features/coach.js";
 import { BADGES } from "../features/quests.js";
 import { KO_READY, UI } from "../i18n/locale.js";
@@ -55,6 +56,7 @@ function pageHtml(sub) {
   <div class="setrow"><span>Exercices de micro</span><button class="switch ${S.speakOff > Date.now() ? "" : "on"}" id="sMic" aria-label="Micro"></button></div>
   <div class="setrow"><span>Exercices d'écoute</span><button class="switch ${S.listenOff > Date.now() ? "" : "on"}" id="sListen" aria-label="Écoute"></button></div>
   <div class="setrow"><span>Vibrations (iPhone · Android)</span><button class="switch ${S.set.haptic ? "on" : ""}" id="sHap" aria-label="Vibrations"></button></div>
+  <div class="setrow"><span>Bulle « Demande à Horang »</span><button class="switch ${S.set.askOff ? "" : "on"}" id="sAsk" aria-label="Demande à Horang"></button></div>
   <div class="setrow"><span>Tester la voix</span><button class="btn ghost" id="sTest" style="padding:8px 14px">🔊 Écouter</button></div>
   `,
     );
@@ -235,6 +237,12 @@ function bindSettings() {
     S.set.rate = +e.target.value;
     save();
     say("Hello! This is how I sound.", "en-US");
+  };
+  $$("#sAsk").onclick = e => {
+    S.set.askOff = !S.set.askOff;
+    e.target.classList.toggle("on", !S.set.askOff);
+    save();
+    askFab("reglages");
   };
   $$("#sAuto").onclick = e => {
     S.set.auto = !S.set.auto;
