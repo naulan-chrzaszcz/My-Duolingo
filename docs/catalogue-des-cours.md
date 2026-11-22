@@ -1,4 +1,4 @@
-# Catalogue des cours et des unités (v39)
+# Catalogue des cours et des unités (v39.3)
 
 Généré à partir des données de l'application (`src/content/courses/*.json`) : 160 thèmes dans 6 cours. Chaque thème compte 18 étapes (la dernière est le bilan) et une version extrême. Le parcours affiche chaque thème comme 3 unités de 6 étapes (480 unités affichées) ; depuis la v35, chacune a son titre-objectif et son propre contenu (colonne « Unités affichées »). La colonne « Chapitre » est le niveau du thème (1 = les bases… 4 = expert) : le parcours affiche un chapitre à la fois. Les colonnes Vocabulaire, Phrases et QCM comptent les éléments du thème entier (depuis la v37, ils sont répartis entre les leçons, chacune ayant les siens ; le TOEIC a aussi des questions-réponses, des conversations et des textes, Voltaire des dictées) ; la colonne « Images » compte les mots illustrés (exercices en images et guide).
 
@@ -192,7 +192,7 @@ Généré à partir des données de l'application (`src/content/courses/*.json`)
 | 19 | Job interview | 4 | Present your experience, strengths, questions to ask | Present your experience · Sell your strengths · Ask the recruiter | 12 | 36 | 8 |  |
 | 20 | News, culture & complex sentences | 4 | dont, où, ce qui / ce que, passive voice, connectors | Use relative pronouns · Talk about the news · Discuss culture | 12 | 36 | 8 |  |
 
-## Notions de grammaire (v27, enrichies en v38 et v39) — phrases générées
+## Notions de grammaire (v27, enrichies en v38 et v39.3) — phrases générées
 
 Carte « 🧩 Notions de grammaire » de l'onglet Entraînement (anglais, Learn French, coréen) : 5 ou 6 notions, chacune découpée en règles avec mémo et taux de réussite. Les mêmes règles alimentent environ la moitié des QCM des leçons des unités indiquées dans `units` (et, pour une unité à sujet propre, dans le champ `g` de sa partie). Depuis la v38, chaque règle a au moins 8 gabarits, presque tous variables, et dans une partie d'entre eux la bonne réponse change avec l'indice tiré (yesterday → went, so far → have visited) ; l'ordre des exercices d'une séance est tiré au hasard.
 

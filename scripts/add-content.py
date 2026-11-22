@@ -10,7 +10,7 @@ Format :
   L: question | o1 ; o2 ; o3 | indexBon
   D: dictée
 Plusieurs traductions : « || en: … || ko: … ».
-Nouveau thème (v39) : « #+ Titre || traduction » crée le thème, suivi de ses champs puis de ses trois unités « ##+ Titre || traduction » :
+Nouveau thème (v39.3) : « #+ Titre || traduction » crée le thème, suivi de ses champs puis de ses trois unités « ##+ Titre || traduction » :
   lv: 0                       (niveau 0 à 3)
   after: Titre d'un thème     (place dans le parcours : juste après ce thème ; sinon à la fin de son niveau)
   d: description || traduction
@@ -56,7 +56,7 @@ def split_tr(s):
 
 
 ALLSRC = set()
-GRAM = {}  # thème -> notions de grammaire (v39)
+GRAM = {}  # thème -> notions de grammaire (v39.3)
 
 
 def put_tr(key, trs):
@@ -180,7 +180,7 @@ for no, l in enumerate(lines, 1):
     except Exception as ex:
         raise SystemExit(f"{path}:{no} {ex} : {s}")
 
-# v39 : thèmes créés, rangés à leur place (après « after », sinon à la fin de leur niveau)
+# v39.3 : thèmes créés, rangés à leur place (après « after », sinon à la fin de leur niveau)
 new = [U for U in C["units"] if "_after" in U]
 for U in new:
     C["units"].remove(U)

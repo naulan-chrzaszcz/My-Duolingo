@@ -20,6 +20,7 @@ import { ic } from "../ui/icons.ts";
 import { mascot } from "../ui/mascot.js";
 import { curCid, curSec, renderAll } from "../ui/router.js";
 import { closeModal, modal, toast } from "../ui/ui.js";
+import { chatPicker } from "../features/conversation.ts";
 
 const OR = "#FF9F1C",
   BL = "#3D8BFF",
@@ -74,6 +75,7 @@ const TMAP = {
   "Sprint 60 secondes": ["Défis & IA", "timer", OR],
   "Leçon bilan": ["Défis & IA", "target", OR],
   "Révision IA illimitée": ["Défis & IA", "spark", VI],
+  "Conversation avec Horang": ["Défis & IA", "chat", GR],
   "Entraînement à thème": ["Défis & IA", "palette", PK],
 };
 export function renderTrain(v) {
@@ -278,6 +280,13 @@ export function renderTrain(v) {
     `Des exercices nouveaux à chaque séance, générés à partir de tout ce que tu as vu (${COURSES[curCid()].name}).`,
     "IA",
     () => startAI(curCid(), unlockedUnits(curCid()), { mode: "train" }),
+  );
+  add(
+    "💬",
+    "Conversation avec Horang",
+    "Une situation de la vie réelle : Horang joue l'autre personne, tu réponds à l'écrit ou au micro, puis il corrige tes phrases.",
+    "IA",
+    () => chatPicker(),
   );
   add("⏱️", "Sprint 60 secondes", `Un maximum de bonnes réponses en 1 minute. Record : ${S.sprint}`, "Défi", () =>
     trainSprint(),

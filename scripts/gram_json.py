@@ -1,4 +1,4 @@
-"""Écrit content/grammar/<langue>.json dans sa mise en forme d'origine (v39) :
+"""Écrit content/grammar/<langue>.json dans sa mise en forme d'origine (v39.3) :
 objets et listes d'objets sur plusieurs lignes, une ligne par gabarit, listes de mots sur une ligne, règles « r » une par ligne."""
 import json
 

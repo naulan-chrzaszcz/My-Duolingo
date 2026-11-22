@@ -145,7 +145,7 @@ Insérer une unité au milieu est possible : la progression des profils est reca
 - Les autres modules l'importent avec l'extension `.js` (`import { hgCompose } from './hangul.js'`) : esbuild trouve le `.ts`.
 - `npm run check` vérifie les types des fichiers `.ts`. Les types communs sont dans `src/types.ts`.
 
-## Créer ou enrichir un thème avec `scripts/add-content.py` (v39)
+## Créer ou enrichir un thème avec `scripts/add-content.py` (v39.3)
 
 Le plus simple pour ajouter du contenu traduit : écrire un fichier texte et lancer `python3 scripts/add-content.py fichier.txt` (`--dry` pour essayer sans écrire).
 

@@ -1,4 +1,4 @@
-"""Remplace ou complète des phrases existantes d'un cours (v39), avec leur traduction d'interface.
+"""Remplace ou complète des phrases existantes d'un cours (v39.3), avec leur traduction d'interface.
 Format (une ligne par phrase, champs séparés par « | ») :
   cid: en-daily
   = Ancienne phrase française | nouvelle phrase française | traduction 1 | traduction 2… || 한국어

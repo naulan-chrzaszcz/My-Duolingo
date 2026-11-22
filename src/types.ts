@@ -127,6 +127,20 @@ export interface State {
   wear: string;
   bank: Record<string, unknown[]>;
   mist: Record<string, unknown[]>;
+  /** Centres d'intérêt choisis (identifiants de features/interests.ts) et texte libre (v39). */
+  likes?: string[];
+  likeFree?: string;
+  /** Jour (dkey) où la leçon du jour a été proposée (v39). */
+  dlDay?: string;
+  /** Objectif d'apprentissage (identifiant de features/personalize.ts) et étapes de personnalisation (v39). */
+  why?: string;
+  pzSeen?: boolean;
+  pzDone?: boolean;
+  /** Semaine (lundi, dkey) où le bilan a été montré, et dernier bilan (v39.1). */
+  wkSeen?: string;
+  /** Conversations terminées avec l'IA (v39.2). */
+  chats?: number;
+  wkLast?: { wk: string; bilan: string; obj: string[]; src: "ia" | "local"; xp: number; days: number } | null;
   badges: string[];
   set: {
     rate: number;

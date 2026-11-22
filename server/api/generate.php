@@ -72,9 +72,14 @@ $bilan  = !empty($in['bilan']);   // v33 : leçon bilan sur tout ce qui a été 
 $errors = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 300); }, (array)($in['errors'] ?? [])), 0, 25);
 $coach  = count($errors) > 0;
 $theme  = $clean($in['theme'] ?? '', 80);
+// v39 : centres d'intérêt de l'élève (8 au plus, 60 caractères chacun) et leçon du jour
+$likes  = array_values(array_filter(array_slice(array_map(function ($s) use ($clean) { return $clean($s, 60); }, array_filter((array)($in['likes'] ?? []), 'is_string')), 0, 8), 'strlen'));
+$dailyL = !empty($in['daily']);
+$GOALS  = ['trip' => 'voyager et se débrouiller sur place', 'job' => 'utiliser la langue dans son travail', 'exam' => 'réussir un examen (TOEIC, Certificat Voltaire, TOPIK…)', 'study' => 'réussir ses études', 'people' => 'parler avec des proches ou des amis', 'fun' => "le plaisir d'apprendre (culture, séries, musique)"];
+$why    = is_string($in['why'] ?? null) && isset($GOALS[$in['why']]) ? $GOALS[$in['why']] : '';
 $mode = (string)($in['mode'] ?? '');
 // Seuls les types de génération de l'application sont acceptés (pas de prompt libre)
-if (!in_array($mode, ['', 'exercise', 'word', 'write', 'unit', 'story', 'explain'], true)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_mode']); exit; }
+if (!in_array($mode, ['', 'exercise', 'word', 'write', 'unit', 'story', 'explain', 'weekly', 'chat', 'chatfix'], true)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_mode']); exit; }
 $wordMode = $mode === 'word';
 // règles de grammaire les moins réussies (notions v27), envoyées par l'application
 $weak   = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 120); }, (array)($in['weak'] ?? [])), 0, 5);
@@ -99,6 +104,9 @@ $prompt = "Tu es le coach d'une application d'apprentissage façon Duolingo. L'�
   . "Éléments déjà vus par l'élève (réutilise ce vocabulaire et ces structures dans des phrases NOUVELLES, jamais identiques) :\n- "
   . implode("\n- ", $seen) . "\n\n"
   . ($bilan ? "Séance BILAN : couvre l'ensemble des unités listées (pas seulement la dernière), en donnant plus de place aux erreurs récurrentes et aux mots que l'élève doit revoir, placés en tête de la liste ci-dessus.\n\n" : '')
+  . ($dailyL ? "Leçon du jour : une leçon INÉDITE, construite autour d'une situation concrète et nouvelle (si possible liée à un centre d'intérêt de l'élève), qui réutilise ce qu'il a déjà vu et y ajoute quelques mots nouveaux utiles.\n\n" : '')
+  . ($why !== '' ? "Objectif de l'élève : $why. Choisis des situations utiles pour cet objectif.\n\n" : '')
+  . ($likes ? "Centres d'intérêt de l'élève : " . implode(', ', $likes) . ". Situe une bonne partie des phrases, des dialogues et des exemples dans ces domaines, quand cela reste naturel.\n\n" : '')
   . ($theme !== '' ? "Thème imposé par l'élève : « $theme ». TOUS les exercices doivent porter sur ce thème (vocabulaire, situations, phrases), au niveau indiqué, en réutilisant si possible les structures déjà vues.\n\n" : '')
   . ($coach ? "Erreurs récentes de l'élève (exercice | réponse attendue | réponse donnée) :\n- " . implode("\n- ", $errors)
       . "\n\nAnalyse ces erreurs et repère les erreurs RÉCURRENTES : mots ou vocabulaire, construction des phrases, temps et conjugaison, accords, prépositions, orthographe, écoute. Dans \"diag\", écris un diagnostic bienveillant en français (2 à 3 phrases, tutoiement). Dans \"focus\", liste 2 à 4 points faibles courts. Au moins 70 % des exercices doivent cibler ces points faibles, sous des formes variées.\n\n" : '')
@@ -154,11 +162,47 @@ if ($mode === 'story') {
   $fr = $lang === 'fr-FR' && empty($in['fle']);
   $prompt = "Tu écris une courte histoire dialoguée pour une application d'apprentissage façon Duolingo. L'élève est francophone." . ($fr ? " Il prépare le Certificat Voltaire : l'histoire est en français et sert à repérer des pièges d'orthographe et de grammaire." : " Il apprend le $L.")
     . "\nNiveau : $level." . ($theme !== '' ? " Thème : « $theme »." : " Choisis une situation originale de la vie quotidienne ou professionnelle.")
+    . ($words ? "\nMots que l'élève doit revoir : " . implode(', ', $words) . ". Utilise-les tous dans les répliques, dans leur sens habituel, et consacre au moins une question à l'un d'eux." : '')
+    . ($likes ? "\nCentres d'intérêt de l'élève : " . implode(', ', $likes) . ". Situe une bonne partie des phrases, des dialogues et des exemples dans ces domaines, quand cela reste naturel." : '')
     . "\n\nRéponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n"
     . '{"t":"titre court en français","ic":"un emoji","cast":{"Prénom":["M ou W","emoji du personnage"]},"items":[{"s":"Prénom","t":"réplique' . ($fr ? '' : ' en ' . $L) . '","fr":"' . ($fr ? '' : 'traduction française') . '"},{"q":"question","o":["bonne réponse","réponse fausse","réponse fausse"],"a":0}]}'
     . "\nRègles : 2 ou 3 personnages (M = homme, W = femme) ; 8 à 12 répliques naturelles et 100 % correctes, adaptées au niveau ; 3 questions intercalées dans l'histoire, juste après les répliques concernées, avec une seule bonne réponse, toujours en première position dans \"o\" (\"a\":0). "
     . ($fr ? "Les répliques sont en français, \"fr\" est une chaîne vide, et chaque question porte sur un piège d'orthographe ou de grammaire de la réplique qui précède."
       : ($lang === 'ko-KR' ? "Les questions sont en français et vérifient la compréhension ; ajoute la traduction française de chaque réplique dans \"fr\"." : "Les questions sont en anglais et vérifient la compréhension ; ajoute la traduction française de chaque réplique dans \"fr\"."));
+}
+
+// ---- Mode « bilan de la semaine » (v39.1) : 5 nombres, erreurs, objectif et centres d'intérêt ----
+if ($mode === 'weekly') {
+  $n = array_map(function ($x) { return max(0, min(100000, (int)$x)); }, array_slice(array_pad(array_values((array)($in['stats'] ?? [])), 5, 0), 0, 5));
+  $prompt = "Tu es le coach bienveillant d'une application d'apprentissage façon Duolingo. L'élève est francophone et apprend le $L (cours : $course, niveau : $level).\nSa semaine passée : {$n[0]} XP (semaine d'avant : {$n[1]} XP), {$n[2]} jours d'activité sur 7, série de {$n[3]} jours, {$n[4]} mots à retenir à revoir.\n"
+    . ($why !== '' ? "Objectif de l'élève : $why.\n" : '')
+    . ($likes ? "Centres d'intérêt de l'élève : " . implode(', ', $likes) . ". Situe une bonne partie des phrases, des dialogues et des exemples dans ces domaines, quand cela reste naturel.\n\n" : "\n")
+    . ($errors ? "Erreurs de la semaine (exercice | réponse attendue | réponse donnée) :\n- " . implode("\n- ", array_slice($errors, 0, 15)) . "\n\n" : "Aucune erreur enregistrée cette semaine.\n\n")
+    . "Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n{\"bilan\":\"2 à 3 phrases\",\"objectifs\":[\"objectif 1\",\"objectif 2\",\"objectif 3\"]}\n"
+    . "Le bilan est en français, au tutoiement, bienveillant et précis (progrès, point fort, erreur qui revient). Exactement 3 objectifs courts (moins de 90 caractères), concrets et réalisables dans l'application (leçons, révisions, mots à retenir, histoires), dont au moins un sur l'erreur la plus fréquente.";
+}
+
+// ---- Modes « conversation » (v39.2) : une réplique du personnage, puis la correction de l'élève ----
+if ($mode === 'chat' || $mode === 'chatfix') {
+  $scene = $clean($in['scene'] ?? '', 160);
+  $hist = [];
+  foreach (array_slice((array)($in['hist'] ?? []), -20) as $t) {
+    if (is_array($t) && in_array($t[0] ?? '', ['P', 'E'], true) && is_string($t[1] ?? null) && trim($t[1]) !== '') $hist[] = $t[0] . ' : ' . $clean($t[1], 300);
+  }
+  if ($scene === '' || ($mode === 'chatfix' && !$hist)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_request']); exit; }
+  if ($mode === 'chat') {
+    $prompt = "Tu joues un personnage dans une conversation d'entraînement d'une application d'apprentissage façon Duolingo. L'élève est francophone et apprend le $L (niveau : $level).\nSituation : « $scene ». Tu joues l'autre personne de la situation, jamais l'élève.\n"
+      . ($why !== '' ? "Objectif de l'élève : $why.\n" : '')
+      . ($likes ? "Centres d'intérêt de l'élève : " . implode(', ', $likes) . ". Situe une bonne partie des phrases, des dialogues et des exemples dans ces domaines, quand cela reste naturel.\n\n" : '')
+      . ($hist ? "Conversation jusqu'ici (P = ton personnage, E = l'élève) :\n" . implode("\n", $hist) . "\n\n" : "La conversation commence : écris la première réplique de ton personnage.\n\n")
+      . "Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n{\"r\":\"ta prochaine réplique en $L\",\"fr\":\"sa traduction française\",\"aide\":\"une réponse possible de l'élève en $L, simple et naturelle\",\"fin\":false}\n"
+      . "Règles : une seule réplique courte (1 ou 2 phrases), naturelle et 100 % correcte, adaptée au niveau ; ne corrige pas l'élève pendant la conversation et réponds comme une vraie personne, même si sa phrase contient des fautes ; pose des questions pour le faire parler ; \"fin\" vaut true seulement quand la situation est naturellement terminée, après au moins 5 répliques de l'élève."
+      . ($lang === 'fr-FR' ? ' La conversation est en français : "fr" est une chaîne vide.' : '');
+  } else {
+    $prompt = "Tu es professeur de $L. Voici une conversation d'entraînement entre un personnage (P) et un élève francophone (E) de niveau $level, situation « $scene » :\n" . implode("\n", $hist)
+      . "\n\nCorrige les répliques de l'élève. Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n{\"bilan\":\"2 phrases bienveillantes en français, au tutoiement\",\"fautes\":[[\"réplique de l'élève\",\"réplique corrigée\",\"traduction française de la réplique corrigée\",\"explication courte en français\"]],\"mieux\":[[\"ce que l'élève a dit\",\"tournure plus naturelle en $L\"]],\"mots\":[[\"mot ou expression utile en $L vu dans la conversation\",\"traduction française\"]]}\n"
+      . 'Règles : dans "fautes", seulement les vraies fautes (8 au plus, liste vide s\'il n\'y en a pas) ; dans "mieux", 2 ou 3 tournures plus naturelles ; dans "mots", 3 à 5 mots ou expressions utiles.';
+  }
 }
 
 // ---- Appel à l'API Claude ----

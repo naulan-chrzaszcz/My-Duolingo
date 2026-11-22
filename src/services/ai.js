@@ -11,7 +11,9 @@ import { EN_SUFFIX, KO_SUFFIX, NONFR, UI } from "../i18n/locale.js";
 import { extremize } from "../lesson/build.js";
 import { L, dueReviews, openSession } from "../lesson/engine.js";
 import { mascot } from "../ui/mascot.js";
+import { likesList } from "../features/interests.ts";
 import { closeModal, modal, toast } from "../ui/ui.js";
+import { GOALS, goalId } from "../features/personalize.ts";
 
 // ===================== GÉNÉRATION PAR IA =====================
 // 1) Clé API Claude personnelle, saisie dans le profil (appel direct à l'API, ou via le relais api/generate.php).
@@ -186,6 +188,44 @@ export async function aiDetect() {
   if (AI.srv && navigator.onLine) return (AI.mode = "server");
   return (AI.mode = "local");
 }
+/**
+ * Enregistre et teste une clé Claude pour le profil courant (Paramètres › Mon Claude, personnalisation du profil).
+ * Renvoie la classe du message (ok, bad ou vide) et son texte. Une clé refusée (401) n'est pas gardée.
+ */
+export async function aiConnect(key, model) {
+  const k = String(key || "").trim();
+  if (!k) return { cls: "bad", text: "Colle ta clé (elle commence par sk-ant-)." };
+  if (!/^sk-ant-[A-Za-z0-9_\-]{20,}$/.test(k))
+    return {
+      cls: "bad",
+      text: "Ça ne ressemble pas à une clé Claude : elle commence par « sk-ant- » et fait une centaine de caractères. Copie-la en entier.",
+    };
+  const prev = aiCfg();
+  aiSetCfg({ key: k, model: model || prev.model || "auto" });
+  await aiDetect();
+  try {
+    await aiDirect(
+      'Réponds uniquement par le mot JSON {"ok":true}.',
+      { mode: "word", lang: "en-US", words: ["hello"] },
+      "quick",
+      25000,
+      20,
+    );
+    return { cls: "ok", text: "✅ Clé valide : ton Claude est connecté !" };
+  } catch (e) {
+    const fb = e && e.fallback;
+    if (e && e.status === 401 && prev.key !== k) aiSetCfg(prev.key ? prev : null);
+    return {
+      cls: fb ? "" : "bad",
+      text: fb
+        ? "Clé enregistrée. Ici l'appel direct est bloqué : Speakeasy utilisera Claude de la page."
+        : e.userMsg ||
+          (e.message === "timeout"
+            ? "⏳ Pas de réponse (réseau ?). La clé est enregistrée, réessaie plus tard."
+            : "Clé enregistrée, mais le test a échoué (" + esc(String(e.message || e).slice(0, 80)) + ")."),
+    };
+  }
+}
 export function aiLabel(m) {
   return m === "key"
     ? "✨ Ta clé Claude (" + (AI_MODELS[aiCfg().model || "auto"] || AI_MODELS.auto)[0].split(" ·")[0] + ")"
@@ -238,8 +278,21 @@ export function aiRequest(cid, units, errors, theme, opt) {
     bilan: !!opt.bilan,
     errors: errs,
     theme: (theme || "").slice(0, 80),
+    // v39 : centres d'intérêt (sauf thème imposé) et leçon du jour
+    likes: theme ? [] : likesList(),
+    why: goalId(),
+    daily: !!opt.daily,
   };
 }
+// v39 : mêmes textes dans server/api/generate.php
+export const DAILY_TXT =
+  "Leçon du jour : une leçon INÉDITE, construite autour d'une situation concrète et nouvelle (si possible liée à un centre d'intérêt de l'élève), qui réutilise ce qu'il a déjà vu et y ajoute quelques mots nouveaux utiles.\n\n";
+// lu à la construction du prompt (pas au chargement : personalize.ts importe aussi ce module)
+export const goalTxt = id => (GOALS.find(g => g[0] === id) || [])[3] || "";
+export const likesText = likes =>
+  "Centres d'intérêt de l'élève : " +
+  likes.join(", ") +
+  ". Situe une bonne partie des phrases, des dialogues et des exemples dans ces domaines, quand cela reste naturel.\n\n";
 export function aiPrompt(r) {
   const L = { "en-US": "anglais", "fr-FR": "français", "ko-KR": "coréen" }[r.lang];
   const coach = r.errors && r.errors.length > 0;
@@ -294,6 +347,11 @@ export function aiPrompt(r) {
     "\n\n" +
     (r.bilan
       ? "Séance BILAN : couvre l'ensemble des unités listées (pas seulement la dernière), en donnant plus de place aux erreurs récurrentes et aux mots que l'élève doit revoir, placés en tête de la liste ci-dessus.\n\n"
+      : "") +
+    (r.daily ? DAILY_TXT : "") +
+    (r.likes && r.likes.length ? likesText(r.likes) : "") +
+    (r.why && goalTxt(r.why)
+      ? "Objectif de l'élève : " + goalTxt(r.why) + ". Choisis des situations utiles pour cet objectif.\n\n"
       : "") +
     (r.theme
       ? "Thème imposé par l'élève : « " +
@@ -557,7 +615,7 @@ export async function startAI(cid, units, cfg) {
   const theme = cfg.theme || "";
   const errs = theme ? [] : (S.elog[cid] || []).slice(-25);
   modal(
-    `<div class="mcenter">${mascot("wow", "dance")}<h2>${cfg.bilan ? "Horang prépare ta leçon bilan…" : coach ? "🧠 Horang analyse tes erreurs…" : theme ? "🎨 Thème : " + esc(theme) : "✨ Horang prépare tes exercices…"}</h2><p>${coach ? "Recherche de tes erreurs récurrentes et création d'exercices ciblés." : "Création d'exercices inédits à partir de ce que tu as appris."}</p><div class="aiload"><i></i><i></i><i></i></div></div>`,
+    `<div class="mcenter">${mascot("wow", "dance")}<h2>${cfg.daily ? "Horang prépare ta leçon du jour…" : cfg.bilan ? "Horang prépare ta leçon bilan…" : coach ? "🧠 Horang analyse tes erreurs…" : theme ? "🎨 Thème : " + esc(theme) : "✨ Horang prépare tes exercices…"}</h2><p>${coach ? "Recherche de tes erreurs récurrentes et création d'exercices ciblés." : "Création d'exercices inédits à partir de ce que tu as appris."}</p><div class="aiload"><i></i><i></i><i></i></div></div>`,
     "",
     true,
   );
@@ -569,7 +627,7 @@ export async function startAI(cid, units, cfg) {
       units,
       errs.length ? errs : null,
       theme,
-      cfg.bilan ? { bilan: true, words: cfg.words } : null,
+      cfg.bilan ? { bilan: true, words: cfg.words } : cfg.daily ? { daily: true } : null,
     );
     if (G) src = "ia";
   } catch (e) {}
