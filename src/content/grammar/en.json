@@ -941,7 +941,18 @@
    "Faire faire : artisans & services": ["en.s.caus", "en.s.pass"],
    "Souvenirs & nostalgie": ["en.t.perf", "en.s.misc"],
    "Société & environnement": ["en.l.cause", "en.t.perf", "en.l.opp"],
-   "Registres, ironie & argot": ["en.m.adv", "en.s.quest"]
+   "Registres, ironie & argot": ["en.m.adv", "en.s.quest"],
+   "Relations & vie sentimentale": ["en.p.dur", "en.w.ger", "en.p.verb"],
+   "Médias, actus & réseaux sociaux": ["en.s.pass", "en.s.rep"],
+   "Études & apprentissage": ["en.s.rel", "en.w.form"],
+   "Argent, budget & consommation": ["en.w.quant", "en.w.comp", "en.l.cause"],
+   "Sport & forme": ["en.t.pres", "en.p.dur", "en.m.abil"],
+   "Réclamations & service client": ["en.m.adv", "en.t.past", "en.s.pass"],
+   "Fêtes & traditions": ["en.p.time", "en.t.fut", "en.w.ger"],
+   "Décrire les gens & les lieux": ["en.t.pres", "en.p.place"],
+   "Météo & saisons": ["en.t.pres", "en.p.time", "en.t.fut"],
+   "Émotions & ressentis": ["en.t.pres", "en.w.form"],
+   "Hier & le week-end dernier": ["en.t.past"]
   },
   "en-pro": {
    "Réunions & appels": ["en.m.adv", "en.t.fut"],
