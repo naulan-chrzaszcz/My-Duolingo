@@ -42,7 +42,9 @@
     ],
     [
      "Je travaille dans le marketing.",
-     "I work in marketing."
+     "I work in marketing.",
+     "I'm in marketing.",
+     "I work in the marketing field."
     ],
     [
      "J'habite à Paris depuis deux ans.",
@@ -73,7 +75,9 @@
     ],
     [
      "Tu parles anglais ?",
-     "Do you speak English?"
+     "Do you speak English?",
+     "Can you speak English?",
+     "Do you speak any English?"
     ],
     [
      "J'habite près du centre-ville.",
@@ -114,7 +118,9 @@
     ],
     [
      "Comment s'est passé ton week-end ?",
-     "How was your weekend?"
+     "How was your weekend?",
+     "How did your weekend go?",
+     "Did you have a good weekend?"
     ],
     [
      "Pas mal, et toi ?",
@@ -123,15 +129,20 @@
     ],
     [
      "Bonne nuit, à demain.",
-     "Good night, see you tomorrow."
+     "Good night, see you tomorrow.",
+     "Good night, see you in the morning.",
+     "Night, see you tomorrow."
     ],
     [
      "Je suis né à Lyon.",
-     "I was born in Lyon."
+     "I was born in Lyon.",
+     "I was born in Lyon, France."
     ],
     [
      "Ma famille vit en Espagne.",
-     "My family lives in Spain."
+     "My family lives in Spain.",
+     "My family lives in Spain now.",
+     "My family is in Spain."
     ],
     [
      "Je parle un peu anglais.",
@@ -140,7 +151,9 @@
     ],
     [
      "Tu habites où ?",
-     "Where do you live?"
+     "Where do you live?",
+     "Where are you living?",
+     "Where do you live now?"
     ],
     [
      "C'est une petite ville au bord de la mer.",
@@ -160,7 +173,9 @@
     ],
     [
      "Je travaille à domicile.",
-     "I work from home."
+     "I work from home.",
+     "I work at home.",
+     "I work remotely."
     ],
     [
      "Je cherche un nouveau travail.",
@@ -180,7 +195,9 @@
     ],
     [
      "Je travaille à temps partiel.",
-     "I work part-time."
+     "I work part-time.",
+     "I have a part-time job.",
+     "I work part time."
     ],
     [
      "Bonjour, monsieur.",
@@ -195,12 +212,76 @@
     ],
     [
      "À bientôt !",
-     "See you soon!"
+     "See you soon!",
+     "See you later!",
+     "Talk to you soon!"
     ],
     [
      "Je suis canadienne, mais je vis en France.",
      "I'm Canadian, but I live in France.",
      "I am Canadian, but I live in France."
+    ],
+    [
+     "Bonjour à tous, je suis le nouveau voisin.",
+     "Hi everyone, I'm the new neighbor.",
+     "Hello everyone, I'm the new neighbour."
+    ],
+    [
+     "Excusez-moi, on se connaît ?",
+     "Excuse me, do we know each other?",
+     "Sorry, have we met before?"
+    ],
+    [
+     "Comment vas-tu depuis le temps ?",
+     "How have you been?",
+     "How have you been all this time?"
+    ],
+    [
+     "Je dois y aller, à la prochaine !",
+     "I have to go, see you next time!",
+     "I've got to go, see you around!"
+    ],
+    [
+     "Je suis à moitié français, à moitié coréen.",
+     "I'm half French, half Korean.",
+     "I'm half French and half Korean."
+    ],
+    [
+     "J'ai grandi dans le sud de la France.",
+     "I grew up in the south of France.",
+     "I grew up in southern France."
+    ],
+    [
+     "Tu es d'ici ?",
+     "Are you from around here?",
+     "Are you from here?"
+    ],
+    [
+     "Je parle français, anglais et un peu de coréen.",
+     "I speak French, English and a little Korean.",
+     "I speak French, English, and a bit of Korean."
+    ],
+    [
+     "Je suis au chômage en ce moment.",
+     "I'm unemployed at the moment.",
+     "I'm out of work right now.",
+     "I'm between jobs at the moment."
+    ],
+    [
+     "Je travaille comme serveuse le week-end.",
+     "I work as a waitress on weekends.",
+     "I work as a server on the weekends."
+    ],
+    [
+     "Je suis à la retraite depuis l'an dernier.",
+     "I've been retired since last year.",
+     "I retired last year."
+    ],
+    [
+     "Je suis développeur dans une start-up.",
+     "I'm a developer at a startup.",
+     "I'm a developer in a start-up.",
+     "I work as a developer at a startup."
     ]
    ],
    "v": [
@@ -403,7 +484,11 @@
       21,
       34,
       35,
-      36
+      36,
+      38,
+      39,
+      40,
+      41
      ],
      "v": [
       0,
@@ -436,7 +521,11 @@
       25,
       26,
       27,
-      37
+      37,
+      42,
+      43,
+      44,
+      45
      ],
      "v": [
       4,
@@ -472,7 +561,11 @@
       30,
       31,
       32,
-      33
+      33,
+      46,
+      47,
+      48,
+      49
      ],
      "v": [
       3,
@@ -525,7 +618,9 @@
     ],
     [
      "Avez-vous une table pour deux ?",
-     "Do you have a table for two?"
+     "Do you have a table for two?",
+     "Have you got a table for two?",
+     "Do you have a table for two people?"
     ],
     [
      "Je suis allergique aux noix.",
@@ -573,11 +668,15 @@
     ],
     [
      "À quelle heure fermez-vous ?",
-     "What time do you close?"
+     "What time do you close?",
+     "When do you close?",
+     "What time are you closing?"
     ],
     [
      "Nous sommes quatre.",
-     "There are four of us."
+     "There are four of us.",
+     "We're four people.",
+     "We are a party of four."
     ],
     [
      "Je peux payer par carte ?",
@@ -586,7 +685,8 @@
     ],
     [
      "Gardez la monnaie.",
-     "Keep the change."
+     "Keep the change.",
+     "You can keep the change."
     ],
     [
      "Un jus d'orange, s'il vous plaît.",
@@ -595,7 +695,9 @@
     ],
     [
      "Avec du lait, s'il vous plaît.",
-     "With milk, please."
+     "With milk, please.",
+     "With some milk, please.",
+     "With milk, thanks."
     ],
     [
      "Je vais prendre un grand café.",
@@ -693,6 +795,66 @@
      "Une table près de la fenêtre, s'il vous plaît.",
      "A table by the window, please.",
      "A table near the window, please."
+    ],
+    [
+     "Un café au lait, s'il vous plaît.",
+     "A latte, please.",
+     "A coffee with milk, please."
+    ],
+    [
+     "Vous avez du lait d'avoine ?",
+     "Do you have oat milk?",
+     "Have you got oat milk?"
+    ],
+    [
+     "Je peux avoir une paille ?",
+     "Can I have a straw?",
+     "Could I get a straw?"
+    ],
+    [
+     "Quelle taille ? Petit, moyen ou grand ?",
+     "What size? Small, medium or large?",
+     "Which size? Small, medium, or large?"
+    ],
+    [
+     "On a réservé pour vingt heures.",
+     "We have a reservation for eight o'clock.",
+     "We booked for eight o'clock."
+    ],
+    [
+     "Je voudrais annuler ma réservation.",
+     "I'd like to cancel my reservation.",
+     "I would like to cancel my booking."
+    ],
+    [
+     "Vous avez un menu végétarien ?",
+     "Do you have a vegetarian menu?",
+     "Do you have any vegetarian dishes?"
+    ],
+    [
+     "Le steak, bien cuit, s'il vous plaît.",
+     "The steak, well done, please.",
+     "I'll have the steak well done, please."
+    ],
+    [
+     "On peut payer séparément ?",
+     "Can we pay separately?",
+     "Could we pay separately?"
+    ],
+    [
+     "Le pourboire n'est pas obligatoire.",
+     "Tipping isn't required.",
+     "The tip isn't mandatory."
+    ],
+    [
+     "Je crois qu'on nous a compté un dessert en trop.",
+     "I think we were charged for an extra dessert.",
+     "I think there's an extra dessert on the bill."
+    ],
+    [
+     "Vous pouvez m'apporter un reçu ?",
+     "Could you bring me a receipt?",
+     "Can I get a receipt?"
     ]
    ],
    "v": [
@@ -904,7 +1066,11 @@
       20,
       21,
       34,
-      35
+      35,
+      37,
+      38,
+      39,
+      40
      ],
      "v": [
       1,
@@ -947,7 +1113,11 @@
       25,
       26,
       27,
-      36
+      36,
+      41,
+      42,
+      43,
+      44
      ],
      "v": [
       4,
@@ -986,7 +1156,11 @@
       30,
       31,
       32,
-      33
+      33,
+      45,
+      46,
+      47,
+      48
      ],
      "v": [
       0,
@@ -1033,7 +1207,8 @@
     ],
     [
      "Mon meilleur ami habite à Londres.",
-     "My best friend lives in London."
+     "My best friend lives in London.",
+     "My best friend lives in London now."
     ],
     [
      "Elle a vingt-huit ans.",
@@ -1081,15 +1256,18 @@
     ],
     [
      "Ma sœur a les cheveux longs.",
-     "My sister has long hair."
+     "My sister has long hair.",
+     "My sister's got long hair."
     ],
     [
      "Quel âge a ta fille ?",
-     "How old is your daughter?"
+     "How old is your daughter?",
+     "How old's your daughter?"
     ],
     [
      "Mes grands-parents sont à la retraite.",
-     "My grandparents are retired."
+     "My grandparents are retired.",
+     "My grandparents have retired."
     ],
     [
      "On se connaît depuis dix ans.",
@@ -1118,7 +1296,8 @@
     ],
     [
      "Mes parents habitent à la campagne.",
-     "My parents live in the countryside."
+     "My parents live in the countryside.",
+     "My parents live in the country."
     ],
     [
      "Je suis l'aîné.",
@@ -1133,7 +1312,8 @@
     ],
     [
      "Mon oncle vit au Canada.",
-     "My uncle lives in Canada."
+     "My uncle lives in Canada.",
+     "My uncle is living in Canada."
     ],
     [
      "Mon père est très drôle.",
@@ -1147,11 +1327,13 @@
     ],
     [
      "Il porte des lunettes.",
-     "He wears glasses."
+     "He wears glasses.",
+     "He's wearing glasses."
     ],
     [
      "Mon fils a les yeux bleus.",
-     "My son has blue eyes."
+     "My son has blue eyes.",
+     "My son's got blue eyes."
     ],
     [
      "Ma grand-mère est très gentille.",
@@ -1195,7 +1377,9 @@
     ],
     [
      "Ma tante est médecin.",
-     "My aunt is a doctor."
+     "My aunt is a doctor.",
+     "My aunt's a doctor.",
+     "My aunt works as a doctor."
     ],
     [
      "J'ai deux cousins en Belgique.",
@@ -1204,12 +1388,74 @@
     ],
     [
      "Mes grands-parents habitent avec nous.",
-     "My grandparents live with us."
+     "My grandparents live with us.",
+     "My grandparents are living with us."
     ],
     [
      "Mon cousin est grand et mince.",
      "My cousin is tall and thin.",
      "My cousin is tall and slim."
+    ],
+    [
+     "Je suis le cadet de la famille.",
+     "I'm the youngest in the family.",
+     "I'm the youngest child."
+    ],
+    [
+     "Ma sœur et moi, on est jumelles.",
+     "My sister and I are twins.",
+     "My sister and I are twin sisters."
+    ],
+    [
+     "Mes parents sont divorcés.",
+     "My parents are divorced.",
+     "My parents got divorced."
+    ],
+    [
+     "On a un chien et deux chats.",
+     "We have a dog and two cats.",
+     "We've got a dog and two cats."
+    ],
+    [
+     "Mon oncle est un peu bavard.",
+     "My uncle is a bit chatty.",
+     "My uncle talks a lot.",
+     "My uncle is a little talkative."
+    ],
+    [
+     "Ma nièce a trois ans.",
+     "My niece is three years old.",
+     "My niece is three."
+    ],
+    [
+     "Mon père est plus âgé que ma mère.",
+     "My father is older than my mother.",
+     "My dad is older than my mom."
+    ],
+    [
+     "Ma grand-mère a quatre-vingt-dix ans.",
+     "My grandmother is ninety.",
+     "My grandma is ninety years old."
+    ],
+    [
+     "On se voit moins depuis qu'il a déménagé.",
+     "We see each other less since he moved.",
+     "We've seen each other less since he moved away."
+    ],
+    [
+     "C'est un ami d'enfance.",
+     "He's a childhood friend.",
+     "He's a friend from my childhood."
+    ],
+    [
+     "Mes amis viennent dîner ce soir.",
+     "My friends are coming over for dinner tonight.",
+     "My friends are coming to dinner tonight."
+    ],
+    [
+     "On fait du sport ensemble le mardi.",
+     "We work out together on Tuesdays.",
+     "We exercise together on Tuesdays."
     ]
    ],
    "v": [
@@ -1415,7 +1661,11 @@
       21,
       34,
       35,
-      36
+      36,
+      38,
+      39,
+      40,
+      41
      ],
      "v": [
       0,
@@ -1456,7 +1706,11 @@
       25,
       26,
       27,
-      37
+      37,
+      42,
+      43,
+      44,
+      45
      ],
      "v": [
       2,
@@ -1489,7 +1743,11 @@
       30,
       31,
       32,
-      33
+      33,
+      46,
+      47,
+      48,
+      49
      ],
      "v": [
       5,
@@ -2193,7 +2451,9 @@
     ],
     [
      "Je m'habille rapidement.",
-     "I get dressed quickly."
+     "I get dressed quickly.",
+     "I get dressed fast.",
+     "I dress quickly."
     ],
     [
      "Je vais au travail à vélo.",
@@ -2266,6 +2526,67 @@
      "Je me réveille avant mon réveil.",
      "I wake up before my alarm.",
      "I wake up before my alarm goes off."
+    ],
+    [
+     "Il est sept heures du soir.",
+     "It's seven in the evening.",
+     "It's seven o'clock in the evening."
+    ],
+    [
+     "Il est onze heures moins cinq.",
+     "It's five to eleven.",
+     "It's five minutes to eleven.",
+     "It's ten fifty-five."
+    ],
+    [
+     "Le bus passe toutes les vingt minutes.",
+     "The bus comes every twenty minutes.",
+     "There's a bus every twenty minutes."
+    ],
+    [
+     "Il est six heures vingt.",
+     "It's six twenty.",
+     "It's twenty past six."
+    ],
+    [
+     "Je me brosse les dents après le petit-déjeuner.",
+     "I brush my teeth after breakfast.",
+     "I brush my teeth after I have breakfast."
+    ],
+    [
+     "J'emmène les enfants à l'école à huit heures.",
+     "I take the kids to school at eight.",
+     "I drop the children off at school at eight."
+    ],
+    [
+     "Le matin, je n'ai jamais faim.",
+     "I'm never hungry in the morning.",
+     "In the morning, I'm never hungry."
+    ],
+    [
+     "J'arrive au bureau vers neuf heures.",
+     "I get to the office around nine.",
+     "I arrive at the office at about nine."
+    ],
+    [
+     "Après le travail, je vais à la salle de sport.",
+     "After work, I go to the gym.",
+     "I go to the gym after work."
+    ],
+    [
+     "Je dîne vers vingt heures.",
+     "I have dinner around eight.",
+     "I eat dinner at about eight."
+    ],
+    [
+     "Je mets mon téléphone en silencieux la nuit.",
+     "I put my phone on silent at night.",
+     "I switch my phone to silent at night."
+    ],
+    [
+     "Le soir, je prépare mes affaires pour le lendemain.",
+     "In the evening, I get my things ready for the next day.",
+     "I prepare my things for the next day in the evening."
     ]
    ],
    "v": [
@@ -2472,7 +2793,11 @@
       34,
       35,
       36,
-      37
+      37,
+      39,
+      40,
+      41,
+      42
      ],
      "v": [
       1,
@@ -2509,7 +2834,11 @@
       25,
       26,
       27,
-      38
+      38,
+      43,
+      44,
+      45,
+      46
      ],
      "v": [
       0,
@@ -2549,7 +2878,11 @@
       30,
       31,
       32,
-      33
+      33,
+      47,
+      48,
+      49,
+      50
      ],
      "v": [
       2,
@@ -3179,7 +3512,8 @@
     ],
     [
      "J'adore la musique.",
-     "I love music."
+     "I love music.",
+     "I really love music."
     ],
     [
      "Je déteste courir.",
@@ -3268,15 +3602,20 @@
     ],
     [
      "Je joue aux jeux vidéo le soir.",
-     "I play video games in the evening."
+     "I play video games in the evening.",
+     "I play video games at night."
     ],
     [
      "Elle prend des cours de piano.",
-     "She takes piano lessons."
+     "She takes piano lessons.",
+     "She's taking piano lessons.",
+     "She has piano lessons."
     ],
     [
      "D'habitude, je vais au marché le samedi.",
-     "I usually go to the market on Saturdays."
+     "I usually go to the market on Saturdays.",
+     "I usually go to the market on Saturday.",
+     "Usually, I go to the market on Saturdays."
     ],
     [
      "Tu es libre vendredi soir ?",
@@ -3285,7 +3624,8 @@
     ],
     [
      "Allons au musée demain.",
-     "Let's go to the museum tomorrow."
+     "Let's go to the museum tomorrow.",
+     "Let's visit the museum tomorrow."
     ],
     [
      "Bonne idée, j'adorerais.",
@@ -3294,7 +3634,9 @@
     ],
     [
      "On se retrouve devant la gare.",
-     "Let's meet in front of the station."
+     "Let's meet in front of the station.",
+     "Let's meet outside the station.",
+     "We'll meet in front of the station."
     ],
     [
      "Je vais acheter les billets en ligne.",
@@ -3325,6 +3667,68 @@
      "Tu aimes quel genre de musique ?",
      "What kind of music do you like?",
      "What type of music do you like?"
+    ],
+    [
+     "Je suis fan de jeux de société.",
+     "I'm a big fan of board games.",
+     "I love board games."
+    ],
+    [
+     "Ce que je préfère, c'est cuisiner pour mes amis.",
+     "What I like best is cooking for my friends.",
+     "My favorite thing is cooking for my friends."
+    ],
+    [
+     "Je ne suis pas très fan de jazz.",
+     "I'm not a big fan of jazz.",
+     "I'm not really into jazz."
+    ],
+    [
+     "J'aime bien me promener en forêt.",
+     "I like walking in the forest.",
+     "I enjoy walking in the woods."
+    ],
+    [
+     "Je vais à la bibliothèque une fois par mois.",
+     "I go to the library once a month.",
+     "I go to the library about once a month."
+    ],
+    [
+     "Je fais du jardinage le dimanche.",
+     "I do some gardening on Sundays.",
+     "I garden on Sundays."
+    ],
+    [
+     "Je ne sors presque jamais le soir.",
+     "I hardly ever go out in the evening.",
+     "I almost never go out at night."
+    ],
+    [
+     "On joue aux cartes tous les vendredis.",
+     "We play cards every Friday.",
+     "We play cards on Fridays."
+    ],
+    [
+     "Ça te dirait un pique-nique au parc ?",
+     "How about a picnic in the park?",
+     "Would you like to have a picnic in the park?",
+     "Do you want to have a picnic in the park?"
+    ],
+    [
+     "Il y a un concert gratuit samedi.",
+     "There's a free concert on Saturday.",
+     "There is a free concert this Saturday."
+    ],
+    [
+     "Je passe te prendre à dix-neuf heures.",
+     "I'll pick you up at seven.",
+     "I'll come and get you at seven."
+    ],
+    [
+     "Tu veux venir avec nous ?",
+     "Do you want to come with us?",
+     "Would you like to come with us?",
+     "Want to come with us?"
     ]
    ],
    "v": [
@@ -3533,7 +3937,11 @@
       34,
       35,
       36,
-      37
+      37,
+      38,
+      39,
+      40,
+      41
      ],
      "v": [
       0,
@@ -3574,7 +3982,11 @@
       24,
       25,
       26,
-      27
+      27,
+      42,
+      43,
+      44,
+      45
      ],
      "v": [
       3,
@@ -3611,7 +4023,11 @@
       30,
       31,
       32,
-      33
+      33,
+      46,
+      47,
+      48,
+      49
      ],
      "v": [
       1,
@@ -4194,7 +4610,8 @@
     ],
     [
      "Ajoute une pincée de sel.",
-     "Add a pinch of salt."
+     "Add a pinch of salt.",
+     "Add a little salt."
     ],
     [
      "Fais cuire pendant vingt minutes.",
@@ -4218,7 +4635,8 @@
     ],
     [
      "Où sont les légumes ?",
-     "Where are the vegetables?"
+     "Where are the vegetables?",
+     "Where can I find the vegetables?"
     ],
     [
      "Je cherche du riz.",
@@ -4238,7 +4656,8 @@
     ],
     [
      "Nous avons trop de pain.",
-     "We have too much bread."
+     "We have too much bread.",
+     "We've got too much bread."
     ],
     [
      "Il n'y a pas assez d'œufs.",
@@ -4252,11 +4671,13 @@
     ],
     [
      "Fais bouillir l'eau.",
-     "Boil the water."
+     "Boil the water.",
+     "Bring the water to a boil."
     ],
     [
      "J'ai besoin d'un sac.",
-     "I need a bag."
+     "I need a bag.",
+     "I need a bag, please."
     ],
     [
      "Les fraises sont en promotion.",
@@ -4285,11 +4706,13 @@
     ],
     [
      "Une douzaine d'œufs, s'il vous plaît.",
-     "A dozen eggs, please."
+     "A dozen eggs, please.",
+     "Twelve eggs, please."
     ],
     [
      "Il me faut deux bouteilles de lait.",
-     "I need two bottles of milk."
+     "I need two bottles of milk.",
+     "I need two bottles of milk, please."
     ],
     [
      "Combien de sucre faut-il ?",
@@ -4303,11 +4726,13 @@
     ],
     [
      "Une tranche de jambon, s'il vous plaît.",
-     "A slice of ham, please."
+     "A slice of ham, please.",
+     "One slice of ham, please."
     ],
     [
      "Il reste quelques carottes.",
-     "There are a few carrots left."
+     "There are a few carrots left.",
+     "We still have a few carrots."
     ],
     [
      "Préchauffe le four à deux cents degrés.",
@@ -4316,7 +4741,8 @@
     ],
     [
      "Lave les légumes.",
-     "Wash the vegetables."
+     "Wash the vegetables.",
+     "Rinse the vegetables."
     ],
     [
      "Ajoute un peu de poivre.",
@@ -4330,7 +4756,8 @@
     ],
     [
      "Verse le lait dans le bol.",
-     "Pour the milk into the bowl."
+     "Pour the milk into the bowl.",
+     "Pour the milk in the bowl."
     ],
     [
      "C'est prêt !",
@@ -4344,7 +4771,8 @@
     ],
     [
      "Le pain est encore chaud.",
-     "The bread is still warm."
+     "The bread is still warm.",
+     "The bread is still hot."
     ],
     [
      "Où est la caisse ?",
@@ -4361,6 +4789,66 @@
      "Combien de bananes il reste ?",
      "How many bananas are left?",
      "How many bananas are there left?"
+    ],
+    [
+     "Vous avez des œufs bio ?",
+     "Do you have organic eggs?",
+     "Have you got any organic eggs?"
+    ],
+    [
+     "Je paie en espèces.",
+     "I'll pay in cash.",
+     "I'm paying cash."
+    ],
+    [
+     "Il faut acheter du papier toilette.",
+     "We need to buy toilet paper.",
+     "We need toilet paper."
+    ],
+    [
+     "Le magasin ferme à vingt heures.",
+     "The store closes at eight.",
+     "The shop closes at eight."
+    ],
+    [
+     "Je voudrais un demi-kilo de cerises.",
+     "I'd like half a kilo of cherries.",
+     "Half a kilo of cherries, please."
+    ],
+    [
+     "Il n'y a plus beaucoup de riz.",
+     "There isn't much rice left.",
+     "We don't have much rice left."
+    ],
+    [
+     "Combien d'oignons il faut ?",
+     "How many onions do we need?",
+     "How many onions are needed?"
+    ],
+    [
+     "Un peu plus, s'il vous plaît.",
+     "A little more, please.",
+     "A bit more, please."
+    ],
+    [
+     "Épluche les pommes de terre.",
+     "Peel the potatoes.",
+     "Peel the potatoes first."
+    ],
+    [
+     "Fais revenir l'ail dans l'huile.",
+     "Fry the garlic in the oil.",
+     "Sauté the garlic in oil."
+    ],
+    [
+     "Goûte et rajoute du sel si besoin.",
+     "Taste it and add salt if needed.",
+     "Taste and add more salt if necessary."
+    ],
+    [
+     "Sers chaud avec du riz.",
+     "Serve hot with rice.",
+     "Serve it hot with rice."
     ]
    ],
    "v": [
@@ -4579,7 +5067,11 @@
       34,
       35,
       36,
-      37
+      37,
+      39,
+      40,
+      41,
+      42
      ],
      "v": [
       0,
@@ -4624,7 +5116,11 @@
       25,
       26,
       27,
-      38
+      38,
+      43,
+      44,
+      45,
+      46
      ],
      "v": [
       4,
@@ -4664,7 +5160,11 @@
       30,
       31,
       32,
-      33
+      33,
+      47,
+      48,
+      49,
+      50
      ],
      "v": [
       1,
@@ -5269,7 +5769,9 @@
     ],
     [
      "C'est loin d'ici ?",
-     "Is it far from here?"
+     "Is it far from here?",
+     "Is it a long way from here?",
+     "How far is it from here?"
     ],
     [
      "Allez tout droit jusqu'au pont.",
@@ -5341,7 +5843,8 @@
     ],
     [
      "Où puis-je acheter un ticket ?",
-     "Where can I buy a ticket?"
+     "Where can I buy a ticket?",
+     "Where can I get a ticket?"
     ],
     [
      "Je dois changer à quelle station ?",
@@ -5365,7 +5868,8 @@
     ],
     [
      "Cette veste est trop petite.",
-     "This jacket is too small."
+     "This jacket is too small.",
+     "This jacket is too small for me."
     ],
     [
      "Vous l'avez en noir ?",
@@ -5384,7 +5888,8 @@
     ],
     [
      "Ces chaussures sont en solde.",
-     "These shoes are on sale."
+     "These shoes are on sale.",
+     "These shoes are on sale now."
     ],
     [
      "Ça vous va très bien.",
@@ -5393,7 +5898,8 @@
     ],
     [
      "Traversez la place.",
-     "Cross the square."
+     "Cross the square.",
+     "Go across the square."
     ],
     [
      "C'est au coin de la rue.",
@@ -5415,7 +5921,70 @@
     ],
     [
      "Le bus est plein.",
-     "The bus is full."
+     "The bus is full.",
+     "The bus is full up.",
+     "The bus is packed."
+    ],
+    [
+     "Je cherche une station-service.",
+     "I'm looking for a gas station.",
+     "I'm looking for a petrol station."
+    ],
+    [
+     "C'est la deuxième à gauche après la boulangerie.",
+     "It's the second left after the bakery.",
+     "It's the second street on the left after the bakery."
+    ],
+    [
+     "Combien de temps faut-il pour aller au port ?",
+     "How long does it take to get to the harbor?",
+     "How long does it take to get to the port?"
+    ],
+    [
+     "Vous allez dans la mauvaise direction.",
+     "You're going the wrong way.",
+     "You're heading in the wrong direction."
+    ],
+    [
+     "Je voudrais une carte de transport pour la semaine.",
+     "I'd like a weekly pass.",
+     "I'd like a weekly travel pass.",
+     "I would like a travel card for the week."
+    ],
+    [
+     "Il faut valider son ticket avant de monter.",
+     "You have to validate your ticket before getting on.",
+     "You need to stamp your ticket before you board."
+    ],
+    [
+     "Où dois-je descendre pour le musée ?",
+     "Where should I get off for the museum?",
+     "Which stop is for the museum?"
+    ],
+    [
+     "Le dernier métro part à minuit et demi.",
+     "The last subway leaves at twelve thirty.",
+     "The last train leaves at half past midnight."
+    ],
+    [
+     "Ce pull existe dans d'autres couleurs ?",
+     "Does this sweater come in other colors?",
+     "Do you have this sweater in other colours?"
+    ],
+    [
+     "C'est un peu serré à la taille.",
+     "It's a bit tight around the waist.",
+     "It's a little tight at the waist."
+    ],
+    [
+     "Vous faites des retouches ?",
+     "Do you do alterations?",
+     "Do you offer alterations?"
+    ],
+    [
+     "Je cherche un cadeau pour mon père.",
+     "I'm looking for a gift for my father.",
+     "I'm looking for a present for my dad."
     ]
    ],
    "v": [
@@ -5623,7 +6192,11 @@
       33,
       34,
       35,
-      36
+      36,
+      38,
+      39,
+      40,
+      41
      ],
      "v": [
       5,
@@ -5661,7 +6234,11 @@
       24,
       25,
       26,
-      37
+      37,
+      42,
+      43,
+      44,
+      45
      ],
      "v": [
       2,
@@ -5699,7 +6276,11 @@
       29,
       30,
       31,
-      32
+      32,
+      46,
+      47,
+      48,
+      49
      ],
      "v": [
       0,
@@ -5878,7 +6459,8 @@
     ],
     [
      "Combien de fois par jour ?",
-     "How many times a day?"
+     "How many times a day?",
+     "How often a day?"
     ],
     [
      "J'ai besoin d'un certificat médical.",
@@ -5887,7 +6469,8 @@
     ],
     [
      "C'est grave, docteur ?",
-     "Is it serious, doctor?"
+     "Is it serious, doctor?",
+     "Is it bad, doctor?"
     ],
     [
      "J'essaie de manger plus de légumes.",
@@ -5912,7 +6495,8 @@
     ],
     [
      "Je fais du yoga le matin.",
-     "I do yoga in the morning."
+     "I do yoga in the morning.",
+     "I do yoga in the mornings."
     ],
     [
      "Prends le temps de te reposer.",
@@ -5944,6 +6528,67 @@
      "Je dois rester au lit ?",
      "Do I have to stay in bed?",
      "Should I stay in bed?"
+    ],
+    [
+     "J'ai mal partout.",
+     "I hurt all over.",
+     "Everything hurts.",
+     "My whole body hurts."
+    ],
+    [
+     "Je me suis fait piquer par une guêpe.",
+     "I got stung by a wasp.",
+     "A wasp stung me."
+    ],
+    [
+     "J'ai le dos bloqué.",
+     "My back is stiff.",
+     "I've thrown my back out."
+    ],
+    [
+     "Je n'arrive pas à dormir à cause de la douleur.",
+     "I can't sleep because of the pain.",
+     "The pain keeps me awake."
+    ],
+    [
+     "Ça fait mal quand j'appuie ici.",
+     "It hurts when I press here.",
+     "It hurts when I push here."
+    ],
+    [
+     "Il faut faire une prise de sang.",
+     "You need a blood test.",
+     "You'll need to have a blood test."
+    ],
+    [
+     "Je prends déjà des médicaments pour la tension.",
+     "I'm already taking medication for my blood pressure.",
+     "I already take medicine for blood pressure."
+    ],
+    [
+     "Revenez me voir dans une semaine.",
+     "Come back and see me in a week.",
+     "Come back in a week."
+    ],
+    [
+     "Je me couche plus tôt pour être moins fatigué.",
+     "I go to bed earlier so I'm less tired.",
+     "I go to bed earlier to be less tired."
+    ],
+    [
+     "J'évite le sucre en ce moment.",
+     "I'm avoiding sugar at the moment.",
+     "I'm cutting out sugar right now."
+    ],
+    [
+     "La méditation m'aide à gérer le stress.",
+     "Meditation helps me manage stress.",
+     "Meditation helps me deal with stress."
+    ],
+    [
+     "Pense à faire des pauses devant l'écran.",
+     "Remember to take breaks from the screen.",
+     "Don't forget to take screen breaks."
     ]
    ],
    "v": [
@@ -6144,7 +6789,11 @@
       33,
       34,
       35,
-      36
+      36,
+      38,
+      39,
+      40,
+      41
      ],
      "v": [
       1,
@@ -6186,7 +6835,11 @@
       24,
       25,
       26,
-      37
+      37,
+      42,
+      43,
+      44,
+      45
      ],
      "v": [
       0,
@@ -6222,7 +6875,11 @@
       29,
       30,
       31,
-      32
+      32,
+      46,
+      47,
+      48,
+      49
      ],
      "v": [
       5,
@@ -6830,7 +7487,8 @@
     ],
     [
      "Quand est-ce que je peux emménager ?",
-     "When can I move in?"
+     "When can I move in?",
+     "When will I be able to move in?"
     ],
     [
      "Il faut signer le bail avant vendredi.",
@@ -6902,7 +7560,8 @@
     ],
     [
      "Le loyer est trop élevé.",
-     "The rent is too high."
+     "The rent is too high.",
+     "The rent is too expensive."
     ],
     [
      "La cuisine est petite mais lumineuse.",
@@ -6981,7 +7640,8 @@
     ],
     [
      "Bienvenue dans l'immeuble !",
-     "Welcome to the building!"
+     "Welcome to the building!",
+     "Welcome to our building!"
     ],
     [
      "Votre colis est chez moi.",
@@ -7000,6 +7660,66 @@
      "Can I borrow a ladder?",
      "Could I borrow a ladder from you?",
      "Can I borrow a ladder from you?"
+    ],
+    [
+     "L'appartement est disponible tout de suite.",
+     "The apartment is available right away.",
+     "The flat is available immediately."
+    ],
+    [
+     "Il y a un balcon et une cave.",
+     "There's a balcony and a cellar.",
+     "There's a balcony and a storage room in the basement."
+    ],
+    [
+     "Le quartier est-il sûr la nuit ?",
+     "Is the neighborhood safe at night?",
+     "Is the area safe at night?"
+    ],
+    [
+     "Je préfère un appartement en hauteur.",
+     "I'd rather have an apartment on a high floor.",
+     "I prefer an apartment on an upper floor."
+    ],
+    [
+     "La porte d'entrée ne ferme plus à clé.",
+     "The front door won't lock anymore.",
+     "The front door doesn't lock anymore."
+    ],
+    [
+     "Il y a des souris dans la cuisine.",
+     "There are mice in the kitchen.",
+     "We've got mice in the kitchen."
+    ],
+    [
+     "Le volet est coincé.",
+     "The shutter is stuck.",
+     "The blind is stuck."
+    ],
+    [
+     "Ça fait une semaine que j'attends le réparateur.",
+     "I've been waiting for the repairman for a week.",
+     "I've been waiting a week for the repair person."
+    ],
+    [
+     "Vous pourriez garder mes clés pendant mes vacances ?",
+     "Could you keep my keys while I'm on vacation?",
+     "Could you hold on to my keys while I'm away?"
+    ],
+    [
+     "Désolé pour le bruit hier soir.",
+     "Sorry about the noise last night.",
+     "I'm sorry for the noise last night."
+    ],
+    [
+     "Votre voiture bloque mon garage.",
+     "Your car is blocking my garage.",
+     "Your car is in front of my garage."
+    ],
+    [
+     "Vous avez besoin d'aide avec vos courses ?",
+     "Do you need help with your groceries?",
+     "Can I help you with your shopping bags?"
     ]
    ],
    "v": [
@@ -7177,7 +7897,11 @@
       21,
       22,
       23,
-      24
+      24,
+      36,
+      37,
+      38,
+      39
      ],
      "v": [
       0,
@@ -7218,7 +7942,11 @@
       28,
       29,
       30,
-      31
+      31,
+      40,
+      41,
+      42,
+      43
      ],
      "v": [
       5,
@@ -7251,7 +7979,11 @@
       32,
       33,
       34,
-      35
+      35,
+      44,
+      45,
+      46,
+      47
      ],
      "v": [
       4,
@@ -7300,7 +8032,9 @@
     ],
     [
      "Est-ce que le petit-déjeuner est inclus ?",
-     "Is breakfast included?"
+     "Is breakfast included?",
+     "Does it include breakfast?",
+     "Is breakfast included in the price?"
     ],
     [
      "Nous sommes partis une semaine en Italie.",
@@ -7321,7 +8055,8 @@
     ],
     [
      "Il y a un vol direct pour Tokyo ?",
-     "Is there a direct flight to Tokyo?"
+     "Is there a direct flight to Tokyo?",
+     "Is there a nonstop flight to Tokyo?"
     ],
     [
      "Je voudrais un siège côté hublot.",
@@ -7415,7 +8150,8 @@
     ],
     [
      "Mon passeport est dans mon sac.",
-     "My passport is in my bag."
+     "My passport is in my bag.",
+     "My passport's in my bag."
     ],
     [
      "Je voudrais une chambre double.",
@@ -7456,7 +8192,8 @@
     ],
     [
      "On a fait du camping à la montagne.",
-     "We went camping in the mountains."
+     "We went camping in the mountains.",
+     "We camped in the mountains."
     ],
     [
      "L'hôtel était magnifique.",
@@ -7473,6 +8210,66 @@
      "On s'est baignés tous les jours.",
      "We went swimming every day.",
      "We swam every day."
+    ],
+    [
+     "Je n'ai rien à déclarer.",
+     "I have nothing to declare.",
+     "I've got nothing to declare."
+    ],
+    [
+     "Mon vol est complet, je suis sur liste d'attente.",
+     "My flight is full, I'm on the waiting list.",
+     "My flight is fully booked, I'm on standby."
+    ],
+    [
+     "Ma valise dépasse le poids autorisé.",
+     "My suitcase is over the weight limit.",
+     "My bag is overweight."
+    ],
+    [
+     "On atterrit dans vingt minutes.",
+     "We're landing in twenty minutes.",
+     "We'll land in twenty minutes."
+    ],
+    [
+     "Pouvez-vous nous réveiller à six heures ?",
+     "Could we have a wake-up call at six?",
+     "Can you give us a wake-up call at six?"
+    ],
+    [
+     "La chambre n'a pas été faite.",
+     "The room hasn't been cleaned.",
+     "Our room hasn't been made up."
+    ],
+    [
+     "Il y a une piscine dans l'hôtel ?",
+     "Is there a pool in the hotel?",
+     "Does the hotel have a swimming pool?"
+    ],
+    [
+     "Je voudrais prolonger mon séjour d'une nuit.",
+     "I'd like to stay one more night.",
+     "I'd like to extend my stay by one night."
+    ],
+    [
+     "On a loué une voiture pour visiter l'île.",
+     "We rented a car to explore the island.",
+     "We hired a car to visit the island."
+    ],
+    [
+     "C'était le plus beau voyage de ma vie.",
+     "It was the best trip of my life.",
+     "That was the most beautiful trip of my life."
+    ],
+    [
+     "On s'est perdus dans les petites rues.",
+     "We got lost in the little streets.",
+     "We got lost in the narrow streets."
+    ],
+    [
+     "Je suis rentré bronzé et reposé.",
+     "I came back tanned and rested.",
+     "I got back tanned and relaxed."
     ]
    ],
    "v": [
@@ -7648,7 +8445,11 @@
       21,
       22,
       23,
-      24
+      24,
+      36,
+      37,
+      38,
+      39
      ],
      "v": [
       0,
@@ -7684,7 +8485,11 @@
       28,
       29,
       30,
-      31
+      31,
+      40,
+      41,
+      42,
+      43
      ],
      "v": [
       4,
@@ -7716,7 +8521,11 @@
       32,
       33,
       34,
-      35
+      35,
+      44,
+      45,
+      46,
+      47
      ],
      "v": [
       5,
@@ -7960,6 +8769,66 @@
      "I'm confirming our appointment tomorrow.",
      "I'm confirming our appointment for tomorrow.",
      "I confirm our appointment tomorrow."
+    ],
+    [
+     "Je vous appelle de la part de Mme Durand.",
+     "I'm calling on behalf of Ms. Durand.",
+     "I'm calling for Mrs. Durand."
+    ],
+    [
+     "Vous pouvez me mettre sur haut-parleur ?",
+     "Can you put me on speaker?",
+     "Could you put me on speakerphone?"
+    ],
+    [
+     "Je suis dans le train, ça risque de couper.",
+     "I'm on the train, I might lose you.",
+     "I'm on the train, we might get cut off."
+    ],
+    [
+     "Je vous mets en attente un instant.",
+     "I'll put you on hold for a moment.",
+     "Let me put you on hold for a second."
+    ],
+    [
+     "Rappelez-moi dès que possible.",
+     "Call me back as soon as possible.",
+     "Please call me back as soon as you can."
+    ],
+    [
+     "Je vous laisse mon numéro.",
+     "I'll leave you my number.",
+     "Let me give you my number."
+    ],
+    [
+     "Il est absent jusqu'à lundi.",
+     "He's away until Monday.",
+     "He's out of the office until Monday."
+    ],
+    [
+     "C'est au sujet de la réunion de demain.",
+     "It's about tomorrow's meeting.",
+     "It's regarding the meeting tomorrow."
+    ],
+    [
+     "Vous avez quelque chose de plus tôt ?",
+     "Do you have anything earlier?",
+     "Is there anything earlier?"
+    ],
+    [
+     "Quinze heures, c'est parfait.",
+     "Three o'clock is perfect.",
+     "Three o'clock works perfectly."
+    ],
+    [
+     "Je vous envoie une confirmation par e-mail.",
+     "I'll send you a confirmation by email.",
+     "I'll email you a confirmation."
+    ],
+    [
+     "Pensez à apporter votre carte d'identité.",
+     "Remember to bring your ID.",
+     "Don't forget to bring your ID card."
     ]
    ],
    "v": [
@@ -8120,7 +8989,11 @@
       21,
       22,
       23,
-      24
+      24,
+      36,
+      37,
+      38,
+      39
      ],
      "v": [
       1,
@@ -8148,7 +9021,11 @@
       28,
       29,
       30,
-      31
+      31,
+      40,
+      41,
+      42,
+      43
      ],
      "v": [
       0,
@@ -8175,7 +9052,11 @@
       32,
       33,
       34,
-      35
+      35,
+      44,
+      45,
+      46,
+      47
      ],
      "v": [
       2,
@@ -8333,7 +9214,9 @@
     ],
     [
      "Tu es libre ce week-end ?",
-     "Are you free this weekend?"
+     "Are you free this weekend?",
+     "Are you free on the weekend?",
+     "Are you available this weekend?"
     ],
     [
      "On se fait une soirée jeux ?",
@@ -8400,6 +9283,66 @@
      "That's kind, but another time.",
      "That's nice of you, but another time.",
      "That's kind of you, but maybe another time."
+    ],
+    [
+     "Je fête ma promotion vendredi, tu viens ?",
+     "I'm celebrating my promotion on Friday, are you coming?",
+     "I'm celebrating my promotion on Friday, will you come?"
+    ],
+    [
+     "On se fait un resto un de ces jours ?",
+     "Shall we go out for dinner one of these days?",
+     "How about dinner out sometime?"
+    ],
+    [
+     "Ça te tente, une balade à vélo ?",
+     "Do you feel like a bike ride?",
+     "How about a bike ride?"
+    ],
+    [
+     "Tu peux venir avec qui tu veux.",
+     "You can bring whoever you want.",
+     "Feel free to bring anyone you like."
+    ],
+    [
+     "Avec grand plaisir, merci d'avoir pensé à moi.",
+     "I'd love to, thanks for thinking of me.",
+     "With great pleasure, thank you for thinking of me."
+    ],
+    [
+     "Je ne raterais ça pour rien au monde !",
+     "I wouldn't miss it for the world!",
+     "I wouldn't miss it for anything!"
+    ],
+    [
+     "Je serai là vers vingt heures.",
+     "I'll be there around eight.",
+     "I'll be there at about eight."
+    ],
+    [
+     "Il faut s'habiller comment ?",
+     "What's the dress code?",
+     "What should I wear?"
+    ],
+    [
+     "Ça a l'air génial, mais je ne suis pas libre.",
+     "It sounds great, but I'm not free.",
+     "That sounds great, but I'm busy."
+    ],
+    [
+     "Je dois garder les enfants ce soir-là.",
+     "I have to look after the kids that night.",
+     "I need to babysit that evening."
+    ],
+    [
+     "Je préfère rester tranquille ce week-end.",
+     "I'd rather have a quiet weekend.",
+     "I'd prefer to take it easy this weekend."
+    ],
+    [
+     "Dommage, ce sera pour la prochaine fois !",
+     "Too bad, maybe next time!",
+     "What a shame, next time then!"
     ]
    ],
    "v": [
@@ -8560,7 +9503,11 @@
       21,
       22,
       23,
-      24
+      24,
+      35,
+      36,
+      37,
+      38
      ],
      "v": [
       0,
@@ -8589,7 +9536,11 @@
       27,
       28,
       29,
-      30
+      30,
+      39,
+      40,
+      41,
+      42
      ],
      "v": [
       1,
@@ -8618,7 +9569,11 @@
       31,
       32,
       33,
-      34
+      34,
+      43,
+      44,
+      45,
+      46
      ],
      "v": [
       2,
@@ -9315,7 +10270,8 @@
     ],
     [
      "Mon ordinateur est très lent.",
-     "My computer is very slow."
+     "My computer is very slow.",
+     "My computer is really slow."
     ],
     [
      "L'imprimante n'a plus d'encre.",
@@ -9365,6 +10321,66 @@
      "Enregistre le fichier sur le cloud.",
      "Save the file to the cloud.",
      "Save the file on the cloud."
+    ],
+    [
+     "Active la double authentification.",
+     "Turn on two-factor authentication.",
+     "Enable two-factor authentication."
+    ],
+    [
+     "Je n'ai pas reçu l'e-mail de confirmation.",
+     "I didn't get the confirmation email.",
+     "I haven't received the confirmation email."
+    ],
+    [
+     "Le code a expiré.",
+     "The code has expired.",
+     "The code expired."
+    ],
+    [
+     "Tu peux te connecter avec ton compte Google.",
+     "You can sign in with your Google account.",
+     "You can log in with your Google account."
+    ],
+    [
+     "Il faut vider le cache.",
+     "You need to clear the cache.",
+     "You have to clear the cache."
+    ],
+    [
+     "La batterie gonfle, c'est dangereux.",
+     "The battery is swelling, it's dangerous.",
+     "The battery is swollen, that's dangerous."
+    ],
+    [
+     "Mon clavier ne répond plus.",
+     "My keyboard isn't responding.",
+     "My keyboard stopped responding."
+    ],
+    [
+     "J'ai fait tomber mon téléphone dans l'eau.",
+     "I dropped my phone in the water.",
+     "I dropped my phone in water."
+    ],
+    [
+     "Tu peux me donner accès au dossier ?",
+     "Can you give me access to the folder?",
+     "Could you share the folder with me?"
+    ],
+    [
+     "Je t'envoie une capture d'écran.",
+     "I'll send you a screenshot.",
+     "I'm sending you a screenshot."
+    ],
+    [
+     "Le fichier est en pièce jointe.",
+     "The file is attached.",
+     "I've attached the file."
+    ],
+    [
+     "Compresse les photos avant de les envoyer.",
+     "Compress the photos before you send them.",
+     "Zip the photos before sending them."
     ]
    ],
    "v": [
@@ -9535,7 +10551,11 @@
       21,
       22,
       23,
-      24
+      24,
+      36,
+      37,
+      38,
+      39
      ],
      "v": [
       3,
@@ -9571,7 +10591,11 @@
       28,
       29,
       30,
-      31
+      31,
+      40,
+      41,
+      42,
+      43
      ],
      "v": [
       0,
@@ -9603,7 +10627,11 @@
       32,
       33,
       34,
-      35
+      35,
+      44,
+      45,
+      46,
+      47
      ],
      "v": [
       1,
@@ -10291,7 +11319,8 @@
     ],
     [
      "Tu vas faire quoi cet été ?",
-     "What are you going to do this summer?"
+     "What are you going to do this summer?",
+     "What are you doing this summer?"
     ],
     [
      "Je vais repeindre ma chambre.",
@@ -10368,6 +11397,66 @@
      "Le cours commence la semaine prochaine.",
      "The class starts next week.",
      "The course starts next week."
+    ],
+    [
+     "L'an prochain, je vais faire du bénévolat.",
+     "Next year, I'm going to volunteer.",
+     "I'm going to do volunteer work next year."
+    ],
+    [
+     "Elle va prendre une année sabbatique.",
+     "She's going to take a gap year.",
+     "She's going to take a sabbatical."
+    ],
+    [
+     "On va ouvrir un petit restaurant.",
+     "We're going to open a small restaurant.",
+     "We're going to open a little restaurant."
+    ],
+    [
+     "Je vais apprendre le coréen avant mon voyage.",
+     "I'm going to learn Korean before my trip.",
+     "I'm going to study Korean before I travel."
+    ],
+    [
+     "Attends, je vais t'ouvrir.",
+     "Hold on, I'll open the door for you.",
+     "Wait, I'll let you in."
+    ],
+    [
+     "Bon, je crois que je vais rentrer.",
+     "Well, I think I'll head home.",
+     "Okay, I think I'll go home."
+    ],
+    [
+     "Ne bouge pas, je vais chercher une serviette.",
+     "Don't move, I'll get a towel.",
+     "Stay there, I'll go get a towel."
+    ],
+    [
+     "Je t'appellerai quand j'aurai fini.",
+     "I'll call you when I've finished.",
+     "I'll call you when I'm done."
+    ],
+    [
+     "Je ne suis pas libre avant jeudi.",
+     "I'm not free until Thursday.",
+     "I'm busy until Thursday."
+    ],
+    [
+     "La réunion a lieu à quatorze heures.",
+     "The meeting is at two.",
+     "The meeting takes place at two o'clock."
+    ],
+    [
+     "Je pars en week-end avec des amis.",
+     "I'm going away for the weekend with friends.",
+     "I'm going on a weekend trip with friends."
+    ],
+    [
+     "Mon cours de piano est le mercredi à dix-sept heures.",
+     "My piano lesson is on Wednesdays at five.",
+     "I have piano class on Wednesdays at five."
     ]
    ],
    "v": [
@@ -10528,7 +11617,11 @@
       21,
       22,
       23,
-      24
+      24,
+      36,
+      37,
+      38,
+      39
      ],
      "v": [
       0,
@@ -10560,7 +11653,11 @@
       28,
       29,
       30,
-      31
+      31,
+      40,
+      41,
+      42,
+      43
      ],
      "v": [
       3,
@@ -10587,7 +11684,11 @@
       32,
       33,
       34,
-      35
+      35,
+      44,
+      45,
+      46,
+      47
      ],
      "v": [
       9,
@@ -10633,7 +11734,8 @@
     ],
     [
      "Ça dépend de la situation.",
-     "It depends on the situation."
+     "It depends on the situation.",
+     "It depends on the circumstances."
     ],
     [
      "J'ai hâte de partir en vacances.",
@@ -10644,11 +11746,10 @@
      "I am looking forward to going on vacation."
     ],
     [
-     "Si j'étais toi, je l'appellerais.",
-     "If I were you, I would call him.",
-     "If I were you, I'd call him.",
-     "If I were you, I would call her.",
-     "If I were you, I'd call her."
+     "Tu devrais l'appeler, à mon avis.",
+     "I think you should call him.",
+     "You should call him, if you ask me.",
+     "In my view, you should call him."
     ],
     [
      "Je me suis mis au yoga récemment.",
@@ -10821,6 +11922,66 @@
      "Mon rêve, c'est d'ouvrir un café.",
      "My dream is to open a café.",
      "My dream is to open a coffee shop."
+    ],
+    [
+     "Ça fait combien de temps qu'on ne s'est pas vus ?",
+     "How long has it been since we last saw each other?",
+     "How long has it been?"
+    ],
+    [
+     "Alors, comment s'est passé ton déménagement ?",
+     "So, how did your move go?",
+     "So how was the move?"
+    ],
+    [
+     "J'ai entendu dire que tu avais changé de travail.",
+     "I heard you changed jobs.",
+     "I heard that you'd changed jobs."
+    ],
+    [
+     "Tu as l'air d'avoir bien profité de l'été.",
+     "You look like you made the most of the summer.",
+     "Looks like you really enjoyed the summer."
+    ],
+    [
+     "Je trouve que c'est un peu surfait.",
+     "I think it's a bit overrated.",
+     "I find it a little overrated."
+    ],
+    [
+     "Franchement, je m'attendais à mieux.",
+     "Honestly, I expected better.",
+     "To be honest, I was expecting more."
+    ],
+    [
+     "C'est le meilleur concert auquel je sois allé.",
+     "It's the best concert I've ever been to.",
+     "That's the best concert I've ever been to."
+    ],
+    [
+     "Je n'ai pas d'avis là-dessus.",
+     "I don't have an opinion on that.",
+     "I have no opinion about it."
+    ],
+    [
+     "Ça me tente bien de partir en road trip.",
+     "I really feel like going on a road trip.",
+     "I'm tempted to go on a road trip."
+    ],
+    [
+     "Je rêve de vivre au bord de la mer.",
+     "I dream of living by the sea.",
+     "My dream is to live by the sea."
+    ],
+    [
+     "J'aimerais bien avoir plus de temps pour moi.",
+     "I'd love to have more time for myself.",
+     "I wish I had more time for myself."
+    ],
+    [
+     "Un jour, j'aimerais écrire un livre.",
+     "Someday, I'd like to write a book.",
+     "One day, I would like to write a book."
     ]
    ],
    "v": [
@@ -10992,7 +12153,11 @@
       21,
       22,
       23,
-      24
+      24,
+      36,
+      37,
+      38,
+      39
      ],
      "v": [
       3,
@@ -11023,7 +12188,11 @@
       28,
       29,
       30,
-      31
+      31,
+      40,
+      41,
+      42,
+      43
      ],
      "v": [
       8,
@@ -11051,7 +12220,11 @@
       32,
       33,
       34,
-      35
+      35,
+      44,
+      45,
+      46,
+      47
      ],
      "v": [
       0,
@@ -11610,7 +12783,8 @@
    "p": [
     [
      "Pendant que je cuisinais, le téléphone a sonné.",
-     "While I was cooking, the phone rang."
+     "While I was cooking, the phone rang.",
+     "The phone rang while I was cooking."
     ],
     [
      "Quand je suis arrivé, tout le monde était déjà parti.",
@@ -11660,7 +12834,8 @@
     ],
     [
      "C'était un dimanche matin.",
-     "It was a Sunday morning."
+     "It was a Sunday morning.",
+     "It was on a Sunday morning."
     ],
     [
      "Tout à coup, la lumière s'est éteinte.",
@@ -11700,7 +12875,8 @@
     ],
     [
      "Il faisait très chaud ce jour-là.",
-     "It was very hot that day."
+     "It was very hot that day.",
+     "It was really hot that day."
     ],
     [
      "Nous étions en vacances en Grèce.",
@@ -11790,7 +12966,8 @@
     ],
     [
      "C'était une journée inoubliable.",
-     "It was an unforgettable day."
+     "It was an unforgettable day.",
+     "It was a day I'll never forget."
     ],
     [
      "Depuis, je ferme toujours ma porte à clé.",
@@ -11802,6 +12979,66 @@
      "Luckily, it all ended well.",
      "Fortunately, everything ended well.",
      "Luckily, everything ended well."
+    ],
+    [
+     "C'était il y a une dizaine d'années, à Berlin.",
+     "It was about ten years ago, in Berlin.",
+     "It happened about ten years ago in Berlin."
+    ],
+    [
+     "Nous venions de nous installer dans notre nouvel appartement.",
+     "We had just moved into our new apartment.",
+     "We'd just moved into our new flat."
+    ],
+    [
+     "Le soleil se couchait sur la ville.",
+     "The sun was setting over the city.",
+     "The sun was going down over the city."
+    ],
+    [
+     "Je n'avais pas dormi depuis deux jours.",
+     "I hadn't slept for two days.",
+     "I hadn't slept in two days."
+    ],
+    [
+     "Au moment où je sortais, il a commencé à grêler.",
+     "Just as I was going out, it started to hail.",
+     "As I was leaving, it began to hail."
+    ],
+    [
+     "Je me suis rendu compte que j'avais oublié mon passeport.",
+     "I realized I had forgotten my passport.",
+     "I realized that I'd forgotten my passport."
+    ],
+    [
+     "Sans réfléchir, j'ai sauté dans le premier bus.",
+     "Without thinking, I jumped on the first bus.",
+     "Without thinking, I got on the first bus."
+    ],
+    [
+     "Pendant ce temps, mon frère dormait tranquillement.",
+     "Meanwhile, my brother was sleeping peacefully.",
+     "In the meantime, my brother was sleeping soundly."
+    ],
+    [
+     "Au bout du compte, ça valait vraiment la peine.",
+     "In the end, it was really worth it.",
+     "All in all, it was really worth it."
+    ],
+    [
+     "On en rit encore aujourd'hui.",
+     "We still laugh about it today.",
+     "We're still laughing about it."
+    ],
+    [
+     "La morale de l'histoire, c'est qu'il faut toujours vérifier.",
+     "The moral of the story is to always double-check.",
+     "The moral of the story is that you should always check."
+    ],
+    [
+     "Je ne l'ai jamais revu depuis.",
+     "I've never seen him again since.",
+     "I haven't seen him since."
     ]
    ],
    "v": [
@@ -11962,7 +13199,11 @@
       21,
       22,
       23,
-      24
+      24,
+      36,
+      37,
+      38,
+      39
      ],
      "v": [
       5,
@@ -11992,7 +13233,11 @@
       28,
       29,
       30,
-      31
+      31,
+      40,
+      41,
+      42,
+      43
      ],
      "v": [
       0,
@@ -12021,7 +13266,11 @@
       32,
       33,
       34,
-      35
+      35,
+      44,
+      45,
+      46,
+      47
      ],
      "v": [
       1,
@@ -12047,14 +13296,15 @@
    "tip": "Pour nuancer sans heurter : « I see what you mean, but… », « That's a fair point, however… ».",
    "p": [
     [
-     "À mon avis, c'est une perte de temps.",
-     "In my opinion, it's a waste of time.",
-     "In my opinion, it is a waste of time.",
-     "In my view, it's a waste of time."
+     "Le vrai problème, c'est que personne ne veut payer.",
+     "The real problem is that nobody wants to pay.",
+     "The real issue is that no one wants to pay."
     ],
     [
      "Je vois ce que tu veux dire, mais…",
-     "I see what you mean, but…"
+     "I see what you mean, but…",
+     "I get what you mean, but…",
+     "I see your point, but…"
     ],
     [
      "Ce n'est pas si simple.",
@@ -12109,10 +13359,9 @@
      "To me, safety comes first."
     ],
     [
-     "Ça dépend du point de vue.",
-     "It depends on your point of view.",
-     "It depends on the point of view.",
-     "It depends on how you look at it."
+     "Tout dépend de la manière dont on voit les choses.",
+     "It all depends on how you look at it.",
+     "It all depends on the way you see things."
     ],
     [
      "Trouvons un compromis.",
@@ -12156,10 +13405,10 @@
      "It is the best solution for everybody."
     ],
     [
-     "Je ne suis pas d'accord sur ce point.",
-     "I don't agree on this point.",
-     "I disagree on this point.",
-     "I don't agree with that point."
+     "Je m'oppose fermement à cette idée.",
+     "I'm strongly opposed to this idea.",
+     "I strongly oppose this idea.",
+     "I'm firmly against this idea."
     ],
     [
      "Il faut penser à l'avenir.",
@@ -12179,7 +13428,8 @@
     ],
     [
      "Regarde les faits.",
-     "Look at the facts."
+     "Look at the facts.",
+     "Let's look at the facts."
     ],
     [
      "Tu n'as pas complètement tort.",
@@ -12219,7 +13469,8 @@
     ],
     [
      "On pourrait essayer les deux.",
-     "We could try both."
+     "We could try both.",
+     "We could try both options."
     ],
     [
      "Je suis d'accord pour essayer.",
@@ -12237,6 +13488,67 @@
      "So, that's settled!",
      "Then it's settled!",
      "So it's settled!"
+    ],
+    [
+     "Je suis prêt à parier que ça ne marchera pas.",
+     "I'm willing to bet it won't work.",
+     "I bet it won't work."
+    ],
+    [
+     "Il est évident qu'on doit changer de méthode.",
+     "It's obvious that we need to change our approach.",
+     "Clearly, we have to change our method."
+    ],
+    [
+     "Prenons un exemple concret.",
+     "Let's take a concrete example.",
+     "Let's look at a concrete example."
+    ],
+    [
+     "D'autant plus que ça coûte moins cher.",
+     "Especially since it costs less.",
+     "All the more so because it's cheaper."
+    ],
+    [
+     "C'est plus compliqué qu'il n'y paraît.",
+     "It's more complicated than it seems.",
+     "It's more complicated than it looks."
+    ],
+    [
+     "Je suis d'accord en principe, mais pas sur la méthode.",
+     "I agree in principle, but not with the method.",
+     "In principle I agree, but not with the approach."
+    ],
+    [
+     "Ça peut se défendre.",
+     "That's a fair point.",
+     "You could argue that.",
+     "That can be defended."
+    ],
+    [
+     "Tout n'est pas noir ou blanc.",
+     "It's not all black and white.",
+     "Not everything is black and white."
+    ],
+    [
+     "Si tu t'occupes des courses, je fais la cuisine.",
+     "If you do the shopping, I'll do the cooking.",
+     "If you take care of the groceries, I'll cook."
+    ],
+    [
+     "On peut se mettre d'accord sur une date ?",
+     "Can we agree on a date?",
+     "Could we settle on a date?"
+    ],
+    [
+     "Je suis prêt à faire des concessions.",
+     "I'm willing to make concessions.",
+     "I'm ready to compromise."
+    ],
+    [
+     "On essaie pendant un mois, et on en reparle.",
+     "Let's try it for a month and then talk about it again.",
+     "We'll try it for a month and discuss it again."
     ]
    ],
    "v": [
@@ -12397,7 +13709,11 @@
       21,
       22,
       23,
-      24
+      24,
+      36,
+      37,
+      38,
+      39
      ],
      "v": [
       0,
@@ -12427,7 +13743,11 @@
       28,
       29,
       30,
-      31
+      31,
+      40,
+      41,
+      42,
+      43
      ],
      "v": [
       2,
@@ -12456,7 +13776,11 @@
       32,
       33,
       34,
-      35
+      35,
+      44,
+      45,
+      46,
+      47
      ],
      "v": [
       8,
@@ -13043,7 +14367,8 @@
     ],
     [
      "Je suis allé à Rome l'été dernier.",
-     "I went to Rome last summer."
+     "I went to Rome last summer.",
+     "I went to Rome last summer on vacation."
     ],
     [
      "Elle vient de partir.",
@@ -13099,7 +14424,8 @@
     ],
     [
      "Tu as déjà vu la mer ?",
-     "Have you ever seen the sea?"
+     "Have you ever seen the sea?",
+     "Have you ever seen the ocean?"
     ],
     [
      "Elle a déjà vécu à l'étranger.",
@@ -13137,7 +14463,8 @@
     ],
     [
      "Tu as déjà gagné un prix ?",
-     "Have you ever won a prize?"
+     "Have you ever won a prize?",
+     "Have you ever won an award?"
     ],
     [
      "J'ai souvent entendu parler de lui.",
@@ -13158,7 +14485,8 @@
     ],
     [
      "Depuis combien de temps tu attends ?",
-     "How long have you been waiting?"
+     "How long have you been waiting?",
+     "How long have you been waiting for?"
     ],
     [
      "Je ne l'ai pas vu depuis des années.",
@@ -13203,6 +14531,66 @@
      "Tu as fini tes devoirs ?",
      "Have you finished your homework?",
      "Did you finish your homework?"
+    ],
+    [
+     "C'est la meilleure pizza que j'aie jamais mangée.",
+     "It's the best pizza I've ever eaten.",
+     "This is the best pizza I've ever had."
+    ],
+    [
+     "Tu as déjà essayé le saut à l'élastique ?",
+     "Have you ever tried bungee jumping?",
+     "Have you ever been bungee jumping?"
+    ],
+    [
+     "Je ne suis jamais allé en Asie.",
+     "I've never been to Asia.",
+     "I've never traveled to Asia."
+    ],
+    [
+     "On a déjà déménagé quatre fois.",
+     "We've already moved four times.",
+     "We have moved four times already."
+    ],
+    [
+     "Ça fait des heures que je t'attends !",
+     "I've been waiting for you for hours!",
+     "I've been waiting hours for you!"
+    ],
+    [
+     "Il joue du piano depuis qu'il a six ans.",
+     "He's been playing the piano since he was six.",
+     "He has played piano since he was six."
+    ],
+    [
+     "On ne s'est pas parlé depuis la dispute.",
+     "We haven't spoken since the argument.",
+     "We haven't talked since the fight."
+    ],
+    [
+     "Ça fait combien de temps que tu conduis ?",
+     "How long have you been driving?",
+     "How long have you been driving for?"
+    ],
+    [
+     "Je viens de recevoir ton message.",
+     "I just got your message.",
+     "I've just received your message."
+    ],
+    [
+     "Il a arrêté de fumer il y a trois ans.",
+     "He quit smoking three years ago.",
+     "He stopped smoking three years ago."
+    ],
+    [
+     "Tu as vu ses photos de vacances ?",
+     "Have you seen her vacation photos?",
+     "Did you see his holiday pictures?"
+    ],
+    [
+     "Je n'ai pas encore eu le temps de lire ton mail.",
+     "I haven't had time to read your email yet.",
+     "I haven't had the time to read your email yet."
     ]
    ],
    "v": [
@@ -13362,7 +14750,11 @@
       20,
       21,
       22,
-      23
+      23,
+      35,
+      36,
+      37,
+      38
      ],
      "v": [
       0,
@@ -13393,7 +14785,11 @@
       27,
       28,
       29,
-      30
+      30,
+      39,
+      40,
+      41,
+      42
      ],
      "v": [
       5,
@@ -13420,7 +14816,11 @@
       31,
       32,
       33,
-      34
+      34,
+      43,
+      44,
+      45,
+      46
      ],
      "v": [
       3,
@@ -14100,7 +15500,8 @@
     ],
     [
      "Je peux gérer mon compte en ligne ?",
-     "Can I manage my account online?"
+     "Can I manage my account online?",
+     "Can I manage my account on the internet?"
     ],
     [
      "Voici mon relevé de salaire.",
@@ -14131,7 +15532,8 @@
     ],
     [
      "Combien coûte un virement international ?",
-     "How much does an international transfer cost?"
+     "How much does an international transfer cost?",
+     "How much is an international transfer?"
     ],
     [
      "Le distributeur ne donne que des billets de vingt.",
@@ -14147,7 +15549,8 @@
     ],
     [
      "Le virement prend trois jours.",
-     "The transfer takes three days."
+     "The transfer takes three days.",
+     "The transfer will take three days."
     ],
     [
      "Vous pouvez faire de la monnaie ?",
@@ -14183,6 +15586,66 @@
      "It takes two weeks.",
      "The waiting time is two weeks.",
      "The processing time is two weeks."
+    ],
+    [
+     "Je voudrais un découvert autorisé.",
+     "I'd like an overdraft facility.",
+     "I'd like an authorized overdraft."
+    ],
+    [
+     "Les frais de tenue de compte sont de combien ?",
+     "How much are the account fees?",
+     "What are the account maintenance fees?"
+    ],
+    [
+     "Je voudrais changer d'adresse.",
+     "I'd like to change my address.",
+     "I'd like to update my address."
+    ],
+    [
+     "Il faut combien de temps pour recevoir le chéquier ?",
+     "How long does it take to get the checkbook?",
+     "How long until I receive my chequebook?"
+    ],
+    [
+     "Je voudrais changer des euros en dollars.",
+     "I'd like to change euros into dollars.",
+     "I'd like to exchange euros for dollars."
+    ],
+    [
+     "Quel est le taux de change aujourd'hui ?",
+     "What's the exchange rate today?",
+     "What is today's exchange rate?"
+    ],
+    [
+     "Le paiement sans contact ne marche pas.",
+     "Contactless payment isn't working.",
+     "The contactless payment doesn't work."
+    ],
+    [
+     "Je n'ai pas reconnu ce prélèvement.",
+     "I don't recognize this charge.",
+     "I don't recognise this debit."
+    ],
+    [
+     "Je voudrais faire une demande de visa.",
+     "I'd like to apply for a visa.",
+     "I'd like to request a visa."
+    ],
+    [
+     "Il faut une photo d'identité récente.",
+     "You need a recent passport photo.",
+     "A recent ID photo is required."
+    ],
+    [
+     "Mon dossier est incomplet.",
+     "My application is incomplete.",
+     "My file is incomplete."
+    ],
+    [
+     "Je peux prendre rendez-vous en ligne ?",
+     "Can I book an appointment online?",
+     "Can I make an appointment online?"
     ]
    ],
    "v": [
@@ -14353,7 +15816,11 @@
       21,
       22,
       23,
-      24
+      24,
+      36,
+      37,
+      38,
+      39
      ],
      "v": [
       1,
@@ -14384,7 +15851,11 @@
       28,
       29,
       30,
-      31
+      31,
+      40,
+      41,
+      42,
+      43
      ],
      "v": [
       0,
@@ -14410,7 +15881,11 @@
       32,
       33,
       34,
-      35
+      35,
+      44,
+      45,
+      46,
+      47
      ],
      "v": [
       3,
@@ -14986,7 +16461,8 @@
     ],
     [
      "Appelez une ambulance !",
-     "Call an ambulance!"
+     "Call an ambulance!",
+     "Get an ambulance!"
     ],
     [
      "Il s'est cassé la jambe.",
@@ -15116,7 +16592,8 @@
     ],
     [
      "Au feu !",
-     "Fire!"
+     "Fire!",
+     "There's a fire!"
     ],
     [
      "Il y a un blessé.",
@@ -15174,6 +16651,66 @@
      "There's a power cut.",
      "There is a power outage.",
      "There's a power outage."
+    ],
+    [
+     "On a forcé la serrure de ma voiture.",
+     "Someone broke into my car.",
+     "My car was broken into."
+    ],
+    [
+     "Je ne sais pas exactement où je l'ai perdu.",
+     "I don't know exactly where I lost it.",
+     "I'm not sure where exactly I lost it."
+    ],
+    [
+     "On m'a volé ma carte bancaire et mon téléphone.",
+     "My bank card and phone were stolen.",
+     "Someone stole my bank card and my phone."
+    ],
+    [
+     "Je peux avoir une copie de la déclaration ?",
+     "Can I have a copy of the report?",
+     "Could I get a copy of the report?"
+    ],
+    [
+     "Il a fait un malaise dans la rue.",
+     "He collapsed in the street.",
+     "He fainted in the street."
+    ],
+    [
+     "Elle s'est fait renverser par une voiture.",
+     "She was hit by a car.",
+     "She got knocked down by a car."
+    ],
+    [
+     "Gardez la tête haute et appuyez sur la plaie.",
+     "Keep your head up and press on the wound.",
+     "Keep your head raised and apply pressure to the wound."
+    ],
+    [
+     "Les secours arrivent dans cinq minutes.",
+     "Help is arriving in five minutes.",
+     "The paramedics will be here in five minutes."
+    ],
+    [
+     "Le moteur fait un bruit bizarre.",
+     "The engine is making a strange noise.",
+     "The engine's making a weird noise."
+    ],
+    [
+     "On est en panne sur l'autoroute.",
+     "We've broken down on the highway.",
+     "Our car broke down on the freeway."
+    ],
+    [
+     "Mon téléphone est déchargé, je peux utiliser le vôtre ?",
+     "My phone is dead, can I use yours?",
+     "My phone has died, could I use yours?"
+    ],
+    [
+     "La fuite d'eau a inondé la cuisine.",
+     "The leak flooded the kitchen.",
+     "The water leak flooded the kitchen."
     ]
    ],
    "v": [
@@ -15343,7 +16880,11 @@
       21,
       22,
       23,
-      24
+      24,
+      36,
+      37,
+      38,
+      39
      ],
      "v": [
       0,
@@ -15374,7 +16915,11 @@
       28,
       29,
       30,
-      31
+      31,
+      40,
+      41,
+      42,
+      43
      ],
      "v": [
       3,
@@ -15399,7 +16944,11 @@
       32,
       33,
       34,
-      35
+      35,
+      44,
+      45,
+      46,
+      47
      ],
      "v": [
       2,
@@ -15431,7 +16980,8 @@
     ],
     [
      "Sais-tu quelle heure il est ?",
-     "Do you know what time it is?"
+     "Do you know what time it is?",
+     "Do you know the time?"
     ],
     [
      "Il m'a dit qu'il était fatigué.",
@@ -15442,15 +16992,18 @@
     ],
     [
      "Elle m'a demandé où j'habitais.",
-     "She asked me where I lived."
+     "She asked me where I lived.",
+     "She asked where I lived."
     ],
     [
      "Qui t'a appelé hier soir ?",
-     "Who called you last night?"
+     "Who called you last night?",
+     "Who phoned you last night?"
     ],
     [
      "Qui as-tu appelé hier soir ?",
-     "Who did you call last night?"
+     "Who did you call last night?",
+     "Who did you phone last night?"
     ],
     [
      "Je ne sais pas s'il viendra.",
@@ -15551,15 +17104,18 @@
     ],
     [
      "Tu sais où il habite ?",
-     "Do you know where he lives?"
+     "Do you know where he lives?",
+     "Do you know where he's living?"
     ],
     [
      "Qu'est-ce qui s'est passé ?",
-     "What happened?"
+     "What happened?",
+     "What's happened?"
     ],
     [
      "Je me demande pourquoi elle est partie.",
-     "I wonder why she left."
+     "I wonder why she left.",
+     "I wonder why she went away."
     ],
     [
      "Pouvez-vous me dire où sont les toilettes ?",
@@ -15574,7 +17130,8 @@
     ],
     [
      "Tu sais combien ça coûte ?",
-     "Do you know how much it costs?"
+     "Do you know how much it costs?",
+     "Do you know what it costs?"
     ],
     [
      "Laquelle tu préfères ?",
@@ -15599,7 +17156,68 @@
     ],
     [
      "Elle m'a demandé de l'attendre.",
-     "She asked me to wait for her."
+     "She asked me to wait for her.",
+     "She told me to wait for her."
+    ],
+    [
+     "Tu ne lui as rien dit, si ?",
+     "You didn't tell him anything, did you?",
+     "You haven't told him anything, have you?"
+    ],
+    [
+     "Ferme la porte, tu veux bien ?",
+     "Close the door, will you?",
+     "Shut the door, would you?"
+    ],
+    [
+     "Elle aurait pu prévenir, non ?",
+     "She could have warned us, couldn't she?",
+     "She could have told us, couldn't she?"
+    ],
+    [
+     "Personne n'a appelé, si ?",
+     "Nobody called, did they?",
+     "No one called, did they?"
+    ],
+    [
+     "Tu sais à quelle heure ferme la pharmacie ?",
+     "Do you know what time the pharmacy closes?",
+     "Do you know when the pharmacy closes?"
+    ],
+    [
+     "Qui a laissé la porte ouverte ?",
+     "Who left the door open?",
+     "Who's left the door open?"
+    ],
+    [
+     "À qui as-tu prêté ma voiture ?",
+     "Who did you lend my car to?",
+     "Who have you lent my car to?"
+    ],
+    [
+     "Tu pourrais me dire ce que ça veut dire ?",
+     "Could you tell me what this means?",
+     "Can you tell me what it means?"
+    ],
+    [
+     "Il m'a demandé de ne pas être en retard.",
+     "He asked me not to be late.",
+     "He told me not to be late."
+    ],
+    [
+     "Elle a dit qu'elle avait déjà vu ce film.",
+     "She said she had already seen that movie.",
+     "She said she'd already seen this film."
+    ],
+    [
+     "Ils m'ont demandé pourquoi j'étais parti.",
+     "They asked me why I had left.",
+     "They asked me why I'd left."
+    ],
+    [
+     "Le médecin m'a conseillé de me reposer.",
+     "The doctor advised me to rest.",
+     "The doctor told me to get some rest."
     ]
    ],
    "v": [
@@ -15771,7 +17389,11 @@
       21,
       22,
       23,
-      24
+      24,
+      36,
+      37,
+      38,
+      39
      ],
      "v": [
       6,
@@ -15801,7 +17423,11 @@
       28,
       29,
       30,
-      31
+      31,
+      40,
+      41,
+      42,
+      43
      ],
      "v": [
       2,
@@ -15830,7 +17456,11 @@
       32,
       33,
       34,
-      35
+      35,
+      44,
+      45,
+      46,
+      47
      ],
      "v": [
       0,
@@ -16048,6 +17678,74 @@
      "Too bad you left so early.",
      "It's a pity you left so early.",
      "Shame you left so early."
+    ],
+    [
+     "J'ai du pain sur la planche.",
+     "I have a lot on my plate.",
+     "I've got a lot on my plate."
+    ],
+    [
+     "Je suis au bout du rouleau.",
+     "I'm at my wits' end.",
+     "I'm at the end of my rope.",
+     "I'm running on empty."
+    ],
+    [
+     "Je jongle entre trois projets en même temps.",
+     "I'm juggling three projects at the same time.",
+     "I'm juggling three projects at once."
+    ],
+    [
+     "Je vais devoir mettre les bouchées doubles.",
+     "I'm going to have to double my efforts.",
+     "I'll have to work twice as hard.",
+     "I'll have to step it up."
+    ],
+    [
+     "C'est peut-être un mal pour un bien.",
+     "It might be a blessing in disguise.",
+     "Maybe it's a blessing in disguise."
+    ],
+    [
+     "On verra bien, on improvisera.",
+     "We'll play it by ear.",
+     "Let's play it by ear.",
+     "We'll see, we'll improvise."
+    ],
+    [
+     "Il ne manquait plus que ça !",
+     "That's all I needed!",
+     "That's the last thing I needed!",
+     "Just what I needed!"
+    ],
+    [
+     "Ce n'est que partie remise.",
+     "We'll take a rain check.",
+     "It's only postponed.",
+     "Maybe another time."
+    ],
+    [
+     "Je m'en mords les doigts.",
+     "I really regret it.",
+     "I'm kicking myself.",
+     "I could kick myself."
+    ],
+    [
+     "Si c'était à refaire, je ne changerais rien.",
+     "If I had to do it again, I wouldn't change anything.",
+     "If I could do it all over again, I wouldn't change a thing."
+    ],
+    [
+     "J'aurais mieux fait de me taire.",
+     "I would have been better off keeping quiet.",
+     "I should have kept my mouth shut.",
+     "I'd have done better to keep quiet."
+    ],
+    [
+     "Il est trop tard pour revenir en arrière.",
+     "It's too late to turn back.",
+     "There's no going back now.",
+     "It's too late to go back."
     ]
    ],
    "v": [
@@ -16188,6 +17886,39 @@
      ],
      0,
      "Regret sur le passé : I wish + past perfect."
+    ],
+    [
+     "I have a lot on my ___.",
+     [
+      "plate",
+      "table",
+      "dish",
+      "mind"
+     ],
+     0,
+     "have a lot on one's plate = avoir du pain sur la planche."
+    ],
+    [
+     "It might be a blessing in ___.",
+     [
+      "disguise",
+      "secret",
+      "hiding",
+      "mask"
+     ],
+     0,
+     "a blessing in disguise = un mal pour un bien."
+    ],
+    [
+     "I would have been better off ___ quiet.",
+     [
+      "keeping",
+      "to keep",
+      "keep",
+      "kept"
+     ],
+     0,
+     "be better off + -ing = mieux s'en sortir en faisant… (regret au passé : would have been better off)."
     ]
    ],
    "orig": 1,
@@ -16208,7 +17939,11 @@
       20,
       21,
       22,
-      23
+      23,
+      35,
+      36,
+      37,
+      38
      ],
      "v": [
       0,
@@ -16219,7 +17954,8 @@
      "c": [
       2,
       3,
-      4
+      4,
+      8
      ],
      "g": [
       "en.s.misc"
@@ -16239,7 +17975,11 @@
       27,
       28,
       29,
-      30
+      30,
+      39,
+      40,
+      41,
+      42
      ],
      "v": [
       1,
@@ -16249,7 +17989,8 @@
      ],
      "c": [
       5,
-      6
+      6,
+      9
      ],
      "g": [
       "en.m.ded"
@@ -16266,7 +18007,11 @@
       31,
       32,
       33,
-      34
+      34,
+      43,
+      44,
+      45,
+      46
      ],
      "v": [
       8,
@@ -16277,7 +18022,8 @@
      "c": [
       0,
       1,
-      7
+      7,
+      10
      ],
      "g": [
       "en.t.cond"
@@ -16407,7 +18153,8 @@
     ],
     [
      "Ne laisse pas tomber maintenant !",
-     "Don't give up now!"
+     "Don't give up now!",
+     "Don't quit now!"
     ],
     [
      "Je vais me renseigner.",
@@ -16494,6 +18241,67 @@
      "Set your alarm for six.",
      "Set your alarm for six o'clock.",
      "Set your alarm at six."
+    ],
+    [
+     "Je ne supporte plus ce bruit.",
+     "I can't put up with this noise anymore.",
+     "I can't stand this noise anymore."
+    ],
+    [
+     "Je suis tombé sur une vieille photo en rangeant.",
+     "I came across an old photo while tidying up.",
+     "I stumbled upon an old photo while cleaning up."
+    ],
+    [
+     "Il s'en est tiré sans amende.",
+     "He got away without a fine.",
+     "He got away with it without a fine."
+    ],
+    [
+     "Il faut qu'on élimine les causes possibles.",
+     "We need to rule out the possible causes.",
+     "We have to rule out possible causes."
+    ],
+    [
+     "J'admire beaucoup mon grand frère.",
+     "I really look up to my big brother.",
+     "I really admire my older brother."
+    ],
+    [
+     "On a fini par se croiser par hasard.",
+     "We ended up bumping into each other.",
+     "We eventually ran into each other by chance."
+    ],
+    [
+     "Elle m'a laissé tomber à la dernière minute.",
+     "She let me down at the last minute.",
+     "She bailed on me at the last minute."
+    ],
+    [
+     "Je dois réviser mon espagnol avant le voyage.",
+     "I need to brush up on my Spanish before the trip.",
+     "I have to brush up my Spanish before the trip."
+    ],
+    [
+     "On est à court de lait.",
+     "We've run out of milk.",
+     "We're out of milk.",
+     "We ran out of milk."
+    ],
+    [
+     "Je vais mettre de côté un peu d'argent chaque mois.",
+     "I'm going to set aside some money every month.",
+     "I'll put aside a little money each month."
+    ],
+    [
+     "Il faut qu'on fasse le tri dans le garage.",
+     "We need to sort through the garage.",
+     "We have to clear out the garage."
+    ],
+    [
+     "Je me suis mis à jour dans mes mails.",
+     "I've caught up on my emails.",
+     "I caught up on my emails."
     ]
    ],
    "v": [
@@ -16634,6 +18442,39 @@
      ],
      0,
      "Se raconter les nouvelles : catch up."
+    ],
+    [
+     "I can't put up ___ this noise anymore.",
+     [
+      "with",
+      "on",
+      "for",
+      "by"
+     ],
+     0,
+     "put up with = supporter, tolérer."
+    ],
+    [
+     "I really look up ___ my big brother.",
+     [
+      "to",
+      "at",
+      "for",
+      "on"
+     ],
+     0,
+     "look up to someone = admirer quelqu'un."
+    ],
+    [
+     "I'm running out ___ patience.",
+     [
+      "of",
+      "off",
+      "with",
+      "from"
+     ],
+     0,
+     "run out of = ne plus avoir de (patience, temps, lait…)."
     ]
    ],
    "parts": [
@@ -16654,7 +18495,11 @@
       21,
       22,
       23,
-      24
+      24,
+      36,
+      37,
+      38,
+      39
      ],
      "v": [
       0,
@@ -16665,7 +18510,11 @@
      "c": [
       2,
       3,
-      4
+      4,
+      8
+     ],
+     "g": [
+      "en.p.verb"
      ]
     },
     {
@@ -16682,7 +18531,11 @@
       28,
       29,
       30,
-      31
+      31,
+      40,
+      41,
+      42,
+      43
      ],
      "v": [
       1,
@@ -16693,7 +18546,11 @@
      "c": [
       5,
       6,
-      7
+      7,
+      9
+     ],
+     "g": [
+      "en.p.verb"
      ]
     },
     {
@@ -16707,7 +18564,11 @@
       32,
       33,
       34,
-      35
+      35,
+      44,
+      45,
+      46,
+      47
      ],
      "v": [
       4,
@@ -16717,7 +18578,11 @@
      ],
      "c": [
       0,
-      1
+      1,
+      10
+     ],
+     "g": [
+      "en.p.verb"
      ]
     }
    ]
@@ -17299,7 +19164,8 @@
     ],
     [
      "J'aimerais que tu sois là.",
-     "I wish you were here."
+     "I wish you were here.",
+     "I wish you could be here."
     ],
     [
      "Si seulement j'avais écouté !",
@@ -17308,7 +19174,8 @@
     ],
     [
      "Que ferais-tu si tu gagnais au loto ?",
-     "What would you do if you won the lottery?"
+     "What would you do if you won the lottery?",
+     "What would you do if you won the lotto?"
     ],
     [
      "Sauf s'il y a des bouchons, je serai à l'heure.",
@@ -17318,11 +19185,13 @@
     ],
     [
      "Si tu chauffes la glace, elle fond.",
-     "If you heat ice, it melts."
+     "If you heat ice, it melts.",
+     "When you heat ice, it melts."
     ],
     [
      "Prends un parapluie au cas où il pleuvrait.",
-     "Take an umbrella in case it rains."
+     "Take an umbrella in case it rains.",
+     "Take an umbrella in case it rains later."
     ],
     [
      "Si j'ai le temps, je passerai te voir.",
@@ -17440,7 +19309,8 @@
     ],
     [
      "Si tu pouvais voler, où irais-tu ?",
-     "If you could fly, where would you go?"
+     "If you could fly, where would you go?",
+     "Where would you go if you could fly?"
     ],
     [
      "Ce serait génial d'avoir plus de vacances.",
@@ -17470,6 +19340,69 @@
      "I wish I had been there.",
      "I would have liked to be there.",
      "I wish I'd been there."
+    ],
+    [
+     "Au cas où tu aurais besoin de moi, je suis dans le bureau d'à côté.",
+     "In case you need me, I'm in the office next door.",
+     "If you need me, I'm in the next office."
+    ],
+    [
+     "Pour peu qu'il fasse beau, on mangera dehors.",
+     "Provided the weather is nice, we'll eat outside.",
+     "As long as the weather's good, we'll eat outside."
+    ],
+    [
+     "Supposons qu'on rate le dernier train, que fait-on ?",
+     "Suppose we miss the last train, what do we do?",
+     "Supposing we miss the last train, what then?"
+    ],
+    [
+     "Si jamais tu le vois, dis-lui de m'appeler.",
+     "Should you see him, tell him to call me.",
+     "If you happen to see him, tell him to call me.",
+     "If you see him, tell him to call me."
+    ],
+    [
+     "Si j'étais amené à déménager, je choisirais Lisbonne.",
+     "Were I to move, I would choose Lisbon.",
+     "If I were to move, I'd choose Lisbon.",
+     "If I moved, I would choose Lisbon."
+    ],
+    [
+     "Si je n'étais pas si timide, je ferais du théâtre.",
+     "If I weren't so shy, I would do some acting.",
+     "If I wasn't so shy, I'd take up acting."
+    ],
+    [
+     "Et si on partait vivre à l'étranger ?",
+     "What if we moved abroad?",
+     "How about moving abroad?"
+    ],
+    [
+     "Sans ton aide, je n'y arriverais pas.",
+     "Without your help, I wouldn't manage.",
+     "But for your help, I couldn't do it.",
+     "Without your help, I couldn't do it."
+    ],
+    [
+     "Si j'avais accepté ce poste, je vivrais à New York maintenant.",
+     "If I had taken that job, I would be living in New York now.",
+     "If I'd accepted that job, I'd be living in New York now."
+    ],
+    [
+     "S'il était plus organisé, il n'aurait pas raté son avion.",
+     "If he were more organized, he wouldn't have missed his plane.",
+     "If he was more organized, he wouldn't have missed his flight."
+    ],
+    [
+     "Sans la pluie, on aurait gagné le match.",
+     "If it hadn't been for the rain, we would have won the game.",
+     "Without the rain, we would have won the match."
+    ],
+    [
+     "Si tu me l'avais dit plus tôt, j'aurais pu t'aider.",
+     "If you had told me earlier, I could have helped you.",
+     "Had you told me sooner, I could have helped."
     ]
    ],
    "v": [
@@ -17610,6 +19543,39 @@
      ],
      0,
      "Vérité générale : if + présent, présent."
+    ],
+    [
+     "___ you see him, tell him to call me.",
+     [
+      "Should",
+      "Would",
+      "Had",
+      "Were"
+     ],
+     0,
+     "Should + sujet + verbe = si jamais (inversion soutenue)."
+    ],
+    [
+     "___ I to move, I would choose Lisbon.",
+     [
+      "Were",
+      "Was",
+      "Am",
+      "Would"
+     ],
+     0,
+     "Were + sujet + to + verbe = si un jour (hypothèse soutenue)."
+    ],
+    [
+     "If I had taken that job, I ___ in New York now.",
+     [
+      "would be living",
+      "would have lived",
+      "will live",
+      "had lived"
+     ],
+     0,
+     "Conditionnel mixte : condition passée (had taken), conséquence présente (would be living)."
     ]
    ],
    "parts": [
@@ -17630,7 +19596,11 @@
       21,
       22,
       23,
-      24
+      24,
+      36,
+      37,
+      38,
+      39
      ],
      "v": [
       3,
@@ -17641,10 +19611,12 @@
      "c": [
       2,
       4,
-      7
+      7,
+      8
      ],
      "g": [
-      "en.t.cond"
+      "en.t.cond",
+      "en.s.inv"
      ]
     },
     {
@@ -17661,7 +19633,11 @@
       28,
       29,
       30,
-      31
+      31,
+      40,
+      41,
+      42,
+      43
      ],
      "v": [
       2,
@@ -17672,10 +19648,12 @@
      "c": [
       0,
       3,
-      5
+      5,
+      9
      ],
      "g": [
-      "en.t.cond"
+      "en.t.cond",
+      "en.s.inv"
      ]
     },
     {
@@ -17689,7 +19667,11 @@
       32,
       33,
       34,
-      35
+      35,
+      44,
+      45,
+      46,
+      47
      ],
      "v": [
       0,
@@ -17699,10 +19681,12 @@
      ],
      "c": [
       1,
-      6
+      6,
+      10
      ],
      "g": [
-      "en.t.cond"
+      "en.t.cond",
+      "en.s.inv"
      ]
     }
    ]

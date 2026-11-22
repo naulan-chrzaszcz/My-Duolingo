@@ -930,7 +930,7 @@
    "Banque, administration & services": ["en.m.obl", "en.m.adv"],
    "Urgences & imprévus": ["en.t.prog", "en.m.obl"],
    "Imprévus & expressions": ["en.m.ded", "en.t.cond", "en.s.misc"],
-   "Hypothèses & conditionnels": ["en.t.cond"],
+   "Hypothèses & conditionnels": ["en.t.cond", "en.s.inv"],
    "Au café & au restaurant": ["en.w.quant", "en.s.quest", "en.m.adv"],
    "Courses & cuisine": ["en.w.quant"],
    "Tech au quotidien": ["en.m.abil", "en.s.pass"],
@@ -952,7 +952,8 @@
    "Décrire les gens & les lieux": ["en.t.pres", "en.p.place"],
    "Météo & saisons": ["en.t.pres", "en.p.time", "en.t.fut"],
    "Émotions & ressentis": ["en.t.pres", "en.w.form"],
-   "Hier & le week-end dernier": ["en.t.past"]
+   "Hier & le week-end dernier": ["en.t.past"],
+   "Phrasal verbs du quotidien": ["en.p.verb"]
   },
   "en-pro": {
    "Réunions & appels": ["en.m.adv", "en.t.fut"],
