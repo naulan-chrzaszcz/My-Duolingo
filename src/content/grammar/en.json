@@ -349,7 +349,9 @@
       ["We ___ better not be late again.", ["had", "would", "should", "have"], 3]
      ],
      "p": [
-      {"s": {"fr": "Tu devrais {1=te reposer|appeler ta mère|aller chez le médecin}.", "ko": "{1=좀 쉬는 게|어머니께 전화하는 게|병원에 가 보는 게} 좋겠어요."}, "t": ["You should {1=get some rest|call your mother|see a doctor}.", "You should {1=rest|call your mom|go to the doctor}.", "You ought to {1=get some rest|call your mother|see a doctor}."], "x": ["You should to {1=get some rest|call your mother|see a doctor}.", "You would {1=get some rest|call your mother|see a doctor}.", "You should {1=getting some rest|calling your mother|seeing a doctor}."]}
+      {"s": {"fr": "Tu devrais {1=te reposer|appeler ta mère|aller chez le médecin}.", "ko": "{1=좀 쉬는 게|어머니께 전화하는 게|병원에 가 보는 게} 좋겠어요."}, "t": ["You should {1=get some rest|call your mother|see a doctor}.", "You should {1=rest|call your mom|go to the doctor}.", "You ought to {1=get some rest|call your mother|see a doctor}."], "x": ["You should to {1=get some rest|call your mother|see a doctor}.", "You would {1=get some rest|call your mother|see a doctor}.", "You should {1=getting some rest|calling your mother|seeing a doctor}."]},
+      {"s": {"fr": "Tu devrais {1=te reposer|appeler ta mère|voir un médecin}.", "ko": "{1=좀 쉬는|엄마한테 전화하는|병원에 가 보는} 게 좋겠어."}, "t": ["You should {1=rest|call your mother|see a doctor}.", "You ought to {1=rest|call your mother|see a doctor}.", "You should {1=get some rest|call your mom|see a doctor}."], "x": ["You should to {1=rest|call your mother|see a doctor}.", "You must to {1=rest|call your mother|see a doctor}.", "You should {1=resting|calling your mother|seeing a doctor}."]},
+      {"s": {"fr": "Est-ce que je pourrais {1=ouvrir la fenêtre|emprunter ton stylo|partir plus tôt} ?", "ko": "{1=창문을 열어도|펜을 빌려도|일찍 가도} 될까요?"}, "t": ["Could I {1=open the window|borrow your pen|leave early}?", "May I {1=open the window|borrow your pen|leave early}?", "Can I {1=open the window|borrow your pen|leave early}?"], "x": ["Could I to {1=open the window|borrow your pen|leave early}?", "Do I could {1=open the window|borrow your pen|leave early}?", "Could I {1=opening the window|borrowing your pen|leaving early}?"]}
      ]
     },
     {
@@ -399,7 +401,15 @@
       ["Sorry, I ___ hear you: can you speak up?", ["can't", "mustn't", "needn't", "shouldn't"], 0],
       ["After months of practice, {@S3} ___ to swim across the lake last summer.", ["was able", "could", "can", "is able"], 1],
       ["{1=Yesterday|Tomorrow} I ___ come to the meeting, sorry.", ["{1=couldn't|won't be able to}", "{1=won't be able to|couldn't}", "can't to", "{1=can|will can}"], [0, 1]],
-      ["I'd love to ___ play the piano.", ["be able to", "can", "could", "able to"], 1]
+      ["I'd love to ___ play the piano.", ["be able to", "can", "could", "able to"], 1],
+      ["I'm sorry, I ___ find the {keys|address|file} anywhere.", ["can't", "mustn't", "needn't", "won't be able"], 0],
+      ["Will you ___ come {tomorrow|on Friday|next week}?", ["be able to", "can", "could", "able to"], 1],
+      ["I've never ___ {to cook|to dance|to whistle} properly.", ["been able", "could", "can", "be able"], 1],
+      ["When we were kids, we ___ play outside until {dark|late|nine}.", ["could", "can", "will be able to", "are able to"], 0]
+     ],
+     "p": [
+      {"s": {"fr": "Je sais {1=nager|conduire|cuisiner}.", "ko": "저는 {1=수영할|운전할|요리할} 줄 알아요."}, "t": ["I can {1=swim|drive|cook}.", "I know how to {1=swim|drive|cook}."], "x": ["I can to {1=swim|drive|cook}.", "I know {1=swim|drive|cook}.", "I can {1=swimming|driving|cooking}."]},
+      {"s": {"fr": "Je n'ai pas pu {1=venir|dormir|finir} hier.", "ko": "어제 {1=못 왔어요|잠을 못 잤어요|못 끝냈어요}."}, "t": ["I couldn't {1=come|sleep|finish} yesterday.", "I wasn't able to {1=come|sleep|finish} yesterday."], "x": ["I can't {1=come|sleep|finish} yesterday.", "I couldn't {1=came|slept|finished} yesterday.", "I didn't can {1=come|sleep|finish} yesterday."]}
      ]
     },
     {
@@ -651,10 +661,17 @@
       ["The doctor told me ___ more water.", ["to drink", "drink", "drinking", "that drink"], 3],
       ["My manager asked us ___ be late again.", ["not to", "don't", "no to", "not"], 3],
       ["{1=Tom|Léa} told me {1=he|she} ___ already seen the film.", ["had", "has", "was", "did"], 0],
-      ["They asked us what time the {shop|museum} ___.", ["opened", "did open", "does open", "did it open"], 2, "open"]
+      ["They asked us what time the {shop|museum} ___.", ["opened", "did open", "does open", "did it open"], 2, "open"],
+      ["{1=Tom|Léa} asked me why I ___ {1=him|her} so late.", ["had called", "did I call", "have I called", "do call"], 2, "call"],
+      ["{The doctor|My mother|The coach} told {me|us} ___ {so much sugar|junk food|energy drinks}.", ["not to eat", "to not eating", "don't eat", "no eat"], 3],
+      ["{1=Anna|Ben} said {1=she|he} ___ to {Seoul|Lisbon|Rome} the year before.", ["had been", "has been", "is", "have been"], 0],
+      ["{My boss|Our guide} asked {1=us|me} ___ {1=we|I} had any questions.", ["whether", "that", "what", "do"], 2],
+      ["{1=Tom|Léa} told me {1=he|she} ___ me {the next day|later|the following week}.", ["would call", "will call", "calls", "call"], 0]
      ],
      "p": [
-      {"s": {"fr": "Il m'a dit qu'il était fatigué.", "ko": "그는 피곤하다고 말했어요."}, "t": ["He told me he was tired.", "He told me that he was tired.", "He said he was tired.", "He said that he was tired."], "x": ["He said me he was tired.", "He told he was tired.", "He told to me he was tired."]}
+      {"s": {"fr": "Il m'a dit qu'il était fatigué.", "ko": "그는 피곤하다고 말했어요."}, "t": ["He told me he was tired.", "He told me that he was tired.", "He said he was tired.", "He said that he was tired."], "x": ["He said me he was tired.", "He told he was tired.", "He told to me he was tired."]},
+      {"s": {"fr": "Elle m'a dit qu'elle {1=était fatiguée|avait faim|partait demain}.", "ko": "그녀는 {1=피곤하다고|배고프다고|내일 떠난다고} 했어요."}, "t": ["She told me she {1=was tired|was hungry|was leaving tomorrow}.", "She told me that she {1=was tired|was hungry|was leaving tomorrow}.", "She said she {1=was tired|was hungry|was leaving tomorrow}."], "x": ["She told me she {1=is tired|is hungry|is leaving tomorrow}.", "She said me she {1=was tired|was hungry|was leaving tomorrow}.", "She told to me she {1=was tired|was hungry|was leaving tomorrow}."]},
+      {"s": {"fr": "Il m'a demandé si je {1=venais|travaillais|pouvais l'aider}.", "ko": "그는 제가 {1=오는지|일하는지|도와줄 수 있는지} 물었어요."}, "t": ["He asked me if I {1=was coming|was working|could help him}.", "He asked me whether I {1=was coming|was working|could help him}.", "He asked if I {1=was coming|was working|could help him}."], "x": ["He asked me if {1=was I coming|was I working|could I help him}.", "He asked me do I {1=come|work|help him}.", "He asked me if I {1=am coming|am working|can help him}."]}
      ]
     },
     {
@@ -676,10 +693,17 @@
       ["They're ___ nice people!", ["such", "so", "too", "enough"], 0],
       ["The {film|talk} was ___ boring that I left early.", ["so", "such", "too", "enough"], 0],
       ["We don't have ___ chairs for everyone.", ["enough", "too", "so", "such"], 1],
-      ["Did you ___ live here?", ["use to", "used to", "using to", "uses to"], 2]
+      ["Did you ___ live here?", ["use to", "used to", "using to", "uses to"], 2],
+      ["It was ___ {a long day|an easy test|a beautiful wedding}.", ["such", "so", "too", "enough"], 0],
+      ["The {coffee|tea} is ___ hot to drink right now.", ["too", "enough", "such", "so much"], 1],
+      ["Are you used to ___ {on the left|in the snow|at night}?", ["driving", "drive", "drove", "be driving"], 2, "drive"],
+      ["{@S3} didn't run fast ___ to catch the bus.", ["enough", "too", "so", "such"], 1],
+      ["I'm ___ tired that I could sleep {for a week|all day|on the floor}.", ["so", "such", "too", "enough"], 0]
      ],
      "p": [
-      {"s": {"fr": "Il fait trop chaud pour sortir.", "ko": "너무 더워서 나갈 수 없어요."}, "t": ["It's too hot to go out.", "It is too hot to go out."], "x": ["It's so hot to go out.", "It's too hot for go out.", "It's enough hot to go out."]}
+      {"s": {"fr": "Il fait trop chaud pour sortir.", "ko": "너무 더워서 나갈 수 없어요."}, "t": ["It's too hot to go out.", "It is too hot to go out."], "x": ["It's so hot to go out.", "It's too hot for go out.", "It's enough hot to go out."]},
+      {"s": {"fr": "C'est un film tellement {1=drôle|triste|long} !", "ko": "정말 {1=웃긴|슬픈|긴} 영화예요!"}, "t": ["It's such a {1=funny|sad|long} movie!", "It's such a {1=funny|sad|long} film!", "The movie is so {1=funny|sad|long}!"], "x": ["It's so a {1=funny|sad|long} movie!", "It's such {1=funny|sad|long} movie!", "It's too a {1=funny|sad|long} movie!"]},
+      {"s": {"fr": "Avant, je {1=fumais|courais tous les jours|vivais à Paris}.", "ko": "예전에는 {1=담배를 피웠어요|매일 달렸어요|파리에 살았어요}."}, "t": ["I used to {1=smoke|run every day|live in Paris}.", "I used to {1=smoke|go running every day|live in Paris}."], "x": ["I use to {1=smoke|run every day|live in Paris}.", "I am used to {1=smoke|run every day|live in Paris}.", "I used to {1=smoking|running every day|living in Paris}."]}
      ]
     },
     {
@@ -819,10 +843,17 @@
       ["Is this {coat|seat} ___? — No, it's my sister's.", ["yours", "your", "you", "yourself"], 1],
       ["We really enjoyed ___ at the party.", ["ourselves", "us", "our", "ours"], 2],
       ["Mr. Kim wants the report. Please send it to ___.", ["him", "his", "he", "himself"], 0],
-      ["Let me introduce ___: I'm the new intern.", ["myself", "me", "my", "mine"], 2]
+      ["Let me introduce ___: I'm the new intern.", ["myself", "me", "my", "mine"], 2],
+      ["{My parents|The kids} sent ___ a postcard from {Rome|Seoul|Lisbon}.", ["me", "I", "my", "mine"], 0],
+      ["Their house is bigger than ___.", ["ours", "our", "us", "we"], 1],
+      ["{1=Tom|Léa} hurt ___ playing {tennis|football}.", ["{1=himself|herself}", "{1=him|her}", "{1=his|hers}", "{1=herself|himself}"], 2],
+      ["The dog wagged ___ tail.", ["its", "it's", "it", "itself"], 1],
+      ["Did you do it by ___?", ["yourself", "you", "your", "yours"], 2]
      ],
      "p": [
-      {"s": {"fr": "{1=Tom|Léa} a perdu son téléphone.", "ko": "{1=톰은|레아는} 휴대폰을 잃어버렸어요."}, "t": ["{1=Tom|Léa} lost {1=his|her} phone.", "{1=Tom|Léa} has lost {1=his|her} phone.", "{1=Tom|Léa} lost {1=his|her} mobile."], "x": ["{1=Tom|Léa} lost {1=her|his} phone.", "{1=Tom|Léa} lost {1=him|she} phone.", "{1=Tom|Léa} lost the {1=his|her} phone."]}
+      {"s": {"fr": "{1=Tom|Léa} a perdu son téléphone.", "ko": "{1=톰은|레아는} 휴대폰을 잃어버렸어요."}, "t": ["{1=Tom|Léa} lost {1=his|her} phone.", "{1=Tom|Léa} has lost {1=his|her} phone.", "{1=Tom|Léa} lost {1=his|her} mobile."], "x": ["{1=Tom|Léa} lost {1=her|his} phone.", "{1=Tom|Léa} lost {1=him|she} phone.", "{1=Tom|Léa} lost the {1=his|her} phone."]},
+      {"s": {"fr": "Il s'est coupé en cuisinant.", "ko": "그는 요리하다가 베였어요."}, "t": ["He cut himself while cooking.", "He cut himself while he was cooking."], "x": ["He cut him while cooking.", "He cut his while cooking.", "He cut hisself while cooking."]},
+      {"s": {"fr": "Ce sac est à {1=elle|lui|nous}.", "ko": "이 가방은 {1=그녀|그|우리} 거예요."}, "t": ["This bag is {1=hers|his|ours}.", "That bag is {1=hers|his|ours}.", "This is {1=her|his|our} bag."], "x": ["This bag is {1=her|him|our}.", "This bag is {1=her's|he's|our's}.", "This bag is {1=she|he|we}."]}
      ]
     },
     {
@@ -877,7 +908,9 @@
       ["I saw a film last night. ___ film was really good.", ["The", "A", "An", "Some"], 2]
      ],
      "p": [
-      {"s": {"fr": "Il n'y a pas de lait dans le frigo.", "ko": "냉장고에 우유가 없어요."}, "t": ["There isn't any milk in the fridge.", "There is no milk in the fridge.", "There's no milk in the fridge.", "There's not any milk in the fridge."], "x": ["There isn't some milk in the fridge.", "There aren't any milk in the fridge.", "There isn't many milk in the fridge."]}
+      {"s": {"fr": "Il n'y a pas de lait dans le frigo.", "ko": "냉장고에 우유가 없어요."}, "t": ["There isn't any milk in the fridge.", "There is no milk in the fridge.", "There's no milk in the fridge.", "There's not any milk in the fridge."], "x": ["There isn't some milk in the fridge.", "There aren't any milk in the fridge.", "There isn't many milk in the fridge."]},
+      {"s": {"fr": "Il n'y a pas beaucoup de {1=lait|pain|temps}.", "ko": "{1=우유가|빵이|시간이} 별로 없어요."}, "t": ["There isn't much {1=milk|bread|time}.", "There's not much {1=milk|bread|time}.", "We don't have much {1=milk|bread|time}."], "x": ["There isn't many {1=milk|bread|time}.", "There aren't much {1=milk|bread|time}.", "There isn't a lot {1=milk|bread|time}."]},
+      {"s": {"fr": "J'ai quelques {1=questions|idées|photos} pour toi.", "ko": "너한테 줄 {1=질문이|아이디어가|사진이} 몇 개 있어."}, "t": ["I have a few {1=questions|ideas|photos} for you.", "I've got a few {1=questions|ideas|photos} for you.", "I have some {1=questions|ideas|photos} for you."], "x": ["I have a little {1=questions|ideas|photos} for you.", "I have few of {1=questions|ideas|photos} for you.", "I have a few {1=question|idea|photo} for you."]}
      ]
     },
     {
