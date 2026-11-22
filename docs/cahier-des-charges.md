@@ -28,7 +28,7 @@ Speakeasy est une application web d'apprentissage des langues inspirée de Duoli
 
 | Cours | Identifiant | Langue enseignée | Unités | Interfaces qui le proposent |
 | --- | --- | --- | --- | --- |
-| Anglais quotidien | en-daily | anglais (en-US) | 24 | fr, ko |
+| Anglais quotidien | en-daily | anglais (en-US) | 42 | fr, ko |
 | Anglais rédaction pro (dont dev logiciel) | en-pro | anglais (en-US) | 20 | fr, ko |
 | TOEIC (Parts 1 à 7) | en-toeic | anglais (en-US) | 27 | fr, ko |
 | Orthographe Voltaire | fr-volt | français (fr-FR) | 21 | fr, en, ko |

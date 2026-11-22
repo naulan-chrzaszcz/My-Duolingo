@@ -1,6 +1,6 @@
 {
   "name": "speakeasy",
-  "version": "38.1.0",
+  "version": "39.0.0",
   "description": "Speakeasy : application d'apprentissage des langues façon Duolingo (anglais, TOEIC, Voltaire, coréen, FLE)",
   "private": true,
   "type": "module",
