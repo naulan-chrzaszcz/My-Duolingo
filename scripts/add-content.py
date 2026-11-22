@@ -123,7 +123,6 @@ for no, l in enumerate(lines, 1):
                 put_tr(v, trs)
             elif k == "g":
                 ids = v.split()
-                (P if P is not None else U).setdefault("_g", []).extend(ids)
                 if P is not None:
                     P["g"] = P.get("g", []) + ids
                 GRAM.setdefault(U["t"], [])
@@ -186,7 +185,6 @@ new = [U for U in C["units"] if "_after" in U]
 for U in new:
     C["units"].remove(U)
 for U in new:
-    U.pop("_g", None)
     a = U.pop("_after")
     if a:
         i = next(i for i, x in enumerate(C["units"]) if x["t"] == a) + 1

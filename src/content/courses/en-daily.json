@@ -10854,6 +10854,550 @@
    ]
   },
   {
+   "t": "Nuancer & atténuer",
+   "lv": 3,
+   "d": "Atténuer, exprimer un doute, contredire avec tact",
+   "tip": "Pour adoucir un avis, l'anglais empile les atténuateurs : I'd say, I tend to think, it seems that, to some extent, not quite.",
+   "p": [
+    [
+     "Je dirais plutôt que c'est une question de temps.",
+     "I'd say it's more a matter of time.",
+     "I'd say it's more a question of time.",
+     "I would say it's rather a matter of time."
+    ],
+    [
+     "Dans une certaine mesure, tu as raison.",
+     "To some extent, you're right.",
+     "To a certain extent, you're right.",
+     "You're right to some extent."
+    ],
+    [
+     "J'ai tendance à penser que c'est une bonne idée.",
+     "I tend to think it's a good idea.",
+     "I tend to think that it's a good idea."
+    ],
+    [
+     "C'est un peu cher, si tu veux mon avis.",
+     "It's a bit pricey, if you ask me.",
+     "It's a little expensive, if you ask me.",
+     "If you ask me, it's a bit expensive."
+    ],
+    [
+     "Ce n'est pas tout à fait ce que j'avais en tête.",
+     "It's not quite what I had in mind.",
+     "That's not quite what I had in mind.",
+     "It isn't exactly what I had in mind."
+    ],
+    [
+     "On pourrait dire que c'est un succès.",
+     "You could say it's a success.",
+     "One could say it's a success.",
+     "You might say it's a success."
+    ],
+    [
+     "C'est sans doute le meilleur restaurant du quartier.",
+     "It's arguably the best restaurant in the neighborhood.",
+     "It's probably the best restaurant in the area.",
+     "It's probably the best restaurant in the neighborhood."
+    ],
+    [
+     "Ce n'était pas vraiment une réussite.",
+     "It wasn't exactly a success.",
+     "It wasn't really a success.",
+     "It wasn't much of a success."
+    ],
+    [
+     "Il est un peu trop sûr de lui.",
+     "He's a little too sure of himself.",
+     "He's a bit too sure of himself.",
+     "He's slightly overconfident."
+    ],
+    [
+     "Je ne suis pas sûr que ce soit la meilleure solution.",
+     "I'm not sure it's the best solution.",
+     "I'm not sure that's the best solution.",
+     "I'm not convinced it's the best solution."
+    ],
+    [
+     "Disons que ça aurait pu être pire.",
+     "Let's just say it could have been worse.",
+     "Let's say it could have been worse."
+    ],
+    [
+     "Ça me paraît un peu exagéré.",
+     "That seems a bit over the top.",
+     "That seems a little exaggerated.",
+     "It seems a bit exaggerated to me."
+    ],
+    [
+     "Je n'irais pas jusqu'à dire que c'est nul.",
+     "I wouldn't go as far as to say it's terrible.",
+     "I wouldn't go so far as to say it's terrible.",
+     "I wouldn't go as far as saying it's bad."
+    ],
+    [
+     "Grosso modo, on est d'accord.",
+     "Broadly speaking, we agree.",
+     "By and large, we agree.",
+     "Roughly speaking, we agree."
+    ],
+    [
+     "Ce n'est pas mon truc, mais je comprends que ça plaise.",
+     "It's not my thing, but I can see why people like it.",
+     "It's not really my thing, but I understand why people like it."
+    ],
+    [
+     "Il me semble qu'on a oublié quelque chose.",
+     "It seems to me we've forgotten something.",
+     "It seems to me that we've forgotten something.",
+     "I have a feeling we've forgotten something."
+    ],
+    [
+     "Ça m'étonnerait qu'il vienne.",
+     "I doubt he'll come.",
+     "I doubt that he'll come.",
+     "I'd be surprised if he came."
+    ],
+    [
+     "Il se peut qu'elle ait raté son train.",
+     "She may have missed her train.",
+     "She might have missed her train.",
+     "She could have missed her train."
+    ],
+    [
+     "Il doit être coincé dans les bouchons.",
+     "He must be stuck in traffic.",
+     "He's probably stuck in traffic."
+    ],
+    [
+     "Ça ne peut pas être vrai.",
+     "That can't be true.",
+     "It can't be true.",
+     "That cannot be right."
+    ],
+    [
+     "Elle n'a pas pu oublier, je lui ai rappelé hier.",
+     "She can't have forgotten, I reminded her yesterday.",
+     "She couldn't have forgotten, I reminded her yesterday."
+    ],
+    [
+     "J'ai des doutes sur ce projet.",
+     "I have my doubts about this project.",
+     "I have doubts about this project.",
+     "I'm having doubts about this project."
+    ],
+    [
+     "Je n'en mettrais pas ma main au feu.",
+     "I wouldn't bet on it.",
+     "I wouldn't swear to it.",
+     "I wouldn't bet my life on it."
+    ],
+    [
+     "Ça reste à voir.",
+     "That remains to be seen.",
+     "It remains to be seen.",
+     "We'll see about that."
+    ],
+    [
+     "Je me demande s'il dit la vérité.",
+     "I wonder if he's telling the truth.",
+     "I wonder whether he's telling the truth."
+    ],
+    [
+     "Ça a l'air trop beau pour être vrai.",
+     "It sounds too good to be true.",
+     "It seems too good to be true.",
+     "It looks too good to be true."
+    ],
+    [
+     "Je n'en suis pas si sûr.",
+     "I'm not so sure about that.",
+     "I'm not so sure.",
+     "I'm not that sure."
+    ],
+    [
+     "Il a dû se tromper d'adresse.",
+     "He must have got the wrong address.",
+     "He must have gotten the wrong address.",
+     "He must have had the wrong address."
+    ],
+    [
+     "Ils ne se sont peut-être pas encore réveillés.",
+     "They might not have woken up yet.",
+     "They may not have woken up yet.",
+     "Maybe they haven't woken up yet."
+    ],
+    [
+     "À première vue, ça semble fiable.",
+     "At first glance, it seems reliable.",
+     "At first sight, it seems reliable.",
+     "At first glance, it looks reliable."
+    ],
+    [
+     "Je le croirai quand je le verrai.",
+     "I'll believe it when I see it.",
+     "I will believe it when I see it with my own eyes."
+    ],
+    [
+     "On ne sait jamais.",
+     "You never know.",
+     "One never knows.",
+     "You just never know."
+    ],
+    [
+     "Je comprends ton point de vue, mais je vois les choses autrement.",
+     "I see your point, but I see things differently.",
+     "I understand your point of view, but I see things differently.",
+     "I see where you're coming from, but I see things differently."
+    ],
+    [
+     "Je ne suis pas sûr d'être d'accord avec toi sur ce point.",
+     "I'm not sure I agree with you on that.",
+     "I'm not sure I agree with you on that point.",
+     "I'm not sure I'd agree with you there."
+    ],
+    [
+     "Sauf ton respect, je crois que tu te trompes.",
+     "With all due respect, I think you're wrong.",
+     "With all due respect, I think you're mistaken."
+    ],
+    [
+     "Tu n'as pas tort, mais il y a un autre aspect.",
+     "You're not wrong, but there's another side to it.",
+     "You're not wrong, but there's another aspect.",
+     "You aren't wrong, but there's another side to it."
+    ],
+    [
+     "Je me permets de ne pas être d'accord.",
+     "I beg to differ.",
+     "I'm afraid I disagree.",
+     "I'm afraid I don't agree."
+    ],
+    [
+     "C'est vrai, cela dit, ça coûte cher.",
+     "That's true. That said, it's expensive.",
+     "That's true, but having said that, it's expensive.",
+     "True, but then again, it's expensive."
+    ],
+    [
+     "Tu as peut-être raison, mais je n'en suis pas convaincu.",
+     "You may be right, but I'm not convinced.",
+     "You might be right, but I'm not convinced."
+    ],
+    [
+     "Je crains qu'il y ait un malentendu.",
+     "I'm afraid there's been a misunderstanding.",
+     "I'm afraid there's a misunderstanding.",
+     "I think there's been a misunderstanding."
+    ],
+    [
+     "Ce n'est pas exactement ce que j'ai dit.",
+     "That's not exactly what I said.",
+     "That isn't quite what I said.",
+     "That's not quite what I said."
+    ],
+    [
+     "Je vois ce que tu veux dire, pourtant les chiffres disent le contraire.",
+     "I see what you mean, yet the figures say otherwise.",
+     "I see what you mean, but the figures say otherwise.",
+     "I get what you mean, yet the numbers say otherwise."
+    ],
+    [
+     "Admettons, mais ça ne règle pas le problème.",
+     "Fair enough, but that doesn't solve the problem.",
+     "Granted, but that doesn't solve the problem.",
+     "Okay, but that doesn't solve the problem."
+    ],
+    [
+     "Je ne dirais pas ça comme ça.",
+     "I wouldn't put it that way.",
+     "I wouldn't put it like that.",
+     "I wouldn't say it like that."
+    ],
+    [
+     "Ce n'est pas tant le prix qui me gêne que la qualité.",
+     "It's not so much the price that bothers me as the quality.",
+     "It's not so much the price as the quality that bothers me.",
+     "What bothers me isn't so much the price as the quality."
+    ],
+    [
+     "Bien que je respecte ton avis, je ne le partage pas.",
+     "Although I respect your opinion, I don't share it.",
+     "While I respect your opinion, I don't share it.",
+     "Even though I respect your opinion, I don't share it."
+    ],
+    [
+     "Ne le prends pas mal, mais c'est un peu long.",
+     "Don't take this the wrong way, but it's a bit long.",
+     "No offense, but it's a bit long.",
+     "Don't take it the wrong way, but it's a little long."
+    ],
+    [
+     "On n'est pas obligés d'être d'accord sur tout.",
+     "We don't have to agree on everything.",
+     "We don't need to agree on everything."
+    ]
+   ],
+   "v": [
+    [
+     "dans une certaine mesure",
+     "to some extent"
+    ],
+    [
+     "sans doute (on peut le soutenir)",
+     "arguably"
+    ],
+    [
+     "grosso modo",
+     "broadly speaking"
+    ],
+    [
+     "exagéré",
+     "over the top"
+    ],
+    [
+     "douter",
+     "doubt"
+    ],
+    [
+     "coincé",
+     "stuck"
+    ],
+    [
+     "fiable",
+     "reliable"
+    ],
+    [
+     "à première vue",
+     "at first glance"
+    ],
+    [
+     "malentendu",
+     "misunderstanding"
+    ],
+    [
+     "cela dit",
+     "that said"
+    ],
+    [
+     "sauf votre respect",
+     "with all due respect"
+    ],
+    [
+     "ne le prends pas mal",
+     "no offense"
+    ]
+   ],
+   "c": [
+    [
+     "I wouldn't go as ___ as to say it's a failure.",
+     [
+      "far",
+      "much",
+      "long",
+      "high"
+     ],
+     0,
+     "Atténuer : I wouldn't go as far as to say… = je n'irais pas jusqu'à dire…"
+    ],
+    [
+     "It's not ___ what I expected.",
+     [
+      "quite",
+      "very",
+      "enough",
+      "such"
+     ],
+     0,
+     "not quite = pas tout à fait : adoucit une critique."
+    ],
+    [
+     "I ___ to think he's right.",
+     [
+      "tend",
+      "am tending",
+      "tends",
+      "tending"
+     ],
+     0,
+     "tend to + verbe = avoir tendance à : I tend to think… adoucit une opinion."
+    ],
+    [
+     "He ___ have left already: his coat is still here.",
+     [
+      "can't",
+      "mustn't",
+      "doesn't",
+      "shouldn't"
+     ],
+     0,
+     "Déduction négative sur le passé : can't have + participe passé (impossible qu'il soit parti)."
+    ],
+    [
+     "I ___ he'll accept the offer, he seemed unhappy with it.",
+     [
+      "doubt",
+      "doubting",
+      "am doubt",
+      "doubts"
+     ],
+     0,
+     "I doubt (that) + proposition = ça m'étonnerait que."
+    ],
+    [
+     "That remains to be ___.",
+     [
+      "seen",
+      "see",
+      "seeing",
+      "saw"
+     ],
+     0,
+     "That remains to be seen = ça reste à voir (infinitif passif)."
+    ],
+    [
+     "I ___ to differ.",
+     [
+      "beg",
+      "ask",
+      "pray",
+      "want"
+     ],
+     0,
+     "I beg to differ = je me permets de ne pas être d'accord (formule polie et un peu soutenue)."
+    ],
+    [
+     "___ I respect your opinion, I don't share it.",
+     [
+      "Although",
+      "Despite",
+      "However",
+      "In spite"
+     ],
+     0,
+     "although + proposition ; despite / in spite of + nom ; however ne relie pas deux propositions dans une phrase."
+    ],
+    [
+     "It's not so much the price ___ the quality.",
+     [
+      "as",
+      "than",
+      "that",
+      "like"
+     ],
+     0,
+     "not so much X as Y = moins X que Y."
+    ]
+   ],
+   "parts": [
+    {
+     "t": "Atténue ton propos",
+     "p": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "c": [
+      0,
+      1,
+      2
+     ],
+     "g": [
+      "en.l.opp"
+     ]
+    },
+    {
+     "t": "Exprime un doute",
+     "p": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+     ],
+     "v": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "c": [
+      3,
+      4,
+      5
+     ],
+     "g": [
+      "en.m.ded"
+     ]
+    },
+    {
+     "t": "Contredis avec tact",
+     "p": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+     ],
+     "v": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      6,
+      7,
+      8
+     ],
+     "g": [
+      "en.l.opp"
+     ]
+    }
+   ]
+  },
+  {
    "t": "Hypothèses & conditionnels",
    "lv": 3,
    "d": "if + présent / prétérit / past perfect, I wish, unless, in case",
@@ -11290,6 +11834,3288 @@
      ],
      "g": [
       "en.t.cond"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "Préférences, souhaits & reproches",
+   "lv": 3,
+   "d": "Dire ce qu'on préférerait, faire un reproche, dire qu'il est temps",
+   "tip": "Après would rather et it's time suivis d'un autre sujet, l'anglais met le prétérit : I'd rather you stayed, It's time we left.",
+   "p": [
+    [
+     "Je préférerais rester à la maison ce soir.",
+     "I'd rather stay home tonight.",
+     "I would rather stay at home tonight.",
+     "I'd prefer to stay home tonight."
+    ],
+    [
+     "Je préférerais que tu n'en parles à personne.",
+     "I'd rather you didn't tell anyone.",
+     "I'd prefer it if you didn't tell anyone.",
+     "I would rather you didn't tell anybody."
+    ],
+    [
+     "Je préfère marcher plutôt que prendre le bus.",
+     "I'd rather walk than take the bus.",
+     "I prefer walking to taking the bus.",
+     "I'd rather walk than get the bus."
+    ],
+    [
+     "Tu préfères aller au cinéma ou au théâtre ?",
+     "Would you rather go to the movies or to the theater?",
+     "Would you prefer to go to the movies or the theater?",
+     "Would you rather go to the cinema or the theatre?"
+    ],
+    [
+     "Je préférerais ne pas en parler.",
+     "I'd rather not talk about it.",
+     "I'd prefer not to talk about it.",
+     "I'd rather not discuss it."
+    ],
+    [
+     "Ça ne me dérange pas, mais je préférerais jeudi.",
+     "I don't mind, but I'd prefer Thursday.",
+     "I don't mind, but I'd rather do Thursday.",
+     "I don't mind, but Thursday would be better."
+    ],
+    [
+     "Si ça ne te fait rien, je préfère conduire.",
+     "If you don't mind, I'd rather drive.",
+     "If it's all the same to you, I'd rather drive.",
+     "If you don't mind, I'd prefer to drive."
+    ],
+    [
+     "J'aime autant attendre demain.",
+     "I might as well wait until tomorrow.",
+     "I'd just as soon wait until tomorrow.",
+     "I'd rather wait until tomorrow."
+    ],
+    [
+     "Plutôt mourir que de chanter en public !",
+     "I'd rather die than sing in public!",
+     "I would sooner die than sing in public!"
+    ],
+    [
+     "Je préférerais qu'on se voie en personne.",
+     "I'd rather we met in person.",
+     "I'd prefer it if we met in person.",
+     "I would prefer to meet in person."
+    ],
+    [
+     "Peu importe, choisis ce que tu veux.",
+     "It doesn't matter, pick whatever you want.",
+     "Whatever, choose what you want.",
+     "It doesn't matter, choose whatever you like."
+    ],
+    [
+     "Entre les deux, mon cœur balance.",
+     "I'm torn between the two.",
+     "I can't decide between the two.",
+     "I can't make up my mind between the two."
+    ],
+    [
+     "J'opterais pour la formule la moins chère.",
+     "I'd go for the cheapest option.",
+     "I would go for the cheapest plan.",
+     "I'd opt for the cheapest option."
+    ],
+    [
+     "Je n'ai pas de préférence.",
+     "I have no preference.",
+     "I don't have a preference.",
+     "I don't mind either way."
+    ],
+    [
+     "À choisir, je prendrais la mer plutôt que la montagne.",
+     "If I had to choose, I'd pick the sea over the mountains.",
+     "Given the choice, I'd choose the sea over the mountains.",
+     "If I had to choose, I'd go for the sea rather than the mountains."
+    ],
+    [
+     "Je préférerais que tu me le dises en face.",
+     "I'd rather you told me to my face.",
+     "I'd prefer it if you told me to my face.",
+     "I would rather you said it to my face."
+    ],
+    [
+     "Tu étais censé m'appeler hier !",
+     "You were supposed to call me yesterday!",
+     "You were meant to call me yesterday!"
+    ],
+    [
+     "J'aimerais que tu arrêtes de m'interrompre.",
+     "I wish you would stop interrupting me.",
+     "I'd like you to stop interrupting me.",
+     "Could you please stop interrupting me?"
+    ],
+    [
+     "Tu aurais pu me prévenir !",
+     "You could have warned me!",
+     "You could have told me!",
+     "You might have warned me!"
+    ],
+    [
+     "Tu ne devais pas rentrer avant minuit ?",
+     "Weren't you supposed to be home before midnight?",
+     "Weren't you supposed to come home before midnight?"
+    ],
+    [
+     "Combien de fois je dois te le répéter ?",
+     "How many times do I have to tell you?",
+     "How many times do I need to tell you?",
+     "How many times have I told you?"
+    ],
+    [
+     "Tu n'aurais pas dû dépenser autant.",
+     "You shouldn't have spent so much.",
+     "You shouldn't have spent that much."
+    ],
+    [
+     "Ce n'est pas faute de t'avoir prévenu.",
+     "Don't say I didn't warn you.",
+     "It's not as if I didn't warn you.",
+     "It's not like I didn't warn you."
+    ],
+    [
+     "J'aimerais bien que les voisins fassent moins de bruit.",
+     "I wish the neighbors would make less noise.",
+     "I wish the neighbours would make less noise.",
+     "I wish the neighbors made less noise."
+    ],
+    [
+     "Tu es toujours en retard, c'est agaçant.",
+     "You're always late, it's annoying.",
+     "You're always late, which is annoying.",
+     "You're always running late, and it's annoying."
+    ],
+    [
+     "Ce n'était pas prévu comme ça.",
+     "That's not how it was supposed to be.",
+     "It wasn't supposed to be like this.",
+     "That wasn't the plan."
+    ],
+    [
+     "Tu aurais au moins pu t'excuser.",
+     "You could at least have apologized.",
+     "You could have at least apologized.",
+     "At least you could have apologized."
+    ],
+    [
+     "Arrête de te plaindre tout le temps.",
+     "Stop complaining all the time.",
+     "Stop moaning all the time.",
+     "Quit complaining all the time."
+    ],
+    [
+     "Ça ne se fait pas de parler comme ça.",
+     "It's not okay to talk like that.",
+     "It's rude to talk like that.",
+     "You don't talk like that."
+    ],
+    [
+     "Tu es censé être de mon côté !",
+     "You're supposed to be on my side!",
+     "You are meant to be on my side!"
+    ],
+    [
+     "Je t'en veux un peu, je l'avoue.",
+     "I'm a bit upset with you, I admit.",
+     "I have to admit I'm a little upset with you.",
+     "I admit I'm a bit annoyed with you."
+    ],
+    [
+     "La prochaine fois, préviens-moi avant.",
+     "Next time, let me know beforehand.",
+     "Next time, tell me in advance.",
+     "Next time, let me know in advance."
+    ],
+    [
+     "Il est temps qu'on y aille.",
+     "It's time we went.",
+     "It's time for us to go.",
+     "It's time to go."
+    ],
+    [
+     "Il serait temps que tu trouves un travail.",
+     "It's about time you found a job.",
+     "It's high time you found a job.",
+     "It's time you found a job."
+    ],
+    [
+     "Tu ferais mieux de te dépêcher.",
+     "You'd better hurry up.",
+     "You had better hurry.",
+     "You'd better hurry."
+    ],
+    [
+     "On ferait mieux de ne rien dire.",
+     "We'd better not say anything.",
+     "We had better not say anything.",
+     "We'd better keep quiet."
+    ],
+    [
+     "Il était temps !",
+     "About time!",
+     "It was about time!",
+     "Finally!"
+    ],
+    [
+     "Il est temps de passer à autre chose.",
+     "It's time to move on.",
+     "It's time to move on to something else."
+    ],
+    [
+     "Tu ferais mieux d'appeler ta mère.",
+     "You'd better call your mother.",
+     "You had better call your mom.",
+     "You'd better call your mom."
+    ],
+    [
+     "Il est temps que les enfants aillent se coucher.",
+     "It's time the kids went to bed.",
+     "It's time for the kids to go to bed.",
+     "It's time the children went to bed."
+    ],
+    [
+     "Si j'étais toi, je me reposerais un peu.",
+     "If I were you, I'd get some rest.",
+     "If I were you, I would rest a little.",
+     "If I were you, I'd rest a bit."
+    ],
+    [
+     "Tu devrais vraiment voir un médecin.",
+     "You really ought to see a doctor.",
+     "You really should see a doctor.",
+     "You should really see a doctor."
+    ],
+    [
+     "Il serait peut-être temps de changer de voiture.",
+     "Maybe it's time to get a new car.",
+     "It might be time to change cars.",
+     "Perhaps it's time to get a new car."
+    ],
+    [
+     "Ce n'est pas le moment de baisser les bras.",
+     "This is no time to give up.",
+     "It's not the time to give up.",
+     "Now is not the time to give up."
+    ],
+    [
+     "Il vaudrait mieux partir avant la nuit.",
+     "We'd better leave before dark.",
+     "It would be better to leave before dark.",
+     "We'd better leave before it gets dark."
+    ],
+    [
+     "À ta place, je n'attendrais pas plus longtemps.",
+     "If I were you, I wouldn't wait any longer.",
+     "In your shoes, I wouldn't wait any longer.",
+     "If I were you, I wouldn't wait much longer."
+    ],
+    [
+     "Il est temps que quelqu'un lui dise la vérité.",
+     "It's time someone told him the truth.",
+     "It's high time someone told him the truth."
+    ],
+    [
+     "Tu ferais bien d'y réfléchir à deux fois.",
+     "You'd better think twice about it.",
+     "You'd do well to think twice.",
+     "You'd better think twice."
+    ]
+   ],
+   "v": [
+    [
+     "préférence",
+     "preference"
+    ],
+    [
+     "plutôt que",
+     "rather than"
+    ],
+    [
+     "tiraillé entre deux choix",
+     "torn"
+    ],
+    [
+     "opter pour",
+     "go for"
+    ],
+    [
+     "être censé",
+     "be supposed to"
+    ],
+    [
+     "en vouloir à quelqu'un",
+     "be upset with"
+    ],
+    [
+     "agaçant",
+     "annoying"
+    ],
+    [
+     "se plaindre",
+     "complain"
+    ],
+    [
+     "il est grand temps",
+     "it's high time"
+    ],
+    [
+     "ferait mieux de",
+     "had better"
+    ],
+    [
+     "passer à autre chose",
+     "move on"
+    ],
+    [
+     "y réfléchir à deux fois",
+     "think twice"
+    ]
+   ],
+   "c": [
+    [
+     "I'd rather you ___ anyone.",
+     [
+      "didn't tell",
+      "don't tell",
+      "won't tell",
+      "not tell"
+     ],
+     0,
+     "would rather + autre sujet + prétérit : I'd rather you didn't tell anyone."
+    ],
+    [
+     "I'd rather walk ___ take the bus.",
+     [
+      "than",
+      "that",
+      "then",
+      "to"
+     ],
+     0,
+     "would rather… than… = plutôt… que…"
+    ],
+    [
+     "Would you rather ___ out or stay in?",
+     [
+      "go",
+      "to go",
+      "going",
+      "went"
+     ],
+     0,
+     "would rather + verbe sans to."
+    ],
+    [
+     "You were supposed ___ me!",
+     [
+      "to call",
+      "call",
+      "calling",
+      "called"
+     ],
+     0,
+     "be supposed to + verbe = être censé."
+    ],
+    [
+     "I wish you ___ stop shouting.",
+     [
+      "would",
+      "will",
+      "should",
+      "did"
+     ],
+     0,
+     "I wish + would = j'aimerais que (agacement, envie que ça change)."
+    ],
+    [
+     "You could at least have ___.",
+     [
+      "apologized",
+      "apologize",
+      "apologizing",
+      "to apologize"
+     ],
+     0,
+     "Reproche sur le passé : could have + participe passé."
+    ],
+    [
+     "It's high time we ___ home.",
+     [
+      "went",
+      "go",
+      "will go",
+      "going"
+     ],
+     0,
+     "It's (high) time + sujet + prétérit : It's high time we went home."
+    ],
+    [
+     "You'd better not ___ late.",
+     [
+      "be",
+      "to be",
+      "being",
+      "been"
+     ],
+     0,
+     "had better (not) + verbe sans to."
+    ],
+    [
+     "If I ___ you, I wouldn't wait.",
+     [
+      "were",
+      "am",
+      "would be",
+      "will be"
+     ],
+     0,
+     "If I were you = à ta place : were à toutes les personnes."
+    ]
+   ],
+   "parts": [
+    {
+     "t": "Dis ce que tu préférerais",
+     "p": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "c": [
+      0,
+      1,
+      2
+     ],
+     "g": [
+      "en.m.pref"
+     ]
+    },
+    {
+     "t": "Fais un reproche",
+     "p": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+     ],
+     "v": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "c": [
+      3,
+      4,
+      5
+     ],
+     "g": [
+      "en.m.pref"
+     ]
+    },
+    {
+     "t": "Dis qu'il est temps",
+     "p": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+     ],
+     "v": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      6,
+      7,
+      8
+     ],
+     "g": [
+      "en.m.pref",
+      "en.t.cond"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "Mettre en relief",
+   "lv": 3,
+   "d": "Insister, exprimer sa surprise, reformuler pour convaincre",
+   "tip": "Pour insister, on place l'élément en tête : What I need is…, It was Tom who…, et après un mot négatif en tête, on inverse : Never have I seen…",
+   "p": [
+    [
+     "Ce dont j'ai besoin, c'est d'une bonne nuit de sommeil.",
+     "What I need is a good night's sleep.",
+     "What I need is a good night of sleep.",
+     "All I need is a good night's sleep."
+    ],
+    [
+     "Ce qui compte, c'est qu'on soit ensemble.",
+     "What matters is that we're together.",
+     "What counts is that we're together.",
+     "The important thing is that we're together."
+    ],
+    [
+     "C'est Tom qui a cassé le vase.",
+     "It was Tom who broke the vase.",
+     "It was Tom that broke the vase.",
+     "Tom is the one who broke the vase."
+    ],
+    [
+     "Tout ce que je veux, c'est un peu de calme.",
+     "All I want is a bit of peace and quiet.",
+     "All I want is some peace and quiet.",
+     "All I want is a little quiet."
+    ],
+    [
+     "Ce qui m'énerve, c'est son attitude.",
+     "What annoys me is his attitude.",
+     "What gets on my nerves is his attitude.",
+     "What bothers me is his attitude."
+    ],
+    [
+     "Le problème, c'est qu'on n'a plus le temps.",
+     "The problem is that we're out of time.",
+     "The problem is we don't have time anymore.",
+     "The problem is that we have no time left."
+    ],
+    [
+     "C'est à Lisbonne que je l'ai rencontrée.",
+     "It was in Lisbon that I met her.",
+     "It was in Lisbon where I met her.",
+     "I met her in Lisbon."
+    ],
+    [
+     "J'ai bien fermé la porte à clé, je te jure !",
+     "I did lock the door, I swear!",
+     "I really did lock the door, I swear!",
+     "I definitely locked the door, I swear!"
+    ],
+    [
+     "Ce n'est pas l'argent qui m'intéresse, c'est l'expérience.",
+     "It's not the money that interests me, it's the experience.",
+     "It isn't the money I'm interested in, it's the experience.",
+     "What interests me isn't the money, it's the experience."
+    ],
+    [
+     "La seule chose qui me manque, c'est le soleil.",
+     "The only thing I miss is the sun.",
+     "The one thing I miss is the sun.",
+     "All I miss is the sun."
+    ],
+    [
+     "Ce que je ne comprends pas, c'est pourquoi il est parti.",
+     "What I don't understand is why he left.",
+     "What I can't understand is why he left."
+    ],
+    [
+     "C'est maintenant ou jamais.",
+     "It's now or never.",
+     "It is now or never."
+    ],
+    [
+     "Ce qu'il te faut, c'est des vacances.",
+     "What you need is a vacation.",
+     "What you need is a holiday.",
+     "What you need is a break."
+    ],
+    [
+     "La raison pour laquelle je t'appelle, c'est ton anniversaire.",
+     "The reason I'm calling is your birthday.",
+     "The reason why I'm calling is your birthday.",
+     "The reason I'm calling is about your birthday."
+    ],
+    [
+     "C'est toi qui as eu l'idée, pas moi.",
+     "It was you who had the idea, not me.",
+     "You're the one who had the idea, not me.",
+     "It was you that had the idea, not me."
+    ],
+    [
+     "Ce qui s'est passé, c'est qu'on s'est perdus.",
+     "What happened was that we got lost.",
+     "What happened was we got lost."
+    ],
+    [
+     "Je n'ai jamais rien vu de pareil !",
+     "Never have I seen anything like it!",
+     "I've never seen anything like it!",
+     "I have never seen anything like this!"
+    ],
+    [
+     "À peine étions-nous arrivés qu'il s'est mis à pleuvoir.",
+     "No sooner had we arrived than it started to rain.",
+     "Hardly had we arrived when it started to rain.",
+     "We had hardly arrived when it started raining."
+    ],
+    [
+     "Non seulement il est en retard, mais en plus il a oublié les billets.",
+     "Not only is he late, but he's also forgotten the tickets.",
+     "Not only is he late, he also forgot the tickets.",
+     "He's not only late, but he's also forgotten the tickets."
+    ],
+    [
+     "Rarement on a vu autant de monde ici.",
+     "Rarely have we seen so many people here.",
+     "We've rarely seen so many people here.",
+     "We have rarely seen this many people here."
+    ],
+    [
+     "Je n'en reviens pas !",
+     "I can't believe it!",
+     "I can't get over it!",
+     "I just can't believe it!"
+    ],
+    [
+     "Jamais je n'aurais imaginé ça.",
+     "Never would I have imagined that.",
+     "I would never have imagined that.",
+     "I never would have imagined that."
+    ],
+    [
+     "Ce n'est qu'après coup que j'ai compris.",
+     "Only afterwards did I understand.",
+     "Only later did I understand.",
+     "I only understood afterwards."
+    ],
+    [
+     "Tu parles d'une coïncidence !",
+     "Talk about a coincidence!",
+     "What a coincidence!",
+     "Talk about coincidence!"
+    ],
+    [
+     "Je ne m'attendais pas du tout à te voir ici.",
+     "I didn't expect to see you here at all.",
+     "I never expected to see you here.",
+     "I wasn't expecting to see you here at all."
+    ],
+    [
+     "Ils étaient loin de se douter de ce qui les attendait.",
+     "Little did they know what was waiting for them.",
+     "They had no idea what was waiting for them.",
+     "Little did they know what awaited them."
+    ],
+    [
+     "Ça alors, je ne l'aurais jamais cru !",
+     "Well, I never would have thought it!",
+     "Wow, I would never have believed it!",
+     "Well, I would never have believed it!"
+    ],
+    [
+     "À aucun moment il ne s'est excusé.",
+     "At no point did he apologize.",
+     "At no time did he apologize.",
+     "He never apologized once."
+    ],
+    [
+     "Qui l'eût cru !",
+     "Who would have thought!",
+     "Who would have guessed!",
+     "Who would have thought it!"
+    ],
+    [
+     "Tu plaisantes ? Ce n'est pas possible !",
+     "Are you kidding? That's impossible!",
+     "Are you kidding? No way!",
+     "You're joking? That can't be!"
+    ],
+    [
+     "Pas une seule fois il ne m'a appelée.",
+     "Not once did he call me.",
+     "He didn't call me once.",
+     "He never called me once."
+    ],
+    [
+     "C'est la première fois que je vois ça.",
+     "It's the first time I've seen that.",
+     "This is the first time I've seen this.",
+     "It's the first time I have ever seen that."
+    ],
+    [
+     "Autrement dit, on n'a pas le choix.",
+     "In other words, we have no choice.",
+     "In other words, we don't have a choice."
+    ],
+    [
+     "Ce que je veux dire, c'est que tout le monde y gagne.",
+     "What I mean is that everyone wins.",
+     "What I'm saying is that everybody wins.",
+     "What I mean is everyone benefits."
+    ],
+    [
+     "Pour faire court, c'est trop cher.",
+     "To cut a long story short, it's too expensive.",
+     "Long story short, it's too expensive.",
+     "In short, it's too expensive."
+    ],
+    [
+     "Si vous aviez besoin de quoi que ce soit, n'hésitez pas.",
+     "Should you need anything, don't hesitate.",
+     "If you need anything, don't hesitate.",
+     "Should you need anything at all, don't hesitate."
+    ],
+    [
+     "Si j'étais vous, je signerais tout de suite.",
+     "Were I you, I would sign right away.",
+     "If I were you, I'd sign right away.",
+     "If I were you, I would sign immediately."
+    ],
+    [
+     "Le fait est que personne ne l'a lu.",
+     "The fact is that nobody has read it.",
+     "The fact is nobody has read it.",
+     "The fact is that no one has read it."
+    ],
+    [
+     "Ce n'est pas que je ne veuille pas, c'est que je ne peux pas.",
+     "It's not that I don't want to, it's that I can't.",
+     "It's not that I don't want to; I just can't.",
+     "It isn't that I don't want to, it's that I can't."
+    ],
+    [
+     "Je vais être franc avec toi.",
+     "I'll be honest with you.",
+     "I'm going to be frank with you.",
+     "Let me be honest with you."
+    ],
+    [
+     "Ce qui est sûr, c'est que ça ne peut pas continuer.",
+     "What's certain is that it can't go on.",
+     "One thing is for sure: it can't go on like this.",
+     "What's clear is that this can't go on."
+    ],
+    [
+     "Voyons les choses en face.",
+     "Let's face it.",
+     "Let's face facts.",
+     "Let's be realistic."
+    ],
+    [
+     "Bref, c'est à toi de décider.",
+     "Anyway, it's up to you.",
+     "In short, it's your call.",
+     "Basically, it's up to you."
+    ],
+    [
+     "Pour être tout à fait honnête, j'ai hésité.",
+     "To be perfectly honest, I hesitated.",
+     "To be completely honest, I hesitated.",
+     "To be totally honest, I had doubts."
+    ],
+    [
+     "Mettons les choses au clair.",
+     "Let's get one thing straight.",
+     "Let's set the record straight.",
+     "Let's make things clear."
+    ],
+    [
+     "Ce n'est qu'en essayant qu'on saura.",
+     "Only by trying will we know.",
+     "We'll only know if we try.",
+     "The only way to know is to try."
+    ],
+    [
+     "Quoi qu'il arrive, je serai là.",
+     "Whatever happens, I'll be there.",
+     "No matter what happens, I'll be there.",
+     "Whatever happens, I will be there for you."
+    ],
+    [
+     "Le plus important, c'est de ne pas paniquer.",
+     "The most important thing is not to panic.",
+     "The main thing is not to panic.",
+     "What matters most is not to panic."
+    ]
+   ],
+   "v": [
+    [
+     "l'essentiel",
+     "the main thing"
+    ],
+    [
+     "compter (avoir de l'importance)",
+     "matter"
+    ],
+    [
+     "la seule chose",
+     "the only thing"
+    ],
+    [
+     "la raison pour laquelle",
+     "the reason why"
+    ],
+    [
+     "à peine… que",
+     "no sooner"
+    ],
+    [
+     "non seulement",
+     "not only"
+    ],
+    [
+     "à aucun moment",
+     "at no point"
+    ],
+    [
+     "coïncidence",
+     "coincidence"
+    ],
+    [
+     "autrement dit",
+     "in other words"
+    ],
+    [
+     "pour faire court",
+     "long story short"
+    ],
+    [
+     "le fait est que",
+     "the fact is"
+    ],
+    [
+     "quoi qu'il arrive",
+     "whatever happens"
+    ]
+   ],
+   "c": [
+    [
+     "___ I need is a good night's sleep.",
+     [
+      "What",
+      "That",
+      "Which",
+      "It"
+     ],
+     0,
+     "What + sujet + verbe + is… = ce dont…, c'est…"
+    ],
+    [
+     "It was Tom ___ broke the vase.",
+     [
+      "who",
+      "which",
+      "what",
+      "whose"
+     ],
+     0,
+     "It was + personne + who… met une personne en relief."
+    ],
+    [
+     "All I want ___ some peace and quiet.",
+     [
+      "is",
+      "are",
+      "it is",
+      "be"
+     ],
+     0,
+     "All + sujet + verbe + is… = tout ce que…, c'est…"
+    ],
+    [
+     "Never ___ I seen such a crowd!",
+     [
+      "have",
+      "I have",
+      "did",
+      "was"
+     ],
+     0,
+     "Adverbe négatif en tête : inversion auxiliaire + sujet (Never have I seen…)."
+    ],
+    [
+     "Not only ___ late, but he also forgot the tickets.",
+     [
+      "was he",
+      "he was",
+      "did he",
+      "he did"
+     ],
+     0,
+     "Not only + auxiliaire + sujet : Not only was he late…"
+    ],
+    [
+     "Little ___ they know what was coming.",
+     [
+      "did",
+      "had",
+      "were",
+      "do"
+     ],
+     0,
+     "Little did they know = ils étaient loin de se douter (inversion avec did)."
+    ],
+    [
+     "___ you need anything, don't hesitate to call.",
+     [
+      "Should",
+      "Would",
+      "Shall",
+      "Will"
+     ],
+     0,
+     "Should you need… = If you need… (registre soutenu, sans if)."
+    ],
+    [
+     "___ I you, I would sign right away.",
+     [
+      "Were",
+      "Was",
+      "Am",
+      "Had"
+     ],
+     0,
+     "Were I you = If I were you (inversion soutenue)."
+    ],
+    [
+     "Only by trying ___ know.",
+     [
+      "will we",
+      "we will",
+      "we would",
+      "do we will"
+     ],
+     0,
+     "Only by + -ing en tête : inversion (Only by trying will we know)."
+    ]
+   ],
+   "parts": [
+    {
+     "t": "Insiste sur l'essentiel",
+     "p": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "c": [
+      0,
+      1,
+      2
+     ],
+     "g": [
+      "en.s.cleft"
+     ]
+    },
+    {
+     "t": "Exprime ta surprise",
+     "p": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+     ],
+     "v": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "c": [
+      3,
+      4,
+      5
+     ],
+     "g": [
+      "en.s.inv"
+     ]
+    },
+    {
+     "t": "Reformule pour convaincre",
+     "p": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+     ],
+     "v": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      6,
+      7,
+      8
+     ],
+     "g": [
+      "en.s.cleft",
+      "en.s.inv"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "Faire faire : artisans & services",
+   "lv": 3,
+   "d": "Faire réparer, aller chez le coiffeur, faire faire quelque chose à quelqu'un",
+   "tip": "have / get + objet + participe passé = faire faire : I had my hair cut (on me les a coupés), à ne pas confondre avec I cut my hair (je les ai coupés moi-même).",
+   "p": [
+    [
+     "Je dois faire réviser ma voiture avant les vacances.",
+     "I need to get my car serviced before the vacation.",
+     "I have to have my car serviced before the holidays.",
+     "I need to have my car serviced before the trip."
+    ],
+    [
+     "On fait repeindre la cuisine la semaine prochaine.",
+     "We're having the kitchen repainted next week.",
+     "We're getting the kitchen repainted next week.",
+     "We are having the kitchen painted next week."
+    ],
+    [
+     "Combien ça coûte pour faire changer l'écran ?",
+     "How much does it cost to have the screen replaced?",
+     "How much is it to get the screen replaced?",
+     "How much does it cost to get the screen changed?"
+    ],
+    [
+     "J'ai fait installer une nouvelle chaudière.",
+     "I had a new boiler installed.",
+     "I got a new boiler installed.",
+     "I had a new water heater installed."
+    ],
+    [
+     "Le plombier peut passer demain matin ?",
+     "Can the plumber come by tomorrow morning?",
+     "Could the plumber come tomorrow morning?",
+     "Can the plumber stop by tomorrow morning?"
+    ],
+    [
+     "Il y a une fuite sous l'évier.",
+     "There's a leak under the sink.",
+     "There is a leak under the kitchen sink."
+    ],
+    [
+     "Le devis est un peu élevé.",
+     "The estimate is a bit high.",
+     "The quote is a little high.",
+     "The quote is a bit steep."
+    ],
+    [
+     "On s'est fait livrer un canapé.",
+     "We had a sofa delivered.",
+     "We got a couch delivered.",
+     "We had a couch delivered."
+    ],
+    [
+     "Vous pouvez me faire un devis ?",
+     "Could you give me a quote?",
+     "Can you give me an estimate?",
+     "Could you give me an estimate?"
+    ],
+    [
+     "Il faut faire vérifier les freins.",
+     "We need to have the brakes checked.",
+     "The brakes need to be checked.",
+     "You need to get the brakes checked."
+    ],
+    [
+     "Je fais nettoyer ma veste au pressing.",
+     "I'm having my jacket dry-cleaned.",
+     "I'm getting my jacket cleaned at the dry cleaner's.",
+     "I'm having my jacket cleaned at the dry cleaner's."
+    ],
+    [
+     "Le chauffage ne marche plus depuis hier.",
+     "The heating hasn't worked since yesterday.",
+     "The heat hasn't been working since yesterday.",
+     "The heating stopped working yesterday."
+    ],
+    [
+     "Quand pourrez-vous commencer les travaux ?",
+     "When can you start the work?",
+     "When could you start the work?",
+     "When will you be able to start the work?"
+    ],
+    [
+     "La pièce doit être commandée.",
+     "The part has to be ordered.",
+     "The part needs to be ordered.",
+     "We have to order the part."
+    ],
+    [
+     "Je me suis fait avoir sur le prix.",
+     "I got ripped off on the price.",
+     "I got ripped off.",
+     "I was overcharged."
+    ],
+    [
+     "Ça vaut le coup de le faire réparer ?",
+     "Is it worth getting it repaired?",
+     "Is it worth having it fixed?",
+     "Is it worth getting it fixed?"
+    ],
+    [
+     "Je voudrais me faire couper les cheveux.",
+     "I'd like to get my hair cut.",
+     "I'd like to have my hair cut.",
+     "I would like a haircut."
+    ],
+    [
+     "Juste les pointes, s'il vous plaît.",
+     "Just a trim, please.",
+     "Just the ends, please."
+    ],
+    [
+     "Pas trop court sur les côtés.",
+     "Not too short on the sides.",
+     "Not too short at the sides."
+    ],
+    [
+     "Je me fais faire les ongles tous les mois.",
+     "I get my nails done every month.",
+     "I have my nails done every month."
+    ],
+    [
+     "Je dois me faire vacciner avant le voyage.",
+     "I need to get vaccinated before the trip.",
+     "I have to get vaccinated before the trip.",
+     "I need to be vaccinated before the trip."
+    ],
+    [
+     "Il s'est fait tatouer le bras.",
+     "He got his arm tattooed.",
+     "He had his arm tattooed.",
+     "He got a tattoo on his arm."
+    ],
+    [
+     "Je me fais examiner les yeux demain.",
+     "I'm having my eyes tested tomorrow.",
+     "I'm getting my eyes checked tomorrow.",
+     "I'm having my eyes checked tomorrow."
+    ],
+    [
+     "On s'est fait prendre en photo devant la tour.",
+     "We had our picture taken in front of the tower.",
+     "We got our photo taken in front of the tower."
+    ],
+    [
+     "Vous avez un créneau jeudi ?",
+     "Do you have an opening on Thursday?",
+     "Do you have a slot on Thursday?",
+     "Do you have anything available on Thursday?"
+    ],
+    [
+     "Je voudrais une coupe et un brushing.",
+     "I'd like a cut and blow-dry.",
+     "I would like a haircut and a blow-dry."
+    ],
+    [
+     "Je me suis fait arracher une dent.",
+     "I had a tooth pulled.",
+     "I had a tooth taken out.",
+     "I got a tooth pulled."
+    ],
+    [
+     "Il faut que je fasse retoucher ce pantalon.",
+     "I need to have these pants altered.",
+     "I need to get these trousers altered.",
+     "I need to get these pants altered."
+    ],
+    [
+     "Tu t'es fait couper les cheveux ? Ça te va bien !",
+     "Did you get your hair cut? It suits you!",
+     "Have you had your hair cut? It looks good on you!",
+     "Did you get a haircut? It suits you!"
+    ],
+    [
+     "Je me fais masser une fois par semaine.",
+     "I get a massage once a week.",
+     "I have a massage once a week."
+    ],
+    [
+     "Je n'aime pas qu'on me fasse attendre.",
+     "I don't like being kept waiting.",
+     "I hate being kept waiting.",
+     "I don't like it when people make me wait."
+    ],
+    [
+     "Il s'est fait voler son portefeuille au marché.",
+     "He had his wallet stolen at the market.",
+     "His wallet was stolen at the market.",
+     "He got his wallet stolen at the market."
+    ],
+    [
+     "J'ai convaincu mon frère de m'aider à déménager.",
+     "I got my brother to help me move.",
+     "I convinced my brother to help me move.",
+     "I persuaded my brother to help me move."
+    ],
+    [
+     "Je vais demander à mon assistante de vous rappeler.",
+     "I'll have my assistant call you back.",
+     "I'll get my assistant to call you back.",
+     "I'll ask my assistant to call you back."
+    ],
+    [
+     "Le prof nous a fait relire tout le chapitre.",
+     "The teacher made us reread the whole chapter.",
+     "The teacher made us read the whole chapter again.",
+     "Our teacher had us reread the whole chapter."
+    ],
+    [
+     "Elle m'a fait attendre une heure.",
+     "She kept me waiting for an hour.",
+     "She made me wait for an hour.",
+     "She made me wait an hour."
+    ],
+    [
+     "Tu peux faire en sorte qu'il soit à l'heure ?",
+     "Can you make sure he's on time?",
+     "Could you make sure he's on time?",
+     "Can you make sure that he's on time?"
+    ],
+    [
+     "Je n'arrive pas à faire démarrer la voiture.",
+     "I can't get the car to start.",
+     "I can't get the car started.",
+     "The car won't start."
+    ],
+    [
+     "Faites-le monter, il est attendu.",
+     "Have him come up, he's expected.",
+     "Send him up, he's expected.",
+     "Tell him to come up, he's expected."
+    ],
+    [
+     "Ses blagues me font toujours rire.",
+     "His jokes always make me laugh.",
+     "His jokes always crack me up."
+    ],
+    [
+     "On m'a demandé de remplir ce formulaire.",
+     "I was asked to fill out this form.",
+     "I've been asked to fill in this form.",
+     "They asked me to fill out this form."
+    ],
+    [
+     "Elle a fait pleurer son petit frère.",
+     "She made her little brother cry.",
+     "She made her younger brother cry."
+    ],
+    [
+     "Je vais faire envoyer le colis directement chez toi.",
+     "I'll have the package sent straight to your place.",
+     "I'll get the parcel sent directly to your house.",
+     "I'll have the package delivered directly to your place."
+    ],
+    [
+     "Il a fini par lui faire avouer la vérité.",
+     "He finally got her to admit the truth.",
+     "He eventually got her to tell the truth.",
+     "He finally made her admit the truth."
+    ],
+    [
+     "Ne me fais pas répéter.",
+     "Don't make me repeat myself.",
+     "Don't make me say it again."
+    ],
+    [
+     "Les enfants ont été envoyés au lit tôt.",
+     "The kids were sent to bed early.",
+     "The children were sent to bed early."
+    ],
+    [
+     "Laisse-moi faire, je m'en occupe.",
+     "Leave it to me, I'll take care of it.",
+     "Let me handle it.",
+     "Leave it to me, I'll deal with it."
+    ],
+    [
+     "J'ai réussi à le faire changer d'avis.",
+     "I managed to get him to change his mind.",
+     "I managed to make him change his mind.",
+     "I got him to change his mind."
+    ]
+   ],
+   "v": [
+    [
+     "devis",
+     "quote"
+    ],
+    [
+     "évier",
+     "sink"
+    ],
+    [
+     "freins",
+     "brakes"
+    ],
+    [
+     "chaudière",
+     "boiler"
+    ],
+    [
+     "coiffeur",
+     "hairdresser"
+    ],
+    [
+     "brushing",
+     "blow-dry"
+    ],
+    [
+     "retoucher (un vêtement)",
+     "alter"
+    ],
+    [
+     "se faire vacciner",
+     "get vaccinated"
+    ],
+    [
+     "déléguer",
+     "delegate"
+    ],
+    [
+     "avouer",
+     "admit"
+    ],
+    [
+     "faire en sorte que",
+     "make sure"
+    ],
+    [
+     "obliger (quelqu'un à)",
+     "force"
+    ]
+   ],
+   "c": [
+    [
+     "We're having the kitchen ___ next week.",
+     [
+      "repainted",
+      "repaint",
+      "repainting",
+      "to repaint"
+     ],
+     0,
+     "have + objet + participe passé = faire faire."
+    ],
+    [
+     "How much does it cost to get the screen ___?",
+     [
+      "replaced",
+      "replace",
+      "replacing",
+      "to replace"
+     ],
+     0,
+     "get + objet + participe passé : faire remplacer."
+    ],
+    [
+     "Is it worth ___ it repaired?",
+     [
+      "getting",
+      "to get",
+      "get",
+      "got"
+     ],
+     0,
+     "it's worth + -ing = ça vaut le coup de."
+    ],
+    [
+     "I get my nails ___ every month.",
+     [
+      "done",
+      "do",
+      "doing",
+      "to do"
+     ],
+     0,
+     "get + objet + participe passé : get my nails done = me faire faire les ongles."
+    ],
+    [
+     "He had his wallet ___ at the market.",
+     [
+      "stolen",
+      "stole",
+      "steal",
+      "stealing"
+     ],
+     0,
+     "have + objet + participe passé pour une chose subie : on lui a volé son portefeuille."
+    ],
+    [
+     "I don't like being kept ___.",
+     [
+      "waiting",
+      "wait",
+      "to wait",
+      "waited"
+     ],
+     0,
+     "keep someone waiting = faire attendre quelqu'un ; au passif : be kept waiting."
+    ],
+    [
+     "I got my brother ___ me move.",
+     [
+      "to help",
+      "help",
+      "helping",
+      "helped"
+     ],
+     0,
+     "get + personne + to + verbe = obtenir de quelqu'un qu'il fasse."
+    ],
+    [
+     "The teacher made us ___ the chapter.",
+     [
+      "reread",
+      "to reread",
+      "rereading",
+      "rereads"
+     ],
+     0,
+     "make + personne + verbe sans to = obliger à."
+    ],
+    [
+     "I'll have my assistant ___ you back.",
+     [
+      "call",
+      "to call",
+      "calling",
+      "called"
+     ],
+     0,
+     "have + personne + verbe sans to = charger quelqu'un de faire."
+    ]
+   ],
+   "parts": [
+    {
+     "t": "Fais réparer quelque chose",
+     "p": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "c": [
+      0,
+      1,
+      2
+     ],
+     "g": [
+      "en.s.caus"
+     ]
+    },
+    {
+     "t": "Va chez le coiffeur",
+     "p": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+     ],
+     "v": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "c": [
+      3,
+      4,
+      5
+     ],
+     "g": [
+      "en.s.caus"
+     ]
+    },
+    {
+     "t": "Demande à quelqu'un de faire",
+     "p": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+     ],
+     "v": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      6,
+      7,
+      8
+     ],
+     "g": [
+      "en.s.caus",
+      "en.s.pass"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "Souvenirs & nostalgie",
+   "lv": 3,
+   "d": "Habitudes d'autrefois, souvenirs précis, hier et aujourd'hui",
+   "tip": "Habitude passée : used to ou would (we would spend summers by the sea). Pour un état, seulement used to : I used to have long hair.",
+   "p": [
+    [
+     "Quand j'étais petit, on passait l'été chez ma grand-mère.",
+     "When I was little, we would spend the summer at my grandmother's.",
+     "When I was a kid, we used to spend the summer at my grandma's.",
+     "When I was little, we used to spend summers at my grandmother's."
+    ],
+    [
+     "J'avais les cheveux longs à l'époque.",
+     "I used to have long hair back then.",
+     "I had long hair at the time.",
+     "Back then, I used to have long hair."
+    ],
+    [
+     "On allait à l'école à pied.",
+     "We used to walk to school.",
+     "We would walk to school.",
+     "We walked to school."
+    ],
+    [
+     "Mon père nous lisait une histoire tous les soirs.",
+     "My father would read us a story every night.",
+     "My dad used to read us a story every night.",
+     "My father read us a story every evening."
+    ],
+    [
+     "Je n'aimais pas du tout les légumes.",
+     "I didn't use to like vegetables at all.",
+     "I used to hate vegetables.",
+     "I didn't like vegetables at all."
+    ],
+    [
+     "On habitait dans un petit village.",
+     "We used to live in a small village.",
+     "We lived in a small village.",
+     "We used to live in a little village."
+    ],
+    [
+     "Le dimanche, toute la famille se réunissait.",
+     "On Sundays, the whole family would get together.",
+     "On Sundays, the whole family used to get together.",
+     "Every Sunday, the whole family got together."
+    ],
+    [
+     "Tu faisais du sport quand tu étais jeune ?",
+     "Did you use to play sports when you were young?",
+     "Did you do any sports when you were young?",
+     "Did you play sports when you were young?"
+    ],
+    [
+     "Je passais des heures à dessiner.",
+     "I would spend hours drawing.",
+     "I used to spend hours drawing."
+    ],
+    [
+     "Mon grand-père me racontait la guerre.",
+     "My grandfather used to tell me about the war.",
+     "My grandpa would tell me about the war."
+    ],
+    [
+     "On n'avait pas de téléphone portable.",
+     "We didn't have cell phones.",
+     "We didn't use to have mobile phones.",
+     "We had no cell phones."
+    ],
+    [
+     "Je me souviens de l'odeur de sa cuisine.",
+     "I remember the smell of her kitchen.",
+     "I remember the smell of her cooking.",
+     "I can remember the smell of her kitchen."
+    ],
+    [
+     "J'étais très timide à l'école.",
+     "I used to be very shy at school.",
+     "I was very shy at school.",
+     "I used to be really shy at school."
+    ],
+    [
+     "On jouait dehors jusqu'à la nuit.",
+     "We would play outside until dark.",
+     "We used to play outside until it got dark.",
+     "We played outside until dark."
+    ],
+    [
+     "Ma mère me grondait quand je rentrais tard.",
+     "My mom would scold me when I came home late.",
+     "My mother used to tell me off when I got home late.",
+     "My mom used to scold me when I came home late."
+    ],
+    [
+     "C'était une autre époque.",
+     "Those were different times.",
+     "It was a different time.",
+     "It was another era."
+    ],
+    [
+     "J'attendais depuis une heure quand il est enfin arrivé.",
+     "I had been waiting for an hour when he finally arrived.",
+     "I'd been waiting for an hour when he finally showed up.",
+     "I had been waiting an hour when he finally arrived."
+    ],
+    [
+     "Ça faisait des années qu'on ne s'était pas vus.",
+     "We hadn't seen each other for years.",
+     "We hadn't seen each other in years."
+    ],
+    [
+     "On marchait depuis des heures quand l'orage a éclaté.",
+     "We had been walking for hours when the storm broke.",
+     "We'd been walking for hours when the storm hit.",
+     "We had been walking for hours when the storm started."
+    ],
+    [
+     "Je n'avais jamais pris l'avion avant mes vingt ans.",
+     "I had never flown before I was twenty.",
+     "I'd never been on a plane before I turned twenty.",
+     "I had never taken a plane before I was twenty."
+    ],
+    [
+     "Je me souviens encore du jour où on s'est rencontrés.",
+     "I still remember the day we met.",
+     "I still remember the day when we met.",
+     "I can still remember the day we met."
+    ],
+    [
+     "Elle était fatiguée parce qu'elle avait travaillé toute la nuit.",
+     "She was tired because she had been working all night.",
+     "She was tired because she had worked all night.",
+     "She was tired because she'd been working all night."
+    ],
+    [
+     "C'était la première fois que je voyais la mer.",
+     "It was the first time I had seen the sea.",
+     "It was the first time I'd ever seen the ocean.",
+     "That was the first time I had seen the sea."
+    ],
+    [
+     "Je n'oublierai jamais ce voyage.",
+     "I'll never forget that trip.",
+     "I will never forget that journey.",
+     "I'll never forget that vacation."
+    ],
+    [
+     "On venait juste de s'installer quand le bébé est né.",
+     "We had just moved in when the baby was born.",
+     "We'd just moved in when the baby was born."
+    ],
+    [
+     "Il pleuvait depuis trois jours.",
+     "It had been raining for three days.",
+     "It had rained for three days."
+    ],
+    [
+     "J'en garde un très bon souvenir.",
+     "I have very fond memories of it.",
+     "I have really good memories of it.",
+     "It's a very happy memory for me."
+    ],
+    [
+     "Quand on est arrivés à la gare, le train était déjà parti.",
+     "When we got to the station, the train had already left.",
+     "When we arrived at the station, the train had already left.",
+     "By the time we got to the station, the train had already left."
+    ],
+    [
+     "Ça me rappelle mes années de fac.",
+     "It reminds me of my college years.",
+     "That reminds me of my university days.",
+     "It reminds me of my college days."
+    ],
+    [
+     "On riait tellement qu'on n'arrivait plus à respirer.",
+     "We were laughing so hard we couldn't breathe.",
+     "We laughed so much that we couldn't breathe."
+    ],
+    [
+     "Ça s'est passé il y a si longtemps.",
+     "It happened such a long time ago.",
+     "That was so long ago.",
+     "It happened so long ago."
+    ],
+    [
+     "Tu te souviens de cet été-là ?",
+     "Do you remember that summer?",
+     "Remember that summer?",
+     "Do you still remember that summer?"
+    ],
+    [
+     "Avant, il n'y avait pas tous ces immeubles.",
+     "There didn't use to be all these buildings.",
+     "There weren't all these buildings before.",
+     "Before, there weren't all these buildings."
+    ],
+    [
+     "La ville a beaucoup changé depuis mon enfance.",
+     "The city has changed a lot since I was a child.",
+     "The town has changed a lot since my childhood.",
+     "The city has changed a lot since I was a kid."
+    ],
+    [
+     "Je suis maintenant habitué à vivre seul.",
+     "I'm used to living alone now.",
+     "I've gotten used to living alone.",
+     "I'm now used to living on my own."
+    ],
+    [
+     "J'ai du mal à m'habituer au froid.",
+     "I'm finding it hard to get used to the cold.",
+     "I can't get used to the cold.",
+     "It's hard for me to get used to the cold."
+    ],
+    [
+     "Les gens prenaient plus le temps de se parler.",
+     "People used to take more time to talk to each other.",
+     "People would take more time to talk to each other."
+    ],
+    [
+     "C'était mieux avant, d'après mon grand-père.",
+     "According to my grandfather, things were better before.",
+     "My grandfather says things used to be better.",
+     "According to my grandpa, it was better in the old days."
+    ],
+    [
+     "Rien n'est plus comme avant.",
+     "Nothing is like it used to be.",
+     "Nothing is the same as before.",
+     "Nothing is the way it used to be."
+    ],
+    [
+     "Je regrette parfois le bon vieux temps.",
+     "Sometimes I miss the good old days.",
+     "I sometimes miss the good old days."
+    ],
+    [
+     "Aujourd'hui, tout va beaucoup plus vite.",
+     "Nowadays, everything moves much faster.",
+     "Today, everything goes much faster.",
+     "These days, everything moves a lot faster."
+    ],
+    [
+     "On ne se rendait pas compte de la chance qu'on avait.",
+     "We didn't realize how lucky we were.",
+     "We didn't know how lucky we were."
+    ],
+    [
+     "Ce café existe depuis plus de cinquante ans.",
+     "This café has been here for over fifty years.",
+     "This coffee shop has been around for more than fifty years.",
+     "This cafe has existed for over fifty years."
+    ],
+    [
+     "Ce quartier était beaucoup plus calme.",
+     "This neighborhood used to be much quieter.",
+     "This area was much quieter.",
+     "This neighbourhood used to be a lot quieter."
+    ],
+    [
+     "Avec le recul, je ne changerais rien.",
+     "Looking back, I wouldn't change a thing.",
+     "In hindsight, I wouldn't change anything.",
+     "Looking back, I wouldn't change anything."
+    ],
+    [
+     "Je ne suis plus la même personne qu'à vingt ans.",
+     "I'm not the same person I was at twenty.",
+     "I'm no longer the person I was at twenty."
+    ],
+    [
+     "Autrefois, on écrivait des lettres.",
+     "In the old days, people wrote letters.",
+     "People used to write letters.",
+     "We used to write letters."
+    ],
+    [
+     "Ça ne me rajeunit pas !",
+     "That makes me feel old!",
+     "That doesn't make me any younger!",
+     "Now I feel old!"
+    ]
+   ],
+   "v": [
+    [
+     "jeunesse",
+     "youth"
+    ],
+    [
+     "gronder",
+     "scold"
+    ],
+    [
+     "se réunir",
+     "get together"
+    ],
+    [
+     "grandir",
+     "grow up"
+    ],
+    [
+     "nostalgique",
+     "nostalgic"
+    ],
+    [
+     "garder un bon souvenir de",
+     "have fond memories of"
+    ],
+    [
+     "orage",
+     "storm"
+    ],
+    [
+     "rappeler (faire penser à)",
+     "remind"
+    ],
+    [
+     "autrefois",
+     "in the old days"
+    ],
+    [
+     "avec le recul",
+     "looking back"
+    ],
+    [
+     "s'habituer à",
+     "get used to"
+    ],
+    [
+     "le bon vieux temps",
+     "the good old days"
+    ]
+   ],
+   "c": [
+    [
+     "We ___ live in a small village.",
+     [
+      "used to",
+      "would",
+      "use to",
+      "were used to"
+     ],
+     0,
+     "Pour un état passé (habiter, avoir), seulement used to, jamais would."
+    ],
+    [
+     "Did you ___ play sports?",
+     [
+      "use to",
+      "used to",
+      "using to",
+      "uses to"
+     ],
+     0,
+     "Question : Did you use to… ? (use sans d après did)."
+    ],
+    [
+     "On Sundays, the whole family ___ get together.",
+     [
+      "would",
+      "will",
+      "was",
+      "is"
+     ],
+     0,
+     "would + verbe = habitude passée répétée."
+    ],
+    [
+     "I had been ___ for an hour when he arrived.",
+     [
+      "waiting",
+      "wait",
+      "waited",
+      "to wait"
+     ],
+     0,
+     "Past perfect continuous : had been + -ing, durée avant un moment du passé."
+    ],
+    [
+     "When I arrived, everyone ___ already left.",
+     [
+      "had",
+      "has",
+      "was",
+      "did"
+     ],
+     0,
+     "Action terminée avant une autre action passée : past perfect (had + participe passé)."
+    ],
+    [
+     "It reminds me ___ my college years.",
+     [
+      "of",
+      "about",
+      "to",
+      "from"
+     ],
+     0,
+     "remind someone of something = rappeler quelque chose à quelqu'un."
+    ],
+    [
+     "I'm used to ___ alone now.",
+     [
+      "living",
+      "live",
+      "lived",
+      "have lived"
+     ],
+     0,
+     "be used to + -ing = être habitué à."
+    ],
+    [
+     "There didn't ___ be so many buildings.",
+     [
+      "use to",
+      "used to",
+      "would",
+      "using to"
+     ],
+     0,
+     "Négatif : didn't use to (sans d)."
+    ],
+    [
+     "This café has been here ___ over fifty years.",
+     [
+      "for",
+      "since",
+      "during",
+      "from"
+     ],
+     0,
+     "for + durée, since + point de départ."
+    ]
+   ],
+   "parts": [
+    {
+     "t": "Raconte ton enfance",
+     "p": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "c": [
+      0,
+      1,
+      2
+     ],
+     "g": [
+      "en.t.perf",
+      "en.s.misc"
+     ]
+    },
+    {
+     "t": "Raconte un souvenir précis",
+     "p": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+     ],
+     "v": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "c": [
+      3,
+      4,
+      5
+     ],
+     "g": [
+      "en.t.perf"
+     ]
+    },
+    {
+     "t": "Compare hier et aujourd'hui",
+     "p": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+     ],
+     "v": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      6,
+      7,
+      8
+     ],
+     "g": [
+      "en.s.misc",
+      "en.t.perf"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "Société & environnement",
+   "lv": 3,
+   "d": "Écologie, ville ou campagne, le monde dans vingt ans",
+   "tip": "Pour débattre : whereas (alors que), provided that (à condition que), the more… the more… (plus… plus…). Pour se projeter : By 2050, we will have…",
+   "p": [
+    [
+     "On devrait tous trier nos déchets.",
+     "We should all sort our waste.",
+     "We should all sort our trash.",
+     "We all ought to sort our garbage."
+    ],
+    [
+     "Je prends le vélo pour réduire mon empreinte carbone.",
+     "I ride my bike to reduce my carbon footprint.",
+     "I cycle to cut down my carbon footprint.",
+     "I take my bike to reduce my carbon footprint."
+    ],
+    [
+     "Plus on attend, plus ce sera cher.",
+     "The longer we wait, the more expensive it will be.",
+     "The longer we wait, the more it will cost."
+    ],
+    [
+     "D'ici 2050, les voitures à essence auront disparu.",
+     "By 2050, gas cars will have disappeared.",
+     "By 2050, gasoline cars will have disappeared.",
+     "By 2050, petrol cars will have disappeared."
+    ],
+    [
+     "Le réchauffement climatique nous concerne tous.",
+     "Global warming affects us all.",
+     "Climate change concerns all of us.",
+     "Global warming affects all of us."
+    ],
+    [
+     "Évite le plastique autant que possible.",
+     "Avoid plastic as much as possible.",
+     "Avoid plastic as much as you can."
+    ],
+    [
+     "Les étés sont de plus en plus chauds.",
+     "Summers are getting hotter and hotter.",
+     "The summers are getting hotter and hotter.",
+     "Summers keep getting hotter."
+    ],
+    [
+     "C'est grâce aux bénévoles que la plage est propre.",
+     "It's thanks to the volunteers that the beach is clean.",
+     "The beach is clean thanks to the volunteers."
+    ],
+    [
+     "On gaspille trop de nourriture.",
+     "We waste too much food.",
+     "We throw away too much food."
+    ],
+    [
+     "J'achète d'occasion pour consommer moins.",
+     "I buy secondhand to consume less.",
+     "I buy second-hand so that I consume less.",
+     "I buy used things to consume less."
+    ],
+    [
+     "Les transports en commun sont la solution, à condition d'être fiables.",
+     "Public transport is the answer, provided it's reliable.",
+     "Public transportation is the solution, as long as it's reliable.",
+     "Public transport is the solution, provided that it's reliable."
+    ],
+    [
+     "Éteins la lumière en sortant.",
+     "Turn off the light when you leave.",
+     "Switch off the light on your way out.",
+     "Turn the light off when you go out."
+    ],
+    [
+     "À cause de la sécheresse, l'eau est rationnée.",
+     "Because of the drought, water is being rationed.",
+     "Due to the drought, water is rationed.",
+     "Water is rationed because of the drought."
+    ],
+    [
+     "Si rien ne change, nous aurons épuisé les ressources.",
+     "If nothing changes, we will have used up our resources.",
+     "If nothing changes, we'll have run out of resources.",
+     "If nothing changes, we will have exhausted our resources."
+    ],
+    [
+     "Chaque petit geste compte.",
+     "Every little action counts.",
+     "Every small gesture counts.",
+     "Every little bit helps."
+    ],
+    [
+     "On a installé des panneaux solaires sur le toit.",
+     "We've put solar panels on the roof.",
+     "We installed solar panels on the roof.",
+     "We had solar panels installed on the roof."
+    ],
+    [
+     "Bien que la ville soit bruyante, j'adore y vivre.",
+     "Even though the city is noisy, I love living there.",
+     "Although the city is noisy, I love living there.",
+     "Though the city is noisy, I love living there."
+    ],
+    [
+     "À la campagne, la vie est moins chère, alors qu'en ville, tout coûte une fortune.",
+     "In the countryside, life is cheaper, whereas in the city everything costs a fortune.",
+     "Life is cheaper in the country, while in the city everything costs a fortune.",
+     "In the country, life is cheaper, whereas in the city everything costs a fortune."
+    ],
+    [
+     "Je ne pourrais pas vivre sans voiture à la campagne.",
+     "I couldn't live without a car in the countryside.",
+     "I couldn't live in the country without a car."
+    ],
+    [
+     "En ville, on a tout à portée de main.",
+     "In the city, everything is within reach.",
+     "In town, everything is close at hand.",
+     "In the city, you have everything at your fingertips."
+    ],
+    [
+     "Les loyers ont explosé dans le centre.",
+     "Rents have skyrocketed downtown.",
+     "Rents in the center have gone through the roof.",
+     "Rents have soared in the city center."
+    ],
+    [
+     "Malgré le calme, je m'ennuierais à la campagne.",
+     "Despite the peace and quiet, I'd get bored in the countryside.",
+     "In spite of the quiet, I would get bored in the country."
+    ],
+    [
+     "Beaucoup de citadins partent s'installer à la campagne.",
+     "Many city dwellers are moving to the countryside.",
+     "A lot of city people are moving to the country."
+    ],
+    [
+     "Les embouteillages me rendent fou.",
+     "Traffic jams drive me crazy.",
+     "The traffic drives me crazy.",
+     "Traffic jams drive me mad."
+    ],
+    [
+     "L'air y est bien plus pur.",
+     "The air is much cleaner there.",
+     "The air there is much purer.",
+     "The air is a lot cleaner there."
+    ],
+    [
+     "Le seul inconvénient, c'est les transports.",
+     "The only drawback is the transport.",
+     "The only downside is public transportation.",
+     "The only disadvantage is getting around."
+    ],
+    [
+     "Chaque option a ses avantages et ses inconvénients.",
+     "Each option has its pros and cons.",
+     "Each option has its advantages and disadvantages.",
+     "Both options have their pros and cons."
+    ],
+    [
+     "En revanche, il n'y a presque pas de médecins.",
+     "On the other hand, there are hardly any doctors.",
+     "However, there are almost no doctors.",
+     "On the other hand, there are very few doctors."
+    ],
+    [
+     "Je rêve d'une maison avec un grand jardin.",
+     "I dream of a house with a big garden.",
+     "I dream of having a house with a large yard.",
+     "My dream is a house with a big backyard."
+    ],
+    [
+     "Le télétravail a tout changé.",
+     "Remote work has changed everything.",
+     "Working from home has changed everything.",
+     "Working remotely changed everything."
+    ],
+    [
+     "Pourtant, je reste attaché à mon quartier.",
+     "Still, I'm attached to my neighborhood.",
+     "Yet I'm still attached to my neighborhood.",
+     "Nevertheless, I'm still attached to my neighbourhood."
+    ],
+    [
+     "Les deux ont leur charme.",
+     "Both have their charm.",
+     "They both have their charm.",
+     "Each has its own charm."
+    ],
+    [
+     "Dans vingt ans, on travaillera sans doute moins.",
+     "In twenty years, we'll probably be working less.",
+     "Twenty years from now, we will probably work less.",
+     "In twenty years, we'll probably work less."
+    ],
+    [
+     "D'ici là, les robots auront remplacé beaucoup d'emplois.",
+     "By then, robots will have replaced a lot of jobs.",
+     "By then, robots will have taken over many jobs.",
+     "By that time, robots will have replaced many jobs."
+    ],
+    [
+     "À cette heure-ci l'an prochain, je vivrai à l'étranger.",
+     "This time next year, I'll be living abroad.",
+     "By this time next year, I'll be living abroad.",
+     "This time next year, I will live abroad."
+    ],
+    [
+     "Les voitures se conduiront toutes seules.",
+     "Cars will drive themselves.",
+     "Cars will be driving themselves."
+    ],
+    [
+     "Je doute que les choses s'améliorent rapidement.",
+     "I doubt things will improve quickly.",
+     "I doubt that things will get better fast.",
+     "I doubt things will get better quickly."
+    ],
+    [
+     "Tout dépendra des décisions qu'on prendra maintenant.",
+     "Everything will depend on the decisions we make now.",
+     "It will all depend on the decisions we make now."
+    ],
+    [
+     "Il est probable que la population vieillisse.",
+     "The population is likely to age.",
+     "It's likely that the population will get older.",
+     "The population will probably get older."
+    ],
+    [
+     "On aura peut-être trouvé un remède d'ici là.",
+     "We may have found a cure by then.",
+     "We might have found a cure by then.",
+     "Maybe we'll have found a cure by then."
+    ],
+    [
+     "Je suis plutôt optimiste pour l'avenir.",
+     "I'm rather optimistic about the future.",
+     "I'm fairly optimistic about the future.",
+     "I'm quite optimistic about the future."
+    ],
+    [
+     "Nos enfants vivront dans un monde très différent.",
+     "Our children will live in a very different world.",
+     "Our kids will be living in a very different world."
+    ],
+    [
+     "Si on ne fait rien, la situation va s'aggraver.",
+     "If we don't do anything, the situation will get worse.",
+     "If we do nothing, the situation will get worse.",
+     "Unless we act, the situation will get worse."
+    ],
+    [
+     "D'ici la fin de l'année, j'aurai économisé assez.",
+     "By the end of the year, I'll have saved enough.",
+     "I will have saved enough by the end of the year."
+    ],
+    [
+     "La technologie devrait nous faciliter la vie.",
+     "Technology should make our lives easier.",
+     "Technology is supposed to make life easier.",
+     "Technology should make life easier for us."
+    ],
+    [
+     "On ne peut pas prédire l'avenir.",
+     "We can't predict the future.",
+     "Nobody can predict the future.",
+     "You can't predict the future."
+    ],
+    [
+     "Les villes seront probablement plus vertes.",
+     "Cities will probably be greener.",
+     "Cities are likely to be greener.",
+     "The cities will probably be greener."
+    ],
+    [
+     "Il faudra s'adapter, que ça nous plaise ou non.",
+     "We'll have to adapt, whether we like it or not.",
+     "Like it or not, we'll have to adapt."
+    ]
+   ],
+   "v": [
+    [
+     "déchets",
+     "waste"
+    ],
+    [
+     "empreinte carbone",
+     "carbon footprint"
+    ],
+    [
+     "sécheresse",
+     "drought"
+    ],
+    [
+     "d'occasion",
+     "secondhand"
+    ],
+    [
+     "citadin",
+     "city dweller"
+    ],
+    [
+     "banlieue",
+     "suburbs"
+    ],
+    [
+     "alors que (opposition)",
+     "whereas"
+    ],
+    [
+     "bruyant",
+     "noisy"
+    ],
+    [
+     "d'ici là",
+     "by then"
+    ],
+    [
+     "remède",
+     "cure"
+    ],
+    [
+     "s'aggraver",
+     "get worse"
+    ],
+    [
+     "prédire",
+     "predict"
+    ]
+   ],
+   "c": [
+    [
+     "The longer we wait, ___ expensive it will be.",
+     [
+      "the more",
+      "more",
+      "the most",
+      "most"
+     ],
+     0,
+     "The + comparatif…, the + comparatif… = plus…, plus…"
+    ],
+    [
+     "By 2050, petrol cars will have ___.",
+     [
+      "disappeared",
+      "disappear",
+      "disappearing",
+      "to disappear"
+     ],
+     0,
+     "will have + participe passé : action terminée à un moment du futur."
+    ],
+    [
+     "Public transport is the answer, ___ it's reliable.",
+     [
+      "provided",
+      "unless",
+      "despite",
+      "although"
+     ],
+     0,
+     "provided (that) = à condition que."
+    ],
+    [
+     "___ the city is noisy, I love living there.",
+     [
+      "Even though",
+      "Despite",
+      "In spite of",
+      "However"
+     ],
+     0,
+     "even though + proposition ; despite / in spite of + nom ou -ing."
+    ],
+    [
+     "Life is cheaper in the country, ___ in the city everything is expensive.",
+     [
+      "whereas",
+      "despite",
+      "unless",
+      "so that"
+     ],
+     0,
+     "whereas = alors que (opposition entre deux faits)."
+    ],
+    [
+     "___ the peace and quiet, I'd get bored.",
+     [
+      "Despite",
+      "Although",
+      "Even though",
+      "Whereas"
+     ],
+     0,
+     "despite + nom : Despite the quiet…"
+    ],
+    [
+     "This time next year, I'll be ___ abroad.",
+     [
+      "living",
+      "live",
+      "lived",
+      "to live"
+     ],
+     0,
+     "Futur progressif : will be + -ing (en cours à un moment du futur)."
+    ],
+    [
+     "By then, robots ___ many jobs.",
+     [
+      "will have replaced",
+      "will have replace",
+      "have replaced",
+      "had replaced"
+     ],
+     0,
+     "By + moment futur : will have + participe passé."
+    ],
+    [
+     "The population is ___ to age.",
+     [
+      "likely",
+      "probably",
+      "maybe",
+      "possible"
+     ],
+     0,
+     "be likely to + verbe = il est probable que."
+    ]
+   ],
+   "parts": [
+    {
+     "t": "Parle d'écologie",
+     "p": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "c": [
+      0,
+      1,
+      2
+     ],
+     "g": [
+      "en.l.cause",
+      "en.t.perf"
+     ]
+    },
+    {
+     "t": "Ville ou campagne",
+     "p": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+     ],
+     "v": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "c": [
+      3,
+      4,
+      5
+     ],
+     "g": [
+      "en.l.opp"
+     ]
+    },
+    {
+     "t": "Le monde dans vingt ans",
+     "p": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+     ],
+     "v": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      6,
+      7,
+      8
+     ],
+     "g": [
+      "en.t.perf",
+      "en.l.cause"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "Registres, ironie & argot",
+   "lv": 3,
+   "d": "Passer du familier au soutenu, comprendre l'ironie, l'argot américain courant",
+   "tip": "Plus une demande est longue, plus elle est polie : Can you… < Could you… < Would you mind… < I was wondering if you could…",
+   "p": [
+    [
+     "Ça vous dérangerait de baisser la musique ?",
+     "Would you mind turning the music down?",
+     "Would you mind turning down the music?",
+     "Could you possibly turn the music down?"
+    ],
+    [
+     "Je me demandais si vous pourriez m'aider.",
+     "I was wondering if you could help me.",
+     "I was wondering whether you could help me."
+    ],
+    [
+     "Auriez-vous l'amabilité de fermer la porte ?",
+     "Would you be so kind as to close the door?",
+     "Would you kindly close the door?",
+     "Could you please close the door?"
+    ],
+    [
+     "Passe-moi le sel.",
+     "Pass me the salt.",
+     "Pass the salt."
+    ],
+    [
+     "Pourriez-vous me passer le sel, s'il vous plaît ?",
+     "Could you pass me the salt, please?",
+     "Could you pass the salt, please?",
+     "Would you pass me the salt, please?"
+    ],
+    [
+     "Je vous serais reconnaissant de me répondre rapidement.",
+     "I would be grateful if you could reply quickly.",
+     "I'd appreciate a quick reply.",
+     "I would appreciate it if you could reply soon."
+    ],
+    [
+     "Ouais, pas de souci.",
+     "Yeah, no worries.",
+     "Yeah, no problem.",
+     "Yep, no worries."
+    ],
+    [
+     "Certainement, avec plaisir.",
+     "Certainly, with pleasure.",
+     "Of course, it would be my pleasure.",
+     "Certainly, I'd be happy to."
+    ],
+    [
+     "Vous savez où se trouve la gare ?",
+     "Do you know where the station is?",
+     "Do you know where the train station is?",
+     "Do you happen to know where the station is?"
+    ],
+    [
+     "Excusez-moi de vous déranger.",
+     "Sorry to bother you.",
+     "I'm sorry to disturb you.",
+     "Excuse me for bothering you."
+    ],
+    [
+     "T'inquiète, je gère.",
+     "Don't worry, I've got this.",
+     "Don't worry, I've got it under control.",
+     "No worries, I'm on it."
+    ],
+    [
+     "Je crains que ce ne soit pas possible.",
+     "I'm afraid that won't be possible.",
+     "I'm afraid it's not possible.",
+     "I'm afraid that isn't possible."
+    ],
+    [
+     "Ça te dit, un ciné ?",
+     "Do you feel like seeing a movie?",
+     "Want to catch a movie?",
+     "How about a movie?"
+    ],
+    [
+     "Puis-je vous être utile ?",
+     "How may I help you?",
+     "May I help you?",
+     "Can I help you?"
+    ],
+    [
+     "Merci mille fois, c'est vraiment gentil.",
+     "Thanks a million, that's really kind.",
+     "Thank you so much, that's very kind of you.",
+     "Thanks so much, that's really nice of you."
+    ],
+    [
+     "Ça marche, à plus !",
+     "Sounds good, see you later!",
+     "Okay, catch you later!",
+     "Sounds good, see ya!"
+    ],
+    [
+     "Génial, il pleut encore.",
+     "Great, it's raining again.",
+     "Oh great, it's raining again.",
+     "Wonderful, it's raining again."
+    ],
+    [
+     "Oh, quelle surprise, il est en retard.",
+     "Oh, what a surprise, he's late.",
+     "What a surprise, he's late again.",
+     "Well, what a surprise, he's late."
+    ],
+    [
+     "Ce n'était pas terrible, hein ?",
+     "That wasn't great, was it?",
+     "That wasn't very good, was it?",
+     "That wasn't too great, was it?"
+    ],
+    [
+     "Ce n'est pas comme si j'avais le choix.",
+     "It's not like I have a choice.",
+     "It's not as if I had a choice.",
+     "It's not like I had a choice."
+    ],
+    [
+     "Merci pour ton aide, vraiment.",
+     "Thanks for your help, really.",
+     "Thanks a lot for your help.",
+     "Thanks so much for your help."
+    ],
+    [
+     "Ce n'est pas mal du tout !",
+     "That's not bad at all!",
+     "Not bad at all!",
+     "It's not bad at all!"
+    ],
+    [
+     "Il n'est pas vraiment matinal.",
+     "He's not exactly a morning person.",
+     "He's not really a morning person.",
+     "He isn't exactly a morning person."
+    ],
+    [
+     "Tu parles d'un week-end reposant !",
+     "Talk about a relaxing weekend!",
+     "Some relaxing weekend that was!",
+     "What a relaxing weekend!"
+    ],
+    [
+     "Elle n'est pas la plus patiente du monde.",
+     "She's not the most patient person in the world.",
+     "She isn't the most patient person on earth."
+    ],
+    [
+     "Comme si ça allait changer quelque chose !",
+     "As if that's going to change anything!",
+     "Like that's going to change anything!",
+     "As if that would change anything!"
+    ],
+    [
+     "Bien sûr, et moi je suis la reine d'Angleterre.",
+     "Sure, and I'm the Queen of England.",
+     "Yeah, right, and I'm the Queen of England."
+    ],
+    [
+     "Ça ne coûtait qu'une petite fortune.",
+     "It only cost a small fortune.",
+     "It just cost a small fortune."
+    ],
+    [
+     "Je plaisante, évidemment.",
+     "I'm kidding, obviously.",
+     "I'm joking, of course.",
+     "Just kidding, obviously."
+    ],
+    [
+     "C'était pour rire.",
+     "It was just a joke.",
+     "I was only joking.",
+     "It was meant as a joke."
+    ],
+    [
+     "Il ne faut pas tout prendre au premier degré.",
+     "You shouldn't take everything literally.",
+     "Don't take everything so literally.",
+     "You shouldn't take everything at face value."
+    ],
+    [
+     "Elle a un humour très pince-sans-rire.",
+     "She has a very dry sense of humor.",
+     "She has a really dry sense of humour.",
+     "Her sense of humor is very dry."
+    ],
+    [
+     "Je suis crevé.",
+     "I'm beat.",
+     "I'm wiped out.",
+     "I'm worn out."
+    ],
+    [
+     "C'est génial, ce resto !",
+     "This restaurant is awesome!",
+     "This place is awesome!",
+     "This restaurant is amazing!"
+    ],
+    [
+     "On se fait une bouffe ce soir ?",
+     "Want to grab dinner tonight?",
+     "Do you want to grab a bite tonight?",
+     "Shall we grab some food tonight?"
+    ],
+    [
+     "J'ai complètement oublié, ma faute.",
+     "I totally forgot, my bad.",
+     "I completely forgot, my bad.",
+     "I totally forgot, my fault."
+    ],
+    [
+     "Ce film était trop nul.",
+     "That movie was so lame.",
+     "That movie really sucked.",
+     "That movie was terrible."
+    ],
+    [
+     "Je suis fauché ce mois-ci.",
+     "I'm broke this month.",
+     "I'm totally broke this month."
+    ],
+    [
+     "Il est trop cool, ton pote.",
+     "Your buddy is so cool.",
+     "Your friend is really cool.",
+     "Your pal is so cool."
+    ],
+    [
+     "Je te taquine !",
+     "I'm just teasing you!",
+     "I'm messing with you!",
+     "Just teasing!"
+    ],
+    [
+     "Détends-toi, ce n'est pas si grave.",
+     "Chill out, it's not a big deal.",
+     "Relax, it's no big deal.",
+     "Take it easy, it's not a big deal."
+    ],
+    [
+     "C'est trop cher, c'est de l'arnaque.",
+     "It's way too expensive, it's a rip-off.",
+     "It's way overpriced, it's a scam.",
+     "It's way too expensive, what a rip-off."
+    ],
+    [
+     "Je suis partant !",
+     "I'm in!",
+     "Count me in!",
+     "I'm up for it!"
+    ],
+    [
+     "Laisse tomber, ce n'est pas important.",
+     "Forget it, it doesn't matter.",
+     "Never mind, it's not important.",
+     "Forget about it, it's not important."
+    ],
+    [
+     "Il a pété les plombs.",
+     "He totally lost it.",
+     "He freaked out.",
+     "He lost his temper."
+    ],
+    [
+     "C'était trop drôle, j'étais mort de rire.",
+     "It was hilarious, I was dying of laughter.",
+     "It was so funny, I was cracking up.",
+     "It was hilarious, I couldn't stop laughing."
+    ],
+    [
+     "On traîne un peu au centre commercial ?",
+     "Want to hang out at the mall?",
+     "Shall we hang out at the mall?",
+     "Do you want to hang out at the mall?"
+    ],
+    [
+     "Grave !",
+     "Totally!",
+     "For sure!",
+     "Absolutely!"
+    ]
+   ],
+   "v": [
+    [
+     "soutenu (registre)",
+     "formal"
+    ],
+    [
+     "familier",
+     "informal"
+    ],
+    [
+     "reconnaissant",
+     "grateful"
+    ],
+    [
+     "déranger",
+     "bother"
+    ],
+    [
+     "ironique",
+     "sarcastic"
+    ],
+    [
+     "au premier degré",
+     "literally"
+    ],
+    [
+     "pince-sans-rire",
+     "deadpan"
+    ],
+    [
+     "plaisanter",
+     "kid"
+    ],
+    [
+     "fauché",
+     "broke"
+    ],
+    [
+     "arnaque",
+     "rip-off"
+    ],
+    [
+     "pote",
+     "buddy"
+    ],
+    [
+     "traîner (avec des amis)",
+     "hang out"
+    ]
+   ],
+   "c": [
+    [
+     "Would you mind ___ the music down?",
+     [
+      "turning",
+      "to turn",
+      "turn",
+      "turned"
+     ],
+     0,
+     "Would you mind + -ing ? = Ça vous dérangerait de… ?"
+    ],
+    [
+     "I was wondering ___ you could help me.",
+     [
+      "if",
+      "that",
+      "what",
+      "so"
+     ],
+     0,
+     "I was wondering if… : demande très polie, sans inversion."
+    ],
+    [
+     "Do you know where the station ___?",
+     [
+      "is",
+      "is it",
+      "it is",
+      "does"
+     ],
+     0,
+     "Question indirecte : pas d'inversion (where the station is)."
+    ],
+    [
+     "That wasn't great, ___ it?",
+     [
+      "was",
+      "wasn't",
+      "is",
+      "did"
+     ],
+     0,
+     "Question tag : verbe négatif, tag positif (wasn't… was it?)."
+    ],
+    [
+     "It's not as ___ I had a choice.",
+     [
+      "if",
+      "when",
+      "so",
+      "that"
+     ],
+     0,
+     "It's not as if… = ce n'est pas comme si…"
+    ],
+    [
+     "He's not ___ a morning person.",
+     [
+      "exactly",
+      "exact",
+      "exacting",
+      "exacted"
+     ],
+     0,
+     "not exactly = pas vraiment (litote, souvent ironique)."
+    ],
+    [
+     "I'm ___ this month, I can't come.",
+     [
+      "broke",
+      "broken",
+      "break",
+      "breaking"
+     ],
+     0,
+     "be broke = être fauché (argot) ; broken = cassé."
+    ],
+    [
+     "Want to ___ out at the mall?",
+     [
+      "hang",
+      "hung",
+      "hanging",
+      "hangs"
+     ],
+     0,
+     "hang out = traîner, passer du temps ensemble. Want to… ? remplace Do you want to… ? à l'oral."
+    ],
+    [
+     "Chill ___, it's not a big deal.",
+     [
+      "out",
+      "off",
+      "up",
+      "over"
+     ],
+     0,
+     "chill out = se détendre (familier)."
+    ]
+   ],
+   "parts": [
+    {
+     "t": "Passe du familier au soutenu",
+     "p": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "v": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "c": [
+      0,
+      1,
+      2
+     ],
+     "g": [
+      "en.m.adv",
+      "en.s.quest"
+     ]
+    },
+    {
+     "t": "Comprends l'ironie",
+     "p": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+     ],
+     "v": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "c": [
+      3,
+      4,
+      5
+     ],
+     "g": [
+      "en.s.quest"
+     ]
+    },
+    {
+     "t": "Parle comme un Américain",
+     "p": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+     ],
+     "v": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "c": [
+      6,
+      7,
+      8
+     ],
+     "g": [
+      "en.m.adv"
      ]
     }
    ]

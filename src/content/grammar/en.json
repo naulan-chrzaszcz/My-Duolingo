@@ -934,7 +934,14 @@
    "Au café & au restaurant": ["en.w.quant", "en.s.quest", "en.m.adv"],
    "Courses & cuisine": ["en.w.quant"],
    "Tech au quotidien": ["en.m.abil", "en.s.pass"],
-   "Questions, question tags & discours rapporté": ["en.s.quest", "en.s.rep"]
+   "Questions, question tags & discours rapporté": ["en.s.quest", "en.s.rep"],
+   "Nuancer & atténuer": ["en.l.opp", "en.m.ded"],
+   "Préférences, souhaits & reproches": ["en.m.pref", "en.t.cond"],
+   "Mettre en relief": ["en.s.cleft", "en.s.inv"],
+   "Faire faire : artisans & services": ["en.s.caus", "en.s.pass"],
+   "Souvenirs & nostalgie": ["en.t.perf", "en.s.misc"],
+   "Société & environnement": ["en.l.cause", "en.t.perf", "en.l.opp"],
+   "Registres, ironie & argot": ["en.m.adv", "en.s.quest"]
   },
   "en-pro": {
    "Réunions & appels": ["en.m.adv", "en.t.fut"],
