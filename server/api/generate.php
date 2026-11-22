@@ -79,7 +79,7 @@ $GOALS  = ['trip' => 'voyager et se débrouiller sur place', 'job' => 'utiliser 
 $why    = is_string($in['why'] ?? null) && isset($GOALS[$in['why']]) ? $GOALS[$in['why']] : '';
 $mode = (string)($in['mode'] ?? '');
 // Seuls les types de génération de l'application sont acceptés (pas de prompt libre)
-if (!in_array($mode, ['', 'exercise', 'word', 'write', 'unit', 'story', 'explain', 'weekly'], true)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_mode']); exit; }
+if (!in_array($mode, ['', 'exercise', 'word', 'write', 'unit', 'story', 'explain', 'weekly', 'chat', 'chatfix'], true)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_mode']); exit; }
 $wordMode = $mode === 'word';
 // règles de grammaire les moins réussies (notions v27), envoyées par l'application
 $weak   = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 120); }, (array)($in['weak'] ?? [])), 0, 5);
@@ -180,6 +180,29 @@ if ($mode === 'weekly') {
     . ($errors ? "Erreurs de la semaine (exercice | réponse attendue | réponse donnée) :\n- " . implode("\n- ", array_slice($errors, 0, 15)) . "\n\n" : "Aucune erreur enregistrée cette semaine.\n\n")
     . "Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n{\"bilan\":\"2 à 3 phrases\",\"objectifs\":[\"objectif 1\",\"objectif 2\",\"objectif 3\"]}\n"
     . "Le bilan est en français, au tutoiement, bienveillant et précis (progrès, point fort, erreur qui revient). Exactement 3 objectifs courts (moins de 90 caractères), concrets et réalisables dans l'application (leçons, révisions, mots à retenir, histoires), dont au moins un sur l'erreur la plus fréquente.";
+}
+
+// ---- Modes « conversation » (v39.2) : une réplique du personnage, puis la correction de l'élève ----
+if ($mode === 'chat' || $mode === 'chatfix') {
+  $scene = $clean($in['scene'] ?? '', 160);
+  $hist = [];
+  foreach (array_slice((array)($in['hist'] ?? []), -20) as $t) {
+    if (is_array($t) && in_array($t[0] ?? '', ['P', 'E'], true) && is_string($t[1] ?? null) && trim($t[1]) !== '') $hist[] = $t[0] . ' : ' . $clean($t[1], 300);
+  }
+  if ($scene === '' || ($mode === 'chatfix' && !$hist)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_request']); exit; }
+  if ($mode === 'chat') {
+    $prompt = "Tu joues un personnage dans une conversation d'entraînement d'une application d'apprentissage façon Duolingo. L'élève est francophone et apprend le $L (niveau : $level).\nSituation : « $scene ». Tu joues l'autre personne de la situation, jamais l'élève.\n"
+      . ($why !== '' ? "Objectif de l'élève : $why.\n" : '')
+      . ($likes ? "Centres d'intérêt de l'élève : " . implode(', ', $likes) . ". Situe une bonne partie des phrases, des dialogues et des exemples dans ces domaines, quand cela reste naturel.\n\n" : '')
+      . ($hist ? "Conversation jusqu'ici (P = ton personnage, E = l'élève) :\n" . implode("\n", $hist) . "\n\n" : "La conversation commence : écris la première réplique de ton personnage.\n\n")
+      . "Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n{\"r\":\"ta prochaine réplique en $L\",\"fr\":\"sa traduction française\",\"aide\":\"une réponse possible de l'élève en $L, simple et naturelle\",\"fin\":false}\n"
+      . "Règles : une seule réplique courte (1 ou 2 phrases), naturelle et 100 % correcte, adaptée au niveau ; ne corrige pas l'élève pendant la conversation et réponds comme une vraie personne, même si sa phrase contient des fautes ; pose des questions pour le faire parler ; \"fin\" vaut true seulement quand la situation est naturellement terminée, après au moins 5 répliques de l'élève."
+      . ($lang === 'fr-FR' ? ' La conversation est en français : "fr" est une chaîne vide.' : '');
+  } else {
+    $prompt = "Tu es professeur de $L. Voici une conversation d'entraînement entre un personnage (P) et un élève francophone (E) de niveau $level, situation « $scene » :\n" . implode("\n", $hist)
+      . "\n\nCorrige les répliques de l'élève. Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour, de cette forme :\n{\"bilan\":\"2 phrases bienveillantes en français, au tutoiement\",\"fautes\":[[\"réplique de l'élève\",\"réplique corrigée\",\"traduction française de la réplique corrigée\",\"explication courte en français\"]],\"mieux\":[[\"ce que l'élève a dit\",\"tournure plus naturelle en $L\"]],\"mots\":[[\"mot ou expression utile en $L vu dans la conversation\",\"traduction française\"]]}\n"
+      . 'Règles : dans "fautes", seulement les vraies fautes (8 au plus, liste vide s\'il n\'y en a pas) ; dans "mieux", 2 ou 3 tournures plus naturelles ; dans "mots", 3 à 5 mots ou expressions utiles.';
+  }
 }
 
 // ---- Appel à l'API Claude ----

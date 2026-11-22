@@ -153,6 +153,43 @@ select{border:2px solid var(--line);border-radius:12px;padding:8px;background:#f
 .wkpop .wkload{color:var(--muted);font-size:14px}
 .wkpop h3{margin:12px 0 4px;text-align:left}
 .wkobj{text-align:left;margin:0 0 6px;padding-left:22px;font-weight:800;line-height:1.5}
+/* conversation avec Horang (v39.2) */
+.chat{position:fixed;inset:0;z-index:60;background:var(--bg);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0)}
+.chathead{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:2px solid var(--line);background:var(--card)}
+.chatt{flex:1;display:flex;flex-direction:column;min-width:0}
+.chatt b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.chatt small{color:var(--muted)}
+#chEnd{width:auto;margin:0;padding:8px 12px;font-size:13px}
+.chatlog{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.chmsg{display:flex;flex-direction:column;max-width:85%}
+.chmsg.p{align-self:flex-start}
+.chmsg.e{align-self:flex-end;align-items:flex-end}
+.chb{border-radius:18px;padding:10px 14px;font-size:16px;line-height:1.4;display:flex;gap:8px;align-items:flex-start}
+.chmsg.p .chb{background:var(--card);border:2px solid var(--line);border-bottom-left-radius:6px}
+.chmsg.e .chb{background:var(--pri);color:#fff;border-bottom-right-radius:6px}
+.chb .spk{flex:none}
+.chtr{color:var(--muted);font-size:13px;margin:4px 6px 0}
+.chatbar{border-top:2px solid var(--line);background:var(--card);padding:8px 16px calc(8px + env(safe-area-inset-bottom,0))}
+.chattools{display:flex;gap:8px;margin-bottom:6px}
+.chattools .btn{flex:1;width:auto;margin:0;padding:6px 10px;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px}
+.chatin{display:flex;gap:8px;align-items:flex-end}
+.chatin textarea{flex:1;margin:0;min-height:44px;max-height:120px;resize:none;font-size:16px}
+.chatin .btn{width:auto;margin:0;padding:10px 14px}
+#chMic.live{color:var(--bad)}
+.chathint{margin-bottom:6px}
+.chsug{width:100%;text-align:left;border:2px dashed var(--pri);border-radius:12px;background:#F3EEFF;padding:8px 10px;font-weight:800;color:var(--ink)}
+.chend,.chres{text-align:center;padding:10px 4px}
+.chend svg.mascot{width:90px;height:90px}
+.chres svg.mascot{width:110px;height:110px}
+.chres h3{text-align:left;margin:14px 0 6px}
+.chxp{font-size:22px;font-weight:900;color:var(--gold-d)}
+.chfix{display:grid;gap:8px;text-align:left}
+.chfix div{border:2px solid var(--line);border-radius:12px;padding:8px 10px;background:var(--card);display:flex;flex-direction:column;gap:2px}
+.chfix s{color:var(--bad)}
+.chfix b{color:var(--ok-d)}
+.chfix small,.chwords small,.chnote{color:var(--muted)}
+.chnote{font-size:13px;text-align:left}
+.chwords{display:flex;flex-wrap:wrap;gap:8px}
 .pzgoals{grid-template-columns:1fr 1fr}
 .pzgoals button{flex-direction:column;align-items:flex-start;gap:4px;font-size:15px;padding:12px}
 .vlist{display:grid;gap:8px;margin:10px 0}

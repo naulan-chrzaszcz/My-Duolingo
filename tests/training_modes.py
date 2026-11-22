@@ -27,7 +27,8 @@ async def main():
       await p.evaluate(f"(()=>{{const ctx=ctxFor('{trk}',COURSES['{trk}'].units.slice(0,3));['choice','type','mc','choice','tiles','choice'].forEach(t=>{{const e=make(t,ctx);if(e){{try{{addMistake(e);logError&&logError(e,'x')}}catch(x){{}}}}}});save()}})()")
       n=await p.evaluate("document.querySelectorAll('.tcard').length"); res=[]
       for i in range(n):
-        await p.evaluate("if(L)closeLesson();closeModal();route()"); await p.wait_for_timeout(120)
+        # retour à l'onglet Entraînement : une carte peut mener ailleurs (sans IA, « Ouvrir Mon Claude »)
+        await p.evaluate("if(L)closeLesson();closeModal();if(location.hash!=='#entrainement')location.hash='entrainement';route()"); await p.wait_for_timeout(120)
         title=await p.evaluate(f"document.querySelectorAll('.tcard')[{i}].querySelector('h3').textContent")
         try:
           await p.evaluate(f"document.querySelectorAll('.tcard')[{i}].click()"); await p.wait_for_timeout(400)
