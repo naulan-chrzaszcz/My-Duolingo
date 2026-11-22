@@ -5,6 +5,7 @@ import { unitOpen } from "../core/progress.js";
 import { $, esc, shuffle } from "../core/util.js";
 import { TEMPL, ctxFor, make } from "../exercises/generate.js";
 import { HG_T } from "../exercises/hangul.js";
+import { askOpen } from "../features/ask.js";
 import { errStats, startBilan, startCoach } from "../features/coach.js";
 import { notionPicker } from "../features/grammar.js";
 import { placeEstimate, placeIntro } from "../features/placement.js";
@@ -71,6 +72,7 @@ const TMAP = {
   "Examen blanc Voltaire": ["Examens", "clip", VI],
   "Examen blanc coréen": ["Examens", "clip", VI],
   "Test de niveau": ["Examens", "gauge", GO],
+  "Demande à Horang": ["Défis & IA", "chat", GR],
   "Sprint 60 secondes": ["Défis & IA", "timer", OR],
   "Leçon bilan": ["Défis & IA", "target", OR],
   "Révision IA illimitée": ["Défis & IA", "spark", VI],
@@ -258,6 +260,13 @@ export function renderTrain(v) {
     () => bankView(),
   );
   if (bankDue(s.id)) cards[cards.length - 1].badge = `${bankDue(s.id)} à revoir`;
+  add(
+    "💬",
+    "Demande à Horang",
+    "Dis-lui ce que tu veux travailler : une notion, un mot, une phrase vue à l'instant. Il te prépare des exercices sur mesure.",
+    "Coach",
+    () => askOpen(),
+  );
   add(
     "🎨",
     "Entraînement à thème",

@@ -88,7 +88,8 @@ const KO_PART = [
   [/^.+에$/, "에 indique le lieu où l'on va, ou le moment."],
   [/^.+[이가]$/, "이/가 marque le sujet du verbe."],
 ];
-function grammarNotes(T, lang) {
+/** Repères de grammaire reconnus dans une phrase (HTML échappé), aussi utilisés par « Demande à Horang ». */
+export function grammarNotes(T, lang) {
   const out = [];
   if (!T) return out;
   if (lang.startsWith("ko")) {
@@ -145,8 +146,9 @@ function unitTip(T, cid, u) {
   if (!U && T) U = C.units.find(x => (x.p || []).some(p => p[1] === T) || (x.dd || []).includes(T));
   return (U && U.tip) || "";
 }
-/** Bloc « À savoir » du pied de page (HTML), ou "" s'il n'y a rien d'utile à dire. */
-export function explainHtml(ex, res, L) {
+/** Bloc « À savoir » du pied de page (HTML), ou "" s'il n'y a rien d'utile à dire.
+ *  pin (v39.2) : affiche le bouton « Garder pour Horang » (true) ou son état déjà gardé ("on"). */
+export function explainHtml(ex, res, L, pin) {
   const cid = ex._cid || (L && L.cid);
   const C = COURSES[cid];
   const lang = ex.lang || (C && C.lang) || "";
@@ -169,8 +171,11 @@ export function explainHtml(ex, res, L) {
     if (tip) items.push(`<span>Astuce de l'unité :</span> <span class="notr">${esc(tip)}</span>`);
   }
   const ai = T && AI.mode && AI.mode !== "local" && ex.t !== "write";
-  if (!items.length && !ai) return "";
-  return `<div class="fexp fx">${items.length ? `<b class="fxh">${ic("bulb", 16, "", 2.4)}<span>À savoir</span></b><ul>${items.map(x => `<li>${x}</li>`).join("")}</ul>` : ""}${ai ? `<button class="fxai" id="fxai">${ic("spark", 16, "", 2.4)}<span>Explique ma réponse</span></button><div class="fxout" id="fxout" aria-live="polite"></div>` : ""}</div>`;
+  const pb = pin
+    ? `<button class="fxpin ${pin === "on" ? "on" : ""}" id="fxpin" aria-pressed="${pin === "on"}">${ic("pin", 16, "", 2.4)}<span>${pin === "on" ? "Gardée pour Horang" : "Garder pour Horang"}</span></button>`
+    : "";
+  if (!items.length && !ai && !pb) return "";
+  return `<div class="fexp fx">${items.length ? `<b class="fxh">${ic("bulb", 16, "", 2.4)}<span>À savoir</span></b><ul>${items.map(x => `<li>${x}</li>`).join("")}</ul>` : ""}${ai || pb ? `<div class="fxbtns">${ai ? `<button class="fxai" id="fxai">${ic("spark", 16, "", 2.4)}<span>Explique ma réponse</span></button>` : ""}${pb}</div>${ai ? `<div class="fxout" id="fxout" aria-live="polite"></div>` : ""}` : ""}</div>`;
 }
 
 const CACHE = new Map();

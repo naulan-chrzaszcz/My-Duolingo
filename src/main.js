@@ -25,6 +25,7 @@ import "./features/placement.js";
 import "./screens/path.js";
 import "./screens/training.js";
 import "./features/theme-training.js";
+import "./features/ask.js";
 import "./features/word-bank.js";
 import "./features/grammar.js";
 import "./screens/profile.js";

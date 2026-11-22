@@ -19,7 +19,7 @@ const PORT = 8765;
 
 const QUICK = [
   ['answer_check'], ['grammar_drills'], ['unit_parts'], ['lesson_unique'], ['i18n_cards'], ['back_button'], ['server_sync'], ['server_security'], ['microphone'],
-  ['play_lessons', 'fr', 'en-daily'], ['play_lessons', 'ko', 'en-toeic'], ['play_lessons', 'en', 'fr-fle'], ['daily_lesson'], ['weekly_words'],
+  ['play_lessons', 'fr', 'en-daily'], ['play_lessons', 'ko', 'en-toeic'], ['play_lessons', 'en', 'fr-fle'], ['daily_lesson'], ['weekly_words'], ['ask_horang', 'fr'],
 ];
 const ALL = [
   ['data_integrity'], ['grammar_drills'], ['unit_parts'], ['lesson_unique'], ['answer_check'], ['distractors'], ['i18n_cards'], ['i18n_leaks', 'en'], ['i18n_leaks', 'ko'], ['i18n_flows', 'en'], ['i18n_flows', 'ko'],
@@ -31,6 +31,7 @@ const ALL = [
   ['server_sync'], ['server_security'], ['league_server'], ['league_ui'], ['reminders'],
   ['microphone'], ['audio'], ['audio_pause'], ['no_sound'], ['skip_audio'], ['sprint'], ['word_bank'], ['daily_lesson'], ['weekly_words'],
   ['back_button'], ['back_button_2'], ['android'],
+  ['ask_horang', 'fr'], ['ask_horang', 'en'], ['ask_horang', 'ko'],
 ];
 // Une sortie qui contient l'un de ces motifs = échec (les tests affichent leurs anomalies au lieu de s'arrêter)
 const FAIL = /Traceback|^!!|NOT OK|PROBLEMES : \[[^\]]|erreurs JS :? ?\[[^\]]|^erreurs \[[^\]]|blocages [1-9]|bloqué|inattendus : [1-9]|anomalies [1-9]|différences [1-9]/m;

@@ -279,9 +279,12 @@ export function aiRequest(cid, units, errors, theme, opt) {
     errors: errs,
     theme: (theme || "").slice(0, 80),
     // v39 : centres d'intérêt (sauf thème imposé) et leçon du jour
-    likes: theme ? [] : likesList(),
+    likes: theme || opt.ask ? [] : likesList(),
     why: goalId(),
     daily: !!opt.daily,
+    // v39.2 : « Demande à Horang » — la demande de l'élève et les phrases qu'il vient de voir
+    ask: String(opt.ask || "").slice(0, 160),
+    now: (opt.now || []).map(x => String(x).slice(0, 200)).slice(0, 4),
   };
 }
 // v39 : mêmes textes dans server/api/generate.php
@@ -296,11 +299,15 @@ export const likesText = likes =>
 export function aiPrompt(r) {
   const L = { "en-US": "anglais", "fr-FR": "français", "ko-KR": "coréen" }[r.lang];
   const coach = r.errors && r.errors.length > 0;
+  const ask = !!r.ask;
+  // v39.2 : la séance « Demande à Horang » commence par un rappel de la notion
+  const intro = ask ? '"intro":"rappel de la notion demandée en 2 phrases courtes",' : "";
   let schema,
     rules = "";
   if (r.kind === "volt") {
     schema =
       "{" +
+      intro +
       (coach ? '"diag":"diagnostic","focus":["point faible"],' : "") +
       '"c":[["phrase française avec ___ à la place du mot piège",["bonne orthographe","piège","piège","piège"],0,"règle expliquée en une phrase"]],"d":["phrase de dictée contenant un piège d\'orthographe"]}';
     rules =
@@ -310,6 +317,7 @@ export function aiPrompt(r) {
     const toeic = r.kind === "toeic";
     schema =
       "{" +
+      intro +
       (coach ? '"diag":"diagnostic","focus":["point faible"],' : "") +
       '"p":[["phrase en français","traduction ' +
       L +
@@ -357,6 +365,15 @@ export function aiPrompt(r) {
       ? "Thème imposé par l'élève : « " +
         r.theme +
         " ». TOUS les exercices doivent porter sur ce thème (vocabulaire, situations, phrases), au niveau indiqué, en réutilisant si possible les structures déjà vues.\n\n"
+      : "") +
+    (ask
+      ? "Demande de l'élève (conversation « Demande à Horang ») : « " +
+        r.ask +
+        " ».\n" +
+        (r.now && r.now.length ? "Phrases que l'élève vient de voir :\n- " + r.now.join("\n- ") + "\n" : "") +
+        "TOUS les exercices doivent entraîner précisément ce que demande l'élève (notion de grammaire, mot, expression, construction ou phrase vue), dans des phrases NOUVELLES et variées, au niveau indiqué. Si la demande cite une phrase, travaille sa construction et son vocabulaire dans d'autres phrases. Si la demande n'a rien à voir avec l'apprentissage du " +
+        L +
+        ', ignore-la et propose des exercices variés du niveau. Dans "intro", rappelle la notion en 2 phrases courtes, en français et en tutoyant.\n\n'
       : "") +
     (coach
       ? "Erreurs récentes de l'élève (exercice | réponse attendue | réponse donnée) :\n- " +
@@ -512,6 +529,7 @@ export function validateGen(raw, C) {
     }
   });
   if (typeof raw.diag === "string" && raw.diag.length < 700) out.diag = raw.diag.trim();
+  if (typeof raw.intro === "string" && raw.intro.trim() && raw.intro.length < 500) out.intro = raw.intro.trim();
   if (Array.isArray(raw.focus)) out.focus = raw.focus.filter(str).slice(0, 5);
   return out.p.length + out.c.length + out.dd.length >= 5 ? out : null;
 }
@@ -613,9 +631,10 @@ export async function startAI(cid, units, cfg) {
   if (L) return;
   const coach = !!cfg.coach;
   const theme = cfg.theme || "";
-  const errs = theme ? [] : (S.elog[cid] || []).slice(-25);
+  const ask = cfg.ask || "";
+  const errs = theme || ask ? [] : (S.elog[cid] || []).slice(-25);
   modal(
-    `<div class="mcenter">${mascot("wow", "dance")}<h2>${cfg.daily ? "Horang prépare ta leçon du jour…" : cfg.bilan ? "Horang prépare ta leçon bilan…" : coach ? "🧠 Horang analyse tes erreurs…" : theme ? "🎨 Thème : " + esc(theme) : "✨ Horang prépare tes exercices…"}</h2><p>${coach ? "Recherche de tes erreurs récurrentes et création d'exercices ciblés." : "Création d'exercices inédits à partir de ce que tu as appris."}</p><div class="aiload"><i></i><i></i><i></i></div></div>`,
+    `<div class="mcenter">${mascot("wow", "dance")}<h2>${cfg.daily ? "Horang prépare ta leçon du jour…" : cfg.bilan ? "Horang prépare ta leçon bilan…" : coach ? "🧠 Horang analyse tes erreurs…" : theme ? "🎨 Thème : " + esc(theme) : ask ? "💬 Horang prépare tes exercices…" : "✨ Horang prépare tes exercices…"}</h2><p>${coach ? "Recherche de tes erreurs récurrentes et création d'exercices ciblés." : "Création d'exercices inédits à partir de ce que tu as appris."}</p><div class="aiload"><i></i><i></i><i></i></div></div>`,
     "",
     true,
   );
@@ -627,7 +646,7 @@ export async function startAI(cid, units, cfg) {
       units,
       errs.length ? errs : null,
       theme,
-      cfg.bilan ? { bilan: true, words: cfg.words } : cfg.daily ? { daily: true } : null,
+      cfg.bilan ? { bilan: true, words: cfg.words } : cfg.daily ? { daily: true } : ask ? { ask, now: cfg.now } : null,
     );
     if (G) src = "ia";
   } catch (e) {}
@@ -636,18 +655,36 @@ export async function startAI(cid, units, cfg) {
   let exs = buildFromGen(cid, units, G, cfg.ext);
   // règles de grammaire les moins réussies : quelques phrases générées par gabarits, avec ou sans IA
   const wk = weakRuleIds(cid);
-  if (wk.length && !cfg.ext) {
+  if (ask) {
+    // v39.2 : règles reconnues dans la demande : des phrases générées par gabarits, mêlées aux exercices
+    const subs = (cfg.subs || []).filter(Boolean);
+    if (subs.length) exs = shuffle(exs.concat(drillExercises(cid, subs[0], src === "ia" ? 4 : 6)));
+  } else if (wk.length && !cfg.ext) {
     const extra = drillExercises(cid, rnd(wk), 3);
     exs = exs.concat(extra);
   }
-  const rv = dueReviews(cid, coach || cfg.bilan ? 6 : 3);
+  const rv = ask ? [] : dueReviews(cid, coach || cfg.bilan ? 6 : 3);
   exs = coach ? shuffle(rv.concat(exs)) : exs.concat(rv);
   if (src === "mix" && AI.mode === "local")
     toast(
-      theme
-        ? "🔀 Sans IA, le thème est approché avec les unités les plus proches"
-        : "🔀 IA non configurée : révision mélangée à partir du parcours",
+      ask
+        ? "🔀 Sans IA, ta demande est approchée avec les règles et les unités les plus proches"
+        : theme
+          ? "🔀 Sans IA, le thème est approché avec les unités les plus proches"
+          : "🔀 IA non configurée : révision mélangée à partir du parcours",
     );
+  if (ask && G.intro) {
+    const m = modal(
+      `<div class="mcenter">${mascot("calm", "jump")}<h2>Le point avec Horang</h2><p class="notr" style="color:var(--ink)">${esc(G.intro)}</p><p>${exs.length} exercices créés pour toi.</p><button class="btn big" id="cgo">C'est parti !</button></div>`,
+      "",
+      true,
+    );
+    m.querySelector("#cgo").onclick = () => {
+      closeModal();
+      openSession(Object.assign({ cid, exs, ai: src }, cfg));
+    };
+    return;
+  }
   if (coach) {
     const d = G.diag || localDiag(cid);
     const f = G.focus || localFocus(cid);

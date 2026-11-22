@@ -8,6 +8,7 @@ import { distract } from "../exercises/generate.js";
 import { drillLabel, drillRecord } from "../exercises/drills.js";
 import { R } from "../exercises/render.js";
 import { words } from "../exercises/validate.js";
+import { askOpen, isPinned, noteSeen, pinsFor, togglePin } from "../features/ask.js";
 import { bindExplain, explainHtml } from "../features/explain.js";
 import { placeStage } from "../features/placement.js";
 import { UI } from "../i18n/locale.js";
@@ -339,6 +340,8 @@ export function result(res) {
     );
     return;
   }
+  // v39.2 : la phrase vue est retenue pour « Demande à Horang », qui peut aussi la garder pour plus tard
+  const seenIt = noteSeen(ex, res, L);
   const f = $("#lfoot");
   f.className = "lfoot " + (res.ok ? "ok" : "bad");
   const title = res.ok
@@ -347,8 +350,17 @@ export function result(res) {
       : res.title || rnd(PRAISE)
     : res.title || "Réponse correcte :";
   const sol = res.solHtml || (res.sol ? esc(res.sol) : "");
-  f.innerHTML = `<div class="fin"><div class="fhead"><div class="fic">${res.ok ? "✓" : "✕"}</div><div class="ftxt"><h3>${title}</h3>${sol ? `<div class="fsol">${res.ok && !res.typo && !res.solHtml ? "🔊 " : ""}${sol}</div>` : ""}${res.rom ? `<div class="rom">${esc(res.rom)}</div>` : ""}${res.diff || ""}</div>${res.speak ? `<div class="faud"><button class="iconbtn" id="fa1" aria-label="Écouter">🔊</button><button class="iconbtn" id="fa2" aria-label="Écouter lentement">🐢</button></div>` : ""}</div>${explainHtml(ex, res, L)}<button class="btn ${res.ok ? "okb" : "badb"}" id="cont">Continuer</button></div>`;
+  f.innerHTML = `<div class="fin"><div class="fhead"><div class="fic">${res.ok ? "✓" : "✕"}</div><div class="ftxt"><h3>${title}</h3>${sol ? `<div class="fsol">${res.ok && !res.typo && !res.solHtml ? "🔊 " : ""}${sol}</div>` : ""}${res.rom ? `<div class="rom">${esc(res.rom)}</div>` : ""}${res.diff || ""}</div>${res.speak ? `<div class="faud"><button class="iconbtn" id="fa1" aria-label="Écouter">🔊</button><button class="iconbtn" id="fa2" aria-label="Écouter lentement">🐢</button></div>` : ""}</div>${explainHtml(ex, res, L, seenIt ? (isPinned(seenIt) ? "on" : true) : false)}<button class="btn ${res.ok ? "okb" : "badb"}" id="cont">Continuer</button></div>`;
   bindExplain(ex, res, given, L);
+  const pinB = $("#fxpin");
+  if (pinB && seenIt)
+    pinB.onclick = () => {
+      const on = togglePin(seenIt);
+      beep("tap");
+      pinB.classList.toggle("on", on);
+      pinB.setAttribute("aria-pressed", String(on));
+      pinB.lastElementChild.textContent = on ? "Gardée pour Horang" : "Garder pour Horang";
+    };
   if (res.ok) okFx();
   if (res.speak) {
     $("#fa1").onclick = autoSpeak;
@@ -739,10 +751,14 @@ export function finish() {
     due ? `<span>${due} erreur${due > 1 ? "s" : ""} à ancrer</span>` : "",
     bdue ? `<span>${bdue} mot${bdue > 1 ? "s" : ""} à revoir</span>` : "",
   ].filter(Boolean);
+  const pins = pinsFor(L.cid).length;
+  const askRow = pins
+    ? `<div class="erow todo"><span class="eri a">${ic("chat", 22, "", 2.4)}</span><div class="ert"><b>Demande à Horang</b><span class="erv"><span>${pins} phrase${pins > 1 ? "s" : ""} gardée${pins > 1 ? "s" : ""} pour t'entraîner</span></span></div><button class="ergo" id="endAsk">S'entraîner</button></div>`
+    : "";
   const next = `<div class="enext">
   <div class="erow ${goalNow ? "done" : ""}"><span class="eri g">${ic(goalNow ? "check" : "bolt", 22, "", goalNow ? 3.2 : 2.4)}</span><div class="ert"><b>${goalNow ? "Objectif du jour atteint !" : "Objectif du jour"}</b><span class="ebar"><i style="width:${Math.min(100, Math.round((tx / Math.max(1, S.goal)) * 100))}%"></i></span></div><small class="notr">${tx} / ${S.goal} XP</small></div>
   <div class="erow ${qDone >= tq.length ? "done" : ""}"><span class="eri q">${ic("chest", 22, "", 2.4)}</span><div class="ert"><b>Quêtes du jour</b><span class="edots">${tq.map(q => `<i class="${S.q.claimed.includes(q.id) ? "on" : ""}"></i>`).join("")}</span></div>${qGems ? `<span class="egem">+${qGems} ${ic("gem", 16, "", 2.2)}</span>` : ""}<small class="notr">${qDone} / ${tq.length}</small></div>
-  <div class="erow ${revTxt.length ? "todo" : "done"}"><span class="eri r">${ic("repeat", 22, "", 2.6)}</span><div class="ert"><b>${revTxt.length ? "À réviser" : "Révisions à jour"}</b><span class="erv">${revTxt.length ? revTxt.join(" · ") : "<span>Rien à revoir pour l'instant.</span>"}</span></div>${revTxt.length ? `<button class="ergo" id="endRev">Réviser</button>` : ""}</div></div>`;
+  <div class="erow ${revTxt.length ? "todo" : "done"}"><span class="eri r">${ic("repeat", 22, "", 2.6)}</span><div class="ert"><b>${revTxt.length ? "À réviser" : "Révisions à jour"}</b><span class="erv">${revTxt.length ? revTxt.join(" · ") : "<span>Rien à revoir pour l'instant.</span>"}</span></div>${revTxt.length ? `<button class="ergo" id="endRev">Réviser</button>` : ""}</div>${askRow}</div>`;
   scr.push({
     html: `<div class="ehero">${mascot("happy", "dance")}</div><h1 class="gold">${title}</h1><p class="echeer">${cheers[(S.lessons + L.correct) % cheers.length]}</p>${notes.map(([k, t]) => `<p class="enote">${ic(k, 18, "", 2.6)}<span>${t}</span></p>`).join("")}
   <div class="ecards"><div class="ecard g"><small>XP gagnés</small><b data-c="${gained}">0</b></div><div class="ecard a"><small>Précision</small><b data-c="${acc}" data-s="%">0</b></div><div class="ecard ${mode === "sprint" ? "c" : "t"}"><small>${mode === "sprint" ? "Score" : "Temps"}</small><b>${mode === "sprint" ? L.correct : Math.floor(secs / 60) + ":" + String(secs % 60).padStart(2, "0")}</b></div></div>
@@ -757,6 +773,12 @@ export function finish() {
         r.onclick = () => {
           closeLesson();
           location.hash = "entrainement";
+        };
+      const ak = $("#endAsk");
+      if (ak)
+        ak.onclick = () => {
+          closeLesson();
+          askOpen();
         };
     },
   });

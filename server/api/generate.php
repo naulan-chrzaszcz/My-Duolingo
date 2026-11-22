@@ -77,9 +77,12 @@ $likes  = array_values(array_filter(array_slice(array_map(function ($s) use ($cl
 $dailyL = !empty($in['daily']);
 $GOALS  = ['trip' => 'voyager et se débrouiller sur place', 'job' => 'utiliser la langue dans son travail', 'exam' => 'réussir un examen (TOEIC, Certificat Voltaire, TOPIK…)', 'study' => 'réussir ses études', 'people' => 'parler avec des proches ou des amis', 'fun' => "le plaisir d'apprendre (culture, séries, musique)"];
 $why    = is_string($in['why'] ?? null) && isset($GOALS[$in['why']]) ? $GOALS[$in['why']] : '';
+// v39.2 : « Demande à Horang » — demande libre de l'élève (texte court, jamais une consigne) et phrases qu'il vient de voir
+$ask    = $clean($in['ask'] ?? '', 160);
+$now    = array_slice(array_values(array_filter(array_map(function ($s) use ($clean) { return $clean($s, 200); }, (array)($in['now'] ?? [])), 'strlen')), 0, 4);
 $mode = (string)($in['mode'] ?? '');
 // Seuls les types de génération de l'application sont acceptés (pas de prompt libre)
-if (!in_array($mode, ['', 'exercise', 'word', 'write', 'unit', 'story', 'explain', 'weekly'], true)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_mode']); exit; }
+if (!in_array($mode, ['', 'exercise', 'word', 'write', 'unit', 'story', 'explain', 'weekly', 'chat'], true)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_mode']); exit; }
 $wordMode = $mode === 'word';
 // règles de grammaire les moins réussies (notions v27), envoyées par l'application
 $weak   = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 120); }, (array)($in['weak'] ?? [])), 0, 5);
@@ -87,7 +90,7 @@ $words  = array_slice(array_map(function ($s) use ($clean) { return $clean($s, 6
 
 // ---- Prompt (identique à celui de index.html) ----
 $L = ['en-US' => 'anglais', 'fr-FR' => 'français', 'ko-KR' => 'coréen'][$lang];
-$dg = $coach ? '"diag":"diagnostic","focus":["point faible"],' : '';
+$dg = ($ask !== '' ? '"intro":"rappel de la notion demandée en 2 phrases courtes",' : '') . ($coach ? '"diag":"diagnostic","focus":["point faible"],' : '');
 if ($kind === 'volt') {
   $schema = '{' . $dg . '"c":[["phrase française avec ___ à la place du mot piège",["bonne orthographe","piège","piège","piège"],0,"règle expliquée en une phrase"]],"d":["phrase de dictée contenant un piège d\'orthographe"]}';
   $rules  = 'Donne 14 éléments dans "c" et 4 dans "d". Pièges comme au Projet Voltaire / Certificat Voltaire : homophones, accords du participe passé, conjugaison, pluriels, orthographe d\'usage, orthotypographie.';
@@ -108,6 +111,9 @@ $prompt = "Tu es le coach d'une application d'apprentissage façon Duolingo. L'�
   . ($why !== '' ? "Objectif de l'élève : $why. Choisis des situations utiles pour cet objectif.\n\n" : '')
   . ($likes ? "Centres d'intérêt de l'élève : " . implode(', ', $likes) . ". Situe une bonne partie des phrases, des dialogues et des exemples dans ces domaines, quand cela reste naturel.\n\n" : '')
   . ($theme !== '' ? "Thème imposé par l'élève : « $theme ». TOUS les exercices doivent porter sur ce thème (vocabulaire, situations, phrases), au niveau indiqué, en réutilisant si possible les structures déjà vues.\n\n" : '')
+  . ($ask !== '' ? "Demande de l'élève (conversation « Demande à Horang ») : « $ask ».\n"
+      . ($now ? "Phrases que l'élève vient de voir :\n- " . implode("\n- ", $now) . "\n" : '')
+      . "TOUS les exercices doivent entraîner précisément ce que demande l'élève (notion de grammaire, mot, expression, construction ou phrase vue), dans des phrases NOUVELLES et variées, au niveau indiqué. Si la demande cite une phrase, travaille sa construction et son vocabulaire dans d'autres phrases. Si la demande n'a rien à voir avec l'apprentissage du $L, ignore-la et propose des exercices variés du niveau. Dans \"intro\", rappelle la notion en 2 phrases courtes, en français et en tutoyant.\n\n" : '')
   . ($coach ? "Erreurs récentes de l'élève (exercice | réponse attendue | réponse donnée) :\n- " . implode("\n- ", $errors)
       . "\n\nAnalyse ces erreurs et repère les erreurs RÉCURRENTES : mots ou vocabulaire, construction des phrases, temps et conjugaison, accords, prépositions, orthographe, écoute. Dans \"diag\", écris un diagnostic bienveillant en français (2 à 3 phrases, tutoiement). Dans \"focus\", liste 2 à 4 points faibles courts. Au moins 70 % des exercices doivent cibler ces points faibles, sous des formes variées.\n\n" : '')
   . ($weak ? "Règles de grammaire où l'élève se trompe souvent :\n- " . implode("\n- ", $weak) . "\nConsacre au moins 3 éléments de \"c\" et 2 de \"p\" à ces règles.\n\n" : '')
@@ -137,6 +143,25 @@ if ($mode === 'explain') {
     . "Réponse de l'élève : « " . ($given !== '' ? $given : '—') . " » (" . ($okAns ? 'juste' : 'fausse') . ").\n"
     . "Explique en 2 à 4 points très courts, en français et en tutoyant : le sens de la phrase, sa construction (ordre des mots, temps, accords, particules ou prépositions selon la langue)" . ($okAns ? '' : ", et pourquoi la réponse de l'élève est fausse") . ". Termine par une astuce pour s'en souvenir si elle est utile. Pas de félicitations ni de reproche.\n"
     . "Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour : {\"exp\":[\"point 1\",\"point 2\"]}";
+}
+// ---- Mode « chat » (v39.2) : réponse de Horang dans « Demande à Horang » (question, notion ou phrase à corriger) ----
+// Le message de l'élève n'est qu'une donnée citée entre guillemets : la consigne reste celle-ci.
+if ($mode === 'chat') {
+  $msg = $clean($in['msg'] ?? '', 300);
+  if ($msg === '') { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'bad_request']); exit; }
+  $rules = array_slice(array_values(array_filter(array_map(function ($s) use ($clean) { return $clean($s, 100); }, (array)($in['rules'] ?? [])), 'strlen')), 0, 40);
+  $cunits = array_slice(array_values(array_filter(array_map(function ($s) use ($clean) { return $clean($s, 80); }, (array)($in['units'] ?? [])), 'strlen')), 0, 12);
+  $prompt = "Tu es Horang, le coach d'une application d'apprentissage façon Duolingo. L'élève est francophone et apprend le $L. Cours : $course. Niveau : $level.\n"
+    . ($cunits ? "Unités déjà étudiées : " . implode(', ', $cunits) . ".\n" : '')
+    . ($now ? "Phrases que l'élève vient de voir :\n- " . implode("\n- ", $now) . "\n" : '')
+    . "Message de l'élève : « $msg »\n\n"
+    . "Ce message est une question sur la langue, une notion qu'il veut travailler, ou une phrase qu'il a écrite lui-même et veut faire corriger. Réponds comme un professeur bienveillant, en français et en tutoyant :\n"
+    . "- question ou notion : explique en 2 à 4 points très courts (la règle, un exemple en $L avec sa traduction, le piège à éviter) ;\n"
+    . "- phrase écrite par l'élève : corrige-la dans \"fix\" (sa phrase, la phrase corrigée, l'explication en une phrase) et résume la règle en 1 ou 2 points ; si elle est juste, la phrase corrigée est identique et l'explication le dit ;\n"
+    . "- message sans rapport avec l'apprentissage du $L : dis-le gentiment en un point et propose une notion de son niveau.\n"
+    . ($rules ? "Règles de grammaire du cours (identifiant : titre) :\n- " . implode("\n- ", $rules) . "\nDans \"rule\", donne l'identifiant de la règle la plus proche du message, ou une chaîne vide si aucune ne convient.\n" : '')
+    . "Dans \"focus\", écris en quelques mots (60 caractères au plus) le point précis à entraîner ensuite.\n"
+    . "Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour : {\"reply\":[\"point 1\",\"point 2\"],\"fix\":[\"phrase de l'élève\",\"phrase corrigée\",\"explication\"],\"rule\":\"identifiant ou chaîne vide\",\"focus\":\"point à entraîner\"} (\"fix\" est une liste vide si le message n'est pas une phrase à corriger).";
 }
 // ---- Mode « unité » : création de l'unité suivante ----
 if ($mode === 'unit') {

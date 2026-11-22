@@ -71,6 +71,13 @@ Insérer une unité au milieu est possible : la progression des profils est reca
 3. Choisir sa rubrique, son icône et sa couleur dans `TMAP` (même fichier) ; sans entrée, la carte va dans « Défis & IA ».
 4. Traduire le titre et la description (voir « Un texte d'interface »).
 
+## Une idée de « Demande à Horang » (v39.2)
+
+- Les idées proposées sont les notions de grammaire du cours (`content/grammar/<langue>.json`) : une nouvelle notion y apparaît d'elle-même.
+- Une demande écrite est rapprochée des titres, mémos et règles (`matchRules`) puis des unités débloquées (`matchUnits`) dans `src/features/ask.js` ; pour qu'un mot-clé de plus retrouve une règle, l'ajouter à son mémo ou à ses règles.
+- Le prompt de la séance IA est dans `aiPrompt` (`src/services/ai.js`) et dans `server/api/generate.php` (champ `ask`) ; celui de la réponse en conversation dans `chatPrompt` (`src/features/ask.js`) et le mode `chat` de `generate.php`. Modifier les deux côtés à l'identique.
+- Tests : `node tests/run.mjs ask_horang fr` (puis `en` et `ko`).
+
 ## Un type d'exercice
 
 1. Génération : dans `src/exercises/generate.js`, fonction `make0`, ajouter une branche `if (t === "montype") return { t, lang, answer, ... }`.
