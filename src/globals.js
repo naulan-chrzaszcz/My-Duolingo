@@ -24,6 +24,7 @@ import * as m_features_interests from "./features/interests.ts";
 import * as m_features_daily_lesson from "./features/daily-lesson.ts";
 import * as m_features_personalize from "./features/personalize.ts";
 import * as m_features_weekly from "./features/weekly.ts";
+import * as m_features_conversation from "./features/conversation.ts";
 import * as m_i18n_dict_en from "./i18n/dict-en.js";
 import * as m_i18n_dict_ko from "./i18n/dict-ko.js";
 import * as m_i18n_locale from "./i18n/locale.js";
@@ -80,6 +81,7 @@ const MODULES = [
   m_features_daily_lesson,
   m_features_personalize,
   m_features_weekly,
+  m_features_conversation,
   m_i18n_dict_en,
   m_i18n_dict_ko,
   m_i18n_locale,

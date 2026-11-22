@@ -19,7 +19,7 @@ const PORT = 8765;
 
 const QUICK = [
   ['answer_check'], ['grammar_drills'], ['unit_parts'], ['lesson_unique'], ['i18n_cards'], ['back_button'], ['server_sync'], ['server_security'], ['microphone'],
-  ['play_lessons', 'fr', 'en-daily'], ['play_lessons', 'ko', 'en-toeic'], ['play_lessons', 'en', 'fr-fle'], ['daily_lesson'], ['weekly_words'],
+  ['play_lessons', 'fr', 'en-daily'], ['play_lessons', 'ko', 'en-toeic'], ['play_lessons', 'en', 'fr-fle'], ['daily_lesson'], ['weekly_words'], ['conversation'], ['conversation'],
 ];
 const ALL = [
   ['data_integrity'], ['grammar_drills'], ['unit_parts'], ['lesson_unique'], ['answer_check'], ['distractors'], ['i18n_cards'], ['i18n_leaks', 'en'], ['i18n_leaks', 'ko'], ['i18n_flows', 'en'], ['i18n_flows', 'ko'],

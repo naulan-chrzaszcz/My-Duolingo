@@ -48,6 +48,7 @@ export const DEF = () => ({
   pzDone: false,
   wkSeen: "",
   wkLast: null,
+  chats: 0,
   badges: [],
   lessons: 0,
   perfect: 0,
