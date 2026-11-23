@@ -145,6 +145,32 @@ Insérer une unité au milieu est possible : la progression des profils est reca
 - Les autres modules l'importent avec l'extension `.js` (`import { hgCompose } from './hangul.js'`) : esbuild trouve le `.ts`.
 - `npm run check` vérifie les types des fichiers `.ts`. Les types communs sont dans `src/types.ts`.
 
+## Créer ou enrichir un thème avec `scripts/add-content.py` (v39.3)
+
+Le plus simple pour ajouter du contenu traduit : écrire un fichier texte et lancer `python3 scripts/add-content.py fichier.txt` (`--dry` pour essayer sans écrire).
+
+```text
+cid: en-daily
+tr: ko
+#+ Météo & saisons || 날씨와 계절
+lv: 0
+after: Ma journée & l'heure
+d: Dire le temps qu'il fait || 날씨 말하기
+tip: Pour la météo, l'anglais commence par it. || 날씨는 it으로 시작해요.
+##+ Dis le temps qu'il fait || 날씨 말하기
+g: en.t.pres
+pk: sun rain
+P: Il fait froid. | It's cold. | It's chilly. || 추워요.
+V: nuageux | cloudy || 흐린
+C: ___ raining. | It's ; There's ; Is ; It | 0 | Météo : it. || 날씨는 it.
+```
+
+- `#+` crée un thème, `##+` une de ses trois unités ; `# Titre` et `## Titre` visent un thème et une unité existants pour y ajouter des éléments.
+- `after:` place le thème juste après un autre ; sans lui, il va à la fin de son niveau. Les niveaux doivent rester croissants.
+- `g:` donne les notions de grammaire de l'unité ; elles sont ajoutées au thème dans `content/grammar/<langue>.json`.
+- Un élément dont le texte source existe déjà dans le cours est ignoré (le script l'affiche) : le remplacer par un autre.
+- `scripts/edit-phrases.py` modifie l'existant : `= ancienne phrase | nouvelle phrase | traductions… || coréen` remplace une phrase à sa place, `+ phrase | variante` ajoute des traductions acceptées.
+
 ## Ajouter du contenu à une unité (v37)
 
 Chaque leçon d'une unité travaille sa propre tranche des listes de l'unité : pour que les leçons restent pleines et différentes, il faut environ 3 phrases (cours de traduction), 2 QCM et 1 question Part 2 (TOEIC), 3 à 4 QCM et 1 dictée (Voltaire) par leçon, soit 5, 4 et 3 leçons pour les unités 1, 2 et 3 d'un thème.

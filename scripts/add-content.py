@@ -10,6 +10,13 @@ Format :
   L: question | o1 ; o2 ; o3 | indexBon
   D: dictée
 Plusieurs traductions : « || en: … || ko: … ».
+Nouveau thème (v39.3) : « #+ Titre || traduction » crée le thème, suivi de ses champs puis de ses trois unités « ##+ Titre || traduction » :
+  lv: 0                       (niveau 0 à 3)
+  after: Titre d'un thème     (place dans le parcours : juste après ce thème ; sinon à la fin de son niveau)
+  d: description || traduction
+  tip: astuce || traduction
+  g: en.t.pres en.p.place     (sous une unité : ses notions de grammaire ; elles sont ajoutées à celles du thème dans content/grammar/<langue>.json)
+  pk: rain snow               (sous une unité : ses mots illustrés, identifiants de content/pics.json)
   CV: M: réplique // W: réplique // N: annonce     (conversation Part 3/4 ; M = homme, W = femme, N = narrateur)
   RD: texte, avec \\n pour les retours à la ligne  (texte Part 7)
   G: graphique, avec \\n                          (facultatif, après CV : graphique Part 3/4)
@@ -23,6 +30,7 @@ Usage : python3 scripts/add-content.py fichier.txt [--dry]
 import json, sys, re, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from romanize_ko import rom
+from gram_json import save as save_gram
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..") + "/"
 path = sys.argv[1]
@@ -48,6 +56,12 @@ def split_tr(s):
 
 
 ALLSRC = set()
+GRAM = {}  # thème -> notions de grammaire (v39.3)
+
+
+def put_tr(key, trs):
+    for l, t in trs.items():
+        adds[l][key] = t
 
 
 def add(key, item, trkey, trs):
@@ -83,6 +97,41 @@ for no, l in enumerate(lines, 1):
             C = json.load(open(f"{ROOT}src/content/courses/{cid}.json", encoding="utf-8"))
         elif s.startswith("tr:"):
             tr = s[3:].strip()
+        elif s.startswith("#+ "):
+            t, trs = split_tr(s[3:])
+            if any(x["t"] == t for x in C["units"]):
+                raise ValueError("thème déjà présent")
+            U = {"t": t, "lv": 0, "d": "", "tip": "", "p": [], "v": [], "c": [], "parts": []}
+            U["_after"] = None
+            C["units"].append(U)
+            P = None
+            put_tr(t, trs)
+        elif s.startswith("##+ "):
+            t, trs = split_tr(s[4:])
+            P = {"t": t, "p": [], "v": [], "c": []}
+            U["parts"].append(P)
+            put_tr(t, trs)
+        elif re.match(r"^(lv|after|d|tip|g|pk):", s):
+            k, v = s.split(":", 1)
+            v, trs = split_tr(v)
+            if k == "lv":
+                U["lv"] = int(v)
+            elif k == "after":
+                U["_after"] = v
+            elif k in ("d", "tip"):
+                U[k] = v
+                put_tr(v, trs)
+            elif k == "g":
+                ids = v.split()
+                if P is not None:
+                    P["g"] = P.get("g", []) + ids
+                GRAM.setdefault(U["t"], [])
+                GRAM[U["t"]] += [i for i in ids if i not in GRAM[U["t"]]]
+            elif k == "pk":
+                for i in v.split():
+                    U.setdefault("pk", []).append(i)
+                    if P is not None:
+                        P.setdefault("pk", []).append(len(U["pk"]) - 1)
         elif s.startswith("## "):
             t = s[3:].strip()
             P = next(x for x in U["parts"] if x["t"] == t)
@@ -131,11 +180,33 @@ for no, l in enumerate(lines, 1):
     except Exception as ex:
         raise SystemExit(f"{path}:{no} {ex} : {s}")
 
-print(cid, cnt, {k: len(v) for k, v in adds.items()})
+# v39.3 : thèmes créés, rangés à leur place (après « after », sinon à la fin de leur niveau)
+new = [U for U in C["units"] if "_after" in U]
+for U in new:
+    C["units"].remove(U)
+for U in new:
+    a = U.pop("_after")
+    if a:
+        i = next(i for i, x in enumerate(C["units"]) if x["t"] == a) + 1
+    else:
+        i = max([i + 1 for i, x in enumerate(C["units"]) if x["lv"] <= U["lv"]] or [0])
+    C["units"].insert(i, U)
+lvs = [U["lv"] for U in C["units"]]
+if lvs != sorted(lvs):
+    raise SystemExit("thèmes mal rangés : les niveaux doivent rester croissants")
+print(cid, cnt, {k: len(v) for k, v in adds.items()}, "thèmes créés :", len(new))
 if not dry:
     with open(f"{ROOT}src/content/courses/{cid}.json", "w", encoding="utf-8") as f:
         json.dump(C, f, ensure_ascii=False, indent=1)
         f.write("\n")
+    if GRAM:
+        lang = {"ko": "ko", "fr-fle": "fr", "fr-volt": "fr"}.get(cid, "en")
+        fn = f"{ROOT}src/content/grammar/{lang}.json"
+        G = json.load(open(fn, encoding="utf-8"))
+        uc = G["units"].setdefault(cid, {})
+        for t, ids in GRAM.items():
+            uc[t] = uc.get(t, []) + [i for i in ids if i not in uc.get(t, [])]
+        save_gram(fn, G)
     for l, d in adds.items():
         if not d:
             continue

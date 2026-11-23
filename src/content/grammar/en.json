@@ -173,6 +173,34 @@
      "p": [
       {"s": {"fr": "Si j'avais plus de temps, je {1=voyagerais|lirais|cuisinerais} davantage.", "ko": "시간이 더 있으면 {1=여행을 더 많이 할|책을 더 많이 읽을|요리를 더 자주 할} 텐데요."}, "t": ["If I had more time, I would {1=travel|read|cook} more.", "If I had more time, I'd {1=travel|read|cook} more.", "I would {1=travel|read|cook} more if I had more time.", "I'd {1=travel|read|cook} more if I had more time."], "x": ["If I have more time, I would {1=travel|read|cook} more.", "If I would have more time, I would {1=travel|read|cook} more.", "If I had more time, I will {1=travel|read|cook} more."]}
      ]
+    },
+    {
+     "id": "en.t.perf",
+     "t": "will have done, will be doing, had been doing, would",
+     "lv": 3,
+     "memo": "By + date + will have + participe = ce qui sera fini (By 2030, we'll have moved). will be + -ing = en cours à un moment du futur. had been + -ing = durée avant un moment passé (I had been waiting for an hour when he arrived). would / used to = habitudes d'autrefois.",
+     "r": [
+      "Futur antérieur : will have + participe passé, souvent avec by (d'ici, au plus tard) : By next year, I'll have finished my studies.",
+      "Futur progressif : will be + -ing = en train de, à un moment précis du futur : This time tomorrow, I'll be flying to Seoul.",
+      "Past perfect continuous : had been + -ing = action qui durait avant un moment du passé : We had been walking for hours when it started to rain.",
+      "would ou used to + verbe = habitude passée : When I was a kid, we would spend every summer at the beach. Pour un état, seulement used to (We used to live in Lyon, jamais would live)."
+     ],
+     "i": [
+      ["By {the end of the month|next summer}, I ___ {1=my degree|this book|the whole series}.", ["{1=will have finished|will have read|will have watched}", "{1=will have finishing|will have reading|will have watching}", "{1=have finished|have read|have watched}", "{1=had finished|had read|had watched}"], 0, "{1=finish|read|watch}"],
+      ["This time tomorrow, I ___ {on a beach|by the pool}.", ["will be lying", "will have lain", "lie", "lay"], 1, "lie"],
+      ["Don't call at eight — we ___ dinner.", ["will be having", "are have", "had", "will having"], 1, "have"],
+      ["I ___ for {an hour|twenty minutes|ages} when the bus finally arrived.", ["had been waiting", "have been waiting", "was waited", "am waiting"], 2, "wait"],
+      ["{1=She was exhausted|His eyes were red} because {1=she|he} ___ all day.", ["had been {1=working|crying}", "has been {1=working|crying}", "is {1=working|crying}", "had {1=work|cry}"], 2, "{1=work|cry}"],
+      ["When I was a kid, we ___ spend every summer at my grandmother's.", ["would", "will", "were", "are"], 3],
+      ["We ___ live in a small apartment in {@city}.", ["used to", "would", "were used to", "use to"], 3],
+      ["By the time you get here, the {film|game|show} ___.", ["will have started", "will start", "starts", "has started"], 0, "start"],
+      ["How long ___ you been living there when you met {her|him}?", ["had", "have", "did", "were"], 2],
+      ["{1=This time next week|By Friday|When you called}, I ___ {1=to Seoul|my report|for an hour}.", ["{1=will be flying|will have finished|had been sleeping}", "{1=will flying|will finished|have been sleeping}", "{1=fly|finish|sleep}", "{1=am fly|have finish|was slept}"], [1, 0, 2], "{1=fly|finish|sleep}"]
+     ],
+     "p": [
+      {"s": {"fr": "D'ici {1=2040|2050|la fin du siècle}, nous aurons changé nos habitudes.", "ko": "{1=2040년까지|2050년까지|이번 세기말까지} 우리는 습관을 바꿨을 거예요."}, "t": ["By {1=2040|2050|the end of the century}, we will have changed our habits.", "We will have changed our habits by {1=2040|2050|the end of the century}."], "x": ["By {1=2040|2050|the end of the century}, we will change our habits.", "By {1=2040|2050|the end of the century}, we will have change our habits.", "By {1=2040|2050|the end of the century}, we have changed our habits."]},
+      {"s": {"fr": "J'attendais depuis {1=une heure|vingt minutes|longtemps} quand il est arrivé.", "ko": "그가 왔을 때 저는 {1=한 시간째|20분째|한참} 기다리고 있었어요."}, "t": ["I had been waiting for {1=an hour|twenty minutes|a long time} when he arrived.", "I'd been waiting for {1=an hour|twenty minutes|a long time} when he arrived.", "I had been waiting {1=an hour|twenty minutes|a long time} when he arrived."], "x": ["I was waiting since {1=an hour|twenty minutes|a long time} when he arrived.", "I have been waiting for {1=an hour|twenty minutes|a long time} when he arrived.", "I had waited since {1=an hour|twenty minutes|a long time} when he arrived."]}
+     ]
     }
    ]
   },
@@ -321,7 +349,9 @@
       ["We ___ better not be late again.", ["had", "would", "should", "have"], 3]
      ],
      "p": [
-      {"s": {"fr": "Tu devrais {1=te reposer|appeler ta mère|aller chez le médecin}.", "ko": "{1=좀 쉬는 게|어머니께 전화하는 게|병원에 가 보는 게} 좋겠어요."}, "t": ["You should {1=get some rest|call your mother|see a doctor}.", "You should {1=rest|call your mom|go to the doctor}.", "You ought to {1=get some rest|call your mother|see a doctor}."], "x": ["You should to {1=get some rest|call your mother|see a doctor}.", "You would {1=get some rest|call your mother|see a doctor}.", "You should {1=getting some rest|calling your mother|seeing a doctor}."]}
+      {"s": {"fr": "Tu devrais {1=te reposer|appeler ta mère|aller chez le médecin}.", "ko": "{1=좀 쉬는 게|어머니께 전화하는 게|병원에 가 보는 게} 좋겠어요."}, "t": ["You should {1=get some rest|call your mother|see a doctor}.", "You should {1=rest|call your mom|go to the doctor}.", "You ought to {1=get some rest|call your mother|see a doctor}."], "x": ["You should to {1=get some rest|call your mother|see a doctor}.", "You would {1=get some rest|call your mother|see a doctor}.", "You should {1=getting some rest|calling your mother|seeing a doctor}."]},
+      {"s": {"fr": "Tu devrais {1=te reposer|appeler ta mère|voir un médecin}.", "ko": "{1=좀 쉬는|엄마한테 전화하는|병원에 가 보는} 게 좋겠어."}, "t": ["You should {1=rest|call your mother|see a doctor}.", "You ought to {1=rest|call your mother|see a doctor}.", "You should {1=get some rest|call your mom|see a doctor}."], "x": ["You should to {1=rest|call your mother|see a doctor}.", "You must to {1=rest|call your mother|see a doctor}.", "You should {1=resting|calling your mother|seeing a doctor}."]},
+      {"s": {"fr": "Est-ce que je pourrais {1=ouvrir la fenêtre|emprunter ton stylo|partir plus tôt} ?", "ko": "{1=창문을 열어도|펜을 빌려도|일찍 가도} 될까요?"}, "t": ["Could I {1=open the window|borrow your pen|leave early}?", "May I {1=open the window|borrow your pen|leave early}?", "Can I {1=open the window|borrow your pen|leave early}?"], "x": ["Could I to {1=open the window|borrow your pen|leave early}?", "Do I could {1=open the window|borrow your pen|leave early}?", "Could I {1=opening the window|borrowing your pen|leaving early}?"]}
      ]
     },
     {
@@ -371,7 +401,45 @@
       ["Sorry, I ___ hear you: can you speak up?", ["can't", "mustn't", "needn't", "shouldn't"], 0],
       ["After months of practice, {@S3} ___ to swim across the lake last summer.", ["was able", "could", "can", "is able"], 1],
       ["{1=Yesterday|Tomorrow} I ___ come to the meeting, sorry.", ["{1=couldn't|won't be able to}", "{1=won't be able to|couldn't}", "can't to", "{1=can|will can}"], [0, 1]],
-      ["I'd love to ___ play the piano.", ["be able to", "can", "could", "able to"], 1]
+      ["I'd love to ___ play the piano.", ["be able to", "can", "could", "able to"], 1],
+      ["I'm sorry, I ___ find the {keys|address|file} anywhere.", ["can't", "mustn't", "needn't", "won't be able"], 0],
+      ["Will you ___ come {tomorrow|on Friday|next week}?", ["be able to", "can", "could", "able to"], 1],
+      ["I've never ___ {to cook|to dance|to whistle} properly.", ["been able", "could", "can", "be able"], 1],
+      ["When we were kids, we ___ play outside until {dark|late|nine}.", ["could", "can", "will be able to", "are able to"], 0]
+     ],
+     "p": [
+      {"s": {"fr": "Je sais {1=nager|conduire|cuisiner}.", "ko": "저는 {1=수영할|운전할|요리할} 줄 알아요."}, "t": ["I can {1=swim|drive|cook}.", "I know how to {1=swim|drive|cook}."], "x": ["I can to {1=swim|drive|cook}.", "I know {1=swim|drive|cook}.", "I can {1=swimming|driving|cooking}."]},
+      {"s": {"fr": "Je n'ai pas pu {1=venir|dormir|finir} hier.", "ko": "어제 {1=못 왔어요|잠을 못 잤어요|못 끝냈어요}."}, "t": ["I couldn't {1=come|sleep|finish} yesterday.", "I wasn't able to {1=come|sleep|finish} yesterday."], "x": ["I can't {1=come|sleep|finish} yesterday.", "I couldn't {1=came|slept|finished} yesterday.", "I didn't can {1=come|sleep|finish} yesterday."]}
+     ]
+    },
+    {
+     "id": "en.m.pref",
+     "t": "would rather, had better, it's time, be supposed to",
+     "lv": 3,
+     "memo": "would rather + verbe (I'd rather stay) ; would rather + sujet + prétérit (I'd rather you stayed). had better + verbe = ferais mieux de. It's (high) time + sujet + prétérit. be supposed to = être censé. I wish + sujet + would = agacement.",
+     "r": [
+      "would rather + verbe sans to : I'd rather walk. Avec un autre sujet : would rather + sujet + prétérit : I'd rather you didn't smoke here. Comparaison : would rather… than…",
+      "had better + verbe sans to = ferais mieux de (conseil pressant, souvent un avertissement) : You'd better hurry. Négatif : You'd better not be late.",
+      "It's time / It's high time / It's about time + sujet + prétérit : It's time we left. Sans sujet : It's time to go.",
+      "be supposed to + verbe = être censé (ce qui est prévu ou attendu) : You were supposed to call me.",
+      "I wish + sujet + would + verbe = j'aimerais que (agacement, envie que ça change) : I wish you would stop."
+     ],
+     "i": [
+      ["I'd rather ___ {1=at home tonight|a taxi than walk|something lighter}.", ["{1=stay|take|eat}", "{1=to stay|to take|to eat}", "{1=staying|taking|eating}", "{1=stayed|took|ate}"], 0, "{1=stay|take|eat}"],
+      ["I'd rather you ___ {smoke|eat} in here.", ["didn't", "don't", "won't", "not"], 0, "", ["did not"]],
+      ["You'd better ___ late {again|tomorrow}.", ["not be", "not to be", "don't be", "be not"], 1],
+      ["You'd better ___ {an umbrella|a jacket|your passport}.", ["take", "to take", "taking", "took"], 1, "take"],
+      ["It's high time we ___ {1=home|to bed|a decision}.", ["{1=went|went|made}", "{1=go|go|make}", "{1=will go|will go|will make}", "{1=gone|gone|made up}"], 2, "{1=go|go|make}"],
+      ["It's about time you ___ a {job|new phone|haircut}.", ["got", "get", "will get", "getting"], 2, "get"],
+      ["You were supposed ___ me {yesterday|last night|this morning}!", ["to call", "call", "calling", "called"], 3, "call"],
+      ["We ___ supposed to wear a {suit|tie|uniform}, but nobody does.", ["are", "is", "have", "do"], 3, "be"],
+      ["I wish you ___ stop {interrupting me|shouting|checking your phone}.", ["would", "will", "did", "should"], 4],
+      ["I wish {my neighbors|the kids} ___ so much noise.", ["wouldn't make", "don't make", "won't make", "didn't made"], 4, "make", ["would not make"]],
+      ["{1=I'd rather|You'd better|It's time we} ___ {1=than drive|or you'll be late|before it gets dark}.", ["{1=walk|hurry|left}", "{1=walked|to hurry|to leave}", "{1=to walk|hurried|will leave}", "{1=walking|hurrying|leaving}"], [0, 1, 2], "{1=walk|hurry|leave}"]
+     ],
+     "p": [
+      {"s": {"fr": "Je préférerais que tu ne {1=fumes pas ici|dises rien|viennes pas}.", "ko": "{1=여기서 담배를 안 피웠으면|아무 말도 안 했으면|안 왔으면} 좋겠어요."}, "t": ["I'd rather you didn't {1=smoke here|say anything|come}.", "I would prefer it if you didn't {1=smoke here|say anything|come}.", "I'd prefer you didn't {1=smoke here|say anything|come}."], "x": ["I'd rather that you won't {1=smoke here|say anything|come}.", "I'd rather you didn't to {1=smoke here|say anything|come}.", "I'd better you didn't {1=smoke here|say anything|come}."]},
+      {"s": {"fr": "Il est grand temps qu'on {1=parte|rentre|se décide}.", "ko": "이제 정말 {1=떠날|집에 갈|결정할} 때가 됐어요."}, "t": ["It's high time we {1=left|went home|made up our minds}.", "It's about time we {1=left|went home|made up our minds}.", "It's high time we {1=left|went home|decided}."], "x": ["It's high time we will {1=leave|go home|make up our minds}.", "It's high time for we {1=left|went home|made up our minds}.", "It's high time we {1=leaving|going home|making up our minds}."]}
      ]
     }
    ]
@@ -593,10 +661,17 @@
       ["The doctor told me ___ more water.", ["to drink", "drink", "drinking", "that drink"], 3],
       ["My manager asked us ___ be late again.", ["not to", "don't", "no to", "not"], 3],
       ["{1=Tom|Léa} told me {1=he|she} ___ already seen the film.", ["had", "has", "was", "did"], 0],
-      ["They asked us what time the {shop|museum} ___.", ["opened", "did open", "does open", "did it open"], 2, "open"]
+      ["They asked us what time the {shop|museum} ___.", ["opened", "did open", "does open", "did it open"], 2, "open"],
+      ["{1=Tom|Léa} asked me why I ___ {1=him|her} so late.", ["had called", "did I call", "have I called", "do call"], 2, "call"],
+      ["{The doctor|My mother|The coach} told {me|us} ___ {so much sugar|junk food|energy drinks}.", ["not to eat", "to not eating", "don't eat", "no eat"], 3],
+      ["{1=Anna|Ben} said {1=she|he} ___ to {Seoul|Lisbon|Rome} the year before.", ["had been", "has been", "is", "have been"], 0],
+      ["{My boss|Our guide} asked {1=us|me} ___ {1=we|I} had any questions.", ["whether", "that", "what", "do"], 2],
+      ["{1=Tom|Léa} told me {1=he|she} ___ me {the next day|later|the following week}.", ["would call", "will call", "calls", "call"], 0]
      ],
      "p": [
-      {"s": {"fr": "Il m'a dit qu'il était fatigué.", "ko": "그는 피곤하다고 말했어요."}, "t": ["He told me he was tired.", "He told me that he was tired.", "He said he was tired.", "He said that he was tired."], "x": ["He said me he was tired.", "He told he was tired.", "He told to me he was tired."]}
+      {"s": {"fr": "Il m'a dit qu'il était fatigué.", "ko": "그는 피곤하다고 말했어요."}, "t": ["He told me he was tired.", "He told me that he was tired.", "He said he was tired.", "He said that he was tired."], "x": ["He said me he was tired.", "He told he was tired.", "He told to me he was tired."]},
+      {"s": {"fr": "Elle m'a dit qu'elle {1=était fatiguée|avait faim|partait demain}.", "ko": "그녀는 {1=피곤하다고|배고프다고|내일 떠난다고} 했어요."}, "t": ["She told me she {1=was tired|was hungry|was leaving tomorrow}.", "She told me that she {1=was tired|was hungry|was leaving tomorrow}.", "She said she {1=was tired|was hungry|was leaving tomorrow}."], "x": ["She told me she {1=is tired|is hungry|is leaving tomorrow}.", "She said me she {1=was tired|was hungry|was leaving tomorrow}.", "She told to me she {1=was tired|was hungry|was leaving tomorrow}."]},
+      {"s": {"fr": "Il m'a demandé si je {1=venais|travaillais|pouvais l'aider}.", "ko": "그는 제가 {1=오는지|일하는지|도와줄 수 있는지} 물었어요."}, "t": ["He asked me if I {1=was coming|was working|could help him}.", "He asked me whether I {1=was coming|was working|could help him}.", "He asked if I {1=was coming|was working|could help him}."], "x": ["He asked me if {1=was I coming|was I working|could I help him}.", "He asked me do I {1=come|work|help him}.", "He asked me if I {1=am coming|am working|can help him}."]}
      ]
     },
     {
@@ -618,10 +693,98 @@
       ["They're ___ nice people!", ["such", "so", "too", "enough"], 0],
       ["The {film|talk} was ___ boring that I left early.", ["so", "such", "too", "enough"], 0],
       ["We don't have ___ chairs for everyone.", ["enough", "too", "so", "such"], 1],
-      ["Did you ___ live here?", ["use to", "used to", "using to", "uses to"], 2]
+      ["Did you ___ live here?", ["use to", "used to", "using to", "uses to"], 2],
+      ["It was ___ {a long day|an easy test|a beautiful wedding}.", ["such", "so", "too", "enough"], 0],
+      ["The {coffee|tea} is ___ hot to drink right now.", ["too", "enough", "such", "so much"], 1],
+      ["Are you used to ___ {on the left|in the snow|at night}?", ["driving", "drive", "drove", "be driving"], 2, "drive"],
+      ["{@S3} didn't run fast ___ to catch the bus.", ["enough", "too", "so", "such"], 1],
+      ["I'm ___ tired that I could sleep {for a week|all day|on the floor}.", ["so", "such", "too", "enough"], 0]
      ],
      "p": [
-      {"s": {"fr": "Il fait trop chaud pour sortir.", "ko": "너무 더워서 나갈 수 없어요."}, "t": ["It's too hot to go out.", "It is too hot to go out."], "x": ["It's so hot to go out.", "It's too hot for go out.", "It's enough hot to go out."]}
+      {"s": {"fr": "Il fait trop chaud pour sortir.", "ko": "너무 더워서 나갈 수 없어요."}, "t": ["It's too hot to go out.", "It is too hot to go out."], "x": ["It's so hot to go out.", "It's too hot for go out.", "It's enough hot to go out."]},
+      {"s": {"fr": "C'est un film tellement {1=drôle|triste|long} !", "ko": "정말 {1=웃긴|슬픈|긴} 영화예요!"}, "t": ["It's such a {1=funny|sad|long} movie!", "It's such a {1=funny|sad|long} film!", "The movie is so {1=funny|sad|long}!"], "x": ["It's so a {1=funny|sad|long} movie!", "It's such {1=funny|sad|long} movie!", "It's too a {1=funny|sad|long} movie!"]},
+      {"s": {"fr": "Avant, je {1=fumais|courais tous les jours|vivais à Paris}.", "ko": "예전에는 {1=담배를 피웠어요|매일 달렸어요|파리에 살았어요}."}, "t": ["I used to {1=smoke|run every day|live in Paris}.", "I used to {1=smoke|go running every day|live in Paris}."], "x": ["I use to {1=smoke|run every day|live in Paris}.", "I am used to {1=smoke|run every day|live in Paris}.", "I used to {1=smoking|running every day|living in Paris}."]}
+     ]
+    },
+    {
+     "id": "en.s.cleft",
+     "t": "Mise en relief : What… is, It was… who",
+     "lv": 3,
+     "memo": "Pour insister sur un élément : What + sujet + verbe + is/was… (What I need is a break) ; It is/was + élément + who/that… (It was Tom who called) ; All I want is… = tout ce que je veux, c'est…",
+     "r": [
+      "What + proposition + is/was + élément mis en avant : What I need is some sleep. Le verbe be suit le temps du récit : What surprised me was his answer.",
+      "It is / It was + élément + who (personne) ou that (chose, moment, lieu) + suite de la phrase : It was my sister who called. It's on Friday that we leave.",
+      "All + sujet + verbe + is… = tout ce que… c'est : All I want is a coffee. The thing is / The problem is + that… pour annoncer l'essentiel."
+     ],
+     "i": [
+      ["___ I need right now is {a holiday|some sleep|a strong coffee}.", ["What", "That", "Which", "It"], 0],
+      ["What {surprised|shocked|annoyed} me ___ his {answer|attitude|silence}.", ["was", "were", "did", "it was"], 0],
+      ["It was {Tom|Léa|Anna|Mr. Kim} ___ broke the {vase|window|coffee machine}.", ["who", "which", "what", "whom"], 1],
+      ["It's on {Friday|Monday|the tenth} ___ we're leaving, not on {Saturday|Sunday}.", ["that", "what", "which", "who"], 1],
+      ["___ I want is {a quiet evening|a bit of peace|to go home}.", ["All", "Every", "Each", "Any"], 2],
+      ["{1=What I don't understand|What really matters|What worries me} ___ {1=why he left|how we treat people|the cost}.", ["is", "are", "does", "it is"], 0],
+      ["It was in {Lisbon|Seoul|Berlin} ___ I met my {husband|wife|best friend}.", ["that", "what", "which", "who"], 1],
+      ["The {1=thing|reason|problem} ___ that {1=I'm exhausted|I missed the train|we don't have enough time}.", ["is", "are", "it is", "be"], 2],
+      ["What we ___ is {leave now|call a taxi|ask for help}.", ["should do", "should", "do should", "must doing"], 0],
+      ["___ {1=really annoys me is the noise|was Léa who found the solution|problem is that we're late}.", ["{1=What|It|The}", "{1=It|What|Which}", "{1=That|She|What}", "{1=Which|There|It}"], [0, 1, 2]]
+     ],
+     "p": [
+      {"s": {"fr": "Ce dont j'ai besoin, c'est {1=de vacances|de sommeil|d'un café}.", "ko": "제가 필요한 건 {1=휴가예요|잠이에요|커피 한 잔이에요}."}, "t": ["What I need is {1=a holiday|some sleep|a coffee}.", "What I need is {1=a vacation|sleep|a cup of coffee}."], "x": ["What I need it is {1=a holiday|some sleep|a coffee}.", "That I need is {1=a holiday|some sleep|a coffee}.", "What I need are {1=a holiday|some sleep|a coffee}."]},
+      {"s": {"fr": "C'est {1=Léa|Tom|ma voisine} qui a trouvé la solution.", "ko": "해결책을 찾은 건 {1=레아였어요|톰이었어요|제 이웃이었어요}."}, "t": ["It was {1=Léa|Tom|my neighbor} who found the solution.", "It was {1=Léa|Tom|my neighbor} that found the solution."], "x": ["It was {1=Léa|Tom|my neighbor} which found the solution.", "It is {1=Léa|Tom|my neighbor} what found the solution.", "Was {1=Léa|Tom|my neighbor} who found the solution."]}
+     ]
+    },
+    {
+     "id": "en.s.inv",
+     "t": "Inversions : Never have I…, Had I known…",
+     "lv": 3,
+     "memo": "Un adverbe négatif ou restrictif en tête de phrase (never, rarely, not only, no sooner, only then, little…) entraîne l'ordre de la question : Never have I seen… Registre soutenu : Had I known, Were I you, Should you need… remplacent if.",
+     "r": [
+      "Adverbe négatif ou restrictif en tête + auxiliaire + sujet : Never have I seen such a mess. Rarely do we go out. Sans auxiliaire, on ajoute do / does / did.",
+      "Not only + auxiliaire + sujet…, but… also : Not only did she call, but she also came. No sooner had I arrived than… ; Only then did I understand.",
+      "Condition sans if : Had I known = If I had known ; Were I you = If I were you ; Should you need help = If you need help."
+     ],
+     "i": [
+      ["Rarely ___ we go out on {weekdays|Mondays|weeknights}.", ["do", "are", "have", "does"], 0],
+      ["I have to say, never ___ I been so {tired|happy|nervous} as I am today.", ["have", "had", "did", "was"], 0],
+      ["Not only ___ she {forget my birthday|miss the train}, but she also lost her {keys|phone}.", ["did", "had", "was", "has"], 1],
+      ["___ I known, I would have {come earlier|called you|stayed at home}.", ["Had", "If", "Have", "Did"], 2],
+      ["___ you need anything, {just call me|don't hesitate to ask|let me know}.", ["Should", "Would", "Shall", "Did"], 2],
+      ["___ I you, I wouldn't {sign that contract|lend him money|say a word}.", ["Were", "Was", "Am", "Be"], 2],
+      ["No sooner ___ we {sat down|arrived} than it started to {rain|snow}.", ["had", "did", "have", "were"], 1],
+      ["Only then ___ I realize {my mistake|how lucky I was|what had happened}.", ["did", "had", "was", "have"], 1],
+      ["Under no circumstances ___ you {open this door|touch that button}.", ["should", "you should", "shouldn't", "must not you"], 0],
+      ["{1=Rarely|Never before|Little} ___ {1=she complain|he felt so lonely|they know what was waiting for them}.", ["{1=does|had|did}", "{1=has|did|had}", "{1=is|was|were}", "{1=had|does|have}"], [0, 0, 0]]
+     ],
+     "p": [
+      {"s": {"fr": "Je n'ai jamais vu une chose pareille.", "ko": "이런 건 한 번도 본 적이 없어요."}, "t": ["Never have I seen anything like it.", "Never have I seen such a thing.", "I have never seen anything like it.", "I have never seen such a thing."], "x": ["Never I have seen anything like it.", "Never I saw anything like it.", "Never did I have seen anything like it."]},
+      {"s": {"fr": "Si j'avais su, je serais venu {1=plus tôt|avec toi|en train}.", "ko": "알았더라면 {1=더 일찍|너랑 같이|기차로} 왔을 텐데."}, "t": ["Had I known, I would have come {1=earlier|with you|by train}.", "If I had known, I would have come {1=earlier|with you|by train}."], "x": ["Have I known, I would have come {1=earlier|with you|by train}.", "Had I know, I would have come {1=earlier|with you|by train}.", "Did I know, I would have come {1=earlier|with you|by train}."]}
+     ]
+    },
+    {
+     "id": "en.s.caus",
+     "t": "Faire faire : have / get something done",
+     "lv": 3,
+     "memo": "Faire faire par quelqu'un d'autre : have / get + objet + participe passé (I had my hair cut). Faire faire quelque chose à quelqu'un : get + personne + to + verbe, have + personne + verbe, make + personne + verbe (obliger).",
+     "r": [
+      "have / get + objet + participe passé = faire faire (par un professionnel) : I'm having my car repaired. We got the house painted.",
+      "Pour une chose subie : have / get + objet + participe passé (I had my phone stolen = on m'a volé mon téléphone).",
+      "Faire faire à quelqu'un : get + personne + to + verbe (I got him to help) ; have + personne + verbe (I'll have her call you) ; make + personne + verbe = obliger (She made me wait)."
+     ],
+     "i": [
+      ["I {had|got} my {1=hair|car|watch} ___ {yesterday|last week}.", ["{1=cut|washed|repaired}", "{1=cutting|washing|repairing}", "{1=to cut|to wash|to repair}", "{1=cuts|washes|repairs}"], 0, "{1=cut|wash|repair}"],
+      ["We're having the {kitchen|living room|fence} ___ next {month|week}.", ["painted", "paint", "to paint", "painting"], 0, "paint"],
+      ["You should get your eyes ___.", ["checked", "check", "to check", "checking"], 0, "check"],
+      ["She had her {bag|phone|wallet} ___ on the {subway|bus}.", ["stolen", "stole", "steal", "stealing"], 1, "steal"],
+      ["I finally got my {brother|neighbor|roommate} ___ me move.", ["to help", "help", "helped", "helps"], 2, "help"],
+      ["I'll have my assistant ___ you back {this afternoon|tomorrow|in an hour}.", ["call", "to call", "called", "calls"], 2, "call"],
+      ["The teacher made us ___ the {text|chapter|poem} again.", ["read", "to read", "reading", "reads"], 2, "read"],
+      ["Where do you get your {suits|shirts|coats} ___?", ["cleaned", "clean", "to clean", "cleaning"], 0, "clean"],
+      ["We need to {have|get} the roof ___ before winter.", ["fixed", "fix", "to fix", "fixing"], 0, "fix"],
+      ["I {1=had|got} the plumber ___ the leak.", ["{1=fix|to fix}", "{1=to fix|fix}", "fixed", "fixes"], [2, 2], "fix"]
+     ],
+     "p": [
+      {"s": {"fr": "Je me suis fait couper les cheveux {1=hier|samedi|ce matin}.", "ko": "{1=어제|토요일에|오늘 아침에} 머리를 잘랐어요."}, "t": ["I had my hair cut {1=yesterday|on Saturday|this morning}.", "I got my hair cut {1=yesterday|on Saturday|this morning}.", "I got a haircut {1=yesterday|on Saturday|this morning}."], "x": ["I had cut my hair {1=yesterday|on Saturday|this morning}.", "I had my hair cutting {1=yesterday|on Saturday|this morning}.", "I made my hair cut {1=yesterday|on Saturday|this morning}."]},
+      {"s": {"fr": "Il faut que je fasse réparer {1=ma voiture|mon vélo|mon ordinateur}.", "ko": "{1=차를|자전거를|컴퓨터를} 수리 맡겨야 해요."}, "t": ["I need to get my {1=car|bike|computer} fixed.", "I need to have my {1=car|bike|computer} repaired.", "I need to get my {1=car|bike|computer} repaired.", "I need to have my {1=car|bike|computer} fixed.", "I have to get my {1=car|bike|computer} fixed."], "x": ["I need to get fixed my {1=car|bike|computer}.", "I need to have my {1=car|bike|computer} fix.", "I need to make repair my {1=car|bike|computer}."]}
      ]
     }
    ]
@@ -680,10 +843,17 @@
       ["Is this {coat|seat} ___? — No, it's my sister's.", ["yours", "your", "you", "yourself"], 1],
       ["We really enjoyed ___ at the party.", ["ourselves", "us", "our", "ours"], 2],
       ["Mr. Kim wants the report. Please send it to ___.", ["him", "his", "he", "himself"], 0],
-      ["Let me introduce ___: I'm the new intern.", ["myself", "me", "my", "mine"], 2]
+      ["Let me introduce ___: I'm the new intern.", ["myself", "me", "my", "mine"], 2],
+      ["{My parents|The kids} sent ___ a postcard from {Rome|Seoul|Lisbon}.", ["me", "I", "my", "mine"], 0],
+      ["Their house is bigger than ___.", ["ours", "our", "us", "we"], 1],
+      ["{1=Tom|Léa} hurt ___ playing {tennis|football}.", ["{1=himself|herself}", "{1=him|her}", "{1=his|hers}", "{1=herself|himself}"], 2],
+      ["The dog wagged ___ tail.", ["its", "it's", "it", "itself"], 1],
+      ["Did you do it by ___?", ["yourself", "you", "your", "yours"], 2]
      ],
      "p": [
-      {"s": {"fr": "{1=Tom|Léa} a perdu son téléphone.", "ko": "{1=톰은|레아는} 휴대폰을 잃어버렸어요."}, "t": ["{1=Tom|Léa} lost {1=his|her} phone.", "{1=Tom|Léa} has lost {1=his|her} phone.", "{1=Tom|Léa} lost {1=his|her} mobile."], "x": ["{1=Tom|Léa} lost {1=her|his} phone.", "{1=Tom|Léa} lost {1=him|she} phone.", "{1=Tom|Léa} lost the {1=his|her} phone."]}
+      {"s": {"fr": "{1=Tom|Léa} a perdu son téléphone.", "ko": "{1=톰은|레아는} 휴대폰을 잃어버렸어요."}, "t": ["{1=Tom|Léa} lost {1=his|her} phone.", "{1=Tom|Léa} has lost {1=his|her} phone.", "{1=Tom|Léa} lost {1=his|her} mobile."], "x": ["{1=Tom|Léa} lost {1=her|his} phone.", "{1=Tom|Léa} lost {1=him|she} phone.", "{1=Tom|Léa} lost the {1=his|her} phone."]},
+      {"s": {"fr": "Il s'est coupé en cuisinant.", "ko": "그는 요리하다가 베였어요."}, "t": ["He cut himself while cooking.", "He cut himself while he was cooking."], "x": ["He cut him while cooking.", "He cut his while cooking.", "He cut hisself while cooking."]},
+      {"s": {"fr": "Ce sac est à {1=elle|lui|nous}.", "ko": "이 가방은 {1=그녀|그|우리} 거예요."}, "t": ["This bag is {1=hers|his|ours}.", "That bag is {1=hers|his|ours}.", "This is {1=her|his|our} bag."], "x": ["This bag is {1=her|him|our}.", "This bag is {1=her's|he's|our's}.", "This bag is {1=she|he|we}."]}
      ]
     },
     {
@@ -738,7 +908,9 @@
       ["I saw a film last night. ___ film was really good.", ["The", "A", "An", "Some"], 2]
      ],
      "p": [
-      {"s": {"fr": "Il n'y a pas de lait dans le frigo.", "ko": "냉장고에 우유가 없어요."}, "t": ["There isn't any milk in the fridge.", "There is no milk in the fridge.", "There's no milk in the fridge.", "There's not any milk in the fridge."], "x": ["There isn't some milk in the fridge.", "There aren't any milk in the fridge.", "There isn't many milk in the fridge."]}
+      {"s": {"fr": "Il n'y a pas de lait dans le frigo.", "ko": "냉장고에 우유가 없어요."}, "t": ["There isn't any milk in the fridge.", "There is no milk in the fridge.", "There's no milk in the fridge.", "There's not any milk in the fridge."], "x": ["There isn't some milk in the fridge.", "There aren't any milk in the fridge.", "There isn't many milk in the fridge."]},
+      {"s": {"fr": "Il n'y a pas beaucoup de {1=lait|pain|temps}.", "ko": "{1=우유가|빵이|시간이} 별로 없어요."}, "t": ["There isn't much {1=milk|bread|time}.", "There's not much {1=milk|bread|time}.", "We don't have much {1=milk|bread|time}."], "x": ["There isn't many {1=milk|bread|time}.", "There aren't much {1=milk|bread|time}.", "There isn't a lot {1=milk|bread|time}."]},
+      {"s": {"fr": "J'ai quelques {1=questions|idées|photos} pour toi.", "ko": "너한테 줄 {1=질문이|아이디어가|사진이} 몇 개 있어."}, "t": ["I have a few {1=questions|ideas|photos} for you.", "I've got a few {1=questions|ideas|photos} for you.", "I have some {1=questions|ideas|photos} for you."], "x": ["I have a little {1=questions|ideas|photos} for you.", "I have few of {1=questions|ideas|photos} for you.", "I have a few {1=question|idea|photo} for you."]}
      ]
     },
     {
@@ -791,11 +963,30 @@
    "Banque, administration & services": ["en.m.obl", "en.m.adv"],
    "Urgences & imprévus": ["en.t.prog", "en.m.obl"],
    "Imprévus & expressions": ["en.m.ded", "en.t.cond", "en.s.misc"],
-   "Hypothèses & conditionnels": ["en.t.cond"],
+   "Hypothèses & conditionnels": ["en.t.cond", "en.s.inv"],
    "Au café & au restaurant": ["en.w.quant", "en.s.quest", "en.m.adv"],
    "Courses & cuisine": ["en.w.quant"],
    "Tech au quotidien": ["en.m.abil", "en.s.pass"],
-   "Questions, question tags & discours rapporté": ["en.s.quest", "en.s.rep"]
+   "Questions, question tags & discours rapporté": ["en.s.quest", "en.s.rep"],
+   "Nuancer & atténuer": ["en.l.opp", "en.m.ded"],
+   "Préférences, souhaits & reproches": ["en.m.pref", "en.t.cond"],
+   "Mettre en relief": ["en.s.cleft", "en.s.inv"],
+   "Faire faire : artisans & services": ["en.s.caus", "en.s.pass"],
+   "Souvenirs & nostalgie": ["en.t.perf", "en.s.misc"],
+   "Société & environnement": ["en.l.cause", "en.t.perf", "en.l.opp"],
+   "Registres, ironie & argot": ["en.m.adv", "en.s.quest"],
+   "Relations & vie sentimentale": ["en.p.dur", "en.w.ger", "en.p.verb"],
+   "Médias, actus & réseaux sociaux": ["en.s.pass", "en.s.rep"],
+   "Études & apprentissage": ["en.s.rel", "en.w.form"],
+   "Argent, budget & consommation": ["en.w.quant", "en.w.comp", "en.l.cause"],
+   "Sport & forme": ["en.t.pres", "en.p.dur", "en.m.abil"],
+   "Réclamations & service client": ["en.m.adv", "en.t.past", "en.s.pass"],
+   "Fêtes & traditions": ["en.p.time", "en.t.fut", "en.w.ger"],
+   "Décrire les gens & les lieux": ["en.t.pres", "en.p.place"],
+   "Météo & saisons": ["en.t.pres", "en.p.time", "en.t.fut"],
+   "Émotions & ressentis": ["en.t.pres", "en.w.form"],
+   "Hier & le week-end dernier": ["en.t.past"],
+   "Phrasal verbs du quotidien": ["en.p.verb"]
   },
   "en-pro": {
    "Réunions & appels": ["en.m.adv", "en.t.fut"],

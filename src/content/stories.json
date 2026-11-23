@@ -3000,6 +3000,310 @@
      "a": 0
     }
    ]
+  },
+  {
+   "id": "e47",
+   "t": "Le voisin bruyant",
+   "ic": "🔊",
+   "lv": 3,
+   "cast": {
+    "Claire": [
+     "W",
+     "👩"
+    ],
+    "Mr. Patel": [
+     "M",
+     "👨"
+    ]
+   },
+   "items": [
+    {
+     "s": "Claire",
+     "t": "Sorry to bother you, Mr. Patel. I was wondering if we could have a quick word about the noise.",
+     "fr": "Désolée de vous déranger, monsieur Patel. Je me demandais si on pouvait parler rapidement du bruit."
+    },
+    {
+     "s": "Mr. Patel",
+     "t": "Of course. Is it the music? My son has just taken up the drums, I'm afraid.",
+     "fr": "Bien sûr. C'est la musique ? Mon fils vient de se mettre à la batterie, j'en ai peur."
+    },
+    {
+     "s": "Claire",
+     "t": "I'd rather he didn't practice after ten. I start work at six, so I need my sleep.",
+     "fr": "Je préférerais qu'il ne joue pas après vingt-deux heures. Je commence le travail à six heures, alors j'ai besoin de dormir."
+    },
+    {
+     "q": "What is Claire's problem?",
+     "o": [
+      "Her neighbor's son plays the drums late",
+      "Her neighbor's dog barks at night",
+      "Her neighbor parks in front of her garage"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Mr. Patel",
+     "t": "That's fair enough. Had I known, I would have said something sooner.",
+     "fr": "C'est normal. Si j'avais su, je lui aurais dit quelque chose plus tôt."
+    },
+    {
+     "s": "Mr. Patel",
+     "t": "What if he practiced on Saturday afternoons instead? I'll have him use headphones during the week.",
+     "fr": "Et s'il jouait plutôt le samedi après-midi ? En semaine, je lui ferai mettre un casque."
+    },
+    {
+     "q": "What does Mr. Patel suggest?",
+     "o": [
+      "Practicing on Saturday afternoons",
+      "Selling the drums",
+      "Moving to another apartment"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Claire",
+     "t": "That would be perfect. Thank you for being so understanding.",
+     "fr": "Ce serait parfait. Merci d'être aussi compréhensif."
+    },
+    {
+     "q": "How does the conversation end?",
+     "o": [
+      "They reach an agreement",
+      "Claire calls the police",
+      "Mr. Patel gets angry"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e48",
+   "t": "Le dîner de famille",
+   "ic": "🍽️",
+   "lv": 3,
+   "cast": {
+    "Mom": [
+     "W",
+     "👩"
+    ],
+    "Leo": [
+     "M",
+     "🧑"
+    ],
+    "Grandpa": [
+     "M",
+     "👴"
+    ]
+   },
+   "items": [
+    {
+     "s": "Mom",
+     "t": "Leo, you were supposed to bring the dessert. Where is it?",
+     "fr": "Leo, tu étais censé apporter le dessert. Il est où ?"
+    },
+    {
+     "s": "Leo",
+     "t": "I completely forgot. I've been so swamped at work that it slipped my mind.",
+     "fr": "J'ai complètement oublié. J'ai été tellement débordé au travail que ça m'est sorti de la tête."
+    },
+    {
+     "s": "Grandpa",
+     "t": "In my day, we would never have turned up empty-handed.",
+     "fr": "De mon temps, on ne serait jamais venus les mains vides."
+    },
+    {
+     "q": "Why is Mom annoyed?",
+     "o": [
+      "Leo forgot the dessert",
+      "Leo arrived very late",
+      "Leo broke a plate"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Leo",
+     "t": "Come on, Grandpa, it's not the end of the world. I'll get some ice cream from the store on the corner.",
+     "fr": "Allez, papy, ce n'est pas la fin du monde. Je vais acheter de la glace à l'épicerie du coin."
+    },
+    {
+     "s": "Mom",
+     "t": "It's about time you started writing things down, you know.",
+     "fr": "Il serait temps que tu commences à noter les choses, tu sais."
+    },
+    {
+     "q": "What will Leo do?",
+     "o": [
+      "Buy ice cream nearby",
+      "Bake a cake at home",
+      "Order a pizza"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Grandpa",
+     "t": "Well, what matters is that we're all together. Ice cream it is!",
+     "fr": "Bon, ce qui compte, c'est qu'on soit tous ensemble. Va pour la glace !"
+    },
+    {
+     "q": "What does Grandpa say matters most?",
+     "o": [
+      "Being together",
+      "Eating dessert",
+      "Arriving on time"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e49",
+   "t": "Le cambriolage",
+   "ic": "🔑",
+   "lv": 3,
+   "cast": {
+    "Officer": [
+     "M",
+     "👮"
+    ],
+    "Nadia": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Nadia",
+     "t": "I got home at around seven and found the door wide open. Someone had broken in.",
+     "fr": "Je suis rentrée vers dix-neuf heures et j'ai trouvé la porte grande ouverte. Quelqu'un était entré par effraction."
+    },
+    {
+     "s": "Officer",
+     "t": "I'm sorry to hear that. Was anything taken?",
+     "fr": "Je suis désolé de l'apprendre. Est-ce qu'on vous a pris quelque chose ?"
+    },
+    {
+     "s": "Nadia",
+     "t": "They took my laptop and some jewelry. Luckily, I'd had the lock changed last month, so they must have come in through the window.",
+     "fr": "Ils ont pris mon ordinateur portable et des bijoux. Heureusement, j'avais fait changer la serrure le mois dernier, donc ils ont dû entrer par la fenêtre."
+    },
+    {
+     "q": "How did the burglars probably get in?",
+     "o": [
+      "Through the window",
+      "With a key",
+      "Through the garage"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Officer",
+     "t": "Had you noticed anyone suspicious in the area recently?",
+     "fr": "Aviez-vous remarqué quelqu'un de suspect dans le quartier récemment ?"
+    },
+    {
+     "s": "Nadia",
+     "t": "Now that you mention it, a man had been hanging around the building for a few days.",
+     "fr": "Maintenant que vous le dites, un homme traînait autour de l'immeuble depuis quelques jours."
+    },
+    {
+     "q": "What had Nadia noticed?",
+     "o": [
+      "A man hanging around the building",
+      "A car parked outside every night",
+      "Strange phone calls"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Officer",
+     "t": "That's very helpful. I'll have someone check the security cameras, and I'd advise you to get an alarm installed.",
+     "fr": "C'est très utile. Je vais faire vérifier les caméras de surveillance, et je vous conseille de faire installer une alarme."
+    },
+    {
+     "q": "What does the officer recommend?",
+     "o": [
+      "Having an alarm installed",
+      "Moving out",
+      "Changing the lock again"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "e50",
+   "t": "Ville ou campagne ?",
+   "ic": "🌳",
+   "lv": 3,
+   "cast": {
+    "Sam": [
+     "M",
+     "🧑"
+    ],
+    "Julie": [
+     "W",
+     "👩"
+    ]
+   },
+   "items": [
+    {
+     "s": "Julie",
+     "t": "I've been thinking: what if we moved to the countryside? We'd have a garden and far more space.",
+     "fr": "J'ai réfléchi : et si on partait vivre à la campagne ? On aurait un jardin et beaucoup plus d'espace."
+    },
+    {
+     "s": "Sam",
+     "t": "I see your point, but I'm not sure I could live without a café on every corner.",
+     "fr": "Je comprends, mais je ne suis pas sûr de pouvoir vivre sans un café à chaque coin de rue."
+    },
+    {
+     "s": "Julie",
+     "t": "Rents here have gone through the roof, whereas we could buy a house there for the same price.",
+     "fr": "Les loyers ici ont explosé, alors que là-bas on pourrait acheter une maison pour le même prix."
+    },
+    {
+     "q": "What is Julie's main argument?",
+     "o": [
+      "Housing is much cheaper in the countryside",
+      "The air is cleaner",
+      "Her family lives there"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Sam",
+     "t": "That's true. Having said that, it would take me two hours to get to work.",
+     "fr": "C'est vrai. Cela dit, il me faudrait deux heures pour aller au travail."
+    },
+    {
+     "s": "Julie",
+     "t": "Not if you worked from home three days a week. By next year, half your team will have gone remote anyway.",
+     "fr": "Pas si tu travaillais de chez toi trois jours par semaine. D'ici l'an prochain, la moitié de ton équipe sera passée au télétravail de toute façon."
+    },
+    {
+     "q": "What is Sam worried about?",
+     "o": [
+      "His commute to work",
+      "Being far from his family",
+      "The lack of schools"
+     ],
+     "a": 0
+    },
+    {
+     "s": "Sam",
+     "t": "Fair enough. Let's spend a weekend there first and see how we feel.",
+     "fr": "D'accord. Passons d'abord un week-end là-bas et on verra ce qu'on en pense."
+    },
+    {
+     "q": "What do they decide?",
+     "o": [
+      "To spend a weekend there first",
+      "To move next month",
+      "To stay in the city for good"
+     ],
+     "a": 0
+    }
+   ]
   }
  ],
  "fr": [

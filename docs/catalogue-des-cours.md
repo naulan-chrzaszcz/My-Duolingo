@@ -1,35 +1,53 @@
-# Catalogue des cours et des unités (v37)
+# Catalogue des cours et des unités (v39.3)
 
-Généré à partir des données de l'application (`src/content/courses/*.json`) : 142 thèmes dans 6 cours. Chaque thème compte 18 étapes (la dernière est le bilan) et une version extrême. Le parcours affiche chaque thème comme 3 unités de 6 étapes (426 unités affichées) ; depuis la v35, chacune a son titre-objectif et son propre contenu (colonne « Unités affichées »). La colonne « Chapitre » est le niveau du thème (1 = les bases… 4 = expert) : le parcours affiche un chapitre à la fois. Les colonnes Vocabulaire, Phrases et QCM comptent les éléments du thème entier (depuis la v37, ils sont répartis entre les leçons, chacune ayant les siens ; le TOEIC a aussi des questions-réponses, des conversations et des textes, Voltaire des dictées) ; la colonne « Images » compte les mots illustrés (exercices en images et guide).
+Généré à partir des données de l'application (`src/content/courses/*.json`) : 160 thèmes dans 6 cours. Chaque thème compte 18 étapes (la dernière est le bilan) et une version extrême. Le parcours affiche chaque thème comme 3 unités de 6 étapes (480 unités affichées) ; depuis la v35, chacune a son titre-objectif et son propre contenu (colonne « Unités affichées »). La colonne « Chapitre » est le niveau du thème (1 = les bases… 4 = expert) : le parcours affiche un chapitre à la fois. Les colonnes Vocabulaire, Phrases et QCM comptent les éléments du thème entier (depuis la v37, ils sont répartis entre les leçons, chacune ayant les siens ; le TOEIC a aussi des questions-réponses, des conversations et des textes, Voltaire des dictées) ; la colonne « Images » compte les mots illustrés (exercices en images et guide).
 
-## Quotidien — `en-daily` (en-US, 24 unités)
+## Quotidien — `en-daily` (en-US, 42 unités)
 
 | # | Thème | Chapitre | Description | Unités affichées | Vocabulaire | Phrases | QCM | Images |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Se présenter | 1 | Saluer, se présenter, parler de soi | Salue quelqu'un · Dis d'où tu viens · Parle de ton métier | 18 | 38 | 9 | 8 |
-| 2 | Au café & au restaurant | 1 | Commander, réserver, payer | Commande une boisson · Réserve une table · Demande l'addition | 17 | 37 | 9 | 18 |
-| 3 | Famille & amis | 1 | Parler de ses proches | Présente ta famille · Décris tes proches · Parle de tes amis | 18 | 38 | 9 | 8 |
-| 4 | Ma journée & l'heure | 1 | Routine, heures, habitudes | Dis l'heure · Décris ta matinée · Raconte ta soirée | 18 | 39 | 9 | 9 |
-| 5 | Loisirs & week-end | 1 | Goûts, passe-temps, fréquence | Dis ce que tu aimes · Parle de tes habitudes · Propose une sortie | 18 | 38 | 9 | 11 |
-| 6 | Courses & cuisine | 1 | Dénombrable/indénombrable, quantités, recettes | Fais les courses · Demande une quantité · Suis une recette | 18 | 39 | 9 | 21 |
-| 7 | Se déplacer & faire des achats | 2 | Demander son chemin, essayer, payer | Demande ton chemin · Prends le train et le bus · Achète des vêtements | 17 | 38 | 8 | 24 |
-| 8 | Santé & bien-être | 2 | Chez le médecin, à la pharmacie | Dis où tu as mal · Va chez le médecin · Prends soin de toi | 18 | 38 | 8 | 14 |
-| 9 | Logement & voisins | 2 | Chercher, louer, signaler un problème | Cherche un appartement · Signale un problème · Parle à tes voisins | 12 | 36 | 8 | 15 |
-| 10 | Voyages & vacances | 2 | Aéroport, hôtel, souvenirs de voyage | Prends l'avion · Séjourne à l'hôtel · Raconte tes vacances | 12 | 36 | 8 | 13 |
-| 11 | Au téléphone & rendez-vous | 2 | Se présenter au téléphone, patienter, rappeler, fixer un rendez-vous | Passe un coup de fil · Laisse un message · Prends rendez-vous | 12 | 36 | 8 |  |
-| 12 | Inviter, accepter, refuser | 2 | Would you like…, How about…, refuser poliment | Invite quelqu'un · Accepte avec plaisir · Refuse poliment | 12 | 35 | 8 |  |
-| 13 | Tech au quotidien | 2 | Batterie, wifi, mots de passe, applications qui plantent | Connecte-toi · Répare un appareil · Partage des fichiers | 12 | 36 | 8 | 8 |
-| 14 | Le futur & les projets | 2 | will, going to, présent progressif, when + présent | Annonce tes projets · Décide sur le moment · Organise ton agenda | 12 | 36 | 8 |  |
-| 15 | Small talk & opinions | 3 | Discuter, nuancer, donner son avis | Prends des nouvelles · Donne ton avis · Parle de tes envies | 12 | 36 | 8 | 8 |
-| 16 | Raconter une histoire | 3 | Temps du passé, enchaînements | Plante le décor · Raconte ce qui s'est passé · Conclus ton histoire | 12 | 36 | 8 |  |
-| 17 | Débattre & convaincre | 3 | Donner son avis, nuancer, concéder | Défends ton point de vue · Nuance ton propos · Trouve un terrain d'entente | 12 | 36 | 8 |  |
-| 18 | Expériences & present perfect | 3 | ever, never, already, yet, just, for/since | Parle de tes expériences · Dis depuis quand · Situe un fait dans le passé | 12 | 35 | 8 |  |
-| 19 | Banque, administration & services | 3 | Ouvrir un compte, retirer, frais, formulaires, pièces d'identité | Ouvre un compte · Retire et envoie de l'argent · Fais tes papiers | 12 | 36 | 8 | 8 |
-| 20 | Urgences & imprévus | 3 | Perte, vol, panne, blessure, police | Signale une perte ou un vol · Appelle les secours · Gère une panne | 12 | 36 | 8 | 7 |
-| 21 | Questions, question tags & discours rapporté | 3 | aren't you?, does she?, shall we?, Do you know what time it is?, Who called you? / Who did you call?, He told me he was… | Ajoute un question tag · Pose la bonne question · Rapporte ce qu'on a dit | 12 | 36 | 9 |  |
-| 22 | Imprévus & expressions | 4 | Idiomes, regrets, situations délicates | Dis que tu es débordé · Réagis à un imprévu · Exprime un regret | 12 | 35 | 8 |  |
-| 23 | Phrasal verbs du quotidien | 4 | Parler comme un natif | Règle un problème · Garde le contact · Organise-toi | 12 | 36 | 8 |  |
-| 24 | Hypothèses & conditionnels | 4 | if + présent / prétérit / past perfect, I wish, unless, in case | Fais une hypothèse · Imagine une autre vie · Refais le passé | 12 | 36 | 8 |  |
+| 1 | Se présenter | 1 | Saluer, se présenter, parler de soi | Salue quelqu'un · Dis d'où tu viens · Parle de ton métier | 18 | 50 | 9 | 4 |
+| 2 | Au café & au restaurant | 1 | Commander, réserver, payer | Commande une boisson · Réserve une table · Demande l'addition | 17 | 49 | 9 | 18 |
+| 3 | Famille & amis | 1 | Parler de ses proches | Présente ta famille · Décris tes proches · Parle de tes amis | 18 | 50 | 9 | 8 |
+| 4 | Décrire les gens & les lieux | 1 | Décrire le physique, le caractère et sa ville | Décris quelqu'un · Décris son caractère · Décris ta ville | 12 | 48 | 9 | 4 |
+| 5 | Ma journée & l'heure | 1 | Routine, heures, habitudes | Dis l'heure · Décris ta matinée · Raconte ta soirée | 18 | 51 | 9 | 9 |
+| 6 | Météo & saisons | 1 | Dire le temps qu'il fait, parler des saisons, s'habiller selon la météo | Dis le temps qu'il fait · Parle des saisons · Habille-toi selon la météo | 12 | 48 | 9 | 9 |
+| 7 | Loisirs & week-end | 1 | Goûts, passe-temps, fréquence | Dis ce que tu aimes · Parle de tes habitudes · Propose une sortie | 18 | 50 | 9 | 11 |
+| 8 | Émotions & ressentis | 1 | Dire comment on se sent, réagir à une nouvelle, consoler | Dis comment tu te sens · Réagis à une nouvelle · Console quelqu'un | 12 | 48 | 9 |  |
+| 9 | Courses & cuisine | 1 | Dénombrable/indénombrable, quantités, recettes | Fais les courses · Demande une quantité · Suis une recette | 18 | 51 | 9 | 21 |
+| 10 | Hier & le week-end dernier | 1 | Raconter sa journée d'hier, les verbes irréguliers, poser des questions sur le passé | Raconte ta journée d'hier · Les verbes irréguliers · Pose des questions sur le passé | 12 | 48 | 9 |  |
+| 11 | Se déplacer & faire des achats | 2 | Demander son chemin, essayer, payer | Demande ton chemin · Prends le train et le bus · Achète des vêtements | 17 | 50 | 8 | 24 |
+| 12 | Santé & bien-être | 2 | Chez le médecin, à la pharmacie | Dis où tu as mal · Va chez le médecin · Prends soin de toi | 18 | 50 | 8 | 14 |
+| 13 | Sport & forme | 2 | Parler de son sport, s'inscrire à la salle, encourager quelqu'un | Parle de ton sport · Inscris-toi à la salle · Encourage quelqu'un | 12 | 48 | 9 | 2 |
+| 14 | Logement & voisins | 2 | Chercher, louer, signaler un problème | Cherche un appartement · Signale un problème · Parle à tes voisins | 12 | 48 | 8 | 15 |
+| 15 | Voyages & vacances | 2 | Aéroport, hôtel, souvenirs de voyage | Prends l'avion · Séjourne à l'hôtel · Raconte tes vacances | 12 | 48 | 8 | 13 |
+| 16 | Au téléphone & rendez-vous | 2 | Se présenter au téléphone, patienter, rappeler, fixer un rendez-vous | Passe un coup de fil · Laisse un message · Prends rendez-vous | 12 | 48 | 8 |  |
+| 17 | Inviter, accepter, refuser | 2 | Would you like…, How about…, refuser poliment | Invite quelqu'un · Accepte avec plaisir · Refuse poliment | 12 | 47 | 8 |  |
+| 18 | Fêtes & traditions | 2 | Souhaiter un anniversaire, raconter une fête, offrir un cadeau | Souhaite un anniversaire · Raconte une fête · Offre un cadeau | 12 | 48 | 9 | 2 |
+| 19 | Tech au quotidien | 2 | Batterie, wifi, mots de passe, applications qui plantent | Connecte-toi · Répare un appareil · Partage des fichiers | 12 | 48 | 8 | 8 |
+| 20 | Réclamations & service client | 2 | Rapporter un article, signaler un colis perdu, réclamer poliment | Rapporte un article · Signale un colis perdu · Réclame poliment | 12 | 48 | 9 | 2 |
+| 21 | Le futur & les projets | 2 | will, going to, présent progressif, when + présent | Annonce tes projets · Décide sur le moment · Organise ton agenda | 12 | 48 | 8 |  |
+| 22 | Small talk & opinions | 3 | Discuter, nuancer, donner son avis | Prends des nouvelles · Donne ton avis · Parle de tes envies | 12 | 48 | 8 | 8 |
+| 23 | Relations & vie sentimentale | 3 | Parler de son couple, gérer une dispute, soutenir un ami | Parle de ta relation · Gère une dispute · Soutiens un ami | 12 | 48 | 9 |  |
+| 24 | Raconter une histoire | 3 | Temps du passé, enchaînements | Plante le décor · Raconte ce qui s'est passé · Conclus ton histoire | 12 | 48 | 8 |  |
+| 25 | Débattre & convaincre | 3 | Donner son avis, nuancer, concéder | Défends ton point de vue · Nuance ton propos · Trouve un terrain d'entente | 12 | 48 | 8 |  |
+| 26 | Médias, actus & réseaux sociaux | 3 | Commenter l'actualité, parler des réseaux, vérifier une info | Commente l'actualité · Parle des réseaux sociaux · Vérifie une info | 12 | 48 | 9 |  |
+| 27 | Expériences & present perfect | 3 | ever, never, already, yet, just, for/since | Parle de tes expériences · Dis depuis quand · Situe un fait dans le passé | 12 | 47 | 8 |  |
+| 28 | Études & apprentissage | 3 | Parler de ses études, de sa façon d'apprendre, des examens | Parle de tes études · Explique comment tu apprends · Passe un examen | 12 | 48 | 9 |  |
+| 29 | Banque, administration & services | 3 | Ouvrir un compte, retirer, frais, formulaires, pièces d'identité | Ouvre un compte · Retire et envoie de l'argent · Fais tes papiers | 12 | 48 | 8 | 8 |
+| 30 | Argent, budget & consommation | 3 | Gérer son budget, comparer des offres, résilier un abonnement | Gère ton budget · Compare des offres · Résilie un abonnement | 12 | 48 | 9 |  |
+| 31 | Urgences & imprévus | 3 | Perte, vol, panne, blessure, police | Signale une perte ou un vol · Appelle les secours · Gère une panne | 12 | 48 | 8 | 7 |
+| 32 | Questions, question tags & discours rapporté | 3 | aren't you?, does she?, shall we?, Do you know what time it is?, Who called you? / Who did you call?, He told me he was… | Ajoute un question tag · Pose la bonne question · Rapporte ce qu'on a dit | 12 | 48 | 9 |  |
+| 33 | Imprévus & expressions | 4 | Idiomes, regrets, situations délicates | Dis que tu es débordé · Réagis à un imprévu · Exprime un regret | 12 | 47 | 11 |  |
+| 34 | Phrasal verbs du quotidien | 4 | Parler comme un natif | Règle un problème · Garde le contact · Organise-toi | 12 | 48 | 11 |  |
+| 35 | Nuancer & atténuer | 4 | Atténuer, exprimer un doute, contredire avec tact | Atténue ton propos · Exprime un doute · Contredis avec tact | 12 | 48 | 9 |  |
+| 36 | Hypothèses & conditionnels | 4 | if + présent / prétérit / past perfect, I wish, unless, in case | Fais une hypothèse · Imagine une autre vie · Refais le passé | 12 | 48 | 11 |  |
+| 37 | Préférences, souhaits & reproches | 4 | Dire ce qu'on préférerait, faire un reproche, dire qu'il est temps | Dis ce que tu préférerais · Fais un reproche · Dis qu'il est temps | 12 | 48 | 9 |  |
+| 38 | Mettre en relief | 4 | Insister, exprimer sa surprise, reformuler pour convaincre | Insiste sur l'essentiel · Exprime ta surprise · Reformule pour convaincre | 12 | 48 | 9 |  |
+| 39 | Faire faire : artisans & services | 4 | Faire réparer, aller chez le coiffeur, faire faire quelque chose à quelqu'un | Fais réparer quelque chose · Va chez le coiffeur · Demande à quelqu'un de faire | 12 | 48 | 9 |  |
+| 40 | Souvenirs & nostalgie | 4 | Habitudes d'autrefois, souvenirs précis, hier et aujourd'hui | Raconte ton enfance · Raconte un souvenir précis · Compare hier et aujourd'hui | 12 | 48 | 9 |  |
+| 41 | Société & environnement | 4 | Écologie, ville ou campagne, le monde dans vingt ans | Parle d'écologie · Ville ou campagne · Le monde dans vingt ans | 12 | 48 | 9 |  |
+| 42 | Registres, ironie & argot | 4 | Passer du familier au soutenu, comprendre l'ironie, l'argot américain courant | Passe du familier au soutenu · Comprends l'ironie · Parle comme un Américain | 12 | 48 | 9 |  |
 
 ## Rédaction pro — `en-pro` (en-US, 20 unités)
 
@@ -174,12 +192,12 @@ Généré à partir des données de l'application (`src/content/courses/*.json`)
 | 19 | Job interview | 4 | Present your experience, strengths, questions to ask | Present your experience · Sell your strengths · Ask the recruiter | 12 | 36 | 8 |  |
 | 20 | News, culture & complex sentences | 4 | dont, où, ce qui / ce que, passive voice, connectors | Use relative pronouns · Talk about the news · Discuss culture | 12 | 36 | 8 |  |
 
-## Notions de grammaire (v27, enrichies en v38) — phrases générées
+## Notions de grammaire (v27, enrichies en v38 et v39.3) — phrases générées
 
 Carte « 🧩 Notions de grammaire » de l'onglet Entraînement (anglais, Learn French, coréen) : 5 ou 6 notions, chacune découpée en règles avec mémo et taux de réussite. Les mêmes règles alimentent environ la moitié des QCM des leçons des unités indiquées dans `units` (et, pour une unité à sujet propre, dans le champ `g` de sa partie). Depuis la v38, chaque règle a au moins 8 gabarits, presque tous variables, et dans une partie d'entre eux la bonne réponse change avec l'indice tiré (yesterday → went, so far → have visited) ; l'ordre des exercices d'une séance est tiré au hasard.
 
 | Langue | Règles | Gabarits | Temps | Liaison | Modaux | Prépositions / particules | La phrase | Les mots |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Anglais (`en.json`) | 26 | 273 | présent simple / -ing, prétérit / present perfect, récit au passé, futur, conditionnels (unless, I wish) | opposition, cause et but, temps et ajout | obligation, conseil et permission, déduction, capacité | at / in / on, for / since / during…, lieu, verbe + préposition | passif, relatifs, questions et question tags, discours rapporté, so / such, too / enough, used to | familles de mots, pronoms, comparatifs, quantifieurs et articles, -ing ou to |
+| Anglais (`en.json`) | 31 | 343 | présent simple / -ing, prétérit / present perfect, récit au passé, futur, conditionnels (unless, I wish), futur antérieur et progressif, past perfect continuous, would / used to | opposition, cause et but, temps et ajout | obligation, conseil et permission, déduction, capacité, would rather / had better / it's time / be supposed to | at / in / on, for / since / during…, lieu, verbe + préposition | passif, relatifs, questions et question tags, discours rapporté, so / such, too / enough, used to, mise en relief (What… is, It was… who), inversions (Never have I, Had I known), faire faire (have / get something done) | familles de mots, pronoms, comparatifs, quantifieurs et articles, -ing ou to |
 | Learn French (`fr.json`) | 19 | 179 | passé composé avoir / être, imparfait / passé composé, futur, conditionnel | mais / bien que / malgré / même si, parce que / à cause de / comme, avant de / après / pendant / dès que | pouvoir, devoir, vouloir, savoir, il faut | à / en / au / aux, venir de / du, depuis / pendant / il y a / dans, au / du / des, jouer à / de | pronoms le / lui / y / en, relatifs qui / que / dont / où, négation, subjonctif, passif | articles le / un / du / de, possessifs, accord et place des adjectifs |
 | Coréen (`ko.json`) | 19 | 174 | -았/었어요, -(으)ㄹ 거예요, -고 있어요 | -고 / -지만, -아서 / -(으)니까, -(으)면 / -는데, -기 전에 / -(으)ㄴ 후에 / -(으)면서 / -(으)러 | -아야 해요 / -아도 돼요 / -(으)면 안 돼요, -(으)ㄹ 수 있어요 / -고 싶어요, -(으)ㄹ 것 같아요, -(으)ㄹ게요 / -(으)ㄹ까요 | 에 / 에서, 에게 / (으)로, 에 / 부터 / 까지 / 동안, 은/는 et 이/가, 을/를, 도, 만, 와/과 | négation 안 / 못 / -지 않다, honorifiques -(으)세요 / -(으)셨어요 / 께서, -아/어 보다 / -(으)ㄴ 적이 있다 / -아/어 주다 | — |
