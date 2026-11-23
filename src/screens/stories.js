@@ -1,7 +1,8 @@
 // Écran Histoires
 import { flagSvg, ic } from "../ui/icons.ts";
-import { LEVELS, SECTIONS, STORIES } from "../content/index.js";
+import { COURSES, LEVELS, SECTIONS, STORIES } from "../content/index.js";
 import { S, save, uid } from "../core/accounts.js";
+import { curLevel } from "../core/progress.js";
 import { $, UCOLORS, esc, shuffle } from "../core/util.js";
 import { sayDialog } from "../exercises/render.js";
 import { SEC_LANG } from "../features/word-bank.js";
@@ -228,12 +229,15 @@ export async function genStory(sec, lv, theme, words) {
   playStory(sec, st);
   return st;
 }
-/** Niveau d'histoire proposé : le plus haut des histoires déjà lues de la section. */
+/** Niveau d'histoire proposé : le chapitre atteint dans le parcours de la section, ou plus haut si l'élève lit déjà des histoires plus difficiles. */
 export function storyLevel(sec) {
+  const s = SECTIONS.find(x => x.id === sec);
+  const cid = s && (s.tracks.includes(S.track[sec]) ? S.track[sec] : s.tracks[0]);
+  const path = cid && COURSES[cid] ? curLevel(cid) : 0;
   return Math.min(
     3,
     Math.max(
-      0,
+      path,
       ...allStories(sec)
         .filter(x => S.stories.includes(x.id))
         .map(x => x.lv),
